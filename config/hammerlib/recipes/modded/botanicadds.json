@@ -1,0 +1,71 @@
+{
+    "version": 2,
+    "active": {
+        "botania:runic_altar": {
+            "botanicadds:rune_tp": true,
+            "botanicadds:rune_energy": true,
+            "botanicadds:mana_tesseract": true,
+            "botanicadds:tesseract_attuner": true
+        },
+        "botania:petal_apothecary": {
+            "botanicadds:zeitheron_head": true,
+            "botanicadds:flowers/necroidus": true,
+            "botanicadds:flowers/rainute": true,
+            "botanicadds:flowers/glaciflora": true,
+            "botanicadds:flowers/tempestea": true,
+            "botanicadds:flowers/vibrantia": true,
+            "botanicadds:flowers/apicaria": true,
+            "botanicadds:flowers/energizera": false
+        },
+        "botanicadds:gaia_plate": {
+            "botanicadds:terrasteel": true,
+            "botanicadds:gaiasteel_ingot": true,
+            "botanicadds:overgrowth_seed": true
+        },
+        "botania:elven_trade": {
+            "botanicadds:elven_lapis": true,
+            "botanicadds:elven_lapis_block": true,
+            "botanicadds:elvenwood_log": true,
+            "botanicadds:dreamrock": true
+        },
+        "botania:mana_infusion": {
+            "botanicadds:mana_lapis": true,
+            "botanicadds:mana_lapis_block": true,
+            "botanicadds:gaia_shard": true
+        },
+        "botania:pure_daisy": {"botanicadds:dreamwood_from_elvenwood": true},
+        "minecraft:crafting": {
+            "botanicadds:terra_catalyst": true,
+            "botanicadds:mana_lapis_block_1": true,
+            "botanicadds:elven_lapis_block_1": true,
+            "botanicadds:gaiasteel_block": true,
+            "botanicadds:gaiasteel_ingot_from_nuggets": true,
+            "botanicadds:mana_lapis_1": true,
+            "botanicadds:elven_lapis_1": true,
+            "botanicadds:gaiasteel_ingots_from_block": true,
+            "botanicadds:gaiasteel_nugget": true,
+            "botanicadds:gaia_plate": false,
+            "botanicadds:gaiasteel_pylon": true,
+            "botanicadds:elvenwood": true,
+            "botanicadds:aura_ring_gaia": true,
+            "botanicadds:mana_ring_gaia": true,
+            "botanicadds:mana_stealer_sword": true,
+            "botanicadds:elven_altar": true,
+            "botanicadds:elven_brewery": true,
+            "botanicadds:dreaming_pool": true,
+            "botanicadds:sculk_sensor": true,
+            "botanicadds:tesseract_attune": true,
+            "botanicadds:recipe_tweaks/mana_fluxfield": true,
+            "botanicadds:recipe_tweaks/gaia_spreader": true,
+            "botanicadds:elven_fluxfield": true,
+            "botanicadds:flowers/floating/glaciflora": true,
+            "botanicadds:flowers/floating/apicaria": true,
+            "botanicadds:flowers/floating/energizera": false,
+            "botanicadds:flowers/floating/necroidus": true,
+            "botanicadds:flowers/floating/rainute": true,
+            "botanicadds:flowers/floating/tempestea": true,
+            "botanicadds:flowers/floating/vibrantia": true
+        }
+    },
+    "unregistered": {}
+}

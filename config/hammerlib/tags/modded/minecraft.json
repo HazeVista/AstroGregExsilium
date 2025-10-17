@@ -1,0 +1,5 @@
+{
+    "version": 1,
+    "tags": {"minecraft:entity_type": {"forge:bees": {"minecraft:bee": true}}},
+    "unregistered": {}
+}

@@ -1,0 +1,5 @@
+{
+    "version": 1,
+    "tags": {"minecraft:block": {"botanicadds:alfheim_gateway_pylons": {"botania:natura_pylon": true}}},
+    "unregistered": {}
+}

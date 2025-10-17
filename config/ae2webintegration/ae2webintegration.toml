@@ -1,0 +1,25 @@
+
+[General]
+	#Port for the hosted website
+	#Range: 1 ~ 65535
+	port = 2324
+	#Password for the admin account
+	password = "K7HgNNX18FlLGw5U"
+	#Don't require to login using loopback address (127.0.0.1/localhost)
+	allow_no_password_on_localhost = true
+	#Public server mode = enable registration system on the website, players will be able to register and login to monitor their own ae networks, if disabled, there is only one admin account with password set in the config file with access to all networks on the server
+	public_mode = true
+	#How many requests can be made before user is logged in per minute
+	#Range: 1 ~ 1000
+	max_requests_before_logged_in_per_minute = 20
+
+[Discord]
+	#Discord webhook url (OPTIONAL, leave empty to ignore) (WORKS ONLY IF PUBLIC_MODE IS DISABLED)
+	webhook = ""
+	#Role to ping on message (OPTIONAL, leave empty to ignore)
+	role_id = ""
+
+[Tracking]
+	#Track automated crafting jobs (not ordered by player)
+	track_machine_crafting = false
+
