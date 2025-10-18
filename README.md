@@ -1,4 +1,4 @@
-Thanks for checking out AstroGreg:Exsilium! 
+Thanks for checking out AstroGreg! 
 
 
 

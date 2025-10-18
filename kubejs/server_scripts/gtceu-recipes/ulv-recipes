@@ -1,0 +1,17 @@
+ServerEvents.recipes(event => {
+
+event.shaped('gtceu:rubber_plate', [
+    'A',
+    'B',
+    'B'
+ ] , {
+    A: '#gtceu:tools/hammer',
+    B: 'gtceu:rubber_ingot'
+ })
+
+event.recipes.gtceu.alloy_smelter('alloy_smelter_rose_quartz')
+    .itemInputs('minecraft:quartz', '4x minecraft:redstone')
+    .itemOutputs('create:rose_quartz')
+    .duration(50)
+    .EUt(30)
+});

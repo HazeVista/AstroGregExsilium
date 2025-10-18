@@ -93,6 +93,17 @@
         });
 
     //Vanilla
+
+    event.shaped('minecraft:sticky_piston' [
+        'A',
+        'B',
+        'C'
+    ], {
+        A: '#gtceu:tools/hammer',
+        B: 'gtceu:resin',
+        C: 'minecraft:piston'
+    });
+
     event.shaped('minecraft:shears', [
         ' A ',
         'AB '
@@ -171,4 +182,13 @@
         A: 'minecraft:bone_meal'
     });
 
+    event.shaped('waystones:warp_stone', [
+    'BCB',
+    'CAC',
+    'BCB'
+], {
+    A: 'minecraft:ender_pearl',
+    B: 'create:rose_quartz',
+    C: 'minecraft:quartz'
+})
 });

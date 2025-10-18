@@ -1,10 +1,15 @@
 ServerEvents.recipes(event => {
+
+    //gtceu
     event.remove({id: 'gtceu:centrifuge/decomposition_centrifuging__redstone'})
     event.remove({id: 'gtceu:autoclave/silicon_dioxide_to_quartzite_gem'})
     event.remove({id: 'gtceu:assembler/end_crystal'})
     event.remove({id: 'gtceu:arc_furnace/arc_netherite_dust'})
     event.remove({id: 'gtceu:alloy_smelter/alloy_smelt_netherite_dust_to_block'})
     event.remove({id: 'gtceu:smelting/smelt_dust_netherite_to_ingot'})
+
+    //AE2 
+    event.remove({id: 'merequester:requester'})
 
     event.remove({id: 'ae2:smelting/silicon_from_certus_quartz_dust'})
     event.remove({id: 'ae2:blasting/silicon_from_certus_quartz_dust'})
@@ -49,6 +54,7 @@ ServerEvents.recipes(event => {
     event.remove({id: 'ae2:network/parts/annihilation_plane_alt2'})
     event.remove({id: 'ae2:network/parts/formation_plane_alt'})
     event.remove({id: 'ae2:network/parts/formation_plane'})
+    event.remove({id: 'ae2:crank'})
     
     event.remove({id: 'expatternprovider:caner'})
     event.remove({id: 'expatternprovider:crystal_fixer'})
@@ -80,9 +86,12 @@ ServerEvents.recipes(event => {
     event.remove({id: 'megacells:cells/cell_component_64m'})
     event.remove({id: 'megacells:cells/cell_component_256m'})
 
+    //travel
     event.remove({id: 'travelanchors:travel_staff'})
     event.remove({id: 'travelanchors:travel_anchor'})
+    event.remove({id: 'waystone:warp_stone'})
 
+    //functional storage
     event.remove({id: 'functionalstorage:netherite_upgrade'})
     event.remove({id: 'functionalstorage:diamond_upgrade'})
     event.remove({id: 'functionalstorage:gold_upgrade'})
@@ -103,6 +112,7 @@ ServerEvents.recipes(event => {
     event.remove({id: 'functionalstorage:controller_extension'})
     event.remove({id: 'functionalstorage:storage_controller'})
 
+    //flux
     event.remove({id:'fluxnetworks:fluxcore'})
     event.remove({id:'fluxnetworks:fluxconfigurator'})
     event.remove({id:'fluxnetworks:fluxblock'})
@@ -111,14 +121,15 @@ ServerEvents.recipes(event => {
     event.remove({id:'fluxnetworks:herculeanfluxstorage'})
     event.remove({id:'fluxnetworks:gargantuanfluxstorage'})
 
+    //vanilla
     event.remove({id: 'minecraft:shears'})
     event.remove({id: 'minecraft:ender_eye'})
-    event.remove({id: 'minecraft:observer'})
     event.remove({id: 'minecraft:end_crystal'})
     event.remove({id: 'minecraft:netherite_ingot'})
     event.remove({id: 'minecraft:netherite_scrap'})
     event.remove({id: 'minecraft:netherite_scrap_from_blasting'})
 
+    //laserIO
     event.remove({id: 'laserio:logic_chip_raw'})
     event.remove({id: 'laserio:laser_connector_advanced'})
     event.remove({id: 'laserio:card_fluid'})
@@ -127,5 +138,18 @@ ServerEvents.recipes(event => {
     event.remove({id: 'laserio:card_energy'})
     event.remove({id: 'laserio:laser_wrench'})
 
-    event.remove({id: 'createoreexcavation'})
+    //ad astra
+    event.remove({id: 'ad_astra:iron_rod'})
+
+    //create
+    event.remove({output: '#forge:wires'})
+    event.remove({input: '#forge:wires'})
+
+    //botania
+    event.remove({id: 'botania:glass_pickaxe'})
+
+    //remove full mod recipes
+    event.remove({mod: 'createoreexcavation'})
+    event.remove({mod: 'scannable'})
+    event.remove({mod: 'storagenetwork'})
 });

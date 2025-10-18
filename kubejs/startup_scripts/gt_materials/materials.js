@@ -1,4 +1,3 @@
-GTCEuStartupEvents.registry('gtceu:element', event => {
 //credit to @trulyno and the Star Technology team for this beautiful code and extra periodic elements
 // Ignore this
 const $IngotProperty = global.IngotProperty;
@@ -43,7 +42,8 @@ const explosive = GTMaterialFlags.EXPLOSIVE;
 const flammable = GTMaterialFlags.FLAMMABLE;
 const sticky = GTMaterialFlags.STICKY;
 const phosphorescent = GTMaterialFlags.PHOSPHORESCENT;
-// Generation Flags
+
+//Generation Flags
 // Dust Flags
 const plates = GTMaterialFlags.GENERATE_PLATE;
 const dense_plate = GTMaterialFlags.GENERATE_DENSE;
@@ -53,6 +53,7 @@ const frame = GTMaterialFlags.GENERATE_FRAME;
 const gear = GTMaterialFlags.GENERATE_GEAR;
 const long_rod = GTMaterialFlags.GENERATE_LONG_ROD;
 const block = GTMaterialFlags.FORCE_GENERATE_BLOCK;
+
 // Ingot Flags
 const foil = GTMaterialFlags.GENERATE_FOIL;
 const ring = GTMaterialFlags.GENERATE_RING;
@@ -63,15 +64,19 @@ const fine_wire = GTMaterialFlags.GENERATE_FINE_WIRE;
 const rotor = GTMaterialFlags.GENERATE_ROTOR;
 const round = GTMaterialFlags.GENERATE_ROUND;
 const magnetic = GTMaterialFlags.IS_MAGNETIC;
+
 // Gem Flags
 const crystallizable = GTMaterialFlags.CRYSTALLIZABLE;
 const lens = GTMaterialFlags.GENERATE_LENS;
+
 // Fluid Flags
 const solder_mat = GTMaterialFlags.SOLDER_MATERIAL;
 const solder_mat_bad = GTMaterialFlags.SOLDER_MATERIAL_BAD;
 const solder_mat_good = GTMaterialFlags.SOLDER_MATERIAL_GOOD;
+
 // Ore Flags
 const more_sifter = GTMaterialFlags.HIGH_SIFTER_OUTPUT;
+
 // Misc
 const no_block_craft = GTMaterialFlags.EXCLUDE_BLOCK_CRAFTING_RECIPES;
 const no_plate_compressor_craft = GTMaterialFlags.EXCLUDE_PLATE_COMPRESSOR_RECIPE;
@@ -104,37 +109,35 @@ const VHA = (voltage) => {
 
 GTCEuStartupEvents.registry('gtceu:material', event => {
 
-    // Periodic table materials
-    const element = global.periodicTableElement;
-    // Ingots
-    element('zirconium', 'ingot');
-    element('tellurium', 'ingot');
-    element('polonium', 'ingot');
-    element('astatine', 'ingot');
-    element('hafnium', 'ingot');
-    element('seaborgium', 'ingot');
-    element('flerovium', 'ingot');
-    element('rhenium', 'ingot');
+    // // Periodic table materials
+    // const element = global.periodicTableElement;
+    // // Ingots
+    // element('zirconium', 'ingot');
+    // element('tellurium', 'ingot');
+    // element('polonium', 'ingot');
+    // element('astatine', 'ingot');
+    // element('hafnium', 'ingot');
+    // element('seaborgium', 'ingot');
+    // element('flerovium', 'ingot');
+    // element('rhenium', 'ingot');
 
-    // Dusts
-    element('selenium', 'dust');
-    element('strontium', 'dust');
-    element('thallium', 'dust');
+    // // Dusts
+    // element('selenium', 'dust');
+    // element('strontium', 'dust');
+    // element('thallium', 'dust');
 
-    // Liquids
-    element('seaborgium', 'fluid');
-    element('flerovium', 'fluid');
+    // // Liquids
+    // element('seaborgium', 'fluid');
+    // element('flerovium', 'fluid');
 
-    // Gasses
+    // // Gasses
 
-    // periodicTableElement('iodine', 'gas');
-    element('oganesson', 'gas');
+    // // periodicTableElement('iodine', 'gas');
+    // element('oganesson', 'gas');
 
     // Plasmas
 
     // This material is meant to place a ? symbol in a material's chemical formula
-    event.create('wildcard')
-        .element(GTElements.get('wildcard'));
 
     // Material modification
     const matmod = (mat, flag) => {
@@ -278,37 +281,17 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     }
 
 
-    elemIngot('magnetic_zapolgium', GTElements.get('zapolgium'), 0xcc00cc, MAGNETIC, [], [rod, long_rod, magnetic]);
+    // elemIngot('magnetic_zapolgium', GTElements.get('zapolgium'), 0xcc00cc, MAGNETIC, [], [rod, long_rod, magnetic]);
 
-    elemIngotFluid('xeproda', 0x1a0d00, DULL, [15499, 'highest', VA('uev'), 3750], []);
+    // event.create('zapolgium')
+    //     .ingot()
+    //     .element(GTElements.get('zapolgium'))
+    //     .color(0xcc00cc)
+    //     .iconSet(DULL)
+    //     .blastTemp(10799, 'highest', VA('uhv'), 1600)
+    //     .flags(plates, rod, frame)
+    //     .fluidPipeProperties(18000, 7200, true,true,true,true);
 
-    elemIngotFluid('rhexis', 0x330000, DULL, [15499, 'highest', VA('uiv'), 4750], []);
-
-    elemIngotFluid('chalyblux', 0xffcccc, DULL, [15499, 'highest', VA('uev'), 5750], []);
-
-    elemIngotFluid('mythril', 0x006666, METALLIC, [11299, 'highest', VA('uhv'), 2400], [foil, gear, long_rod, plates, rod, rotor, small_gear, ring, frame]);
-
-    elemIngotFluid('adamantine', 0xe99700, METALLIC, [13299, 'highest', VA('uev'), 3000], [foil, gear, long_rod, plates, rod, rotor, small_gear, ring, frame]);
-
-    elemIngotFluid('estalt', 0xff5050, DULL, [12299, 'highest', VA('uhv'), 2600], [foil, gear, long_rod, plates, rod, rotor, small_gear, ring, frame]);
-
-    elemIngotFluid('enriched_estalt', 0xe76c6c, RADIOACTIVE, [12899, 'highest', VA('uhv'), 2800], [foil, gear, long_rod, plates, rod, rotor, small_gear, ring, frame]);
-
-    elemIngotFluid('calamatium', 0x660000, DULL, [13199, 'highest', VA('uhv'), 2750], [foil, gear, long_rod, plates, rod, rotor, small_gear, ring, frame]);
-
-    elemIngotFluid('isovol', 0x290066, DULL, [12999, 'highest', VA('uhv'), 2750], [foil, gear, long_rod, plates, rod, rotor, small_gear, ring, frame]);
-
-    event.create('zapolgium')
-        .ingot()
-        .element(GTElements.get('zapolgium'))
-        .color(0xcc00cc)
-        .iconSet(DULL)
-        .blastTemp(10799, 'highest', VA('uhv'), 1600)
-        .flags(plates, rod, frame)
-        .fluidPipeProperties(18000, 7200, true,true,true,true);
-
-    
-    //AE2
-    CompDustIngotLiquid('futura_alloy', ['4x stainless_steel', 'mystery'], 0xebb7ea, 0x000000, SHINY, [1700, 'low', 400, 1200], [FRAME, GENERATE_PLATE, GENERATE_ROD, GENERATE_DENSE, DECOMPOSITION_BY_CENTRIFUGING, MORTAR_GRINDABLE, FORCE_GENERATE_BLOCK])
-})
-});
+    // //AE2
+    // compDustIngotLiquid('futura_alloy', ['4x stainless_steel', '1x mystery'], 0xebb7ea, 0x000000, SHINY, [1700, 'low', 400, 1200], [FRAME, GENERATE_PLATE, GENERATE_ROD, GENERATE_DENSE, DECOMPOSITION_BY_CENTRIFUGING, MORTAR_GRINDABLE, FORCE_GENERATE_BLOCK])
+}); 
