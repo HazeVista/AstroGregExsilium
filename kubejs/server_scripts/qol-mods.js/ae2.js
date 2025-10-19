@@ -1,6 +1,6 @@
 ServerEvents.recipes(event => {
     event.recipes.gtceu.polarizer('polarize_certus')
-        .itemInputs('gtceu:flawless_certus_quartz_gem')
+        .itemInputs('gtceu:certus_quartz_gem')
         .itemOutputs('ae2:charged_certus_quartz_crystal')
         .duration(150)
         .EUt(400)

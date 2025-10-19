@@ -5,7 +5,7 @@ event.shaped('gtceu:rubber_plate', [
     'B',
     'B'
  ] , {
-    A: '#gtceu:tools/hammer',
+    A: '#forge:tools/hammers',
     B: 'gtceu:rubber_ingot'
  })
 

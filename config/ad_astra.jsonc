@@ -24,7 +24,7 @@
     // Uses normal gravity for all planets.
     "disableGravity": false,
     // An Air Vortex is created when an oxygenated structure breaks its seal, causing every entity inside to rapidly get sucked out. This setting disables that.
-    "disableAirVortexes": true,
+    "disableAirVortexes": false,
     "cryoFreezer": {
         // Type: Long
         "ironTierMaxEnergyInOut": 100,

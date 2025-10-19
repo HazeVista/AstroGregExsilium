@@ -66,7 +66,7 @@ event.shaped('scannable:fluid_module', [
 ], {
     A: 'scannable:blank_module',
     B: 'minecraft:bucket',
-    C: 'gtceu:bronze_normal_pipe',
+    C: 'gtceu:bronze_normal_fluid_pipe',
     D: 'gtceu:iron_plate',
     E: '#gtceu:circuits/ulv'
 })

@@ -54,7 +54,7 @@ ServerEvents.recipes(event => {
     event.remove({id: 'ae2:network/parts/annihilation_plane_alt2'})
     event.remove({id: 'ae2:network/parts/formation_plane_alt'})
     event.remove({id: 'ae2:network/parts/formation_plane'})
-    event.remove({id: 'ae2:crank'})
+    event.remove({id: 'ae2:network/blocks/crank'})
     
     event.remove({id: 'expatternprovider:caner'})
     event.remove({id: 'expatternprovider:crystal_fixer'})
@@ -89,7 +89,7 @@ ServerEvents.recipes(event => {
     //travel
     event.remove({id: 'travelanchors:travel_staff'})
     event.remove({id: 'travelanchors:travel_anchor'})
-    event.remove({id: 'waystone:warp_stone'})
+    event.remove({id: 'waystones:warp_stone'})
 
     //functional storage
     event.remove({id: 'functionalstorage:netherite_upgrade'})
@@ -138,12 +138,17 @@ ServerEvents.recipes(event => {
     event.remove({id: 'laserio:card_energy'})
     event.remove({id: 'laserio:laser_wrench'})
 
-    //ad astra
-    event.remove({id: 'ad_astra:iron_rod'})
-
     //create
     event.remove({output: '#forge:wires'})
+    event.remove({output: 'create:shaft'})
+    event.remove({output: 'createaddition:tesla_coil'})
     event.remove({input: '#forge:wires'})
+
+    //ad astra
+    event.remove({input: 'ad_astra:iron_rod'})
+    event.remove({input: 'ad_astra:steel_rod'})
+    event.remove({output: 'ad_astra:iron_rod'})
+    event.remove({output: 'ad_astra:steel_rod'})
 
     //botania
     event.remove({id: 'botania:glass_pickaxe'})
@@ -152,4 +157,88 @@ ServerEvents.recipes(event => {
     event.remove({mod: 'createoreexcavation'})
     event.remove({mod: 'scannable'})
     event.remove({mod: 'storagenetwork'})
+
+    //new method from Truly
+    const id = global.id;
+    const toRemoveOutput = ['ae2:charger', 'ae2:drive', 'ae2:chest', 'createdieselgenerators:pumpjack_hole', 'expatternprovider:ex_inscriber',
+        'expatternprovider:ex_charger', 'expatternprovider:crystal_fixer', 'expatternprovider:caner', 'exmachinis:item_buffer', 'ae2:crystal_resonance_generator',
+        'ae2:vibration_chamber', 'expatternprovider:circuit_cutter', 'minecraft:mycelium', 'create:brass_block', 'create:zinc_block', 
+        'gtceu:me_pattern_buffer_proxy', 'gtceu:me_pattern_buffer', 'ad_astra:steel_cable', 'ad_astra:cable_duct', 'ad_astra:desh_cable', 'create:andesite_alloy',
+        'functionalstorage:collector_upgrade', 'functionalstorage:pusher_upgrade', 'functionalstorage:puller_upgrade', 'create:andesite_alloy_block', 'ad_astra:solar_panel',
+        'ad_astra:steel_cable', 'ad_astra:desh_cable', 'ad_astra:cable_duct', 'ad_astra:ostrum_fluid_pipe', 'ad_astra:desh_fluid_pipe',
+        'ad_astra:fluid_pipe_duct', 'ad_astra:etrionic_blast_furnace', 'ad_astra:nasa_workbench', 'ad_astra:cryofreezer', 'ad_astra:coal_generator', 'ad_astra:energizer',
+        'ad_astra:compressor', 'ad_astra:fuel_refinery', 'ad_astra:oxygen_loader', 'ad_astra:oxygen_sensor', 'ad_astra:water_pump'
+    ];
+    const toRemoveId = ['create:haunting/crimson_fungus', 'create:haunting/warped_fungus', 'create:milling/compat/ae2/sky_stone_block', 'create:milling/compat/ae2/fluix_crystal',
+        'create:milling/compat/ae2/ender_pearl', 'create:milling/compat/ae2/certus_quartz', 'create:crushing/raw_platinum_ore', 'create:crushing/raw_platinum_block',
+        'create:crushing/raw_uranium_ore', 'create:crushing/raw_uranium_block', 'create:crafting/appliances/slime_ball', 'minecraft:fire_charge', 'gtceu:shapeless/dust_bronze',
+        'gtceu:shapeless/dust_brass', 'create:mixing/brass_ingot',
+        'ae2:transform/damaged_budding_quartz', 'ae2:transform/chipped_budding_quartz',
+        'ae2:transform/flawed_budding_quartz', 'ae2:transform/fluix_crystals', 'ae2:transform/fluix_crystal', 'ae2:transform/certus_quartz_crystals',
+        'ae2:network/crafting/molecular_assembler', 'ae2:network/blocks/pattern_providers_interface', 'ae2:network/crafting/cpu_crafting_unit',
+        'ae2:network/blocks/energy_energy_acceptor', 'ae2:network/blocks/interfaces_interface', 'ae2:network/blocks/io_condenser', 'ae2:network/blocks/cell_workbench',
+        'ae2:network/blocks/spatial_io_port', 'ae2:network/blocks/io_port'
+    ];
+
+    const toRemoveType = ['expatternprovider:cutter', 'ae2:inscriber', 'ae2:charger', 'create:crushing', 'ad_astra:alloying',
+        'ad_astra:nasa_workbench', 'ad_astra:cryo-freezing', 'ad_astra:refining', 'ad_astra:compressing', 'ad_astra:oxygen_loading'
+    ];
+
+    toRemoveOutput.forEach(element => {
+        event.remove({ output: element});
+    });
+
+    toRemoveId.forEach(element => {
+        event.remove({ id: element});
+    });
+
+    toRemoveType.forEach(element => {
+        event.remove({ type: element});
+    });
+
+    event.remove({ input: 'minecraft:fire_charge'});
+    event.remove({ output: 'ae2:charged_certus_quartz_crystal', input: 'ae2:certus_quartz_crystal'})
+
+    event.remove({id: /.*expatternprovider.*cutter.*/});
+    event.remove({ input: 'minecraft:netherite_scrap'});
+    event.remove({ output: 'minecraft:netherite_scrap'});
+    event.remove({ input: 'minecraft:ancient_debris'});
+    event.remove({ output: 'minecraft:netherite_ingot'});
+    event.remove({ output: /create:.*_sheet/});
+    event.remove({ output: /create:.*_ingot/});
+    event.remove({ output: /create:.*_plate/});
+
+    event.replaceInput({input: 'create:copper_sheet'}, 'create:copper_sheet', 'gtceu:copper_plate');
+    event.replaceInput({input: 'create:zinc_ingot'}, 'create:zinc_ingot', 'gtceu:zinc_ingot');
+});
+
+ServerEvents.tags('item', event => {
+   event.removeAllTagsFrom('ad_astra:steel_rod')
+   event.removeAllTagsFrom('ad_astra:steel_plate')
+   event.removeAllTagsFrom('ad_astra:steel_nugget')
+   event.removeAllTagsFrom('ad_astra:steel_ingot')
+   event.removeAllTagsFrom('ad_astra:iron_rod')
+   event.removeAllTagsFrom('ad_astra:iron_plate')
+   event.removeAllTagsFrom('create:iron_plate')
+   event.removeAllTagsFrom('create:iron_sheet')
+   event.removeAllTagsFrom('create:brass_sheet')
+   event.removeAllTagsFrom('create:copper_sheet')
+   event.removeAllTagsFrom('create:golden_sheet')
+   event.removeAllTagsFrom('createaddition:zinc_sheet')
+   event.removeAllTagsFrom('createaddition:electrum_block')
+   event.removeAllTagsFrom('createaddtion:electrum_sheet')
+   event.removeAllTagsFrom('createaddition:electrum_nugget')
+   event.removeAllTagsFrom('createaddtion:electrum_ingot')
+   event.removeAllTagsFrom('ad_astra:iron_nugget')
+   event.removeAllTagsFrom('ad_extendra:raw_plutonium')
+   event.removeAllTagsFrom('ad_extendra:raw_plutonium_block')
+   event.removeAllTagsFrom('ad_extendra:plutonium_ingot')
+   event.removeAllTagsFrom('ad_extendra:plutonium_nugget')
+   event.removeAllTagsFrom('ad_extendra:plutonium_block')
+   event.removeAllTagsFrom('powah:uraninite_raw')
+   event.removeAllTagsFrom('createaddition:diamond_grit')
+   event.removeAllTagsFrom('ad_extendra:uraninium_nugget')
+   event.removeAllTagsFrom('ad_extendra:uraninium_ingot')
+   event.removeAllTagsFrom('ad_extendra:uraninium_plate')
+   event.removeAllTagsFrom('ad_extendra:uraninium_block')
 });

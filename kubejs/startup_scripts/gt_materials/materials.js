@@ -292,6 +292,6 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     //     .flags(plates, rod, frame)
     //     .fluidPipeProperties(18000, 7200, true,true,true,true);
 
-    // //AE2
-    // compDustIngotLiquid('futura_alloy', ['4x stainless_steel', '1x mystery'], 0xebb7ea, 0x000000, SHINY, [1700, 'low', 400, 1200], [FRAME, GENERATE_PLATE, GENERATE_ROD, GENERATE_DENSE, DECOMPOSITION_BY_CENTRIFUGING, MORTAR_GRINDABLE, FORCE_GENERATE_BLOCK])
+    //AE2
+    compIngotLiquidSeccolor('futura_alloy', ['4x stainless_steel', '1x mystery'], 0xebb7ea, 0x000000, SHINY, [1700, 'low', 400, 1200], [frame, plates, rod, dense_plate, centrifuge, mortar_grind, block])
 }); 

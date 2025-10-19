@@ -5,7 +5,7 @@ event.shaped('storagenetwork:master', [
     'BAB',
     'CBC'
 ], {
-    A: 'gtceu:bronze_gear',
+    A: 'gtceu:potin_gear',
     B: 'storagenetwork:kabel',
     C: '#gtceu:circuits/ulv'
 })
@@ -60,7 +60,7 @@ event.shaped('storagenetwork:import_kabel', [
     'BAB',
     ' B '
 ], {
-    A: 'gtceu:tin_small_item_pipe',
+    A: 'minecraft:piston',
     B: 'storagenetwork:kabel'
 })
 
@@ -193,24 +193,26 @@ event.shaped('storagenetwork:exchange', [
 event.shaped('storagenetwork:inventory_remote', [
     'ABA',
     'CDC',
-    'A A'
+    'AEA'
 ], {
     A: 'gtceu:sticky_resin',
     B: 'gtceu:red_alloy_rod',
     C: 'gtceu:double_gold_plate',
-    D: 'storagenetwork:master'
+    D: 'storagenetwork:master',
+    E: '#forge:tools/screwdriver'
 })
 
 event.shaped('storagenetwork:crafting_remote', [
     'ABA',
     'CDC',
-    'E E'
+    'EFE'
 ], {
     A: 'minecraft:crafting_table',
     B: 'gtceu:red_alloy_rod',
-    C: 'gtceu:bronze_gear',
+    C: 'gtceu:potin_gear',
     D: 'storagenetwork:master',
-    E: 'gtceu:steel_crate'
+    E: 'gtceu:steel_crate',
+    F: '#forge:tools/screwdriver'
 })
 
 event.shaped('storagenetwork:request_expanded', [

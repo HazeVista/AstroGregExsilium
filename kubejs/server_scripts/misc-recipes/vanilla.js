@@ -99,8 +99,8 @@
         'B',
         'C'
     ], {
-        A: '#gtceu:tools/hammer',
-        B: 'gtceu:resin',
+        A: '#forge:tools/hammers',
+        B: 'gtceu:sticky_resin',
         C: 'minecraft:piston'
     });
 
@@ -139,7 +139,7 @@
     ], {
         A: 'gtceu:double_steel_plate',
         B: 'minecraft:ender_pearl',
-        C: '#gtceu:tools/hammer'
+        C: '#forge:tools/hammers'
     });
 
     //quality of life logs
