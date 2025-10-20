@@ -137,8 +137,6 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
 
     // Plasmas
 
-    // This material is meant to place a ? symbol in a material's chemical formula
-
     // Material modification
     const matmod = (mat, flag) => {
         GTMaterials.get(mat).addFlags(flag);
@@ -291,6 +289,9 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     //     .blastTemp(10799, 'highest', VA('uhv'), 1600)
     //     .flags(plates, rod, frame)
     //     .fluidPipeProperties(18000, 7200, true,true,true,true);
+
+    //create
+    compDust('andesite_alloy', ['1x andesite', '1x iron'], 0xa6a08f, [centrifuge]);
 
     //AE2
     compIngotLiquidSeccolor('futura_alloy', ['4x stainless_steel', '1x mystery'], 0xebb7ea, 0x000000, SHINY, [1700, 'low', 400, 1200], [frame, plates, rod, dense_plate, centrifuge, mortar_grind, block])

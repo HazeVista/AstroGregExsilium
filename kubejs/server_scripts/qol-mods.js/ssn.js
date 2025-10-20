@@ -199,7 +199,7 @@ event.shaped('storagenetwork:inventory_remote', [
     B: 'gtceu:red_alloy_rod',
     C: 'gtceu:double_gold_plate',
     D: 'storagenetwork:master',
-    E: '#forge:tools/screwdriver'
+    E: '#forge:tools/screwdrivers'
 })
 
 event.shaped('storagenetwork:crafting_remote', [
@@ -212,7 +212,7 @@ event.shaped('storagenetwork:crafting_remote', [
     C: 'gtceu:potin_gear',
     D: 'storagenetwork:master',
     E: 'gtceu:steel_crate',
-    F: '#forge:tools/screwdriver'
+    F: '#forge:tools/screwdrivers'
 })
 
 event.shaped('storagenetwork:request_expanded', [

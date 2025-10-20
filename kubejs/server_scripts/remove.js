@@ -140,9 +140,8 @@ ServerEvents.recipes(event => {
 
     //create
     event.remove({output: '#forge:wires'})
-    event.remove({output: 'create:shaft'})
-    event.remove({output: 'createaddition:tesla_coil'})
     event.remove({input: '#forge:wires'})
+    event.remove({output: 'createaddition:iron_rod'})
 
     //ad astra
     event.remove({input: 'ad_astra:iron_rod'})
@@ -162,26 +161,30 @@ ServerEvents.recipes(event => {
     const id = global.id;
     const toRemoveOutput = ['ae2:charger', 'ae2:drive', 'ae2:chest', 'createdieselgenerators:pumpjack_hole', 'expatternprovider:ex_inscriber',
         'expatternprovider:ex_charger', 'expatternprovider:crystal_fixer', 'expatternprovider:caner', 'exmachinis:item_buffer', 'ae2:crystal_resonance_generator',
-        'ae2:vibration_chamber', 'expatternprovider:circuit_cutter', 'minecraft:mycelium', 'create:brass_block', 'create:zinc_block', 
+        'ae2:vibration_chamber', 'expatternprovider:circuit_cutter', 'minecraft:mycelium', 'create:brass_block', 'create:zinc_block', 'createaddition:straw',
         'gtceu:me_pattern_buffer_proxy', 'gtceu:me_pattern_buffer', 'ad_astra:steel_cable', 'ad_astra:cable_duct', 'ad_astra:desh_cable', 'create:andesite_alloy',
-        'functionalstorage:collector_upgrade', 'functionalstorage:pusher_upgrade', 'functionalstorage:puller_upgrade', 'create:andesite_alloy_block', 'ad_astra:solar_panel',
-        'ad_astra:steel_cable', 'ad_astra:desh_cable', 'ad_astra:cable_duct', 'ad_astra:ostrum_fluid_pipe', 'ad_astra:desh_fluid_pipe',
-        'ad_astra:fluid_pipe_duct', 'ad_astra:etrionic_blast_furnace', 'ad_astra:nasa_workbench', 'ad_astra:cryofreezer', 'ad_astra:coal_generator', 'ad_astra:energizer',
-        'ad_astra:compressor', 'ad_astra:fuel_refinery', 'ad_astra:oxygen_loader', 'ad_astra:oxygen_sensor', 'ad_astra:water_pump'
+        'functionalstorage:collector_upgrade', 'functionalstorage:pusher_upgrade', 'functionalstorage:puller_upgrade', 'ad_astra:solar_panel', 'create:shaft',
+        'ad_astra:steel_cable', 'ad_astra:desh_cable', 'ad_astra:cable_duct', 'ad_astra:ostrum_fluid_pipe', 'ad_astra:desh_fluid_pipe', 'createaddition:alternator',
+        'ad_astra:fluid_pipe_duct', 'ad_astra:etrionic_blast_furnace', 'ad_astra:nasa_workbench', 'ad_astra:cryo_freezer', 'ad_astra:coal_generator', 'ad_astra:energizer',
+        'ad_astra:compressor', 'ad_astra:fuel_refinery', 'ad_astra:oxygen_loader', 'ad_astra:oxygen_sensor', 'ad_astra:water_pump', 'createaddition:gold_rod',
+        'createaddition:brass_rod', 'createaddition:copper_rod', 'createaddition:electrum_rod', 'createaddition:electric_motor', 'createaddition:capacitor', 'createaddition:tesla_coil',
+        'createaddition:portable_energy_interface', 'create:portable_storage_interface', 'powah:dielectric_paste',  'createaddition:connector', 'createaddition:large_connector',
+        'powah:aerial_pearl', 'powah:player_aerial_pearl', 'createaddition:festive_spool', 'powah:energizing_orb', 'powah:player_transmitter_starter', 'powah:player_transmitter_basic',
+        'powah:player_transmitter_hardened', 'powah:player_transmitter_blazing', 'powah:player_transmitter_niotic', 'powah:player_transmitter_spirited',
+        'powah:player_transmitter_nitro', 'powah:binding_card', 'powah:blank_card','buildinggadgets2:gadget_building', 'effortlessbuilding:randomizer_bag',
+        'effortlessbuilding:randomizer_bag_diamond', 'effortlessbuilding:randomizer_bag_gold', 'powah:dielectric_casing'
     ];
     const toRemoveId = ['create:haunting/crimson_fungus', 'create:haunting/warped_fungus', 'create:milling/compat/ae2/sky_stone_block', 'create:milling/compat/ae2/fluix_crystal',
         'create:milling/compat/ae2/ender_pearl', 'create:milling/compat/ae2/certus_quartz', 'create:crushing/raw_platinum_ore', 'create:crushing/raw_platinum_block',
         'create:crushing/raw_uranium_ore', 'create:crushing/raw_uranium_block', 'create:crafting/appliances/slime_ball', 'minecraft:fire_charge', 'gtceu:shapeless/dust_bronze',
-        'gtceu:shapeless/dust_brass', 'create:mixing/brass_ingot',
-        'ae2:transform/damaged_budding_quartz', 'ae2:transform/chipped_budding_quartz',
-        'ae2:transform/flawed_budding_quartz', 'ae2:transform/fluix_crystals', 'ae2:transform/fluix_crystal', 'ae2:transform/certus_quartz_crystals',
-        'ae2:network/crafting/molecular_assembler', 'ae2:network/blocks/pattern_providers_interface', 'ae2:network/crafting/cpu_crafting_unit',
-        'ae2:network/blocks/energy_energy_acceptor', 'ae2:network/blocks/interfaces_interface', 'ae2:network/blocks/io_condenser', 'ae2:network/blocks/cell_workbench',
-        'ae2:network/blocks/spatial_io_port', 'ae2:network/blocks/io_port'
+        'gtceu:shapeless/dust_brass', 'create:mixing/brass_ingot',  'createaddition:crafting/rolling_mill', 'ae2:transform/certus_quartz_crystals', 'ae2:network/blocks/cell_workbench',
+        'ae2:transform/damaged_budding_quartz', 'ae2:transform/chipped_budding_quartz', 'ae2:network/blocks/spatial_io_port', 'ae2:network/blocks/io_port', 'laserio:filter_basic',
+        'ae2:transform/flawed_budding_quartz', 'ae2:transform/fluix_crystals', 'ae2:transform/fluix_crystal', 'ae2:network/blocks/interfaces_interface', 'ae2:network/blocks/io_condenser',
+        'ae2:network/crafting/molecular_assembler', 'ae2:network/blocks/pattern_providers_interface', 'ae2:network/crafting/cpu_crafting_unit', 'ae2:network/blocks/energy_energy_acceptor',
     ];
 
-    const toRemoveType = ['expatternprovider:cutter', 'ae2:inscriber', 'ae2:charger', 'create:crushing', 'ad_astra:alloying',
-        'ad_astra:nasa_workbench', 'ad_astra:cryo-freezing', 'ad_astra:refining', 'ad_astra:compressing', 'ad_astra:oxygen_loading'
+    const toRemoveType = ['expatternprovider:cutter', 'ae2:inscriber', 'ae2:charger', 'create:crushing', 'ad_astra:alloying', 'createaddition:liquid_burning',
+        'ad_astra:nasa_workbench', 'ad_astra:cryo-freezing', 'ad_astra:refining', 'ad_astra:compressing', 'ad_astra:oxygen_loading', 'powah:energizing'
     ];
 
     toRemoveOutput.forEach(element => {
@@ -197,7 +200,6 @@ ServerEvents.recipes(event => {
     });
 
     event.remove({ input: 'minecraft:fire_charge'});
-    event.remove({ output: 'ae2:charged_certus_quartz_crystal', input: 'ae2:certus_quartz_crystal'})
 
     event.remove({id: /.*expatternprovider.*cutter.*/});
     event.remove({ input: 'minecraft:netherite_scrap'});
@@ -207,6 +209,7 @@ ServerEvents.recipes(event => {
     event.remove({ output: /create:.*_sheet/});
     event.remove({ output: /create:.*_ingot/});
     event.remove({ output: /create:.*_plate/});
+    event.remove({ output: /create:.*_dust/});
 
     event.replaceInput({input: 'create:copper_sheet'}, 'create:copper_sheet', 'gtceu:copper_plate');
     event.replaceInput({input: 'create:zinc_ingot'}, 'create:zinc_ingot', 'gtceu:zinc_ingot');
@@ -226,9 +229,14 @@ ServerEvents.tags('item', event => {
    event.removeAllTagsFrom('create:golden_sheet')
    event.removeAllTagsFrom('createaddition:zinc_sheet')
    event.removeAllTagsFrom('createaddition:electrum_block')
-   event.removeAllTagsFrom('createaddtion:electrum_sheet')
+   event.removeAllTagsFrom('createaddition:electrum_sheet')
    event.removeAllTagsFrom('createaddition:electrum_nugget')
-   event.removeAllTagsFrom('createaddtion:electrum_ingot')
+   event.removeAllTagsFrom('createaddition:electrum_ingot')
+   event.removeAllTagsFrom('createaddition:copper_rod')
+   event.removeAllTagsFrom('createaddition:gold_rod')
+   event.removeAllTagsFrom('createaddition:iron_rod')
+   event.removeAllTagsFrom('createaddition:electrum_rod')
+   event.removeAllTagsFrom('createaddition:brass_rod')
    event.removeAllTagsFrom('ad_astra:iron_nugget')
    event.removeAllTagsFrom('ad_extendra:raw_plutonium')
    event.removeAllTagsFrom('ad_extendra:raw_plutonium_block')

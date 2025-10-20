@@ -2,7 +2,7 @@
 ##Basic Burner Requirements
 [basic_burner]
 	#When set to true, an active Basic Burner produces the same heat as a Kindled Blaze Burner and an empowered Basic Burner produces the same heat as a Seething Blaze Burner. Inactive state is unaffected.
-	hotBurners = false
+	hotBurners = true
 	#When set to false, it disables Basic Burner role in the steam engine heating system, only leaving it for recipes. This will also re-enable all passive heaters as a consequence. The Basic Burner Block tooltip must be altered via changing the lang file, if you use this and the inaccuracy bothers you.
 	basicBurnerBoiler = true
 	#When set to true, it re-enables all passive heaters.
