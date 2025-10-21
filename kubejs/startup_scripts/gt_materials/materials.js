@@ -262,8 +262,12 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
         event.create(name).dust().liquid().ore(2, 1).components(elements).color(color).flags(flags);
     }
     
-    const compDustOre = (name, elements, color) => {
-        event.create(name).dust().ore(2, 1).components(elements).color(color).flags(no_decomp);
+    const compDustOreIngot = (name, elements, color, blasting) => {
+        if (blasting.includes(blasting[0])){
+        event.create(name).ingot().dust().ore(2, 1).components(elements).color(color).blastTemp(blasting[0], blasting[1], blasting[2], blasting[3]).flags(no_decomp);
+        } else {
+        event.create(name).ingot().dust().ore(2, 1).components(elements).color(color).flags(no_decomp);
+        }
     }
     
     const compGemOre = (name, elements, color, icon) => {
@@ -271,13 +275,12 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     }
 
     const compIngotPlasma = (name, elements, color, icon, blasting, flags) => {
-        event.create(name).ingot().plasma().components(elements).color(color).iconSet(icon).flags(flags).blastTemp(blasting[0], blasting[1], blasting[2], blasting[3]);
+        event.create(name).ingot().plasma().components(elements).color(color).iconSet(icon).flags(flags).blastTemp(blasting[0], [1], blasting[2], blasting[3]);
     }
 
     const conductorPlasma = (name, elements, color, icon, blasting, cable, flags) => {
         event.create(name).ingot().plasma().components(elements).color(color).iconSet(icon).flags(flags).blastTemp(blasting[0], blasting[1], blasting[2], blasting[3]).cableProperties(cable[0], cable[1], cable[2], cable[3]);
     }
-
 
     // elemIngot('magnetic_zapolgium', GTElements.get('zapolgium'), 0xcc00cc, MAGNETIC, [], [rod, long_rod, magnetic]);
 
@@ -293,6 +296,37 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     //create
     compDust('andesite_alloy', ['1x andesite', '1x iron'], 0xa6a08f, [centrifuge]);
 
+    //ad astra & ad extendrum
+    compDustOreIngot('desh', ['1x desh'], 0xD38B4C, [])
+
+    //superconductors
+    conductorSuper('energized_steel', ['1x electrum', '2x desh'], 0xbaa172, [], [V('lv'), 4, 0, true], [150, 130, 3, 37600]);
+
+    // conductorSuper('', ['1x silver', '3x copper', '4x redstone'], 0xff3300, [1700, 'low', VA('mv'), 1200], [V('mv'), 16, 0, true], [190, 150, 3, 24000]);
+
+    // conductorSuper('', ['1x silver', '3x tin', '2x glowstone'], 0xffffb3, [1700, 'low', VA('hv'), 1500], [V('hv'), 16, 0, true], [220, 170, 3, 24000]);
+
+    // conductorSuper('', ['3x lead', '1x diamond', '2x ender_pearl'], 0x006666, [3500, 'low', VA('ev'), 1500], [V('ev'), 32, 0, true], [300, 190, 3, 45600]);
+
+    // conductorSuper('', ['1x black_bronze', '3x signalum'], 0x9933ff, [4400, 'mid', VA('iv'), 1800], [V('iv'), 64, 0, true], [450, 220, 3, 37600]);
+
+    // conductorSuper('', ['3x manganese_phosphide', '2x amethyst', ''], 0xf66999, [5300, 'mid', VA('luv'), 2100], [V('luv'), 64, 0, true], [700, 260, 3, 24000]);
+
+    // conductorSuper('', ['4x tungsten', '8x magnesium_diboride', '2x cadmium'], 0x3333cc, [7100, 'high', VA('zpm'), 2400], [V('zpm'), 96, 0, true], [1100, 380, 3, 32000]);
+
+    // conductorSuper('', ['8x naquadah', '4x mercury_barium_calcium_cuprate', '7x tungsten_carbide'], 0x66ffff, [9000, 'high', VA('zpm'), 2700], [V('uv'), 48, 0, true], [1600, 470, 3, 48000]);
+
+    // conductorSuper('', ['2x uranium_triplatinum', '14x electrum', '3x amethyst', '4x darmstadtium', '7x europium'], 0xd9b3ff, [10000, 'higher', VA('uv'), 3000], [V('uv'), 128, 0, true], [2000, 550, 3, 64000]);
+
+    // conductorSuper('', ['12x neutronium', '', '1x samarium_iron_arsenic_oxide'], 0xccffff, [10799, 'highest', VA('uhv'), 4000], [V('uhv'), 192, 0, true], [3200, 660, 3, 96000]);
+
     //AE2
     compIngotLiquidSeccolor('futura_alloy', ['4x stainless_steel', '1x mystery'], 0xebb7ea, 0x000000, SHINY, [1700, 'low', 400, 1200], [frame, plates, rod, dense_plate, centrifuge, mortar_grind, block])
-}); 
+});
+
+//item integration
+GTCEuStartupEvents.materialModification(event => {
+TagPrefix.ingot.setIgnored("energized_steel", () => Item.getItem("powah:energized_steel_ingot"))
+TagPrefix.block.setIgnored("energized_steel", () => Item.getItem("powah:energized_steel_block"))
+TagPrefix.nugget.setIgnored("energized_steel", () => Item.getItem("powah:energized_steel_nugget"))
+})

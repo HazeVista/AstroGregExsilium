@@ -1,5 +1,5 @@
 #Set this to false to disable seasonal features, such as halloween and christmas.
-seasonalFeatures = true
+seasonalFeatures = false
 #Set to false to disable Botania's messages in the F3 debug screen
 debugInfo = true
 #Set this to false to disable the references in the flower tooltips. (You monster D:)
@@ -34,7 +34,7 @@ splashes = true
 
 [particles]
 	#Set this to true to set the power system's particles to be a lot more subtle. Good for low-end systems, if the particles are causing lag.
-	powerSystem = false
+	powerSystem = true
 	#Set this to true to use a static wand beam that shows every single position of the burst, similar to the way it used to work on old Botania versions. Warning: Disabled by default because it may be laggy.
 	staticWandBeam = false
 	#The frequency in which particles spawn from normal (worldgen) mystical flowers

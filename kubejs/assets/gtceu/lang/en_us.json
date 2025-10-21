@@ -6,5 +6,7 @@
     "block.gtceu.inscription_matrix": "Inscription Matrix",
     
     "material.gtceu.futura_alloy": "Futura Steel",
-    "material.gtceu.andesite_alloy": "Andesite Alloy"
+    "material.gtceu.andesite_alloy": "Andesite Alloy",
+    "material.gtceu.desh": "Desh",
+    "material.gtceu.energized_steel": "Energized Steel"
 }

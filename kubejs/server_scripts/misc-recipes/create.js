@@ -31,14 +31,10 @@ ServerEvents.recipes(event => {
     })
 
     // Andesite Alloy mostly by @digestlotion
-
     event.shapeless('2x gtceu:andesite_dust', ['gtceu:stone_dust', 'gtceu:quartz_dust'])
     event.shapeless('1x gtceu:andesite_alloy_dust', ['gtceu:andesite_dust', 'gtceu:iron_dust'])
     event.shapeless('2x create:shaft', ['create:andesite_alloy', '#forge:tools/files'])
     event.smelting('1x create:andesite_alloy', 'gtceu:andesite_alloy_dust')
-
-    event.recipes.create.mixing('2x create:andesite_alloy', ['#forge:dusts/iron', 'gtceu:andesite_dust'])
-        .heatRequirement('lowheated')
 
     event.recipes.gtceu.mixer('mixing_andesite_alloy_dust')
         .itemInputs('gtceu:iron_dust', 'gtceu:andesite_dust')
@@ -88,26 +84,54 @@ ServerEvents.recipes(event => {
         .duration(120)
         .EUt(7)
 
-    
-    
-    //create press
+    // create mixing by @digestlotion
+    event.recipes.create.mixing('2x create:andesite_alloy', ['gtceu:iron_dust', 'gtceu:andesite_dust']).heatRequirement('lowheated')
+    event.recipes.create.mixing('2x create:andesite_alloy', ['gtceu:iron_ingot', 'gtceu:andesite_dust']).heatRequirement('lowheated')
+    event.recipes.create.mixing('2x create:andesite_alloy', ['gtceu:iron_dust', 'minecraft:andesite']).heatRequirement('lowheated')
+    event.recipes.create.mixing('2x create:andesite_alloy', ['gtceu:iron_ingot', 'minecraft:andesite']).heatRequirement('lowheated')
+        
+    event.recipes.create.mixing('4x gtceu:bronze_ingot', ['3x minecraft:copper_ingot', 'gtceu:tin_ingot']).heatRequirement('lowheated')
+    event.recipes.create.mixing('4x gtceu:bronze_ingot', ['3x gtceu:copper_dust', 'gtceu:tin_ingot']).heatRequirement('lowheated')
+    event.recipes.create.mixing('4x gtceu:bronze_ingot', ['3x minecraft:copper_ingot', 'gtceu:tin_dust']).heatRequirement('lowheated')
+    event.recipes.create.mixing('4x gtceu:bronze_ingot', ['3x gtceu:copper_dust', 'gtceu:tin_dust']).heatRequirement('lowheated')
 
-    const platemetals = ['wrought_iron', 'tin', 'bronze', 'potin', 'lead', 'cupronickel',
-                        'brass', 'invar', 'gold', 'copper', 'iron', 'red_alloy', 'electrum']
+    event.recipes.create.mixing('4x gtceu:brass_ingot', ['3x minecraft:copper_ingot', 'gtceu:zinc_ingot']).heatRequirement('lowheated')
+    event.recipes.create.mixing('4x gtceu:brass_ingot', ['3x gtceu:copper_dust', 'gtceu:zinc_ingot']).heatRequirement('lowheated')
+    event.recipes.create.mixing('4x gtceu:brass_ingot', ['3x minecraft:copper_ingot', 'gtceu:zinc_dust']).heatRequirement('lowheated')
+    event.recipes.create.mixing('4x gtceu:brass_ingot', ['3x gtceu:copper_dust', 'gtceu:zinc_dust']).heatRequirement('lowheated')
+
+    event.recipes.create.mixing('1x gtceu:red_alloy_ingot', ['4x minecraft:redstone', 'gtceu:copper_ingot']).heatRequirement('lowheated')
+    event.recipes.create.mixing('1x gtceu:red_alloy_ingot', ['4x minecraft:redstone', 'gtceu:copper_dust']).heatRequirement('lowheated')
+
+    event.recipes.create.mixing('2x gtceu:cupronickel_ingot', ['minecraft:copper_ingot', 'gtceu:nickel_ingot']).heatRequirement('lowheated')
+    event.recipes.create.mixing('2x gtceu:cupronickel_ingot', ['gtceu:copper_dust', 'gtceu:nickel_ingot']).heatRequirement('lowheated')
+    event.recipes.create.mixing('2x gtceu:cupronickel_ingot', ['minecraft:copper_ingot', 'gtceu:nickel_dust']).heatRequirement('lowheated')
+    event.recipes.create.mixing('2x gtceu:cupronickel_ingot', ['gtceu:copper_dust', 'gtceu:nickel_dust']).heatRequirement('lowheated')
+
+    event.recipes.create.mixing('2x gtceu:electrum_ingot', ['minecraft:gold_ingot', 'gtceu:silver_ingot']).heatRequirement('lowheated')
+    event.recipes.create.mixing('2x gtceu:electrum_ingot', ['gtceu:gold_dust', 'gtceu:silver_ingot']).heatRequirement('lowheated')
+    event.recipes.create.mixing('2x gtceu:electrum_ingot', ['minecraft:gold_ingot', 'gtceu:silver_dust']).heatRequirement('lowheated')
+    event.recipes.create.mixing('2x gtceu:electrum_ingot', ['gtceu:gold_dust', 'gtceu:silver_dust']).heatRequirement('lowheated')
+
+    event.recipes.create.mixing('1x gtceu:rubber_ingot', ['3x gtceu:raw_rubber_dust', 'gtceu:sulfur_dust']).heatRequirement('lowheated')
+    event.recipes.create.mixing('16x minecraft:glass', ['16x gtceu:quartz_sand_dust', 'gtceu:flint_dust']).heatRequirement('lowheated')
+    
+
+    //create press
+    const platemetals = ['wrought_iron', 'tin', 'bronze', 'potin', 'lead', 'cupronickel', 'silver', 'zinc',
+                        'brass', 'invar', 'gold', 'copper', 'iron', 'red_alloy', 'electrum', 'iron']
 
     function pressingplates(metalinput) {
 
         event.recipes.create.pressing(
             [`gtceu:${metalinput}_plate`],
             [`gtceu:${metalinput}_ingot`])
-
     }
     
     platemetals.forEach(pressingplates)
 
     //create crafts & additions
     //polarizer
-
     event.custom({
         type: "createaddition:charging",
         input: {
@@ -122,7 +146,6 @@ ServerEvents.recipes(event => {
     })
 
     //rolling (primitive lathe)
-
     event.custom({
         type: "createaddition:rolling",
         input: {
@@ -135,7 +158,7 @@ ServerEvents.recipes(event => {
     })
 
     const rollermetals = ['wrought_iron', 'tin', 'bronze', 'potin', 'lead', 'cupronickel',
-                        'brass', 'invar', 'gold', 'copper', 'iron', 'red_alloy', 'electrum']
+                        'brass', 'invar', 'gold', 'copper', 'iron', 'red_alloy', 'electrum', 'iron']
     function rollerrods(metalinput) {
 
     event.custom({type:"createaddition:rolling",
@@ -152,38 +175,34 @@ ServerEvents.recipes(event => {
             ['create:electron_tube', 
             'createaddition:connector'])
 
-
     event.shapeless('createaddition:portable_energy_interface', 
             ['create:portable_storage_interface', 
-            'createaddition:accumulator'])
+            'createaddition:modular_accumulator'])
 
     event.shapeless('createaddition:electrum_spool', 
             ['gtceu:fine_electrum_wire', 
-            'createaddition:empty_spool'])
+            'createaddition:spool'])
 
     event.shapeless('createaddition:copper_spool', 
             ['gtceu:fine_copper_wire', 
-            'createaddition:empty_spool'])
+            'createaddition:spool'])
 
     event.shapeless('createaddition:gold_spool', 
             ['gtceu:fine_gold_wire', 
-            'createaddition:empty_spool'])
+            'createaddition:spool'])
     
     event.shapeless('createaddition:tesla_coil',
             ['createaddition:alternator',
-            'createaddition:accumulator']
-    )
+            'createaddition:modular_accumulator'])
 
     event.shapeless('createaddition:large_connector',
             ['gtceu:copper_rod',
             'create:andesite_alloy',
-            'create:andesite_alloy']
-    )
+            'create:andesite_alloy'])
 
     event.shapeless('createaddition:connector',
             ['gtceu:copper_rod',
-            'create:andesite_alloy',]
-    )
+            'create:andesite_alloy',])
 
     event.shaped('createaddition:alternator', [
         'ACA',
@@ -195,15 +214,16 @@ ServerEvents.recipes(event => {
         C: 'create:shaft',
         D: 'gtceu:magnetic_steel_rod'
     })
+
     event.shaped('createaddition:modular_accumulator', [
         'ABA',
-        'C',
+        'DCD',
         'ABA'
     ], {
         A: 'gtceu:brass_plate',
         B: 'powah:battery_starter',
         C: 'create:brass_casing',
-        D: ''
+        D: 'gtceu:red_alloy_plate'
     })
     event.shaped('createaddition:electric_motor', [
         'ACA',

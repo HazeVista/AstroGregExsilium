@@ -1,5 +1,15 @@
 ServerEvents.recipes(event => {
     //basic components
+    event.shaped('powah:player_aerial_pearl', [
+        'BCB',
+        'CAC',
+        'BCB'
+    ], {
+        A: 'minecraft:ender_eye',
+        B: 'minecraft:blaze_powder',
+        C: 'powah:dielectric_paste'
+    })
+
     event.shaped('powah:binding_card', [
         'ABA'
     ], {
@@ -13,13 +23,14 @@ ServerEvents.recipes(event => {
         'AAA'
     ], {
         A: 'powah:dielectric_rod',
-        B: '#forge:tools/wrenches'
+        B: '#gtceu:tools/crafting_wrenches'
     });
 
     event.recipes.gtceu.assembler('assembler_dielectric_casing')
-        .inputItems('4x powah:dielectric_rod')
-        .outputItems('powah:dielectric_frame')
+        .itemInputs('4x powah:dielectric_rod')
+        .itemOutputs('powah:dielectric_casing')
         .duration(64)
+        .circuit(4)
         .EUt(7)
 
     event.shaped('8x powah:dielectric_rod', [
@@ -39,7 +50,7 @@ ServerEvents.recipes(event => {
         A: 'powah:dielectric_paste',
         B: 'gtceu:steel_rod'
     });
-    event.shaped('24x powah:dielectric_rod', [
+    event.shaped('20x powah:dielectric_rod', [
         'ABA',
         'ABA',
         'ABA'
@@ -48,7 +59,7 @@ ServerEvents.recipes(event => {
         B: 'gtceu:aluminium_rod'
     });
 
-    event.shaped('48x powah:dielectric_rod', [
+    event.shaped('24x powah:dielectric_rod', [
         'ABA',
         'ABA',
         'ABA'
@@ -57,7 +68,7 @@ ServerEvents.recipes(event => {
         B: 'gtceu:stainless_steel_rod'
     });
 
-    event.shaped('64x powah:dielectric_rod', [
+    event.shaped('32x powah:dielectric_rod', [
         'ABA',
         'ABA',
         'ABA'
@@ -71,7 +82,7 @@ ServerEvents.recipes(event => {
         'BBC'
     ], {
         A: 'gtceu:carbon_dust',
-        B: 'clay_dust',
+        B: 'gtceu:clay_dust',
         C: 'minecraft:blaze_powder'
     })
 
@@ -80,7 +91,7 @@ ServerEvents.recipes(event => {
         'BBC'
     ], {
         A: 'gtceu:carbon_dust',
-        B: 'clay_dust',
+        B: 'gtceu:clay_dust',
         C: 'minecraft:lava_bucket'
     })
 
@@ -89,7 +100,7 @@ ServerEvents.recipes(event => {
         'BBC'
     ], {
         A: 'gtceu:charcoal_dust',
-        B: 'clay_dust',
+        B: 'gtceu:clay_dust',
         C: 'minecraft:blaze_powder'
     })
 
@@ -98,7 +109,7 @@ ServerEvents.recipes(event => {
         'BBC'
     ], {
         A: 'gtceu:charcoal_dust',
-        B: 'clay_dust',
+        B: 'gtceu:clay_dust',
         C: 'minecraft:lava_bucket'
     })
 
@@ -107,7 +118,7 @@ ServerEvents.recipes(event => {
         'BBC'
     ], {
         A: 'gtceu:coal_dust',
-        B: 'clay_dust',
+        B: 'gtceu:clay_dust',
         C: 'minecraft:blaze_powder'
     })
 
@@ -116,47 +127,61 @@ ServerEvents.recipes(event => {
         'BBC'
     ], {
         A: 'gtceu:coal_dust',
-        B: 'clay_dust',
+        B: 'gtceu:clay_dust',
         C: 'minecraft:lava_bucket'
     })
 
     event.recipes.gtceu.mixer('mixing_dielectric_paste')
-        .itemInputs('gtceu:charcoal_dust', 'gtceu:clay_dust', 'gtceu:small_blaze_dust')
-        .itemOutputs('4x dielectric_paste')
+        .itemInputs('3x gtceu:charcoal_dust', '2x gtceu:clay_dust', 'gtceu:small_blaze_dust')
+        .itemOutputs('4x powah:dielectric_paste')
         .EUt(20)
         .duration(200)
 
     event.recipes.gtceu.mixer('mixing_dielectric_paste1')
-        .itemInputs('gtceu:coal_dust', 'gtceu:clay_dust', 'gtceu:small_blaze_dust')
-        .itemOutputs('4x dielectric_paste')
+        .itemInputs('3x gtceu:coal_dust', '2x gtceu:clay_dust', 'gtceu:small_blaze_dust')
+        .itemOutputs('4x powah:dielectric_paste')
         .EUt(20)
         .duration(200)
 
     event.recipes.gtceu.mixer('mixing_dielectric_paste2')
-        .itemInputs('gtceu:carbon_dust', 'gtceu:clay_dust', 'gtceu:small_blaze_dust')
-        .itemOutputs('4x dielectric_paste')
+        .itemInputs('3x gtceu:carbon_dust', '2x gtceu:clay_dust', 'gtceu:small_blaze_dust')
+        .itemOutputs('4x powah:dielectric_paste')
         .EUt(20)
         .duration(200)
 
     event.recipes.gtceu.mixer('mixing_dielectric_paste_lava')
-        .itemInputs('gtceu:charcoal_dust', 'gtceu:clay_dust')
-        .itemOutputs('4x dielectric_paste')
+        .itemInputs('3x gtceu:charcoal_dust', '2x gtceu:clay_dust')
+        .itemOutputs('4x powah:dielectric_paste')
+        .inputFluids('minecraft:lava 100')
         .EUt(20)
         .duration(200)
 
     event.recipes.gtceu.mixer('mixing_dielectric_paste_lava1')
-        .itemInputs('gtceu:coal_dust', 'gtceu:clay_dust')
-        .itemOutputs('4x dielectric_paste')
+        .itemInputs('3x gtceu:coal_dust', '2x gtceu:clay_dust')
+        .itemOutputs('4x powah:dielectric_paste')
+        .inputFluids('minecraft:lava 100')
         .EUt(20)
         .duration(200)
 
     event.recipes.gtceu.mixer('mixing_dielectric_paste_lava2')
-        .itemInputs('gtceu:carbon_dust', 'gtceu:clay_dust')
+        .itemInputs('3x gtceu:carbon_dust', '2x gtceu:clay_dust')
         .inputFluids('minecraft:lava 100')
-        .itemOutputs('4x dielectric_paste')
+        .itemOutputs('4x powah:dielectric_paste')
         .EUt(20)
         .duration(200)
 
+
+    //capacitors
+    event.shaped('4x powah:capacitor_basic', [
+        ' CB',
+        'CAC',
+        'BC '
+    ], {
+        A: 'gtceu:magnetic_iron_rod',
+        B: 'powah:dielectric_paste',
+        C: 'gtceu:fine_red_alloy_wire'
+    })
+
     //player transmitters
 
-})
+});

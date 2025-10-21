@@ -26,7 +26,7 @@ ServerEvents.recipes(event => {
         A: 'gtceu:polytetrafluoroethylene_plate',
         B: 'gtceu:stainless_steel_gear',
         C: 'gtceu:long_stainless_steel_rod',
-        D: 'forge:tools/wrenches'
+        D: '#gtceu:tools/crafting_wrenches'
     });
         
     event.shaped('minecraft:observer', [
@@ -74,37 +74,9 @@ ServerEvents.recipes(event => {
         A: '#minecraft:logs'
     });
 
-    event.shaped('functionalstorage:oak_1', [
-        'A'
-    ], {
-        A: 'functionalstorage:oak_1'
-    });
-
-    event.shaped('functionalstorage:oak_2', [
-        'A'
-    ], {
-        A: 'functionalstorage:oak_2'
-    });
-
-    event.shaped('functionalstorage:oak_4', [
-        'A'
-    ], {
-        A: 'functionalstorage:oak_4'
-    });
-
     event.shaped('minecraft:white_dye', [
         'A'
     ], {
         A: 'minecraft:bone_meal'
     });
-
-    event.shaped('waystones:warp_stone', [
-    'BCB',
-    'CAC',
-    'BCB'
-], {
-    A: 'minecraft:ender_pearl',
-    B: 'create:rose_quartz',
-    C: 'minecraft:quartz'
-})
 });

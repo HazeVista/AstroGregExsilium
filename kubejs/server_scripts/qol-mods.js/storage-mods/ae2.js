@@ -36,12 +36,6 @@ ServerEvents.recipes(event => {
         .duration(160)
         .EUt(28)    
 
-    event.recipes.gtceu.mixer('fluix_pearl_dust')
-        .itemInputs('gtceu:ender_pearl_dust', '4x ae2:fluix_dust')
-        .itemOutputs('gtceu:fluix_pearl')
-        .duration(160)
-        .EUt(100)
-
     event.recipes.gtceu.chemical_bath('wash_cables')
         .itemInputs('#ae2:glass_cable')
         .inputFluids('minecraft:water 144')
@@ -49,7 +43,6 @@ ServerEvents.recipes(event => {
         .duration(40)
         .EUt(20)
 
-    
     event.recipes.gtceu.macerator('macerate_fluix')
         .itemInputs('ae2:fluix_crystal')
         .itemOutputs('ae2:fluix_dust')
@@ -386,7 +379,7 @@ ServerEvents.recipes(event => {
         A: 'gtceu:futura_alloy_plate',
         B: 'gtceu:futura_alloy_frame',
         C: '#forge:tools/hammers',
-        D: '#forge:tools/wrenches'
+        D: '#gtceu:tools/crafting_wrenches'
     });
 
     event.shaped('merequester:requester', [

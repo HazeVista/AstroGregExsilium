@@ -2,7 +2,7 @@
 [general]
 	#Disable this to turn off the module system logic that makes features turn off when specified mods with the same content are loaded
 	"Use Anti Overlap" = true
-	#Enable Zeta's piston structure resolver, needed for some Quark or other mod features. If you're having troubles, try turning this off, but be aware other Zeta-using mods can enable it too.
+	#Enable Zeta's piston structure resolver, needed for some  or other mod features. If you're having troubles, try turning this off, but be aware other Zeta-using mods can enable it too.
 	"Use Piston Logic Replacement" = true
 	#Changes the piston push limit. Only has an effect if Zeta's piston structure resolver is in use.
 	#Allowed values: (0,)

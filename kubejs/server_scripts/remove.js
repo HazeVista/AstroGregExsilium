@@ -156,6 +156,7 @@ ServerEvents.recipes(event => {
     event.remove({mod: 'createoreexcavation'})
     event.remove({mod: 'scannable'})
     event.remove({mod: 'storagenetwork'})
+    event.remove({mod: 'powah'})
 
     //new method from Truly
     const id = global.id;
@@ -166,14 +167,13 @@ ServerEvents.recipes(event => {
         'functionalstorage:collector_upgrade', 'functionalstorage:pusher_upgrade', 'functionalstorage:puller_upgrade', 'ad_astra:solar_panel', 'create:shaft',
         'ad_astra:steel_cable', 'ad_astra:desh_cable', 'ad_astra:cable_duct', 'ad_astra:ostrum_fluid_pipe', 'ad_astra:desh_fluid_pipe', 'createaddition:alternator',
         'ad_astra:fluid_pipe_duct', 'ad_astra:etrionic_blast_furnace', 'ad_astra:nasa_workbench', 'ad_astra:cryo_freezer', 'ad_astra:coal_generator', 'ad_astra:energizer',
-        'ad_astra:compressor', 'ad_astra:fuel_refinery', 'ad_astra:oxygen_loader', 'ad_astra:oxygen_sensor', 'ad_astra:water_pump', 'createaddition:gold_rod',
+        'ad_astra:compressor', 'ad_astra:fuel_refinery', 'ad_astra:oxygen_loader', 'ad_astra:oxygen_sensor', 'ad_astra:water_pump', 'createaddition:gold_rod', 'effortlessbuilding:randomizer_bag_gold',
         'createaddition:brass_rod', 'createaddition:copper_rod', 'createaddition:electrum_rod', 'createaddition:electric_motor', 'createaddition:capacitor', 'createaddition:tesla_coil',
-        'createaddition:portable_energy_interface', 'create:portable_storage_interface', 'powah:dielectric_paste',  'createaddition:connector', 'createaddition:large_connector',
-        'powah:aerial_pearl', 'powah:player_aerial_pearl', 'createaddition:festive_spool', 'powah:energizing_orb', 'powah:player_transmitter_starter', 'powah:player_transmitter_basic',
-        'powah:player_transmitter_hardened', 'powah:player_transmitter_blazing', 'powah:player_transmitter_niotic', 'powah:player_transmitter_spirited',
-        'powah:player_transmitter_nitro', 'powah:binding_card', 'powah:blank_card','buildinggadgets2:gadget_building', 'effortlessbuilding:randomizer_bag',
-        'effortlessbuilding:randomizer_bag_diamond', 'effortlessbuilding:randomizer_bag_gold', 'powah:dielectric_casing'
+        'createaddition:portable_energy_interface', 'create:portable_storage_interface', 'createaddition:connector', 'createaddition:large_connector', 'createaddition:festive_spool', 
+        'effortlessbuilding:randomizer_bag', 'create:empty_blaze_burner', 'effortlessbuilding:randomizer_bag_diamond',
+        // 'buildinggadgets2:gadget_building', 
     ];
+
     const toRemoveId = ['create:haunting/crimson_fungus', 'create:haunting/warped_fungus', 'create:milling/compat/ae2/sky_stone_block', 'create:milling/compat/ae2/fluix_crystal',
         'create:milling/compat/ae2/ender_pearl', 'create:milling/compat/ae2/certus_quartz', 'create:crushing/raw_platinum_ore', 'create:crushing/raw_platinum_block',
         'create:crushing/raw_uranium_ore', 'create:crushing/raw_uranium_block', 'create:crafting/appliances/slime_ball', 'minecraft:fire_charge', 'gtceu:shapeless/dust_bronze',
@@ -183,8 +183,8 @@ ServerEvents.recipes(event => {
         'ae2:network/crafting/molecular_assembler', 'ae2:network/blocks/pattern_providers_interface', 'ae2:network/crafting/cpu_crafting_unit', 'ae2:network/blocks/energy_energy_acceptor',
     ];
 
-    const toRemoveType = ['expatternprovider:cutter', 'ae2:inscriber', 'ae2:charger', 'create:crushing', 'ad_astra:alloying', 'createaddition:liquid_burning',
-        'ad_astra:nasa_workbench', 'ad_astra:cryo-freezing', 'ad_astra:refining', 'ad_astra:compressing', 'ad_astra:oxygen_loading', 'powah:energizing'
+    const toRemoveType = ['expatternprovider:cutter', 'ae2:inscriber', 'ae2:charger', 'create:crushing', 'ad_astra:alloying', 'createaddition:liquid_burning', 'create:pressing',
+        'ad_astra:nasa_workbench', 'ad_astra:cryo-freezing', 'ad_astra:refining', 'ad_astra:compressing', 'ad_astra:oxygen_loading', 
     ];
 
     toRemoveOutput.forEach(element => {

@@ -91,7 +91,7 @@ event.shaped('scannable:block_module', [
     A: 'scannable:blank_module',
     B: 'gtceu:mv_sensor',
     C: 'gtceu:item_filter',
-    D: 'gtceu:kanthal_singel_wire',
+    D: 'gtceu:kanthal_single_wire',
     E: 'gtceu:polyethylene_plate'
 })
 
