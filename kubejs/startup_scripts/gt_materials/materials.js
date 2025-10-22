@@ -300,7 +300,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     compDustOreIngot('desh', ['1x desh'], 0xD38B4C, [])
 
     //superconductors
-    conductorSuper('energized_steel', ['1x electrum', '2x desh'], 0xbaa172, [], [V('lv'), 4, 0, true], [150, 130, 3, 37600]);
+    conductorSuper('energized_steel', ['1x iron', '1x desh', '1x electrum'], 0xbaa172, [], [V('lv'), 4, 0, true], [150, 130, 3, 37600]);
 
     // conductorSuper('', ['1x silver', '3x copper', '4x redstone'], 0xff3300, [1700, 'low', VA('mv'), 1200], [V('mv'), 16, 0, true], [190, 150, 3, 24000]);
 
@@ -323,10 +323,3 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     //AE2
     compIngotLiquidSeccolor('futura_alloy', ['4x stainless_steel', '1x mystery'], 0xebb7ea, 0x000000, SHINY, [1700, 'low', 400, 1200], [frame, plates, rod, dense_plate, centrifuge, mortar_grind, block])
 });
-
-//item integration
-GTCEuStartupEvents.materialModification(event => {
-TagPrefix.ingot.setIgnored("energized_steel", () => Item.getItem("powah:energized_steel_ingot"))
-TagPrefix.block.setIgnored("energized_steel", () => Item.getItem("powah:energized_steel_block"))
-TagPrefix.nugget.setIgnored("energized_steel", () => Item.getItem("powah:energized_steel_nugget"))
-})

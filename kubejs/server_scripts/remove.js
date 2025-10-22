@@ -148,6 +148,8 @@ ServerEvents.recipes(event => {
     event.remove({input: 'ad_astra:steel_rod'})
     event.remove({output: 'ad_astra:iron_rod'})
     event.remove({output: 'ad_astra:steel_rod'})
+    event.remove({input: 'ad_astra:/*desh*/'})
+    event.remove({output: 'ad_astra:/*desh*/'})
 
     //botania
     event.remove({id: 'botania:glass_pickaxe'})
@@ -160,17 +162,17 @@ ServerEvents.recipes(event => {
 
     //new method from Truly
     const id = global.id;
-    const toRemoveOutput = ['ae2:charger', 'ae2:drive', 'ae2:chest', 'createdieselgenerators:pumpjack_hole', 'expatternprovider:ex_inscriber',
-        'expatternprovider:ex_charger', 'expatternprovider:crystal_fixer', 'expatternprovider:caner', 'exmachinis:item_buffer', 'ae2:crystal_resonance_generator',
-        'ae2:vibration_chamber', 'expatternprovider:circuit_cutter', 'minecraft:mycelium', 'create:brass_block', 'create:zinc_block', 'createaddition:straw',
-        'gtceu:me_pattern_buffer_proxy', 'gtceu:me_pattern_buffer', 'ad_astra:steel_cable', 'ad_astra:cable_duct', 'ad_astra:desh_cable', 'create:andesite_alloy',
-        'functionalstorage:collector_upgrade', 'functionalstorage:pusher_upgrade', 'functionalstorage:puller_upgrade', 'ad_astra:solar_panel', 'create:shaft',
-        'ad_astra:steel_cable', 'ad_astra:desh_cable', 'ad_astra:cable_duct', 'ad_astra:ostrum_fluid_pipe', 'ad_astra:desh_fluid_pipe', 'createaddition:alternator',
+    const toRemoveOutput = ['ae2:charger', 'ae2:drive', 'ae2:chest', 'createdieselgenerators:pumpjack_hole', 'expatternprovider:ex_inscriber', 'ad:astra_oxygen', 'waystones:warp_dust',
+        'expatternprovider:ex_charger', 'expatternprovider:crystal_fixer', 'expatternprovider:caner', 'exmachinis:item_buffer', 'ae2:crystal_resonance_generator', 'laserio:laser_node',
+        'ae2:vibration_chamber', 'expatternprovider:circuit_cutter', 'minecraft:mycelium', 'create:brass_block', 'create:zinc_block', 'createaddition:straw', 'ad_astra:hydrogen',
+        'gtceu:me_pattern_buffer_proxy', 'gtceu:me_pattern_buffer', 'ad_astra:steel_cable', 'ad_astra:cable_duct', 'ad_astra:desh_cable', 'create:andesite_alloy', 'ad_astra:desh_plate',
+        'functionalstorage:collector_upgrade', 'functionalstorage:pusher_upgrade', 'functionalstorage:puller_upgrade', 'ad_astra:solar_panel', 'create:shaft', 'ad_astra:oil',
+        'ad_astra:steel_cable', 'ad_astra:desh_cable', 'ad_astra:cable_duct', 'ad_astra:ostrum_fluid_pipe', 'ad_astra:desh_fluid_pipe', 'createaddition:alternator', 'ad_astra:fuel',
         'ad_astra:fluid_pipe_duct', 'ad_astra:etrionic_blast_furnace', 'ad_astra:nasa_workbench', 'ad_astra:cryo_freezer', 'ad_astra:coal_generator', 'ad_astra:energizer',
-        'ad_astra:compressor', 'ad_astra:fuel_refinery', 'ad_astra:oxygen_loader', 'ad_astra:oxygen_sensor', 'ad_astra:water_pump', 'createaddition:gold_rod', 'effortlessbuilding:randomizer_bag_gold',
+        'ad_astra:compressor', 'ad_astra:fuel_refinery', 'ad_astra:oxygen_loader', 'ad_astra:oxygen_sensor', 'ad_astra:water_pump', 'createaddition:gold_rod', 'effortlessbuilding:golden_randomizer_bag',
         'createaddition:brass_rod', 'createaddition:copper_rod', 'createaddition:electrum_rod', 'createaddition:electric_motor', 'createaddition:capacitor', 'createaddition:tesla_coil',
         'createaddition:portable_energy_interface', 'create:portable_storage_interface', 'createaddition:connector', 'createaddition:large_connector', 'createaddition:festive_spool', 
-        'effortlessbuilding:randomizer_bag', 'create:empty_blaze_burner', 'effortlessbuilding:randomizer_bag_diamond',
+        'effortlessbuilding:randomizer_bag', 'create:empty_blaze_burner', 'effortlessbuilding:diamond_randomizer_bag', 'laserio:laser_connector', 'laserio:filter_counting', 
         // 'buildinggadgets2:gadget_building', 
     ];
 
@@ -181,10 +183,11 @@ ServerEvents.recipes(event => {
         'ae2:transform/damaged_budding_quartz', 'ae2:transform/chipped_budding_quartz', 'ae2:network/blocks/spatial_io_port', 'ae2:network/blocks/io_port', 'laserio:filter_basic',
         'ae2:transform/flawed_budding_quartz', 'ae2:transform/fluix_crystals', 'ae2:transform/fluix_crystal', 'ae2:network/blocks/interfaces_interface', 'ae2:network/blocks/io_condenser',
         'ae2:network/crafting/molecular_assembler', 'ae2:network/blocks/pattern_providers_interface', 'ae2:network/crafting/cpu_crafting_unit', 'ae2:network/blocks/energy_energy_acceptor',
+        'laserio:filter_mod', 'laserio:filter_count', 'laserio:filter_tag', 'laserio:filter_mod'
     ];
 
     const toRemoveType = ['expatternprovider:cutter', 'ae2:inscriber', 'ae2:charger', 'create:crushing', 'ad_astra:alloying', 'createaddition:liquid_burning', 'create:pressing',
-        'ad_astra:nasa_workbench', 'ad_astra:cryo-freezing', 'ad_astra:refining', 'ad_astra:compressing', 'ad_astra:oxygen_loading', 
+        'ad_astra:nasa_workbench', 'ad_astra:cryo-freezing', 'ad_astra:refining', 'ad_astra:compressing', 'ad_astra:oxygen_loading', 'botania:orechid_ignem', 'botania:orechid'
     ];
 
     toRemoveOutput.forEach(element => {
@@ -211,10 +214,27 @@ ServerEvents.recipes(event => {
     event.remove({ output: /create:.*_plate/});
     event.remove({ output: /create:.*_dust/});
 
+
+    //replace
     event.replaceInput({input: 'create:copper_sheet'}, 'create:copper_sheet', 'gtceu:copper_plate');
     event.replaceInput({input: 'create:zinc_ingot'}, 'create:zinc_ingot', 'gtceu:zinc_ingot');
+    event.replaceOutput({output: 'gtceu:energized_steel_ingot'}, 'gtceu:energized_steel_ingot','powah:steel_energized');
+    event.replaceInput({input: 'gtceu:energized_steel_ingot'}, 'gtceu:energized_steel_ingot','powah:steel_energized');
+    event.replaceOutput({output: 'gtceu:energized_steel_block'}, 'gtceu:energized_steel_block','powah:energized_steel_block');
+    event.replaceInput({input: 'gtceu:energized_steel_block'}, 'gtceu:energized_steel_block','powah:energized_steel_block');
+    event.replaceInput({input: 'gtceu:desh_nugget'}, 'gtceu:desh_nugget', 'ad_astra:desh_nugget')
+    event.replaceInput({input: 'gtceu:desh_ingot'}, 'gtceu:desh_ingot', 'ad_astra:desh_ingot')
+    event.replaceInput({input: 'gtceu:desh_block'}, 'gtceu:desh_block', 'ad_astra:desh_block')
+    event.replaceInput({input: 'gtceu:raw_desh'}, 'gtceu:raw_desh', 'ad_astra:raw_desh')
+    event.replaceInput({input: 'gtceu:raw_desh_block'}, 'gtceu:raw_desh_block', 'ad_astra:raw_desh_block')
+    event.replaceOutput({output: 'gtceu:desh_nugget'}, 'gtceu:desh_nugget', 'ad_astra:desh_nugget')
+    event.replaceOutput({output: 'gtceu:desh_ingot'}, 'gtceu:desh_ingot', 'ad_astra:desh_ingot')
+    event.replaceOutput({output: 'gtceu:desh_block'}, 'gtceu:desh_block', 'ad_astra:desh_block')
+    event.replaceOutput({output: 'gtceu:raw_desh'}, 'gtceu:raw_desh', 'ad_astra:raw_desh')
+    event.replaceOutput({output: 'gtceu:raw_desh_block'}, 'gtceu:raw_desh_block', 'ad_astra:raw_desh_block')
 });
 
+//tag removal
 ServerEvents.tags('item', event => {
    event.removeAllTagsFrom('ad_astra:steel_rod')
    event.removeAllTagsFrom('ad_astra:steel_plate')
@@ -222,6 +242,20 @@ ServerEvents.tags('item', event => {
    event.removeAllTagsFrom('ad_astra:steel_ingot')
    event.removeAllTagsFrom('ad_astra:iron_rod')
    event.removeAllTagsFrom('ad_astra:iron_plate')
+   event.removeAllTagsFrom('ad_astra:iron_nugget')
+   event.removeAllTagsFrom('ad_astra:hydrogen')
+   event.removeAllTagsFrom('ad_astra:oxygen')
+   event.removeAllTagsFrom('ad_astra:oil')
+   event.removeAllTagsFrom('ad_astra:fuel')
+   event.removeAllTagsFrom('ad_extendra:raw_plutonium')
+   event.removeAllTagsFrom('ad_extendra:raw_plutonium_block')
+   event.removeAllTagsFrom('ad_extendra:plutonium_ingot')
+   event.removeAllTagsFrom('ad_extendra:plutonium_nugget')
+   event.removeAllTagsFrom('ad_extendra:plutonium_block')
+   event.removeAllTagsFrom('ad_extendra:uraninium_nugget')
+   event.removeAllTagsFrom('ad_extendra:uraninium_ingot')
+   event.removeAllTagsFrom('ad_extendra:uraninium_plate')
+   event.removeAllTagsFrom('ad_extendra:uraninium_block')
    event.removeAllTagsFrom('create:iron_plate')
    event.removeAllTagsFrom('create:iron_sheet')
    event.removeAllTagsFrom('create:brass_sheet')
@@ -237,16 +271,6 @@ ServerEvents.tags('item', event => {
    event.removeAllTagsFrom('createaddition:iron_rod')
    event.removeAllTagsFrom('createaddition:electrum_rod')
    event.removeAllTagsFrom('createaddition:brass_rod')
-   event.removeAllTagsFrom('ad_astra:iron_nugget')
-   event.removeAllTagsFrom('ad_extendra:raw_plutonium')
-   event.removeAllTagsFrom('ad_extendra:raw_plutonium_block')
-   event.removeAllTagsFrom('ad_extendra:plutonium_ingot')
-   event.removeAllTagsFrom('ad_extendra:plutonium_nugget')
-   event.removeAllTagsFrom('ad_extendra:plutonium_block')
-   event.removeAllTagsFrom('powah:uraninite_raw')
    event.removeAllTagsFrom('createaddition:diamond_grit')
-   event.removeAllTagsFrom('ad_extendra:uraninium_nugget')
-   event.removeAllTagsFrom('ad_extendra:uraninium_ingot')
-   event.removeAllTagsFrom('ad_extendra:uraninium_plate')
-   event.removeAllTagsFrom('ad_extendra:uraninium_block')
+   event.removeAllTagsFrom('powah:uraninite_raw')
 });

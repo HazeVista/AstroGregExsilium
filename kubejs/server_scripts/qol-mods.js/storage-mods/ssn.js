@@ -12,14 +12,14 @@ event.shaped('storagenetwork:master', [
 
 //With machines
 event.recipes.gtceu.assembler('assembler_kabels')
-    .itemInputs('minecraft:glass', 'gtceu:steel_double_wire')
+    .itemInputs('#forge:glass', 'gtceu:steel_double_wire')
     .inputFluids('gtceu:rubber 576')
     .itemOutputs('32x storagenetwork:kabel')
     .duration(100)
     .EUt(7)
 
 event.recipes.gtceu.assembler('assembler_kabels_alt')
-    .itemInputs('minecraft:glass', 'gtceu:iron_double_wire')
+    .itemInputs('#forge:glass', 'gtceu:iron_double_wire')
     .inputFluids('gtceu:rubber 576')
     .itemOutputs('16x storagenetwork:kabel')
     .duration(100)
@@ -33,7 +33,7 @@ event.shaped('8x storagenetwork:kabel', [
 ], {
     A: 'gtceu:rubber_plate',
     B: 'gtceu:iron_double_wire',
-    C: 'minecraft:glass'
+    C: '#forge:glass'
 })
 
 event.shaped('storagenetwork:import_filter_kabel', [
