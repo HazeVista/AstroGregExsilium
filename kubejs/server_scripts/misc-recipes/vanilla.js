@@ -38,25 +38,6 @@ ServerEvents.recipes(event => {
             B: 'minecraft:redstone',
             C: 'minecraft:ender_pearl',
         })
-    
-    event.shaped('travelanchors:travel_staff', [
-        '  A',
-        ' B ',
-        'B  '
-    ], {
-        A: 'minecraft:ender_pearl',
-        B: 'gtceu:steel_rod'
-    });
-
-    event.shaped('travelanchors:travel_anchor', [
-        'ABA',
-        'B B',
-        'ABA'
-    ], {
-        A: 'gtceu:double_steel_plate',
-        B: 'minecraft:ender_pearl',
-        C: '#forge:tools/hammers'
-    });
 
     //quality of life logs
     event.shaped('16x minecraft:stick', [

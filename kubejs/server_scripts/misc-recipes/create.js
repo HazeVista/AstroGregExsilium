@@ -103,6 +103,15 @@ ServerEvents.recipes(event => {
     event.recipes.create.mixing('1x gtceu:red_alloy_ingot', ['4x minecraft:redstone', 'gtceu:copper_ingot']).heatRequirement('lowheated')
     event.recipes.create.mixing('1x gtceu:red_alloy_ingot', ['4x minecraft:redstone', 'gtceu:copper_dust']).heatRequirement('lowheated')
 
+    event.recipes.create.mixing('3x powah:steel_energized', ['gtceu:red_alloy_dust', 'ad_astra:desh_ingot', 'minecraft:iron_ingot']).heatRequirement('lowheated')
+    event.recipes.create.mixing('3x powah:steel_energized', ['gtceu:red_alloy_dust', 'ad_astra:desh_dust', 'minecraft:iron_ingot']).heatRequirement('lowheated')
+    event.recipes.create.mixing('3x powah:steel_energized', ['gtceu:red_alloy_dust', 'ad_astra:desh_dust', 'minecraft:iron_dust']).heatRequirement('lowheated')
+    event.recipes.create.mixing('3x powah:steel_energized', ['gtceu:red_alloy_dust', 'ad_astra:desh_ingot', 'minecraft:iron_dust']).heatRequirement('lowheated')
+    event.recipes.create.mixing('3x powah:steel_energized', ['gtceu:red_alloy_ingot', 'ad_astra:desh_ingot', 'minecraft:iron_ingot']).heatRequirement('lowheated')                  
+    event.recipes.create.mixing('3x powah:steel_energized', ['gtceu:red_alloy_ingot', 'ad_astra:desh_dust', 'minecraft:iron_ingot']).heatRequirement('lowheated')
+    event.recipes.create.mixing('3x powah:steel_energized', ['gtceu:red_alloy_ingot', 'ad_astra:desh_dust', 'minecraft:iron_dust']).heatRequirement('lowheated')
+    event.recipes.create.mixing('3x powah:steel_energized', ['gtceu:red_alloy_ingot', 'ad_astra:desh_ingot', 'minecraft:iron_dust']).heatRequirement('lowheated')
+
     event.recipes.create.mixing('2x gtceu:cupronickel_ingot', ['minecraft:copper_ingot', 'gtceu:nickel_ingot']).heatRequirement('lowheated')
     event.recipes.create.mixing('2x gtceu:cupronickel_ingot', ['gtceu:copper_dust', 'gtceu:nickel_ingot']).heatRequirement('lowheated')
     event.recipes.create.mixing('2x gtceu:cupronickel_ingot', ['minecraft:copper_ingot', 'gtceu:nickel_dust']).heatRequirement('lowheated')
@@ -119,7 +128,7 @@ ServerEvents.recipes(event => {
 
     //create press
     const platemetals = ['wrought_iron', 'tin', 'bronze', 'potin', 'lead', 'cupronickel', 'silver', 'zinc',
-                        'brass', 'invar', 'gold', 'copper', 'iron', 'red_alloy', 'electrum', 'iron']
+                        'brass', 'invar', 'gold', 'copper', 'iron', 'red_alloy', 'electrum', 'iron', 'energized_steel']
 
     function pressingplates(metalinput) {
 
@@ -157,8 +166,10 @@ ServerEvents.recipes(event => {
         }
     })
 
-    const rollermetals = ['wrought_iron', 'tin', 'bronze', 'potin', 'lead', 'cupronickel',
-                        'brass', 'invar', 'gold', 'copper', 'iron', 'red_alloy', 'electrum', 'iron']
+    const rollermetals = ['wrought_iron', 'tin', 'bronze', 'potin', 'lead', 'cupronickel', 'brass', 'invar', 'gold', 'copper', 'iron', 'red_alloy', 'electrum', 'iron',
+        'energized_steel'
+    ]
+
     function rollerrods(metalinput) {
 
     event.custom({type:"createaddition:rolling",

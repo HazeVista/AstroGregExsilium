@@ -230,7 +230,7 @@ ServerEvents.recipes(event => {
         .itemOutputs('ae2:crafting_unit')
         .circuit(1)
         .duration(80)
-        .EUt(1920)
+        .EUt(384)
 
     event.recipes.gtceu.assembler('assemble_mega_cpu')
         .itemInputs('gtceu:futura_alloy_frame', '2x ae2:crafting_unit', '2x ae2:logic_processor', '1x megacells:accumulation_processor')

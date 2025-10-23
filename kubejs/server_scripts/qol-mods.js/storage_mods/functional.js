@@ -17,16 +17,6 @@ ServerEvents.recipes(event => {
         A: 'functionalstorage:oak_4'
     });
 
-    event.shaped('waystones:warp_stone', [
-    'BCB',
-    'CAC',
-    'BCB'
-]   , {
-    A: 'minecraft:ender_pearl',
-    B: 'create:rose_quartz',
-    C: 'minecraft:quartz'
-    })
-
     event.shaped('functionalstorage:copper_upgrade', [
         'BBB',
         'ACA',

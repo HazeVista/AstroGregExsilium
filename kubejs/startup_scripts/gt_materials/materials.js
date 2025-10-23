@@ -300,7 +300,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     compDustOreIngot('desh', ['1x desh'], 0xD38B4C, [])
 
     //superconductors
-    conductorSuper('energized_steel', ['1x iron', '1x desh', '1x electrum'], 0xbaa172, [], [V('lv'), 4, 0, true], [150, 130, 3, 37600]);
+    conductorSuper('energized_steel', ['1x iron', '1x desh', '1x red_alloy'], 0xbaa172, [], [V('lv'), 4, 0, true], [150, 130, 3, 37600]);
 
     // conductorSuper('', ['1x silver', '3x copper', '4x redstone'], 0xff3300, [1700, 'low', VA('mv'), 1200], [V('mv'), 16, 0, true], [190, 150, 3, 24000]);
 
