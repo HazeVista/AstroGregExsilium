@@ -32,7 +32,36 @@ ServerEvents.recipes(event => {
     0,
     200,
     'gtceu:brick_wooden_form'
-    )
+    );
+
+    event.shaped('farmersdelight:stove', [
+      'CCC',
+      'A A',
+      'ABA'
+    ], {
+      A: 'minecraft:bricks',
+      B: 'minecraft:campfire',
+      C: 'gtceu:wrought_iron_plate'
+    });
+
+    event.shaped('farmersdelight:skillet', [
+      ' BB',
+      ' BB',
+      'A'
+    ], {
+      A: 'gtceu:bronze_rod',
+      B: 'gtceu:wrought_iron_plate'
+    });
+
+    event.shaped('farmersdelight:cooking_pot', [
+      'C C',
+      'ABA',
+      'AAA'
+    ], {
+      A: 'gtceu:wrought_iron_plate',
+      B: 'minecraft:bucket',
+      C: 'gtceu:bronze_rod'
+    });
 
     event.recipes.gtceu.mixer('mixing_energized_steel_dust')
         .itemInputs('gtceu:desh_dust', 'gtceu:iron_dust', 'gtceu:red_alloy_dust')
