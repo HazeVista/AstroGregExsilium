@@ -200,7 +200,7 @@ ServerEvents.recipes(event => {
         'ae2:transform/flawed_budding_quartz', 'ae2:transform/fluix_crystals', 'ae2:transform/fluix_crystal', 'ae2:network/blocks/interfaces_interface', 'ae2:network/blocks/io_condenser',
         'ae2:network/crafting/molecular_assembler', 'ae2:network/blocks/pattern_providers_interface', 'ae2:network/crafting/cpu_crafting_unit', 'ae2:network/blocks/energy_energy_acceptor',
         'laserio:filter_mod', 'laserio:filter_count', 'laserio:filter_tag', 'laserio:filter_mod', 'ad_astra:desh_ingot', 'ad_astra:desh_block', 'ad_astra:raw_desh_block', 'ad_astra:desh_nugget',
-
+        'botania:mana_infusion:netherrack_dupe', 'createaddition:mixing/netherrack'
     ];
 
     const toRemoveType = ['expatternprovider:cutter', 'ae2:inscriber', 'ae2:charger', 'create:crushing', 'ad_astra:alloying', 'createaddition:liquid_burning', 'create:pressing',
@@ -247,10 +247,6 @@ event.removeAllTagsFrom('ad_astra:steel_ingot')
 event.removeAllTagsFrom('ad_astra:iron_rod')
 event.removeAllTagsFrom('ad_astra:iron_plate')
 event.removeAllTagsFrom('ad_astra:iron_nugget')
-event.removeAllTagsFrom('ad_astra:hydrogen')
-event.removeAllTagsFrom('ad_astra:oxygen')
-event.removeAllTagsFrom('ad_astra:oil')
-event.removeAllTagsFrom('ad_astra:fuel')
 event.removeAllTagsFrom('ad_astra:moon_desh_ore')
 event.removeAllTagsFrom('ad_astra:deepslate_desh_ore')
 event.removeAllTagsFrom('ad_extendra:raw_plutonium')
@@ -285,5 +281,8 @@ event.removeAllTagsFrom('createaddition:diamond_grit')
 event.removeAllTagsFrom('powah:uraninite_raw')
 event.removeAllTagsFrom('gtceu:raw_desh')
 event.removeAllTagsFrom('gtceu:raw_desh_block')
+event.removeAllTagsFrom('gtceu:hydrogen')
+event.removeAllTagsFrom('gtceu:oxygen')
+event.removeAllTagsFrom('gtceu:oil')
 
 });

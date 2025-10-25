@@ -11,7 +11,7 @@ ServerEvents.recipes(event => {
 
     event.shaped('travelanchors:travel_anchor', [
         'ABA',
-        'B B',
+        'BCB',
         'ABA'
     ], {
         A: 'gtceu:double_steel_plate',

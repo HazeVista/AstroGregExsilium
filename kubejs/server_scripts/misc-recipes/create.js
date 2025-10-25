@@ -23,8 +23,9 @@ ServerEvents.recipes(event => {
      })
 
     event.shaped('create:polished_rose_quartz', [
-        'B',
-        ' A'
+        'B  ',
+        ' A ',
+        '   '
     ], {
         A: 'create:rose_quartz',
         B: '#forge:tools/files'
@@ -127,14 +128,31 @@ ServerEvents.recipes(event => {
     
 
     //create press
+    event.recipes.create.pressing(
+        [`gtceu:iron_plate`],
+        [`minecraft:iron_ingot`])
+
+    event.recipes.create.pressing(
+        [`gtceu:gold_plate`],
+        [`minecraft:gold_ingot`])
+    
+    event.recipes.create.pressing(
+        [`gtceu:iron_plate`],
+        [`minecraft:copper_ingot`])
+
+    event.recipes.create.pressing(
+        [`gtceu:energized_steel_plate`],
+        [`powah:steel_energized`])
+
     const platemetals = ['wrought_iron', 'tin', 'bronze', 'potin', 'lead', 'cupronickel', 'silver', 'zinc',
-                        'brass', 'invar', 'gold', 'copper', 'iron', 'red_alloy', 'electrum', 'iron', 'energized_steel']
+                        'brass', 'invar', 'red_alloy', 'electrum']
 
     function pressingplates(metalinput) {
 
         event.recipes.create.pressing(
             [`gtceu:${metalinput}_plate`],
             [`gtceu:${metalinput}_ingot`])
+
     }
     
     platemetals.forEach(pressingplates)
@@ -155,28 +173,34 @@ ServerEvents.recipes(event => {
     })
 
     //rolling (primitive lathe)
-    event.custom({
-        type: "createaddition:rolling",
-        input: {
-            item: "create:andesite_alloy"
-        },
-        result: {
-            item: "create:shaft",
-            count: 4
-        }
-    })
+    event.custom({type: "createaddition:rolling",
+        input: {item: "create:andesite_alloy"},
+        result: {item: "create:shaft", count: 4}})
+    
+    event.custom({type:"createaddition:rolling",
+        input: {item : `minecraft:iron_ingot`},
+        result: {item: `gtceu:iron_rod`, count: 2}})
 
-    const rollermetals = ['wrought_iron', 'tin', 'bronze', 'potin', 'lead', 'cupronickel', 'brass', 'invar', 'gold', 'copper', 'iron', 'red_alloy', 'electrum', 'iron',
-        'energized_steel'
+    event.custom({type:"createaddition:rolling",
+        input: {item : `minecraft:gold_ingot`},
+        result: {item: `gtceu:gold_rod`, count: 2}})
+
+    event.custom({type:"createaddition:rolling",
+        input: {item : `minecraft:copper_ingot`},
+        result: {item: `gtceu:copper_rod`, count: 2}})
+
+    event.custom({type:"createaddition:rolling",
+        input: {item : `powah:steel_energized`},
+        result: {item: `gtceu:energized_steel_rod`, count: 2}})
+
+    const rollermetals = ['wrought_iron', 'tin', 'bronze', 'potin', 'lead', 'cupronickel', 'brass', 'invar', 'red_alloy', 'electrum',
     ]
 
     function rollerrods(metalinput) {
 
     event.custom({type:"createaddition:rolling",
         input: {item : `gtceu:${metalinput}_ingot`},
-        result: {item: `gtceu:${metalinput}_rod`, count: 2}
-    
-    })
+        result: {item: `gtceu:${metalinput}_rod`, count: 2}})
 }       
     rollermetals.forEach(rollerrods)
 

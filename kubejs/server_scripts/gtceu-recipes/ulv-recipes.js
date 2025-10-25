@@ -15,11 +15,11 @@ ServerEvents.recipes(event => {
     .duration(50)
     .EUt(30)
 
-  event.campfireCooking('gtceu:glass_dust', 'minecraft:glass', 0, 160)
-  event.campfireCooking('minecraft:iron_ingot', 'gtceu:wrought_iron_ingot', 0, 160)
+  event.campfireCooking('minecraft:glass', 'gtceu:glass_dust', 0, 160)
+  event.campfireCooking('gtceu:wrought_iron_ingot', 'minecraft:iron_ingot', 0, 160)
 
   event.recipes.farmersdelight.cooking(
-    ['3x gtceu:raw_rubber_pulp', 'gtceu:sulfur_dust'],
+    ['gtceu:raw_rubber_dust', 'gtceu:raw_rubber_dust', 'gtceu:raw_rubber_dust', 'gtceu:sulfur_dust'],
     'gtceu:rubber_ingot',
     0,
     320,
@@ -28,7 +28,7 @@ ServerEvents.recipes(event => {
 
   event.recipes.farmersdelight.cooking(
     ['gtceu:desh_dust', 'gtceu:iron_dust', 'gtceu:red_alloy_dust'],
-    '3x powah:energized_steel',
+    '3x powah:steel_energized',
     0,
     200,
     'gtceu:brick_wooden_form'
@@ -47,7 +47,7 @@ ServerEvents.recipes(event => {
     event.shaped('farmersdelight:skillet', [
       ' BB',
       ' BB',
-      'A'
+      'A  '
     ], {
       A: 'gtceu:bronze_rod',
       B: 'gtceu:wrought_iron_plate'
