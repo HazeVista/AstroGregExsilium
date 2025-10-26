@@ -87,9 +87,9 @@ ServerEvents.recipes(event => {
 
     // create mixing by @digestlotion
     event.recipes.create.mixing('2x create:andesite_alloy', ['gtceu:iron_dust', 'gtceu:andesite_dust']).heatRequirement('lowheated')
-    event.recipes.create.mixing('2x create:andesite_alloy', ['gtceu:iron_ingot', 'gtceu:andesite_dust']).heatRequirement('lowheated')
+    event.recipes.create.mixing('2x create:andesite_alloy', ['minecraft:iron_ingot', 'gtceu:andesite_dust']).heatRequirement('lowheated')
     event.recipes.create.mixing('2x create:andesite_alloy', ['gtceu:iron_dust', 'minecraft:andesite']).heatRequirement('lowheated')
-    event.recipes.create.mixing('2x create:andesite_alloy', ['gtceu:iron_ingot', 'minecraft:andesite']).heatRequirement('lowheated')
+    event.recipes.create.mixing('2x create:andesite_alloy', ['minecraft:iron_ingot', 'minecraft:andesite']).heatRequirement('lowheated')
         
     event.recipes.create.mixing('4x gtceu:bronze_ingot', ['3x minecraft:copper_ingot', 'gtceu:tin_ingot']).heatRequirement('lowheated')
     event.recipes.create.mixing('4x gtceu:bronze_ingot', ['3x gtceu:copper_dust', 'gtceu:tin_ingot']).heatRequirement('lowheated')
