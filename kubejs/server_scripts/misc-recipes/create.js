@@ -31,6 +31,19 @@ ServerEvents.recipes(event => {
         B: '#forge:tools/files'
     })
 
+    event.shaped('create:controller_rail', [
+        'AEA',
+        'BDB',
+        'CC'
+    ], {
+        A: 'gtceu:gold_screw',
+        B: 'gtceu:iron_rod',
+        C: 'gtceu:gold_rod',
+        D: 'minecraft:stick',
+        E: 'create:electron_tube',
+        F: '#forge:tools/screwdrivers'
+    })
+
     // Andesite Alloy mostly by @digestlotion
     event.shapeless('2x gtceu:andesite_dust', ['gtceu:stone_dust', 'gtceu:quartz_dust'])
     event.shapeless('1x gtceu:andesite_alloy_dust', ['gtceu:andesite_dust', 'gtceu:iron_dust'])

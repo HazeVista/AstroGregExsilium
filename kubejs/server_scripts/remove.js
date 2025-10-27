@@ -183,7 +183,7 @@ ServerEvents.recipes(event => {
     const toRemoveOutput = ['ae2:charger', 'ae2:drive', 'ae2:chest', 'createdieselgenerators:pumpjack_hole', 'expatternprovider:ex_inscriber', 'ad:astra_oxygen', 'waystones:warp_dust',
         'expatternprovider:ex_charger', 'expatternprovider:crystal_fixer', 'expatternprovider:caner', 'exmachinis:item_buffer', 'ae2:crystal_resonance_generator', 'laserio:laser_node',
         'ae2:vibration_chamber', 'expatternprovider:circuit_cutter', 'minecraft:mycelium', 'create:brass_block', 'create:zinc_block', 'createaddition:straw', 'ad_astra:hydrogen',
-        'gtceu:me_pattern_buffer_proxy', 'gtceu:me_pattern_buffer', 'create:andesite_alloy', 'ad_astra:desh_plate', 'botanicadds:elven_fluxfield',
+        'gtceu:me_pattern_buffer_proxy', 'gtceu:me_pattern_buffer', 'create:andesite_alloy', 'ad_astra:desh_plate', 'botanicadds:elven_fluxfield', 'create:controller_rail', 
         'functionalstorage:collector_upgrade', 'functionalstorage:pusher_upgrade', 'functionalstorage:puller_upgrade', 'create:shaft',
         'createaddition:alternator', 'createaddition:gold_rod', 'effortlessbuilding:golden_randomizer_bag', 'gtceu:desh_ingot', 'gtceu:desh_block', 'gtceu:raw_desh_block', 'gtceu:desh_nugget',
         'createaddition:brass_rod', 'createaddition:copper_rod', 'createaddition:electrum_rod', 'createaddition:electric_motor', 'createaddition:capacitor', 'createaddition:tesla_coil',
@@ -200,7 +200,8 @@ ServerEvents.recipes(event => {
         'ae2:transform/flawed_budding_quartz', 'ae2:transform/fluix_crystals', 'ae2:transform/fluix_crystal', 'ae2:network/blocks/interfaces_interface', 'ae2:network/blocks/io_condenser',
         'ae2:network/crafting/molecular_assembler', 'ae2:network/blocks/pattern_providers_interface', 'ae2:network/crafting/cpu_crafting_unit', 'ae2:network/blocks/energy_energy_acceptor',
         'laserio:filter_mod', 'laserio:filter_count', 'laserio:filter_tag', 'laserio:filter_mod', 'ad_astra:desh_ingot', 'ad_astra:desh_block', 'ad_astra:raw_desh_block', 'ad_astra:desh_nugget',
-        'botania:mana_infusion:netherrack_dupe', 'createaddition:mixing/netherrack', 
+        'botania:mana_infusion/netherrack_dupe', 'createaddition:mixing/netherrack', 'botania:mana_infusion/soulsand_dupe', 'botania:mana_infusion/glowstone_dupe', 'botania:mana_infusion/redstone_dupe',
+        'botania:mana_infusion/quartz_dupe', 'botania:mana_infusion/coal_dupe', 'botania:mana_infusion/gravel_dupe',
     ];
 
     const toRemoveType = ['expatternprovider:cutter', 'ae2:inscriber', 'ae2:charger', 'create:crushing', 'ad_astra:alloying', 'createaddition:liquid_burning', 'create:pressing',

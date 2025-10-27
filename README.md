@@ -2,7 +2,7 @@ Thanks for checking out AstroGreg!
 
 
 
-It's your new favorite GTCEU modern 7.2.0 modpack featuring Ad Astra, Create, Botania, and many more mods.
+It's your new favorite GTCEU modern 7.2.1 modpack featuring Ad Astra, Create, Botania, and many more mods.
 
 
 
@@ -18,7 +18,7 @@ Slightly inspired by Astroblock and Star Technology
 
 
 
-For sneak peaks, questions, or just to chat about the project and its development team:
+For sneak peaks, questions, or just to chat about the project and its development:
 
-https://discord.gg/yPnb4JKa
+https://discord.gg/RkKb3xUY
 
