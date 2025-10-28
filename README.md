@@ -14,7 +14,7 @@ Modpack Owned by Haze Vista. Special thanks to DriftBlueStone, DigestLotion, and
 
 
 
-Slightly inspired by Astroblock and Star Technology
+Slightly inspired by Astroblock and Pre-Eta Star Technology
 
 
 

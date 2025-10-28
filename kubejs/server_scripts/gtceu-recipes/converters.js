@@ -1,52 +1,38 @@
 // ServerEvents.recipes(event => {
-////credit to the Star Technology team for most of this file.
-//     const id = global.id;
+//     const id = global.id
 
-//     event.remove({ output: /gtceu:.*_energy_converter/ });
-    
-//     const PRMconverterMaterials = {
-//         lv: '',
-//         mv: '',
-//         hv: ''
-//     }
-
-//     const ADVconverterMaterials = {
-//         ev: '',
-//         iv: '',
-//         luv: '',
-//         zpm: '',
-//         uv: '',
-//         uhv: ''
-//     }
+//     const LMHconverterMaterials = { lv: 'energized_steel', mv: '', hv: ''}
+//     const EILZUUconverterMaterials = { ev: '', iv: '', luv: '', zpm: '', uv: '', uhv: ''}
     
 //     function converterCraftingRecipe(amps,thickness){
-//         for (const [tier, superconductor] of Object.entries(ADVconverterMaterials)) {
+//         for (const [tier, superconductor] of Object.entries(EILZUUconverterMaterials)) {
 //             event.shaped(Item.of(`gtceu:${tier}_${amps}_energy_converter`), [
 //                 '   ',
-//                 'WCW',
-//                 'WSW'
+//                 'ACA',
+//                 'ABA'
 //             ], {
-//                 W: `gtceu:${superconductor}_${thickness}_wire`,
-//                 C: `#gtceu:circuits/${tier}`,
-//                 S: `gtceu:${tier}_machine_hull`
-//             }).id(`start:shaped/${tier}_${amps}_energy_converter`);
-//         };
-//         for (const [tier, superconductor] of Object.entries(PRMconverterMaterials)) {
+//                 A: `gtceu:${superconductor}_${thickness}_wire`,
+//                 B: `gtceu:${tier}_machine_hull`,
+//                 C: `#gtceu:circuits/${tier}`
+//             })
+//             .id(`gtceu:shaped/${tier}_${amps}_energy_converter`)};
+
+//         for (const [tier, superconductor] of Object.entries(LMHconverterMaterials)) {
 //             event.shaped(Item.of(`gtceu:${tier}_${amps}_energy_converter`), [
 //                 '   ',
-//                 'WCW',
-//                 'WSW'
+//                 'ACA',
+//                 'ABA'
 //             ], {
-//                 W: `gtceu:${superconductor}_${thickness}_wire`,
-//                 C: `#gtceu:circuits/${tier}`,
-//                 S: `gtceu:${tier}_machine_hull`
-//             }).id(`start:shaped/${tier}_${amps}_energy_converter`);
-//         };
+//                 A: `gtceu:${superconductor}_${thickness}_wire`,
+//                 B: `gtceu:${tier}_machine_hull`,
+//                 C: `#gtceu:circuits/${tier}`
+//             })
+//             .id(`gtceu:shaped/${tier}_${amps}_energy_converter`)};
 //     };
     
-//     converterCraftingRecipe('1a','single');
-//     converterCraftingRecipe('4a','quadruple');
-//     converterCraftingRecipe('8a','octal');
-//     converterCraftingRecipe('16a','hex');
+//     converterCraftingRecipe('1a','sing');
+//     converterCraftingRecipe('4a','quad');
+//     converterCraftingRecipe('8a','octo');
+//     converterCraftingRecipe('16a','hexdec');
 
 // });

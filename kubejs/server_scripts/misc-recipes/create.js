@@ -34,7 +34,7 @@ ServerEvents.recipes(event => {
     event.shaped('create:controller_rail', [
         'AEA',
         'BDB',
-        'CC'
+        'CFC'
     ], {
         A: 'gtceu:gold_screw',
         B: 'gtceu:iron_rod',
