@@ -1,5 +1,4 @@
 // ServerEvents.recipes(event => {
-//     const id = global.id
 
 //     const LMHconverterMaterials = { lv: 'energized_steel', mv: '', hv: ''}
 //     const EILZUUconverterMaterials = { ev: '', iv: '', luv: '', zpm: '', uv: '', uhv: ''}

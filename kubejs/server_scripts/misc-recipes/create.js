@@ -23,12 +23,19 @@ ServerEvents.recipes(event => {
      })
 
     event.shaped('create:polished_rose_quartz', [
-        'B  ',
-        ' A ',
-        '   '
+        'B ',
+        ' A'
     ], {
         A: 'create:rose_quartz',
         B: '#forge:tools/files'
+    })
+
+    event.shaped('create:fluid_valve', [
+        'A',
+        'B'
+    ], {
+        A: '#create:valve_handles',
+        B: 'create:fluid_pipe'
     })
 
     event.shaped('create:controller_rail', [
@@ -43,6 +50,96 @@ ServerEvents.recipes(event => {
         E: 'create:electron_tube',
         F: '#forge:tools/screwdrivers'
     })
+
+    event.shaped('create:water_wheel', [
+        'AAA',
+        'ABA',
+        'AAA'
+    ],{
+        A: 'gtceu:treated_wood_planks',
+        B: 'create:shaft'
+    })
+
+    event.shaped('create:large_water_wheel', [
+        'AAA',
+        'ABA',
+        'AAA'
+    ],{
+        A: 'gtceu:treated_wood_planks',
+        B: 'create:water_wheel'
+    })
+
+    event.shaped('create:fluid_tank', [
+        'AAA',
+        'B B',
+        'AAA'
+    ],{
+        A: 'gtceu:copper_plate',
+        B: '#forge:glass/silica'
+    })
+
+    event.shaped('2x create:white_sail', [
+        'CAC',
+        'BAB',
+        'CAC'
+    ],{
+        A: '#minecraft:wool',
+        B: '#forge:rods/wooden',
+        C: 'farmersdelight:rope'
+    })
+
+    event.shaped('create:andesite_funnel', [
+        'ABA',
+        'ACA'
+    ],{
+        A: 'create:andesite_alloy',
+        B: 'gtceu:iron_plate',
+        C: 'farmersdelight:canvas'
+    })
+    
+    event.shaped('create:brass_funnel', [
+        'ABA',
+        'ACA'
+    ],{
+        A: 'gtceu:brass_plate',
+        B: 'create:electron_tube',
+        C: 'farmersdelight:canvas'
+    })
+
+    event.shaped('create:andesite_tunnel', [
+        'ABA',
+        'ACA',
+        'ACA'
+    ],{
+        A: 'create:andesite_alloy',
+        B: 'gtceu:iron_plate',
+        C: 'farmersdelight:canvas'
+    })
+    
+    event.shaped('create:brass_tunnel', [
+        'ABA',
+        'ACA',
+        'ACA'
+    ],{
+        A: 'gtceu:brass_plate',
+        B: 'create:electron_tube',
+        C: 'farmersdelight:canvas'
+    })
+
+    event.shaped('create:belt_connector', [
+        'AAA',
+        'AAA'
+    ],{
+        A: 'farmersdelight:canvas'
+    })  
+
+    event.shaped('farmersdelight:rope', [
+        'A',
+        'A',
+        'A'
+    ],{
+        A: 'farmersdelight:straw'
+    })   
 
     // Andesite Alloy mostly by @digestlotion
     event.shapeless('2x gtceu:andesite_dust', ['gtceu:stone_dust', 'gtceu:quartz_dust'])
@@ -218,7 +315,6 @@ ServerEvents.recipes(event => {
     rollermetals.forEach(rollerrods)
 
     //shaped power recipes
-
     event.shapeless('createaddition:small_light_connector', 
             ['create:electron_tube', 
             'createaddition:connector'])
@@ -273,6 +369,7 @@ ServerEvents.recipes(event => {
         C: 'create:brass_casing',
         D: 'gtceu:red_alloy_plate'
     })
+
     event.shaped('createaddition:electric_motor', [
         'ACA',
         'BDB',
@@ -284,4 +381,67 @@ ServerEvents.recipes(event => {
         D: 'gtceu:magnetic_steel_rod'
     })
 
+    //create ore excavation
+    event.shaped('createoreexcavation:drill', [
+        'A  ',
+        ' B '
+    ], {
+        A: 'gtceu:iron_drill_head',
+        B: 'create:shaft'
+    })
+
+    event.shaped('createoreexcavation:diamond_drill', [
+        'A  ',
+        ' B '
+    ], {
+        A: 'gtceu:diamond_drill_head',
+        B: 'create:shaft'
+    })
+
+    event.recipes.create.mechanical_crafting('createoreexcavation:drilling_machine', [
+        ' AAA ',
+        'ABCBA',
+        'ADEFA',
+        'ABCBA',
+        ' AAA '
+    ], {
+        A: 'gtceu:brass_plate',
+        B: 'gtceu:wrought_iron_drill_head',
+        C: 'create:electron_tube',
+        D: 'create:deployer',
+        E: 'create:brass_casing',
+        F: 'create:brass_funnel'
+    })
+
+    event.recipes.create.mechanical_crafting('createoreexcavation:extractor', [
+        ' AAA ',
+        'ABCBA',
+        'ADEFA',
+        'ABCBA',
+        ' AAA '
+    ], {
+        A: 'gtceu:brass_plate',
+        B: 'gtceu:wrought_iron_drill_head',
+        C: 'create:electron_tube',
+        D: 'create:deployer',
+        E: 'create:fluid_tank',
+        F: 'create:fluid_valve'
+    })
+
+    event.shaped('createoreexcavation:vein_finder', [
+        ' CA',
+        ' BC',
+        'B  '
+    ], {
+        A: 'minecraft:ender_pearl',
+        B: 'gtceu:long_stick',
+        C: 'gtceu:magnetic_iron_rod'
+    })
+
+    event.shaped('createoreexcavation:vein_atlas', [
+        'AB'
+    ], {
+        A: 'minecraft:book',
+        B: 'minecraft:ender_pearl'
+    })
 });

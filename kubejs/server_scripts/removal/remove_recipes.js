@@ -19,14 +19,6 @@ ServerEvents.recipes(event => {
 });
 
 ServerEvents.recipes(event => {
-    //gtceu
-    event.remove({id: 'gtceu:centrifuge/decomposition_centrifuging__redstone'})
-    event.remove({id: 'gtceu:autoclave/silicon_dioxide_to_quartzite_gem'})
-    event.remove({id: 'gtceu:assembler/end_crystal'})
-    event.remove({id: 'gtceu:arc_furnace/arc_netherite_dust'})
-    event.remove({id: 'gtceu:alloy_smelter/alloy_smelt_netherite_dust_to_block'})
-    event.remove({id: 'gtceu:smelting/smelt_dust_netherite_to_ingot'})
-
     //AE2 
     event.remove({id: 'merequester:requester'})
 
@@ -105,11 +97,6 @@ ServerEvents.recipes(event => {
     event.remove({id: 'megacells:cells/cell_component_64m'})
     event.remove({id: 'megacells:cells/cell_component_256m'})
 
-    //travel
-    event.remove({id: 'travelanchors:travel_staff'})
-    event.remove({id: 'travelanchors:travel_anchor'})
-    event.remove({id: 'waystones:warp_stone'})
-
     //functional storage
     event.remove({id: 'functionalstorage:netherite_upgrade'})
     event.remove({id: 'functionalstorage:diamond_upgrade'})
@@ -148,15 +135,6 @@ ServerEvents.recipes(event => {
     event.remove({id: 'minecraft:netherite_scrap'})
     event.remove({id: 'minecraft:netherite_scrap_from_blasting'})
 
-    //laserIO
-    event.remove({id: 'laserio:logic_chip_raw'})
-    event.remove({id: 'laserio:laser_connector_advanced'})
-    event.remove({id: 'laserio:card_fluid'})
-    event.remove({id: 'laserio:card_item'})
-    event.remove({id: 'laserio:card_redstone'})
-    event.remove({id: 'laserio:card_energy'})
-    event.remove({id: 'laserio:laser_wrench'})
-
     //create
     event.remove({output: '#forge:wires'})
     event.remove({input: '#forge:wires'})
@@ -168,9 +146,6 @@ ServerEvents.recipes(event => {
     event.remove({output: 'ad_astra:iron_rod'})
     event.remove({output: 'ad_astra:steel_rod'})
 
-    //botania
-    event.remove({id: 'botania:glass_pickaxe'})
-
     //remove full mod recipes
     event.remove({mod: 'createoreexcavation'})
     event.remove({mod: 'scannable'})
@@ -179,17 +154,18 @@ ServerEvents.recipes(event => {
     event.remove({mod: 'ad_astra'})
 
     //new method from Truly
-    const id = global.id;
     const toRemoveOutput = ['ae2:charger', 'ae2:drive', 'ae2:chest', 'createdieselgenerators:pumpjack_hole', 'expatternprovider:ex_inscriber', 'ad:astra_oxygen', 'waystones:warp_dust',
         'expatternprovider:ex_charger', 'expatternprovider:crystal_fixer', 'expatternprovider:caner', 'exmachinis:item_buffer', 'ae2:crystal_resonance_generator', 'laserio:laser_node',
         'ae2:vibration_chamber', 'expatternprovider:circuit_cutter', 'minecraft:mycelium', 'create:brass_block', 'create:zinc_block', 'createaddition:straw', 'ad_astra:hydrogen',
-        'gtceu:me_pattern_buffer_proxy', 'gtceu:me_pattern_buffer', 'create:andesite_alloy', 'ad_astra:desh_plate', 'botanicadds:elven_fluxfield', 'create:controller_rail', 
-        'functionalstorage:collector_upgrade', 'functionalstorage:pusher_upgrade', 'functionalstorage:puller_upgrade', 'create:shaft',
+        'gtceu:me_pattern_buffer_proxy', 'gtceu:me_pattern_buffer', 'create:andesite_alloy', 'ad_astra:desh_plate', 'botanicadds:elven_fluxfield', 'create:controller_rail', 'create:dough',
+        'functionalstorage:collector_upgrade', 'functionalstorage:pusher_upgrade', 'functionalstorage:puller_upgrade', 'create:shaft', 'create:blaze_cake_base', 'create:wheat_flour',
         'createaddition:alternator', 'createaddition:gold_rod', 'effortlessbuilding:golden_randomizer_bag', 'gtceu:desh_ingot', 'gtceu:desh_block', 'gtceu:raw_desh_block', 'gtceu:desh_nugget',
         'createaddition:brass_rod', 'createaddition:copper_rod', 'createaddition:electrum_rod', 'createaddition:electric_motor', 'createaddition:capacitor', 'createaddition:tesla_coil',
         'createaddition:portable_energy_interface', 'create:portable_storage_interface', 'createaddition:connector', 'createaddition:large_connector', 'createaddition:festive_spool', 
         'effortlessbuilding:randomizer_bag', 'create:empty_blaze_burner', 'effortlessbuilding:diamond_randomizer_bag', 'laserio:laser_connector', 'laserio:filter_counting',
         'buildinggadgets2:gadget_building', 'buildinggadgets2:gadget_destruction', 'buildinggadgets2:gadget_cut_paste', 'buildinggadgets2:gadget_copy_paste', 'buildinggadgets2:gadget_exchanging',
+        'farmersdelight:pie_crust', 'create:water_wheel', 'create:large_water_wheel', 'create:brass_funnel', 'create:andesite_funnel', 'create:brass_tunnel',
+        'create:andesite_tunnel', 'botania:glass_pickaxe'
     ];
 
     const toRemoveId = ['create:haunting/crimson_fungus', 'create:haunting/warped_fungus', 'create:milling/compat/ae2/sky_stone_block', 'create:milling/compat/ae2/fluix_crystal',
@@ -201,14 +177,18 @@ ServerEvents.recipes(event => {
         'ae2:network/crafting/molecular_assembler', 'ae2:network/blocks/pattern_providers_interface', 'ae2:network/crafting/cpu_crafting_unit', 'ae2:network/blocks/energy_energy_acceptor',
         'laserio:filter_mod', 'laserio:filter_count', 'laserio:filter_tag', 'laserio:filter_mod', 'ad_astra:desh_ingot', 'ad_astra:desh_block', 'ad_astra:raw_desh_block', 'ad_astra:desh_nugget',
         'botania:mana_infusion/netherrack_dupe', 'createaddition:mixing/netherrack', 'botania:mana_infusion/soul_sand_dupe', 'botania:mana_infusion/glowstone_dupe', 'botania:mana_infusion/redstone_dupe',
-        'botania:mana_infusion/quartz_dupe', 'botania:mana_infusion/coal_dupe', 'botania:mana_infusion/gravel_dupe',
+        'botania:mana_infusion/quartz_dupe', 'botania:mana_infusion/coal_dupe', 'botania:mana_infusion/gravel_dupe', 'minecraft:netherite_drill_smithing', 'create:crafting/kinetics/fluid_tank',
+        'create:crafting/kinetics/white_sail', 'create:crafting/kinetics/fluid_valve', 'farmersdelight:rope', 'gtceu:autoclave/silicon_dioxide_to_quartzite_gem', 'gtceu:assembler/end_crystal',
+        'gtceu:arc_furnace/arc_netherite_dust', 'gtceu:alloy_smelter/alloy_smelt_netherite_dust_to_block', 'gtceu:smelting/smelt_dust_netherite_to_ingot', 'laserio:logic_chip_raw', 'laserio:laser_connector_advanced',
+        'laserio:card_fluid', 'laserio:card_item', 'laserio:card_redstone', 'laserio:card_energy', 'laserio:laser_wrench', 'travelanchors:travel_staff', 'travelanchors:travel_anchor', 'waystones:warp_stone',
+        'create:crafting/curiosities/cake'
     ];
 
     const toRemoveType = ['expatternprovider:cutter', 'ae2:inscriber', 'ae2:charger', 'create:crushing', 'ad_astra:alloying', 'createaddition:liquid_burning', 'create:pressing',
         'botania:orechid_ignem', 'botania:orechid'
     ];
 
-    const toRemoveInput = [ 'ad_astra:moon_desh_ore', 'ad_astra:deepslate_desh_ore', 
+    const toRemoveInput = [ 'ad_astra:moon_desh_ore', 'ad_astra:deepslate_desh_ore',
     ];
 
     toRemoveOutput.forEach(element => {
@@ -226,7 +206,8 @@ ServerEvents.recipes(event => {
     toRemoveInput.forEach(element => {
         event.remove({ input: element})
     })
-
+    event.remove({ output: 'farmersdelight:wheat_dough'});
+    event.remove({ input: 'farmersdelight:wheat_dough'});
     event.remove({ input: 'minecraft:fire_charge'});
     event.remove({ input: 'minecraft:netherite_scrap'});
     event.remove({ output: 'minecraft:netherite_scrap'});

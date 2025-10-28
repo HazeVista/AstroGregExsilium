@@ -182,6 +182,86 @@ ServerEvents.recipes(event => {
         C: 'gtceu:fine_red_alloy_wire'
     })
 
+    event.shaped('4x powah:capacitor_hardened', [
+        ' CB',
+        'CAC',
+        'BC '
+    ], {
+        A: 'gtceu:magnetic_iron_rod',
+        B: 'powah:dielectric_paste',
+        C: 'gtceu:fine_energized_steel_wire'
+    })
+
+    // event.shaped('4x powah:capacitor_blazing', [
+    //     ' CB',
+    //     'CAC',
+    //     'BC '
+    // ], {
+    //     A: 'gtceu:magnetic_steel_rod',
+    //     B: 'powah:dielectric_paste',
+    //     C: 'gtceu:fine__wire'
+    // })
+
+    //     event.shaped('4x powah:capacitor_niotic', [
+    //     ' CB',
+    //     'CAC',
+    //     'BC '
+    // ], {
+    //     A: 'gtceu:magnetic_steel_rod',
+    //     B: 'powah:dielectric_paste',
+    //     C: 'gtceu:fine__wire'
+    // })
+    // event.shaped('4x powah:capacitor_spirited', [
+    //     ' CB',
+    //     'CAC',
+    //     'BC '
+    // ], {
+    //     A: 'gtceu:magnetic_neodymium_rod',
+    //     B: 'powah:dielectric_paste',
+    //     C: 'gtceu:fine__wire'
+    // })
+    // event.shaped('4x powah:capacitor_nitro', [
+    //     ' CB',
+    //     'CAC',
+    //     'BC '
+    // ], {
+    //     A: 'gtceu:magnetic_neodymium_rod',
+    //     B: 'powah:dielectric_paste',
+    //     C: 'gtceu:fine__wire'
+    // })
+
     //player transmitters
 
+    //batteries
+    event.shaped('powah:battery_starter', [
+        'CAC',
+        'ABA',
+        'CAC'
+    ], {
+        A: 'powah:capacitor_basic',
+        B: 'minecraft:redstone',
+        C: 'powah:dielectric_rod'
+    })
+
+    event.shaped('powah:battery_basic', [
+        'BAB',
+        'CDC',
+        'BAB'
+    ], {
+        A: 'powah:battery_starter',
+        B: 'powah:dielectric_rod',
+        C: 'powah:capacitor_hardened',
+        D: 'gtceu:red_alloy_single_wire'
+    })
+
+    // event.shaped('powah:battery_', [
+    //     'BAB',
+    //     'CDC',
+    //     'BAB'
+    // ], {
+    //     A: 'powah:battery_',
+    //     B: 'powah:dielectric_rod',
+    //     C: 'powah:capacitor_',
+    //     D: 'gtceu:_single_wire'
+    // })
 });
