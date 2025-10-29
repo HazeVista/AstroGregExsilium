@@ -170,6 +170,12 @@ ServerEvents.recipes(event => {
         .EUt(20)
         .duration(200)
 
+    event.recipes.gtceu.assembler('assembling_thermoelectric_plate')
+        .itemInputs('gtceu:copper_plate', 'powah:dielectric_paste')    
+        .inputFluids('gtceu:blaze 576')
+        .itemOutputs('powah:thermoelectric_plate')
+        .EUt(15)
+        .duration(80)
 
     //capacitors
     event.shaped('4x powah:capacitor_basic', [

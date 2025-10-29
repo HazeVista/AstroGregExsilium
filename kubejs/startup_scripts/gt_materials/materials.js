@@ -109,33 +109,33 @@ const VHA = (voltage) => {
 
 GTCEuStartupEvents.registry('gtceu:material', event => {
 
-    // // Periodic table materials
-    // const element = global.periodicTableElement;
-    // // Ingots
-    // element('zirconium', 'ingot');
-    // element('tellurium', 'ingot');
-    // element('polonium', 'ingot');
-    // element('astatine', 'ingot');
-    // element('hafnium', 'ingot');
-    // element('seaborgium', 'ingot');
-    // element('flerovium', 'ingot');
-    // element('rhenium', 'ingot');
+    // Periodic table materials
+    const element = global.periodicTableElement;
+    // Ingots
+    element('zirconium', 'ingot');
+    element('tellurium', 'ingot');
+    element('polonium', 'ingot');
+    element('astatine', 'ingot');
+    element('hafnium', 'ingot');
+    element('seaborgium', 'ingot');
+    element('flerovium', 'ingot');
+    element('rhenium', 'ingot');
 
-    // // Dusts
-    // element('selenium', 'dust');
-    // element('strontium', 'dust');
-    // element('thallium', 'dust');
+    // Dusts
+    element('selenium', 'dust');
+    element('strontium', 'dust');
+    element('thallium', 'dust');
 
-    // // Liquids
-    // element('seaborgium', 'fluid');
-    // element('flerovium', 'fluid');
+    // Liquids
+    element('seaborgium', 'fluid');
+    element('flerovium', 'fluid');
 
-    // // Gasses
+    // Gasses
 
-    // // periodicTableElement('iodine', 'gas');
-    // element('oganesson', 'gas');
+    // periodicTableElement('iodine', 'gas');
+    element('oganesson', 'gas');
 
-    // Plasmas
+    Plasmas
 
     // Material modification
     const matmod = (mat, flag) => {
@@ -281,17 +281,6 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     const conductorPlasma = (name, elements, color, icon, blasting, cable, flags) => {
         event.create(name).ingot().plasma().components(elements).color(color).iconSet(icon).flags(flags).blastTemp(blasting[0], blasting[1], blasting[2], blasting[3]).cableProperties(cable[0], cable[1], cable[2], cable[3]);
     }
-
-    // elemIngot('magnetic_zapolgium', GTElements.get('zapolgium'), 0xcc00cc, MAGNETIC, [], [rod, long_rod, magnetic]);
-
-    // event.create('zapolgium')
-    //     .ingot()
-    //     .element(GTElements.get('zapolgium'))
-    //     .color(0xcc00cc)
-    //     .iconSet(DULL)
-    //     .blastTemp(10799, 'highest', VA('uhv'), 1600)
-    //     .flags(plates, rod, frame)
-    //     .fluidPipeProperties(18000, 7200, true,true,true,true);
 
     //create
     compDust('andesite_alloy', ['1x andesite', '1x iron'], 0xa6a08f, [centrifuge]);

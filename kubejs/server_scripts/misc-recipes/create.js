@@ -133,6 +133,13 @@ ServerEvents.recipes(event => {
         A: 'farmersdelight:canvas'
     })  
 
+    event.shaped('create:cardboard', [
+        'AAA',
+        'AAA'
+    ],{
+        A: 'farmersdelight:tree_bark'
+    })   
+
     event.shaped('farmersdelight:rope', [
         'A',
         'A',
