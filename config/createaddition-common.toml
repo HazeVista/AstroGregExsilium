@@ -113,7 +113,7 @@
 	tesla_coil_charge_rate = 5000
 	#Tesla Coil charge rate in FE/t for recipes.
 	#Range: > 0
-	tesla_coil_recipe_charge_rate = 2000
+	tesla_coil_recipe_charge_rate = 64
 	#Tesla Coil internal capacity in FE.
 	#Range: > 0
 	tesla_coil_capacity = 40000

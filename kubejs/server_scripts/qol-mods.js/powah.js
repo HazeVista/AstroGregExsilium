@@ -17,6 +17,13 @@ ServerEvents.recipes(event => {
         B: 'powah:battery_starter'
     });
 
+    event.shaped('powah:binding_card_dim', [
+        'ABA'
+    ], {
+        A: 'minecraft:ender_pearl',
+        B: 'powah:binding_card'
+    });
+
     event.shaped('2x powah:dielectric_casing', [
         'AAA',
         'ABA',
@@ -171,11 +178,16 @@ ServerEvents.recipes(event => {
         .duration(200)
 
     event.recipes.gtceu.assembler('assembling_thermoelectric_plate')
-        .itemInputs('gtceu:copper_plate', 'powah:dielectric_paste')    
+        .itemInputs('4x gtceu:copper_plate', 'powah:dielectric_paste')    
         .inputFluids('gtceu:blaze 576')
         .itemOutputs('powah:thermoelectric_plate')
         .EUt(15)
         .duration(80)
+
+    event.recipes.gtceu.vacuum_freezer('cool_carbon_dioxide')
+        .notConsumable('gtceu:block_casting_mold')
+        .inputFluids('gtceu:carbon_dioxide 1296')
+        .itemOutputs('powah:dry_ice')
 
     //capacitors
     event.shaped('4x powah:capacitor_basic', [
@@ -260,14 +272,59 @@ ServerEvents.recipes(event => {
         D: 'gtceu:red_alloy_single_wire'
     })
 
-    // event.shaped('powah:battery_', [
+    event.shaped('powah:battery_hardened', [
+        'BAB',
+        'CDC',
+        'BAB'
+    ], {
+        A: 'powah:battery_basic',
+        B: 'powah:dielectric_rod',
+        C: 'powah:capacitor_blazing',
+        D: 'gtceu:energized_steel_single_wire'
+    })
+    
+    // event.shaped('powah:battery_blazing', [
     //     'BAB',
     //     'CDC',
     //     'BAB'
     // ], {
-    //     A: 'powah:battery_',
+    //     A: 'powah:battery_hardened',
     //     B: 'powah:dielectric_rod',
-    //     C: 'powah:capacitor_',
+    //     C: 'powah:capacitor_niotic',
+    //     D: 'gtceu:_single_wire'
+    // })
+
+    // event.shaped('powah:battery_niotic', [
+    //     'BAB',
+    //     'CDC',
+    //     'BAB'
+    // ], {
+    //     A: 'powah:battery_blazing',
+    //     B: 'powah:dielectric_rod',
+    //     C: 'powah:capacitor_spirited',
+    //     D: 'gtceu:_single_wire'
+    // })
+
+    // event.shaped('powah:battery_spirited', [
+    //     'BAB',
+    //     'CDC',
+    //     'BAB'
+    // ], {
+    //     A: 'powah:battery_niotic',
+    //     B: 'powah:dielectric_rod',
+    //     C: 'powah:capacitor_nitro',
+    //     D: 'gtceu:_single_wire'
+    // })
+
+    
+    // event.shaped('powah:battery_nitro', [
+    //     'BAB',
+    //     'CDC',
+    //     'BAB'
+    // ], {
+    //     A: 'powah:battery_spirited',
+    //     B: 'powah:dielectric_rod',
+    //     C: 'powah:capacitor_nitro',
     //     D: 'gtceu:_single_wire'
     // })
 });

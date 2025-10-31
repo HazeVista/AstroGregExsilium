@@ -29,11 +29,12 @@ ServerEvents.recipes(event => {
         'functionalstorage:collector_upgrade', 'functionalstorage:pusher_upgrade', 'functionalstorage:puller_upgrade', 'create:shaft', 'create:blaze_cake_base', 'create:wheat_flour',
         'createaddition:alternator', 'createaddition:gold_rod', 'effortlessbuilding:golden_randomizer_bag', 'gtceu:desh_ingot', 'gtceu:desh_block', 'gtceu:raw_desh_block', 'gtceu:desh_nugget',
         'createaddition:brass_rod', 'createaddition:copper_rod', 'createaddition:electrum_rod', 'createaddition:electric_motor', 'createaddition:capacitor', 'createaddition:tesla_coil',
-        'createaddition:portable_energy_interface', 'createaddition:connector', 'createaddition:large_connector', 'createaddition:festive_spool', 
+        'createaddition:portable_energy_interface', 'createaddition:connector', 'createaddition:large_connector', 'createaddition:festive_spool', 'createaddition:diamond_grit_sandpaper',
         'effortlessbuilding:randomizer_bag', 'create:empty_blaze_burner', 'effortlessbuilding:diamond_randomizer_bag', 'laserio:laser_connector', 'laserio:filter_counting',
         'buildinggadgets2:gadget_building', 'buildinggadgets2:gadget_destruction', 'buildinggadgets2:gadget_cut_paste', 'buildinggadgets2:gadget_copy_paste', 'buildinggadgets2:gadget_exchanging',
-        'farmersdelight:pie_crust', 'create:water_wheel', 'create:large_water_wheel', 'create:brass_funnel', 'create:andesite_funnel', 'create:brass_tunnel',
-        'create:andesite_tunnel', 'botania:glass_pickaxe',
+        'farmersdelight:pie_crust', 'create:water_wheel', 'create:large_water_wheel', 'create:brass_funnel', 'create:andesite_funnel', 'create:brass_tunnel', 'expatternprovider:assembler_matrix_frame',
+        'create:andesite_tunnel', 'botania:glass_pickaxe', 'create:brass_nugget', 'minecraft:compass', 'createaddition:biomass', 'expatternprovider:assembler_matrix_wall', 'ad_extendra:b_sand',
+        'create:cogwheel', 'create:large_cogwheel',
     ];        
 
     const toRemoveId = ['create:haunting/crimson_fungus', 'create:haunting/warped_fungus', 'create:milling/compat/ae2/sky_stone_block', 'create:milling/compat/ae2/fluix_crystal',
@@ -47,38 +48,41 @@ ServerEvents.recipes(event => {
         'botania:mana_infusion/netherrack_dupe', 'createaddition:mixing/netherrack', 'botania:mana_infusion/soul_sand_dupe', 'botania:mana_infusion/glowstone_dupe', 'botania:mana_infusion/redstone_dupe',
         'botania:mana_infusion/quartz_dupe', 'botania:mana_infusion/coal_dupe', 'botania:mana_infusion/gravel_dupe', 'minecraft:netherite_drill_smithing', 'create:crafting/kinetics/fluid_tank',
         'create:crafting/kinetics/white_sail', 'create:crafting/kinetics/fluid_valve', 'farmersdelight:rope', 'gtceu:autoclave/silicon_dioxide_to_quartzite_gem', 'gtceu:assembler/end_crystal',
-        'gtceu:arc_furnace/arc_netherite_dust', 'gtceu:alloy_smelter/alloy_smelt_netherite_dust_to_block', 'gtceu:smelting/smelt_dust_netherite_to_ingot', 'laserio:logic_chip_raw', 
+        'gtceu:arc_furnace/arc_netherite_dust', 'gtceu:alloy_smelter/alloy_smelt_netherite_dust_to_block', 'gtceu:smelting/smelt_dust_netherite_to_ingot', 'laserio:logic_chip_raw', 'create:crafting/kinetics/spout',
         'laserio:card_fluid', 'laserio:card_item', 'laserio:card_redstone', 'laserio:card_energy', 'laserio:laser_wrench', 'travelanchors:travel_staff', 'travelanchors:travel_anchor', 'waystones:warp_stone',
         'create:crafting/curiosities/cake', 'farmersdelight:wheat_dough_from_water',  'functionalstorage:netherite_upgrade', 'functionalstorage:diamond_upgrade', 'functionalstorage:gold_upgrade', 
         'functionalstorage:void_upgrade', 'functionalstorage:fluid_1', 'functionalstorage:fluid_2', 'functionalstorage:fluid_4', 'functionalstorage:linking_tool', 'laserio:laser_connector_advanced',
-        'functionalstorage:configuration_tool', 'functionalstorage:armory_cabinet', 'functionalstorage:framed_simple_compacting_drawer', 'functionalstorage:compacting_framed_drawer',
+        'functionalstorage:configuration_tool', 'functionalstorage:armory_cabinet', 'functionalstorage:framed_simple_compacting_drawer', 'functionalstorage:compacting_framed_drawer', 'create:crafting/kinetics/speedometer',
         'functionalstorage:framed_storage_controller', 'functionalstorage:simple_compacting_drawer', 'functionalstorage:compacting_drawer', 'megacells:cells/cell_component_64m', 'megacells:cells/cell_component_256m',
-        'functionalstorage:framed_controller_extension', 'functionalstorage:copper_upgrade', 'functionalstorage:controller_extension', 'functionalstorage:storage_controller',     'merequester:requester', 
+        'functionalstorage:framed_controller_extension', 'functionalstorage:copper_upgrade', 'functionalstorage:controller_extension', 'functionalstorage:storage_controller', 'merequester:requester', 
         'ae2:smelting/silicon_from_certus_quartz_dust', 'ae2:blasting/silicon_from_certus_quartz_dust', 'ae2:decorative/quartz_glass', 'ae2:network/parts/export_bus', 'ae2:network/blocks/interfaces_interface', 
         'ae2:decorative/quartz_vibrant_glass', 'ae2:network/crafting/patterns_blank', 'ae2:network/cables/glass_fluix', 'ae2:network/parts/quartz_fiber_part', 'ae2:misc/fluixpearl', 'ae2:network/parts/import_bus',
         'ae2:network/blocks/energy_vibration_chamber', 'ae2:network/crystal_resonance_generator', 'ae2:network/blocks/crystal_processing_growth_accelerator', 'ae2:network/blocks/inscribers', 
         'ae2:network/blocks/crystal_processing_charger', 'ae2:network/blocks/spatial_anchor', 'ae2:materials/cardcapacity', 'ae2:materials/annihilationcore', 'ae2:network/blocks/storage_drive',  
         'ae2:network/blocks/pattern_providers_interface', 'ae2:network/wireless_part', 'ae2:network/crafting/molecular_assembler', 'ae2:network/blocks/cell_workbench', 'ae2:network/blocks/controller',
         'ae2:network/blocks/energy_energy_acceptor', 'ae2:network/blocks/io_port', 'ae2:network/blocks/storage_chest', 'ae2:network/parts/tunnels_me', 'ae2:network/blocks/spatial_io_port', 
-        'ae2:network/crafting/cpu_crafting_unit', 'ae2:network/cells/item_storage_components_cell_1k_part', 'ae2:network/cells/item_storage_components_cell_4k_part', 
+        'ae2:network/crafting/cpu_crafting_unit', 'ae2:network/cells/item_storage_components_cell_1k_part', 'ae2:network/cells/item_storage_components_cell_4k_part', 'create:crafting/kinetics/mechanical_saw',
         'ae2:network/cells/item_storage_components_cell_16k_part', 'ae2:network/cells/item_storage_components_cell_64k_part', 'ae2:network/cells/item_storage_components_cell_256k_part', 
         'ae2:network/blocks/io_condenser', 'ae2:misc/tiny_tnt', 'ae2:tools/misctools/entropy_manipulator', 'ae2:network/parts/annihilation_plane_alt', 'ae2:network/parts/annihilation_plane_alt2', 
-        'ae2:network/parts/formation_plane_alt', 'ae2:network/parts/formation_plane', 'ae2:network/blocks/crank',  'expatternprovider:caner', 'expatternprovider:crystal_fixer', 
-        'expatternprovider:ingredient_buffer', 'expatternprovider:tape', 'expatternprovider:ex_charger', 'expatternprovider:ex_inscriber', 'expatternprovider:oversize_interface', 
-        'expatternprovider:wireless_tool', 'megacells:crafting/compression_card', 'megacells:crafting/decompression_module', 'megacells:crafting/mega_crafting_unit', 
+        'ae2:network/parts/formation_plane_alt', 'ae2:network/parts/formation_plane', 'ae2:network/blocks/crank',  'expatternprovider:caner', 'expatternprovider:crystal_fixer', 'create:crafting/kinetics/mechanical_plough',
+        'expatternprovider:ingredient_buffer', 'expatternprovider:tape', 'expatternprovider:ex_charger', 'expatternprovider:ex_inscriber', 'expatternprovider:oversize_interface', 'create:crafting/kinetics/whisk',
+        'expatternprovider:wireless_tool', 'megacells:crafting/compression_card', 'megacells:crafting/decompression_module', 'megacells:crafting/mega_crafting_unit', 'create:crafting/kinetics/wrench',
         'megacells:cells/standard/fluid_storage_cell_64m', 'megacells:cells/standard/fluid_storage_cell_4m', 'megacells:cells/standard/fluid_storage_cell_16m', 'megacells:cells/standard/fluid_storage_cell_256m', 
         'megacells:cells/standard/fluid_storage_cell_1m', 'megacells:cells/standard/item_storage_cell_64m', 'megacells:cells/standard/item_storage_cell_4m', 'megacells:cells/standard/item_storage_cell_16m', 
         'megacells:cells/standard/item_storage_cell_256m', 'megacells:cells/standard/item_storage_cell_1m', 'megacells:cells/mega_fluid_cell_housing', 'megacells:cells/mega_item_cell_housing', 
         'megacells:cells/cell_component_1m', 'megacells:cells/cell_component_4m', 'megacells:cells/cell_component_16m', 'fluxnetworks:fluxcore', 'fluxnetworks:fluxconfigurator', 'fluxnetworks:fluxblock', 
         'fluxnetworks:fluxcontroller', 'fluxnetworks:basicfluxstorage', 'fluxnetworks:herculeanfluxstorage', 'fluxnetworks:gargantuanfluxstorage', 'minecraft:shears', 'minecraft:ender_eye', 'minecraft:end_crystal', 
-        'minecraft:netherite_ingot', 'minecraft:netherite_scrap', 'minecraft:netherite_scrap_from_blasting', 
+        'minecraft:netherite_ingot', 'minecraft:netherite_scrap', 'minecraft:netherite_scrap_from_blasting', 'create:crafting/kinetics/flywheel', 'create:crafting/kinetics/mechanical_harvester',
+        'create:crafting/kinetics/mechanical_mixer', 'create:crafting/kinetics/deployer', 'create:crafting/kinetics/millstone', 'create:crafting/kinetics/mechanical_mixer', 'create:crafting/kinetics/mechanical_drill',
+        'create:crafting/kinetics/steam_engine', 'create:crafting/kinetics/mechanical_press', 'create:crafting/kinetics/piston_extension_pole', 'create:crafting/kinetics/mechanical_crafter', 
+        'create:crafting/kinetics/brass_hand', 'create:crafting/kinetics/hose_pulley', 'create:crafting/kinetics/rope_pulley', 'create:crafting/kinetics/elevator_pulley', 'create:crafting/appliances/chain_from_zinc'
     ];
 
     const toRemoveType = ['expatternprovider:cutter', 'ae2:inscriber', 'ae2:charger', 'create:crushing', 'ad_astra:alloying', 'createaddition:liquid_burning', 'create:pressing',
-        'botania:orechid_ignem', 'botania:orechid'
+        'botania:orechid_ignem', 'botania:orechid', 'create:potion_mixing',
     ];
 
-    const toRemoveInput = [ 'ad_astra:moon_desh_ore', 'ad_astra:deepslate_desh_ore',
+    const toRemoveInput = [ 'ad_astra:moon_desh_ore', 'ad_astra:deepslate_desh_ore', 
     ];
 
     toRemoveOutput.forEach(element => {

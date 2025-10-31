@@ -19,7 +19,7 @@ ServerEvents.recipes(event => {
         A: 'gtceu:wrought_iron_plate',
         B: 'create:shaft',
         C: 'create:andesite_alloy',
-        D: 'create:andesite_casing'
+        D: 'create:gearbox'
      })
 
     event.shaped('create:polished_rose_quartz', [
@@ -57,7 +57,7 @@ ServerEvents.recipes(event => {
         'AAA'
     ],{
         A: 'gtceu:treated_wood_planks',
-        B: 'create:shaft'
+        B: 'create:cogwheel'
     })
 
     event.shaped('create:large_water_wheel', [
@@ -146,7 +146,230 @@ ServerEvents.recipes(event => {
         'A'
     ],{
         A: 'farmersdelight:straw'
-    })   
+    })
+
+    event.shaped('create:flywheel', [
+        'BBB',
+        'BAB',
+        'BBB'
+    ], {
+        A: 'create:shaft',
+        B: 'gtceu:brass_plate'
+    })
+
+    event.shaped('create:wrench',[
+        'A A',
+        ' B ',
+        ' C '
+    ], {
+        A: 'gtceu:brass_plate',
+        B: 'create:cogwheel',
+        C: 'create:shaft'
+    })
+
+    event.shaped('create:cogwheel', [
+        ' C ',
+        'BAB'
+    ], {
+        A: 'create:shaft',
+        B: '#minecraft:planks',
+        C: '#forge:tools/saws'
+    })
+
+    event.shaped('create:large_cogwheel', [
+        'CA ',
+        'ABA',
+        ' A ',
+    ], {
+        A: '#minecraft:planks',
+        B: 'create:shaft',
+        C: '#forge:tools/saws'
+    })
+
+    event.shaped('create:piston_extension_pole', [
+        ' A ',
+        'CBD',
+        ' A '
+    ], {
+        A: '#minecraft:planks',
+        B: 'create:shaft',
+        C: '#forge:tools/saws',
+        D: '#forge:tools/files'
+    })
+    
+    event.shaped('create:piston_extension_pole', [
+        ' A ',
+        'DBC',
+        ' A '
+    ], {
+        A: '#minecraft:planks',
+        B: 'create:shaft',
+        C: '#forge:tools/saws',
+        D: '#forge:tools/files'
+    })
+
+    event.shaped('create:spout', [
+        'B',
+        'A'
+    ], {
+        A: 'create:fluid_valve',
+        B: 'create:fluid_tank'
+    })
+
+    event.shaped('create:whisk', [
+        ' A ',
+        'BAB',
+        'BBB'
+    ], {
+        A: 'create:shaft',
+        B: 'gtceu:wrought_iron_rod'
+    })
+    
+    event.shaped('create:mechanical_mixer', [ 
+        ' A ',
+        'DCD',
+        ' B '
+    ], {
+        A: 'create:piston_extension_pole',
+        B: 'create:whisk',
+        C: 'create:large_cogwheel',
+        D: 'create:shaft'
+    })
+
+    event.shaped('create:deployer', [
+        'A',
+        'B',
+        'C'
+    ], {
+        A: 'create:gearbox',
+        B: 'create:piston_extension_pole',
+        C: 'create:brass_hand'
+    })
+
+    event.shaped('create:brass_hand', [
+        ' A ',
+        'CBC',
+        ' C '
+    ], {
+        A: 'create:shaft',
+        B: 'create:electron_tube',
+        C: 'gtceu:brass_plate'
+    })
+
+    event.shaped('create:mechanical_crafter', [
+        'ACA',
+        ' B '
+    ], {
+        A: 'create:electron_tube',
+        B: 'create:brass_casing',
+        C: 'create:large_cogwheel'
+    })
+
+    // event.shaped('create:mechanical_saw', [
+    //     '',
+    //     '',
+    //     ''
+    // ], {
+    //     A: '',
+    //     B: '',
+    //     C: '',
+    //     D: ''
+    // })
+
+    event.shaped('create:mechanical_press', [
+        'A',
+        'B',
+        'C'
+    ], {
+        A: 'create:piston_extension_pole',
+        B: 'create:gearbox',
+        C: 'gtceu:wrought_iron_block'
+    })
+
+    // event.shaped('create:mechanical_plough', [
+    //     '',
+    //     '',
+    //     ''
+    // ], {
+    //     A: '',
+    //     B: '',
+    //     C: '',
+    //     D: ''
+    // })
+
+    // event.shaped('create:mechanical_drill', [
+    //     '',
+    //     '',
+    //     ''
+    // ], {
+    //     A: '',
+    //     B: '',
+    //     C: '',
+    //     D: ''
+    // })
+
+    // event.shaped('create:mechanical_harvester', [
+    //     '',
+    //     '',
+    //     ''
+    // ], {
+    //     A: '',
+    //     B: '',
+    //     C: '',
+    //     D: ''
+    // })
+
+    event.shaped('create:sticky_mechanical_piston', [
+        'A',
+        'B'
+    ], {
+        A: 'gtceu:sticky_resin',
+        B: 'create:mechanical_piston'
+    })
+
+    // event.shaped('create:steam_engine', [
+    //     '',
+    //     '',
+    //     ''
+    // ], {
+    //     A: '',
+    //     B: '',
+    //     C: '',
+    //     D: ''
+    // })
+
+    event.shaped('create:hose_pulley', [
+        ' A ',
+        'BBB',
+        ' C '
+    ], {
+        A: 'create:copper_casing',
+        B: 'gtceu:rubber_plate',
+        C: 'create:fluid_pipe'
+    })
+
+    event.shaped('create:elevator_pulley', [
+        ' A ',
+        'BBB',
+        ' C '
+    ], {
+        A: 'create:brass_casing',
+        B: 'minecraft:chain',
+        C: 'create:shaft'
+    })
+
+    event.shaped('create:rope_pulley', [
+        ' A ',
+        'BBB',
+        ' C '
+    ], {
+        A: 'create:andesite_casing',
+        B: 'farmersdelight:rope',
+        C: 'create:shaft'
+    })
+
+
+    event.shapeless('create:speedometer', [`create:gearbox`,`minecraft:compass`])
 
     // Andesite Alloy mostly by @digestlotion
     event.shapeless('2x gtceu:andesite_dust', ['gtceu:stone_dust', 'gtceu:quartz_dust'])
@@ -286,7 +509,20 @@ ServerEvents.recipes(event => {
             item: "gtceu:magnetic_iron_rod",
             count: 1
         },
-        energy: 1000
+        energy: 1792
+    })
+
+    event.custom({
+        type: "createaddition:charging",
+        input: {
+            item: "gtceu:iron_screw",
+            count: 1
+        },
+        result: {
+            item: "gtceu:magnetic_iron_screw",
+            count: 1
+        },
+        energy: 448
     })
 
     //rolling (primitive lathe)
@@ -441,7 +677,7 @@ ServerEvents.recipes(event => {
         'B  '
     ], {
         A: 'minecraft:ender_pearl',
-        B: 'gtceu:long_stick',
+        B: 'gtceu:long_wood_rod',
         C: 'gtceu:magnetic_iron_rod'
     })
 

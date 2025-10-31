@@ -135,7 +135,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     // periodicTableElement('iodine', 'gas');
     element('oganesson', 'gas');
 
-    Plasmas
+    //Plasmas
 
     // Material modification
     const matmod = (mat, flag) => {

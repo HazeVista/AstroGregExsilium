@@ -25,6 +25,8 @@ event.removeAllTagsFrom('create:brass_sheet')
 event.removeAllTagsFrom('create:copper_sheet')
 event.removeAllTagsFrom('create:golden_sheet')
 event.removeAllTagsFrom('create:brass_ingot')
+event.removeAllTagsFrom('create:brass_nugget')
+event.removeAllTagsFrom('create:zinc_nugget')
 event.removeAllTagsFrom('create:zinc_ingot')
 event.removeAllTagsFrom('create:dough')
 event.removeAllTagsFrom('createaddition:zinc_sheet')
@@ -38,11 +40,11 @@ event.removeAllTagsFrom('createaddition:iron_rod')
 event.removeAllTagsFrom('createaddition:electrum_rod')
 event.removeAllTagsFrom('createaddition:brass_rod')
 event.removeAllTagsFrom('createaddition:diamond_grit')
+event.removeAllTagsFrom('createaddition:diamond_grit_sandpaper')
 event.removeAllTagsFrom('farmersdelight:wheat_dough')
 event.removeAllTagsFrom('powah:uraninite_raw')
 event.removeAllTagsFrom('gtceu:raw_desh')
 event.removeAllTagsFrom('gtceu:desh_ingot')
-
 });
 
 

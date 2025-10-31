@@ -38,6 +38,23 @@ ServerEvents.recipes(event => {
             B: 'minecraft:redstone',
             C: 'minecraft:ender_pearl',
         })
+   
+    event.shaped('minecraft:white_dye', [
+        'A'
+    ], {
+        A: 'minecraft:bone_meal'
+    });
+
+    event.shapeless('gtceu:magnetic_iron_screw', ['gtceu:iron_screw', 'minecraft:redstone', 'minecraft:redstone'])
+
+    event.shaped('minecraft:compass', [
+        ' A ',
+        'ABA',
+        ' A '
+    ], {
+        A: 'gtceu:iron_plate',
+        B: 'gtceu:magnetic_iron_screw'
+    })
 
     //quality of life logs
     event.shaped('16x minecraft:stick', [
@@ -55,9 +72,4 @@ ServerEvents.recipes(event => {
         A: '#minecraft:logs'
     });
 
-    event.shaped('minecraft:white_dye', [
-        'A'
-    ], {
-        A: 'minecraft:bone_meal'
-    });
 });
