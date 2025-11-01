@@ -265,16 +265,13 @@ ServerEvents.recipes(event => {
         C: 'create:large_cogwheel'
     })
 
-    // event.shaped('create:mechanical_saw', [
-    //     '',
-    //     '',
-    //     ''
-    // ], {
-    //     A: '',
-    //     B: '',
-    //     C: '',
-    //     D: ''
-    // })
+    event.shaped('create:mechanical_saw', [
+        'B',
+        'A'
+    ], {
+        A: 'create:gearbox',
+        B: 'gtceu:wrought_iron_buzzsaw_blade'
+    })
 
     event.shaped('create:mechanical_press', [
         'A',
@@ -286,38 +283,34 @@ ServerEvents.recipes(event => {
         C: 'gtceu:wrought_iron_block'
     })
 
-    // event.shaped('create:mechanical_plough', [
-    //     '',
-    //     '',
-    //     ''
-    // ], {
-    //     A: '',
-    //     B: '',
-    //     C: '',
-    //     D: ''
-    // })
+    event.shaped('create:mechanical_plough', [
+        'BCB',
+        'BCB',
+        ' A '
+    ], {
+        A: 'create:andesite_casing',
+        B: 'create:shaft',
+        C: 'gtceu:wrought_iron_plate'
+    })
 
-    // event.shaped('create:mechanical_drill', [
-    //     '',
-    //     '',
-    //     ''
-    // ], {
-    //     A: '',
-    //     B: '',
-    //     C: '',
-    //     D: ''
-    // })
+    event.shaped('create:mechanical_drill', [
+        'B',
+        'A'
+    ], {
+        A: 'create:gearbox',
+        B: 'gtceu:wrought_iron_drill_head'
+    })
 
-    // event.shaped('create:mechanical_harvester', [
-    //     '',
-    //     '',
-    //     ''
-    // ], {
-    //     A: '',
-    //     B: '',
-    //     C: '',
-    //     D: ''
-    // })
+    event.shaped('create:mechanical_harvester', [
+        'CDC',
+        'BDB',
+        ' A '
+    ], {
+        A: 'create:andesite_casing',
+        B: 'create:shaft',
+        C: 'gtceu:wrought_iron_gear',
+        D: 'gtceu:wrought_iron_rod'
+    })
 
     event.shaped('create:sticky_mechanical_piston', [
         'A',
@@ -327,16 +320,16 @@ ServerEvents.recipes(event => {
         B: 'create:mechanical_piston'
     })
 
-    // event.shaped('create:steam_engine', [
-    //     '',
-    //     '',
-    //     ''
-    // ], {
-    //     A: '',
-    //     B: '',
-    //     C: '',
-    //     D: ''
-    // })
+    event.recipes.create.mechanical_crafting('create:steam_engine', [
+        'A',
+        'C',
+        'A',
+        'B'
+    ], {
+        A: 'create:piston_extension_pole',
+        B: 'create:fluid_valve',
+        C: 'gtceu:brass_plate'
+    })
 
     event.shaped('create:hose_pulley', [
         ' A ',
@@ -368,6 +361,7 @@ ServerEvents.recipes(event => {
         C: 'create:shaft'
     })
 
+    event.recipes.create.crushing('farmersdelight:sandy_shrub', 'farmersdelight:straw')
 
     event.shapeless('create:speedometer', [`create:gearbox`,`minecraft:compass`])
 

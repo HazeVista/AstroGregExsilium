@@ -416,4 +416,23 @@ ServerEvents.recipes(event => {
         C: 'ae2:fluix_dust'
     });
 
+    event.shaped('2x expatternprovider:assembler_matrix_wall', [
+        'BCB',
+        'CAC',
+        'BCB'
+    ], {
+        A: 'gtceu:futura_alloy_frame',
+        B: 'gtceu:certus_quartz_plate',
+        C: 'ae2:fluix_smart_cable'
+    })
+    
+    event.shaped('2x expatternprovider:assembler_matrix_frame', [
+        'BCB',
+        'CAC',
+        'BCB'
+    ], {
+        A: 'gtceu:futura_alloy_frame',
+        B: 'gtceu:futura_alloy_plate',
+        C: 'ae2:fluix_smart_cable'
+    })    
 });
