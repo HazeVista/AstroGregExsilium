@@ -10,11 +10,11 @@ This pack aims to lean more towards the easier end as far as GregTech goes, but 
 
 
 
-Modpack Owned by Haze Vista. Special thanks to DriftBlueStone, DigestLotion, and BGame for development help.
+Modpack Owned by Haze Vista. Special thanks to DriftBlueStone, DigestLotion, Wabwit, and BGame for development help.
 
 
 
-Slightly inspired by Astroblock and Pre-Eta Star Technology
+Slightly inspired by Astroblock, TerraFirmaGreg, and Pre-Eta Star Technology
 
 
 
