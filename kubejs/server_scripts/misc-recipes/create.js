@@ -265,12 +265,22 @@ ServerEvents.recipes(event => {
         C: 'create:large_cogwheel'
     })
 
+    event.shaped('create:millstone', [
+        'ABA',
+        'BCB',
+        'ABA'
+    ], {
+        A: 'minecraft:stone',
+        B: 'minecraft:smooth_stone',
+        C: 'create:gearbox'
+    })
+
     event.shaped('create:mechanical_saw', [
         'B',
         'A'
     ], {
         A: 'create:gearbox',
-        B: 'gtceu:wrought_iron_buzzsaw_blade'
+        B: 'gtceu:wrought_iron_buzz_saw_blade'
     })
 
     event.shaped('create:mechanical_press', [
@@ -361,7 +371,7 @@ ServerEvents.recipes(event => {
         C: 'create:shaft'
     })
 
-    event.recipes.create.crushing('farmersdelight:sandy_shrub', 'farmersdelight:straw')
+    event.recipes.create.crushing('farmersdelight:straw', 'farmersdelight:sandy_shrub')
 
     event.shapeless('create:speedometer', [`create:gearbox`,`minecraft:compass`])
 
