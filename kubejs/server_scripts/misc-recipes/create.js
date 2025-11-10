@@ -372,6 +372,8 @@ ServerEvents.recipes(event => {
     })
 
     event.recipes.create.crushing('farmersdelight:straw', 'farmersdelight:sandy_shrub')
+    event.recipes.create.crushing('2x farmersdelight:straw', 'minecraft:tall_grass')
+    event.recipes.create.crushing('farmersdelight:straw', 'minecraft:grass')
 
     event.shapeless('create:speedometer', [`create:gearbox`,`minecraft:compass`])
 

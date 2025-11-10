@@ -16,9 +16,9 @@
      */
     "atmosphereLeave": 600,
     // A comma-separated list of planet IDs that should be hidden from the planets screen. e.g. minecraft:overworld,ad_astra:moon,ad_astra:mars,ad_astra:venus,ad_astra:mercury,ad_astra:glacio
-    "disabledPlanets": "ad_astra:glacio",
+    "disabledPlanets": "ad_astra:glacio,ad_extendra:b,ad_astra:glacio_orbit,ad_extendra:b_orbit,ad_extendra:sedna,ad_extendra:sedna_orbit,ad_extendra:quaoar,ad_extendra:quaoar_orbit,ad_extendra:gonggong,ad_extendra:gonggong_orbit,ad_extendra:eris,ad_extendra:eris_orbit,ad_extendra:makemake,ad_extendra:makemake_orbit,ad_extendra:orcus,ad_extendra:orcus_orbit",
     // Disables oxygen damage.
-    "disableOxygen": true,
+    "disableOxygen": false,
     // Disables temperature damage.
     "disableTemperature": true,
     // Uses normal gravity for all planets.

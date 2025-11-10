@@ -1,0 +1,10 @@
+{
+  "dimension": "ad_extendra:ceres",
+  "gravity": 1.12,
+  "orbit": "ad_extendra:ceres_orbit",
+  "oxygen": false,
+  "solar_power": 11,
+  "solar_system": "ad_astra:solar_system",
+  "temperature": -113,
+  "tier": 6
+}

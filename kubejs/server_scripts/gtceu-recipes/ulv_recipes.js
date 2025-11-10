@@ -69,4 +69,16 @@ ServerEvents.recipes(event => {
         .duration(200)
         .EUt(7)
 
+    event.recipes.gtceu.forge_hammer('forge_hammer_gravel')
+        .itemInputs('minecraft:cobblestone')
+        .itemOutputs('minecraft:gravel')
+        .duration(80)
+        .EUt(7)
+
+    event.recipes.gtceu.forge_hammer('forge_hammer_sand')
+        .itemInputs('minecraft:gravel')
+        .itemOutputs('minecraft:sand')
+        .duration(80)
+        .EUt(7)
+
 });

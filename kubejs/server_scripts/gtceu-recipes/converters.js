@@ -2,7 +2,7 @@
 
 //     const LMHconverterMaterials = { lv: 'energized_steel', mv: '', hv: ''}
 //     const EILZUUconverterMaterials = { ev: '', iv: '', luv: '', zpm: '', uv: '', uhv: ''}
-    
+
 //     function converterCraftingRecipe(amps,thickness){
 //         for (const [tier, superconductor] of Object.entries(EILZUUconverterMaterials)) {
 //             event.shaped(Item.of(`gtceu:${tier}_${amps}_energy_converter`), [

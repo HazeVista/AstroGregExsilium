@@ -1,7 +1,7 @@
 const tiers = ['ulv', 'lv', 'mv', 'hv', 'ev', 'iv', 'luv', 'zpm', 'uv', 'uhv'];
-	
+
 ServerEvents.recipes(event => { 
-	
+
 	tiers.forEach(tier => {
 		event.recipes.gtceu.assembler((`kubejs:${tier}_universal_circuit`))
             .circuit(5)
@@ -12,8 +12,8 @@ ServerEvents.recipes(event => {
 	});
 });
 
-ServerEvents.tags('item', event => {
-      tiers.forEach(tier => {
-		event.add(`gtceu:circuits/${tier}`, `kubejs:${tier}_universal_circuit`)});
+      ServerEvents.tags('item', event => {
+            tiers.forEach(tier => {
+		      event.add(`gtceu:circuits/${tier}`, `kubejs:${tier}_universal_circuit`)});
 
 });

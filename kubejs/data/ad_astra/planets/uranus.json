@@ -1,0 +1,10 @@
+{
+  "dimension": "ad_extendra:uranus",
+  "gravity": 8.69,
+  "orbit": "ad_extendra:uranus_orbit",
+  "oxygen": false,
+  "solar_power": 11,
+  "solar_system": "ad_astra:solar_system",
+  "temperature": -224,
+  "tier": 3
+}
