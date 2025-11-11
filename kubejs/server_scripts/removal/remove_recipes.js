@@ -1,28 +1,5 @@
 ServerEvents.recipes(event => {
-    //replace
-    event.replaceInput({input: 'create:copper_sheet'}, 'create:copper_sheet', 'gtceu:copper_plate');
-    event.replaceInput({input: 'create:zinc_ingot'}, 'create:zinc_ingot', 'gtceu:zinc_ingot');
-    event.replaceOutput({output: 'gtceu:energized_steel_ingot'}, 'gtceu:energized_steel_ingot','powah:steel_energized');
-    event.replaceInput({input: 'gtceu:energized_steel_ingot'}, 'gtceu:energized_steel_ingot','powah:steel_energized');
-    event.replaceOutput({output: 'gtceu:energized_steel_block'}, 'gtceu:energized_steel_block','powah:energized_steel_block');
-    event.replaceInput({input: 'gtceu:energized_steel_block'}, 'gtceu:energized_steel_block','powah:energized_steel_block');
-    event.replaceInput({input: 'gtceu:desh_nugget'}, 'gtceu:desh_nugget', 'ad_astra:desh_nugget')
-    event.replaceInput({input: 'gtceu:desh_ingot'}, 'gtceu:desh_ingot', 'ad_astra:desh_ingot')
-    event.replaceInput({input: 'gtceu:desh_block'}, 'gtceu:desh_block', 'ad_astra:desh_block')
-    event.replaceInput({input: 'gtceu:raw_desh'}, 'gtceu:raw_desh', 'ad_astra:raw_desh')
-    event.replaceInput({input: 'gtceu:raw_desh_block'}, 'gtceu:raw_desh_block', 'ad_astra:raw_desh_block')
-    event.replaceOutput({output: 'gtceu:desh_nugget'}, 'gtceu:desh_nugget', 'ad_astra:desh_nugget')
-    event.replaceOutput({output: 'gtceu:desh_ingot'}, 'gtceu:desh_ingot', 'ad_astra:desh_ingot')
-    event.replaceOutput({output: 'gtceu:desh_block'}, 'gtceu:desh_block', 'ad_astra:desh_block')
-    event.replaceOutput({output: 'gtceu:raw_desh'}, 'gtceu:raw_desh', 'ad_astra:raw_desh')
-    event.replaceOutput({output: 'gtceu:raw_desh_block'}, 'gtceu:raw_desh_block', 'ad_astra:raw_desh_block')
-});
-
-ServerEvents.recipes(event => {
-
-
-    //new method from Truly
-    const toRemoveOutput = ['ae2:charger', 'ae2:drive', 'ae2:chest', 'createdieselgenerators:pumpjack_hole', 'expatternprovider:ex_inscriber', 'ad:astra_oxygen', 'waystones:warp_dust',
+    const toRemoveOut = ['ae2:charger', 'ae2:drive', 'ae2:chest', 'createdieselgenerators:pumpjack_hole', 'expatternprovider:ex_inscriber', 'ad:astra_oxygen', 'waystones:warp_dust',
         'expatternprovider:ex_charger', 'expatternprovider:crystal_fixer', 'expatternprovider:caner', 'exmachinis:item_buffer', 'ae2:crystal_resonance_generator', 'laserio:laser_node',
         'ae2:vibration_chamber', 'expatternprovider:circuit_cutter', 'minecraft:mycelium', 'create:brass_block', 'create:zinc_block', 'createaddition:straw', 'ad_astra:hydrogen',
         'gtceu:me_pattern_buffer_proxy', 'gtceu:me_pattern_buffer', 'create:andesite_alloy', 'ad_astra:desh_plate', 'botanicadds:elven_fluxfield', 'create:controller_rail', 'create:dough',
@@ -34,7 +11,10 @@ ServerEvents.recipes(event => {
         'buildinggadgets2:gadget_building', 'buildinggadgets2:gadget_destruction', 'buildinggadgets2:gadget_cut_paste', 'buildinggadgets2:gadget_copy_paste', 'buildinggadgets2:gadget_exchanging',
         'farmersdelight:pie_crust', 'create:water_wheel', 'create:large_water_wheel', 'create:brass_funnel', 'create:andesite_funnel', 'create:brass_tunnel', 'expatternprovider:assembler_matrix_frame',
         'create:andesite_tunnel', 'botania:glass_pickaxe', 'create:brass_nugget', 'minecraft:compass', 'createaddition:biomass', 'expatternprovider:assembler_matrix_wall', 'ad_extendra:b_sand',
-        'create:cogwheel', 'create:large_cogwheel',
+        'create:cogwheel', 'create:large_cogwheel', 'fluxnetworks:flux_dust', 'createaddition:biomass_pellet', 'create:zinc_nugget', 'ad_astra:photovoltaic_etrium_cell',
+        'ad_astra:photovoltaic_vesnium_cell', 'ad_astra:etrionic_capacitor', 'createaddition:electrum_ingot', 'ad_astra:iron_rod', 'ad_astra:steel_rod', 'ae2:sky_stone_tank',
+        'farmersdelight:netherite_knife', 'create:netherite_backtank', 'create:netherite_diving_helmet', 'create:netherite_diving_boots', 'minecraft:netherite_upgrade_smithing_template',
+        'ad_astra:fan', 'gtceu:cleaning_maintenance_hatch'
     ];        
 
     const toRemoveId = ['create:haunting/crimson_fungus', 'create:haunting/warped_fungus', 'create:milling/compat/ae2/sky_stone_block', 'create:milling/compat/ae2/fluix_crystal',
@@ -75,17 +55,27 @@ ServerEvents.recipes(event => {
         'minecraft:netherite_ingot', 'minecraft:netherite_scrap', 'minecraft:netherite_scrap_from_blasting', 'create:crafting/kinetics/flywheel', 'create:crafting/kinetics/mechanical_harvester',
         'create:crafting/kinetics/mechanical_mixer', 'create:crafting/kinetics/deployer', 'create:crafting/kinetics/millstone', 'create:crafting/kinetics/mechanical_mixer', 'create:crafting/kinetics/mechanical_drill',
         'create:crafting/kinetics/steam_engine', 'create:crafting/kinetics/mechanical_press', 'create:crafting/kinetics/piston_extension_pole', 'create:crafting/kinetics/mechanical_crafter', 
-        'create:crafting/kinetics/brass_hand', 'create:crafting/kinetics/hose_pulley', 'create:crafting/kinetics/rope_pulley', 'create:crafting/kinetics/elevator_pulley', 'create:crafting/appliances/chain_from_zinc'
+        'create:crafting/kinetics/brass_hand', 'create:crafting/kinetics/hose_pulley', 'create:crafting/kinetics/rope_pulley', 'create:crafting/kinetics/elevator_pulley', 'create:crafting/appliances/chain_from_zinc',
+        'farmerdelight:paper_from_tree_bark', 'create:mixing/chocolate', 'create:mixing/chocolate_melting', 'create:mixing/tea', 'create:mixing/lava_from_cobble', 'create:mixing/honey', 
+        'createaddition:mixing/electrum', 'create:milling/charcoal', 'create:milling/coal', 'create:splashing/crushed_raw_zinc', 'create:splashing/crushed_raw_copper', 'create:splashing/crushed_raw_gold',
+        'create:splashing/crushed_raw_iron', 'createaddition:crafting/electrum_block', 'ad_astra:steel_block', 
     ];
 
     const toRemoveType = ['expatternprovider:cutter', 'ae2:inscriber', 'ae2:charger', 'create:crushing', 'ad_astra:alloying', 'createaddition:liquid_burning', 'create:pressing',
-        'botania:orechid_ignem', 'botania:orechid', 'create:potion_mixing',
+        'botania:orechid_ignem', 'botania:orechid', 'create:potion_mixing', 'ad_astra:compressing', 'ad_astra:cryo_freezing', 'ad_astra:nasa_workbench', 'create:deploying',
+        'create:automatic_brewing', 'powah:heat_sources', 'functionalstorage:dissolution', 'fluxnetworks:creating_flux', 'create:mystery_conversion'
     ];
 
-    const toRemoveInput = [ 'ad_astra:moon_desh_ore', 'ad_astra:deepslate_desh_ore', 
+    const toRemoveIn = ['ad_astra:moon_desh_ore', 'ad_astra:deepslate_desh_ore', 'ad_astra:ostrum_plate', 'ad_astra:calorite_plate', 'ad_astra:desh_plate',
+        'minecraft:netherite_upgrade_smithing_template', 'ad_astra:fan'
     ];
 
-    toRemoveOutput.forEach(element => {
+    const toRemoveMod = ['createoreexcavation', 'scannable', 'storagenetwork', 'powah',
+    ];
+
+    // event.remove({mod: 'ad_astra'})
+
+    toRemoveOut.forEach(element => {
         event.remove({ output: element});
     });
 
@@ -97,9 +87,13 @@ ServerEvents.recipes(event => {
         event.remove({ type: element});
     });
 
-    toRemoveInput.forEach(element => {
+    toRemoveIn.forEach(element => {
         event.remove({ input: element})
     })
+
+    toRemoveMod.forEach(element => {
+        event.remove({ mod: element})
+    });
 
     //oddball
     event.remove({output: 'farmersdelight:wheat_dough'});
@@ -120,13 +114,5 @@ ServerEvents.recipes(event => {
     event.remove({output: /create:.*_ingot/});
     event.remove({output: /create:.*_plate/});
     event.remove({output: /create:.*_dust/});
-
-    //remove full mod recipes
-    event.remove({mod: 'createoreexcavation'})
-    event.remove({mod: 'scannable'})
-    event.remove({mod: 'storagenetwork'})
-    event.remove({mod: 'powah'})
-    event.remove({mod: 'ad_astra'})
-    
 });
 

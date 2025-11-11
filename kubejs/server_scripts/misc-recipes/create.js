@@ -375,6 +375,10 @@ ServerEvents.recipes(event => {
     event.recipes.create.crushing('2x farmersdelight:straw', 'minecraft:tall_grass')
     event.recipes.create.crushing('farmersdelight:straw', 'minecraft:grass')
 
+    event.recipes.create.milling('farmersdelight:straw', 'farmersdelight:sandy_shrub')
+    event.recipes.create.milling('2x farmersdelight:straw', 'minecraft:tall_grass')
+    event.recipes.create.milling('farmersdelight:straw', 'minecraft:grass')
+
     event.shapeless('create:speedometer', [`create:gearbox`,`minecraft:compass`])
 
     // Andesite Alloy mostly by @digestlotion
@@ -483,7 +487,7 @@ ServerEvents.recipes(event => {
         [`minecraft:gold_ingot`])
     
     event.recipes.create.pressing(
-        [`gtceu:iron_plate`],
+        [`gtceu:copper_plate`],
         [`minecraft:copper_ingot`])
 
     event.recipes.create.pressing(

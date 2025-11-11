@@ -3,6 +3,7 @@
 //items
 ServerEvents.tags('item', event => {
 event.removeAllTagsFrom('ad_astra:steel_rod')
+event.removeAllTagsFrom('ad_astra:steel_block')
 event.removeAllTagsFrom('ad_astra:steel_plate')
 event.removeAllTagsFrom('ad_astra:steel_nugget')
 event.removeAllTagsFrom('ad_astra:steel_ingot')
@@ -38,6 +39,7 @@ event.removeAllTagsFrom('createaddition:copper_rod')
 event.removeAllTagsFrom('createaddition:gold_rod')
 event.removeAllTagsFrom('createaddition:iron_rod')
 event.removeAllTagsFrom('createaddition:electrum_rod')
+event.removeAllTagsFrom('createaddition:electrum_block')
 event.removeAllTagsFrom('createaddition:brass_rod')
 event.removeAllTagsFrom('createaddition:diamond_grit')
 event.removeAllTagsFrom('createaddition:diamond_grit_sandpaper')

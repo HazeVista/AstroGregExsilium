@@ -63,22 +63,30 @@ ServerEvents.recipes(event => {
       C: 'gtceu:bronze_rod'
     });
 
+    event.shaped('2x minecraft:paper', [
+      'AAA'
+    ], {
+      A: 'farmersdelight:tree_bark'
+    });
+
+    event.shaped('ad_astra:desh_plate', [
+      'A',
+      'B',
+      'B'
+    ], {
+      A: '#forge:tools/hammers',
+      B: 'ad_astra:desh_ingot'
+    })
+
     event.recipes.gtceu.mixer('mixing_energized_steel_dust')
         .itemInputs('gtceu:desh_dust', 'gtceu:iron_dust', 'gtceu:red_alloy_dust')
         .itemOutputs('gtceu:energized_steel_dust')
         .duration(200)
         .EUt(7)
 
-    event.recipes.gtceu.forge_hammer('forge_hammer_gravel')
-        .itemInputs('minecraft:cobblestone')
-        .itemOutputs('minecraft:gravel')
-        .duration(80)
-        .EUt(7)
-
     event.recipes.gtceu.forge_hammer('forge_hammer_sand')
         .itemInputs('minecraft:gravel')
         .itemOutputs('minecraft:sand')
-        .duration(80)
-        .EUt(7)
-
+        .duration(10)
+        .EUt(16)  
 });
