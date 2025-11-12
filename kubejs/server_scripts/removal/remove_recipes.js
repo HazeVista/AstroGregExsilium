@@ -14,8 +14,8 @@ ServerEvents.recipes(event => {
         'create:cogwheel', 'create:large_cogwheel', 'fluxnetworks:flux_dust', 'createaddition:biomass_pellet', 'create:zinc_nugget', 'ad_astra:photovoltaic_etrium_cell',
         'ad_astra:photovoltaic_vesnium_cell', 'ad_astra:etrionic_capacitor', 'createaddition:electrum_ingot', 'ad_astra:iron_rod', 'ad_astra:steel_rod', 'ae2:sky_stone_tank',
         'farmersdelight:netherite_knife', 'create:netherite_backtank', 'create:netherite_diving_helmet', 'create:netherite_diving_boots', 'minecraft:netherite_upgrade_smithing_template',
-        'ad_astra:fan', 'gtceu:cleaning_maintenance_hatch'
-    ];        
+        'ad_astra:fan', 'gtceu:cleaning_maintenance_hatch', 'ad_astra:steel_ingot', 'ad_astra:ice_shard'
+    ];
 
     const toRemoveId = ['create:haunting/crimson_fungus', 'create:haunting/warped_fungus', 'create:milling/compat/ae2/sky_stone_block', 'create:milling/compat/ae2/fluix_crystal',
         'create:milling/compat/ae2/ender_pearl', 'create:milling/compat/ae2/certus_quartz', 'create:crushing/raw_platinum_ore', 'create:crushing/raw_platinum_block', 'farmersdelight:stove',
@@ -58,7 +58,7 @@ ServerEvents.recipes(event => {
         'create:crafting/kinetics/brass_hand', 'create:crafting/kinetics/hose_pulley', 'create:crafting/kinetics/rope_pulley', 'create:crafting/kinetics/elevator_pulley', 'create:crafting/appliances/chain_from_zinc',
         'farmerdelight:paper_from_tree_bark', 'create:mixing/chocolate', 'create:mixing/chocolate_melting', 'create:mixing/tea', 'create:mixing/lava_from_cobble', 'create:mixing/honey', 
         'createaddition:mixing/electrum', 'create:milling/charcoal', 'create:milling/coal', 'create:splashing/crushed_raw_zinc', 'create:splashing/crushed_raw_copper', 'create:splashing/crushed_raw_gold',
-        'create:splashing/crushed_raw_iron', 'createaddition:crafting/electrum_block', 'ad_astra:steel_block', 
+        'create:splashing/crushed_raw_iron', 'createaddition:crafting/electrum_block', 'ad_astra:steel_block', 'ad_astra:raw_desh',
     ];
 
     const toRemoveType = ['expatternprovider:cutter', 'ae2:inscriber', 'ae2:charger', 'create:crushing', 'ad_astra:alloying', 'createaddition:liquid_burning', 'create:pressing',
@@ -67,7 +67,7 @@ ServerEvents.recipes(event => {
     ];
 
     const toRemoveIn = ['ad_astra:moon_desh_ore', 'ad_astra:deepslate_desh_ore', 'ad_astra:ostrum_plate', 'ad_astra:calorite_plate', 'ad_astra:desh_plate',
-        'minecraft:netherite_upgrade_smithing_template', 'ad_astra:fan'
+        'minecraft:netherite_upgrade_smithing_template', 'ad_astra:fan', 'ad_astra:steel_ingot', 'ad_astra:ice_shard'
     ];
 
     const toRemoveMod = ['createoreexcavation', 'scannable', 'storagenetwork', 'powah',
