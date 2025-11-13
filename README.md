@@ -2,7 +2,7 @@ Thanks for checking out AstroGreg!
 
 
 
-It's your new favorite GTCEU modern 7.2.1 modpack featuring Ad Astra, Create, Botania, and many more mods.
+It's your new favorite GTCEU modern 7.2.1 modpack featuring Ad Astra, Create, Botania, and many more.
 
 
 
@@ -10,7 +10,7 @@ This pack aims to lean more towards the easier end as far as GregTech goes, but 
 
 
 
-Modpack Owned by Haze Vista. Special thanks to DriftBlueStone, DigestLotion, Wabwit, and BGame for development help.
+Modpack Owned by Haze Vista. Special thanks to DriftBlueStone, DigestLotion, Wabwit, and BGame for developing the project with me.
 
 
 
