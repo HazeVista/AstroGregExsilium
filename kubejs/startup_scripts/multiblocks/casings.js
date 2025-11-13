@@ -4,10 +4,12 @@ StartupEvents.registry('block', event => {
         .displayName('Futura Casing')
         .hardness(5)
         .resistance(1)
-        .soundType('stone')
+        .soundType('copper')
         .requiresTool(true)
         .tagBlock('mineable/pickaxe')
+        .tagBlock('mineable/wrench')
         .tagBlock('minecraft:needs_iron_tool')
-        .textureAll('kubejs:block/casings/futura_assembler_casing');
-
+        .textureAll('kubejs:block/casings/futura_assembler_casing')
+		.fullBlock(true)
+		.opaque(true);
 })
