@@ -20,5 +20,5 @@ Slightly inspired by Astroblock, TerraFirmaGreg, and Pre-Eta Star Technology
 
 For sneak peaks, questions, or just to chat about the project and its development:
 
-https://discord.gg/RkKb3xUY
+https://discord.gg/dUaZeV6Drp
 
