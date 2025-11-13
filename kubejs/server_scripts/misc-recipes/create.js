@@ -374,15 +374,24 @@ ServerEvents.recipes(event => {
     event.recipes.create.crushing('farmersdelight:straw', 'farmersdelight:sandy_shrub')
     event.recipes.create.crushing('2x farmersdelight:straw', 'minecraft:tall_grass')
     event.recipes.create.crushing('farmersdelight:straw', 'minecraft:grass')
+    event.recipes.create.crushing('kubejs:cobbled_asteroid_stone', 'kubejs:asteroid_stone')
+    event.recipes.create.crushing('kubejs:asteroid_stone', 'kubejs:hard_asteroid_stone')
+    event.recipes.create.crushing('kubejs:asteroid_gravel', 'kubejs:cobbled_asteroid_stone')
 
     event.recipes.create.milling('farmersdelight:straw', 'farmersdelight:sandy_shrub')
     event.recipes.create.milling('2x farmersdelight:straw', 'minecraft:tall_grass')
     event.recipes.create.milling('farmersdelight:straw', 'minecraft:grass')
+    event.recipes.create.milling('kubejs:cobbled_asteroid_stone', 'kubejs:asteroid_stone')
+    event.recipes.create.milling('kubejs:asteroid_stone', 'kubejs:hard_asteroid_stone')
+    event.recipes.create.milling('kubejs:asteroid_gravel', 'kubejs:cobbled_asteroid_stone')
+    event.recipes.create.milling(['minecraft:sand', Item.of('minecraft:flint').withChance(0.2), Item.of('minecraft:clay_ball').withChance(0.1)], 'minecraft:gravel')
+    event.recipes.create.milling(['kubejs:asteroid_sand', Item.of('minecraft:flint').withChance(0.2), Item.of('minecraft:clay_ball').withChance(0.1)], 'kubejs:asteroid_gravel')
 
     event.shapeless('create:speedometer', [`create:gearbox`,`minecraft:compass`])
 
     // Andesite Alloy mostly by @digestlotion
-    event.shapeless('2x gtceu:andesite_dust', ['gtceu:stone_dust', 'gtceu:quartz_dust'])
+    event.shapeless('2x gtceu:andesite_dust', ['gtceu:stone_dust', 'gtceu:nether_quartz_dust'])
+    event.shapeless('2x gtceu:andesite_dust', ['gtceu:stone_dust', 'gtceu:quartz_sand_dust'])
     event.shapeless('1x gtceu:andesite_alloy_dust', ['gtceu:andesite_dust', 'gtceu:iron_dust'])
     event.shapeless('2x create:shaft', ['create:andesite_alloy', '#forge:tools/files'])
     event.smelting('1x create:andesite_alloy', 'gtceu:andesite_alloy_dust')
@@ -451,7 +460,7 @@ ServerEvents.recipes(event => {
     event.recipes.create.mixing('4x gtceu:brass_ingot', ['3x minecraft:copper_ingot', 'gtceu:zinc_dust']).heatRequirement('lowheated')
     event.recipes.create.mixing('4x gtceu:brass_ingot', ['3x gtceu:copper_dust', 'gtceu:zinc_dust']).heatRequirement('lowheated')
 
-    event.recipes.create.mixing('1x gtceu:red_alloy_ingot', ['4x minecraft:redstone', 'gtceu:copper_ingot']).heatRequirement('lowheated')
+    event.recipes.create.mixing('1x gtceu:red_alloy_ingot', ['4x minecraft:redstone', 'minecraft:copper_ingot']).heatRequirement('lowheated')
     event.recipes.create.mixing('1x gtceu:red_alloy_ingot', ['4x minecraft:redstone', 'gtceu:copper_dust']).heatRequirement('lowheated')
 
     event.recipes.create.mixing('3x powah:steel_energized', ['gtceu:red_alloy_dust', 'ad_astra:desh_ingot', 'minecraft:iron_ingot']).heatRequirement('lowheated')

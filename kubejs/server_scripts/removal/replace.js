@@ -11,10 +11,12 @@ ServerEvents.recipes(event => {
     event.replaceInput({input: 'gtceu:desh_nugget'}, 'gtceu:desh_nugget', 'ad_astra:desh_nugget')
     event.replaceInput({input: 'gtceu:desh_ingot'}, 'gtceu:desh_ingot', 'ad_astra:desh_ingot')
     event.replaceInput({input: 'gtceu:desh_block'}, 'gtceu:desh_block', 'ad_astra:desh_block')
-    event.replaceInput({input: 'gtceu:steel_rod'}, 'gtceu:steel_rod', 'ad_astra:steel_rod')
-    event.replaceInput({input: 'gtceu:iron_rod'}, 'gtceu:iron_rod', 'ad_astra:iron_rod')
     event.replaceInput({input: 'gtceu:raw_desh'}, 'gtceu:raw_desh', 'ad_astra:raw_desh')
     event.replaceInput({input: 'gtceu:raw_desh_block'}, 'gtceu:raw_desh_block', 'ad_astra:raw_desh_block')
+    event.replaceInput({}, 'ad_astra:steel_rod', 'gtceu:steel_rod')
+    event.replaceInput({}, 'ad_astra:iron_rod', 'gtceu:iron_rod')
+    event.replaceInput({}, 'minecraft:gravel', '#forge:gravel')
+    event.replaceInput({}, 'minecraft:sand', '#forge:sand')
 
     //output
     event.replaceOutput({output: 'gtceu:desh_nugget'}, 'gtceu:desh_nugget', 'ad_astra:desh_nugget')

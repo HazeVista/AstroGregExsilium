@@ -5,7 +5,7 @@ ServerEvents.recipes(event => {
         'DED'
     ], {
         A: 'gtceu:gravitation_engine_unit',
-        B: 'gtceu:exquisite_sapphire',
+        B: 'gtceu:exquisite_sapphire_gem',
         C: '#gtceu:circuits/ev',
         D: 'gtceu:mv_field_generator',
         E: 'gtceu:hv_machine_hull'

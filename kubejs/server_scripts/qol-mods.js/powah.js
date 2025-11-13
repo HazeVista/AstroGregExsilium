@@ -188,6 +188,8 @@ ServerEvents.recipes(event => {
         .notConsumable('gtceu:block_casting_mold')
         .inputFluids('gtceu:carbon_dioxide 1296')
         .itemOutputs('powah:dry_ice')
+        .duration(100)
+        .EUt(120)
 
     //capacitors
     event.shaped('4x powah:capacitor_basic', [
@@ -316,7 +318,6 @@ ServerEvents.recipes(event => {
     //     D: 'gtceu:_single_wire'
     // })
 
-    
     // event.shaped('powah:battery_nitro', [
     //     'BAB',
     //     'CDC',

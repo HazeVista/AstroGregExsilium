@@ -18,6 +18,11 @@ ServerEvents.recipes(event => {
   event.campfireCooking('minecraft:glass', 'gtceu:glass_dust', 0, 160)
   event.campfireCooking('gtceu:wrought_iron_ingot', 'minecraft:iron_ingot', 0, 160)
 
+  event.smelting('kubejs:asteroid_stone', 'kubejs:cobbled_asteroid_stone')
+  event.smelting('kubejs:polished_asteroid_stone', 'kubejs:asteroid_stone')
+  event.smelting('minecraft:glass', 'gtceu:glass_dust')
+
+
   event.recipes.farmersdelight.cooking(
     ['gtceu:raw_rubber_dust', 'gtceu:raw_rubber_dust', 'gtceu:raw_rubber_dust', 'gtceu:sulfur_dust'],
     'gtceu:rubber_ingot',
@@ -89,4 +94,28 @@ ServerEvents.recipes(event => {
         .itemOutputs('minecraft:sand')
         .duration(10)
         .EUt(16)  
+
+    event.recipes.gtceu.forge_hammer('forge_hammer_asteroid_sand')
+        .itemInputs('kubejs:asteroid_gravel')
+        .itemOutputs('kubejs:asteroid_sand')
+        .duration(10)
+        .EUt(16)
+
+    event.recipes.gtceu.forge_hammer('forge_hammer_asteroid_gravel')
+        .itemInputs('kubejs:cobbled_asteroid_stone')
+        .itemOutputs('kubejs:asteroid_gravel')
+        .duration(10)
+        .EUt(16)
+
+    event.recipes.gtceu.forge_hammer('forge_hammer_asteroid_cobble')
+        .itemInputs('kubejs:asteroid_stone')
+        .itemOutputs('kubejs:cobbled_asteroid_stone')
+        .duration(10)
+        .EUt(16)
+
+    event.recipes.gtceu.forge_hammer('forge_hammer_asteroid_stone')
+        .itemInputs('kubejs:hard_asteroid_stone')
+        .itemOutputs('kubejs:asteroid_stone')
+        .duration(10)
+        .EUt(16)
 });
