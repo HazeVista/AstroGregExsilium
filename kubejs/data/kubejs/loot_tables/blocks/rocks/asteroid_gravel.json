@@ -10,7 +10,7 @@
           "children": [
             {
               "type": "minecraft:item",
-              "name": "kubejs:rocks/gravel_asteroid",
+              "name": "kubejs:asteroid_gravel",
               "conditions": [
                 {
                   "condition": "minecraft:match_tool",
@@ -48,7 +48,7 @@
                 },
                 {
                   "type": "minecraft:item",
-                  "name": "kubejs:rocks/gravel_asteroid"
+                  "name": "kubejs:asteroid_gravel"
                 }
               ],
               "conditions": [

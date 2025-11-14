@@ -1,5 +1,14 @@
 ServerEvents.recipes(event => {
 
+  event.shaped('minecraft:shears', [
+    'AB ',
+    'BC '
+  ], {
+    A: '#forge:tools/hammers',
+    B: 'gtceu:iron_plate',
+    C: '#forge:tools/files'
+  })
+
   event.shaped('gtceu:rubber_plate', [
     'A',
     'B',
@@ -19,7 +28,7 @@ ServerEvents.recipes(event => {
   event.campfireCooking('gtceu:wrought_iron_ingot', 'minecraft:iron_ingot', 0, 160)
 
   event.smelting('kubejs:asteroid_stone', 'kubejs:cobbled_asteroid_stone')
-  event.smelting('kubejs:polished_asteroid_stone', 'kubejs:asteroid_stone')
+  event.smelting('kubejs:smooth_asteroid_stone', 'kubejs:asteroid_stone')
   event.smelting('minecraft:glass', 'gtceu:glass_dust')
 
 
@@ -89,9 +98,23 @@ ServerEvents.recipes(event => {
         .duration(200)
         .EUt(7)
 
+
+    //stone crushing recipes    
+    event.recipes.farmersdelight.cutting('minecraft:cobblestone', '#forge:tools/hammers', 'minecraft:gravel')
+    event.recipes.farmersdelight.cutting('kubejs:cobbled_asteroid_stone', '#forge:tools/pickaxes', 'kubejs:asteroid_gravel')
+    event.recipes.farmersdelight.cutting('kubejs:asteroid_stone', '#forge:tools/pickaxes', 'kubejs:cobbled_asteroid_stone')
+    event.recipes.farmersdelight.cutting('kubejs:asteroid_gravel', '#forge:tools/hammers', ['kubejs:asteroid_sand', Item.of('minecraft:flint').withChance(0.2)])
+    event.recipes.farmersdelight.cutting('minecraft:gravel', '#forge:tools/hammers', ['minecraft:sand', Item.of('minecraft:flint').withChance(0.2)])
+
     event.recipes.gtceu.forge_hammer('forge_hammer_sand')
         .itemInputs('minecraft:gravel')
         .itemOutputs('minecraft:sand')
+        .duration(10)
+        .EUt(16)  
+
+    event.recipes.gtceu.forge_hammer('forge_hammer_gravel')
+        .itemInputs('minecraft:cobblestone')
+        .itemOutputs('minecraft:gravel')
         .duration(10)
         .EUt(16)  
 
@@ -100,6 +123,19 @@ ServerEvents.recipes(event => {
         .itemOutputs('kubejs:asteroid_sand')
         .duration(10)
         .EUt(16)
+
+    event.recipes.gtceu.macerator('macerator_asteroid_flint')
+        .itemInputs('kubejs:asteroid_gravel')
+        .itemOutputs('gtceu:asteroid_stone_dust')
+        .chancedOutput('minecraft:flint', 3300, 0)
+        .duration(400)
+        .EUt(2)
+
+    event.recipes.gtceu.macerator('macerator_asteroid_quartz_sand')
+        .itemInputs('kubejs:asteroid_sand')
+        .itemOutputs('gtceu:quartz_sand_dust')
+        .duration(30)
+        .EUt(2)
 
     event.recipes.gtceu.forge_hammer('forge_hammer_asteroid_gravel')
         .itemInputs('kubejs:cobbled_asteroid_stone')
@@ -118,4 +154,130 @@ ServerEvents.recipes(event => {
         .itemOutputs('kubejs:asteroid_stone')
         .duration(10)
         .EUt(16)
+
+    event.recipes.gtceu.macerator('macerator_asteroid_dust')
+        .itemInputs('kubejs:hard_asteroid_stone')
+        .itemOutputs('gtceu:asteroid_stone_dust')
+        .duration(98)
+        .EUt(2)
+
+    event.recipes.gtceu.macerator('macerator_asteroid_dust_1')
+        .itemInputs('kubejs:asteroid_stone')
+        .itemOutputs('gtceu:asteroid_stone_dust')
+        .duration(98)
+        .EUt(2)
+
+    event.recipes.gtceu.macerator('macerator_asteroid_dust_2')
+        .itemInputs('kubejs:smooth_asteroid_stone')
+        .itemOutputs('gtceu:asteroid_stone_dust')
+        .duration(98)
+        .EUt(2)
+
+    event.recipes.gtceu.macerator('macerator_asteroid_dust_3')
+        .itemInputs('kubejs:cobbled_asteroid_stone')
+        .itemOutputs('gtceu:asteroid_stone_dust')
+        .duration(98)
+        .EUt(2)
+
+    event.shaped('minecraft:gravel', [
+      'A',
+      'B'
+    ], {
+      A: '#forge:tools/hammers',
+      B: 'minecraft:cobblestone'
+    })    
+
+    event.shaped('minecraft:sand', [
+      'A',
+      'B'
+    ], {
+      A: '#forge:tools/hammers',
+      B: 'minecraft:gravel'
+    })  
+    
+    event.shaped('kubejs:asteroid_gravel', [
+      'A',
+      'B'
+    ], {
+      A: '#forge:tools/hammers',
+      B: 'kubejs:cobbled_asteroid_stone'
+    })    
+
+    event.shaped('kubejs:asteroid_sand', [
+      'A',
+      'B'
+    ], {
+      A: '#forge:tools/hammers',
+      B: 'kubejs:asteroid_gravel'
+    }) 
+
+    event.shaped('gtceu:quartz_sand_dust', [
+      'A',
+      'B'
+    ], {
+      B: '#forge:tools/mortars',
+      A: 'kubejs:asteroid_gravel'
+    }) 
+
+    event.recipes.gtceu.rock_breaker('rock_dupe_asteroid_hard')
+      .notConsumable('kubejs:hard_asteroid_stone')
+      .itemOutputs('kubejs:hard_asteroid_stone')
+      .adjacentFluids('minecraft:water')
+      .adjacentFluids('minecraft:lava')
+      .duration(16)
+      .EUt(30)
+
+    event.recipes.gtceu.rock_breaker('rock_dupe_asteroid_cobble')
+      .notConsumable('kubejs:cobbled_asteroid_stone')
+      .itemOutputs('kubejs:cobbled_asteroid_stone')
+      .adjacentFluids('minecraft:water')
+      .adjacentFluids('minecraft:lava')
+      .duration(16)
+      .EUt(30)
+
+    event.recipes.gtceu.rock_breaker('rock_dupe_asteroid_stone')
+      .notConsumable('kubejs:asteroid_stone')
+      .itemOutputs('kubejs:asteroid_stone')
+      .adjacentFluids('minecraft:water')
+      .adjacentFluids('minecraft:lava')
+      .duration(16)
+      .EUt(30)
+
+    //clay, fireclay, and coke brick recipes
+    event.shaped(Item.of('8x gtceu:compressed_fireclay'), [
+        'AAA',
+        'ABA',
+        'AAA'
+    ], {
+        'A': 'gtceu:fireclay_dust',
+        'B': 'gtceu:brick_wooden_form'
+    }).keepIngredient('gtceu:brick_wooden_form')
+
+    event.shaped('4x minecraft:clay', [
+      'BBB',
+      'BAB',
+      'BBB'
+    ], {
+      A: 'minecraft:water_bucket',
+      B: 'minecraft:sand'
+    }).replaceIngredient('minecraft:water_bucket', 'minecraft:bucket')
+
+    event.shaped('4x minecraft:clay', [
+      'BBB',
+      'BAB',
+      'BBB'
+    ], {
+      A: 'minecraft:water_bucket',
+      B: 'kubejs:asteroid_sand'
+    }).replaceIngredient('minecraft:water_bucket', 'minecraft:bucket')
+
+    event.recipes.create.pressing('gtceu:compressed_fireclay', 'gtceu:fireclay_dust')
+
+    event.recipes.farmersdelight.cutting('#forge:sand', '#forge:tools/shovels', ['minecraft:clay_ball', 'minecraft:clay_ball'])
+
+    event.campfireCooking('minecraft:brick', 'minecraft:clay_ball', 0, 80)
+    event.campfireCooking('gtceu:firebrick', 'gtceu:compressed_fireclay', 0, 80)
+    event.campfireCooking('gtceu:coke_oven_brick', 'gtceu:compressed_coke_clay', 0, 80)
+
+
 });

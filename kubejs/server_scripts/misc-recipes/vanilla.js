@@ -10,14 +10,6 @@ ServerEvents.recipes(event => {
         C: 'minecraft:piston'
     });
 
-    event.shaped('minecraft:shears', [
-        ' A ',
-        'AB '
-    ], {
-        A: 'gtceu:iron_plate',
-        B: '#forge:tools/hammers'
-    });
-
     event.shaped('minecraft:elytra', [
         'BCB',
         'ADA',

@@ -1,4 +1,4 @@
-# Ignore eveything so repository can be used in game instance
+# Ignore everything so repository can be used in game instance
 /*
 
 # Add directories with soure code
@@ -17,7 +17,12 @@
 !README.md
 
 # Specific exclusion
-defaultconfigs/*
+defaultconfigs/ftbchunks
+defaultconfigs/ftblibrary
+defaultconfigs/ftbquests
+defaultconfigs/ftbultimine
+defaultconfigs/ftbxmodcompat
+defaultconfigs/ftbessentials-server.snbt
 config/ae2/*
 config/craftingtweaks/*
 config/functionalstorage/*

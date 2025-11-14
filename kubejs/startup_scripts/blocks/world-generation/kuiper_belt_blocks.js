@@ -24,7 +24,7 @@ StartupEvents.registry('block', event => {
         .mapColor('terracotta_purple' )
         .tagBlock('forge:asteroid_stone')
         .tagBlock('mineable/pickaxe')
-        .textureAll('kubejs:block/rocks/polished_asteroid_stone')
+        .textureAll('kubejs:block/rocks/hard_asteroid_stone')
 		.fullBlock(true)
 		.opaque(true);
 
@@ -60,16 +60,15 @@ StartupEvents.registry('block', event => {
         .resistance(0.8)
         .soundType('stone')
         .requiresTool(true)
-        .tagBoth('forge:cobblestone')
-        .tagBoth('forge:cobblestone/normal')
+        .tagBoth('minecraft:stone_tool_materials')
         .mapColor('terracotta_purple' )
         .tagBlock('mineable/pickaxe')
         .textureAll('kubejs:block/rocks/cobbled_asteroid_stone')
 		.fullBlock(true)
 		.opaque(true);
 
-    event.create('polished_asteroid_stone')
-        .displayName('Polished Asteroid Stone')
+    event.create('smooth_asteroid_stone')
+        .displayName('Smooth Asteroid Stone')
         .hardness(0.8)
         .resistance(0.8)
         .soundType('stone')

@@ -74,9 +74,3 @@ event.removeAllTagsFrom('ad_astra:fuel')
 event.remove('create:bottomless/allow', 'minecraft:lava')
 event.remove('create:bottomless/allow', 'minecraft:water')
 });
-
-
-//new tags
-ServerEvents.tags('item', event => {
-event.add('forge:asteroid_stone', 'kubejs:asteroid_stone', 'kubejs:hard_asteroid_stone')
-})

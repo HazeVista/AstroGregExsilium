@@ -1,10 +1,11 @@
-//credit to @trulyno and the Star Technology team for this beautiful code and extra periodic elements
+//credit to @trulyno and the Star Technology team for the builder code
 // Ignore this
 const $IngotProperty = global.IngotProperty;
 const $DustProperty = global.DustProperty;
 const $FluidProperty = global.FluidProperty;
 const $BlastProperty = global.BlastProperty;
 const $FluidPipeProperties = global.FluidPipeProperties;
+const $PropertyKey = global.PropertyKey
 
 // Icon Sets
 const DULL = GTMaterialIconSet.DULL;
@@ -112,6 +113,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     // Periodic table materials
     const element = global.periodicTableElement;
     // Ingots
+    element('neptunium', 'ingot')
     element('zirconium', 'ingot');
     element('tellurium', 'ingot');
     element('polonium', 'ingot');
@@ -129,10 +131,9 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     // Liquids
     element('seaborgium', 'fluid');
     element('flerovium', 'fluid');
+    element('neptunium', 'fluid')
 
     // Gasses
-
-    // periodicTableElement('iodine', 'gas');
     element('oganesson', 'gas');
 
     //Plasmas
@@ -282,31 +283,25 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
         event.create(name).ingot().plasma().components(elements).color(color).iconSet(icon).flags(flags).blastTemp(blasting[0], blasting[1], blasting[2], blasting[3]).cableProperties(cable[0], cable[1], cable[2], cable[3]);
     }
 
-    //create
+    //dusts
     compDust('andesite_alloy', ['1x andesite', '1x iron'], 0xa6a08f, [centrifuge]);
-
-    //ad astra & ad extendrum
-    compDustOreIngot('desh', ['1x desh'], 0xD38B4C, [])
+    compDust('asteroid_stone', [], 0x70276b, [])
+    compDustOreIngot('desh', [/*'1x desh'*/], 0xD38B4C, [])
 
     //superconductors
     conductorSuper('energized_steel', [], 0xbaa172, [], [V('lv'), 4, 0, true], [150, 130, 3, 12000]);
-
-    conductorSuper('blazing_ostrum', [], 0x8ee8ed, [1700, 'low', VA('mv'), 1200], [V('mv'), 16, 0, true], [190, 150, 3, 14000]);
-
+    conductorSuper('blazing_ostrum', [], 0x8ee8ed, [1700, 'low', VA('mv'), 1200], [V('mv'), 8, 0, true], [190, 150, 3, 14000]);
     conductorSuper('niotic_calorite', [], 0xe4eb60, [1700, 'low', VA('hv'), 1500], [V('hv'), 16, 0, true], [220, 170, 3, 16000]);
-
-    conductorSuper('spirited_uranium', [], 0xcb74cc, [3500, 'low', VA('ev'), 1800], [V('ev'), 32, 0, true], [300, 190, 3, 18000]);
-
-    conductorSuper('nitromangaphosphide', [], 0x110c9c, [4400, 'mid', VA('iv'), 2100], [V('iv'), 64, 0, true], [450, 220, 3, 20000]);
-
-    conductorSuper('juperiosaturlytide', [], 0xf66999, [5300, 'mid', VA('luv'), 2400], [V('luv'), 64, 0, true], [700, 260, 3, 24000]);
-
-    conductorSuper('gaiaforged_naquadah', [], 0x421218, [7100, 'high', VA('zpm'), 2700], [V('zpm'), 96, 0, true], [1100, 380, 3, 32000]);
-
-    conductorSuper('neptunium_molybdenum_selenide', [], 0x088a5c, [10000, 'higher', VA('uv'), 3000], [V('uv'), 128, 0, true], [2000, 550, 3, 48000]);
-
-    // conductorSuper('', [], 0xccffff, [10799, 'highest', VA('uhv'), 3300], [V('uhv'), 192, 0, true], [3200, 660, 3, 96000]);
+    conductorSuper('spirited_uranium', [], 0xcb74cc, [3500, 'low', VA('ev'), 1800], [V('ev'), 24, 0, true], [300, 190, 3, 18000]);
+    conductorSuper('nitromangaphosphide', [], 0x110c9c, [4400, 'mid', VA('iv'), 2100], [V('iv'), 32, 0, true], [450, 220, 3, 20000]);
+    conductorSuper('juperiosaturlytide', [], 0xf66999, [5300, 'mid', VA('luv'), 2400], [V('luv'), 48, 0, true], [700, 260, 3, 24000]);
+    conductorSuper('gaiaforged_naquadah', [], 0x421218, [7100, 'high', VA('zpm'), 2700], [V('zpm'), 64, 0, true], [1100, 380, 3, 32000]);
+    conductorSuper('neptunium_molybdenum_selenide', [], 0x088a5c, [10000, 'higher', VA('uv'), 3000], [V('uv'), 96, 0, true], [2000, 550, 3, 48000]);
+    // conductorSuper('', [], 0xccffff, [10799, 'highest', VA('uhv'), 3300], [V('uhv'), 128, 0, true], [3200, 660, 3, 96000]);
 
     //AE2
     compIngotLiquidSeccolor('futura_alloy', ['4x stainless_steel', '1x mystery'], 0xebb7ea, 0x000000, SHINY, [1700, 'low', 400, 1200], [frame, plates, rod, dense_plate, centrifuge, mortar_grind, block])
+
+    //GTMat Modifications
+    // GTMaterials.Neptunium.setProperty($PropertyKey.INGOT, new $IngotProperty().iconSet(SHINY))
 });
