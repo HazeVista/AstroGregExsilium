@@ -19,5 +19,5 @@
 	#Range: > 1
 	fanSpeedRequired = 256
 	#Fan direction preference.
-	fanHorizontalOnly = true
+	fanHorizontalOnly = false
 

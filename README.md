@@ -1,20 +1,25 @@
-Thanks for checking out AstroGreg! 
+Thanks for checking out AstroGreg, the revolutionized SpaceBlock modpack!
 
 
 
-It's your new favorite GTCEU modern 7.2.1 modpack featuring Ad Astra, Create, Botania, and many more.
+AstroGreg is a unique 1.20 “SpaceBlock” modpack built around space travel and GTCEu progression.
 
 
 
-This pack aims to lean more towards the easier end as far as GregTech goes, but it's an intermediate modpack overall.
+Start off stranded in the kuiper belt with sparse resources and work your way up out of the Milky Way through carefully thought out progression!
 
 
 
+Progression primarily incorporates overhauled Ad Astra space travel and the classic GTCEu journey to bring you a high quality modpack experience.
+
+
+
+Its an easier difficulty GregTech pack, but it's an intermediate modpack overall.
+
+
+Credits:
 Modpack Owned by Haze Vista. Special thanks to DriftBlueStone, DigestLotion, Wabwit, and BGame for developing the project with me.
-
-
-
-Slightly inspired by Astroblock, TerraFirmaGreg, and Pre-Eta Star Technology
+Used TerraFirmaGreg and Star Technology code on a few files; credited on the files themselves.
 
 
 

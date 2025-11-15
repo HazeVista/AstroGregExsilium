@@ -55,7 +55,6 @@ config/fml*
 config/forge-client*
 config/framedblocks-client*
 config/framedblocks-common*
-config/gtceu*
 config/guideme*
 config/inventoryessentials-common*
 config/invtweaks-client*

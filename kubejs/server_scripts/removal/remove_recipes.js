@@ -15,7 +15,7 @@ ServerEvents.recipes(event => {
         'ad_astra:photovoltaic_vesnium_cell', 'ad_astra:etrionic_capacitor', 'createaddition:electrum_ingot', 'ad_astra:iron_rod', 'ad_astra:steel_rod', 'ae2:sky_stone_tank',
         'farmersdelight:netherite_knife', 'create:netherite_backtank', 'create:netherite_diving_helmet', 'create:netherite_diving_boots', 'minecraft:netherite_upgrade_smithing_template',
         'ad_astra:fan', 'gtceu:cleaning_maintenance_hatch', 'ad_astra:steel_ingot', 'ad_astra:ice_shard', 'ad_astra:reinforced_door', 'ad_astra:ice_charge', 'gtceu:gravitation_engine_unit',
-        'gtceu:solar_panel', 'minecraft:shears'
+        'gtceu:solar_panel', 'create:red_sand_paper', 'constructionwand:infinity_wand',
     ]
 
     const toRemoveId = ['create:haunting/crimson_fungus', 'create:haunting/warped_fungus', 'create:milling/compat/ae2/sky_stone_block', 'create:milling/compat/ae2/fluix_crystal',
@@ -51,8 +51,7 @@ ServerEvents.recipes(event => {
         'megacells:cells/standard/fluid_storage_cell_64m', 'megacells:cells/standard/fluid_storage_cell_4m', 'megacells:cells/standard/fluid_storage_cell_16m', 'megacells:cells/standard/fluid_storage_cell_256m', 
         'megacells:cells/standard/fluid_storage_cell_1m', 'megacells:cells/standard/item_storage_cell_64m', 'megacells:cells/standard/item_storage_cell_4m', 'megacells:cells/standard/item_storage_cell_16m', 
         'megacells:cells/standard/item_storage_cell_256m', 'megacells:cells/standard/item_storage_cell_1m', 'megacells:cells/mega_fluid_cell_housing', 'megacells:cells/mega_item_cell_housing', 
-        'megacells:cells/cell_component_1m', 'megacells:cells/cell_component_4m', 'megacells:cells/cell_component_16m', 'fluxnetworks:fluxcore', 'fluxnetworks:fluxconfigurator', 'fluxnetworks:fluxblock', 
-        'fluxnetworks:fluxcontroller', 'fluxnetworks:basicfluxstorage', 'fluxnetworks:herculeanfluxstorage', 'fluxnetworks:gargantuanfluxstorage', 'minecraft:shears', 'minecraft:ender_eye', 'minecraft:end_crystal', 
+        'megacells:cells/cell_component_1m', 'megacells:cells/cell_component_4m', 'megacells:cells/cell_component_16m', 'minecraft:shears', 'minecraft:ender_eye', 'minecraft:end_crystal', 
         'minecraft:netherite_ingot', 'minecraft:netherite_scrap', 'minecraft:netherite_scrap_from_blasting', 'create:crafting/kinetics/flywheel', 'create:crafting/kinetics/mechanical_harvester',
         'create:crafting/kinetics/mechanical_mixer', 'create:crafting/kinetics/deployer', 'create:crafting/kinetics/millstone', 'create:crafting/kinetics/mechanical_mixer', 'create:crafting/kinetics/mechanical_drill',
         'create:crafting/kinetics/steam_engine', 'create:crafting/kinetics/mechanical_press', 'create:crafting/kinetics/piston_extension_pole', 'create:crafting/kinetics/mechanical_crafter', 
@@ -60,19 +59,20 @@ ServerEvents.recipes(event => {
         'farmerdelight:paper_from_tree_bark', 'create:mixing/chocolate', 'create:mixing/chocolate_melting', 'create:mixing/tea', 'create:mixing/lava_from_cobble', 'create:mixing/honey', 
         'createaddition:mixing/electrum', 'create:milling/charcoal', 'create:milling/coal', 'create:splashing/crushed_raw_zinc', 'create:splashing/crushed_raw_copper', 'create:splashing/crushed_raw_gold',
         'create:splashing/crushed_raw_iron', 'createaddition:crafting/electrum_block', 'ad_astra:steel_block', 'ad_astra:raw_desh', 'farmersdelight:cutting/gravel', 'gtceu:forge_hammer/gravel_to_sand',
-        'create:milling/gravel', 'gtceu:forge_hammer/cobblestone_to_gravel'
+        'create:milling/gravel', 'gtceu:forge_hammer/cobblestone_to_gravel', 'gtceu:macerator/gravel_to_flint', 'create:splashing/sand', 'create:splashing/red_sand', 'minecraft:pumpkin_pie',
+        'minecraft:cookie', 'minecraft:bread',
     ];
 
     const toRemoveType = ['expatternprovider:cutter', 'ae2:inscriber', 'ae2:charger', 'create:crushing', 'ad_astra:alloying', 'createaddition:liquid_burning', 'create:pressing',
         'botania:orechid_ignem', 'botania:orechid', 'create:potion_mixing', 'ad_astra:compressing', 'ad_astra:cryo_freezing', 'ad_astra:nasa_workbench', 'create:deploying',
-        'create:automatic_brewing', 'powah:heat_sources', 'functionalstorage:dissolution', 'fluxnetworks:creating_flux', 'create:mystery_conversion'
+        'create:automatic_brewing', 'powah:heat_sources', 'functionalstorage:dissolution', 'create:mystery_conversion'
     ];
 
     const toRemoveIn = ['ad_astra:moon_desh_ore', 'ad_astra:deepslate_desh_ore', 'ad_astra:ostrum_plate', 'ad_astra:calorite_plate', 'ad_astra:desh_plate',
         'minecraft:netherite_upgrade_smithing_template', 'ad_astra:fan', 'ad_astra:steel_ingot', 'ad_astra:ice_shard'
     ];
 
-    const toRemoveMod = ['createoreexcavation', 'scannable', 'storagenetwork', 'powah',
+    const toRemoveMod = ['createoreexcavation', 'scannable', 'storagenetwork', 'powah', 'grapplemod', 'fluxnetworks'
     ];
 
     // event.remove({mod: 'ad_astra'})
@@ -117,6 +117,5 @@ ServerEvents.recipes(event => {
     event.remove({output: /create:.*_ingot/});
     event.remove({output: /create:.*_plate/});
     event.remove({output: /create:.*_dust/});
-    event.remove({id: /create:potion_mixing_vanilla_*/});
 });
 

@@ -131,10 +131,11 @@ ServerEvents.recipes(event => {
         .duration(400)
         .EUt(2)
 
-    event.recipes.gtceu.macerator('macerator_asteroid_quartz_sand')
-        .itemInputs('kubejs:asteroid_sand')
-        .itemOutputs('gtceu:quartz_sand_dust')
-        .duration(30)
+    event.recipes.gtceu.macerator('macerator_flint')
+        .itemInputs('minecraft:gravel')
+        .itemOutputs('gtceu:stone_dust')
+        .chancedOutput('minecraft:flint', 3300, 0)
+        .duration(400)
         .EUt(2)
 
     event.recipes.gtceu.forge_hammer('forge_hammer_asteroid_gravel')
@@ -211,37 +212,34 @@ ServerEvents.recipes(event => {
       B: 'kubejs:asteroid_gravel'
     }) 
 
-    event.shaped('gtceu:quartz_sand_dust', [
-      'A',
-      'B'
+    event.shaped('kubejs:hard_asteroid_stone', [
+      'AA ',
+      'AA '
     ], {
-      B: '#forge:tools/mortars',
-      A: 'kubejs:asteroid_gravel'
-    }) 
+      A: 'kubejs:asteroid_stone'
+    })
 
     event.recipes.gtceu.rock_breaker('rock_dupe_asteroid_hard')
       .notConsumable('kubejs:hard_asteroid_stone')
       .itemOutputs('kubejs:hard_asteroid_stone')
-      .adjacentFluids('minecraft:water')
-      .adjacentFluids('minecraft:lava')
+      .adjacentFluids('minecraft:water', 'minecraft:lava')
       .duration(16)
-      .EUt(30)
+      .EUt(7)
 
     event.recipes.gtceu.rock_breaker('rock_dupe_asteroid_cobble')
       .notConsumable('kubejs:cobbled_asteroid_stone')
       .itemOutputs('kubejs:cobbled_asteroid_stone')
-      .adjacentFluids('minecraft:water')
-      .adjacentFluids('minecraft:lava')
+      .adjacentFluids('minecraft:water', 'minecraft:lava')
       .duration(16)
-      .EUt(30)
+      .EUt(7)
 
     event.recipes.gtceu.rock_breaker('rock_dupe_asteroid_stone')
       .notConsumable('kubejs:asteroid_stone')
-      .itemOutputs('kubejs:asteroid_stone')
-      .adjacentFluids('minecraft:water')
-      .adjacentFluids('minecraft:lava')
+      .itemOutputs('kubejs:asteroid_stone')      
+      .adjacentFluids('minecraft:water', 'minecraft:lava')
       .duration(16)
-      .EUt(30)
+      .EUt(7)
+
 
     //clay, fireclay, and coke brick recipes
     event.shaped(Item.of('8x gtceu:compressed_fireclay'), [
@@ -259,16 +257,7 @@ ServerEvents.recipes(event => {
       'BBB'
     ], {
       A: 'minecraft:water_bucket',
-      B: 'minecraft:sand'
-    }).replaceIngredient('minecraft:water_bucket', 'minecraft:bucket')
-
-    event.shaped('4x minecraft:clay', [
-      'BBB',
-      'BAB',
-      'BBB'
-    ], {
-      A: 'minecraft:water_bucket',
-      B: 'kubejs:asteroid_sand'
+      B: '#forge:sand'
     }).replaceIngredient('minecraft:water_bucket', 'minecraft:bucket')
 
     event.recipes.create.pressing('gtceu:compressed_fireclay', 'gtceu:fireclay_dust')
@@ -278,6 +267,5 @@ ServerEvents.recipes(event => {
     event.campfireCooking('minecraft:brick', 'minecraft:clay_ball', 0, 80)
     event.campfireCooking('gtceu:firebrick', 'gtceu:compressed_fireclay', 0, 80)
     event.campfireCooking('gtceu:coke_oven_brick', 'gtceu:compressed_coke_clay', 0, 80)
-
 
 });

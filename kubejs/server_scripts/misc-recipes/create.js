@@ -494,6 +494,10 @@ ServerEvents.recipes(event => {
     event.recipes.create.filling('minecraft:clay', [Fluid.of('minecraft:water', 125), '#forge:sand'])
     event.recipes.create.filling('gtceu:treated_wood_planks', [Fluid.of('gtceu:creosote', 125), '#minecraft:planks'])
 
+    //create washing
+    event.recipes.create.splashing(['minecraft:clay_ball', Item.of('minecraft:iron_nugget').withChance(0.5)], 'kubejs:asteroid_sand')
+    event.recipes.create.splashing(['minecraft:clay_ball', Item.of('minecraft:gold_nugget').withChance(0.2)], 'minecraft:red_sand')
+    event.recipes.create.splashing(['minecraft:clay_ball', Item.of('minecraft:clay_ball').withChance(0.5)], 'minecraft:sand')
 
     //create press
     event.recipes.create.pressing(
@@ -586,17 +590,45 @@ ServerEvents.recipes(event => {
     }       
     rollermetals.forEach(rollerrods)
 
-    const earlymetals = ['wrought_iron', 'tin', 'bronze', 'potin', 'lead', 'cupronickel', 'brass', 'invar', 'red_alloy', 'electrum', 'iron', 'gold', 'copper', 'energized_steel']
+    //other metalwork
+    event.custom({type: "createaddition:rolling",
+        input: {item: 'gtceu:iron_bolt'},
+        result: {item: 'gtceu:iron_screw'}})
+
+    event.custom({type: "createaddition:rolling",
+        input: {item: 'gtceu:red_alloy_bolt'},
+        result: {item: 'gtceu:red_alloy_screw'}})
+
+    event.custom({type: "createaddition:rolling",
+        input: {item: 'gtceu:potin_bolt'},
+        result: {item: 'gtceu:potin_screw' }})
+
+    event.custom({type: "createaddition:rolling",
+        input: {item: 'gtceu:brass_bolt'},
+        result: {item: 'gtceu:brass_screw' }})
+
+    event.custom({type: "createaddition:rolling",
+        input: {item: 	'gtceu:invar_bolt'},
+        result: {item: 'gtceu:invar_screw'}})
+        
+    event.custom({type: "createaddition:rolling",
+        input: {item: 'gtceu:electrum_bolt'},
+        result: {item: 'gtceu:electrum_screw'}})
+
+    event.recipes.create.pressing( 'gtceu:iron_ring',  'gtceu:iron_rod',)
+    event.recipes.create.pressing( '2x gtceu:electrum_foil',  'gtceu:electrum_plate',)
+    event.recipes.create.pressing( '2x gtceu:red_alloy_foil',  'gtceu:red_alloy_plate',)
+
+    const earlymetals = ['wrought_iron', 'tin', 'bronze', 'lead', 'iron', 'gold', 'copper', 'energized_steel']
 
     function earlymetalwork(metalinput) {
 
     event.recipes.create.pressing(`2x gtceu:${metalinput}_foil`, `gtceu:${metalinput}_plate`)
 	event.recipes.create.pressing(`gtceu:${metalinput}_ring`, `gtceu:${metalinput}_rod`)
-	event.recipes.create.cutting(`gtceu:${metalinput}_screw`, `gtceu:${metalinput}_bolt`)
-
 	event.custom({type: "createaddition:rolling",
         input: {item: `gtceu:${metalinput}_bolt`},
         result: {item: `gtceu:${metalinput}_screw`}})
+
     };
     earlymetals.forEach(earlymetalwork)
 
