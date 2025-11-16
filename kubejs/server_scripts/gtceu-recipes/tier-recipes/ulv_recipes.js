@@ -26,6 +26,7 @@ ServerEvents.recipes(event => {
 
   event.campfireCooking('minecraft:glass', 'gtceu:glass_dust', 0, 160)
   event.campfireCooking('gtceu:wrought_iron_ingot', 'minecraft:iron_ingot', 0, 160)
+  event.campfireCooking('gtceu:tempered_glass', 'minecraft:glass', 0, 600)
 
   event.smelting('kubejs:asteroid_stone', 'kubejs:cobbled_asteroid_stone')
   event.smelting('kubejs:smooth_asteroid_stone', 'kubejs:asteroid_stone')
@@ -92,12 +93,26 @@ ServerEvents.recipes(event => {
       B: 'ad_astra:desh_ingot'
     })
 
+    event.shaped('3x dustrial_decor:gold_chain', [
+      ' A ',
+      'BA ',
+      ' A '
+    ], {
+      A: 'gtceu:gold_ring',
+      B: '#forge:tools/wrenches'
+    })
+
+    event.recipes.gtceu.assembler('assemble_gold_chain')
+        .itemInputs('3x gtceu:gold_ring')
+        .itemOutputs('9x dustrial_decor:gold_chain')
+        .duration(40)
+        .EUt(10)
+
     event.recipes.gtceu.mixer('mixing_energized_steel_dust')
         .itemInputs('gtceu:desh_dust', 'gtceu:iron_dust', 'gtceu:red_alloy_dust')
         .itemOutputs('gtceu:energized_steel_dust')
         .duration(200)
         .EUt(7)
-
 
     //stone crushing recipes    
     event.recipes.farmersdelight.cutting('minecraft:cobblestone', '#forge:tools/hammers', 'minecraft:gravel')

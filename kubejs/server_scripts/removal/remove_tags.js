@@ -48,6 +48,11 @@ event.removeAllTagsFrom('farmersdelight:wheat_dough')
 event.removeAllTagsFrom('powah:uraninite_raw')
 event.removeAllTagsFrom('gtceu:raw_desh')
 event.removeAllTagsFrom('gtceu:desh_ingot')
+event.removeAllTagsFrom('farmersdelight:golden_knife')
+event.removeAllTagsFrom('farmersdelight:netherite_knife')
+event.removeAllTagsFrom('farmersdelight:diamond_knife')
+event.removeAllTagsFrom('farmersdelight:iron_knife')
+event.removeAllTagsFrom('farmersdelight:flint_knife')
 });
 
 

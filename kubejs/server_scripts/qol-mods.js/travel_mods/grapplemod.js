@@ -13,7 +13,7 @@
  *          attractradius:3.0d, //Strength of the magnet upgrade, tiered with GT's magnetic metallic ingots
  *          crc32:2252267022L, //This fucking piece of shit is a Checksum, it needs to be calculated based off the boolean and double params.
  *          detachonkeyrelease:0b,
- *          doublehook:0b, //Wether we have a double hook, enabled by adding a black steel pickaxe head
+ *          doublehook:0b, //Wether we have a double hook, enabled by adding a damascus steel pickaxe head
  *          enderstaff:0b,
  *          hookgravity:1.0d, //The actual hook's gravity, can be set to 0.5 using a Helium Bucket, or to 0 using a Gravitation Engine Module
  *          maxlen:200.0d, //The maximum length of the rope, this can be increased with Jute Rope, and decreased using a knife
@@ -565,7 +565,7 @@ function registerGrapplingHookRecipes(event) {
 
         })
     //Add Double Hook
-    shapelessUpgradeRecipe(['gtceu:black_steel_pickaxe_head'], (customization, orig, result) => {
+    shapelessUpgradeRecipe(['gtceu:damascus_steel_pickaxe_head'], (customization, orig, result) => {
         if (customization.doublehook) {
             return null;
         }
@@ -577,7 +577,7 @@ function registerGrapplingHookRecipes(event) {
     }, 'gtceu.grapplemod.upgrades.doublehook').id('gtceu:grapplemod/upgrades/doublehook')
 
     //Remove Double Hook
-    shapelessUpgradeRecipe(['gtceu:black_steel_drill_head', '#forge:tools/hammers'], (customization, orig, result) => {
+    shapelessUpgradeRecipe(['gtceu:damascus_steel_drill_head', '#forge:tools/hammers'], (customization, orig, result) => {
         if (!customization.doublehook) {
             return null;
         }
@@ -587,8 +587,8 @@ function registerGrapplingHookRecipes(event) {
         customization.sneakingangle = 2.5;
         return result;
     }, 'gtceu.grapplemod.downgrades.doublehook')
-        .replaceIngredient('grapplemod:grapplinghook', 'gtceu:black_steel_drill_head')
-        .keepIngredient('gtceu:black_steel_drill_head')
+        .replaceIngredient('grapplemod:grapplinghook', 'gtceu:damascus_steel_drill_head')
+        .keepIngredient('gtceu:damascus_steel_drill_head')
         .id('gtceu:grapplemod/downgrades/doublehook')
 
     // Increase Vertical Throw Angle
@@ -683,6 +683,6 @@ ServerEvents.recipes(event => {
     ], {
         A: 'gtceu:gravitation_engine_unit',
         B: 'gtceu:steel_rod',
-        C: 'gtceu:black_steel_rod'
+        C: 'gtceu:damascus_steel_rod'
     })
 })

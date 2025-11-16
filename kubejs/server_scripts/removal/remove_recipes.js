@@ -15,7 +15,8 @@ ServerEvents.recipes(event => {
         'ad_astra:photovoltaic_vesnium_cell', 'ad_astra:etrionic_capacitor', 'createaddition:electrum_ingot', 'ad_astra:iron_rod', 'ad_astra:steel_rod', 'ae2:sky_stone_tank',
         'farmersdelight:netherite_knife', 'create:netherite_backtank', 'create:netherite_diving_helmet', 'create:netherite_diving_boots', 'minecraft:netherite_upgrade_smithing_template',
         'ad_astra:fan', 'gtceu:cleaning_maintenance_hatch', 'ad_astra:steel_ingot', 'ad_astra:ice_shard', 'ad_astra:reinforced_door', 'ad_astra:ice_charge', 'gtceu:gravitation_engine_unit',
-        'gtceu:solar_panel', 'create:red_sand_paper', 'constructionwand:infinity_wand',
+        'gtceu:solar_panel', 'create:red_sand_paper', 'botania:mana_powder', 'botania:monocle', 'botania:mana_glass_pane', 'botania:bifrost_pane', 'botania:red_string', 'botania:turntable',
+        'botania:elf_glass_pane', 'botania:auto_crafting_halo', 'botania:thunder_sword', 'botania:gaia_ingot', 'botania:bifrost_perm',
     ]
 
     const toRemoveId = ['create:haunting/crimson_fungus', 'create:haunting/warped_fungus', 'create:milling/compat/ae2/sky_stone_block', 'create:milling/compat/ae2/fluix_crystal',
@@ -60,7 +61,9 @@ ServerEvents.recipes(event => {
         'createaddition:mixing/electrum', 'create:milling/charcoal', 'create:milling/coal', 'create:splashing/crushed_raw_zinc', 'create:splashing/crushed_raw_copper', 'create:splashing/crushed_raw_gold',
         'create:splashing/crushed_raw_iron', 'createaddition:crafting/electrum_block', 'ad_astra:steel_block', 'ad_astra:raw_desh', 'farmersdelight:cutting/gravel', 'gtceu:forge_hammer/gravel_to_sand',
         'create:milling/gravel', 'gtceu:forge_hammer/cobblestone_to_gravel', 'gtceu:macerator/gravel_to_flint', 'create:splashing/sand', 'create:splashing/red_sand', 'minecraft:pumpkin_pie',
-        'minecraft:cookie', 'minecraft:bread',
+        'minecraft:cookie', 'minecraft:bread', 'dustrial_decor:gold_chain', 'botania:mana_infusion/manasteel', 'botania:cocoon', 'botania:fel_pumpkin', 'botania:terra_plate', 'botania:alfheim_portal',
+        'botania:virus_necrodermal', 'botania:virus_nullodermal', 'create:mixing/compat/ae2/fluix_crystal', 'minecraft:clock','botania:fabulous_pool', 'botania:mana_infusion/mana_bottle', 'botania:prism',
+        'botania:avatar', 'botania:star_sword', 'botania:mana_infusion/mana_glass', 'botanicadds:mana_stealer_sword', 'botania:redstone_spreader'
     ];
 
     const toRemoveType = ['expatternprovider:cutter', 'ae2:inscriber', 'ae2:charger', 'create:crushing', 'ad_astra:alloying', 'createaddition:liquid_burning', 'create:pressing',
@@ -72,7 +75,8 @@ ServerEvents.recipes(event => {
         'minecraft:netherite_upgrade_smithing_template', 'ad_astra:fan', 'ad_astra:steel_ingot', 'ad_astra:ice_shard'
     ];
 
-    const toRemoveMod = ['createoreexcavation', 'scannable', 'storagenetwork', 'powah', 'grapplemod', 'fluxnetworks'
+    const toRemoveMod = ['createoreexcavation', 'scannable', 'storagenetwork', 'powah', 'grapplemod', 'fluxnetworks', 'trashcans', 'toolbelt', 'constructionwand',
+
     ];
 
     // event.remove({mod: 'ad_astra'})
@@ -105,17 +109,20 @@ ServerEvents.recipes(event => {
     event.remove({output: 'minecraft:netherite_scrap'});
     event.remove({input: 'minecraft:ancient_debris'});
     event.remove({output: 'minecraft:netherite_ingot'});
+    event.remove({output: 'createaddition:iron_rod'});
+    event.remove({output: '#forge:wires'});
+    event.remove({input: '#forge:wires'});
     event.remove({id: /.*expatternprovider.*cutter.*/});
     event.remove({output: /gtceu:.*_energy_converter/ });
     event.remove({output: /gtmutils:.*_energy_converter/ });
     event.remove({output: /ad_astra:.*_sliding_door/});
     event.remove({output: /ad_extendra:.*_sliding_door/});
-    event.remove({output: '#forge:wires'});
-    event.remove({input: '#forge:wires'});
-    event.remove({output: 'createaddition:iron_rod'});
     event.remove({output: /create:.*_sheet/});
     event.remove({output: /create:.*_ingot/});
     event.remove({output: /create:.*_plate/});
     event.remove({output: /create:.*_dust/});
+    event.remove({output: /farmersdelight:.*_knife/})
+    event.remove({output: /botania:.*_rod/})
+
 });
 

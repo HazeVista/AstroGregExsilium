@@ -7,6 +7,14 @@ ServerEvents.recipes(event => {
         .duration(80)
         .EUt(3)
 
+    event.recipes.gtceu.fluid_solidifier('soldify_tempered_glass')
+        .inputFluids('minecraft:lava 250')
+        .itemInputs('minecraft:glass')
+        .itemOutputs('gtceu:tempered_glass')
+        .duration(300)
+        .EUt(30)
+
+
     //asteroid dust processing
     event.recipes.gtceu.ore_washer('washing_asteroid_dust')
         .itemInputs('gtceu:asteroid_stone_dust')
@@ -37,4 +45,34 @@ ServerEvents.recipes(event => {
         .itemOutputs('gtceu:stone_dust')
         .duration(20)
         .EUt(30)
+
+
+    //bottling
+    event.recipes.gtceu.assembler('bottle_ender_air')
+        .itemInputs('minecraft:glass_bottle')
+        .inputFluids('gtceu:ender_air 250')
+        .itemOutputs('botania:ender_air_bottle')
+        .duration(20)
+        .EUt(7)
+
+    event.recipes.gtceu.assembler('bottle_milk')
+        .itemInputs('minecraft:glass_bottle')
+        .inputFluids('minecraft:milk 250')
+        .itemOutputs('farmersdelight:milk_bottle')
+        .duration(20)
+        .EUt(7)
+
+    event.recipes.gtceu.assembler('bottle_water')
+        .itemInputs('minecraft:glass_bottle')
+        .inputFluids('minecraft:water 250')
+        .itemOutputs(Item.of('minecraft:potion', '{Potion:"minecraft:water"}'))
+        .duration(20)
+        .EUt(7)
+
+    event.recipes.gtceu.assembler('bottle_mana')
+        .itemInputs('minecraft:glass_bottle')
+        .inputFluids('manafluid:mana 250')
+        .itemOutputs('botania:mana_bottle')
+        .duration(20)
+        .EUt(7)
 })

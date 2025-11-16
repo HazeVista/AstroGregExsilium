@@ -64,4 +64,13 @@ ServerEvents.recipes(event => {
         A: '#minecraft:logs'
     });
 
+    event.shaped('minecraft:clock', [
+        ' A ',
+        'ABA',
+        ' A '
+    ], {
+        A: 'gtceu:gold_plate',
+        B: 'minecraft:redstone'
+    })
+
 });
