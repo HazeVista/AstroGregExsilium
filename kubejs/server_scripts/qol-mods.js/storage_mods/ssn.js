@@ -117,7 +117,7 @@ event.shaped('storagenetwork:single_upgrade', [
 ], {
     A: 'laserio:logic_chip',
     B: 'minecraft:redstone',
-    C: 'gtceu:coke_gem'
+    C: 'gtceu:iron_plate'
 })
 
 event.shaped('storagenetwork:slow_upgrade', [

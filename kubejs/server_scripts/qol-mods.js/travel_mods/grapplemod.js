@@ -565,7 +565,7 @@ function registerGrapplingHookRecipes(event) {
 
         })
     //Add Double Hook
-    shapelessUpgradeRecipe(['gtceu:damascus_steel_pickaxe_head'], (customization, orig, result) => {
+    shapelessUpgradeRecipe(['gtceu:damascus_steel_drill_head'], (customization, orig, result) => {
         if (customization.doublehook) {
             return null;
         }

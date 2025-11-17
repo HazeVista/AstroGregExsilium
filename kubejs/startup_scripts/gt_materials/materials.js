@@ -300,8 +300,11 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     // conductorSuper('', [], 0xccffff, [10799, 'highest', VA('uhv'), 3300], [V('uhv'), 128, 0, true], [3200, 660, 3, 96000]);
 
     //AE2
-    compIngotLiquidSeccolor('futura_alloy', ['4x stainless_steel', '1x mystery'], 0xebb7ea, 0x000000, SHINY, [1700, 'low', 400, 1200], [frame, plates, rod, dense_plate, centrifuge, mortar_grind, block])
+    compIngotLiquidSeccolor('futura_alloy', ['4x stainless_steel', '1x mystery'], 0xebb7ea, 0x000000, SHINY, [1700, 'low', 400, 1200], [frame, plates, rod, dense_plate, mortar_grind, block])
 
-    //GTMat Modifications
-    // GTMaterials.Neptunium.setProperty($PropertyKey.INGOT, new $IngotProperty().iconSet(SHINY))
+    //Botania
+    compIngotLiquid('manasteel', [], 0x228cc9, SHINY, [1000, 'low', 120, 400], [foil, gear, plates, rod, dense_plate, ring, frame, bolt_and_screw, mortar_grind])
+    compIngotLiquid('terrasteel', [], 0x159e1e, SHINY, [1700, 'low', VA('mv'), 800], [foil, gear, plates, rod, dense_plate, ring, bolt_and_screw,frame, mortar_grind])
+    compIngotLiquid('elementium', [], 0xed64d4, SHINY, [3500, 'mid', VA('iv'), 1600], [foil, gear, plates, rod, dense_plate, ring, bolt_and_screw,frame])
+    compIngotLiquid('gaiasteel', [], 0x8c2929, RADIOACTIVE, [7100, 'high', VA('zpm'), 2400], [foil, gear, plates, rod, dense_plate, ring, bolt_and_screw,frame])
 });

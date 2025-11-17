@@ -1,5 +1,6 @@
 ServerEvents.recipes(event => {
 
+    //misc
     event.recipes.gtceu.brewery('brew_salt_water')
         .notConsumable('gtceu:salt_dust')
         .inputFluids('minecraft:water 1000')
@@ -13,6 +14,23 @@ ServerEvents.recipes(event => {
         .itemOutputs('gtceu:tempered_glass')
         .duration(300)
         .EUt(30)
+
+
+    
+    //ender air
+    event.recipes.gtceu.centrifuge('centrifuge_ender_air')
+        .inputFluids('gtceu:ender_air 10000')
+        .chancedOutput('gtceu:ender_pearl_dust', 2500, 0)
+        .outputFluids('gtceu:nitrogen_dioxide 6100', 'gtceu:deuterium 2500')
+        .duration(400)
+
+    event.recipes.gtceu.gas_collector('collect_end_air_kuiper_belt')
+        .outputFluids(Fluid.of('gtceu:ender_air', 10000))
+        .dimension('ad_astra:kuiper_belt')
+        .duration(200)
+        .circuit(1)
+        .EUt(16)
+
 
 
     //asteroid dust processing
@@ -47,6 +65,7 @@ ServerEvents.recipes(event => {
         .EUt(30)
 
 
+        
     //bottling
     event.recipes.gtceu.assembler('bottle_ender_air')
         .itemInputs('minecraft:glass_bottle')
@@ -69,10 +88,38 @@ ServerEvents.recipes(event => {
         .duration(20)
         .EUt(7)
 
-    event.recipes.gtceu.assembler('bottle_mana')
+    event.recipes.gtceu.extractor('bottle_mana')
         .itemInputs('minecraft:glass_bottle')
         .inputFluids('manafluid:mana 250')
         .itemOutputs('botania:mana_bottle')
+        .duration(20)
+        .EUt(7)
+
+    event.recipes.gtceu.extractor('unbottle_ender_air')
+        .itemOutputs('minecraft:glass_bottle')
+        .outputFluids('gtceu:ender_air 250')
+        .itemInputs('botania:ender_air_bottle')
+        .duration(20)
+        .EUt(7)
+
+    event.recipes.gtceu.extractor('unbottle_milk')
+        .itemOutputs('minecraft:glass_bottle')
+        .outputFluids('minecraft:milk 250')
+        .itemInputs('farmersdelight:milk_bottle')
+        .duration(20)
+        .EUt(7)
+
+    event.recipes.gtceu.extractor('unbottle_water')
+        .itemOutputs('minecraft:glass_bottle')
+        .outputFluids('minecraft:water 250')
+        .itemInputs(Item.of('minecraft:potion', '{Potion:"minecraft:water"}'))
+        .duration(20)
+        .EUt(7)
+
+    event.recipes.gtceu.extractor('unbottle_mana')
+        .itemOutputs('minecraft:glass_bottle')
+        .outputFluids('manafluid:mana 250')
+        .itemInputs('botania:mana_bottle')
         .duration(20)
         .EUt(7)
 })

@@ -18,9 +18,9 @@
             "botanicadds:flowers/energizera": false
         },
         "botanicadds:gaia_plate": {
-            "botanicadds:terrasteel": true,
-            "botanicadds:gaiasteel_ingot": true,
-            "botanicadds:overgrowth_seed": true
+            "botanicadds:terrasteel": false,
+            "botanicadds:gaiasteel_ingot": false,
+            "botanicadds:overgrowth_seed": false
         },
         "botania:elven_trade": {
             "botanicadds:elven_lapis": true,
@@ -45,11 +45,11 @@
             "botanicadds:gaiasteel_ingots_from_block": true,
             "botanicadds:gaiasteel_nugget": true,
             "botanicadds:gaia_plate": false,
-            "botanicadds:gaiasteel_pylon": true,
+            "botanicadds:gaiasteel_pylon": false,
             "botanicadds:elvenwood": true,
             "botanicadds:aura_ring_gaia": true,
             "botanicadds:mana_ring_gaia": true,
-            "botanicadds:mana_stealer_sword": true,
+            "botanicadds:mana_stealer_sword": false,
             "botanicadds:elven_altar": true,
             "botanicadds:elven_brewery": true,
             "botanicadds:dreaming_pool": true,

@@ -16,7 +16,12 @@ ServerEvents.recipes(event => {
         'farmersdelight:netherite_knife', 'create:netherite_backtank', 'create:netherite_diving_helmet', 'create:netherite_diving_boots', 'minecraft:netherite_upgrade_smithing_template',
         'ad_astra:fan', 'gtceu:cleaning_maintenance_hatch', 'ad_astra:steel_ingot', 'ad_astra:ice_shard', 'ad_astra:reinforced_door', 'ad_astra:ice_charge', 'gtceu:gravitation_engine_unit',
         'gtceu:solar_panel', 'create:red_sand_paper', 'botania:mana_powder', 'botania:monocle', 'botania:mana_glass_pane', 'botania:bifrost_pane', 'botania:red_string', 'botania:turntable',
-        'botania:elf_glass_pane', 'botania:auto_crafting_halo', 'botania:thunder_sword', 'botania:gaia_ingot', 'botania:bifrost_perm',
+        'botania:elf_glass_pane', 'botania:auto_crafting_halo', 'botania:thunder_sword', 'botania:gaia_ingot', 'botania:bifrost_perm', 'botania:manasteel_ingot', 'botania:terrasteel_ingot',
+        'botania:elementium_ingot', 'botania:elementium_nugget', 'botania:manasteel_nugget', 'botania:terrasteel_nugget', 'botania:starfield',
+        'botania:elementium_block', 'botania:manasteel_block', 'botania:terrasteel_block', 'botania:elementium_shears', 
+        'botania:open_bucket', 'botania:elementium_pickaxe', 'botania:elementium_shovel', 'botania:elementium_hoe', 'botania:elementium_axe', 
+        'botania:elementium_sword', 'botania:ender_dagger', 'botania:manasteel_pick', 'botania:manasteel_shovel', 'botania:manasteel_hoe', 'botania:manasteel_axe', 'botania:manasteel_sword',
+        'botania:crafting_halo', 'botania:laputa_shard', 'gtceu:ulv_solar_panel',
     ]
 
     const toRemoveId = ['create:haunting/crimson_fungus', 'create:haunting/warped_fungus', 'create:milling/compat/ae2/sky_stone_block', 'create:milling/compat/ae2/fluix_crystal',
@@ -61,9 +66,13 @@ ServerEvents.recipes(event => {
         'createaddition:mixing/electrum', 'create:milling/charcoal', 'create:milling/coal', 'create:splashing/crushed_raw_zinc', 'create:splashing/crushed_raw_copper', 'create:splashing/crushed_raw_gold',
         'create:splashing/crushed_raw_iron', 'createaddition:crafting/electrum_block', 'ad_astra:steel_block', 'ad_astra:raw_desh', 'farmersdelight:cutting/gravel', 'gtceu:forge_hammer/gravel_to_sand',
         'create:milling/gravel', 'gtceu:forge_hammer/cobblestone_to_gravel', 'gtceu:macerator/gravel_to_flint', 'create:splashing/sand', 'create:splashing/red_sand', 'minecraft:pumpkin_pie',
-        'minecraft:cookie', 'minecraft:bread', 'dustrial_decor:gold_chain', 'botania:mana_infusion/manasteel', 'botania:cocoon', 'botania:fel_pumpkin', 'botania:terra_plate', 'botania:alfheim_portal',
+        'minecraft:cookie', 'minecraft:bread', 'dustrial_decor:gold_chain', 'botania:cocoon', 'botania:fel_pumpkin', 'botania:terra_plate', 'botania:alfheim_portal', 'simplylight:illuminant_block_on',
         'botania:virus_necrodermal', 'botania:virus_nullodermal', 'create:mixing/compat/ae2/fluix_crystal', 'minecraft:clock','botania:fabulous_pool', 'botania:mana_infusion/mana_bottle', 'botania:prism',
-        'botania:avatar', 'botania:star_sword', 'botania:mana_infusion/mana_glass', 'botanicadds:mana_stealer_sword', 'botania:redstone_spreader'
+        'botania:avatar', 'botania:star_sword', 'botania:mana_infusion/mana_glass', 'botania:redstone_spreader', 'farmersdelight:honey_cookie', 'farmersdelight:sweet_berry_cookie',
+        'minecraft:cake', 'farmersdelight:cake_from_milk_bottle', 'botania:manasteel_shears', 'botania:lens_normal', 'simplylight:illuminant_slab', 'simplylight:walllamp', 'simplylight:rodlamp',
+        'simplylight:bulb', 'simplylight:edge_light', 'simplylight:', 'simplylight:lamp_post', 'simplylight:illuminant_block', 'gtceu:shaped/nugget_assembling_gaiasteel', 'gtceu:shaped/block_compress_gaiasteel', 
+        'gtceu:shapeless/nugget_disassembling_gaiasteel', 'gtceu:shapeless/block_decompress_gaiasteel', 'botania:thorn_chakram', 'gtceu:centrifuge/ender_air_separation', 'botania:lens_magnet',
+        'botanicadds:gaiasteel_pylon', 'botania:mana_spreader', 'botania:elven_spreader', 'botanicadds:terra_catalyst', 'botania:bauble_box'
     ];
 
     const toRemoveType = ['expatternprovider:cutter', 'ae2:inscriber', 'ae2:charger', 'create:crushing', 'ad_astra:alloying', 'createaddition:liquid_burning', 'create:pressing',
@@ -72,7 +81,7 @@ ServerEvents.recipes(event => {
     ];
 
     const toRemoveIn = ['ad_astra:moon_desh_ore', 'ad_astra:deepslate_desh_ore', 'ad_astra:ostrum_plate', 'ad_astra:calorite_plate', 'ad_astra:desh_plate',
-        'minecraft:netherite_upgrade_smithing_template', 'ad_astra:fan', 'ad_astra:steel_ingot', 'ad_astra:ice_shard'
+        'minecraft:netherite_upgrade_smithing_template', 'ad_astra:fan', 'ad_astra:steel_ingot', 'ad_astra:ice_shard', 'gtceu:gaiasteel_ingot'
     ];
 
     const toRemoveMod = ['createoreexcavation', 'scannable', 'storagenetwork', 'powah', 'grapplemod', 'fluxnetworks', 'trashcans', 'toolbelt', 'constructionwand',
@@ -102,6 +111,8 @@ ServerEvents.recipes(event => {
     });
 
     //oddball
+    event.remove({input: 'botania:terra_sword'})
+    event.remove({type: 'gtceu:gas_collector'})
     event.remove({output: 'farmersdelight:wheat_dough'});
     event.remove({input: 'farmersdelight:wheat_dough'});
     event.remove({input: 'minecraft:fire_charge'});
@@ -123,6 +134,7 @@ ServerEvents.recipes(event => {
     event.remove({output: /create:.*_dust/});
     event.remove({output: /farmersdelight:.*_knife/})
     event.remove({output: /botania:.*_rod/})
+    event.remove({output: /botania:.*_pylon/})
 
 });
 

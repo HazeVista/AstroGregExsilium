@@ -13,7 +13,7 @@ ServerEvents.recipes(event => {
     event.recipes.gtceu.primitive_blast_furnace('dam_steel_coke')
         .itemInputs('gtceu:steel_ingot', 'gtceu:coke_gem')
         .itemOutputs('gtceu:damascus_steel_ingot', 'gtceu:tiny_dark_ash_dust')
-        .duration(1200)
+        .duration(900)
 
     event.recipes.gtceu.primitive_blast_furnace('dam_steel_charcoal_dust')
         .itemInputs('gtceu:steel_ingot', 'gtceu:charcoal_dust')
@@ -28,6 +28,6 @@ ServerEvents.recipes(event => {
     event.recipes.gtceu.primitive_blast_furnace('dam_steel_coke_dust')
         .itemInputs('gtceu:steel_ingot', 'gtceu:coke_dust')
         .itemOutputs('gtceu:damascus_steel_ingot', 'gtceu:tiny_dark_ash_dust')
-        .duration(1200)
+        .duration(900)
 
 })

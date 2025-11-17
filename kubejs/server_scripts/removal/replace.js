@@ -4,9 +4,7 @@ ServerEvents.recipes(event => {
     //input
     event.replaceInput({input: 'create:copper_sheet'}, 'create:copper_sheet', 'gtceu:copper_plate');
     event.replaceInput({input: 'create:zinc_ingot'}, 'create:zinc_ingot', 'gtceu:zinc_ingot');
-    event.replaceOutput({output: 'gtceu:energized_steel_ingot'}, 'gtceu:energized_steel_ingot','powah:steel_energized');
     event.replaceInput({input: 'gtceu:energized_steel_ingot'}, 'gtceu:energized_steel_ingot','powah:steel_energized');
-    event.replaceOutput({output: 'gtceu:energized_steel_block'}, 'gtceu:energized_steel_block','powah:energized_steel_block');
     event.replaceInput({input: 'gtceu:energized_steel_block'}, 'gtceu:energized_steel_block','powah:energized_steel_block');
     event.replaceInput({input: 'gtceu:desh_nugget'}, 'gtceu:desh_nugget', 'ad_astra:desh_nugget')
     event.replaceInput({input: 'gtceu:desh_ingot'}, 'gtceu:desh_ingot', 'ad_astra:desh_ingot')
@@ -17,12 +15,39 @@ ServerEvents.recipes(event => {
     event.replaceInput({}, 'ad_astra:iron_rod', 'gtceu:iron_rod')
     event.replaceInput({}, 'minecraft:gravel', '#forge:gravel')
     event.replaceInput({}, 'minecraft:sand', '#forge:sand')
-
+    event.replaceInput({input: 'gtceu:manasteel_ingot'}, 'gtceu:manasteel_ingot','botania:manasteel_ingot');
+    event.replaceInput({input: 'gtceu:manasteel_block'}, 'gtceu:manasteel_block','botania:manasteel_block');
+    event.replaceInput({input: 'gtceu:manasteel_nugget'}, 'gtceu:manasteel_nugget','botania:manasteel_nugget');
+    event.replaceInput({input: 'gtceu:terrasteel_ingot'}, 'gtceu:terrasteel_ingot','botania:terrasteel_ingot');
+    event.replaceInput({input: 'gtceu:terrasteel_block'}, 'gtceu:terrasteel_block','botania:terrasteel_block');
+    event.replaceInput({input: 'gtceu:terrasteel_nugget'}, 'gtceu:terrasteel_nugget','botania:terrasteel_nugget');
+    event.replaceInput({input: 'gtceu:gaiasteel_ingot'}, 'gtceu:gaiasteel_ingot','botanicadds:gaiasteel_ingot');
+    event.replaceInput({input: 'gtceu:gaiasteel_block'}, 'gtceu:gaiasteel_block','botanicadds:gaiasteel_block');
+    event.replaceInput({input: 'gtceu:gaiasteel_nugget'}, 'gtceu:gaiasteel_nugget','botanicadds:gaiasteel_nugget');
+    event.replaceInput({input: 'gtceu:elementium_ingot'}, 'gtceu:elementium_ingot','botania:elementium_ingot');
+    event.replaceInput({input: 'gtceu:elementium_block'}, 'gtceu:elementium_block','botania:elementium_block');
+    event.replaceInput({input: 'gtceu:elementium_nugget'}, 'gtceu:elementium_nugget','botania:elementium_nugget');
+    
+    
     //output
     event.replaceOutput({output: 'gtceu:desh_nugget'}, 'gtceu:desh_nugget', 'ad_astra:desh_nugget')
     event.replaceOutput({output: 'gtceu:desh_ingot'}, 'gtceu:desh_ingot', 'ad_astra:desh_ingot')
     event.replaceOutput({output: 'gtceu:desh_block'}, 'gtceu:desh_block', 'ad_astra:desh_block')
     event.replaceOutput({output: 'gtceu:raw_desh'}, 'gtceu:raw_desh', 'ad_astra:raw_desh')
     event.replaceOutput({output: 'gtceu:raw_desh_block'}, 'gtceu:raw_desh_block', 'ad_astra:raw_desh_block')
+    event.replaceOutput({output: 'gtceu:energized_steel_ingot'}, 'gtceu:energized_steel_ingot','powah:steel_energized');
+    event.replaceOutput({output: 'gtceu:energized_steel_block'}, 'gtceu:energized_steel_block','powah:energized_steel_block');
+    event.replaceOutput({output: 'gtceu:manasteel_ingot'}, 'gtceu:manasteel_ingot','botania:manasteel_ingot');
+    event.replaceOutput({output: 'gtceu:manasteel_block'}, 'gtceu:manasteel_block','botania:manasteel_block');
+    event.replaceOutput({output: 'gtceu:manasteel_nugget'}, 'gtceu:manasteel_nugget','botania:manasteel_nugget');
+    event.replaceOutput({output: 'gtceu:terrasteel_ingot'}, 'gtceu:terrasteel_ingot','botania:terrasteel_ingot');
+    event.replaceOutput({output: 'gtceu:terrasteel_block'}, 'gtceu:terrasteel_block','botania:terrasteel_block');
+    event.replaceOutput({output: 'gtceu:terrasteel_nugget'}, 'gtceu:terrasteel_nugget','botania:terrasteel_nugget');
+    event.replaceOutput({output: 'gtceu:gaiasteel_ingot'}, 'gtceu:gaiasteel_ingot','botanicadds:gaiasteel_ingot');
+    event.replaceOutput({output: 'gtceu:gaiasteel_block'}, 'gtceu:gaiasteel_block','botanicadds:gaiasteel_block');
+    event.replaceOutput({output: 'gtceu:gaiasteel_nugget'}, 'gtceu:gaiasteel_nugget','botanicadds:gaiasteel_nugget');
+    event.replaceOutput({output: 'gtceu:elementium_ingot'}, 'gtceu:elementium_ingot','botania:elementium_ingot');
+    event.replaceOutput({output: 'gtceu:elementium_block'}, 'gtceu:elementium_block','botania:elementium_block');
+    event.replaceOutput({output: 'gtceu:elementium_nugget'}, 'gtceu:elementium_nugget','botania:elementium_nugget');
 
 });

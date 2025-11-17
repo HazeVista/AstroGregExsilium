@@ -392,13 +392,36 @@ ServerEvents.recipes(event => {
     // Andesite Alloy mostly by @digestlotion
     event.shapeless('2x gtceu:andesite_dust', ['gtceu:stone_dust', 'gtceu:nether_quartz_dust'])
     event.shapeless('2x gtceu:andesite_dust', ['gtceu:stone_dust', 'gtceu:quartz_sand_dust'])
+    event.shapeless('2x gtceu:andesite_dust', ['gtceu:asteroid_stone_dust', 'gtceu:nether_quartz_dust'])
+    event.shapeless('2x gtceu:andesite_dust', ['gtceu:asteroid_stone_dust', 'gtceu:quartz_sand_dust'])
     event.shapeless('1x gtceu:andesite_alloy_dust', ['gtceu:andesite_dust', 'gtceu:iron_dust'])
     event.shapeless('2x create:shaft', ['create:andesite_alloy', '#forge:tools/files'])
     event.smelting('1x create:andesite_alloy', 'gtceu:andesite_alloy_dust')
 
+    event.shaped('gtceu:andesite_dust', [
+        'A',
+        'B'
+    ], {
+        A: 'minecraft:andesite',
+        B: '#forge:tools/files'
+    })
+
     event.recipes.gtceu.mixer('mixing_andesite_alloy_dust')
         .itemInputs('gtceu:iron_dust', 'gtceu:andesite_dust')
         .itemOutputs('2x gtceu:andesite_alloy_dust')
+        .duration(80)
+        .EUt(7)
+
+
+    event.recipes.gtceu.mixer('mixing_andesite_dust')
+        .itemInputs('gtceu:quartz_sand_dust', 'gtceu:asteroid_stone_dust')
+        .itemOutputs('2x gtceu:andesite_dust')
+        .duration(80)
+        .EUt(7)
+
+    event.recipes.gtceu.mixer('mixing_andesite_dust_alt')
+        .itemInputs('gtceu:nether_quartz_dust', 'gtceu:asteroid_stone_dust')
+        .itemOutputs('2x gtceu:andesite_dust')
         .duration(80)
         .EUt(7)
 
@@ -619,7 +642,7 @@ ServerEvents.recipes(event => {
     event.recipes.create.pressing( '2x gtceu:electrum_foil',  'gtceu:electrum_plate',)
     event.recipes.create.pressing( '2x gtceu:red_alloy_foil',  'gtceu:red_alloy_plate',)
 
-    const earlymetals = ['wrought_iron', 'tin', 'bronze', 'lead', 'iron', 'gold', 'copper', 'energized_steel']
+    const earlymetals = ['wrought_iron', 'tin', 'bronze', 'lead', 'gold', 'copper', 'energized_steel']
 
     function earlymetalwork(metalinput) {
 

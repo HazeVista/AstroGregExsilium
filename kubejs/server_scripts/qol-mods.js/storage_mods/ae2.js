@@ -36,10 +36,10 @@ ServerEvents.recipes(event => {
         .duration(160)
         .EUt(28)    
 
-    event.recipes.gtceu.chemical_bath('wash_cables')
+    event.recipes.gtceu.chemical_bath('wash_glass_cables')
         .itemInputs('#ae2:glass_cable')
         .inputFluids('minecraft:water 144')
-        .itemOutputs('ae2:fluix_cable')
+        .itemOutputs('ae2:fluix_glass_cable')
         .duration(40)
         .EUt(20)
 
