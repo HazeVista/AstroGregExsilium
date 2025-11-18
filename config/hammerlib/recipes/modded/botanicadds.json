@@ -25,15 +25,15 @@
         "botania:elven_trade": {
             "botanicadds:elven_lapis": true,
             "botanicadds:elven_lapis_block": true,
-            "botanicadds:elvenwood_log": true,
-            "botanicadds:dreamrock": true
+            "botanicadds:elvenwood_log": false,
+            "botanicadds:dreamrock": false
         },
         "botania:mana_infusion": {
             "botanicadds:mana_lapis": true,
             "botanicadds:mana_lapis_block": true,
             "botanicadds:gaia_shard": true
         },
-        "botania:pure_daisy": {"botanicadds:dreamwood_from_elvenwood": true},
+        "botania:pure_daisy": {"botanicadds:dreamwood_from_elvenwood": false},
         "minecraft:crafting": {
             "botanicadds:terra_catalyst": true,
             "botanicadds:mana_lapis_block_1": true,
@@ -52,12 +52,12 @@
             "botanicadds:mana_stealer_sword": false,
             "botanicadds:elven_altar": true,
             "botanicadds:elven_brewery": true,
-            "botanicadds:dreaming_pool": true,
+            "botanicadds:dreaming_pool": false,
             "botanicadds:sculk_sensor": true,
             "botanicadds:tesseract_attune": true,
             "botanicadds:recipe_tweaks/mana_fluxfield": true,
-            "botanicadds:recipe_tweaks/gaia_spreader": true,
-            "botanicadds:elven_fluxfield": true,
+            "botanicadds:recipe_tweaks/gaia_spreader": false,
+            "botanicadds:elven_fluxfield": false,
             "botanicadds:flowers/floating/glaciflora": true,
             "botanicadds:flowers/floating/apicaria": true,
             "botanicadds:flowers/floating/energizera": false,

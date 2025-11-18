@@ -3,11 +3,12 @@ StartupEvents.registry('item', event => {
         .displayName('Terra Lens')
         .texture('kubejs:item/botania/terra_lens')
 
-    event.create('botania:gaia_lens')
-        .displayName('Gaia Lens')
-        .texture('kubejs:item/botania/gaia_lens')
-        
     event.create('botania:pixie_lens')
         .displayName('Pixie Lens')
         .texture('kubejs:item/botania/pixie_lens')
+        
+    event.create('botania:gaia_lens')
+        .displayName('Gaia Lens')
+        .texture('kubejs:item/botania/gaia_lens')
+
     })

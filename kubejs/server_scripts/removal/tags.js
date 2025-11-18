@@ -66,6 +66,7 @@ event.removeAllTagsFrom('gtceu:manasteel_block')
 event.removeAllTagsFrom('gtceu:terrasteel_block')
 event.removeAllTagsFrom('gtceu:gaiasteel_block')
 event.removeAllTagsFrom('ae2:ender_dust')
+
 });
 
 
@@ -89,7 +90,21 @@ event.removeAllTagsFrom('ad_astra:cryo_fuel')
 event.removeAllTagsFrom('ad_astra:oxygen')
 event.removeAllTagsFrom('ad_astra:oil')
 event.removeAllTagsFrom('ad_astra:fuel')
-
 event.remove('create:bottomless/allow', 'minecraft:lava')
 event.remove('create:bottomless/allow', 'minecraft:water')
+
 });
+
+
+ServerEvents.tags('item', event => {
+event.add('botania:elvenwood', 'botanicadds:elvenwood')
+event.add('botania:elvenwood', 'botanicadds:elvenwood_log')
+event.add('minecraft:logs_that_burn', 'botanicadds:elvenwood')
+event.add('minecraft:logs_that_burn', 'botanicadds:elvenwood_log')
+event.add('minecraft:logs', 'botanicadds:elvenwood')
+event.add('minecraft:logs', 'botanicadds:elvenwood_log')
+event.add('forge:lenses', 'botania:lens_normal')
+event.add('forge:lenses', 'botania:terra_lens')
+event.add('forge:lenses', 'botania:pixie_lens')
+event.add('forge:lenses', 'botania:gaia_lens')
+})

@@ -13,7 +13,7 @@ ServerEvents.recipes(event => {
     # event.recipes.botania.elven_trade(['output'], 'input')
     # event.recipes.botania.elven_trade(['output1', 'output2'], ['input1', 'input2'])
     #
-    # pure daisy: (time is in minutes, e.g. 1 = 60s, 0.5 = 30s, etc)
+    # pure daisy: (time is in minutes, e.g. 1 = 60s, 2 = 120s, etc. non-whole numbers dont work >:/ grrr)
     # event.recipes.botania.pure_daisy('output', 'input', time)
     #
     # apothecary: (automatically adds seeds and water)
@@ -52,8 +52,8 @@ ServerEvents.recipes(event => {
     event.recipes.botania.mana_infusion('botania:mana_powder', 'gtceu:asteroid_stone_dust', 100)
     event.recipes.botania.mana_infusion('botania:mana_glass', 'gtceu:tempered_glass', 100)
 
-    event.recipes.botania.pure_daisy('minecraft:clay', 'minecraft:sand', 0.5)
-    event.recipes.botania.pure_daisy('minecraft:clay', 'kubejs:asteroid_sand', 0.5)
+    event.recipes.botania.pure_daisy('minecraft:clay', 'minecraft:sand', 1)
+    event.recipes.botania.pure_daisy('minecraft:clay', 'kubejs:asteroid_sand', 1)
     
     event.shaped('4x gtceu:manasteel_dust', [
         'ABA',
@@ -112,6 +112,34 @@ ServerEvents.recipes(event => {
         
 
     //mana manipulation blocks
+    event.shaped('botania:hourglass', [
+        'AAA',
+        'BCB',
+        'AAA'
+    ], {
+        A: 'gtceu:gold_plate',
+        B: 'botania:mana_glass_pane',
+        C: 'gtceu:manasteel_plate'
+    })
+
+    event.shaped('botania:forest_eye', [
+        'ABA',
+        'BCB',
+        'ABA'
+    ], {
+        A: 'gtceu:manasteel_plate',
+        B: 'botania:livingrock',
+        C: 'minecraft:ender_eye'
+    })
+
+    event.shaped('botanicadds:dreaming_pool', [
+        '   ',
+        'A A',
+        'AAA'
+    ], {
+        A: 'botanicadds:dreamrock'
+    })
+
     event.shaped('botania:bellows', [
         'AAA',
         'BC ',
@@ -144,10 +172,21 @@ ServerEvents.recipes(event => {
         'CBD',
         'AAA'
     ], {
-        A: '#botania:dreamwood_logs',
-        B: '#botania:petals',
+        A: 'botanicadds:elvenwood_log',
+        B: 'botania:mana_spreader',
         C: 'gtceu:double_elementium_plate',
-        D: '#c:glass_panes'
+        D: 'botania:pixie_lens'
+    })
+
+    event.shaped('botania:gaia_spreader', [
+        'AAA',
+        'CBD',
+        'AAA'
+    ], {
+        A: '#botania:dreamwood_logs',
+        B: 'botania:elven_spreader',
+        C: 'gtceu:double_gaiasteel_plate',
+        D: 'botania:gaia_lens'
     })
 
     event.shaped('botania:mana_spreader', [
@@ -158,7 +197,7 @@ ServerEvents.recipes(event => {
         A: '#botania:livingwood_logs',
         B: '#botania:petals',
         C: 'gtceu:double_copper_plate',
-        D: 'botania:pixie_lens'
+        D: '#c:glass_panes'
     })
 
     //manasteel cooking
@@ -272,6 +311,203 @@ ServerEvents.recipes(event => {
         B: 'gtceu:elementium_plate'
     })
 
+    event.shaped('botania:elementium_shovel', [
+        'EBD',
+        ' A ',
+        ' A '
+    ], {
+        A: 'minecraft:stick',
+        B: 'gtceu:elementium_plate',
+        D: '#forge:tools/hammers',
+        E: '#forge:tools/files'
+    })
+    
+    event.shaped('botania:elementium_sword', [
+        ' B ',
+        'EBD',
+        ' A '
+    ], {
+        A: 'minecraft:stick',
+        B: 'gtceu:elementium_plate',
+        D: '#forge:tools/hammers',
+        E: '#forge:tools/files'
+    })
+
+    event.shaped('botania:elementium_pickaxe', [
+        'BCC',
+        'EAD',
+        ' A '
+    ], {
+        A: 'minecraft:stick',
+        B: 'gtceu:elementium_plate',
+        C: 'botania:elementium_ingot',
+        D: '#forge:tools/hammers',
+        E: '#forge:tools/files'
+    })
+
+    event.shaped('botania:elementium_hoe', [
+        'BCD',
+        'EA ',
+        ' A '
+    ], {
+        A: 'minecraft:stick',
+        B: 'gtceu:elementium_plate',
+        C: 'botania:elementium_ingot',
+        D: '#forge:tools/hammers',
+        E: '#forge:tools/files'
+    })
+
+    event.shaped('botania:elementium_axe', [
+        'BCD',
+        'BA ',
+        'EA '
+    ], {
+        A: 'minecraft:stick',
+        B: 'gtceu:elementium_plate',
+        C: 'botania:elementium_ingot',
+        D: '#forge:tools/hammers',
+        E: '#forge:tools/files'
+    })
+
+    event.shaped('botania:manasteel_shovel', [
+        'EBD',
+        ' A ',
+        ' A '
+    ], {
+        A: 'minecraft:stick',
+        B: 'gtceu:manasteel_plate',
+        D: '#forge:tools/hammers',
+        E: '#forge:tools/files'
+    })
+    
+    event.shaped('botania:manasteel_sword', [
+        ' B ',
+        'EBD',
+        ' A '
+    ], {
+        A: 'minecraft:stick',
+        B: 'gtceu:manasteel_plate',
+        D: '#forge:tools/hammers',
+        E: '#forge:tools/files'
+    })
+
+    event.shaped('botania:manasteel_pick', [
+        'BCC',
+        'EAD',
+        ' A '
+    ], {
+        A: 'minecraft:stick',
+        B: 'gtceu:manasteel_plate',
+        C: 'botania:manasteel_ingot',
+        D: '#forge:tools/hammers',
+        E: '#forge:tools/files'
+    })
+
+    event.shaped('botania:manasteel_hoe', [
+        'BCD',
+        'EA ',
+        ' A '
+    ], {
+        A: 'minecraft:stick',
+        B: 'gtceu:manasteel_plate',
+        C: 'botania:manasteel_ingot',
+        D: '#forge:tools/hammers',
+        E: '#forge:tools/files'
+    })
+
+    event.shaped('botania:manasteel_axe', [
+        'BCD',
+        'BA ',
+        'EA '
+    ], {
+        A: 'minecraft:stick',
+        B: 'gtceu:manasteel_plate',
+        C: 'botania:manasteel_ingot',
+        D: '#forge:tools/hammers',
+        E: '#forge:tools/files'
+    })
+
+    event.shaped('botania:terra_axe', [
+        'BEC',
+        'BA ',
+        'DA '
+    ], {
+        A: 'botania:livingwood_twig',
+        B: 'gtceu:terrasteel_plate',
+        C: '#forge:tools/hammers',
+        D: '#forge:tools/files',
+        E: 'botania:terrasteel_ingot'
+        
+    })
+
+    event.shaped('botania:terra_sword', [
+        ' B ',
+        'DBC',
+        ' A '
+    ], {
+        A: 'botania:livingwood_twig',
+        B: 'gtceu:terrasteel_plate',
+        C: '#forge:tools/hammers',
+        D: '#forge:tools/files'
+    })
+
+    event.shaped('botania:terra_pick', [
+        'BFE',
+        'DAC',
+        ' A '
+    ], {
+        A: 'botania:livingwood_twig',
+        B: 'gtceu:terrasteel_plate',
+        C: '#forge:tools/hammers',
+        D: '#forge:tools/files',
+        E: 'botania:terrasteel_ingot',
+        F: 'botania:mana_tablet'
+    })
+
+    event.shaped('botania:terrasteel_boots', [
+        'ACA',
+        'BDB',
+        ' B '
+    ], {
+        A: 'botania:livingwood_twig',
+        B: 'gtceu:terrasteel_plate',
+        C: 'botania:rune_winter',
+        D: 'botania:manasteel_boots'
+    })
+
+    event.shaped('botania:terrasteel_leggings', [
+        'ACA',
+        'BDB',
+        ' B '
+    ], {
+        A: 'botania:livingwood_twig',
+        B: 'gtceu:terrasteel_plate',
+        C: 'botania:rune_autumn',
+        D: 'botania:manasteel_leggings'
+    })
+
+    event.shaped('botania:terrasteel_helmet', [
+        'ACA',
+        'BDB',
+        ' B '
+    ], {
+        A: 'botania:livingwood_twig',
+        B: 'gtceu:terrasteel_plate',
+        C: 'botania:rune_spring',
+        D: 'botania:manasteel_helmet'
+    })
+    
+    event.shaped('botania:terrasteel_chestplate', [
+        '',
+        '',
+        ''
+    ], {
+        A: 'botania:livingwood_twig',
+        B: 'gtceu:terrasteel_plate',
+        C: 'botania:rune_summer',
+        D: 'botania:manasteel_chestplate'
+    })
+
 
 
     //lenses
@@ -301,6 +537,16 @@ ServerEvents.recipes(event => {
     ], {
        A: 'gtceu:elementium_ring',
        B: 'botania:elf_glass_pane'
+    })
+
+    event.shaped('botania:lens_magnet', [
+        'ABC',
+        '   ',
+        '   '
+    ], {
+        A: 'gtceu:magnetic_iron_rod',
+        B: 'botania:lens_normal',
+        C: 'gtceu:gold_rod'
     })
 
     // event.shaped('botania:', [

@@ -73,4 +73,5 @@ ServerEvents.recipes(event => {
         B: 'minecraft:redstone'
     })
 
+    event.shapeless('minecraft:coarse_dirt', ['minecraft:dirt', '#forge:gravel'])
 });

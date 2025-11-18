@@ -1,0 +1,25 @@
+
+# Welcome to the UltimateSpawn config.
+# There you can define a preffered dimension and coordinates for player spawning. 
+# It is **preffered** to reload the game after changes,
+# but it **may** work just fine each config saving to disk and adapt in real time.
+[General]
+	# There you can define a default dimension to spawn. Syntax: modid:world_id. You can use '/execute in' tab-completion to find a list of available dimensions.
+	dimension = "minecraft:overworld"
+	# There you can define if UltimateSpawn should spawn players in specific coordinates or not. If true, then UltimateSpawn will try to spawn in place with specified x, y, z config options, if false - UltimateSpawn will try to find the safe spot to spawn players in the spawn chunks or near them.
+	useCoordinates = false
+	# There you can define if UltimateSpawn should check whether there is a safe position to spawn a player on specified coordinates in X, Y and Z config entries. If true, then UltimateSpawn will strictly respect specified coordinates and try to spawn a player even if there are blocks/unsafe stuff such as lava and etc.., if false - UltimateSpawn will try to find the safe spot to spawn players close to the specified coordinates.
+	strictCoordinatesMode = false
+	# There you can define if UltimateSpawn should spawn players below this Y level. In rare cases may be shifted to speed up the search of the safe spawn spot. If this value is lower than lower bound, then it will be ignored and throw an error in chat.
+	#Range: -2048.0 ~ 2048.0
+	yUpperBound = 140.0
+	# There you can define if UltimateSpawn should spawn players above this Y level. In rare cases may be shifted to speed up the search of the safe spawn spot. If this value is higher than higher bound, then it will be ignored and throw an error in chat.
+	#Range: -2048.0 ~ 2048.0
+	yLowerBound = 60.0
+	#Range: -1.7976931348623157E308 ~ 1.7976931348623157E308
+	x = 0.0
+	#Range: -1.7976931348623157E308 ~ 1.7976931348623157E308
+	y = 100.0
+	#Range: -1.7976931348623157E308 ~ 1.7976931348623157E308
+	z = 0.0
+

@@ -2,5 +2,13 @@ enabled: true
 
 debugMode: false
 
+coloredAtoms: true
+
+useMaterialColors: false
+
+onlyShowOnShift: true
+
+defaultColor: �e
+
 scale: 20
 
