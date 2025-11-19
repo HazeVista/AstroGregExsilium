@@ -1,7 +1,7 @@
 ServerEvents.recipes(event => {
     //replace
 
-    //input
+    //#region input
     event.replaceInput({input: 'create:copper_sheet'}, 'create:copper_sheet', 'gtceu:copper_plate');
     event.replaceInput({input: 'create:zinc_ingot'}, 'create:zinc_ingot', 'gtceu:zinc_ingot');
     event.replaceInput({input: 'gtceu:energized_steel_ingot'}, 'gtceu:energized_steel_ingot','powah:steel_energized');
@@ -27,9 +27,13 @@ ServerEvents.recipes(event => {
     event.replaceInput({input: 'gtceu:elementium_ingot'}, 'gtceu:elementium_ingot','botania:elementium_ingot');
     event.replaceInput({input: 'gtceu:elementium_block'}, 'gtceu:elementium_block','botania:elementium_block');
     event.replaceInput({input: 'gtceu:elementium_nugget'}, 'gtceu:elementium_nugget','botania:elementium_nugget');
+    event.replaceInput({input: 'gtceu:mana_diamond_gem',}, 'gtceu:mana_diamond_gem', 'botania:mana_diamond');
+    event.replaceInput({input: 'gtceu:mana_diamond_block',}, 'gtceu:mana_diamond_block', 'botania:mana_diamond_block');
+    event.replaceInput({input: 'gtceu:dragonstone_gem'}, 'gtceu:dragonstone_gem', 'botania:dragonstone')
+    event.replaceInput({input: 'gtceu:dragonstone_block'}, 'gtceu:dragonstone_block', 'botania:dragonstone_block')
+    //#endregion
     
-    
-    //output
+    //#region output
     event.replaceOutput({output: 'gtceu:desh_nugget'}, 'gtceu:desh_nugget', 'ad_astra:desh_nugget')
     event.replaceOutput({output: 'gtceu:desh_ingot'}, 'gtceu:desh_ingot', 'ad_astra:desh_ingot')
     event.replaceOutput({output: 'gtceu:desh_block'}, 'gtceu:desh_block', 'ad_astra:desh_block')
@@ -49,5 +53,9 @@ ServerEvents.recipes(event => {
     event.replaceOutput({output: 'gtceu:elementium_ingot'}, 'gtceu:elementium_ingot','botania:elementium_ingot');
     event.replaceOutput({output: 'gtceu:elementium_block'}, 'gtceu:elementium_block','botania:elementium_block');
     event.replaceOutput({output: 'gtceu:elementium_nugget'}, 'gtceu:elementium_nugget','botania:elementium_nugget');
+    event.replaceOutput({output: 'gtceu:mana_diamond_block',}, 'gtceu:mana_diamond_block', 'botania:mana_diamond_block')
+    event.replaceOutput({output: 'gtceu:mana_diamond_gem',}, 'gtceu:mana_diamond_gem', 'botania:mana_diamond');
+    event.replaceOutput({output: 'gtceu:dragonstone_gem'}, 'gtceu:dragonstone_gem', 'botania:dragonstone')
+    event.replaceOutput({output: 'gtceu:dragonstone_block'}, 'gtceu:dragonstone_block', 'botania:dragonstone_block')
 
 });

@@ -1,6 +1,6 @@
 ServerEvents.recipes(event => {
 
-    //misc
+    //#region misc
     event.recipes.gtceu.brewery('brew_salt_water')
         .notConsumable('gtceu:salt_dust')
         .inputFluids('minecraft:water 1000')
@@ -15,9 +15,19 @@ ServerEvents.recipes(event => {
         .duration(300)
         .EUt(30)
 
+    event.recipes.gtceu.extractor('extract_blaze_block')
+        .itemInputs('botania:blaze_block')
+        .outputFluids(Fluid.of('gtceu:blaze', 5184))
+        .duration(792)
+        .EUt(30)
 
+    // event.recipes.gtceu.macerator('macerate_blaze_block')
+    //     .itemInputs('botania:blaze_block')
+    //     .itemOutputs('36x minecraft:blaze_powder')
+    //     .duration(792)
+    //     .EUt(2)                /*output doesnt work ffs*/
     
-    //ender air
+    //#region ender air
     event.recipes.gtceu.centrifuge('centrifuge_ender_air')
         .inputFluids('gtceu:ender_air 10000')
         .chancedOutput('gtceu:ender_pearl_dust', 2500, 0)
@@ -33,7 +43,7 @@ ServerEvents.recipes(event => {
 
 
 
-    //asteroid dust processing
+    //#region asteroid dust proc
     event.recipes.gtceu.ore_washer('washing_asteroid_dust')
         .itemInputs('gtceu:asteroid_stone_dust')
         .inputFluids('minecraft:water 100')
@@ -66,7 +76,7 @@ ServerEvents.recipes(event => {
 
 
         
-    //bottling
+    //#region bottling
     event.recipes.gtceu.assembler('bottle_ender_air')
         .itemInputs('minecraft:glass_bottle')
         .inputFluids('gtceu:ender_air 250')

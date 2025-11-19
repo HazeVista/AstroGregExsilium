@@ -1,14 +1,6 @@
 ServerEvents.recipes(event => {
 
-  event.shaped('minecraft:shears', [
-    'AB ',
-    'BC '
-  ], {
-    A: '#forge:tools/hammers',
-    B: 'gtceu:iron_plate',
-    C: '#forge:tools/files'
-  })
-
+  //#region misc
   event.shaped('gtceu:rubber_plate', [
     'A',
     'B',
@@ -114,7 +106,9 @@ ServerEvents.recipes(event => {
         .duration(200)
         .EUt(7)
 
-    //stone crushing recipes    
+
+
+    //#region stone crushing 
     event.recipes.farmersdelight.cutting('minecraft:cobblestone', '#forge:tools/hammers', 'minecraft:gravel')
     event.recipes.farmersdelight.cutting('kubejs:cobbled_asteroid_stone', '#forge:tools/pickaxes', 'kubejs:asteroid_gravel')
     event.recipes.farmersdelight.cutting('kubejs:asteroid_stone', '#forge:tools/pickaxes', 'kubejs:cobbled_asteroid_stone')
@@ -255,8 +249,12 @@ ServerEvents.recipes(event => {
       .duration(16)
       .EUt(7)
 
+      
 
-    //clay, fireclay, and coke brick recipes
+    //#region clay, fireclay, coke
+    event.recipes.botania.pure_daisy('minecraft:clay', 'minecraft:sand', 75)
+    event.recipes.botania.pure_daisy('minecraft:clay', 'kubejs:asteroid_sand', 75)
+
     event.shaped(Item.of('8x gtceu:compressed_fireclay'), [
         'AAA',
         'ABA',

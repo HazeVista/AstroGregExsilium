@@ -1,5 +1,6 @@
 ServerEvents.recipes(event => {
 
+    //#region Botania KubeJS guide
     /* Helper for botania recipes:
     # The documentation is pretty poor and the format is extremely inconsistent, 
     # so I had to add my own documentation here.
@@ -13,7 +14,7 @@ ServerEvents.recipes(event => {
     # event.recipes.botania.elven_trade(['output'], 'input')
     # event.recipes.botania.elven_trade(['output1', 'output2'], ['input1', 'input2'])
     #
-    # pure daisy: (time is in minutes, e.g. 1 = 60s, 2 = 120s, etc. non-whole numbers dont work >:/ grrr)
+    # pure daisy: (time amounts make no fucking sense, 600=4 mins somehow. 1t = 0.125)
     # event.recipes.botania.pure_daisy('output', 'input', time)
     #
     # apothecary: (automatically adds seeds and water)
@@ -25,16 +26,17 @@ ServerEvents.recipes(event => {
     # terra plate: (probably won't be used)
     # event.recipes.botania.terra_plate('output', ['input1', 'input2'], mana_amount)
     #
-    # orechids: (time is also in minutes here)
+    # orechids: (time is also in shit units here)
     # event.recipes.botania.orechid('output_block', 'input_block', time)
     # event.recipes.botania.orechid_ignem('output_block', 'input_block', 1)
     #
     # I couldnt figure out the marimorphiposa or brewing but we probably won't have to worry abt them 
     */
+    //#endregion
 
+    
 
-
-    //crafting 'machine' recipes
+    //#region crafting block recipes
     event.shaped('botania:apothecary_default', [
         'ABA',
         ' A ',
@@ -44,16 +46,23 @@ ServerEvents.recipes(event => {
         B: '#botania:petals'
     })
     
+    event.shaped('botanicadds:dreaming_pool', [
+        '   ',
+        'A A',
+        'AAA'
+    ], {
+        A: 'botanicadds:dreamrock'
+    })
+    //#endregion
 
 
-    //low level materials
+    
+    //#region low level materials
     event.recipes.botania.mana_infusion('botania:manaweave_cloth', 'farmersdelight:canvas', 5000)
     event.recipes.botania.mana_infusion('botania:mana_powder', 'gtceu:stone_dust', 100)
     event.recipes.botania.mana_infusion('botania:mana_powder', 'gtceu:asteroid_stone_dust', 100)
     event.recipes.botania.mana_infusion('botania:mana_glass', 'gtceu:tempered_glass', 100)
-
-    event.recipes.botania.pure_daisy('minecraft:clay', 'minecraft:sand', 1)
-    event.recipes.botania.pure_daisy('minecraft:clay', 'kubejs:asteroid_sand', 1)
+    event.recipes.botania.mana_infusion('minecraft:nether_wart_block', 'botania:blaze_block', 36000, 'botania:alchemy_catalyst')
     
     event.shaped('4x gtceu:manasteel_dust', [
         'ABA',
@@ -109,9 +118,16 @@ ServerEvents.recipes(event => {
         .duration(50)
         .EUt(7)
 
+    event.recipes.gtceu.forge_hammer('forge_hammer_gaia_shard')
+        .itemInputs('botania:life_essence')
+        .itemOutputs('5x botanicadds:gaia_shard')
+        .duration(100)
+        .EUt(2000)
+    //#endregion
+
         
 
-    //mana manipulation blocks
+    //#region mana manipulation
     event.shaped('botania:hourglass', [
         'AAA',
         'BCB',
@@ -130,14 +146,6 @@ ServerEvents.recipes(event => {
         A: 'gtceu:manasteel_plate',
         B: 'botania:livingrock',
         C: 'minecraft:ender_eye'
-    })
-
-    event.shaped('botanicadds:dreaming_pool', [
-        '   ',
-        'A A',
-        'AAA'
-    ], {
-        A: 'botanicadds:dreamrock'
     })
 
     event.shaped('botania:bellows', [
@@ -200,7 +208,41 @@ ServerEvents.recipes(event => {
         D: '#c:glass_panes'
     })
 
-    //manasteel cooking
+    event.shaped('botania:mana_distributor', [
+        'BBB',
+        'CAC',
+        'BBB'
+    ], {
+       A: 'gtceu:manasteel_frame',
+       B: 'botania:livingrock',
+       C: 'gtceu:manasteel_ring'
+    })
+
+    event.shaped('2x botania:pump', [
+        'ADA',
+        'C B',
+        'ADA'
+    ], {
+       A: 'gtceu:manasteel_plate',
+       B: '#forge:tools/hammers',
+       C: '#forge:tools/wrenches',
+       D: 'botania:livingrock'
+    })
+
+    event.shaped('botania:alchemy_catalyst', [
+        'BBB',
+        'CAC',
+        'BBB'
+    ], {
+        A: 'gtceu:flawless_mana_diamond_gem',
+        B: 'botania:livingrock',
+        C: 'gtceu:gold_plate'
+    })
+    //#endregion
+
+
+
+    //#region manasteel cooking
         event.recipes.gtceu.primitive_blast_furnace('manasteel_charcoal')
         .itemInputs('gtceu:manasteel_dust', 'minecraft:charcoal')
         .itemOutputs('botania:manasteel_ingot', 'gtceu:tiny_dark_ash_dust')
@@ -230,10 +272,11 @@ ServerEvents.recipes(event => {
         .itemInputs('gtceu:manasteel_dust', 'gtceu:coke_dust')
         .itemOutputs('botania:manasteel_ingot', 'gtceu:tiny_dark_ash_dust')
         .duration(750)
+    //#endregion
 
 
 
-    //trinkets
+    //#region trinkets
     event.shaped('botania:crafting_halo', [
         'ABA',
         'BCB',
@@ -282,9 +325,48 @@ ServerEvents.recipes(event => {
         C: 'gtceu:gold_ring'
     })
 
+    event.shaped('botania:sextant', [
+        ' AC',
+        ' AA',
+        'BBB'
+    ], {
+        A: 'botania:livingwood_twig',
+        B: 'gtceu:manasteel_plate',
+        C: 'gtceu:manasteel_rod'
+    })
+
+    event.shaped('botania:super_lava_pendant', [
+        ' A ',
+        'A A',
+        'BA '
+    ], {
+        A: 'botania:red_string',
+        B: 'botania:lava_pendant'
+    })
+    
+    event.shaped('botania:super_cloud_pendant', [
+        ' A ',
+        'A A',
+        'BA'
+    ], {
+        A: 'botania:red_string',
+        B: 'botania:cloud_pendant'
+    })
+
+    event.shaped('botania:mana_mirror', [
+        ' BC',
+        ' AB',
+        'A  '
+    ], {
+        A: 'botania:livingwood_twig',
+        B: 'gtceu:terrasteel_plate',
+        C: 'botania:mana_tablet'
+    })
+    //#endregion
+
 
     
-    //tools
+    //#region tools
     event.shaped('botania:manasteel_shears', [
         'AB',
         'BC'
@@ -498,19 +580,20 @@ ServerEvents.recipes(event => {
     })
     
     event.shaped('botania:terrasteel_chestplate', [
-        '',
-        '',
-        ''
+        'ACA',
+        'BDB',
+        ' B '
     ], {
         A: 'botania:livingwood_twig',
         B: 'gtceu:terrasteel_plate',
         C: 'botania:rune_summer',
         D: 'botania:manasteel_chestplate'
     })
+    //#endregion
 
 
 
-    //lenses
+    //#region lenses
     event.shaped('botania:lens_normal', [
         'BAB'
     ], {
@@ -548,6 +631,211 @@ ServerEvents.recipes(event => {
         B: 'botania:lens_normal',
         C: 'gtceu:gold_rod'
     })
+    //#endregion
+
+
+
+    //#region rings
+    event.shaped('botania:mana_ring', [
+        'CB ',
+        'BAB',
+        ' B '
+    ], {
+        A: 'gtceu:manasteel_ring',
+        B: 'gtceu:manasteel_plate',
+        C: 'botania:mana_tablet'
+    })
+
+    event.shaped('botania:magnet_ring', [
+        'CB ',
+        'BAB',
+        ' B '
+    ], {
+        A: 'gtceu:manasteel_ring',
+        B: 'gtceu:manasteel_plate',
+        C: 'botania:lens_magnet'
+    })
+    
+    event.shaped('botania:aura_ring', [
+        'CB ',
+        'BAB',
+        ' B '
+    ], {
+        A: 'gtceu:manasteel_ring',
+        B: 'gtceu:manasteel_plate',
+        C: 'botania:rune_mana'
+    })
+    
+    event.shaped('botania:water_ring', [
+        'CBD',
+        'BAB',
+        'DBC'
+    ], {
+        A: 'gtceu:manasteel_ring',
+        B: 'gtceu:manasteel_plate',
+        C: 'botania:rune_water',
+        D: '#minecraft:fishes'
+    })
+    
+    event.shaped('botania:swap_ring', [
+        'CBD',
+        'BAB',
+        'EBF'
+    ], {
+        A: 'gtceu:manasteel_ring',
+        B: 'gtceu:manasteel_plate',
+        C: 'minecraft:clay',
+        D: '#forge:stone',
+        E: '#minecraft:logs',
+        F: '#minecraft:leaves'
+    })
+    
+    event.shaped('botania:dodge_ring', [
+        'CB ',
+        'BAB',
+        ' BD'
+    ], {
+        A: 'gtceu:manasteel_ring',
+        B: 'gtceu:manasteel_plate',
+        C: 'botania:rune_air',
+        D: 'botania:rune_fire'
+    })
+    
+    event.shaped('botania:mining_ring', [
+        'CBD',
+        'BAB',
+        'DBC'
+    ], {
+        A: 'gtceu:manasteel_ring',
+        B: 'gtceu:manasteel_plate',
+        C: 'botania:rune_earth',
+        D: 'minecraft:diamond_pickaxe'
+    })
+    
+    event.shaped('botania:magnet_ring_greater', [
+        'CB ',
+        'BAB',
+        ' B '
+    ], {
+        A: 'botania:magnet_ring',
+        B: 'gtceu:terrasteel_plate',
+        C: 'botania:lens_magnet'
+    })
+     
+    event.shaped('botania:aura_ring_greater', [
+        'CB ',
+        'BAB',
+        ' B '
+    ], {
+        A: 'botania:aura_ring',
+        B: 'gtceu:terrasteel_plate',
+        C: 'botania:rune_mana'
+    })
+        
+    event.shaped('botania:mana_ring_greater', [
+        'CB ',
+        'BAB',
+        ' B '
+    ], {
+        A: 'botania:mana_ring',
+        B: 'gtceu:terrasteel_plate',
+        C: 'botania:mana_tablet'
+    })
+
+    event.shaped('botania:pixie_ring', [
+        'CB ',
+        'BAB',
+        ' B '
+    ], {
+        A: 'gtceu:elementium_ring',
+        B: 'gtceu:elementium_plate',
+        C: 'botania:pixie_dust'
+    })
+
+    event.shaped('botania:reach_ring', [
+        'CB ',
+        'BAB',
+        ' B '
+    ], {
+        A: 'gtceu:elementium_ring',
+        B: 'gtceu:elementium_plate',
+        C: 'botania:rune_pride'
+    })
+
+    event.shaped('botanicadds:mana_ring_gaia', [
+        'CB ',
+        'BAB',
+        ' B '
+    ], {
+        A: 'botania:mana_ring_greater',
+        B: 'gtceu:gaiasteel_plate',
+        C: 'botania:rune_mana'
+    })
+
+    event.shaped('botanicadds:aura_ring_gaia', [
+        'CB ',
+        'BAB',
+        ' B '
+    ], {
+        A: 'botania:aura_ring_greater',
+        B: 'gtceu:gaiasteel_plate',
+        C: 'botania:rune_aura'
+    })
+    //#endregion
+
+
+
+    //#region spark augments
+    event.shaped('botania:spark_upgrade_dispersive', [
+        'CAC',
+        'ABA',
+        'CAC'
+    ], {
+        A: 'gtceu:manasteel_plate',
+        B: 'botania:rune_water',
+        C: 'botania:pixie_dust'
+    })
+
+    event.shaped('botania:spark_upgrade_dominant', [
+        'CAC',
+        'ABA',
+        'CAC'
+    ], {
+        A: 'gtceu:manasteel_plate',
+        B: 'botania:rune_fire',
+        C: 'botania:pixie_dust'
+    })
+   
+    event.shaped('botania:spark_upgrade_recessive', [
+        'CAC',
+        'ABA',
+        'CAC'
+    ], {
+        A: 'gtceu:manasteel_plate',
+        B: 'botania:rune_earth',
+        C: 'botania:pixie_dust'
+    })
+    
+    event.shaped('botania:spark_upgrade_isolated', [
+        'CAC',
+        'ABA',
+        'CAC'
+    ], {
+        A: 'gtceu:manasteel_plate',
+        B: 'botania:rune_air',
+        C: 'botania:pixie_dust'
+    }) 
+
+    event.shaped('botania:spark_changer', [
+        'ABA',
+        'BCB',
+        'ABA'
+    ], {
+        A: 'gtceu:elementium_plate',
+        B: 'botania:livingrock',
+        C: 'gtceu:manasteel_plate'
+    })
+    //#endregion
 
     // event.shaped('botania:', [
     //     '',

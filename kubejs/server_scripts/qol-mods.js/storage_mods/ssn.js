@@ -1,16 +1,6 @@
 ServerEvents.recipes(event => {
 //greggified by @tobyxlebron
-event.shaped('storagenetwork:master', [
-    'CBC',
-    'BAB',
-    'CBC'
-], {
-    A: 'gtceu:potin_gear',
-    B: 'storagenetwork:kabel',
-    C: '#gtceu:circuits/ulv'
-})
-
-//With machines
+//#region with machines
 event.recipes.gtceu.assembler('assembler_kabels')
     .itemInputs('#forge:glass', 'gtceu:steel_double_wire')
     .inputFluids('gtceu:rubber 576')
@@ -25,7 +15,7 @@ event.recipes.gtceu.assembler('assembler_kabels_alt')
     .duration(100)
     .EUt(7)
 
-//Without
+//#region without machines
 event.shaped('8x storagenetwork:kabel', [
     'AAA',
     'BCB',
@@ -222,6 +212,16 @@ event.shaped('storagenetwork:request_expanded', [
 ], {
     A: 'storagenetwork:request',
     B: 'minecraft:crafting_table'
+})
+
+event.shaped('storagenetwork:master', [
+    'CBC',
+    'BAB',
+    'CBC'
+], {
+    A: 'gtceu:potin_gear',
+    B: 'storagenetwork:kabel',
+    C: '#gtceu:circuits/ulv'
 })
 
 });

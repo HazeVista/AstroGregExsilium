@@ -1,3 +1,4 @@
+//#region icon sets
 global.iconSets = {
     dull: GTMaterialIconSet.DULL,
     metallic: GTMaterialIconSet.METALLIC,
@@ -24,7 +25,8 @@ global.iconSets = {
     fluid: GTMaterialIconSet.FLUID,
     radioactive: GTMaterialIconSet.RADIOACTIVE
 }
-
+//#endregion
+//#region flags
 global.flags = {
     // Generic flags
     no_unify: GTMaterialFlags.NO_UNIFICATION,
@@ -82,7 +84,8 @@ global.flags = {
     no_abs_recipe: GTMaterialFlags.DISABLE_ALLOY_BLAST,
     not_alloy: GTMaterialFlags.DISABLE_ALLOY_PROPERTY
 }
-
+//#endregion
+//#region voltage helpers
 global.v = {
     'ulv': GTValues.V[GTValues.ULV],
     'lv': GTValues.V[GTValues.LV],
@@ -134,7 +137,8 @@ global.vha = {
     'uv': GTValues.VHA[GTValues.UV],
     'uhv': GTValues.VHA[GTValues.UHV]
 };
-
+//#endregion
+//#region periodic elem helper
 global.periodicTableElement = (material, type) => {
     let mat = GTMaterials.get(material);
     switch(type) {
@@ -153,7 +157,8 @@ global.periodicTableElement = (material, type) => {
         }  
     }
 }
-
+//#endregion
+//#region blast property helper
 global.blastProperty = (material, temperature, gasTier, voltage, duration) => {
     let mat = GTMaterials.get(material);
     mat.setProperty(PropertyKey.BLAST, new BlastProperty(temperature, gasTier, voltage, duration, -1, -1));

@@ -1,4 +1,10 @@
 ServerEvents.recipes(event => {
+    //#region remove input
+    const toRemoveIn = ['ad_astra:moon_desh_ore', 'ad_astra:deepslate_desh_ore', 'ad_astra:ostrum_plate', 'ad_astra:calorite_plate', 'ad_astra:desh_plate',
+        'minecraft:netherite_upgrade_smithing_template', 'ad_astra:fan', 'ad_astra:steel_ingot', 'ad_astra:ice_shard', 'gtceu:gaiasteel_ingot'
+    ];
+
+    //#region remove output
     const toRemoveOut = ['ae2:charger', 'ae2:drive', 'ae2:chest', 'createdieselgenerators:pumpjack_hole', 'expatternprovider:ex_inscriber', 'ad:astra_oxygen', 'waystones:warp_dust',
         'expatternprovider:ex_charger', 'expatternprovider:crystal_fixer', 'expatternprovider:caner', 'exmachinis:item_buffer', 'ae2:crystal_resonance_generator', 'laserio:laser_node',
         'ae2:vibration_chamber', 'expatternprovider:circuit_cutter', 'minecraft:mycelium', 'create:brass_block', 'create:zinc_block', 'createaddition:straw', 'ad_astra:hydrogen',
@@ -25,6 +31,7 @@ ServerEvents.recipes(event => {
         'botania:terrasteel_leggings', 'botania:terrasteel_boots', 'botania:terra_sword', 'botania:terra_axe', 'botania:terra_pick'
     ]
 
+    //#region remove recipe id
     const toRemoveId = ['create:haunting/crimson_fungus', 'create:haunting/warped_fungus', 'create:milling/compat/ae2/sky_stone_block', 'create:milling/compat/ae2/fluix_crystal', 'minecraft:coarse_dirt',
         'create:milling/compat/ae2/ender_pearl', 'create:milling/compat/ae2/certus_quartz', 'create:crushing/raw_platinum_ore', 'create:crushing/raw_platinum_block', 'farmersdelight:stove',
         'create:crushing/raw_uranium_ore', 'create:crushing/raw_uranium_block', 'create:crafting/appliances/slime_ball', 'minecraft:fire_charge', 'gtceu:shapeless/dust_bronze', 'farmersdelight:skillet',
@@ -74,22 +81,25 @@ ServerEvents.recipes(event => {
         'simplylight:bulb', 'simplylight:edge_light', 'simplylight:', 'simplylight:lamp_post', 'simplylight:illuminant_block', 'gtceu:shaped/nugget_assembling_gaiasteel', 'gtceu:shaped/block_compress_gaiasteel', 
         'gtceu:shapeless/nugget_disassembling_gaiasteel', 'gtceu:shapeless/block_decompress_gaiasteel', 'botania:thorn_chakram', 'gtceu:centrifuge/ender_air_separation', 'botania:lens_magnet',
         'botania:mana_spreader', 'botania:elven_spreader', 'botania:bauble_box', 'botania:fabulous_pool_upgrade', 'botania:shimmerrock', 'botania:forest_eye', 'botania:hourglass', 'botania:spawner_mover',
-        'botania:slime_bottle', 'botania:world_seed'
+        'botania:slime_bottle', 'botania:world_seed', 'botania:spawner_claw', 'botania:sextant', 'botania:astrolabe', 'botania:black_hole_talisman', 'botania:spark_changer', 'botania:mana_distributor', 
+        'botania:pump', 'botania:knockback_belt', 'botania:travel_belt', 'botania:super_travel_belt', 'botania:speed_up_belt', 'botania:flighttiara_0', 'botania:super_cloud_pendant', 'botania:super_lava_pendant',
+        'botania:conjuration_catalyst', 'botania:alchemy_catalyst', 'botania:conjuration_catalyst', 'botania:mana_fluxfield', 'botania:redstone_root', 'botania:petal_apothecary/clayconia', 
+        'botania:mana_infusion/clayconia_chibi', 'botania:floating_clayconia', 'botania:floating_clayconia_chibi', 'minecraft:blaze_powder', /*'create:crushing/blaze_rod',*/
+        'gtceu:shapeless/block_decompress_mana_diamond_gem', 'botania:mana_mirror'
     ];
 
+    //#region remove type
     const toRemoveType = ['expatternprovider:cutter', 'ae2:inscriber', 'ae2:charger', 'create:crushing', 'ad_astra:alloying', 'createaddition:liquid_burning', 'create:pressing',
         'botania:orechid_ignem', 'botania:orechid', 'create:potion_mixing', 'ad_astra:compressing', 'ad_astra:cryo_freezing', 'ad_astra:nasa_workbench', 'create:deploying',
-        'create:automatic_brewing', 'powah:heat_sources', 'functionalstorage:dissolution', 'create:mystery_conversion'
+        'create:automatic_brewing', 'powah:heat_sources', 'functionalstorage:dissolution', 'create:mystery_conversion',
     ];
 
-    const toRemoveIn = ['ad_astra:moon_desh_ore', 'ad_astra:deepslate_desh_ore', 'ad_astra:ostrum_plate', 'ad_astra:calorite_plate', 'ad_astra:desh_plate',
-        'minecraft:netherite_upgrade_smithing_template', 'ad_astra:fan', 'ad_astra:steel_ingot', 'ad_astra:ice_shard', 'gtceu:gaiasteel_ingot'
-    ];
-
+    //#region remove whole mod
     const toRemoveMod = ['createoreexcavation', 'scannable', 'storagenetwork', 'powah', 'grapplemod', 'fluxnetworks', 'trashcans', 'toolbelt', 'constructionwand',
 
     ];
 
+    //#region helpers
     toRemoveOut.forEach(element => {
         event.remove({ output: element});
     });
@@ -110,7 +120,7 @@ ServerEvents.recipes(event => {
         event.remove({ mod: element})
     });
 
-    //oddball
+    //#region oddball
     event.remove({input: 'botania:terra_sword'})
     event.remove({type: 'gtceu:gas_collector'})
     event.remove({output: 'farmersdelight:wheat_dough'});
@@ -139,6 +149,8 @@ ServerEvents.recipes(event => {
     event.remove({id: /botania:glimmering_stripped_.*/})
     event.remove({id: /botania:glimmering_stripped_.*_log/})
     event.remove({id: /botania:glimmering_.*_log/})
-
+    event.remove({id: /botania:.*_ring/})
+    event.remove({id: /botania:.*_ring_greater/})
+    event.remove({id: /botania:spark_upgrade_.*/})
 });
 

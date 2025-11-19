@@ -1,5 +1,5 @@
 ServerEvents.recipes(event => {
-    //shaped recipes
+    //#region shaped recipes
     event.shaped('create:precision_mechanism', [
         'ADA',
         'BCB',
@@ -389,7 +389,8 @@ ServerEvents.recipes(event => {
 
     event.shapeless('create:speedometer', [`create:gearbox`,`minecraft:compass`])
 
-    // Andesite Alloy mostly by @digestlotion
+    //#region Andesite Alloy
+    //mostly by @digestlotion
     event.shapeless('2x gtceu:andesite_dust', ['gtceu:stone_dust', 'gtceu:nether_quartz_dust'])
     event.shapeless('2x gtceu:andesite_dust', ['gtceu:stone_dust', 'gtceu:quartz_sand_dust'])
     event.shapeless('2x gtceu:andesite_dust', ['gtceu:asteroid_stone_dust', 'gtceu:nether_quartz_dust'])
@@ -467,7 +468,8 @@ ServerEvents.recipes(event => {
         .duration(120)
         .EUt(7)
 
-    // create mixing by @digestlotion
+    //#region create mixing 
+    //by @digestlotion
     event.recipes.create.mixing('2x create:andesite_alloy', ['gtceu:iron_dust', 'gtceu:andesite_dust']).heatRequirement('lowheated')
     event.recipes.create.mixing('2x create:andesite_alloy', ['minecraft:iron_ingot', 'gtceu:andesite_dust']).heatRequirement('lowheated')
     event.recipes.create.mixing('2x create:andesite_alloy', ['gtceu:iron_dust', 'minecraft:andesite']).heatRequirement('lowheated')
@@ -513,16 +515,16 @@ ServerEvents.recipes(event => {
     event.recipes.create.mixing('minecraft:clay', ['#forge:sand', Fluid.of('minecraft:water', 125)])
 
 
-    //create filling
+    //#region create filling
     event.recipes.create.filling('minecraft:clay', [Fluid.of('minecraft:water', 125), '#forge:sand'])
     event.recipes.create.filling('gtceu:treated_wood_planks', [Fluid.of('gtceu:creosote', 125), '#minecraft:planks'])
 
-    //create washing
+    //#region create washing
     event.recipes.create.splashing(['minecraft:clay_ball', Item.of('minecraft:iron_nugget').withChance(0.5)], 'kubejs:asteroid_sand')
     event.recipes.create.splashing(['minecraft:clay_ball', Item.of('minecraft:gold_nugget').withChance(0.2)], 'minecraft:red_sand')
     event.recipes.create.splashing(['minecraft:clay_ball', Item.of('minecraft:clay_ball').withChance(0.5)], 'minecraft:sand')
 
-    //create press
+    //#region create press
     event.recipes.create.pressing(
         [`gtceu:iron_plate`],
         [`minecraft:iron_ingot`])
@@ -553,7 +555,7 @@ ServerEvents.recipes(event => {
     platemetals.forEach(pressingplates)
 
     //create crafts & additions
-    //polarizer
+    //#region polarizer
     event.custom({
         type: "createaddition:charging",
         input: {
@@ -580,7 +582,7 @@ ServerEvents.recipes(event => {
         energy: 448
     })
 
-    //rolling (primitive lathe)
+    //#region rolling (primitive lathe)
     event.custom({type: "createaddition:rolling",
         input: {item: "create:andesite_alloy"},
         result: {item: "create:shaft", count: 4}})
@@ -613,7 +615,7 @@ ServerEvents.recipes(event => {
     }       
     rollermetals.forEach(rollerrods)
 
-    //other metalwork
+    //#region other metalwork
     event.custom({type: "createaddition:rolling",
         input: {item: 'gtceu:iron_bolt'},
         result: {item: 'gtceu:iron_screw'}})
@@ -656,7 +658,7 @@ ServerEvents.recipes(event => {
     earlymetals.forEach(earlymetalwork)
 
 
-    //shaped power recipes
+    //#region shaped power recipes
     event.shapeless('createaddition:small_light_connector', 
             ['create:electron_tube', 
             'createaddition:connector'])
@@ -723,7 +725,7 @@ ServerEvents.recipes(event => {
         D: 'gtceu:magnetic_steel_rod'
     })
 
-    //create ore excavation
+    //#region create ore excavation
     event.shaped('createoreexcavation:drill', [
         'A  ',
         ' B '

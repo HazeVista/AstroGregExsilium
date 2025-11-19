@@ -1,6 +1,6 @@
 ServerEvents.recipes(event => {
 
-    //data disk
+    //#region data disk
     event.recipes.gtceu.circuit_assembler('assemble_data_disk')
         .itemInputs('gtceu:plastic_printed_circuit_board', 'gtceu:cpu_chip', '2x gtceu:ram_chip',
             '2x gtceu:tin_bolt', '8x gtceu:fine_red_alloy_wire', '2x gtceu:polyethylene_plate')

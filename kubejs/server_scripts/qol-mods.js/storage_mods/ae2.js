@@ -1,4 +1,11 @@
 ServerEvents.recipes(event => {
+    //#region various gtceu
+    event.recipes.gtceu.mixer('mixer_ender_eye_dust')
+        .itemInputs('gtceu:ender_pearl_dust', 'minecraft:blaze_powder')
+        .itemOutputs('2x gtceu:ender_eye_dust')
+        .duration(160)
+        .EUt(9)
+        
     event.recipes.gtceu.polarizer('polarize_certus')
         .itemInputs('gtceu:certus_quartz_gem')
         .itemOutputs('ae2:charged_certus_quartz_crystal')
@@ -60,6 +67,24 @@ ServerEvents.recipes(event => {
         .duration(200)
         .EUt(450)
 
+    event.recipes.gtceu.assembler('assemble_cpu')
+        .itemInputs('gtceu:futura_alloy_frame', '2x ae2:fluix_glass_cable', '2x ae2:calculation_processor', '1x ae2:logic_processor')
+        .inputFluids('gtceu:soldering_alloy 144')
+        .itemOutputs('ae2:crafting_unit')
+        .circuit(1)
+        .duration(80)
+        .EUt(384)
+
+    event.recipes.gtceu.assembler('assemble_mega_cpu')
+        .itemInputs('gtceu:futura_alloy_frame', '2x ae2:crafting_unit', '2x ae2:logic_processor', '1x megacells:accumulation_processor')
+        .inputFluids('gtceu:soldering_alloy 288')
+        .itemOutputs('megacells:mega_crafting_unit')
+        .circuit(1)
+        .duration(80)
+        .EUt(7680)
+
+
+    //#region various shaped
     event.shaped('ae2:capacity_card', [
         'AB'
     ],{
@@ -224,22 +249,6 @@ ServerEvents.recipes(event => {
         E: 'ae2:quartz_glass'
     })
 
-    event.recipes.gtceu.assembler('assemble_cpu')
-        .itemInputs('gtceu:futura_alloy_frame', '2x ae2:fluix_glass_cable', '2x ae2:calculation_processor', '1x ae2:logic_processor')
-        .inputFluids('gtceu:soldering_alloy 144')
-        .itemOutputs('ae2:crafting_unit')
-        .circuit(1)
-        .duration(80)
-        .EUt(384)
-
-    event.recipes.gtceu.assembler('assemble_mega_cpu')
-        .itemInputs('gtceu:futura_alloy_frame', '2x ae2:crafting_unit', '2x ae2:logic_processor', '1x megacells:accumulation_processor')
-        .inputFluids('gtceu:soldering_alloy 288')
-        .itemOutputs('megacells:mega_crafting_unit')
-        .circuit(1)
-        .duration(80)
-        .EUt(7680)
-
     event.shaped('expatternprovider:wireless_tool' , [
         ' A ',
         'BCB',
@@ -270,11 +279,20 @@ ServerEvents.recipes(event => {
         C: 'ae2:quartz_vibrant_glass'
     })
 
-    event.recipes.gtceu.mixer('mixer_ender_eye_dust')
-        .itemInputs('gtceu:ender_pearl_dust', 'minecraft:blaze_powder')
-        .itemOutputs('2x gtceu:ender_eye_dust')
-        .duration(160)
-        .EUt(9)
+
+
+    //#region inscription
+    event.shaped('gtceu:inscription_matrix', [
+        'ADA',
+        'CBC',
+        'AEA'
+    ], {
+        A: 'gtceu:futura_alloy_plate',
+        B: 'gtceu:hv_laser_engraver',
+        C: 'gtceu:hv_emitter',
+        D: 'gtceu:glass_lens',
+        E: '#gtceu:circuits/iv'
+    });
 
     event.recipes.gtceu.inscription('inscribe_logic_processor')
         .itemInputs('gtceu:gold_plate')
@@ -382,6 +400,8 @@ ServerEvents.recipes(event => {
         D: '#gtceu:tools/crafting_wrenches'
     });
 
+
+    //#region ae2 machines
     event.shaped('merequester:requester', [
         'ADA',
         'EBE',
@@ -392,18 +412,6 @@ ServerEvents.recipes(event => {
         C: 'ae2:engineering_processor',
         D: '#ae2:interface',
         E: 'ae2:crafting_accelerator'
-    });
-
-    event.shaped('gtceu:inscription_matrix', [
-        'ADA',
-        'CBC',
-        'AEA'
-    ], {
-        A: 'gtceu:futura_alloy_plate',
-        B: 'gtceu:hv_laser_engraver',
-        C: 'gtceu:hv_emitter',
-        D: 'gtceu:glass_lens',
-        E: '#gtceu:circuits/iv'
     });
 
     event.shaped('ae2:condenser', [

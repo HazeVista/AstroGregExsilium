@@ -1,5 +1,14 @@
 ServerEvents.recipes(event => {
-    //Vanilla
+    //#region vanilla tweaks
+    event.shaped('minecraft:shears', [
+        'AB ',
+        'BC '
+    ], {
+        A: '#forge:tools/hammers',
+        B: 'gtceu:iron_plate',
+        C: '#forge:tools/files'
+    })
+
     event.shaped('minecraft:sticky_piston', [
         'A',
         'B',
@@ -48,7 +57,7 @@ ServerEvents.recipes(event => {
         B: 'gtceu:magnetic_iron_screw'
     })
 
-    //quality of life logs
+    //#region quality of life logs
     event.shaped('16x minecraft:stick', [
         'A  ',
         'A  '

@@ -1,5 +1,6 @@
 "use strict";
 
+//#region grapplemod guide
 /* Credits to the TerraFirmaGreg team (@nebby1999S) for this script
  *
  * NBT Structure of a Grappling Hook:
@@ -46,6 +47,7 @@
  * }
  */
 
+//#region parameters
 function registerGrapplemodItemTags(event) {
 
 	global.GRAPPLEMOD_DISABLED_ITEMS.forEach(item => {
@@ -204,6 +206,7 @@ function registerGrapplingHookRecipes(event) {
         },
     ]
 
+    //#region helper method
     /**
      * Helper method for creating an upgrade recipe utilizing the GrappleCustomization class. The method itself returns the REcipeBuilder so you can modify it further
      * @param {InputItem_[]} upgradeItems The items required to craft this upgrade
@@ -274,7 +277,7 @@ function registerGrapplingHookRecipes(event) {
         })
         return recipeBuilder;
     }
-
+    //#region hook recipe
     event.recipes.kubejs.shaped('grapplemod:grapplinghook', [
         'A ',
         'B ',
@@ -327,27 +330,7 @@ function registerGrapplingHookRecipes(event) {
         }
     }).id('gtceu:grapplemod/shapeless/repair');
 
-    //Upgrade: Max Length
-    shapelessUpgradeRecipe(['farmersdelight:rope'], (customization, orig, result) => {
-        let maxLen = customization.maxlen;
-        if (maxLen >= ADDITIVE_UPGRADES_MINMAX.maxLen.maxValue)
-            return null;
-
-        maxLen = Math.min(ADDITIVE_UPGRADES_MINMAX.maxLen.maxValue, maxLen + 20);
-        customization.maxlen = maxLen;
-        return result;
-    }, 'gtceu.grapplemod.upgrades.maxlen').id('gtceu:grapplemod/upgrades/maxlen');
-    shapelessUpgradeRecipe(['#forge:tools/knives'], (customization, orig, result) => {
-        let maxLen = customization.maxlen;
-        if (maxLen <= ADDITIVE_UPGRADES_MINMAX.maxLen.minValue) {
-            return null;
-        }
-
-        maxLen = Math.max(ADDITIVE_UPGRADES_MINMAX.maxLen.minValue, maxLen - 20);
-        customization.maxlen = maxLen;
-        return result;
-    }, 'gtceu.grapplemod.downgrades.maxlen').replaceIngredient('grapplemod:grapplinghook', 'farmersdelight:rope').id("gtceu:grapplemod/downgrades/maxlen_decrease")
-
+    //#region motor
     //Upgrade: Motor
     motorUpgrades.forEach(motorUpgradeType => {
         //Add motor
@@ -468,6 +451,27 @@ function registerGrapplingHookRecipes(event) {
             .keepIngredient(`gtceu:${forcefieldUpgradeType.electricTier}_field_generator`)
             .id(`gtceu:grapplemod/downgrades/forcefield/${forcefieldUpgradeType.electricTier}`);
     })
+    //region misc upgrades
+    //Upgrade: Max Length
+    shapelessUpgradeRecipe(['farmersdelight:rope'], (customization, orig, result) => {
+        let maxLen = customization.maxlen;
+        if (maxLen >= ADDITIVE_UPGRADES_MINMAX.maxLen.maxValue)
+            return null;
+
+        maxLen = Math.min(ADDITIVE_UPGRADES_MINMAX.maxLen.maxValue, maxLen + 20);
+        customization.maxlen = maxLen;
+        return result;
+    }, 'gtceu.grapplemod.upgrades.maxlen').id('gtceu:grapplemod/upgrades/maxlen');
+    shapelessUpgradeRecipe(['#forge:tools/knives'], (customization, orig, result) => {
+        let maxLen = customization.maxlen;
+        if (maxLen <= ADDITIVE_UPGRADES_MINMAX.maxLen.minValue) {
+            return null;
+        }
+
+        maxLen = Math.max(ADDITIVE_UPGRADES_MINMAX.maxLen.minValue, maxLen - 20);
+        customization.maxlen = maxLen;
+        return result;
+    }, 'gtceu.grapplemod.downgrades.maxlen').replaceIngredient('grapplemod:grapplinghook', 'farmersdelight:rope').id("gtceu:grapplemod/downgrades/maxlen_decrease")
     //Upgrade: Magnet
     magnetUpgrades.forEach(magnetUpgradeTier => {
         //Add Magnet
@@ -591,6 +595,7 @@ function registerGrapplingHookRecipes(event) {
         .keepIngredient('gtceu:damascus_steel_drill_head')
         .id('gtceu:grapplemod/downgrades/doublehook')
 
+    //#region throw angles
     // Increase Vertical Throw Angle
     shapedUpgradeRecipe([
         'A',
@@ -664,6 +669,7 @@ function registerGrapplingHookRecipes(event) {
     }, 'gtceu.grapplemod.downgrades.angle').kjsMirror(false).id('gtceu:grapplemod/downgrades/angle')
 }
 
+//#region other items
 ServerEvents.recipes(event => {
     event.shaped('grapplemod:repeller', [
         'CDC',

@@ -1,6 +1,10 @@
-//tag removal
+//#region remove tags
 
-//items
+//make sure items, fluids, and blocks go under their respective regions or they won't work
+
+
+
+//#region items
 ServerEvents.tags('item', event => {
 event.removeAllTagsFrom('ad_astra:steel_rod')
 event.removeAllTagsFrom('ad_astra:steel_block')
@@ -66,12 +70,16 @@ event.removeAllTagsFrom('gtceu:manasteel_block')
 event.removeAllTagsFrom('gtceu:terrasteel_block')
 event.removeAllTagsFrom('gtceu:gaiasteel_block')
 event.removeAllTagsFrom('ae2:ender_dust')
+event.removeAllTagsFrom('gtceu:mana_diamond_gem')
+event.removeAllTagsFrom('gtceu:mana_diamond_block')
+event.removeAllTagsFrom('gtceu:dragonstone_gem')
+event.removeAllTagsFrom('gtceu:dragonstone_block')
 
 });
 
 
 
-//blocks
+//#region blocks
 ServerEvents.tags('block', event => {
 event.removeAllTagsFrom('ad_extendra:raw_plutonium_block')
 event.removeAllTagsFrom('ad_extendra:plutonium_block' )
@@ -83,7 +91,7 @@ event.removeAllTagsFrom('gtceu:raw_desh_block')
 });
 
 
-//fluids
+//#region fluids
 ServerEvents.tags('fluid', event => {
 event.removeAllTagsFrom('ad_astra:hydrogen')
 event.removeAllTagsFrom('ad_astra:cryo_fuel')
@@ -95,7 +103,12 @@ event.remove('create:bottomless/allow', 'minecraft:water')
 
 });
 
+//#region add tags
 
+
+
+
+//#region items
 ServerEvents.tags('item', event => {
 event.add('botania:elvenwood', 'botanicadds:elvenwood')
 event.add('botania:elvenwood', 'botanicadds:elvenwood_log')
@@ -107,4 +120,5 @@ event.add('forge:lenses', 'botania:lens_normal')
 event.add('forge:lenses', 'botania:terra_lens')
 event.add('forge:lenses', 'botania:pixie_lens')
 event.add('forge:lenses', 'botania:gaia_lens')
+event.add('forge:rods/wooden', 'botania:livingwood_twig')
 })

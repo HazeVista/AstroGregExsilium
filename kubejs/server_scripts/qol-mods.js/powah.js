@@ -1,5 +1,5 @@
 ServerEvents.recipes(event => {
-    //basic components
+    //#region basic components
     event.shaped('powah:player_aerial_pearl', [
         'BCB',
         'CAC',
@@ -120,7 +120,7 @@ ServerEvents.recipes(event => {
         C: 'minecraft:lava_bucket'
     })
 
-        event.shaped('4x powah:dielectric_paste', [
+    event.shaped('4x powah:dielectric_paste', [
         'AAA',
         'BBC'
     ], {
@@ -191,7 +191,7 @@ ServerEvents.recipes(event => {
         .duration(100)
         .EUt(120)
 
-    //capacitors
+    //#region capacitors
     event.shaped('4x powah:capacitor_basic', [
         ' CB',
         'CAC',
@@ -250,9 +250,14 @@ ServerEvents.recipes(event => {
     //     C: 'gtceu:fine__wire'
     // })
 
-    //player transmitters
 
-    //batteries
+
+    //#region player transmitters
+
+
+
+
+    //#region batteries
     event.shaped('powah:battery_starter', [
         'CAC',
         'ABA',

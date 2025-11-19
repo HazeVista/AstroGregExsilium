@@ -1,5 +1,5 @@
 //credit to @trulyno and the Star Technology team for the builder code
-// Ignore this
+//#region properties
 const $IngotProperty = global.IngotProperty;
 const $DustProperty = global.DustProperty;
 const $FluidProperty = global.FluidProperty;
@@ -7,7 +7,7 @@ const $BlastProperty = global.BlastProperty;
 const $FluidPipeProperties = global.FluidPipeProperties;
 const $PropertyKey = global.PropertyKey
 
-// Icon Sets
+//#region icon sets
 const DULL = GTMaterialIconSet.DULL;
 const METALLIC = GTMaterialIconSet.METALLIC;
 const MAGNETIC = GTMaterialIconSet.MAGNETIC;
@@ -33,7 +33,7 @@ const LAPIS = GTMaterialIconSet.LAPIS;
 const FLUID = GTMaterialIconSet.FLUID;
 const RADIOACTIVE = GTMaterialIconSet.RADIOACTIVE;
 
-// Flags
+//#region flags
 // Generic flags
 const no_unify = GTMaterialFlags.NO_UNIFICATION;
 const electrolyze = GTMaterialFlags.DECOMPOSITION_BY_ELECTROLYZING;
@@ -91,7 +91,7 @@ const blast_furnace_triple = GTMaterialFlags.BLAST_FURNACE_CALCITE_TRIPLE;
 const no_abs_recipe = GTMaterialFlags.DISABLE_ALLOY_BLAST;
 const not_alloy = GTMaterialFlags.DISABLE_ALLOY_PROPERTY;
 
-// Useful functions
+//#region voltage functions
 const V = (voltage) => {
     return global.v[voltage];
 }
@@ -110,7 +110,7 @@ const VHA = (voltage) => {
 
 GTCEuStartupEvents.registry('gtceu:material', event => {
 
-    // Periodic table materials
+    //#region periodic materials
     const element = global.periodicTableElement;
     // Ingots
     element('neptunium', 'ingot')
@@ -148,7 +148,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
 
     //Fluid Pipes
 
-    // Materials from elements
+    //#region material builders
     const compIngot = (name, elements, color, icon, blasting, flags) => {
         if (blasting.includes(blasting[0])){
             event.create(name).ingot().components(elements).color(color).iconSet(icon).flags(flags).blastTemp(blasting[0], blasting[1], blasting[2], blasting[3]);
@@ -283,12 +283,13 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
         event.create(name).ingot().plasma().components(elements).color(color).iconSet(icon).flags(flags).blastTemp(blasting[0], blasting[1], blasting[2], blasting[3]).cableProperties(cable[0], cable[1], cable[2], cable[3]);
     }
 
-    //dusts
+    //#region misc dusts
     compDust('andesite_alloy', ['1x andesite', '1x iron'], 0xa6a08f, [centrifuge]);
     compDust('asteroid_stone', [], 0x70276b, [])
     compDustOreIngot('desh', [/*'1x desh'*/], 0xD38B4C, [])
 
-    //superconductors
+
+    //#region superconductors
     conductorSuper('energized_steel', [], 0xbaa172, [], [V('lv'), 4, 0, true], [150, 130, 3, 12000]);
     conductorSuper('blazing_ostrum', [], 0x8ee8ed, [1700, 'low', VA('mv'), 1200], [V('mv'), 8, 0, true], [190, 150, 3, 14000]);
     conductorSuper('niotic_calorite', [], 0xe4eb60, [1700, 'low', VA('hv'), 1500], [V('hv'), 16, 0, true], [220, 170, 3, 16000]);
@@ -299,12 +300,16 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     conductorSuper('neptunium_molybdenum_selenide', [], 0x088a5c, [10000, 'higher', VA('uv'), 3000], [V('uv'), 96, 0, true], [2000, 550, 3, 48000]);
     // conductorSuper('', [], 0xccffff, [10799, 'highest', VA('uhv'), 3300], [V('uhv'), 128, 0, true], [3200, 660, 3, 96000]);
 
-    //AE2
+
+    //#region ae2
     compIngotLiquidSeccolor('futura_alloy', ['4x stainless_steel', '1x mystery'], 0xebb7ea, 0x000000, SHINY, [1700, 'low', 400, 1200], [frame, plates, rod, dense_plate, mortar_grind, block])
 
-    //Botania
+
+    //#region botania
     compIngotLiquid('manasteel', [], 0x228cc9, SHINY, [1000, 'low', 120, 400], [foil, gear, plates, rod, dense_plate, ring, frame, bolt_and_screw, mortar_grind])
     compIngotLiquid('terrasteel', [], 0x159e1e, SHINY, [1700, 'low', VA('mv'), 800], [foil, gear, plates, rod, dense_plate, ring, bolt_and_screw,frame, mortar_grind])
     compIngotLiquid('elementium', [], 0xed64d4, SHINY, [3500, 'mid', VA('iv'), 1600], [foil, gear, plates, rod, dense_plate, ring, bolt_and_screw,frame])
     compIngotLiquid('gaiasteel', [], 0x8c2929, RADIOACTIVE, [7100, 'high', VA('zpm'), 2400], [foil, gear, plates, rod, dense_plate, ring, bolt_and_screw,frame])
+    compGem('mana_diamond', [], 0x47eaed, DIAMOND, [crystallizable])
+    compGem('dragonstone', [], 0xed64d4, DIAMOND, [crystallizable])
 });

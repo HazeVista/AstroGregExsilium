@@ -4,8 +4,8 @@
         "botania:runic_altar": {
             "botanicadds:rune_tp": true,
             "botanicadds:rune_energy": true,
-            "botanicadds:mana_tesseract": true,
-            "botanicadds:tesseract_attuner": true
+            "botanicadds:mana_tesseract": false,
+            "botanicadds:tesseract_attuner": false
         },
         "botania:petal_apothecary": {
             "botanicadds:zeitheron_head": true,
@@ -23,34 +23,34 @@
             "botanicadds:overgrowth_seed": false
         },
         "botania:elven_trade": {
-            "botanicadds:elven_lapis": true,
-            "botanicadds:elven_lapis_block": true,
+            "botanicadds:elven_lapis": false,
+            "botanicadds:elven_lapis_block": false,
             "botanicadds:elvenwood_log": false,
             "botanicadds:dreamrock": false
         },
         "botania:mana_infusion": {
-            "botanicadds:mana_lapis": true,
-            "botanicadds:mana_lapis_block": true,
-            "botanicadds:gaia_shard": true
+            "botanicadds:mana_lapis": false,
+            "botanicadds:mana_lapis_block": false,
+            "botanicadds:gaia_shard": false
         },
         "botania:pure_daisy": {"botanicadds:dreamwood_from_elvenwood": false},
         "minecraft:crafting": {
-            "botanicadds:terra_catalyst": true,
-            "botanicadds:mana_lapis_block_1": true,
-            "botanicadds:elven_lapis_block_1": true,
+            "botanicadds:terra_catalyst": false,
+            "botanicadds:mana_lapis_block_1": false,
+            "botanicadds:elven_lapis_block_1": false,
             "botanicadds:gaiasteel_block": true,
             "botanicadds:gaiasteel_ingot_from_nuggets": true,
-            "botanicadds:mana_lapis_1": true,
-            "botanicadds:elven_lapis_1": true,
+            "botanicadds:mana_lapis_1": false,
+            "botanicadds:elven_lapis_1": false,
             "botanicadds:gaiasteel_ingots_from_block": true,
             "botanicadds:gaiasteel_nugget": true,
             "botanicadds:gaia_plate": false,
             "botanicadds:gaiasteel_pylon": false,
             "botanicadds:elvenwood": true,
-            "botanicadds:aura_ring_gaia": true,
-            "botanicadds:mana_ring_gaia": true,
+            "botanicadds:aura_ring_gaia": false,
+            "botanicadds:mana_ring_gaia": false,
             "botanicadds:mana_stealer_sword": false,
-            "botanicadds:elven_altar": true,
+            "botanicadds:elven_altar": false,
             "botanicadds:elven_brewery": true,
             "botanicadds:dreaming_pool": false,
             "botanicadds:sculk_sensor": true,

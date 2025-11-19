@@ -18,7 +18,7 @@
                 "botanicadds:flowers/rainute": true,
                 "botanicadds:flowers/glaciflora": true
             },
-            "botanicadds:tesseract_attunable": {"botanicadds:mana_tesseract": true},
+            "botanicadds:tesseract_attunable": {"botanicadds:mana_tesseract": false},
             "botania:functional_special_flowers": {
                 "botanicadds:flowers/necroidus": true,
                 "botanicadds:flowers/apicaria": true
@@ -74,7 +74,7 @@
                 "botanicadds:dreaming_pool": true,
                 "botanicadds:gaiasteel_block": true,
                 "botanicadds:mana_lapis_block": true,
-                "botanicadds:mana_tesseract": true,
+                "botanicadds:mana_tesseract": false,
                 "botanicadds:elven_lapis_block": true
             },
             "botania:special_floating_flowers": {
@@ -91,7 +91,7 @@
             "minecraft:needs_iron_tool": {
                 "botanicadds:gaiasteel_block": true,
                 "botanicadds:mana_lapis_block": true,
-                "botanicadds:mana_tesseract": true,
+                "botanicadds:mana_tesseract": false,
                 "botanicadds:elven_lapis_block": true
             }
         }

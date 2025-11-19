@@ -1,0 +1,103 @@
+
+["Endoflame Config"]
+	#Production of endoflame
+	#This is mana each tick, to know how much mana/sec multiply by 20 [3]
+	#Range: > 1
+	"Endoflame Production" = 6
+
+["Hydroangeas / Thermalily Config"]
+	#Hydroangeas duration
+	#How many ticks should hydroangeas last [72000]
+	#Put a value equal or below 0 to disable it
+	"Hydroangeas Ticks" = 72000
+	#Hydroangeas production
+	#How much mana should it produce each tick [1]
+	#Range: > 1
+	"Hydroangeas Production" = 2
+	#Thermalily production
+	#How much mana should it produce each tick [20]
+	#Range: > 1
+	"Thermalily Production" = 20
+
+["Rosa Arcana Config"]
+	#Production of rosa arcana (player exp)
+	#This is mana for each player exp point [50]
+	#Range: > 1
+	"Rosa Arcana Production" = 50
+	#Production of rosa arcana (exp orb)
+	#This is mana for each orb exp point [50]
+	#Range: > 1
+	"Rosa Arcana Orb Production" = 50
+
+["Munchdew Config"]
+	#Production of munchdew (per leaf)
+	#This is mana for each eaten leaf [160]
+	#Range: > 1
+	"Munchdew Production" = 220
+	#Range of munchdew (horizontal)
+	#The horizontal range of munchdew [8]
+	#Range: > 1
+	"Munchdew Range" = 8
+	#Range of munchdew (vertical)
+	#The vertical range of munchdew [16]
+	#Range: > 1
+	"Munchdew Range Y" = 16
+
+["Entropinnyum Config"]
+	#Production of entropinnyum
+	#How much mana entropinnyum produces each explosion (also defines max mana) [6500]
+	#Range: > 1
+	"Entropinnyum Prod" = 9000
+
+["Kekimurus Config"]
+	#Production of kekimurus
+	#How much mana kekimurus produces each slice [1800]
+	#Range: > 1
+	"Kekimurus Prod" = 1800
+
+["Gourmaryllis Config"]
+	#Production multiplier for gourmaryllis
+	#By how much should the mana generated be multiplied [1]
+	#This value is multiplied with the food value to give the final mana
+	#Range: 0.0 ~ 1.7976931348623157E308
+	"Gourmaryllis Mult" = 1.0
+
+["Narslimmus Config"]
+	#Production multiplier for narslimmus
+	#By how much should the mana generated be multiplied [1]
+	#This value is multiplied with the original mana given from the slime
+	#Range: 0.0 ~ 1.7976931348623157E308
+	"Narslimmus Mult" = 1.0
+
+["Spectrolus Config"]
+	#Production each sheep for spectrolus
+	#How much mana should be produced for each sheep sheared [5000]
+	#Range: > 0
+	"Spectrolus Sheep Mult" = 5000
+	#Production each baby sheep for spectrolus
+	#How much mana should be produced for each baby sheep sheared [1]
+	#Range: > 0
+	"Spectrolus Baby Sheep Mult" = 1
+	#Production each item for spectrolus
+	#How much mana should be produced for each item [1200]
+	#Range: > 0
+	"Spectrolus Item Mult" = 1200
+
+["Dandelifeon Config"]
+	#Production multiplier for dandelifeon
+	#By how much should the mana produced each cell be multiplied [1]
+	#Range: 0.0 ~ 1.7976931348623157E308
+	"Dandelifeon Mult" = 1.5
+
+["Rafflowsia Config"]
+	#Production multiplier for rafflowsia
+	#By how much should the mana produced each flower be multiplied [1]
+	#Range: 0.0 ~ 1.7976931348623157E308
+	"Rafflowsia Mult" = 1.0
+
+["Shulk Me Not Config"]
+	#Production multiplier for shulk me not
+	#By how much should the mana produced each shulker be multiplied [1]
+	#Range: 0.0 ~ 1.7976931348623157E308
+	"Shulk Me Not Mult" = 1.0
+
