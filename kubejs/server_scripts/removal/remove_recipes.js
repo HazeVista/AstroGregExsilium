@@ -28,7 +28,13 @@ ServerEvents.recipes(event => {
         'botania:open_bucket', 'botania:elementium_pickaxe', 'botania:elementium_shovel', 'botania:elementium_hoe', 'botania:elementium_axe', 'botania:gaia_spreader',
         'botania:elementium_sword', 'botania:ender_dagger', 'botania:manasteel_pick', 'botania:manasteel_shovel', 'botania:manasteel_hoe', 'botania:manasteel_axe', 'botania:manasteel_sword',
         'botania:crafting_halo', 'botania:laputa_shard', 'gtceu:ulv_solar_panel', 'dustrial_decor:cardboard_helmet', 'dustrial_decor:cardboard_chestplate', 'botania:terrasteel_chestplate',
-        'botania:terrasteel_leggings', 'botania:terrasteel_boots', 'botania:terra_sword', 'botania:terra_axe', 'botania:terra_pick'
+        'botania:terrasteel_leggings', 'botania:terrasteel_boots', 'botania:terra_sword', 'botania:terra_axe', 'botania:terra_pick', 'botania:third_eye', 'botania:orechid_ignem',
+        'botania:floating/heisei_dream', 'botania:vinculotus', 'botania:floating_vinculotus', 'create:tree_fertilizer', 'botania:agricarnation', 'botania:agricarnation_chibi', 
+        'botania:floating_agricarnation', 'botania:floating_agricarnation_chibi', 'botania:hyacidus', 'botania:floating_hyacidus', 'botania:labellia', 'botania:floating_labellia',
+        'botania:loonium', 'botania:floating_loonium', 'botania:spectranthemum', 'botania:floating_spectranthemum', 'botania:daffomill', 'botania:floating_daffomill', 'botania:narslimmus',
+        'botania:floating_narslimmus', 'botania:medumone', 'botania:floating_medumone', 'botania:shulk_me_not', 'botania:floating_shulk_me_not', 'botania:rafflowsia', 'botania:floating_rafflowsia',
+        'botania:manastar', 'botania:floating_manastar', 'botania:tigerseye', 'botania:floating_tigerseye', 'botania:rannuncarpus', 'botania:floating_rannuncarpus', 'botania:rannuncarpus_chibi', 
+        'botania:floating_rannuncarpus_chibi', 'botania:tangleberrie', 'botania:floating_tangleberrie', 'botania:vine_ball', 'botania:orechid', 'botania:endoflame', 'botania:hydroangeas'
     ]
 
     //#region remove recipe id
@@ -84,10 +90,11 @@ ServerEvents.recipes(event => {
         'botania:slime_bottle', 'botania:world_seed', 'botania:spawner_claw', 'botania:sextant', 'botania:astrolabe', 'botania:black_hole_talisman', 'botania:spark_changer', 'botania:mana_distributor', 
         'botania:pump', 'botania:knockback_belt', 'botania:travel_belt', 'botania:super_travel_belt', 'botania:speed_up_belt', 'botania:flighttiara_0', 'botania:super_cloud_pendant', 'botania:super_lava_pendant',
         'botania:conjuration_catalyst', 'botania:alchemy_catalyst', 'botania:conjuration_catalyst', 'botania:mana_fluxfield', 'botania:redstone_root', 'botania:petal_apothecary/clayconia', 
-        'botania:mana_infusion/clayconia_chibi', 'botania:floating_clayconia', 'botania:floating_clayconia_chibi', 'minecraft:blaze_powder', /*'create:crushing/blaze_rod',*/
-        'gtceu:shapeless/block_decompress_mana_diamond_gem', 'botania:mana_mirror'
+        'botania:mana_infusion/clayconia_chibi', 'botania:floating_clayconia', 'botania:floating_clayconia_chibi', 'minecraft:blaze_powder',
+        'gtceu:shapeless/block_decompress_mana_diamond_gem', 'botania:mana_mirror', 'gtceu:shapeless/manadiamond_block_deconstruct', 'gtceu:shaped/block_compress_mana_diamond',
+        'gtceu:shapeless/dragonstone_block_deconstruct', 'gtceu:shaped/block_compress_mana_diamond', 'botania:spark', 'botania:petal_apothecary/vazkii_head', 'botania:runic_altar/head',
+        'botania:heisei_dream', 'gtceu:extruder/nan_certificate'
     ];
-
     //#region remove type
     const toRemoveType = ['expatternprovider:cutter', 'ae2:inscriber', 'ae2:charger', 'create:crushing', 'ad_astra:alloying', 'createaddition:liquid_burning', 'create:pressing',
         'botania:orechid_ignem', 'botania:orechid', 'create:potion_mixing', 'ad_astra:compressing', 'ad_astra:cryo_freezing', 'ad_astra:nasa_workbench', 'create:deploying',
@@ -152,5 +159,6 @@ ServerEvents.recipes(event => {
     event.remove({id: /botania:.*_ring/})
     event.remove({id: /botania:.*_ring_greater/})
     event.remove({id: /botania:spark_upgrade_.*/})
+    // event.remove({output: /botania:rune_.*/})
 });
 

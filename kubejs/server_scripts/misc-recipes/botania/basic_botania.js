@@ -63,6 +63,8 @@ ServerEvents.recipes(event => {
     event.recipes.botania.mana_infusion('botania:mana_powder', 'gtceu:asteroid_stone_dust', 100)
     event.recipes.botania.mana_infusion('botania:mana_glass', 'gtceu:tempered_glass', 100)
     event.recipes.botania.mana_infusion('minecraft:nether_wart_block', 'botania:blaze_block', 36000, 'botania:alchemy_catalyst')
+    event.recipes.botania.mana_infusion('gtceu:exquisite_mana_diamond_gem', 'gtceu:exquisite_diamond_gem', 2000)
+    event.recipes.botania.mana_infusion('gtceu:flawless_mana_diamond_gem', 'gtceu:flawless_diamond_gem', 4000)
     
     event.shaped('4x gtceu:manasteel_dust', [
         'ABA',
@@ -347,7 +349,7 @@ ServerEvents.recipes(event => {
     event.shaped('botania:super_cloud_pendant', [
         ' A ',
         'A A',
-        'BA'
+        'BA '
     ], {
         A: 'botania:red_string',
         B: 'botania:cloud_pendant'

@@ -2,18 +2,18 @@
     "version": 2,
     "active": {
         "botania:runic_altar": {
-            "botanicadds:rune_tp": true,
-            "botanicadds:rune_energy": true,
+            "botanicadds:rune_tp": false,
+            "botanicadds:rune_energy": false,
             "botanicadds:mana_tesseract": false,
             "botanicadds:tesseract_attuner": false
         },
         "botania:petal_apothecary": {
-            "botanicadds:zeitheron_head": true,
-            "botanicadds:flowers/necroidus": true,
+            "botanicadds:zeitheron_head": false,
+            "botanicadds:flowers/necroidus": false,
             "botanicadds:flowers/rainute": true,
             "botanicadds:flowers/glaciflora": true,
-            "botanicadds:flowers/tempestea": true,
-            "botanicadds:flowers/vibrantia": true,
+            "botanicadds:flowers/tempestea": false,
+            "botanicadds:flowers/vibrantia": false,
             "botanicadds:flowers/apicaria": true,
             "botanicadds:flowers/energizera": false
         },
@@ -53,18 +53,18 @@
             "botanicadds:elven_altar": false,
             "botanicadds:elven_brewery": true,
             "botanicadds:dreaming_pool": false,
-            "botanicadds:sculk_sensor": true,
+            "botanicadds:sculk_sensor": false,
             "botanicadds:tesseract_attune": true,
-            "botanicadds:recipe_tweaks/mana_fluxfield": true,
+            "botanicadds:recipe_tweaks/mana_fluxfield": false,
             "botanicadds:recipe_tweaks/gaia_spreader": false,
             "botanicadds:elven_fluxfield": false,
             "botanicadds:flowers/floating/glaciflora": true,
             "botanicadds:flowers/floating/apicaria": true,
             "botanicadds:flowers/floating/energizera": false,
-            "botanicadds:flowers/floating/necroidus": true,
+            "botanicadds:flowers/floating/necroidus": false,
             "botanicadds:flowers/floating/rainute": true,
             "botanicadds:flowers/floating/tempestea": true,
-            "botanicadds:flowers/floating/vibrantia": true
+            "botanicadds:flowers/floating/vibrantia": false
         }
     },
     "unregistered": {}

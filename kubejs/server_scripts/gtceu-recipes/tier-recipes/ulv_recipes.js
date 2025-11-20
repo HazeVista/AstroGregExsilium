@@ -106,6 +106,13 @@ ServerEvents.recipes(event => {
         .duration(200)
         .EUt(7)
 
+    event.shaped('gtceu:nether_quartz_dust', [
+      'A',
+      'B'
+    ], {
+      A: 'minecraft:nether_quartz',
+      B: '#forge:tools/mortars'
+    })
 
 
     //#region stone crushing 

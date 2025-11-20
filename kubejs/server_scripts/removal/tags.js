@@ -74,7 +74,10 @@ event.removeAllTagsFrom('gtceu:mana_diamond_gem')
 event.removeAllTagsFrom('gtceu:mana_diamond_block')
 event.removeAllTagsFrom('gtceu:dragonstone_gem')
 event.removeAllTagsFrom('gtceu:dragonstone_block')
-
+event.removeAllTagsFrom('powah:crystal_niotic')
+event.removeAllTagsFrom('powah:crystal_spirited')
+event.removeAllTagsFrom('powah:crystal_blazing')
+event.removeAllTagsFrom('powah:crystal_nitro')
 });
 
 
@@ -87,8 +90,8 @@ event.removeAllTagsFrom('ad_extendra:uraninium_block')
 event.removeAllTagsFrom('ad_extendra:raw_uranium_block')
 event.removeAllTagsFrom('createaddition:electrum_block')
 event.removeAllTagsFrom('gtceu:raw_desh_block')
-
 });
+
 
 
 //#region fluids
@@ -100,9 +103,7 @@ event.removeAllTagsFrom('ad_astra:oil')
 event.removeAllTagsFrom('ad_astra:fuel')
 event.remove('create:bottomless/allow', 'minecraft:lava')
 event.remove('create:bottomless/allow', 'minecraft:water')
-
 });
-
 //#region add tags
 
 
@@ -121,4 +122,8 @@ event.add('forge:lenses', 'botania:terra_lens')
 event.add('forge:lenses', 'botania:pixie_lens')
 event.add('forge:lenses', 'botania:gaia_lens')
 event.add('forge:rods/wooden', 'botania:livingwood_twig')
+event.add('botania:runes', 'botania:rune_space')
+event.add('botania:runes', 'botania:rune_energy')
+event.add('botania:runes', 'botania:rune_life')
+event.add('botania:runes', 'botania:rune_gaia')
 })

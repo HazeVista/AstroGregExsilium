@@ -4,33 +4,33 @@
         "minecraft:item": {
             "botania:terra_pick_blacklist": {"botanicadds:aura_ring_gaia": true},
             "forge:storage_blocks/gaiasteel": {"botanicadds:gaiasteel_block": true},
-            "forge:gems/elven_lapis": {"botanicadds:elven_lapis": true},
-            "forge:storage_blocks/elven_lapis": {"botanicadds:elven_lapis_block": true},
+            "forge:gems/elven_lapis": {"botanicadds:elven_lapis": false},
+            "forge:storage_blocks/elven_lapis": {"botanicadds:elven_lapis_block": false},
             "botania:runes": {
-                "botanicadds:rune_tp": true,
-                "botanicadds:rune_energy": true
+                "botanicadds:rune_tp": false,
+                "botanicadds:rune_energy": false
             },
             "forge:nuggets/gaiasteel": {"botanicadds:gaiasteel_nugget": true},
             "botania:generating_special_flowers": {
                 "botanicadds:flowers/tempestea": true,
-                "botanicadds:flowers/vibrantia": true,
-                "botanicadds:flowers/energizera": true,
+                "botanicadds:flowers/vibrantia": false,
+                "botanicadds:flowers/energizera": false,
                 "botanicadds:flowers/rainute": true,
                 "botanicadds:flowers/glaciflora": true
             },
             "botanicadds:tesseract_attunable": {"botanicadds:mana_tesseract": false},
             "botania:functional_special_flowers": {
-                "botanicadds:flowers/necroidus": true,
+                "botanicadds:flowers/necroidus": false,
                 "botanicadds:flowers/apicaria": true
             },
             "forge:ingots/gaiasteel": {"botanicadds:gaiasteel_ingot": true},
-            "forge:gems/mana_lapis": {"botanicadds:mana_lapis": true},
-            "botania:petals": {"botanicadds:sculk_petal": true},
-            "botania:petals/sculk": {"botanicadds:sculk_petal": true},
+            "forge:gems/mana_lapis": {"botanicadds:mana_lapis": false},
+            "botania:petals": {"botanicadds:sculk_petal": false},
+            "botania:petals/sculk": {"botanicadds:sculk_petal": false},
             "botania:special_floating_flowers": {
-                "botanicadds:flowers/floating/vibrantia": true,
+                "botanicadds:flowers/floating/vibrantia": false,
                 "botanicadds:flowers/floating/energizera": true,
-                "botanicadds:flowers/floating/necroidus": true,
+                "botanicadds:flowers/floating/necroidus": false,
                 "botanicadds:flowers/floating/tempestea": true,
                 "botanicadds:flowers/floating/apicaria": true,
                 "botanicadds:flowers/floating/rainute": true,
@@ -44,7 +44,7 @@
         },
         "minecraft:block": {
             "botania:generating_special_flowers": {
-                "botanicadds:flowers/vibrantia": true,
+                "botanicadds:flowers/vibrantia": false,
                 "botanicadds:flowers/tempestea": true,
                 "botanicadds:flowers/energizera": false,
                 "botanicadds:flowers/rainute": true,
@@ -52,14 +52,14 @@
             },
             "forge:storage_blocks/gaiasteel": {"botanicadds:gaiasteel_block": true},
             "botania:functional_special_flowers": {
-                "botanicadds:flowers/necroidus": true,
+                "botanicadds:flowers/necroidus": false,
                 "botanicadds:flowers/apicaria": true
             },
             "minecraft:needs_stone_tool": {
                 "botanicadds:gaia_plate": true,
                 "botanicadds:terra_catalyst": true
             },
-            "forge:storage_blocks/elven_lapis": {"botanicadds:elven_lapis_block": true},
+            "forge:storage_blocks/elven_lapis": {"botanicadds:elven_lapis_block": false},
             "minecraft:mineable/hoe": {"botanicadds:reduced_sculk_sensor": true},
             "minecraft:mineable/axe": {
                 "botanicadds:elvenwood_log": true,
@@ -75,24 +75,24 @@
                 "botanicadds:gaiasteel_block": true,
                 "botanicadds:mana_lapis_block": true,
                 "botanicadds:mana_tesseract": false,
-                "botanicadds:elven_lapis_block": true
+                "botanicadds:elven_lapis_block": false
             },
             "botania:special_floating_flowers": {
-                "botanicadds:flowers/floating/vibrantia": true,
+                "botanicadds:flowers/floating/vibrantia": false,
                 "botanicadds:flowers/floating/energizera": false,
-                "botanicadds:flowers/floating/necroidus": true,
+                "botanicadds:flowers/floating/necroidus": false,
                 "botanicadds:flowers/floating/tempestea": true,
                 "botanicadds:flowers/floating/glaciflora": true,
                 "botanicadds:flowers/floating/rainute": true,
                 "botanicadds:flowers/floating/apicaria": true
             },
             "botania:magnet_ring_blacklist": {"botanicadds:gaia_plate": true},
-            "forge:storage_blocks/mana_lapis": {"botanicadds:mana_lapis_block": true},
+            "forge:storage_blocks/mana_lapis": {"botanicadds:mana_lapis_block": false},
             "minecraft:needs_iron_tool": {
                 "botanicadds:gaiasteel_block": true,
-                "botanicadds:mana_lapis_block": true,
+                "botanicadds:mana_lapis_block": false,
                 "botanicadds:mana_tesseract": false,
-                "botanicadds:elven_lapis_block": true
+                "botanicadds:elven_lapis_block": false
             }
         }
     },

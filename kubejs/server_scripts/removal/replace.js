@@ -11,6 +11,7 @@ ServerEvents.recipes(event => {
     event.replaceInput({input: 'gtceu:desh_block'}, 'gtceu:desh_block', 'ad_astra:desh_block')
     event.replaceInput({input: 'gtceu:raw_desh'}, 'gtceu:raw_desh', 'ad_astra:raw_desh')
     event.replaceInput({input: 'gtceu:raw_desh_block'}, 'gtceu:raw_desh_block', 'ad_astra:raw_desh_block')
+    event.replaceInput({}, 'botania:redstone_root', 'gtceu:red_alloy_dust')
     event.replaceInput({}, 'ad_astra:steel_rod', 'gtceu:steel_rod')
     event.replaceInput({}, 'ad_astra:iron_rod', 'gtceu:iron_rod')
     event.replaceInput({}, 'minecraft:gravel', '#forge:gravel')
@@ -57,5 +58,4 @@ ServerEvents.recipes(event => {
     event.replaceOutput({output: 'gtceu:mana_diamond_gem',}, 'gtceu:mana_diamond_gem', 'botania:mana_diamond');
     event.replaceOutput({output: 'gtceu:dragonstone_gem'}, 'gtceu:dragonstone_gem', 'botania:dragonstone')
     event.replaceOutput({output: 'gtceu:dragonstone_block'}, 'gtceu:dragonstone_block', 'botania:dragonstone_block')
-
 });
