@@ -1,14 +1,15 @@
 ServerEvents.recipes(event => {
+    //need to add ways to get lava. bucket + stone in farmers, extractor stone for steam age, create basin with stone too
 
-  //#region misc
-  event.shaped('gtceu:rubber_plate', [
-    'A',
-    'B',
-    'B'
-  ] , {
-    A: '#forge:tools/hammers',
-    B: 'gtceu:rubber_ingot'
-  })
+    //#region misc
+    event.shaped('gtceu:rubber_plate', [
+      'A',
+      'B',
+      'B'
+    ] , {
+      A: '#forge:tools/hammers',
+      B: 'gtceu:rubber_ingot'
+    })
 
   event.recipes.gtceu.alloy_smelter('alloy_smelter_rose_quartz')
     .itemInputs('minecraft:quartz', '4x minecraft:redstone')
@@ -16,29 +17,29 @@ ServerEvents.recipes(event => {
     .duration(50)
     .EUt(30)
 
-  event.campfireCooking('minecraft:glass', 'gtceu:glass_dust', 0, 160)
-  event.campfireCooking('gtceu:wrought_iron_ingot', 'minecraft:iron_ingot', 0, 160)
-  event.campfireCooking('gtceu:tempered_glass', 'minecraft:glass', 0, 600)
+    event.campfireCooking('minecraft:glass', 'gtceu:glass_dust', 0, 160)
+    event.campfireCooking('gtceu:wrought_iron_ingot', 'minecraft:iron_ingot', 0, 160)
+    event.campfireCooking('gtceu:tempered_glass', 'minecraft:glass', 0, 600)
 
-  event.smelting('kubejs:asteroid_stone', 'kubejs:cobbled_asteroid_stone')
-  event.smelting('kubejs:smooth_asteroid_stone', 'kubejs:asteroid_stone')
-  event.smelting('minecraft:glass', 'gtceu:glass_dust')
+    event.smelting('kubejs:asteroid_stone', 'kubejs:cobbled_asteroid_stone')
+    event.smelting('kubejs:smooth_asteroid_stone', 'kubejs:asteroid_stone')
+    event.smelting('minecraft:glass', 'gtceu:glass_dust')
 
 
-  event.recipes.farmersdelight.cooking(
-    ['gtceu:raw_rubber_dust', 'gtceu:raw_rubber_dust', 'gtceu:raw_rubber_dust', 'gtceu:sulfur_dust'],
-    'gtceu:rubber_ingot',
-    0,
-    320,
-    'gtceu:brick_wooden_form'
+    event.recipes.farmersdelight.cooking(
+      ['gtceu:raw_rubber_dust', 'gtceu:raw_rubber_dust', 'gtceu:raw_rubber_dust', 'gtceu:sulfur_dust'],
+      'gtceu:rubber_ingot',
+      0,
+      320,
+      'gtceu:brick_wooden_form'
     );
 
-  event.recipes.farmersdelight.cooking(
-    ['gtceu:desh_dust', 'gtceu:iron_dust', 'gtceu:red_alloy_dust'],
-    '3x powah:steel_energized',
-    0,
-    200,
-    'gtceu:brick_wooden_form'
+    event.recipes.farmersdelight.cooking(
+      ['gtceu:desh_dust', 'gtceu:iron_dust', 'gtceu:red_alloy_dust'],
+      '3x powah:steel_energized',
+      0,
+      200,
+      'gtceu:brick_wooden_form'
     );
 
     event.shaped('farmersdelight:stove', [
@@ -113,6 +114,8 @@ ServerEvents.recipes(event => {
       A: 'minecraft:nether_quartz',
       B: '#forge:tools/mortars'
     })
+    //#endregion
+
 
 
     //#region stone crushing 
@@ -255,6 +258,7 @@ ServerEvents.recipes(event => {
       .adjacentFluids('minecraft:water', 'minecraft:lava')
       .duration(16)
       .EUt(7)
+    //#endregion
 
       
 
@@ -287,5 +291,27 @@ ServerEvents.recipes(event => {
     event.campfireCooking('minecraft:brick', 'minecraft:clay_ball', 0, 80)
     event.campfireCooking('gtceu:firebrick', 'gtceu:compressed_fireclay', 0, 80)
     event.campfireCooking('gtceu:coke_oven_brick', 'gtceu:compressed_coke_clay', 0, 80)
+    //#endregion
 
+
+
+    //#region lava
+
+    event.recipes.farmersdelight.cooking(
+      ['#minecraft:stone_crafting_materials', '#minecraft:stone_crafting_materials', 
+        '#minecraft:stone_crafting_materials', '#minecraft:stone_crafting_materials'],
+      'minecraft:lava_bucket',
+      0,
+      160,
+      'minecraft:bucket'
+    )
+
+    event.recipes.gtceu.extractor('extract_lava_from_stone')
+      .itemInputs('#minecraft:stone_crafting_materials')
+      .outputFluids('minecraft:lava 250')
+      .duration(80)
+      .EUt(2)
+
+    event.recipes.create.mixing(Fluid.of('minecraft:lava', 250), '#minecraft:stone_crafting_materials').heatRequirement('lowheated')
+    //#endregion
 });

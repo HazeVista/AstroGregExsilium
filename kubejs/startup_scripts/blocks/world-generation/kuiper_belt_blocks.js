@@ -61,6 +61,7 @@ StartupEvents.registry('block', event => {
         .soundType('stone')
         .requiresTool(true)
         .tagBoth('minecraft:stone_tool_materials')
+        .tagBoth('minecraft:stone_crafting_materials')
         .mapColor('terracotta_purple' )
         .tagBlock('mineable/pickaxe')
         .textureAll('kubejs:block/rocks/cobbled_asteroid_stone')

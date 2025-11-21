@@ -1,6 +1,6 @@
 ServerEvents.recipes(event => {
-event.recipes.botania.petal_apothecary('botanicadds:tempestea', ['botania:rune:energy', 'minecraft:lightning_rod', '#botania:petals/light_blue', '#botania:petals/light_blue', '#botania:petals/light_blue', '#botania:petals/blue', '#botania:petals/blue', '#botania:petals/yellow',])
+event.recipes.botania.petal_apothecary('botanicadds:flowers/tempestea', ['botania:energy_rune', 'minecraft:lightning_rod', '#botania:petals/light_blue', '#botania:petals/light_blue', '#botania:petals/light_blue', '#botania:petals/blue', '#botania:petals/blue', '#botania:petals/yellow',])
 event.recipes.botania.petal_apothecary('botania:endoflame', ['minecraft:blaze_powder', '#botania:petals/red', '#botania:petals/red', '#botania:petals/orange', '#botania:petals/orange', '#botania:petals/brown'])
 event.recipes.botania.petal_apothecary('botania:hydroangeas', ['minecraft:bucket','#botania:petals/light_blue', '#botania:petals/light_blue', '#botania:petals/blue', '#botania:petals/blue', '#botania:petals/cyan'])
-event.recipes.botania.petal_apothecary('botania:orechid', ['botania:rune_greed', 'botania:rune_earth', 'botania:rune_fire', 'gtceu:elementium_double_plate', 'gtceu:elementium_double_plate', '#botania:petals/gray', '#botania:petals/gray', '#botania:petals/light_blue', '#botania:petals/red', '#botania:petals/yellow'])
+event.recipes.botania.petal_apothecary('botania:orechid', ['botania:greed_rune', 'botania:earth_rune', 'botania:fire_rune', 'gtceu:double_elementium_plate', 'gtceu:double_elementium_plate', '#botania:petals/gray', '#botania:petals/gray', '#botania:petals/light_blue', '#botania:petals/red', '#botania:petals/yellow'])
 })

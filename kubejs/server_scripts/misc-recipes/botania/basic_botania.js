@@ -156,7 +156,7 @@ ServerEvents.recipes(event => {
         'AAA'
     ], {
        A: 'botania:livingwood_slab',
-       B: 'botania:rune_air',
+       B: 'botania:air_rune',
        C: 'farmersdelight:canvas'
     })
 
@@ -555,7 +555,7 @@ ServerEvents.recipes(event => {
     ], {
         A: 'botania:livingwood_twig',
         B: 'gtceu:terrasteel_plate',
-        C: 'botania:rune_winter',
+        C: 'botania:winter_rune',
         D: 'botania:manasteel_boots'
     })
 
@@ -566,7 +566,7 @@ ServerEvents.recipes(event => {
     ], {
         A: 'botania:livingwood_twig',
         B: 'gtceu:terrasteel_plate',
-        C: 'botania:rune_autumn',
+        C: 'botania:autumn_rune',
         D: 'botania:manasteel_leggings'
     })
 
@@ -577,7 +577,7 @@ ServerEvents.recipes(event => {
     ], {
         A: 'botania:livingwood_twig',
         B: 'gtceu:terrasteel_plate',
-        C: 'botania:rune_spring',
+        C: 'botania:spring_rune',
         D: 'botania:manasteel_helmet'
     })
     
@@ -588,7 +588,7 @@ ServerEvents.recipes(event => {
     ], {
         A: 'botania:livingwood_twig',
         B: 'gtceu:terrasteel_plate',
-        C: 'botania:rune_summer',
+        C: 'botania:summer_rune',
         D: 'botania:manasteel_chestplate'
     })
     //#endregion
@@ -665,7 +665,7 @@ ServerEvents.recipes(event => {
     ], {
         A: 'gtceu:manasteel_ring',
         B: 'gtceu:manasteel_plate',
-        C: 'botania:rune_mana'
+        C: 'botania:mana_rune'
     })
     
     event.shaped('botania:water_ring', [
@@ -675,7 +675,7 @@ ServerEvents.recipes(event => {
     ], {
         A: 'gtceu:manasteel_ring',
         B: 'gtceu:manasteel_plate',
-        C: 'botania:rune_water',
+        C: 'botania:water_rune',
         D: '#minecraft:fishes'
     })
     
@@ -699,8 +699,8 @@ ServerEvents.recipes(event => {
     ], {
         A: 'gtceu:manasteel_ring',
         B: 'gtceu:manasteel_plate',
-        C: 'botania:rune_air',
-        D: 'botania:rune_fire'
+        C: 'botania:air_rune',
+        D: 'botania:fire_rune'
     })
     
     event.shaped('botania:mining_ring', [
@@ -710,7 +710,7 @@ ServerEvents.recipes(event => {
     ], {
         A: 'gtceu:manasteel_ring',
         B: 'gtceu:manasteel_plate',
-        C: 'botania:rune_earth',
+        C: 'botania:earth_rune',
         D: 'minecraft:diamond_pickaxe'
     })
     
@@ -731,7 +731,7 @@ ServerEvents.recipes(event => {
     ], {
         A: 'botania:aura_ring',
         B: 'gtceu:terrasteel_plate',
-        C: 'botania:rune_mana'
+        C: 'botania:mana_rune'
     })
         
     event.shaped('botania:mana_ring_greater', [
@@ -761,7 +761,7 @@ ServerEvents.recipes(event => {
     ], {
         A: 'gtceu:elementium_ring',
         B: 'gtceu:elementium_plate',
-        C: 'botania:rune_pride'
+        C: 'botania:pride_rune'
     })
 
     event.shaped('botanicadds:mana_ring_gaia', [
@@ -771,7 +771,7 @@ ServerEvents.recipes(event => {
     ], {
         A: 'botania:mana_ring_greater',
         B: 'gtceu:gaiasteel_plate',
-        C: 'botania:rune_mana'
+        C: 'botania:mana_rune'
     })
 
     event.shaped('botanicadds:aura_ring_gaia', [
@@ -781,7 +781,7 @@ ServerEvents.recipes(event => {
     ], {
         A: 'botania:aura_ring_greater',
         B: 'gtceu:gaiasteel_plate',
-        C: 'botania:rune_aura'
+        C: 'botania:aura_rune'
     })
     //#endregion
 
@@ -794,7 +794,7 @@ ServerEvents.recipes(event => {
         'CAC'
     ], {
         A: 'gtceu:manasteel_plate',
-        B: 'botania:rune_water',
+        B: 'botania:water_rune',
         C: 'botania:pixie_dust'
     })
 
@@ -804,7 +804,7 @@ ServerEvents.recipes(event => {
         'CAC'
     ], {
         A: 'gtceu:manasteel_plate',
-        B: 'botania:rune_fire',
+        B: 'botania:fire_rune',
         C: 'botania:pixie_dust'
     })
    
@@ -814,7 +814,7 @@ ServerEvents.recipes(event => {
         'CAC'
     ], {
         A: 'gtceu:manasteel_plate',
-        B: 'botania:rune_earth',
+        B: 'botania:earth_rune',
         C: 'botania:pixie_dust'
     })
     
@@ -824,7 +824,7 @@ ServerEvents.recipes(event => {
         'CAC'
     ], {
         A: 'gtceu:manasteel_plate',
-        B: 'botania:rune_air',
+        B: 'botania:air_rune',
         C: 'botania:pixie_dust'
     }) 
 

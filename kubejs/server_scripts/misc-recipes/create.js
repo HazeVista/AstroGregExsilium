@@ -519,12 +519,11 @@ ServerEvents.recipes(event => {
     event.recipes.create.filling('minecraft:clay', [Fluid.of('minecraft:water', 125), '#forge:sand'])
     event.recipes.create.filling('gtceu:treated_wood_planks', [Fluid.of('gtceu:creosote', 125), '#minecraft:planks'])
 
-    //#region create washing
-    event.recipes.create.splashing(['minecraft:clay_ball', Item.of('minecraft:iron_nugget').withChance(0.5)], 'kubejs:asteroid_sand')
-    event.recipes.create.splashing(['minecraft:clay_ball', Item.of('minecraft:gold_nugget').withChance(0.2)], 'minecraft:red_sand')
-    event.recipes.create.splashing(['minecraft:clay_ball', Item.of('minecraft:clay_ball').withChance(0.5)], 'minecraft:sand')
-
     //#region create press
+    event.recipes.create.pressing(
+        ['minecraft:paper'],
+        ['create:pulp'])
+
     event.recipes.create.pressing(
         [`gtceu:iron_plate`],
         [`minecraft:iron_ingot`])
@@ -552,6 +551,11 @@ ServerEvents.recipes(event => {
 
     }
     
+    //#region create washing
+    event.recipes.create.splashing(['minecraft:clay_ball', Item.of('minecraft:iron_nugget').withChance(0.5)], 'kubejs:asteroid_sand')
+    event.recipes.create.splashing(['minecraft:clay_ball', Item.of('minecraft:gold_nugget').withChance(0.2)], 'minecraft:red_sand')
+    event.recipes.create.splashing(['minecraft:clay_ball', Item.of('minecraft:clay_ball').withChance(0.5)], 'minecraft:sand')
+
     platemetals.forEach(pressingplates)
 
     //create crafts & additions

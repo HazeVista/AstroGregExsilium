@@ -90,10 +90,10 @@ ServerEvents.recipes(event => {
         'botania:slime_bottle', 'botania:world_seed', 'botania:spawner_claw', 'botania:sextant', 'botania:astrolabe', 'botania:black_hole_talisman', 'botania:spark_changer', 'botania:mana_distributor', 
         'botania:pump', 'botania:knockback_belt', 'botania:travel_belt', 'botania:super_travel_belt', 'botania:speed_up_belt', 'botania:flighttiara_0', 'botania:super_cloud_pendant', 'botania:super_lava_pendant',
         'botania:conjuration_catalyst', 'botania:alchemy_catalyst', 'botania:conjuration_catalyst', 'botania:mana_fluxfield', 'botania:redstone_root', 'botania:petal_apothecary/clayconia', 
-        'botania:mana_infusion/clayconia_chibi', 'botania:floating_clayconia', 'botania:floating_clayconia_chibi', 'minecraft:blaze_powder',
+        'botania:mana_infusion/clayconia_chibi', 'botania:floating_clayconia', 'botania:floating_clayconia_chibi', 'minecraft:blaze_powder', 'gtceu:shapeless/pumpkin_pie_from_dough',
         'gtceu:shapeless/block_decompress_mana_diamond_gem', 'botania:mana_mirror', 'gtceu:shapeless/manadiamond_block_deconstruct', 'gtceu:shaped/block_compress_mana_diamond',
         'gtceu:shapeless/dragonstone_block_deconstruct', 'gtceu:shaped/block_compress_mana_diamond', 'botania:spark', 'botania:petal_apothecary/vazkii_head', 'botania:runic_altar/head',
-        'botania:heisei_dream', 'gtceu:extruder/nan_certificate'
+        'botania:heisei_dream', 'gtceu:extruder/nan_certificate', 'gtceu:forming_press/pumpkin_pie', 'createaddition:mixing/bioethanol'
     ];
     //#region remove type
     const toRemoveType = ['expatternprovider:cutter', 'ae2:inscriber', 'ae2:charger', 'create:crushing', 'ad_astra:alloying', 'createaddition:liquid_burning', 'create:pressing',
@@ -159,6 +159,6 @@ ServerEvents.recipes(event => {
     event.remove({id: /botania:.*_ring/})
     event.remove({id: /botania:.*_ring_greater/})
     event.remove({id: /botania:spark_upgrade_.*/})
-    // event.remove({output: /botania:rune_.*/})
+    event.remove({output: /botania:rune_.*/})
 });
 
