@@ -63,8 +63,8 @@ ServerEvents.recipes(event => {
     event.recipes.botania.mana_infusion('botania:mana_powder', 'gtceu:asteroid_stone_dust', 100)
     event.recipes.botania.mana_infusion('botania:mana_glass', 'gtceu:tempered_glass', 100)
     event.recipes.botania.mana_infusion('minecraft:nether_wart_block', 'botania:blaze_block', 36000, 'botania:alchemy_catalyst')
-    event.recipes.botania.mana_infusion('gtceu:exquisite_mana_diamond_gem', 'gtceu:exquisite_diamond_gem', 2000)
-    event.recipes.botania.mana_infusion('gtceu:flawless_mana_diamond_gem', 'gtceu:flawless_diamond_gem', 4000)
+    event.recipes.botania.mana_infusion('gtceu:exquisite_mana_diamond_gem', 'gtceu:exquisite_diamond_gem', 40000)
+    event.recipes.botania.mana_infusion('gtceu:flawless_mana_diamond_gem', 'gtceu:flawless_diamond_gem', 20000)
     
     event.shaped('4x gtceu:manasteel_dust', [
         'ABA',
@@ -77,7 +77,7 @@ ServerEvents.recipes(event => {
 
     event.recipes.gtceu.mixer('mix_manasteel_dust')
         .itemInputs('botania:mana_powder', 'gtceu:wrought_iron_dust')
-        .itemOutputs('2x gtceu:manasteel_dust')
+        .itemOutputs('gtceu:manasteel_dust')
         .duration(80)
         .EUt(7)
 
@@ -839,6 +839,140 @@ ServerEvents.recipes(event => {
     })
     //#endregion
 
+    
+
+    //#region quartz
+    const quartzTypes = ['dark', 'red', 'mana', 'blaze', 'lavender', 'sunny']
+
+    quartzTypes.forEach(quartzBlocking);
+
+    function quartzBlocking(quartz) {
+    
+        event.shaped(`4x botania:quartz_${quartz}`, [
+            'A'
+        ], {
+            A: `botania:${quartz}_quartz`
+        })
+    }
+
+    event.shaped(`4x botania:quartz_elven`, [
+        'A'
+    ], {
+        A: `botania:elf_quartz`
+    })
+
+    event.shaped('botania:quartz_blaze', [
+        'AAA',
+        'ABA',
+        'AAA'
+    ], {
+        A: 'minecraft:quartz',
+        B: 'minecraft:orange_dye'
+    })
+    
+    event.shaped('botania:quartz_dark', [
+        'AAA',
+        'ABA',
+        'AAA'
+    ], {
+        A: 'minecraft:quartz',
+        B: 'minecraft:black_dye'
+    })
+    
+    event.shaped('botania:quartz_red', [
+        'AAA',
+        'ABA',
+        'AAA'
+    ], {
+        A: 'minecraft:quartz',
+        B: 'minecraft:red_dye'
+    })
+    
+    event.shaped('botania:quartz_mana', [
+        'AAA',
+        'ABA',
+        'AAA'
+    ], {
+        A: 'minecraft:quartz',
+        B: 'minecraft:light_blue_dye'
+    })
+    
+    event.shaped('botania:quartz_lavender', [
+        'AAA',
+        'ABA',
+        'AAA'
+    ], {
+        A: 'minecraft:quartz',
+        B: 'minecraft:purple_dye'
+    })
+    
+    event.shaped('botania:quartz_elven', [
+        'AAA',
+        'ABA',
+        'AAA'
+    ], {
+        A: 'minecraft:quartz',
+        B: 'minecraft:lime_dye'
+    })
+    
+    event.shaped('botania:quartz_sunny', [
+        'AAA',
+        'ABA',
+        'AAA'
+    ], {
+        A: 'minecraft:quartz',
+        B: 'minecraft:yellow_dye'
+    })
+    //#endregion
+
+    const logTypes = ['livingwood_log', 'livingwood', 'stripped_livingwood_log', 'stripped_livingwood',
+        'dreamwood_log', 'dreamwood', 'stripped_dreamwood_log', 'stripped_dreamwood']
+    
+    logTypes.forEach(logInput);
+
+    function logInput(log) {
+        event.recipes.botania.mana_infusion(`botania:glimmering_${log}`, `botania:${log}`, 100)
+
+        event.recipes.gtceu.mana_infusion(`glamify_${log}`)
+            .itemInputs(`botania:${log}`)
+            .inputFluids('manafluid:mana 1')
+            .itemOutputs(`botania:glimmering_${log}`)
+            .duration(200)
+            .EUt(7)
+    }
+
+    event.shapeless('6x botania:livingwood_planks', [
+        'A',
+        'B'
+    ], {
+        A: '#forge:tools/saws',
+        B: '#botania:livingwood_logs'
+    })
+
+    event.shapeless('6x botania:dreamwood_planks', [
+        'A',
+        'B'
+    ], {
+        A: '#forge:tools/saws',
+        B: '#botania:dreamwood_logs'
+    })
+
+    event.recipes.gtceu.cutter('cut_livingwood_logs')
+        .itemInputs('#botania:livingwood_logs')
+        .itemOutputs('6x botania:livingwood_planks', '2x gtceu:wood_dust')
+        .duration(400)
+        .EUt(7)
+        
+    event.recipes.gtceu.cutter('cut_dreamwood_logs')
+        .itemInputs('#botania:dreamwood_logs')
+        .itemOutputs('6x botania:dreamwood_planks', '2x gtceu:wood_dust')
+        .duration(400)
+        .EUt(7)
+    //#region logs
+
+
+
+    //#endregion
     // event.shaped('botania:', [
     //     '',
     //     '',

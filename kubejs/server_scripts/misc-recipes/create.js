@@ -550,13 +550,13 @@ ServerEvents.recipes(event => {
             [`gtceu:${metalinput}_ingot`])
 
     }
+    platemetals.forEach(pressingplates)
     
     //#region create washing
     event.recipes.create.splashing(['minecraft:clay_ball', Item.of('minecraft:iron_nugget').withChance(0.5)], 'kubejs:asteroid_sand')
     event.recipes.create.splashing(['minecraft:clay_ball', Item.of('minecraft:gold_nugget').withChance(0.2)], 'minecraft:red_sand')
     event.recipes.create.splashing(['minecraft:clay_ball', Item.of('minecraft:clay_ball').withChance(0.5)], 'minecraft:sand')
 
-    platemetals.forEach(pressingplates)
 
     //create crafts & additions
     //#region polarizer
@@ -586,7 +586,7 @@ ServerEvents.recipes(event => {
         energy: 448
     })
 
-    //#region rolling (primitive lathe)
+    //#region rolling
     event.custom({type: "createaddition:rolling",
         input: {item: "create:andesite_alloy"},
         result: {item: "create:shaft", count: 4}})

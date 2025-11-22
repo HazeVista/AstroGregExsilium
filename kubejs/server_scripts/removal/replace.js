@@ -32,6 +32,22 @@ ServerEvents.recipes(event => {
     event.replaceInput({input: 'gtceu:mana_diamond_block',}, 'gtceu:mana_diamond_block', 'botania:mana_diamond_block');
     event.replaceInput({input: 'gtceu:dragonstone_gem'}, 'gtceu:dragonstone_gem', 'botania:dragonstone')
     event.replaceInput({input: 'gtceu:dragonstone_block'}, 'gtceu:dragonstone_block', 'botania:dragonstone_block')
+    event.replaceInput({input: 'botania:rune_fire'}, 'botania:rune_fire', 'botania:fire_rune')
+    event.replaceInput({input: 'botania:rune_water'}, 'botania:rune_water', 'botania:water_rune')
+    event.replaceInput({input: 'botania:rune_air'}, 'botania:rune_air', 'botania:air_rune')
+    event.replaceInput({input: 'botania:rune_earth'}, 'botania:rune_earth', 'botania:earth_rune')
+    event.replaceInput({input: 'botania:rune_spring'}, 'botania:rune_spring', 'botania:spring_rune')
+    event.replaceInput({input: 'botania:rune_summer'}, 'botania:rune_summer', 'botania:summer_rune')
+    event.replaceInput({input: 'botania:rune_autumn'}, 'botania:rune_autumn', 'botania:autumn_rune')
+    event.replaceInput({input: 'botania:rune_winter'}, 'botania:rune_winter', 'botania:winter_rune')
+    event.replaceInput({input: 'botania:rune_mana'}, 'botania:rune_mana', 'botania:mana_rune')
+    event.replaceInput({input: 'botania:rune_greed'}, 'botania:rune_greed', 'botania:greed_rune')
+    event.replaceInput({input: 'botania:rune_wrath'}, 'botania:rune_wrath', 'botania:wrath_rune')
+    event.replaceInput({input: 'botania:rune_pride'}, 'botania:rune_pride', 'botania:pride_rune')
+    event.replaceInput({input: 'botania:rune_lust'}, 'botania:rune_lust', 'botania:lust_rune')
+    event.replaceInput({input: 'botania:rune_sloth'}, 'botania:rune_sloth', 'botania:sloth_rune')
+    event.replaceInput({input: 'botania:rune_gluttony'}, 'botania:rune_gluttony', 'botania:gluttony_rune')
+    event.replaceInput({input: 'botania:rune_envy'}, 'botania:rune_envy', 'botania:envy_rune')
     //#endregion
     
     //#region output

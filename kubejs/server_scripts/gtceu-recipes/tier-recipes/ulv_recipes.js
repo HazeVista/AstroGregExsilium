@@ -118,12 +118,43 @@ ServerEvents.recipes(event => {
 
 
 
+    //#region water source
+    event.recipes.gtceu.water_source('pump_water')
+        .circuit(0)
+        .outputFluids(Fluid.of('minecraft:water', 1000))
+        .duration(20)
+        
+    event.recipes.gtceu.water_source('pump_water_alt')
+        .circuit(1)
+        .outputFluids(Fluid.of('minecraft:water', 100))
+        .duration(2)
+
+    event.shaped('gtceu:ulv_water_source', [
+        'ABA',
+        'CDC',
+        'ABA'
+    ], {
+      A: 'gtceu:wrought_iron_plate',
+      B: 'gtceu:tempered_glass',
+      C: 'minecraft:water_bucket',
+      D: 'gtceu:wood_drum'
+    }).replaceIngredient('minecraft:water_bucket', 'minecraft:bucket')
+    //#endregion
+
+
+
     //#region stone crushing 
     event.recipes.farmersdelight.cutting('minecraft:cobblestone', '#forge:tools/hammers', 'minecraft:gravel')
     event.recipes.farmersdelight.cutting('kubejs:cobbled_asteroid_stone', '#forge:tools/pickaxes', 'kubejs:asteroid_gravel')
     event.recipes.farmersdelight.cutting('kubejs:asteroid_stone', '#forge:tools/pickaxes', 'kubejs:cobbled_asteroid_stone')
     event.recipes.farmersdelight.cutting('kubejs:asteroid_gravel', '#forge:tools/hammers', ['kubejs:asteroid_sand', Item.of('minecraft:flint').withChance(0.2)])
     event.recipes.farmersdelight.cutting('minecraft:gravel', '#forge:tools/hammers', ['minecraft:sand', Item.of('minecraft:flint').withChance(0.2)])
+
+    event.recipes.gtceu.forge_hammer('forge_hammer_andesite')
+        .itemInputs('minecraft:andesite')
+        .itemOutputs('gtceu:andesite_dust')
+        .duration(10)
+        .EUt(16)
 
     event.recipes.gtceu.forge_hammer('forge_hammer_sand')
         .itemInputs('minecraft:gravel')
@@ -296,7 +327,6 @@ ServerEvents.recipes(event => {
 
 
     //#region lava
-
     event.recipes.farmersdelight.cooking(
       ['#minecraft:stone_crafting_materials', '#minecraft:stone_crafting_materials', 
         '#minecraft:stone_crafting_materials', '#minecraft:stone_crafting_materials'],
@@ -313,5 +343,40 @@ ServerEvents.recipes(event => {
       .EUt(2)
 
     event.recipes.create.mixing(Fluid.of('minecraft:lava', 250), '#minecraft:stone_crafting_materials').heatRequirement('lowheated')
+    //#endregion
+
+    
+
+    //#region damascus steel
+    event.recipes.gtceu.primitive_blast_furnace('dam_steel_charcoal')
+        .itemInputs('gtceu:steel_ingot', 'minecraft:charcoal')
+        .itemOutputs('gtceu:damascus_steel_ingot', 'gtceu:tiny_dark_ash_dust')
+        .duration(1200)
+
+    event.recipes.gtceu.primitive_blast_furnace('dam_steel_coal')
+        .itemInputs('gtceu:steel_ingot', 'minecraft:coal')
+        .itemOutputs('gtceu:damascus_steel_ingot', 'gtceu:tiny_dark_ash_dust')
+        .duration(1200)
+
+    event.recipes.gtceu.primitive_blast_furnace('dam_steel_coke')
+        .itemInputs('gtceu:steel_ingot', 'gtceu:coke_gem')
+        .itemOutputs('gtceu:damascus_steel_ingot', 'gtceu:tiny_dark_ash_dust')
+        .duration(900)
+
+    event.recipes.gtceu.primitive_blast_furnace('dam_steel_charcoal_dust')
+        .itemInputs('gtceu:steel_ingot', 'gtceu:charcoal_dust')
+        .itemOutputs('gtceu:damascus_steel_ingot', 'gtceu:tiny_dark_ash_dust')
+        .duration(1200)
+
+    event.recipes.gtceu.primitive_blast_furnace('dam_steel_coal_dust')
+        .itemInputs('gtceu:steel_ingot', 'gtceu:coal_dust')
+        .itemOutputs('gtceu:damascus_steel_ingot', 'gtceu:tiny_dark_ash_dust')
+        .duration(1200)
+
+    event.recipes.gtceu.primitive_blast_furnace('dam_steel_coke_dust')
+        .itemInputs('gtceu:steel_ingot', 'gtceu:coke_dust')
+        .itemOutputs('gtceu:damascus_steel_ingot', 'gtceu:tiny_dark_ash_dust')
+        .duration(900)
+
     //#endregion
 });

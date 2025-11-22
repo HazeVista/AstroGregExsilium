@@ -80,6 +80,13 @@ event.removeAllTagsFrom('powah:crystal_blazing')
 event.removeAllTagsFrom('powah:crystal_nitro')
 event.removeAllTagsFrom(/botania:rune_.*/)
 event.removeAllTagsFrom('ad_extendra:glacian_sapling')
+event.removeAllTagsFrom('create:blaze_cake')
+event.removeAllTagsFrom('create:creative_blaze_cake')
+event.removeAllTagsFrom('create:blaze_cake_base')
+event.removeAllTagsFrom('createaddition:cake_base')
+event.removeAllTagsFrom('createaddition:cake_base_baked')
+event.removeAllTagsFrom('create:builders_tea')
+event.removeAllTagsFrom('createaddition:bioethanol_bucket')
 });
 
 

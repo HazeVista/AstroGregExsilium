@@ -1,9 +1,16 @@
 {
     "block.gtceu.greenhouse": "Greenhouse",
-    "gtceu.greenhouse": "Greenhouse",
+    "gtceu.greenhouse_trees": "Greenhouse Trees",
     "gtceu.greenhouse_flowers": "Greenhouse Flowers",
+    "gtceu.greenhouse_crops": "Greenhouse Crops",
     "gtceu.inscription": "ME Inscription",
     "block.gtceu.inscription_matrix": "Inscription Matrix",
+    "block.gtceu.conservatory": "Conservatory",
+
+    "block.gtceu.ulv_water_source": "Water Source",
+    "gtceu.water_source": "Water Source",
+    "gtceu.mana_infusion": "Mana Infusion",
+    "gtceu.botanic_purification": "Botanic Purification",
     
     "material.gtceu.futura_alloy": "Futura Steel",
     "material.gtceu.andesite_alloy": "Andesite Alloy",
@@ -12,7 +19,7 @@
 
     "material.gtceu.terrasteel": "Terrasteel",
     "material.gtceu.manasteel": "Manasteel",
-    "material.gtceu.elementium": "Elementium",
+    "material.gtceu.elementium": "Alfsteel",
     "material.gtceu.gaiasteel": "Gaiasteel",
     "material.gtceu.mana_diamond": "Mana Diamond",
     "material.gtceu.dragonstone": "Dragonstone",

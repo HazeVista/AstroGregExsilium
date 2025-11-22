@@ -290,13 +290,14 @@ ServerEvents.recipes(event => {
         A: 'gtceu:futura_alloy_plate',
         B: 'gtceu:hv_laser_engraver',
         C: 'gtceu:hv_emitter',
-        D: 'gtceu:glass_lens',
-        E: '#gtceu:circuits/iv'
+        D: 'gtceu:hv_conveyor_module',
+        E: '#gtceu:circuits/ev'
     });
 
     event.recipes.gtceu.inscription('inscribe_logic_processor')
         .itemInputs('gtceu:gold_plate')
         .inputFluids('gtceu:silicon 144')
+        .notConsumable('gtceu:yellow_glass_lens')
         .itemOutputs('2x ae2:logic_processor')
         .duration(300)
         .EUt(100)
@@ -304,6 +305,7 @@ ServerEvents.recipes(event => {
     event.recipes.gtceu.inscription('inscribe_calc_processor')
         .itemInputs('gtceu:certus_quartz_plate')
         .inputFluids('gtceu:silicon 144')
+        .notConsumable('gtceu:cyan_glass_lens')
         .itemOutputs('2x ae2:calculation_processor')
         .duration(300)
         .EUt(100)
@@ -311,13 +313,15 @@ ServerEvents.recipes(event => {
     event.recipes.gtceu.inscription('inscribe_eng_processor')
         .itemInputs('gtceu:diamond_plate')
         .inputFluids('gtceu:silicon 144')
+        .notConsumable('#forge:lenses/light_blue')
         .itemOutputs('2x ae2:engineering_processor')
         .duration(300)
         .EUt(100)
     
     event.recipes.gtceu.inscription('inscribe_mega_processor')
         .itemInputs('ae2:logic_processor', 'ae2:calculation_processor', 'ae2:engineering_processor')
-        .inputFluids('gtceu:neon 100')
+        .inputFluids('gtceu:silicon 144', 'gtceu:neon 100')
+        .notConsumable('gtceu:black_glass_lens')
         .itemOutputs('2x megacells:accumulation_processor')
         .duration(300)
         .EUt(3200)

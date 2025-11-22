@@ -26,7 +26,31 @@ ServerEvents.recipes(event => {
     //     .itemOutputs('36x minecraft:blaze_powder')
     //     .duration(792)
     //     .EUt(2)                /*output doesnt work ffs*/
-    
+    //#endregion
+
+
+
+    //#region damascus steel
+    event.recipes.gtceu.mixer('mix_damascus_steel_dust')
+        .itemInputs('gtceu:steel_dust', 'gtceu:coal_dust')
+        .itemOutputs('gtceu:damascus_steel_dust')
+        .duration(400)
+        .EUt(16)
+
+    event.recipes.gtceu.mixer('mix_damascus_steel_dust_alt')
+        .itemInputs('gtceu:steel_dust', 'gtceu:charcoal_dust')
+        .itemOutputs('gtceu:damascus_steel_dust')
+        .duration(400)
+        .EUt(16)
+
+    event.recipes.gtceu.mixer('mix_damascus_steel_dust_alt1')
+        .itemInputs('gtceu:steel_dust', 'gtceu:carbon_dust')
+        .itemOutputs('gtceu:damascus_steel_dust')
+        .duration(400)
+        .EUt(16)
+    //#endregion
+
+
     //#region ender air
     event.recipes.gtceu.centrifuge('centrifuge_ender_air')
         .inputFluids('gtceu:ender_air 10000')
@@ -40,6 +64,7 @@ ServerEvents.recipes(event => {
         .duration(200)
         .circuit(1)
         .EUt(16)
+    //#endregion
 
 
 

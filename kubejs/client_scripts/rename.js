@@ -1,0 +1,16 @@
+ClientEvents.lang('en_us', event => {
+//#region botania
+event.renameItem('botania:elementium_sword', 'Alfsteel Sword')
+event.renameItem('botania:elementium_hoe', 'Alfsteel Hoe')
+event.renameItem('botania:elementium_axe', 'Alfsteel Axe')
+event.renameItem('botania:elementium_shovel', 'Alfsteel Shovel')
+event.renameItem('botania:elementium_pickaxe', 'Alfsteel Pickaxe')
+event.renameItem('botania:elementium_boots', 'Alfsteel Boots')
+event.renameItem('botania:elementium_leggings', 'Alfsteel Leggings')
+event.renameItem('botania:elementium_chestplate', 'Alfsteel Chestplate')
+event.renameItem('botania:elementium_helmet', 'Alfsteel Helmet')
+event.renameItem('botania:elementium_shears', 'Alfsteel Shears')
+event.renameItem('botania:elementium_nugget', 'Alfsteel Nugget')
+event.renameItem('botania:elementium_ingot', 'Alfsteel Ingot')
+event.renameItem('botania:elementium_block', 'Alfsteel Block')
+})
