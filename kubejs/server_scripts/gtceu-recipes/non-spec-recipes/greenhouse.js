@@ -1,6 +1,20 @@
 ServerEvents.recipes(event => {
     const greg = event.recipes.gtceu
 
+//#region Helpers
+function applyNotConsumableItem(recipe, toApply) {
+    recipe.notConsumable(toApply);
+}
+function applyItemInput(recipe, toApply) {
+    recipe.itemInputs(toApply);
+}
+function applyFluidInput(recipe, toApply) {
+    recipe.inputFluids(toApply);
+}
+function applyItemOutput(recipe, toApply) {
+    recipe.itemOutputs(toApply);
+}
+
 //#region trees
 const trees = [
         ["minecraft:oak_sapling", "minecraft:oak_log", "minecraft:oak_leaves"],
@@ -19,131 +33,51 @@ trees.forEach((tree) => {
     const log = tree[1]
     const leaf = tree[2]
 
-    //Circuit 1
-    if (sapling === "gtceu:rubber_sapling") {
-        greg.greenhouse_trees(sapling)
-            .notConsumable(sapling)
-            .inputFluids("water 1000")
-            .itemOutputs(`16x ${log}`, `4x ${leaf}`, `${sapling}`, "gtceu:sticky_resin")
-            .duration(320)
-            .EUt(30)
-            .circuit(1);
-    } else {
-        greg.greenhouse_trees(sapling)
-            .notConsumable(sapling)
-            .inputFluids("water 1000")
-            .itemOutputs(`16x ${log}`, `4x ${leaf}`, `${sapling}`)
-            .duration(320)
-            .EUt(30)
-            .circuit(1);
+    let rubber= '';
+    if (sapling == 'gtceu:rubber_sapling') {
+        rubber = 'gtceu:sticky_resin'
     }
 
-    //Circuit 2
-    if (sapling === "gtceu:rubber_sapling") {
-        greg.greenhouse_trees(`${sapling}_fertilizer`)
+    const GreenHouseHelperTree = (notConsumableItem, Item1, Fluid1, Circuit, Duration, Affix) => {
+        
+        let RecipeName = sapling;
+        if (Affix != '') {
+            RecipeName = `${sapling}_${Affix}`;
+        }
+
+        const greenhouse_tree_base = greg.greenhouse_trees(RecipeName)
             .notConsumable(sapling)
-            .itemInputs("4x gtceu:fertilizer")
-            .inputFluids("water 1000")
-            .itemOutputs(`16x ${log}`, `4x ${leaf}`, `${sapling}`, "gtceu:sticky_resin")
-            .duration(240)
-            .EUt(30)
-            .circuit(2);
-    } else {
-        greg.greenhouse_trees(`${sapling}_fertilizer`)
-            .notConsumable(sapling)
-            .itemInputs("4x gtceu:fertilizer")
-            .inputFluids("water 1000")
+            .inputFluids('water 1000')
             .itemOutputs(`16x ${log}`, `4x ${leaf}`, `${sapling}`)
-            .duration(240)
+            .circuit(Circuit)
+            .duration(Duration)
             .EUt(30)
-            .circuit(2);
+
+        if (rubber != '') {
+            applyItemOutput(greenhouse_tree_base, rubber);
+        }
+
+        if (notConsumableItem != "") {
+            applyNotConsumableItem(greenhouse_tree_base, notConsumableItem);
+        }
+
+        if (Item1 != '') {
+            applyItemInput(greenhouse_tree_base, Item1);
+        }
+
+        if (Fluid1 != '') {
+            applyFluidInput(greenhouse_tree_base, Fluid1);
+        }
+
     }
 
-    //Circuit 3
-    if (sapling === "gtceu:rubber_sapling") {
-        greg.greenhouse_trees(`${sapling}_overgrowth`)
-            .notConsumable(sapling)
-            .notConsumable('botania:overgrowth_seed')
-            .inputFluids("water 1000")
-            .itemOutputs(`16x ${log}`, `4x ${leaf}`, `1x ${sapling}`, "gtceu:sticky_resin")
-            .duration(240)
-            .EUt(30)
-            .circuit(3);
-    } else {
-        greg.greenhouse_trees(`${sapling}_overgrowth`)
-            .notConsumable(sapling)
-            .notConsumable('botania:overgrowth_seed')
-            .inputFluids("water 1000")
-            .itemOutputs(`16x ${log}`, `4x ${leaf}`, `${sapling}`)
-            .duration(240)
-            .EUt(30)
-            .circuit(3);
-    }
-
-    //Circuit 4
-    if (sapling === "gtceu:rubber_sapling") {
-        greg.greenhouse_trees(`${sapling}_carbon_dioxide`)
-            .notConsumable(sapling)
-            .inputFluids("water 1000", 'gtceu:carbon_dioxide 1000')
-            .itemOutputs(`16x ${log}`, `4x ${leaf}`, `${sapling}`, "gtceu:sticky_resin")
-            .outputFluids('gtceu:oxygen 2000')
-            .duration(240)
-            .EUt(30)
-            .circuit(4);
-    } else {
-        greg.greenhouse_trees(`${sapling}_carbon_dioxide`)
-            .notConsumable(sapling)
-            .inputFluids("water 1000", 'gtceu:carbon_dioxide 1000')
-            .itemOutputs(`16x ${log}`, `4x ${leaf}`, `${sapling}`)
-            .outputFluids('gtceu:oxygen 2000')
-            .duration(240)
-            .EUt(30)
-            .circuit(4);
-    }
-
-    //Circuit 5
-    if (sapling === "gtceu:rubber_sapling") {
-        greg.greenhouse_trees(`${sapling}_fertilizer_carbon_dioxide`)
-            .notConsumable(sapling)
-            .inputFluids("water 1000", 'gtceu:carbon_dioxide 1000')
-            .itemOutputs(`16x ${log}`, `4x ${leaf}`, `${sapling}`, "gtceu:sticky_resin")
-            .outputFluids('gtceu:oxygen 2000')
-            .duration(200)
-            .EUt(30)
-            .circuit(5);
-    } else {
-        greg.greenhouse_trees(`${sapling}_fertilizer_carbon_dioxide`)
-            .notConsumable(sapling)
-            .inputFluids("water 1000", 'gtceu:carbon_dioxide 1000')
-            .itemOutputs(`16x ${log}`, `4x ${leaf}`, `${sapling}`)
-            .outputFluids('gtceu:oxygen 2000')
-            .duration(200)
-            .EUt(30)
-            .circuit(5);
-    }
-
-    //Circuit 6
-    if (sapling === "gtceu:rubber_sapling") {
-        greg.greenhouse_trees(`${sapling}_overgrowth_carbon_dioxide`)
-            .notConsumable(sapling)
-            .notConsumable('botania:overgrowth_seed')
-            .inputFluids("water 1000", 'gtceu:carbon_dioxide 1000')
-            .itemOutputs(`16x ${log}`, `4x ${leaf}`, `${sapling}`, "gtceu:sticky_resin")
-            .outputFluids('gtceu:oxygen 2000')
-            .duration(200)
-            .EUt(30)
-            .circuit(6);
-    } else {
-        greg.greenhouse_trees(`${sapling}_overgrowth_carbon_dioxide`)
-            .notConsumable(sapling)
-            .notConsumable('botania:overgrowth_seed')
-            .inputFluids("water 1000", 'gtceu:carbon_dioxide 1000')
-            .itemOutputs(`16x ${log}`, `4x ${leaf}`, `${sapling}`)
-            .outputFluids('gtceu:oxygen 2000')
-            .duration(200)
-            .EUt(30)
-            .circuit(6);
-    }
+    // GreenHouseHelper(Non Consumable, Consumable Item, Consumable Fluid, Circuit Number, Duration, Name Affix)
+    GreenHouseHelperTree('', '', '', 1, 320, '');
+    GreenHouseHelperTree('', '4x gtceu:fertilizer', '', 2, 240, 'fertilizer');
+    GreenHouseHelperTree('botania:overgrowth_seed', '', '', 3, 240, 'overgrowth');
+    GreenHouseHelperTree('', '', 'gtceu:carbon_dioxide 1000', 4, 240, 'carbon_dioxide');
+    GreenHouseHelperTree('', '4x gtceu:fertilizer', 'gtceu:carbon_dioxide 1000', 5, 200, 'fertilizer_carbon_dioxide');
+    GreenHouseHelperTree('botania:overgrowth_seed', '', 'gtceu:carbon_dioxide 1000', 6, 200, 'overgrowth_carbon_dioxide');
 })
     //#endregion
 
@@ -157,31 +91,32 @@ trees.forEach((tree) => {
         'botania:magenta_mystical_flower','botania:lime_mystical_flower']
 
     flowers.forEach((flower) => {
-        greg.greenhouse_flowers(flower)
-            .notConsumable(flower)
-            .inputFluids('water 100')
-            .itemOutputs(flower)
-            .duration(200)
-            .EUt(30)
-            .circuit(1)
+        const GreenHouseHelperFlower = (notConsumableItem, Item1, Circuit, Duration, Affix) => {
 
-        greg.greenhouse_flowers(`${flower}_fertilizer`)
-            .notConsumable(flower)
-            .itemInputs('gtceu:fertilizer')
-            .inputFluids('water 100')
-            .itemOutputs(flower)
-            .duration(150)
-            .EUt(30)
-            .circuit(2)
+            let RecipeName = flower;
+            if (Affix != '') {
+                RecipeName = `${flower}_${Affix}`;
+            }
+            const greenhouse_flower_base = greg.greenhouse_flowers(RecipeName)
+                .notConsumable(flower)
+                .inputFluids('water 100')
+                .itemOutputs(flower)
+                .duration(Duration)
+                .EUt(30)
+                .circuit(Circuit)
 
-        greg.greenhouse_flowers(`${flower}_overgrowth`)
-            .notConsumable(flower)
-            .notConsumable('botania:overgrowth_seed')
-            .inputFluids('water 100')
-            .itemOutputs(flower)
-            .duration(150)
-            .EUt(30)
-            .circuit(3)
+            if (notConsumableItem != '') {
+                applyNotConsumableItem(greenhouse_flower_base, notConsumableItem)
+            }
+            if (Item1 != '') {
+                applyItemInput(greenhouse_flower_base, Item1)
+            }
+        }
+
+        // GreenhouseHelperFlower(Not Consumable Item, Item Input, Circuit, Duration, Affix) ## the affix is for the recipe name 
+        GreenHouseHelperFlower('', '', 1, 200, '')
+        GreenHouseHelperFlower('', 'gtceu:fertilizer', 2, 150, 'fertilizer')
+        GreenHouseHelperFlower('botania:overgrowth_seed', '', 3, 150, 'overgrowth')
     })
     //#endregion
 
@@ -210,31 +145,32 @@ trees.forEach((tree) => {
         const seed = crop[0]
         const plant = crop[1]
 
-        greg.greenhouse_crops(plant)
-            .notConsumable(seed)
-            .inputFluids('water 1000')
-            .itemOutputs(`16x ${plant}`, `${seed}`)
-            .duration(800)
-            .EUt(30)
-            .circuit(1)
-        
-        greg.greenhouse_crops(`${plant}_fertilizer`)
-            .notConsumable(seed)
-            .itemInputs('gtceu:fertilizer')
-            .inputFluids('water 1000')
-            .itemOutputs(`16x ${plant}`, `${seed}`)
-            .duration(600)
-            .EUt(30)
-            .circuit(2)
+        const GreenHouseHelperCrop = (notConsumableItem, Item1, Circuit, Duration, Affix) => {
 
-        greg.greenhouse_crops(`${plant}_overgrowth`)
-            .notConsumable(seed)
-            .notConsumable('botania:overgrowth_seed')
-            .inputFluids('water 1000')
-            .itemOutputs(`16x ${plant}`, `${seed}`)
-            .duration(600)
-            .EUt(30)
-            .circuit(3)
+            let RecipeName = plant;
+            if (Affix != '') {
+                RecipeName = `${plant}_${Affix}`;
+            }
+            const greenhouse_crop_base = greg.greenhouse_crops(RecipeName)
+                .notConsumable(seed)
+                .inputFluids('minecraft:water 1000')
+                .itemOutputs(`16x ${plant}`, `${seed}`)
+                .duration(Duration)
+                .EUt(30)
+                .circuit(Circuit)
+
+            if (notConsumableItem != '') {
+                applyNotConsumableItem(greenhouse_crop_base, notConsumableItem)
+            }
+            if (Item1 != '') {
+                applyItemInput(greenhouse_crop_base, Item1)
+            }
+        }
+
+        // GreenhouseHelperCrop(Not Consumable Item, Item Input, Circuit, Duration, Affix) ## the affix is for the recipe name 
+        GreenHouseHelperCrop('', '', 1, 800, '')
+        GreenHouseHelperCrop('', 'gtceu:fertilizer', 2, 600, 'fertilizer')
+        GreenHouseHelperCrop('botania:overgrowth_seed', '', 3, 600, 'overgrowth')
     })
     //#endregion
 

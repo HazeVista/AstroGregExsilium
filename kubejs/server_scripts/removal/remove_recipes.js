@@ -1,12 +1,12 @@
 ServerEvents.recipes(event => {
     //#region remove input
-    const toRemoveIn = ['ad_astra:moon_desh_ore', 'ad_astra:deepslate_desh_ore', 'ad_astra:ostrum_plate', 'ad_astra:calorite_plate', 'ad_astra:desh_plate',
+    const toRemoveInput = ['ad_astra:moon_desh_ore', 'ad_astra:deepslate_desh_ore', 'ad_astra:ostrum_plate', 'ad_astra:calorite_plate', 'ad_astra:desh_plate',
         'minecraft:netherite_upgrade_smithing_template', 'ad_astra:fan', 'ad_astra:steel_ingot', 'ad_astra:ice_shard', 'gtceu:gaiasteel_ingot', 'create:creative_blaze_cake',
         'create:blaze_cake_base', 'createaddition:cake_base_baked', 'create:blaze_cake', 'createaddition:cake_base', 'create:bar_of_chocolate'
     ];
 
     //#region remove output
-    const toRemoveOut = ['ae2:charger', 'ae2:drive', 'ae2:chest', 'createdieselgenerators:pumpjack_hole', 'expatternprovider:ex_inscriber', 'ad:astra_oxygen', 'waystones:warp_dust',
+    const toRemoveOutput = ['ae2:charger', 'ae2:drive', 'ae2:chest', 'createdieselgenerators:pumpjack_hole', 'expatternprovider:ex_inscriber', 'ad:astra_oxygen', 'waystones:warp_dust',
         'expatternprovider:ex_charger', 'expatternprovider:crystal_fixer', 'expatternprovider:caner', 'exmachinis:item_buffer', 'ae2:crystal_resonance_generator', 'laserio:laser_node',
         'ae2:vibration_chamber', 'expatternprovider:circuit_cutter', 'minecraft:mycelium', 'create:brass_block', 'create:zinc_block', 'createaddition:straw', 'ad_astra:hydrogen',
         'gtceu:me_pattern_buffer_proxy', 'gtceu:me_pattern_buffer', 'create:andesite_alloy', 'ad_astra:desh_plate', 'create:controller_rail', 'create:dough',
@@ -111,7 +111,7 @@ ServerEvents.recipes(event => {
     ];
 
     //#region helpers
-    toRemoveOut.forEach(element => {
+    toRemoveOutput.forEach(element => {
         event.remove({ output: element})
     });
 
@@ -123,7 +123,7 @@ ServerEvents.recipes(event => {
         event.remove({ type: element})
     });
 
-    toRemoveIn.forEach(element => {
+    toRemoveInput.forEach(element => {
         event.remove({ input: element})
     })
 
