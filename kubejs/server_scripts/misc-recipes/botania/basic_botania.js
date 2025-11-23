@@ -58,11 +58,10 @@ ServerEvents.recipes(event => {
 
     
     //#region mana infusion
-    event.recipes.botania.mana_infusion('botania:manaweave_cloth', 'farmersdelight:canvas', 5000)
+    event.recipes.botania.mana_infusion('botania:manaweave_cloth', 'farmersdelight:canvas', 4000)
     event.recipes.botania.mana_infusion('botania:mana_powder', 'gtceu:stone_dust', 100)
     event.recipes.botania.mana_infusion('botania:mana_powder', 'gtceu:asteroid_stone_dust', 100)
     event.recipes.botania.mana_infusion('botania:mana_glass', 'gtceu:tempered_glass', 100)
-    event.recipes.botania.mana_infusion('minecraft:nether_wart_block', 'botania:blaze_block', 36000, 'botania:alchemy_catalyst')
     event.recipes.botania.mana_infusion('gtceu:exquisite_mana_diamond_gem', 'gtceu:exquisite_diamond_gem', 40000)
     event.recipes.botania.mana_infusion('gtceu:flawless_mana_diamond_gem', 'gtceu:flawless_diamond_gem', 20000)
     event.recipes.botania.mana_infusion('botania:mana_diamond', 'minecraft:diamond', 10000)

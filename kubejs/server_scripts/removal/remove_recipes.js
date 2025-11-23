@@ -96,7 +96,7 @@ ServerEvents.recipes(event => {
         'gtceu:shapeless/block_decompress_mana_diamond_gem', 'botania:mana_mirror', 'gtceu:shapeless/manadiamond_block_deconstruct', 'gtceu:shaped/block_compress_mana_diamond', 'createlowheated:mixing/chocolate',
         'gtceu:shapeless/dragonstone_block_deconstruct', 'gtceu:shaped/block_compress_mana_diamond', 'botania:spark', 'botania:petal_apothecary/vazkii_head', 'botania:runic_altar/head',
         'botania:heisei_dream', 'gtceu:extruder/nan_certificate', 'gtceu:forming_press/pumpkin_pie', 'createaddition:mixing/bioethanol', 'createaddition:compacting/cake_base', 'botania:shimmerwood_planks',
-        'botania:mana_infusion/flint_to_gunpowder', 'botania:mana_infusion/gunpowder_to_flint'
+        'botania:mana_infusion/flint_to_gunpowder', 'botania:mana_infusion/gunpowder_to_flint', 'gtceu:shapeless/block_decompress_mana_diamond'
 
     ];
     //#region remove type
