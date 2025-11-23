@@ -3,16 +3,24 @@ ServerEvents.recipes(event => {
 
 //#region Helpers
 function applyNotConsumableItem(recipe, toApply) {
-    recipe.notConsumable(toApply);
+    if (toApply != '') {
+        recipe.notConsumable(toApply);
+    }
 }
 function applyItemInput(recipe, toApply) {
-    recipe.itemInputs(toApply);
+    if (toApply != '') {
+        recipe.itemInputs(toApply);
+    }
 }
 function applyFluidInput(recipe, toApply) {
-    recipe.inputFluids(toApply);
+    if (toApply != '') {
+        recipe.inputFluids(toApply);  
+    }    
 }
 function applyItemOutput(recipe, toApply) {
-    recipe.itemOutputs(toApply);
+    if (toApply != '') {
+       recipe.itemOutputs(toApply); 
+    } 
 }
 
 //#region trees
@@ -52,23 +60,11 @@ trees.forEach((tree) => {
             .circuit(Circuit)
             .duration(Duration)
             .EUt(30)
-
-        if (rubber != '') {
-            applyItemOutput(greenhouse_tree_base, rubber);
-        }
-
-        if (notConsumableItem != "") {
-            applyNotConsumableItem(greenhouse_tree_base, notConsumableItem);
-        }
-
-        if (Item1 != '') {
-            applyItemInput(greenhouse_tree_base, Item1);
-        }
-
-        if (Fluid1 != '') {
-            applyFluidInput(greenhouse_tree_base, Fluid1);
-        }
-
+        
+        applyItemOutput(greenhouse_tree_base, rubber);
+        applyNotConsumableItem(greenhouse_tree_base, notConsumableItem);
+        applyItemInput(greenhouse_tree_base, Item1);
+        applyFluidInput(greenhouse_tree_base, Fluid1);
     }
 
     // GreenHouseHelper(Non Consumable, Consumable Item, Consumable Fluid, Circuit Number, Duration, Name Affix)
@@ -104,13 +100,9 @@ trees.forEach((tree) => {
                 .duration(Duration)
                 .EUt(30)
                 .circuit(Circuit)
-
-            if (notConsumableItem != '') {
-                applyNotConsumableItem(greenhouse_flower_base, notConsumableItem)
-            }
-            if (Item1 != '') {
-                applyItemInput(greenhouse_flower_base, Item1)
-            }
+            
+            applyNotConsumableItem(greenhouse_flower_base, notConsumableItem);
+            applyItemInput(greenhouse_flower_base, Item1);
         }
 
         // GreenhouseHelperFlower(Not Consumable Item, Item Input, Circuit, Duration, Affix) ## the affix is for the recipe name 
@@ -159,12 +151,8 @@ trees.forEach((tree) => {
                 .EUt(30)
                 .circuit(Circuit)
 
-            if (notConsumableItem != '') {
-                applyNotConsumableItem(greenhouse_crop_base, notConsumableItem)
-            }
-            if (Item1 != '') {
-                applyItemInput(greenhouse_crop_base, Item1)
-            }
+            applyItemInput(greenhouse_crop_base, Item1);
+            applyNotConsumableItem(greenhouse_crop_base, notConsumableItem);
         }
 
         // GreenhouseHelperCrop(Not Consumable Item, Item Input, Circuit, Duration, Affix) ## the affix is for the recipe name 

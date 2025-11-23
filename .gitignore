@@ -72,3 +72,4 @@ config/sophisticatedcore-common*
 config/xaeropatreon*
 config/xaeroworldmap-common*
 config/xaeroworldmap*
+kubejs/server_scripts/mb_helper.js
