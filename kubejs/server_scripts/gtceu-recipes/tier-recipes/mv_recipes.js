@@ -16,4 +16,7 @@ ServerEvents.recipes(event => {
         .itemOutputs('gtceu:data_disk')
         .duration(300)
         .EUt(45)
+
+    //#endregion
+
 })

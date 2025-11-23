@@ -21,7 +21,7 @@
             "botanicadds:tesseract_attunable": {"botanicadds:mana_tesseract": false},
             "botania:functional_special_flowers": {
                 "botanicadds:flowers/necroidus": false,
-                "botanicadds:flowers/apicaria": true
+                "botanicadds:flowers/apicaria": false
             },
             "forge:ingots/gaiasteel": {"botanicadds:gaiasteel_ingot": true},
             "forge:gems/mana_lapis": {"botanicadds:mana_lapis": false},
@@ -32,7 +32,7 @@
                 "botanicadds:flowers/floating/energizera": true,
                 "botanicadds:flowers/floating/necroidus": false,
                 "botanicadds:flowers/floating/tempestea": true,
-                "botanicadds:flowers/floating/apicaria": true,
+                "botanicadds:flowers/floating/apicaria": false,
                 "botanicadds:flowers/floating/rainute": true,
                 "botanicadds:flowers/floating/glaciflora": true
             },
@@ -53,7 +53,7 @@
             "forge:storage_blocks/gaiasteel": {"botanicadds:gaiasteel_block": true},
             "botania:functional_special_flowers": {
                 "botanicadds:flowers/necroidus": false,
-                "botanicadds:flowers/apicaria": true
+                "botanicadds:flowers/apicaria": false
             },
             "minecraft:needs_stone_tool": {
                 "botanicadds:gaia_plate": true,
@@ -84,7 +84,7 @@
                 "botanicadds:flowers/floating/tempestea": true,
                 "botanicadds:flowers/floating/glaciflora": true,
                 "botanicadds:flowers/floating/rainute": true,
-                "botanicadds:flowers/floating/apicaria": true
+                "botanicadds:flowers/floating/apicaria": false
             },
             "botania:magnet_ring_blacklist": {"botanicadds:gaia_plate": true},
             "forge:storage_blocks/mana_lapis": {"botanicadds:mana_lapis_block": false},

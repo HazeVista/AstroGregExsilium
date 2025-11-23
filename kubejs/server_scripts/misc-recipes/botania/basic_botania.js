@@ -36,7 +36,7 @@ ServerEvents.recipes(event => {
 
     
 
-    //#region crafting block recipes
+    //#region 'machine' recipes
     event.shaped('botania:apothecary_default', [
         'ABA',
         ' A ',
@@ -57,7 +57,7 @@ ServerEvents.recipes(event => {
 
 
     
-    //#region low level materials
+    //#region mana infusion
     event.recipes.botania.mana_infusion('botania:manaweave_cloth', 'farmersdelight:canvas', 5000)
     event.recipes.botania.mana_infusion('botania:mana_powder', 'gtceu:stone_dust', 100)
     event.recipes.botania.mana_infusion('botania:mana_powder', 'gtceu:asteroid_stone_dust', 100)
@@ -65,7 +65,20 @@ ServerEvents.recipes(event => {
     event.recipes.botania.mana_infusion('minecraft:nether_wart_block', 'botania:blaze_block', 36000, 'botania:alchemy_catalyst')
     event.recipes.botania.mana_infusion('gtceu:exquisite_mana_diamond_gem', 'gtceu:exquisite_diamond_gem', 40000)
     event.recipes.botania.mana_infusion('gtceu:flawless_mana_diamond_gem', 'gtceu:flawless_diamond_gem', 20000)
+    event.recipes.botania.mana_infusion('botania:mana_diamond', 'minecraft:diamond', 10000)
+    event.recipes.botania.mana_infusion('botania:mana_diamond_block', '#forge:storage_blocks/diamond', 10000)
+    event.recipes.botania.mana_infusion('botania:mana_cookie', 'minecraft:cookie', 20000)   
+    event.recipes.botania.mana_infusion('botania:grass_seeds', '#forge:grass', 2500)   
+    event.recipes.botania.mana_infusion('botania:mycelium_seeds', '#forge:mushrooms', 2500)   
+    event.recipes.botania.mana_infusion('botania:podzol_seeds', 'minecraft:dead_bush', 2500)   
+    event.recipes.botania.mana_infusion('botania:piston_relay', 'minecraft:piston', 15000)   
+    event.recipes.botania.mana_infusion('botania:mana_string', 'minecraft:string', 1000)   
+    event.recipes.botania.mana_infusion('botania:mana_pearl', 'minecraft:ender_pearl', 6000)
+    //#endregion
     
+
+
+    //#region low level materials
     event.shaped('4x gtceu:manasteel_dust', [
         'ABA',
         'BAB',
@@ -125,6 +138,12 @@ ServerEvents.recipes(event => {
         .itemOutputs('5x botanicadds:gaia_shard')
         .duration(100)
         .EUt(2000)
+
+    event.recipes.gtceu.mixer('mix_inactive_terrasteel')
+        .itemInputs('gtceu:manasteel_dust', 'gtceu:beryllium_dust', 'gtceu:aluminium_dust')
+        .itemOutputs('3x gtceu:inactive_terrasteel_dust')
+        .duration(300)
+        .EUt(120)
     //#endregion
 
         
@@ -238,7 +257,7 @@ ServerEvents.recipes(event => {
     ], {
         A: 'gtceu:flawless_mana_diamond_gem',
         B: 'botania:livingrock',
-        C: 'gtceu:gold_plate'
+        C: 'gtceu:gold_double_plate'
     })
     //#endregion
 
@@ -925,6 +944,9 @@ ServerEvents.recipes(event => {
     })
     //#endregion
 
+
+
+    //#region logs
     const logTypes = ['livingwood_log', 'livingwood', 'stripped_livingwood_log', 'stripped_livingwood',
         'dreamwood_log', 'dreamwood', 'stripped_dreamwood_log', 'stripped_dreamwood']
     
@@ -941,7 +963,7 @@ ServerEvents.recipes(event => {
             .EUt(7)
     }
 
-    event.shapeless('6x botania:livingwood_planks', [
+    event.shaped('6x botania:livingwood_planks', [
         'A',
         'B'
     ], {
@@ -949,7 +971,7 @@ ServerEvents.recipes(event => {
         B: '#botania:livingwood_logs'
     })
 
-    event.shapeless('6x botania:dreamwood_planks', [
+    event.shaped('6x botania:dreamwood_planks', [
         'A',
         'B'
     ], {
@@ -968,11 +990,10 @@ ServerEvents.recipes(event => {
         .itemOutputs('6x botania:dreamwood_planks', '2x gtceu:wood_dust')
         .duration(400)
         .EUt(7)
-    //#region logs
-
-
-
     //#endregion
+
+
+    
     // event.shaped('botania:', [
     //     '',
     //     '',

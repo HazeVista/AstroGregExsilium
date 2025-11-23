@@ -3,7 +3,7 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
 		.tiers(GTValues.LV, GTValues.MV, GTValues.HV, GTValues.EV, GTValues.IV, GTValues.LuV, GTValues.ZPM, GTValues.UV)
 		.definition((tier, builder) => {
 			return builder
-				.recipeType('mana_infuser')
+				.recipeType('mana_infusion')
                 .recipeType('botanic_purification')
 				.workableTieredHullModel('gtceu:block/machines/replicator')
 	})

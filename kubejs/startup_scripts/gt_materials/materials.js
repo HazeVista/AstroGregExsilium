@@ -312,4 +312,5 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     compIngotLiquid('gaiasteel', [], 0x8c2929, RADIOACTIVE, [7100, 'high', VA('zpm'), 2400], [foil, gear, plates, rod, dense_plate, ring, bolt_and_screw,frame])
     compGem('mana_diamond', [], 0x47eaed, DIAMOND, [crystallizable])
     compGem('dragonstone', [], 0xed64d4, DIAMOND, [crystallizable])
+    compDust('inactive_terrasteel', [], 0x128719, [])
 });

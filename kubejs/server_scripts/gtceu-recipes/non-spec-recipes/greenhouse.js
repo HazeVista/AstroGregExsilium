@@ -238,4 +238,35 @@ trees.forEach((tree) => {
     })
     //#endregion
 
+
+
+    //#region controllers
+    event.shaped('gtceu:greenhouse', [
+        'EBF',
+        'DAD',
+        'CBG'
+    ], {
+        A: 'gtceu:lv_machine_hull',
+        B: '#gtceu:circuits/lv',
+        C: 'gtceu:lv_electric_pump',
+        D: 'gtceu:lv_robot_arm',
+        E: 'gtceu:steel_axe',
+        F: 'gtceu:steel_scythe',
+        G: 'gtceu:lv_conveyor_module'
+    })
+
+    event.shaped('gtceu:conservatory', [
+        'EBF',
+        'DAD',
+        'CBG'
+    ], {
+        A: 'gtceu:iv_machine_hull',
+        B: '#gtceu:circuits/iv',
+        C: 'gtceu:iv_electric_pump',
+        D: 'gtceu:iv_robot_arm',
+        E: 'gtceu:tungsten_steel_axe',
+        F: 'gtceu:tungsten_steel_scythe',
+        G: 'gtceu:iv_conveyor_module'
+    })
+
 })

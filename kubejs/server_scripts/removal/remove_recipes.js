@@ -36,7 +36,7 @@ ServerEvents.recipes(event => {
         'botania:floating_narslimmus', 'botania:medumone', 'botania:floating_medumone', 'botania:shulk_me_not', 'botania:floating_shulk_me_not', 'botania:rafflowsia', 'botania:floating_rafflowsia',
         'botania:manastar', 'botania:floating_manastar', 'botania:tigerseye', 'botania:floating_tigerseye', 'botania:rannuncarpus', 'botania:floating_rannuncarpus', 'botania:rannuncarpus_chibi', 
         'botania:floating_rannuncarpus_chibi', 'botania:tangleberrie', 'botania:floating_tangleberrie', 'botania:vine_ball', 'botania:orechid', 'botania:endoflame', 'botania:hydroangeas',
-        'create:builders_tea', 'create:chocolate_glazed_berries', 'create:bar_of_chocolate', 'create:tree_fertilizer',
+        'create:builders_tea', 'create:chocolate_glazed_berries', 'create:bar_of_chocolate',
     ]
 
     //#region remove recipe id
@@ -102,7 +102,7 @@ ServerEvents.recipes(event => {
     //#region remove type
     const toRemoveType = ['expatternprovider:cutter', 'ae2:inscriber', 'ae2:charger', 'create:crushing', 'ad_astra:alloying', 'createaddition:liquid_burning', 'create:pressing',
         'botania:orechid_ignem', 'botania:orechid', 'create:potion_mixing', 'ad_astra:compressing', 'ad_astra:cryo_freezing', 'ad_astra:nasa_workbench', 'create:deploying',
-        'create:automatic_brewing', 'powah:heat_sources', 'functionalstorage:dissolution', 'create:mystery_conversion',
+        'create:automatic_brewing', 'powah:heat_sources', 'functionalstorage:dissolution', 'create:mystery_conversion', 'botania:mana_infusion'
     ];
 
     //#region remove whole mod
