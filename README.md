@@ -23,7 +23,7 @@ Used TerraFirmaGreg and Star Technology code on a few files; credited on the fil
 
 
 
-For sneak peaks, questions, or just to chat about the project and its development:
+For sneak peeks, questions, or just to chat about the project and its development:
 
 https://discord.gg/dUaZeV6Drp
 
