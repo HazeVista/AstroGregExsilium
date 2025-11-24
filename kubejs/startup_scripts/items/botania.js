@@ -13,6 +13,8 @@ StartupEvents.registry('item', event => {
         .texture('kubejs:item/botania/gaia_lens')
     //#endregion
 
+
+    
     //#region runes
     event.create('botania:air_rune')
         .displayName('Rune of Air')
@@ -97,5 +99,16 @@ StartupEvents.registry('item', event => {
     // event.create('botania:_rune')
     //     .displayName('Rune of ')
     //     .texture('kubejs:item/botania/rune_')
+    //#endregion
+
+    //#region glass panes
+
+    event.create('botania:managlass_pane')
+        .displayName('Mana Glass Pane')
+        .texture('kubejs:item/botania/managlass')
+
+    event.create('botania:alfglass_pane')
+        .displayName('Elven Glass Pane')
+        .texture('kubejs:item/botania/alfglass')
     //#endregion
     })

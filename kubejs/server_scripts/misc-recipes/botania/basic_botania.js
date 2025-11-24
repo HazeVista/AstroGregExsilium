@@ -42,7 +42,7 @@ ServerEvents.recipes(event => {
         ' A ',
         'AAA'
     ], {
-        A: 'kubejs:cobbled_asteroid_stone',
+        A: 'gtceu:cobbled_asteroid_stone',
         B: '#botania:petals'
     })
     
@@ -53,6 +53,14 @@ ServerEvents.recipes(event => {
     ], {
         A: 'botanicadds:dreamrock'
     })
+
+    event.recipes.gtceu.assembler('assembler_mana_pylon')
+        .itemInputs('4x botania:manasteel_nugget', '4x gtceu:gold_double_plate', 'gtceu:exquisite_mana_diamond_gem')
+        .inputFluids('manafluid:mana 1000')
+        .itemOutputs('botania:mana_pylon')
+        .duration(400)
+        .EUt(120)
+    
     //#endregion
 
 
@@ -61,7 +69,7 @@ ServerEvents.recipes(event => {
     event.recipes.botania.mana_infusion('botania:manaweave_cloth', 'farmersdelight:canvas', 4000)
     event.recipes.botania.mana_infusion('botania:mana_powder', 'gtceu:stone_dust', 100)
     event.recipes.botania.mana_infusion('botania:mana_powder', 'gtceu:asteroid_stone_dust', 100)
-    event.recipes.botania.mana_infusion('botania:mana_glass', 'gtceu:tempered_glass', 100)
+    event.recipes.botania.mana_infusion('botania:managlass', 'gtceu:tempered_glass', 100)
     event.recipes.botania.mana_infusion('gtceu:exquisite_mana_diamond_gem', 'gtceu:exquisite_diamond_gem', 40000)
     event.recipes.botania.mana_infusion('gtceu:flawless_mana_diamond_gem', 'gtceu:flawless_diamond_gem', 20000)
     event.recipes.botania.mana_infusion('botania:mana_diamond', 'minecraft:diamond', 10000)
@@ -73,6 +81,9 @@ ServerEvents.recipes(event => {
     event.recipes.botania.mana_infusion('botania:piston_relay', 'minecraft:piston', 15000)   
     event.recipes.botania.mana_infusion('botania:mana_string', 'minecraft:string', 1000)   
     event.recipes.botania.mana_infusion('botania:mana_pearl', 'minecraft:ender_pearl', 6000)
+
+    event.recipes.botania.pure_daisy('minecraft:end_stone', 'minecraft:blackstone', 150)
+    event.recipes.botania.pure_daisy('botania:livingrock', '#forge:stone', 150)
     //#endregion
     
 
@@ -93,16 +104,16 @@ ServerEvents.recipes(event => {
         .duration(80)
         .EUt(7)
 
-    event.shaped('2x botania:mana_glass_pane', [
+    event.shaped('2x botania:managlass_pane', [
         'AB'
     ], {
-       A: 'botania:mana_glass',
+       A: 'botania:managlass',
        B: '#forge:tools/saws'
     })    
 
-    event.recipes.gtceu.cutter('cutting_mana_glass')
-        .itemInputs('3x botania:mana_glass')
-        .itemOutputs('8x botania:mana_glass_pane')
+    event.recipes.gtceu.cutter('cutting_managlass')
+        .itemInputs('3x botania:managlass')
+        .itemOutputs('8x botania:managlass_pane')
         .duration(50)
         .EUt(7)
 
@@ -119,16 +130,16 @@ ServerEvents.recipes(event => {
         .duration(50)
         .EUt(7)
 
-    event.shaped('2x botania:elf_glass_pane', [
+    event.shaped('2x botania:alfglass_pane', [
         'AB'
     ], {
-       A: 'botania:elf_glass',
+       A: 'botania:alfglass',
        B: '#forge:tools/saws'
     })    
 
-    event.recipes.gtceu.cutter('cutting_elf_glass')
-        .itemInputs('3x botania:elf_glass')
-        .itemOutputs('8x botania:elf_glass_pane')
+    event.recipes.gtceu.cutter('cutting_alfglass')
+        .itemInputs('3x botania:alfglass')
+        .itemOutputs('8x botania:alfglass_pane')
         .duration(50)
         .EUt(7)
 
@@ -154,7 +165,7 @@ ServerEvents.recipes(event => {
         'AAA'
     ], {
         A: 'gtceu:gold_plate',
-        B: 'botania:mana_glass_pane',
+        B: 'botania:managlass_pane',
         C: 'gtceu:manasteel_plate'
     })
 
@@ -321,7 +332,7 @@ ServerEvents.recipes(event => {
         'ACA',
         'ABA'
     ], {
-       A: 'botania:mana_glass_pane',
+       A: 'botania:managlass_pane',
        B: 'botania:lens_normal',
        C: 'botania:spectral_platform'
     })
@@ -618,14 +629,14 @@ ServerEvents.recipes(event => {
         'BAB'
     ], {
        A: 'gtceu:manasteel_ring',
-       B: 'botania:mana_glass_pane'
+       B: 'botania:managlass_pane'
     })
 
     event.shaped('botania:terra_lens', [
         'BAB'
     ], {
        A: 'gtceu:terrasteel_ring',
-       B: 'botania:mana_glass_pane'
+       B: 'botania:managlass_pane'
     })
 
     event.shaped('botania:gaia_lens', [
@@ -639,7 +650,7 @@ ServerEvents.recipes(event => {
         'BAB'
     ], {
        A: 'gtceu:elementium_ring',
-       B: 'botania:elf_glass_pane'
+       B: 'botania:alfglass_pane'
     })
 
     event.shaped('botania:lens_magnet', [

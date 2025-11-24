@@ -313,4 +313,6 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     compGem('mana_diamond', [], 0x47eaed, DIAMOND, [crystallizable])
     compGem('dragonstone', [], 0xed64d4, DIAMOND, [crystallizable])
     compDust('inactive_terrasteel', [], 0x128719, [])
+    compDust('livingrock', [], 0xc9c2b1, [])
+    compDust('livingclay', [], 0xc9c2e7, [])
 });

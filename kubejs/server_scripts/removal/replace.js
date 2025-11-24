@@ -48,6 +48,9 @@ ServerEvents.recipes(event => {
     event.replaceInput({input: 'botania:rune_sloth'}, 'botania:rune_sloth', 'botania:sloth_rune')
     event.replaceInput({input: 'botania:rune_gluttony'}, 'botania:rune_gluttony', 'botania:gluttony_rune')
     event.replaceInput({input: 'botania:rune_envy'}, 'botania:rune_envy', 'botania:envy_rune')
+    event.replaceInput({output: 'minecraft:brick'}, 'minecraft:clay_ball', 'gtceu:compressed_clay')
+    event.replaceInput({}, 'botania:mana_glass', 'botania:managlass')
+    event.replaceInput({}, 'botania:elf_glass', 'botania:alfglass')
     //#endregion
     
     //#region output

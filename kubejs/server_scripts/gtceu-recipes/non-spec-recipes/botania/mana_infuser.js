@@ -69,7 +69,7 @@ const purify = event.recipes.gtceu.botanic_purification
     infuser('infuse_glass')
         .itemInputs('gtceu:tempered_glass')
         .inputFluids('manafluid:mana 1')
-        .itemOutputs('botania:mana_glass')
+        .itemOutputs('botania:managlass')
         .duration(200)
         .EUt(7)
 
@@ -374,9 +374,75 @@ const purify = event.recipes.gtceu.botanic_purification
 
 
 //#region purification
+    purify('pure_snow')
+        .notConsumable('botania:pure_daisy')
+        .inputFluids('minecraft:water 8000')
+        .itemOutputs('8x minecraft:snow_block')
+        .duration(1200)
+        .EUt(2)
 
-
-
+    purify('pure_packed_ice')
+        .notConsumable('botania:pure_daisy')
+        .itemInputs('8x minecraft:ice')
+        .itemOutputs('8x minecraft:packed_ice')
+        .duration(1200)
+        .EUt(2)
+        
+    purify('pure_blue_ice')
+        .notConsumable('botania:pure_daisy')
+        .itemInputs('8x minecraft:packed_ice')
+        .itemOutputs('8x minecraft:blue_ice')
+        .duration(1200)
+        .EUt(2)
+        
+    purify('pure_sand')
+        .notConsumable('botania:pure_daisy')
+        .itemInputs('8x minecraft:soul_sand')
+        .itemOutputs('8x minecraft:sand')
+        .duration(1200)
+        .EUt(2)
+        
+    purify('pure_clay')
+        .notConsumable('botania:pure_daisy')
+        .itemInputs('8x #forge:sand')
+        .itemOutputs('8x minecraft:clay')
+        .duration(600)
+        .EUt(2)
+        
+    purify('pure_logs')
+        .notConsumable('botania:pure_daisy')
+        .itemInputs('8x #minecraft:logs')
+        .itemOutputs('8x botania:livingwood_log')
+        .duration(1200)
+        .EUt(2)
+        
+    purify('pure_stone')
+        .notConsumable('botania:pure_daisy')
+        .itemInputs('8x #forge:stone')
+        .itemOutputs('8x botania:livingrock')
+        .duration(1200)
+        .EUt(2)
+                
+    purify('pure_end_stone')
+        .notConsumable('botania:pure_daisy')
+        .itemInputs('8x minecraft:blackstone')
+        .itemOutputs('8x minecraft:end_stone')
+        .duration(1200)
+        .EUt(2)
+                        
+    purify('pure_obsidian')
+        .notConsumable('botania:pure_daisy')
+        .itemInputs('8x botania:blaze_block')
+        .itemOutputs('8x minecraft:obsidian')
+        .duration(1200)
+        .EUt(2)
+                        
+    purify('pure_cobble')
+        .notConsumable('botania:pure_daisy')
+        .itemInputs('8x minecraft:netherrack')
+        .itemOutputs('8x minecraft:cobblestone')
+        .duration(1200)
+        .EUt(2)
 //#endregion
 
 
@@ -401,7 +467,7 @@ const purify = event.recipes.gtceu.botanic_purification
         'BDB',
         'EBF'
     ], {
-        A: 'botania:mana_glass',
+        A: 'botania:managlass',
         B: 'gtceu:copper_single_cable',
         C: '#gtceu:circuits/mv',
         D: 'gtceu:mv_machine_hull',
@@ -414,7 +480,7 @@ const purify = event.recipes.gtceu.botanic_purification
         'BDB',
         'EBF'
     ], {
-        A: 'botania:mana_glass',
+        A: 'botania:managlass',
         B: 'gtceu:gold_single_cable',
         C: '#gtceu:circuits/hv',
         D: 'gtceu:hv_machine_hull',
@@ -427,7 +493,7 @@ const purify = event.recipes.gtceu.botanic_purification
         'BDB',
         'EBF'
     ], {
-        A: 'botania:mana_glass',
+        A: 'botania:managlass',
         B: 'gtceu:aluminium_single_cable',
         C: '#gtceu:circuits/ev',
         D: 'gtceu:ev_machine_hull',
@@ -440,7 +506,7 @@ const purify = event.recipes.gtceu.botanic_purification
         'BDB',
         'EBF'
     ], {
-        A: 'botania:alf_glass',
+        A: 'botania:alfglass',
         B: 'gtceu:platinum_single_cable',
         C: '#gtceu:circuits/iv',
         D: 'gtceu:iv_machine_hull',
@@ -453,7 +519,7 @@ const purify = event.recipes.gtceu.botanic_purification
         'BDB',
         'EBF'
     ], {
-        A: 'botania:alf_glass',
+        A: 'botania:alfglass',
         B: 'gtceu:niobium_titanium_single_cable',
         C: '#gtceu:circuits/luv',
         D: 'gtceu:luv_machine_hull',

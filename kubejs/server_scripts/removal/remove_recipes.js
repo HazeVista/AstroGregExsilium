@@ -84,7 +84,7 @@ ServerEvents.recipes(event => {
         'create:milling/gravel', 'gtceu:forge_hammer/cobblestone_to_gravel', 'gtceu:macerator/gravel_to_flint', 'create:splashing/sand', 'create:splashing/red_sand', 'minecraft:pumpkin_pie',
         'minecraft:cookie', 'minecraft:bread', 'dustrial_decor:gold_chain', 'botania:cocoon', 'botania:fel_pumpkin', 'botania:terra_plate', 'botania:alfheim_portal', 'simplylight:illuminant_block_on',
         'botania:virus_necrodermal', 'botania:virus_nullodermal', 'create:mixing/compat/ae2/fluix_crystal', 'minecraft:clock','botania:fabulous_pool', 'botania:mana_infusion/mana_bottle', 'botania:prism',
-        'botania:avatar', 'botania:star_sword', 'botania:mana_infusion/mana_glass', 'botania:redstone_spreader', 'farmersdelight:honey_cookie', 'farmersdelight:sweet_berry_cookie',
+        'botania:avatar', 'botania:star_sword', 'botania:mana_infusion/managlass', 'botania:redstone_spreader', 'farmersdelight:honey_cookie', 'farmersdelight:sweet_berry_cookie',
         'minecraft:cake', 'farmersdelight:cake_from_milk_bottle', 'botania:manasteel_shears', 'botania:lens_normal', 'simplylight:illuminant_slab', 'simplylight:walllamp', 'simplylight:rodlamp',
         'simplylight:bulb', 'simplylight:edge_light', 'simplylight:', 'simplylight:lamp_post', 'simplylight:illuminant_block', 'gtceu:shaped/nugget_assembling_gaiasteel', 'gtceu:shaped/block_compress_gaiasteel', 
         'gtceu:shapeless/nugget_disassembling_gaiasteel', 'gtceu:shapeless/block_decompress_gaiasteel', 'botania:thorn_chakram', 'gtceu:centrifuge/ender_air_separation', 'botania:lens_magnet',
@@ -96,7 +96,8 @@ ServerEvents.recipes(event => {
         'gtceu:shapeless/block_decompress_mana_diamond_gem', 'botania:mana_mirror', 'gtceu:shapeless/manadiamond_block_deconstruct', 'gtceu:shaped/block_compress_mana_diamond', 'createlowheated:mixing/chocolate',
         'gtceu:shapeless/dragonstone_block_deconstruct', 'gtceu:shaped/block_compress_mana_diamond', 'botania:spark', 'botania:petal_apothecary/vazkii_head', 'botania:runic_altar/head',
         'botania:heisei_dream', 'gtceu:extruder/nan_certificate', 'gtceu:forming_press/pumpkin_pie', 'createaddition:mixing/bioethanol', 'createaddition:compacting/cake_base', 'botania:shimmerwood_planks',
-        'botania:mana_infusion/flint_to_gunpowder', 'botania:mana_infusion/gunpowder_to_flint', 'gtceu:shapeless/block_decompress_mana_diamond'
+        'botania:mana_infusion/flint_to_gunpowder', 'botania:mana_infusion/gunpowder_to_flint', 'gtceu:shapeless/block_decompress_mana_diamond', 'botania:pure_daisy/livingrock', 
+        'botania:pure_daisy/end_stone_to_cobbled_deepslate', 'gtceu:alloy_smelter/form_brick'
 
     ];
     //#region remove type
@@ -165,5 +166,6 @@ ServerEvents.recipes(event => {
     event.remove({id: /botania:spark_upgrade_.*/})
     event.remove({output: /botania:rune_.*/})
     event.remove({output: /botania:quartz_.*/})
+    event.remove({output: /botania:.*_cloak/})
 });
 

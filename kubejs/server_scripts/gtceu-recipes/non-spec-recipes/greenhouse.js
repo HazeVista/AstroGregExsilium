@@ -1,7 +1,7 @@
 ServerEvents.recipes(event => {
     const greg = event.recipes.gtceu
 
-//#region Helpers
+//#region helpers
 function applyNotConsumableItem(recipe, toApply) {
     recipe.notConsumable(toApply);
 }
@@ -25,8 +25,7 @@ const trees = [
         ["minecraft:jungle_sapling", "minecraft:jungle_log", "minecraft:jungle_leaves"],
         ["gtceu:rubber_sapling", "gtceu:rubber_log", "gtceu:rubber_leaves"],
         ["minecraft:cherry_sapling", "minecraft:cherry_log", "minecraft:cherry_leaves"],
-        ["minecraft:mangrove_propagule", "minecraft:mangrove_log", "minecraft:mangrove_leaves"]
-    ];
+        ["minecraft:mangrove_propagule", "minecraft:mangrove_log", "minecraft:mangrove_leaves"]]
 
 trees.forEach((tree) => {
     const sapling = tree[0]

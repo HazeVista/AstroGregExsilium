@@ -1,1 +1,1 @@
-Platform.mods.kubejs.name = 'AstroGreg:Exsilium'; 
+Platform.mods.kubejs.name = 'AstroGreg:Exsilium'

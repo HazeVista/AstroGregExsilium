@@ -386,25 +386,6 @@ ServerEvents.recipes(event => {
         .duration(300)
         .EUt(1638400)
 
-    event.recipes.gtceu.assembler('assemble_futura_casings')
-        .itemInputs('6x gtceu:futura_alloy_plate', 'gtceu:futura_alloy_frame')
-        .itemOutputs('2x kubejs:futura_casing')
-        .circuit(6)
-        .duration(50)
-        .EUt(16)
-
-    event.shaped('2x kubejs:futura_casing', [
-        'ACA',
-        'ABA',
-        'ADA'
-    ], {
-        A: 'gtceu:futura_alloy_plate',
-        B: 'gtceu:futura_alloy_frame',
-        C: '#forge:tools/hammers',
-        D: '#gtceu:tools/crafting_wrenches'
-    });
-
-
     //#region ae2 machines
     event.shaped('merequester:requester', [
         'ADA',

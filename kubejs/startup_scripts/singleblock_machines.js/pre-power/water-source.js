@@ -15,5 +15,5 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
 		.setMaxIOSize(1, 0, 0, 1)
 		.setSlotOverlay(false, false, GuiTextures.CIRCUIT_OVERLAY)
 		.setProgressBar(GuiTextures.PROGRESS_BAR_BATH, FillDirection.LEFT_TO_RIGHT)
-		.setSound(GTSoundEntries.BATH);
+		.setSound(GTSoundEntries.BATH)
 });

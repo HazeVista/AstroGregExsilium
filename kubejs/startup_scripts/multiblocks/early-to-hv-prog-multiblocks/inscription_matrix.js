@@ -6,13 +6,13 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
         .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)
         .setSound(GTSoundEntries.REPLICATOR)
 
-});
+})
 
 GTCEuStartupEvents.registry('gtceu:machine', event => {
     event.create('inscription_matrix', 'multiblock')
         .rotationState(RotationState.NON_Y_AXIS)
         .recipeTypes([GTRecipeTypes.get('inscription')])
-        .appearanceBlock(() => Block.getBlock('kubejs:futura_casing'))
+        .appearanceBlock(() => Block.getBlock('gtceu:futura_casing'))
         .recipeModifiers([GTRecipeModifiers.OC_PERFECT_SUBTICK])
         .pattern(definition => FactoryBlockPattern.start()
             .aisle('F###F','AAAAA','AAAAA','#AAA#')
@@ -20,7 +20,7 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
             .aisle('#####','ASSSA','AP#PA','ASSSA')
             .aisle('#####','ASSSA','A#P#A','ASSSA')
             .aisle('F###F','AAAAA','AA@AA','#AAA#')
-            .where('A', Predicates.blocks('kubejs:futura_casing')
+            .where('A', Predicates.blocks('gtceu:futura_casing')
                 .or(Predicates.abilities(PartAbility.IMPORT_ITEMS).setPreviewCount(1))
                 .or(Predicates.abilities(PartAbility.EXPORT_ITEMS).setPreviewCount(1))
                 .or(Predicates.abilities(PartAbility.IMPORT_FLUIDS).setPreviewCount(1))
@@ -38,4 +38,4 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
             "kubejs:block/casings/futura_assembler_casing",
             "gtceu:block/machines/laser_engraver"
         )
-});
+})

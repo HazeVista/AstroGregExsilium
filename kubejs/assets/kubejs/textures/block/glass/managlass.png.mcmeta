@@ -1,0 +1,5 @@
+{
+    "ldlib": {
+        "connection": "kubejs:block/glass/managlass_ctm"
+    }
+}

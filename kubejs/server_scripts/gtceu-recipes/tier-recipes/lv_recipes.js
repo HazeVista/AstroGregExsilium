@@ -21,11 +21,12 @@ ServerEvents.recipes(event => {
         .duration(792)
         .EUt(30)
 
-    // event.recipes.gtceu.macerator('macerate_blaze_block')
-    //     .itemInputs('botania:blaze_block')
-    //     .itemOutputs('36x minecraft:blaze_powder')
-    //     .duration(792)
-    //     .EUt(2)                /*output doesnt work ffs*/
+    event.recipes.gtceu.alloy_smelter('smelt_brick_from_clay')
+        .itemInputs('minecraft:clay_ball')
+        .notConsumable('gtceu:ingot_casting_mold')
+        .itemOutputs('minecraft:brick')
+        .duration(200)
+        .EUt(2)
     //#endregion
 
 
@@ -34,21 +35,25 @@ ServerEvents.recipes(event => {
     event.recipes.gtceu.mixer('mix_damascus_steel_dust')
         .itemInputs('gtceu:steel_dust', 'gtceu:coal_dust')
         .itemOutputs('gtceu:damascus_steel_dust')
+        .circuit(1)
         .duration(400)
         .EUt(16)
 
     event.recipes.gtceu.mixer('mix_damascus_steel_dust_alt')
         .itemInputs('gtceu:steel_dust', 'gtceu:charcoal_dust')
         .itemOutputs('gtceu:damascus_steel_dust')
+        .circuit(1)
         .duration(400)
         .EUt(16)
 
     event.recipes.gtceu.mixer('mix_damascus_steel_dust_alt1')
         .itemInputs('gtceu:steel_dust', 'gtceu:carbon_dust')
         .itemOutputs('gtceu:damascus_steel_dust')
+        .circuit(1)
         .duration(400)
         .EUt(16)
     //#endregion
+
 
 
     //#region ender air
@@ -98,6 +103,7 @@ ServerEvents.recipes(event => {
         .itemOutputs('gtceu:stone_dust')
         .duration(20)
         .EUt(30)
+    //#endregion
 
 
         
@@ -157,4 +163,5 @@ ServerEvents.recipes(event => {
         .itemInputs('botania:mana_bottle')
         .duration(20)
         .EUt(7)
+    //#endregion
 })

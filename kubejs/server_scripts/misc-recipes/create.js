@@ -374,18 +374,18 @@ ServerEvents.recipes(event => {
     event.recipes.create.crushing('farmersdelight:straw', 'farmersdelight:sandy_shrub')
     event.recipes.create.crushing('2x farmersdelight:straw', 'minecraft:tall_grass')
     event.recipes.create.crushing('farmersdelight:straw', 'minecraft:grass')
-    event.recipes.create.crushing('kubejs:cobbled_asteroid_stone', 'kubejs:asteroid_stone')
-    event.recipes.create.crushing('kubejs:asteroid_stone', 'kubejs:hard_asteroid_stone')
-    event.recipes.create.crushing('kubejs:asteroid_gravel', 'kubejs:cobbled_asteroid_stone')
+    event.recipes.create.crushing('gtceu:cobbled_asteroid_stone', 'gtceu:asteroid_stone')
+    event.recipes.create.crushing('gtceu:asteroid_stone', 'gtceu:hard_asteroid_stone')
+    event.recipes.create.crushing('gtceu:asteroid_gravel', 'gtceu:cobbled_asteroid_stone')
 
     event.recipes.create.milling('farmersdelight:straw', 'farmersdelight:sandy_shrub')
     event.recipes.create.milling('2x farmersdelight:straw', 'minecraft:tall_grass')
     event.recipes.create.milling('farmersdelight:straw', 'minecraft:grass')
-    event.recipes.create.milling('kubejs:cobbled_asteroid_stone', 'kubejs:asteroid_stone')
-    event.recipes.create.milling('kubejs:asteroid_stone', 'kubejs:hard_asteroid_stone')
-    event.recipes.create.milling('kubejs:asteroid_gravel', 'kubejs:cobbled_asteroid_stone')
+    event.recipes.create.milling('gtceu:cobbled_asteroid_stone', 'gtceu:asteroid_stone')
+    event.recipes.create.milling('gtceu:asteroid_stone', 'gtceu:hard_asteroid_stone')
+    event.recipes.create.milling('gtceu:asteroid_gravel', 'gtceu:cobbled_asteroid_stone')
     event.recipes.create.milling(['minecraft:sand', Item.of('minecraft:flint').withChance(0.2), Item.of('minecraft:clay_ball').withChance(0.1)], 'minecraft:gravel')
-    event.recipes.create.milling(['kubejs:asteroid_sand', Item.of('minecraft:flint').withChance(0.2), Item.of('minecraft:clay_ball').withChance(0.1)], 'kubejs:asteroid_gravel')
+    event.recipes.create.milling(['gtceu:asteroid_sand', Item.of('minecraft:flint').withChance(0.2), Item.of('minecraft:clay_ball').withChance(0.1)], 'gtceu:asteroid_gravel')
 
     event.shapeless('create:speedometer', [`create:gearbox`,`minecraft:compass`])
 
@@ -553,7 +553,7 @@ ServerEvents.recipes(event => {
     platemetals.forEach(pressingplates)
     
     //#region create washing
-    event.recipes.create.splashing(['minecraft:clay_ball', Item.of('minecraft:iron_nugget').withChance(0.5)], 'kubejs:asteroid_sand')
+    event.recipes.create.splashing(['minecraft:clay_ball', Item.of('minecraft:iron_nugget').withChance(0.5)], 'gtceu:asteroid_sand')
     event.recipes.create.splashing(['minecraft:clay_ball', Item.of('minecraft:gold_nugget').withChance(0.2)], 'minecraft:red_sand')
     event.recipes.create.splashing(['minecraft:clay_ball', Item.of('minecraft:clay_ball').withChance(0.5)], 'minecraft:sand')
 

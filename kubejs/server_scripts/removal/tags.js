@@ -87,6 +87,10 @@ event.removeAllTagsFrom('createaddition:cake_base')
 event.removeAllTagsFrom('createaddition:cake_base_baked')
 event.removeAllTagsFrom('create:builders_tea')
 event.removeAllTagsFrom('createaddition:bioethanol_bucket')
+event.removeAllTagsFrom('botania:mana_glass')
+event.removeAllTagsFrom('botania:elf_glass')
+event.removeAllTagsFrom('botania:mana_glass_pane')
+event.removeAllTagsFrom('botania:elf_glass_pane')
 });
 
 
@@ -156,4 +160,6 @@ event.add('forge:grass', 'farmersdelight:sandy_shrub')
 event.add('forge:grass', 'minecraft:tall_grass')
 event.add('forge:fruit_slice', 'minecraft:melon_slice')
 event.add('forge:fruit_slice', 'farmersdelight:melon_slice')
+event.add('c:glass_panes', 'botania:managlass_pane')
+event.add('c:glass_panes', 'botania:alfglass_pane')
 })
