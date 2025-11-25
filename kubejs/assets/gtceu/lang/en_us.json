@@ -6,6 +6,12 @@
     "gtceu.inscription": "ME Inscription",
     "block.gtceu.inscription_matrix": "Inscription Matrix",
     "block.gtceu.conservatory": "Conservatory",
+    "block.gtceu.runic_engraver": "Runic Engraver",
+    "gtceu.rune_inscription": "Engraving",
+    "gtceu.nuclear_boiling": "Nuclear Boiling",
+    "gtceu.mana_boiling": "Mana Boiling",
+    "block.gtceu.mana_boiler": "Mana Boiler",
+    "block.gtceu.nuclear_boiler": "Nuclear Boiler",
 
     "block.gtceu.ulv_water_source": "Water Source",
     "gtceu.water_source": "Water Source",

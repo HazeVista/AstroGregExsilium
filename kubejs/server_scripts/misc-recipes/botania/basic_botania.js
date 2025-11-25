@@ -55,7 +55,7 @@ ServerEvents.recipes(event => {
     })
 
     event.recipes.gtceu.assembler('assembler_mana_pylon')
-        .itemInputs('4x botania:manasteel_nugget', '4x gtceu:gold_double_plate', 'gtceu:exquisite_mana_diamond_gem')
+        .itemInputs('4x botania:manasteel_nugget', '4x gtceu:double_gold_plate', 'gtceu:exquisite_mana_diamond_gem')
         .inputFluids('manafluid:mana 1000')
         .itemOutputs('botania:mana_pylon')
         .duration(400)

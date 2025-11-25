@@ -36,7 +36,8 @@ ServerEvents.recipes(event => {
         'botania:floating_narslimmus', 'botania:medumone', 'botania:floating_medumone', 'botania:shulk_me_not', 'botania:floating_shulk_me_not', 'botania:rafflowsia', 'botania:floating_rafflowsia',
         'botania:manastar', 'botania:floating_manastar', 'botania:tigerseye', 'botania:floating_tigerseye', 'botania:rannuncarpus', 'botania:floating_rannuncarpus', 'botania:rannuncarpus_chibi', 
         'botania:floating_rannuncarpus_chibi', 'botania:tangleberrie', 'botania:floating_tangleberrie', 'botania:vine_ball', 'botania:orechid', 'botania:endoflame', 'botania:hydroangeas',
-        'create:builders_tea', 'create:chocolate_glazed_berries', 'create:bar_of_chocolate',
+        'create:builders_tea', 'create:chocolate_glazed_berries', 'create:bar_of_chocolate', 'ae2:not_so_mysterious_cube', 'ae2:quantum_link', 'ae2:quantum_ring', 'minecraft:recovery_compass',
+        
     ]
 
     //#region remove recipe id

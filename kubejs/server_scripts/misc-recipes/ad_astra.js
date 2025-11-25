@@ -30,7 +30,7 @@ ServerEvents.recipes(event => {
     ], {
         A: 'gtceu:mv_emitter',
         B: 'gtceu:manganese_phosphide_single_wire',
-        C: 'gtceu:lapotron_crystal',
+        C: '#gtceu:batteries/mv',
         D: 'gtceu:double_aluminium_plate'
     })
 

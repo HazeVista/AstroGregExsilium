@@ -370,7 +370,7 @@ machines:
 
     # The heat speed of the Large Titanium Boiler.
     # Default: 1
-    titaniumBoilerHeatSpeed: 1
+    titaniumBoilerHeatSpeed: 2
 
     # The max temperature of the Large Tungstensteel Boiler.
     # Default: 6400
@@ -378,7 +378,7 @@ machines:
 
     # The heat speed of the Large Tungstensteel Boiler.
     # Default: 2
-    tungstensteelBoilerHeatSpeed: 2
+    tungstensteelBoilerHeatSpeed: 4
 
 client:
   # Whether or not to enable Emissive Textures for GregTech Machines.
