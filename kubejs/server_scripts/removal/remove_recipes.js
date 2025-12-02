@@ -2,7 +2,8 @@ ServerEvents.recipes(event => {
     //#region remove input
     const toRemoveInput = ['ad_astra:moon_desh_ore', 'ad_astra:deepslate_desh_ore', 'ad_astra:ostrum_plate', 'ad_astra:calorite_plate', 'ad_astra:desh_plate',
         'minecraft:netherite_upgrade_smithing_template', 'ad_astra:fan', 'ad_astra:steel_ingot', 'ad_astra:ice_shard', 'gtceu:gaiasteel_ingot', 'create:creative_blaze_cake',
-        'create:blaze_cake_base', 'createaddition:cake_base_baked', 'create:blaze_cake', 'createaddition:cake_base', 'create:bar_of_chocolate'
+        'create:blaze_cake_base', 'createaddition:cake_base_baked', 'create:blaze_cake', 'createaddition:cake_base', 'create:bar_of_chocolate', 'create:dough',
+        'expandedae:dual_cell_housing', 'expandedae:mega_dual_cell_housing'
     ];
 
     //#region remove output
@@ -37,7 +38,7 @@ ServerEvents.recipes(event => {
         'botania:manastar', 'botania:floating_manastar', 'botania:tigerseye', 'botania:floating_tigerseye', 'botania:rannuncarpus', 'botania:floating_rannuncarpus', 'botania:rannuncarpus_chibi', 
         'botania:floating_rannuncarpus_chibi', 'botania:tangleberrie', 'botania:floating_tangleberrie', 'botania:vine_ball', 'botania:orechid', 'botania:endoflame', 'botania:hydroangeas',
         'create:builders_tea', 'create:chocolate_glazed_berries', 'create:bar_of_chocolate', 'ae2:not_so_mysterious_cube', 'ae2:quantum_link', 'ae2:quantum_ring', 'minecraft:recovery_compass',
-        
+        'botania:cell_block', 'expandedae:dual_cell_housing', 'expandedae:mega_dual_cell_housing'
     ]
 
     //#region remove recipe id
@@ -98,9 +99,10 @@ ServerEvents.recipes(event => {
         'gtceu:shapeless/dragonstone_block_deconstruct', 'gtceu:shaped/block_compress_mana_diamond', 'botania:spark', 'botania:petal_apothecary/vazkii_head', 'botania:runic_altar/head',
         'botania:heisei_dream', 'gtceu:extruder/nan_certificate', 'gtceu:forming_press/pumpkin_pie', 'createaddition:mixing/bioethanol', 'createaddition:compacting/cake_base', 'botania:shimmerwood_planks',
         'botania:mana_infusion/flint_to_gunpowder', 'botania:mana_infusion/gunpowder_to_flint', 'gtceu:shapeless/block_decompress_mana_diamond', 'botania:pure_daisy/livingrock', 
-        'botania:pure_daisy/end_stone_to_cobbled_deepslate', 'gtceu:alloy_smelter/form_brick'
-
+        'botania:pure_daisy/end_stone_to_cobbled_deepslate', 'gtceu:alloy_smelter/form_brick', 'createlowheated:mixing/builders_tea', 'ae2:network/cells/item_cell_housing', 'ae2:network/cells/fluid_cell_housing',
+        'createaddition:compat/ae2/charged_certus_quartz', 'ae2:decorative/quartz_block', 
     ];
+
     //#region remove type
     const toRemoveType = ['expatternprovider:cutter', 'ae2:inscriber', 'ae2:charger', 'create:crushing', 'ad_astra:alloying', 'createaddition:liquid_burning', 'create:pressing',
         'botania:orechid_ignem', 'botania:orechid', 'create:potion_mixing', 'ad_astra:compressing', 'ad_astra:cryo_freezing', 'ad_astra:nasa_workbench', 'create:deploying',
@@ -168,5 +170,10 @@ ServerEvents.recipes(event => {
     event.remove({output: /botania:rune_.*/})
     event.remove({output: /botania:quartz_.*/})
     event.remove({output: /botania:.*_cloak/})
+    event.remove({id: /gtceu:cutter\/.*_slab_distilled_water/})
+    event.remove({id: /gtceu:cutter\/.*_slab_water/})
+    event.remove({id: /gtceu:cutter\/.*_slab/})
+    event.remove({id: /gtceu:shaped\/.*_slab_saw/})
+    event.remove({id: /ae2:network\/cells\/.*_storage_cell_.*/})
 });
 

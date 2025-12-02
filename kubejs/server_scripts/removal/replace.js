@@ -49,6 +49,7 @@ ServerEvents.recipes(event => {
     event.replaceInput({input: 'botania:rune_gluttony'}, 'botania:rune_gluttony', 'botania:gluttony_rune')
     event.replaceInput({input: 'botania:rune_envy'}, 'botania:rune_envy', 'botania:envy_rune')
     event.replaceInput({output: 'minecraft:brick'}, 'minecraft:clay_ball', 'gtceu:compressed_clay')
+    event.replaceOutput({input: 'ae2:certus_quartz_crystal'}, 'ae2:certus_quartz_crystal', 'gtceu:certus_quartz_gem')
     event.replaceInput({}, 'botania:mana_glass', 'botania:managlass')
     event.replaceInput({}, 'botania:elf_glass', 'botania:alfglass')
     //#endregion
@@ -77,4 +78,5 @@ ServerEvents.recipes(event => {
     event.replaceOutput({output: 'gtceu:mana_diamond_gem',}, 'gtceu:mana_diamond_gem', 'botania:mana_diamond');
     event.replaceOutput({output: 'gtceu:dragonstone_gem'}, 'gtceu:dragonstone_gem', 'botania:dragonstone')
     event.replaceOutput({output: 'gtceu:dragonstone_block'}, 'gtceu:dragonstone_block', 'botania:dragonstone_block')
+    event.replaceOutput({output: 'ae2:certus_quartz_crystal'}, 'ae2:certus_quartz_crystal', 'gtceu:certus_quartz_gem')
 });

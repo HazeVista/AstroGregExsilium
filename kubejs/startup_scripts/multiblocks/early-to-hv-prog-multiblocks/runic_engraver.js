@@ -11,13 +11,13 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
     event.create('runic_engraver', 'multiblock')
         .rotationState(RotationState.NON_Y_AXIS)
         .recipeTypes([GTRecipeTypes.get('rune_inscription')])
-        .appearanceBlock(() => Block.getBlock('gtceu:manasteel_machine_casing'))
+        .appearanceBlock(() => Block.getBlock('astrogreg:manasteel_brick_machine_casing'))
         .recipeModifiers([GTRecipeModifiers.OC_NON_PERFECT])
         .pattern(definition => FactoryBlockPattern.start()
             .aisle('AAA','AAA','AAA')
             .aisle('AAA','APA','AAA')
             .aisle('A@A','AGA','AAA')
-            .where('A', Predicates.blocks('gtceu:manasteel_machine_casing')
+            .where('A', Predicates.blocks('astrogreg:manasteel_brick_machine_casing')
                 .or(Predicates.abilities(PartAbility.IMPORT_ITEMS).setPreviewCount(1).setMaxGlobalLimited(2))
                 .or(Predicates.abilities(PartAbility.EXPORT_ITEMS).setPreviewCount(1).setMaxGlobalLimited(1))
                 .or(Predicates.abilities(PartAbility.IMPORT_FLUIDS).setPreviewCount(1).setMaxGlobalLimited(2))
@@ -31,6 +31,6 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
 
     .workableCasingModel(
             "kubejs:block/casings/machine_casing_manasteel_plated_bricks",
-            "gtceu:block/multiblock/gcym/large_engraving_laser"
+            "astrogreg:block/multiblock/rune_engraver"
         )
 })

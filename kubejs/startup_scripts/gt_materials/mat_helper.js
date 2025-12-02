@@ -1,3 +1,4 @@
+//mostly from Star Technology
 //#region icon sets
 global.iconSets = {
     dull: GTMaterialIconSet.DULL,
@@ -26,6 +27,9 @@ global.iconSets = {
     radioactive: GTMaterialIconSet.RADIOACTIVE
 }
 //#endregion
+
+
+
 //#region flags
 global.flags = {
     // Generic flags
@@ -85,6 +89,9 @@ global.flags = {
     not_alloy: GTMaterialFlags.DISABLE_ALLOY_PROPERTY
 }
 //#endregion
+
+
+
 //#region voltage helpers
 global.v = {
     'ulv': GTValues.V[GTValues.ULV],
@@ -138,19 +145,22 @@ global.vha = {
     'uhv': GTValues.VHA[GTValues.UHV]
 };
 //#endregion
+
+
+
 //#region periodic elem helper
 global.periodicTableElement = (material, type) => {
     let mat = GTMaterials.get(material);
     switch(type) {
         case 'ingot': mat.setProperty(PropertyKey.INGOT, new IngotProperty()); break;
         case 'dust': mat.setProperty(PropertyKey.DUST, new DustProperty()); break;
-        case 'fluid': case 'gas': case 'plasma': case 'molten': {
+        case 'fluid': case 'gas': case 'plasma': case 'exotic': {
             let prop = new FluidProperty();
             switch(type) {
                 case 'fluid': prop.getStorage().enqueueRegistration(GTFluidStorageKeys.LIQUID, new GTFluidBuilder()); break;
                 case 'gas': prop.getStorage().enqueueRegistration(GTFluidStorageKeys.GAS, new GTFluidBuilder()); break;
                 case 'plasma': prop.getStorage().enqueueRegistration(GTFluidStorageKeys.PLASMA, new GTFluidBuilder()); break;
-                case 'molten': prop.getStorage().enqueueRegistration(GTFluidStorageKeys.MOLTEN, new GTFluidBuilder()); break;
+                case 'exotic': prop.getStorage().enqueueRegistration(GTFluidStorageKeys.EXOTIC, new GTFluidBuilder()); break;
             }
             mat.setProperty(PropertyKey.FLUID, prop); 
             break;
@@ -158,6 +168,9 @@ global.periodicTableElement = (material, type) => {
     }
 }
 //#endregion
+
+
+
 //#region blast property helper
 global.blastProperty = (material, temperature, gasTier, voltage, duration) => {
     let mat = GTMaterials.get(material);
@@ -169,4 +182,3 @@ const DustProperty = Java.loadClass('com.gregtechceu.gtceu.api.data.chemical.mat
 const FluidProperty = Java.loadClass('com.gregtechceu.gtceu.api.data.chemical.material.properties.FluidProperty');
 const BlastProperty = Java.loadClass('com.gregtechceu.gtceu.api.data.chemical.material.properties.BlastProperty');
 const FluidPipeProperties = Java.loadClass('com.gregtechceu.gtceu.api.data.chemical.material.properties.FluidPipeProperties');
-// const PropertyKey = Java.loadClass("com.gregtechceu.gtceu.api.data.chemical.material.properties.PropertyKey");

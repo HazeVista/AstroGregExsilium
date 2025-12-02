@@ -424,158 +424,158 @@ ServerEvents.recipes(event => {
         B: 'gtceu:elementium_plate'
     })
 
-    event.shaped('botania:elementium_shovel', [
-        'EBD',
-        ' A ',
-        ' A '
-    ], {
-        A: 'minecraft:stick',
-        B: 'gtceu:elementium_plate',
-        D: '#forge:tools/hammers',
-        E: '#forge:tools/files'
-    })
+    // event.shaped('botania:elementium_shovel', [
+    //     'EBD',
+    //     ' A ',
+    //     ' A '
+    // ], {
+    //     A: 'minecraft:stick',
+    //     B: 'gtceu:elementium_plate',
+    //     D: '#forge:tools/hammers',
+    //     E: '#forge:tools/files'
+    // })
     
-    event.shaped('botania:elementium_sword', [
-        ' B ',
-        'EBD',
-        ' A '
-    ], {
-        A: 'minecraft:stick',
-        B: 'gtceu:elementium_plate',
-        D: '#forge:tools/hammers',
-        E: '#forge:tools/files'
-    })
+    // event.shaped('botania:elementium_sword', [
+    //     ' B ',
+    //     'EBD',
+    //     ' A '
+    // ], {
+    //     A: 'minecraft:stick',
+    //     B: 'gtceu:elementium_plate',
+    //     D: '#forge:tools/hammers',
+    //     E: '#forge:tools/files'
+    // })
 
-    event.shaped('botania:elementium_pickaxe', [
-        'BCC',
-        'EAD',
-        ' A '
-    ], {
-        A: 'minecraft:stick',
-        B: 'gtceu:elementium_plate',
-        C: 'botania:elementium_ingot',
-        D: '#forge:tools/hammers',
-        E: '#forge:tools/files'
-    })
+    // event.shaped('botania:elementium_pickaxe', [
+    //     'BCC',
+    //     'EAD',
+    //     ' A '
+    // ], {
+    //     A: 'minecraft:stick',
+    //     B: 'gtceu:elementium_plate',
+    //     C: 'botania:elementium_ingot',
+    //     D: '#forge:tools/hammers',
+    //     E: '#forge:tools/files'
+    // })
 
-    event.shaped('botania:elementium_hoe', [
-        'BCD',
-        'EA ',
-        ' A '
-    ], {
-        A: 'minecraft:stick',
-        B: 'gtceu:elementium_plate',
-        C: 'botania:elementium_ingot',
-        D: '#forge:tools/hammers',
-        E: '#forge:tools/files'
-    })
+    // event.shaped('botania:elementium_hoe', [
+    //     'BCD',
+    //     'EA ',
+    //     ' A '
+    // ], {
+    //     A: 'minecraft:stick',
+    //     B: 'gtceu:elementium_plate',
+    //     C: 'botania:elementium_ingot',
+    //     D: '#forge:tools/hammers',
+    //     E: '#forge:tools/files'
+    // })
 
-    event.shaped('botania:elementium_axe', [
-        'BCD',
-        'BA ',
-        'EA '
-    ], {
-        A: 'minecraft:stick',
-        B: 'gtceu:elementium_plate',
-        C: 'botania:elementium_ingot',
-        D: '#forge:tools/hammers',
-        E: '#forge:tools/files'
-    })
+    // event.shaped('botania:elementium_axe', [
+    //     'BCD',
+    //     'BA ',
+    //     'EA '
+    // ], {
+    //     A: 'minecraft:stick',
+    //     B: 'gtceu:elementium_plate',
+    //     C: 'botania:elementium_ingot',
+    //     D: '#forge:tools/hammers',
+    //     E: '#forge:tools/files'
+    // })
 
-    event.shaped('botania:manasteel_shovel', [
-        'EBD',
-        ' A ',
-        ' A '
-    ], {
-        A: 'minecraft:stick',
-        B: 'gtceu:manasteel_plate',
-        D: '#forge:tools/hammers',
-        E: '#forge:tools/files'
-    })
+    // event.shaped('botania:manasteel_shovel', [
+    //     'EBD',
+    //     ' A ',
+    //     ' A '
+    // ], {
+    //     A: 'minecraft:stick',
+    //     B: 'gtceu:manasteel_plate',
+    //     D: '#forge:tools/hammers',
+    //     E: '#forge:tools/files'
+    // })
     
-    event.shaped('botania:manasteel_sword', [
-        ' B ',
-        'EBD',
-        ' A '
-    ], {
-        A: 'minecraft:stick',
-        B: 'gtceu:manasteel_plate',
-        D: '#forge:tools/hammers',
-        E: '#forge:tools/files'
-    })
+    // event.shaped('botania:manasteel_sword', [
+    //     ' B ',
+    //     'EBD',
+    //     ' A '
+    // ], {
+    //     A: 'minecraft:stick',
+    //     B: 'gtceu:manasteel_plate',
+    //     D: '#forge:tools/hammers',
+    //     E: '#forge:tools/files'
+    // })
 
-    event.shaped('botania:manasteel_pick', [
-        'BCC',
-        'EAD',
-        ' A '
-    ], {
-        A: 'minecraft:stick',
-        B: 'gtceu:manasteel_plate',
-        C: 'botania:manasteel_ingot',
-        D: '#forge:tools/hammers',
-        E: '#forge:tools/files'
-    })
+    // event.shaped('botania:manasteel_pick', [
+    //     'BCC',
+    //     'EAD',
+    //     ' A '
+    // ], {
+    //     A: 'minecraft:stick',
+    //     B: 'gtceu:manasteel_plate',
+    //     C: 'botania:manasteel_ingot',
+    //     D: '#forge:tools/hammers',
+    //     E: '#forge:tools/files'
+    // })
 
-    event.shaped('botania:manasteel_hoe', [
-        'BCD',
-        'EA ',
-        ' A '
-    ], {
-        A: 'minecraft:stick',
-        B: 'gtceu:manasteel_plate',
-        C: 'botania:manasteel_ingot',
-        D: '#forge:tools/hammers',
-        E: '#forge:tools/files'
-    })
+    // event.shaped('botania:manasteel_hoe', [
+    //     'BCD',
+    //     'EA ',
+    //     ' A '
+    // ], {
+    //     A: 'minecraft:stick',
+    //     B: 'gtceu:manasteel_plate',
+    //     C: 'botania:manasteel_ingot',
+    //     D: '#forge:tools/hammers',
+    //     E: '#forge:tools/files'
+    // })
 
-    event.shaped('botania:manasteel_axe', [
-        'BCD',
-        'BA ',
-        'EA '
-    ], {
-        A: 'minecraft:stick',
-        B: 'gtceu:manasteel_plate',
-        C: 'botania:manasteel_ingot',
-        D: '#forge:tools/hammers',
-        E: '#forge:tools/files'
-    })
+    // event.shaped('botania:manasteel_axe', [
+    //     'BCD',
+    //     'BA ',
+    //     'EA '
+    // ], {
+    //     A: 'minecraft:stick',
+    //     B: 'gtceu:manasteel_plate',
+    //     C: 'botania:manasteel_ingot',
+    //     D: '#forge:tools/hammers',
+    //     E: '#forge:tools/files'
+    // })
 
-    event.shaped('botania:terra_axe', [
-        'BEC',
-        'BA ',
-        'DA '
-    ], {
-        A: 'botania:livingwood_twig',
-        B: 'gtceu:terrasteel_plate',
-        C: '#forge:tools/hammers',
-        D: '#forge:tools/files',
-        E: 'botania:terrasteel_ingot'
+    // event.shaped('botania:terra_axe', [
+    //     'BEC',
+    //     'BA ',
+    //     'DA '
+    // ], {
+    //     A: 'botania:livingwood_twig',
+    //     B: 'gtceu:terrasteel_plate',
+    //     C: '#forge:tools/hammers',
+    //     D: '#forge:tools/files',
+    //     E: 'botania:terrasteel_ingot'
         
-    })
+    // })
 
-    event.shaped('botania:terra_sword', [
-        ' B ',
-        'DBC',
-        ' A '
-    ], {
-        A: 'botania:livingwood_twig',
-        B: 'gtceu:terrasteel_plate',
-        C: '#forge:tools/hammers',
-        D: '#forge:tools/files'
-    })
+    // event.shaped('botania:terra_sword', [
+    //     ' B ',
+    //     'DBC',
+    //     ' A '
+    // ], {
+    //     A: 'botania:livingwood_twig',
+    //     B: 'gtceu:terrasteel_plate',
+    //     C: '#forge:tools/hammers',
+    //     D: '#forge:tools/files'
+    // })
 
-    event.shaped('botania:terra_pick', [
-        'BFE',
-        'DAC',
-        ' A '
-    ], {
-        A: 'botania:livingwood_twig',
-        B: 'gtceu:terrasteel_plate',
-        C: '#forge:tools/hammers',
-        D: '#forge:tools/files',
-        E: 'botania:terrasteel_ingot',
-        F: 'botania:mana_tablet'
-    })
+    // event.shaped('botania:terra_pick', [
+    //     'BFE',
+    //     'DAC',
+    //     ' A '
+    // ], {
+    //     A: 'botania:livingwood_twig',
+    //     B: 'gtceu:terrasteel_plate',
+    //     C: '#forge:tools/hammers',
+    //     D: '#forge:tools/files',
+    //     E: 'botania:terrasteel_ingot',
+    //     F: 'botania:mana_tablet'
+    // })
 
     event.shaped('botania:terrasteel_boots', [
         'ACA',
@@ -1003,14 +1003,15 @@ ServerEvents.recipes(event => {
     //#endregion
 
 
-    
-    // event.shaped('botania:', [
-    //     '',
-    //     '',
-    //     ''
-    // ], {
-    //    A: '',
-    //    B: ''
-    // })
+
+    //#region cell
+
+    event.recipes.gtceu.compressor('compress_biomass')
+        .itemInputs('9x gtceu:bio_chaff')
+        .itemOutputs('botania:cell_block')
+        .duration(600)
+        .EUt(2)
+
+    //#endregion
 
 })

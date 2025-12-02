@@ -37,4 +37,9 @@ ItemEvents.tooltip(event => {
     event.addAdvanced('gtceu:uv_mana_infuser', (item, advanced, text) => {
         text.add(1, Text.of('§o§7Mystical Mana Mayhem Machine!'))
     })
+
+    event.addAdvanced('gtceu:aether_engine', (item, advanced, text) => {
+        text.add(3, Text.of('Converts §3Æther§r into EU'))
+    })
+    
 })

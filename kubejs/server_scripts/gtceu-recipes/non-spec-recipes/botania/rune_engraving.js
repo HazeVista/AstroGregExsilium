@@ -10,7 +10,7 @@ const engrave = event.recipes.gtceu.rune_inscription
         A: '#gtceu:circuits/mv',
         B: 'gtceu:copper_single_cable',
         C: 'gtceu:mv_emitter',
-        D: 'gtceu:manasteel_machine_casing',
+        D: 'astrogreg:manasteel_brick_machine_casing',
         E: 'gtceu:mv_conveyor_module'
     })
 
@@ -148,7 +148,7 @@ const engrave = event.recipes.gtceu.rune_inscription
 
     engrave('chicken_spawn_egg')
         .notConsumable('botania:terra_lens')
-        .itemInputs('botania:life_rune', 'botania:air_rune', '#forge:seeds', '#forge:seeds', '#forge:seeds', '#forge:seeds', 'botania:livingrock')
+        .itemInputs('botania:life_rune', 'botania:air_rune', '4x #forge:seeds', 'botania:livingrock')
         .inputFluids('manafluid:mana 1000')
         .itemOutputs('minecraft:chicken_spawn_egg')
         .duration(200)
@@ -196,7 +196,7 @@ const engrave = event.recipes.gtceu.rune_inscription
             
     engrave('cow_spawn_egg')
         .notConsumable('botania:terra_lens')
-        .itemInputs('minecraft:egg', 'botania:life_rune', 'botania:water_rune', 'minecraft:wheat', 'minecraft:wheat', 'minecraft:bucket', 'botania:livingrock')
+        .itemInputs('minecraft:egg', 'botania:life_rune', 'botania:water_rune', '2x minecraft:wheat', 'minecraft:bucket', 'botania:livingrock')
         .inputFluids('manafluid:mana 1000')
         .itemOutputs('minecraft:cow_spawn_egg')
         .duration(200)
@@ -228,7 +228,7 @@ const engrave = event.recipes.gtceu.rune_inscription
             
     engrave('axolotl_spawn_egg')
         .notConsumable('botania:terra_lens')
-        .itemInputs('minecraft:egg','botania:life_rune', 'botania:water_rune', 'botania:earth_rune','minecraft:pink_dye', 'minecraft:pink_dye', 'botania:livingrock')
+        .itemInputs('minecraft:egg','botania:life_rune', 'botania:water_rune', 'botania:earth_rune', '2x minecraft:pink_dye', 'botania:livingrock')
         .inputFluids('manafluid:mana 1000')
         .itemOutputs('minecraft:axolotl_spawn_egg')
         .duration(200)
@@ -236,7 +236,7 @@ const engrave = event.recipes.gtceu.rune_inscription
             
     engrave('sheep_spawn_egg')
         .notConsumable('botania:terra_lens')
-        .itemInputs('minecraft:egg', 'botania:life_rune', 'minecraft:wheat', 'minecraft:wheat', 'minecraft:shears', 'botania:livingrock')
+        .itemInputs('minecraft:egg', 'botania:life_rune', '2x minecraft:wheat', 'minecraft:shears', 'botania:livingrock')
         .inputFluids('manafluid:mana 1000')
         .itemOutputs('minecraft:sheep_spawn_egg')
         .duration(200)
@@ -282,7 +282,7 @@ const engrave = event.recipes.gtceu.rune_inscription
 
     engrave('energy_rune')
         .notConsumable('botania:terra_lens')
-        .itemInputs('botania:fire_rune', 'gtceu:red_alloy_dust', 'gtceu:red_alloy_dust', 'gtceu:red_alloy_dust', 'botania:manasteel_ingot', 'botania:livingrock')
+        .itemInputs('botania:fire_rune', '3x gtceu:red_alloy_dust', 'botania:manasteel_ingot', 'botania:livingrock')
         .inputFluids('manafluid:mana 200')
         .itemOutputs('botania:energy_rune')
         .duration(200)

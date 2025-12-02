@@ -91,6 +91,9 @@ event.removeAllTagsFrom('botania:mana_glass')
 event.removeAllTagsFrom('botania:elf_glass')
 event.removeAllTagsFrom('botania:mana_glass_pane')
 event.removeAllTagsFrom('botania:elf_glass_pane')
+event.removeAllTagsFrom('gtceu:wood_plate')
+event.removeAllTagsFrom('gtceu:treated_wood_plate')
+event.removeAllTagsFrom('ae2:certus_quartz_crystal')
 });
 
 

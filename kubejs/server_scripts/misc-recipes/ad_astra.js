@@ -61,5 +61,16 @@ ServerEvents.recipes(event => {
         A: 'gtceu:steel_plate',
         B: 'minecraft:glass_pane'
     })
+
+    event.shaped('ad_astra:oxygen_loader', [
+        'DCD',
+        'BAB',
+        'DCD'
+    ], {
+        A: 'gtceu:ulv_machine_hull',
+        B: 'ad_astra:gas_tank',
+        C: '#gtceu:circuits/ulv',
+        D: 'gtceu:red_alloy_single_cable'
+    })
     
 })

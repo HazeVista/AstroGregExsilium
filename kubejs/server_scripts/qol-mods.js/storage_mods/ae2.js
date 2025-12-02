@@ -259,6 +259,17 @@ ServerEvents.recipes(event => {
         C: 'ae2:calculation_processor'
     })
 
+    event.shaped('ae2:quartz_block', [
+        'AA',
+        'AA'
+    ], {
+        A: 'gtceu:certus_quartz_gem'
+    })
+    //#endregion
+
+
+
+    //#region cell
     event.shaped('megacells:mega_item_cell_housing', [
         'CBC',
         'B B',
@@ -278,6 +289,40 @@ ServerEvents.recipes(event => {
         B: 'gtceu:gold_plate',
         C: 'ae2:quartz_vibrant_glass'
     })
+
+    event.shaped('ae2:item_cell_housing', [
+        'ABA',
+        'B B',
+        'CCC'
+    ], {
+        A: 'ae2:quartz_glass',
+        B: 'gtceu:iron_plate',
+        C: 'gtceu:futura_alloy_plate'
+    })
+
+    event.shaped('ae2:fluid_cell_housing', [
+        'ABA',
+        'B B',
+        'CCC'
+    ], {
+        A: 'ae2:quartz_glass',
+        B: 'gtceu:copper_plate',
+        C: 'gtceu:futura_alloy_plate'
+    })
+
+    const cellSize = ['1k', '4k', '16k', '64k', '256k']
+
+    cellSize.forEach(cellType)
+
+    function cellType(cell) {
+        event.shapeless(`ae2:fluid_storage_cell_${cell}`, [`ae2:cell_component_${cell}`, 'ae2:fluid_cell_housing'])
+        event.shapeless(`ae2:item_storage_cell_${cell}`, [`ae2:cell_component_${cell}`, 'ae2:item_cell_housing'])
+    }
+
+    event.shapeless('ae2:spatial_storage_cell_2', ['ae2:spatial_cell_component_2', 'ae2:item_cell_housing'])
+    event.shapeless('ae2:spatial_storage_cell_16', ['ae2:spatial_cell_component_16', 'ae2:item_cell_housing'])
+    event.shapeless('ae2:spatial_storage_cell_128', ['ae2:spatial_cell_component_128', 'ae2:item_cell_housing'])
+    //#endregion
 
 
 

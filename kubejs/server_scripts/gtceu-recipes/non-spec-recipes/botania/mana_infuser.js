@@ -365,14 +365,6 @@ const purify = event.recipes.gtceu.botanic_purification
 
 
 
-//#region gaia catalyst
-
-
-
-//#endregion
-
-
-
 //#region purification
     purify('pure_snow')
         .notConsumable('botania:pure_daisy')

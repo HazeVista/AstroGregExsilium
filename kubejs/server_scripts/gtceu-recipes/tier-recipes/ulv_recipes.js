@@ -466,4 +466,36 @@ ServerEvents.recipes(event => {
         .duration(900)
 
     //#endregion
+
+
+
+    //#region wood plates
+
+    event.shaped('2x gtceu:wood_plate', [
+      'AB'
+    ], {
+      A: '#forge:tools/saws',
+      B: '#minecraft:planks'
+    })
+
+    event.recipes.gtceu.cutter('cut_planks')
+      .itemInputs('#minecraft:planks')
+      .itemOutputs('2x gtceu:wood_plate')
+      .duration(200)
+      .EUt(2)
+
+    event.shaped('2x gtceu:treated_wood_plate', [
+      'AB'
+    ], {
+      A: '#forge:tools/saws',
+      B: 'gtceu:treated_wood_planks'
+    })
+
+    event.recipes.gtceu.cutter('cut_planks_treated')
+      .itemInputs('gtceu:treated_wood_planks')
+      .itemOutputs('2x gtceu:treated_wood_plate')
+      .duration(200)
+      .EUt(2)
+
+    //#endregion
 });

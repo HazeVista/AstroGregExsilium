@@ -173,6 +173,14 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
         }
     }
 
+    const compBotIngot = (name, elements, color, icon, blasting, pipe, flags) => {
+        if (blasting.includes(blasting[0])){
+            event.create(name).ingot().fluid().components(elements).color(color).iconSet(icon).flags(flags).blastTemp(blasting[0], blasting[1], blasting[2], blasting[3]).fluidPipeProperties(pipe[0], pipe[1], pipe[2], pipe[3], pipe[4], pipe[5]);
+        } else {
+            event.create(name).ingot().fluid().components(elements).color(color).iconSet(icon).flags(flags);
+        }
+    }
+
     const compIngotLiquidSeccolor = (name, elements, color1, color2, icon, blasting, flags) => {
         if (blasting.includes(blasting[0])){
             event.create(name).ingot().fluid().components(elements).color(color1).secondaryColor(color2).iconSet(icon).flags(flags).blastTemp(blasting[0], blasting[1], blasting[2], blasting[3]);
@@ -279,7 +287,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
         event.create(name).ingot().plasma().components(elements).color(color).iconSet(icon).flags(flags).blastTemp(blasting[0], [1], blasting[2], blasting[3]);
     }
 
-    const conductorPlasma = (name, elements, color, icon, blasting, cable, flags) => {
+    const compConductorPlasma = (name, elements, color, icon, blasting, cable, flags) => {
         event.create(name).ingot().plasma().components(elements).color(color).iconSet(icon).flags(flags).blastTemp(blasting[0], blasting[1], blasting[2], blasting[3]).cableProperties(cable[0], cable[1], cable[2], cable[3]);
     }
 
@@ -306,13 +314,15 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
 
 
     //#region botania
-    compIngotLiquid('manasteel', [], 0x228cc9, SHINY, [1000, 'low', 120, 400], [foil, gear, plates, rod, dense_plate, ring, frame, bolt_and_screw, mortar_grind])
-    compIngotLiquid('terrasteel', [], 0x159e1e, SHINY, [1700, 'low', VA('mv'), 800], [foil, gear, plates, rod, dense_plate, ring, bolt_and_screw,frame, mortar_grind])
-    compIngotLiquid('elementium', [], 0xed64d4, SHINY, [3500, 'mid', VA('iv'), 1600], [foil, gear, plates, rod, dense_plate, ring, bolt_and_screw,frame])
-    compIngotLiquid('gaiasteel', [], 0x8c2929, RADIOACTIVE, [7100, 'high', VA('zpm'), 2400], [foil, gear, plates, rod, dense_plate, ring, bolt_and_screw,frame])
+    compBotIngot('manasteel', [], 0x228cc9, SHINY, [1000, 'low', 120, 400], [1855, 600, true, false, false, false], [foil, gear, plates, rod, dense_plate, ring, frame, bolt_and_screw, mortar_grind])
+    compBotIngot('terrasteel', [], 0x159e1e, SHINY, [1700, 'low', VA('mv'), 800], [2142, 225, true, false, false, false], [foil, gear, plates, rod, dense_plate, ring, bolt_and_screw,frame, mortar_grind])
+    compBotIngot('elementium', [], 0xed64d4, SHINY, [3500, 'mid', VA('iv'), 1600], [2426, 300, true, false, false, false], [foil, gear, plates, rod, dense_plate, ring, bolt_and_screw,frame])
+    compBotIngot('gaiasteel', [], 0x8c2929, RADIOACTIVE, [7100, 'high', VA('zpm'), 2400], [3776, 400, true, true, true, true], [foil, gear, plates, rod, dense_plate, ring, bolt_and_screw,frame])
     compGem('mana_diamond', [], 0x47eaed, DIAMOND, [crystallizable])
     compGem('dragonstone', [], 0xed64d4, DIAMOND, [crystallizable])
     compDust('inactive_terrasteel', [], 0x128719, [])
     compDust('livingrock', [], 0xc9c2b1, [])
     compDust('livingclay', [], 0xc9c2e7, [])
+    compGas('aether', [], 0x26a33f, [])
+    compLiquid('depleted_aether', [], 0x33693e, [])
 });
