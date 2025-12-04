@@ -1,0 +1,19 @@
+features:
+  # The max temperature of the Large Manasteel Mana Boiler
+  manasteelBoilerMaxTemperature: 2000
+
+  # The heat speed of the Large Manasteel Mana Boiler
+  manasteelBoilerHeatSpeed: 1
+
+  # The max temperature of the Large Terrasteel Mana Boiler
+  terrasteelBoilerMaxTemperature: 3000
+
+  # The heat speed of the Large Terrasteel Mana Boiler
+  terrasteelBoilerHeatSpeed: 2
+
+  # The max temperature of the Large Alfsteel Mana Boiler
+  alfsteelBoilerMaxTemperature: 4000
+
+  # The heat speed of the Large Alfsteel Mana Boiler
+  alfsteelBoilerHeatSpeed: 3
+

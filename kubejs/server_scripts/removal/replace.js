@@ -6,11 +6,6 @@ ServerEvents.recipes(event => {
     event.replaceInput({input: 'create:zinc_ingot'}, 'create:zinc_ingot', 'gtceu:zinc_ingot');
     event.replaceInput({input: 'gtceu:energized_steel_ingot'}, 'gtceu:energized_steel_ingot','powah:steel_energized');
     event.replaceInput({input: 'gtceu:energized_steel_block'}, 'gtceu:energized_steel_block','powah:energized_steel_block');
-    event.replaceInput({input: 'gtceu:desh_nugget'}, 'gtceu:desh_nugget', 'ad_astra:desh_nugget')
-    event.replaceInput({input: 'gtceu:desh_ingot'}, 'gtceu:desh_ingot', 'ad_astra:desh_ingot')
-    event.replaceInput({input: 'gtceu:desh_block'}, 'gtceu:desh_block', 'ad_astra:desh_block')
-    event.replaceInput({input: 'gtceu:raw_desh'}, 'gtceu:raw_desh', 'ad_astra:raw_desh')
-    event.replaceInput({input: 'gtceu:raw_desh_block'}, 'gtceu:raw_desh_block', 'ad_astra:raw_desh_block')
     event.replaceInput({}, 'botania:redstone_root', 'gtceu:red_alloy_dust')
     event.replaceInput({}, 'ad_astra:steel_rod', 'gtceu:steel_rod')
     event.replaceInput({}, 'ad_astra:iron_rod', 'gtceu:iron_rod')
@@ -49,17 +44,18 @@ ServerEvents.recipes(event => {
     event.replaceInput({input: 'botania:rune_gluttony'}, 'botania:rune_gluttony', 'botania:gluttony_rune')
     event.replaceInput({input: 'botania:rune_envy'}, 'botania:rune_envy', 'botania:envy_rune')
     event.replaceInput({output: 'minecraft:brick'}, 'minecraft:clay_ball', 'gtceu:compressed_clay')
-    event.replaceOutput({input: 'ae2:certus_quartz_crystal'}, 'ae2:certus_quartz_crystal', 'gtceu:certus_quartz_gem')
+    event.replaceInput({input: 'ae2:certus_quartz_crystal'}, 'ae2:certus_quartz_crystal', 'gtceu:certus_quartz_gem')
+    event.replaceInput({output: /gtceu:lv_.*/}, 'minecraft:diamond', 'gtceu:grinding_head_damascus_steel')
+    event.replaceInput({output: /gtceu:mv_.*/}, 'minecraft:diamond', 'gtceu:grinding_head_damascus_steel')
+    event.replaceInput({output: /gtceu:zpm_.*/}, 'gtceu:tungsten_grinding_head', 'gtceu:grinding_head_duranium')
+    event.replaceInput({output: /gtceu:uv_.*/}, 'gtceu:tungsten_grinding_head', 'gtceu:grinding_head_duranium')
+    event.replaceInput({}, 'gtceu:diamond_grinding_head', 'gtceu:grinding_head_diamond')
+    event.replaceInput({}, 'gtceu:tungsten_grinding_head', 'gtceu:grinding_head_tungsten')
     event.replaceInput({}, 'botania:mana_glass', 'botania:managlass')
     event.replaceInput({}, 'botania:elf_glass', 'botania:alfglass')
     //#endregion
     
     //#region output
-    event.replaceOutput({output: 'gtceu:desh_nugget'}, 'gtceu:desh_nugget', 'ad_astra:desh_nugget')
-    event.replaceOutput({output: 'gtceu:desh_ingot'}, 'gtceu:desh_ingot', 'ad_astra:desh_ingot')
-    event.replaceOutput({output: 'gtceu:desh_block'}, 'gtceu:desh_block', 'ad_astra:desh_block')
-    event.replaceOutput({output: 'gtceu:raw_desh'}, 'gtceu:raw_desh', 'ad_astra:raw_desh')
-    event.replaceOutput({output: 'gtceu:raw_desh_block'}, 'gtceu:raw_desh_block', 'ad_astra:raw_desh_block')
     event.replaceOutput({output: 'gtceu:energized_steel_ingot'}, 'gtceu:energized_steel_ingot','powah:steel_energized');
     event.replaceOutput({output: 'gtceu:energized_steel_block'}, 'gtceu:energized_steel_block','powah:energized_steel_block');
     event.replaceOutput({output: 'gtceu:manasteel_ingot'}, 'gtceu:manasteel_ingot','botania:manasteel_ingot');

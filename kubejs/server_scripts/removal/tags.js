@@ -50,8 +50,8 @@ event.removeAllTagsFrom('createaddition:diamond_grit')
 event.removeAllTagsFrom('createaddition:diamond_grit_sandpaper')
 event.removeAllTagsFrom('farmersdelight:wheat_dough')
 event.removeAllTagsFrom('powah:uraninite_raw')
-event.removeAllTagsFrom('gtceu:raw_desh')
-event.removeAllTagsFrom('gtceu:desh_ingot')
+// event.removeAllTagsFrom('gtceu:raw_desh')
+// event.removeAllTagsFrom('gtceu:desh_ingot')
 event.removeAllTagsFrom('farmersdelight:golden_knife')
 event.removeAllTagsFrom('farmersdelight:netherite_knife')
 event.removeAllTagsFrom('farmersdelight:diamond_knife')
@@ -94,6 +94,7 @@ event.removeAllTagsFrom('botania:elf_glass_pane')
 event.removeAllTagsFrom('gtceu:wood_plate')
 event.removeAllTagsFrom('gtceu:treated_wood_plate')
 event.removeAllTagsFrom('ae2:certus_quartz_crystal')
+event.removeAllTagsFrom('botania:bifrost_perm')
 });
 
 
@@ -105,7 +106,7 @@ event.removeAllTagsFrom('ad_extendra:plutonium_block' )
 event.removeAllTagsFrom('ad_extendra:uraninium_block')
 event.removeAllTagsFrom('ad_extendra:raw_uranium_block')
 event.removeAllTagsFrom('createaddition:electrum_block')
-event.removeAllTagsFrom('gtceu:raw_desh_block')
+// event.removeAllTagsFrom('gtceu:raw_desh_block')
 });
 
 
@@ -164,5 +165,4 @@ event.add('forge:grass', 'minecraft:tall_grass')
 event.add('forge:fruit_slice', 'minecraft:melon_slice')
 event.add('forge:fruit_slice', 'farmersdelight:melon_slice')
 event.add('c:glass_panes', 'botania:managlass_pane')
-event.add('c:glass_panes', 'botania:alfglass_pane')
 })

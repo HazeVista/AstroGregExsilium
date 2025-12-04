@@ -12,7 +12,7 @@ ServerEvents.recipes(event => {
         'ae2:vibration_chamber', 'expatternprovider:circuit_cutter', 'minecraft:mycelium', 'create:brass_block', 'create:zinc_block', 'createaddition:straw', 'ad_astra:hydrogen',
         'gtceu:me_pattern_buffer_proxy', 'gtceu:me_pattern_buffer', 'create:andesite_alloy', 'ad_astra:desh_plate', 'create:controller_rail', 'create:dough',
         'functionalstorage:collector_upgrade', 'functionalstorage:pusher_upgrade', 'functionalstorage:puller_upgrade', 'create:shaft', 'create:blaze_cake_base', 'create:wheat_flour',
-        'createaddition:alternator', 'createaddition:gold_rod', 'effortlessbuilding:golden_randomizer_bag', 'gtceu:desh_ingot', 'gtceu:desh_block', 'gtceu:raw_desh_block', 'gtceu:desh_nugget',
+        'createaddition:alternator', 'createaddition:gold_rod', 'effortlessbuilding:golden_randomizer_bag',
         'createaddition:brass_rod', 'createaddition:copper_rod', 'createaddition:electrum_rod', 'createaddition:electric_motor', 'createaddition:capacitor', 'createaddition:tesla_coil',
         'createaddition:portable_energy_interface', 'createaddition:connector', 'createaddition:large_connector', 'createaddition:festive_spool', 'createaddition:diamond_grit_sandpaper',
         'effortlessbuilding:randomizer_bag', 'create:empty_blaze_burner', 'effortlessbuilding:diamond_randomizer_bag', 'laserio:laser_connector', 'laserio:filter_counting',
@@ -38,7 +38,8 @@ ServerEvents.recipes(event => {
         'botania:manastar', 'botania:floating_manastar', 'botania:tigerseye', 'botania:floating_tigerseye', 'botania:rannuncarpus', 'botania:floating_rannuncarpus', 'botania:rannuncarpus_chibi', 
         'botania:floating_rannuncarpus_chibi', 'botania:tangleberrie', 'botania:floating_tangleberrie', 'botania:vine_ball', 'botania:orechid', 'botania:endoflame', 'botania:hydroangeas',
         'create:builders_tea', 'create:chocolate_glazed_berries', 'create:bar_of_chocolate', 'ae2:not_so_mysterious_cube', 'ae2:quantum_link', 'ae2:quantum_ring', 'minecraft:recovery_compass',
-        'botania:cell_block', 'expandedae:dual_cell_housing', 'expandedae:mega_dual_cell_housing'
+        'botania:cell_block', 'expandedae:dual_cell_housing', 'expandedae:mega_dual_cell_housing', 'create:copper_diving_helmet', 'create:copper_diving_boots', 'gtceu:tungsten_grinding_head', 
+        'gtceu:diamond_grinding_head'
     ]
 
     //#region remove recipe id
@@ -49,7 +50,7 @@ ServerEvents.recipes(event => {
         'ae2:transform/damaged_budding_quartz', 'ae2:transform/chipped_budding_quartz', 'ae2:network/blocks/spatial_io_port', 'ae2:network/blocks/io_port', 'laserio:filter_basic', 'farmersdelight:cooking_pot',
         'ae2:transform/flawed_budding_quartz', 'ae2:transform/fluix_crystals', 'ae2:transform/fluix_crystal', 'ae2:network/blocks/interfaces_interface', 'ae2:network/blocks/io_condenser',
         'ae2:network/crafting/molecular_assembler', 'ae2:network/blocks/pattern_providers_interface', 'ae2:network/crafting/cpu_crafting_unit', 'ae2:network/blocks/energy_energy_acceptor',
-        'laserio:filter_mod', 'laserio:filter_count', 'laserio:filter_tag', 'laserio:filter_mod', 'ad_astra:desh_ingot', 'ad_astra:desh_block', 'ad_astra:raw_desh_block', 'ad_astra:desh_nugget',
+        'laserio:filter_mod', 'laserio:filter_count', 'laserio:filter_tag', 'laserio:filter_mod',
         'botania:mana_infusion/netherrack_dupe', 'createaddition:mixing/netherrack', 'botania:mana_infusion/soul_sand_dupe', 'botania:mana_infusion/glowstone_dupe', 'botania:mana_infusion/redstone_dupe',
         'botania:mana_infusion/quartz_dupe', 'botania:mana_infusion/coal_dupe', 'botania:mana_infusion/gravel_dupe', 'minecraft:netherite_drill_smithing', 'create:crafting/kinetics/fluid_tank',
         'create:crafting/kinetics/white_sail', 'create:crafting/kinetics/fluid_valve', 'farmersdelight:rope', 'gtceu:autoclave/silicon_dioxide_to_quartzite_gem', 'gtceu:assembler/end_crystal',
@@ -100,7 +101,10 @@ ServerEvents.recipes(event => {
         'botania:heisei_dream', 'gtceu:extruder/nan_certificate', 'gtceu:forming_press/pumpkin_pie', 'createaddition:mixing/bioethanol', 'createaddition:compacting/cake_base', 'botania:shimmerwood_planks',
         'botania:mana_infusion/flint_to_gunpowder', 'botania:mana_infusion/gunpowder_to_flint', 'gtceu:shapeless/block_decompress_mana_diamond', 'botania:pure_daisy/livingrock', 
         'botania:pure_daisy/end_stone_to_cobbled_deepslate', 'gtceu:alloy_smelter/form_brick', 'createlowheated:mixing/builders_tea', 'ae2:network/cells/item_cell_housing', 'ae2:network/cells/fluid_cell_housing',
-        'createaddition:compat/ae2/charged_certus_quartz', 'ae2:decorative/quartz_block', 
+        'createaddition:compat/ae2/charged_certus_quartz', 'ae2:decorative/quartz_block', 'minecraft:iron_chestplate', 'minecraft:iron_helmet', 'minecraft:iron_boots', 'minecraft:iron_leggings',
+        'minecraft:diamond_helmet', 'minecraft:diamond_chestplate', 'minecraft:diamond_leggings', 'minecraft:diamond_boots', 'minecraft:golden_boots', 'minecraft:golden_leggings', 'minecraft:golden_helmet', 
+        'minecraft:golden_chestplate', 'botania:manasteel_boots', 'botania:manasteel_leggings', 'botania:manasteel_chestplate', 'botania:manasteel_helmet', 'botania:elementium_boots', 'botania:elementium_leggings',
+        'botania:elementium_chestplate', 'botania:elementium_helmet',
     ];
 
     //#region remove type

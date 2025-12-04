@@ -1,11 +1,14 @@
-//credit to @trulyno and the Star Technology team for the builder code
+//credit to @trulyno and the Star Technology team for most of the builder code
 //#region properties
 const $IngotProperty = global.IngotProperty;
 const $DustProperty = global.DustProperty;
 const $FluidProperty = global.FluidProperty;
 const $BlastProperty = global.BlastProperty;
 const $FluidPipeProperties = global.FluidPipeProperties;
-const $PropertyKey = global.PropertyKey
+const $PropertyKey = global.PropertyKey;
+const $ToolProperty = Java.loadClass('com.gregtechceu.gtceu.api.data.chemical.material.properties.ToolProperty');
+const $AstraItems = Java.loadClass('earth.terrarium.adastra.common.registry.ModItems');
+const $AstraBlocks = Java.loadClass('earth.terrarium.adastra.common.registry.ModBlocks');
 
 //#region icon sets
 const DULL = GTMaterialIconSet.DULL;
@@ -78,7 +81,7 @@ const solder_mat_good = GTMaterialFlags.SOLDER_MATERIAL_GOOD;
 // Ore Flags
 const more_sifter = GTMaterialFlags.HIGH_SIFTER_OUTPUT;
 
-// Misc
+// Crafting Flags
 const no_block_craft = GTMaterialFlags.EXCLUDE_BLOCK_CRAFTING_RECIPES;
 const no_plate_compressor_craft = GTMaterialFlags.EXCLUDE_PLATE_COMPRESSOR_RECIPE;
 const no_hand_craft = GTMaterialFlags.EXCLUDE_BLOCK_CRAFTING_BY_HAND_RECIPES;
@@ -153,7 +156,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
         if (blasting.includes(blasting[0])){
             event.create(name).ingot().components(elements).color(color).iconSet(icon).flags(flags).blastTemp(blasting[0], blasting[1], blasting[2], blasting[3]);
         } else {
-            event.create(name).ingot().fluid().components(elements).color(color).iconSet(icon).flags(flags);
+            event.create(name).ingot().fluid().components(elements).color(color).iconSet(icon);
         }
     }
 
@@ -173,13 +176,9 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
         }
     }
 
-    const compBotIngot = (name, elements, color, icon, blasting, pipe, flags) => {
-        if (blasting.includes(blasting[0])){
-            event.create(name).ingot().fluid().components(elements).color(color).iconSet(icon).flags(flags).blastTemp(blasting[0], blasting[1], blasting[2], blasting[3]).fluidPipeProperties(pipe[0], pipe[1], pipe[2], pipe[3], pipe[4], pipe[5]);
-        } else {
-            event.create(name).ingot().fluid().components(elements).color(color).iconSet(icon).flags(flags);
-        }
-    }
+    // const compBotIngot = (name, elements, color, icon, tool, toolflags, blasting, pipe, flags) => {
+    //     event.create(name).ingot().fluid().components(elements).color(color).iconSet(icon).flags(flags).toolStats(new ToolProperty(tool[0], tool[1], tool[2], tool[3], [toolflags])).blastTemp(blasting[0], blasting[1], blasting[2], blasting[3]).fluidPipeProperties(pipe[0], pipe[1], pipe[2], pipe[3], pipe[4], pipe[5]);
+    // }
 
     const compIngotLiquidSeccolor = (name, elements, color1, color2, icon, blasting, flags) => {
         if (blasting.includes(blasting[0])){
@@ -294,8 +293,6 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     //#region misc dusts
     compDust('andesite_alloy', ['1x andesite', '1x iron'], 0xa6a08f, [centrifuge]);
     compDust('asteroid_stone', [], 0x70276b, [])
-    compDustOreIngot('desh', [/*'1x desh'*/], 0xD38B4C, [])
-
 
     //#region superconductors
     conductorSuper('energized_steel', [], 0xbaa172, [], [V('lv'), 4, 0, true], [150, 130, 3, 12000]);
@@ -308,16 +305,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     conductorSuper('neptunium_molybdenum_selenide', [], 0x088a5c, [10000, 'higher', VA('uv'), 3000], [V('uv'), 96, 0, true], [2000, 550, 3, 48000]);
     // conductorSuper('', [], 0xccffff, [10799, 'highest', VA('uhv'), 3300], [V('uhv'), 128, 0, true], [3200, 660, 3, 96000]);
 
-
-    //#region ae2
-    compIngotLiquidSeccolor('futura_alloy', ['4x stainless_steel', '1x mystery'], 0xebb7ea, 0x000000, SHINY, [1700, 'low', 400, 1200], [frame, plates, rod, dense_plate, mortar_grind, block])
-
-
     //#region botania
-    compBotIngot('manasteel', [], 0x228cc9, SHINY, [1000, 'low', 120, 400], [1855, 600, true, false, false, false], [foil, gear, plates, rod, dense_plate, ring, frame, bolt_and_screw, mortar_grind])
-    compBotIngot('terrasteel', [], 0x159e1e, SHINY, [1700, 'low', VA('mv'), 800], [2142, 225, true, false, false, false], [foil, gear, plates, rod, dense_plate, ring, bolt_and_screw,frame, mortar_grind])
-    compBotIngot('elementium', [], 0xed64d4, SHINY, [3500, 'mid', VA('iv'), 1600], [2426, 300, true, false, false, false], [foil, gear, plates, rod, dense_plate, ring, bolt_and_screw,frame])
-    compBotIngot('gaiasteel', [], 0x8c2929, RADIOACTIVE, [7100, 'high', VA('zpm'), 2400], [3776, 400, true, true, true, true], [foil, gear, plates, rod, dense_plate, ring, bolt_and_screw,frame])
     compGem('mana_diamond', [], 0x47eaed, DIAMOND, [crystallizable])
     compGem('dragonstone', [], 0xed64d4, DIAMOND, [crystallizable])
     compDust('inactive_terrasteel', [], 0x128719, [])
@@ -325,4 +313,186 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     compDust('livingclay', [], 0xc9c2e7, [])
     compGas('aether', [], 0x26a33f, [])
     compLiquid('depleted_aether', [], 0x33693e, [])
+
+    event.create('manasteel')
+        .ingot()
+        .fluid()
+        .color(0x228cc9)
+        .iconSet(SHINY)
+        .blastTemp(1000, 'low', 120, 400)
+        .fluidPipeProperties(1855, 600, true, false, false, false)
+        .flags(foil, gear, plates, rod, dense_plate, ring, frame, bolt_and_screw, mortar_grind)
+        .toolStats(new ToolProperty(8.0, 7.0, 768, 3, 
+            [GTToolType.SWORD,
+            GTToolType.PICKAXE,
+            GTToolType.SHOVEL,
+            GTToolType.AXE,
+            GTToolType.HOE,
+            GTToolType.MINING_HAMMER,
+            GTToolType.SPADE,
+            GTToolType.SAW,
+            GTToolType.HARD_HAMMER,
+            GTToolType.SOFT_MALLET,
+            GTToolType.WRENCH,
+            GTToolType.FILE,
+            GTToolType.CROWBAR,
+            GTToolType.SCREWDRIVER,
+            GTToolType.MORTAR,
+            GTToolType.WIRE_CUTTER,
+            GTToolType.SCYTHE,
+            GTToolType.KNIFE,
+            GTToolType.BUTCHERY_KNIFE,
+            GTToolType.PLUNGER,
+            GTToolType.DRILL_LV,
+            GTToolType.DRILL_MV,
+            GTToolType.DRILL_HV,
+            GTToolType.DRILL_EV,
+            GTToolType.DRILL_IV,
+            GTToolType.CHAINSAW_LV,
+            GTToolType.BUZZSAW,
+            GTToolType.SCREWDRIVER_LV,
+            GTToolType.WRENCH_LV,
+            GTToolType.WRENCH_HV,
+            GTToolType.WRENCH_IV,
+            GTToolType.WIRE_CUTTER_LV,
+            GTToolType.WIRE_CUTTER_HV,
+            GTToolType.WIRE_CUTTER_IV]))
+        
+    event.create('terrasteel')
+        .ingot()
+        .fluid()
+        .color(0x159e1e)
+        .iconSet(SHINY)
+        .blastTemp(1700, 'low', VA('mv'), 800)
+        .fluidPipeProperties(2142, 225, true, false, false, false)
+        .flags(foil, gear, plates, rod, dense_plate, ring, frame, bolt_and_screw)
+        .toolStats(new ToolProperty(11.0, 11.0, 2048, 3.0, 
+            [GTToolType.SWORD,
+            GTToolType.PICKAXE,
+            GTToolType.SHOVEL,
+            GTToolType.AXE,
+            GTToolType.HOE,
+            GTToolType.MINING_HAMMER,
+            GTToolType.SPADE,
+            GTToolType.SAW,
+            GTToolType.HARD_HAMMER,
+            GTToolType.SOFT_MALLET,
+            GTToolType.WRENCH,
+            GTToolType.FILE,
+            GTToolType.CROWBAR,
+            GTToolType.SCREWDRIVER,
+            GTToolType.MORTAR,
+            GTToolType.WIRE_CUTTER,
+            GTToolType.SCYTHE,
+            GTToolType.KNIFE,
+            GTToolType.BUTCHERY_KNIFE,
+            GTToolType.PLUNGER,
+            GTToolType.DRILL_LV,
+            GTToolType.DRILL_MV,
+            GTToolType.DRILL_HV,
+            GTToolType.DRILL_EV,
+            GTToolType.DRILL_IV,
+            GTToolType.CHAINSAW_LV,
+            GTToolType.BUZZSAW,
+            GTToolType.SCREWDRIVER_LV,
+            GTToolType.WRENCH_LV,
+            GTToolType.WRENCH_HV,
+            GTToolType.WRENCH_IV,
+            GTToolType.WIRE_CUTTER_LV,
+            GTToolType.WIRE_CUTTER_HV,
+            GTToolType.WIRE_CUTTER_IV]))
+            
+    event.create('elementium')
+        .ingot()
+        .fluid()
+        .color(0xed64d4)
+        .iconSet(SHINY)
+        .blastTemp(3500, 'mid', VA('iv'), 1600)
+        .fluidPipeProperties(2426, 300, true, false, false, false)
+        .flags(foil, gear, plates, rod, dense_plate, ring, frame, bolt_and_screw)
+        .toolStats(new ToolProperty(16.0, 13.0, 3072, 4.0, 
+            [GTToolType.SWORD,
+            GTToolType.PICKAXE,
+            GTToolType.SHOVEL,
+            GTToolType.AXE,
+            GTToolType.HOE,
+            GTToolType.MINING_HAMMER,
+            GTToolType.SPADE,
+            GTToolType.SAW,
+            GTToolType.HARD_HAMMER,
+            GTToolType.SOFT_MALLET,
+            GTToolType.WRENCH,
+            GTToolType.FILE,
+            GTToolType.CROWBAR,
+            GTToolType.SCREWDRIVER,
+            GTToolType.MORTAR,
+            GTToolType.WIRE_CUTTER,
+            GTToolType.SCYTHE,
+            GTToolType.KNIFE,
+            GTToolType.BUTCHERY_KNIFE,
+            GTToolType.PLUNGER,
+            GTToolType.DRILL_LV,
+            GTToolType.DRILL_MV,
+            GTToolType.DRILL_HV,
+            GTToolType.DRILL_EV,
+            GTToolType.DRILL_IV,
+            GTToolType.CHAINSAW_LV,
+            GTToolType.BUZZSAW,
+            GTToolType.SCREWDRIVER_LV,
+            GTToolType.WRENCH_LV,
+            GTToolType.WRENCH_HV,
+            GTToolType.WRENCH_IV,
+            GTToolType.WIRE_CUTTER_LV,
+            GTToolType.WIRE_CUTTER_HV,
+            GTToolType.WIRE_CUTTER_IV]))
+
+    event.create('gaiasteel')
+        .ingot()
+        .fluid()
+        .color(0x8c2929)
+        .iconSet(RADIOACTIVE)
+        .blastTemp(7100, 'high', VA('zpm'), 2400)
+        .fluidPipeProperties(3776, 400, true, true, true, true)
+        .flags(foil, gear, plates, rod, dense_plate, ring, frame, bolt_and_screw)
+        .toolStats(ToolProperty.Builder.of(48.0, 16.0, 4096, 5.0, 
+            [GTToolType.SWORD,
+            GTToolType.PICKAXE,
+            GTToolType.SHOVEL,
+            GTToolType.AXE,
+            GTToolType.HOE,
+            GTToolType.MINING_HAMMER,
+            GTToolType.SPADE,
+            GTToolType.SAW,
+            GTToolType.HARD_HAMMER,
+            GTToolType.SOFT_MALLET,
+            GTToolType.WRENCH,
+            GTToolType.FILE,
+            GTToolType.CROWBAR,
+            GTToolType.SCREWDRIVER,
+            GTToolType.MORTAR,
+            GTToolType.WIRE_CUTTER,
+            GTToolType.SCYTHE,
+            GTToolType.KNIFE,
+            GTToolType.BUTCHERY_KNIFE,
+            GTToolType.PLUNGER,
+            GTToolType.DRILL_LV,
+            GTToolType.DRILL_MV,
+            GTToolType.DRILL_HV,
+            GTToolType.DRILL_EV,
+            GTToolType.DRILL_IV,
+            GTToolType.CHAINSAW_LV,
+            GTToolType.BUZZSAW,
+            GTToolType.SCREWDRIVER_LV,
+            GTToolType.WRENCH_LV,
+            GTToolType.WRENCH_HV,
+            GTToolType.WRENCH_IV,
+            GTToolType.WIRE_CUTTER_LV,
+            GTToolType.WIRE_CUTTER_HV,
+            GTToolType.WIRE_CUTTER_IV])
+        .magnetic() 
+        .build())
+        
+    //#region ae2
+    compIngotLiquidSeccolor('futura_alloy', ['4x stainless_steel', '1x mystery'], 0xebb7ea, 0x000000, SHINY, [1700, 'low', 400, 1200], [frame, plates, rod, dense_plate, mortar_grind, block])
+   
 });

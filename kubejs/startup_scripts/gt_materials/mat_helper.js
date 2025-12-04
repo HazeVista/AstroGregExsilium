@@ -1,4 +1,10 @@
-//mostly from Star Technology
+const IngotProperty = Java.loadClass('com.gregtechceu.gtceu.api.data.chemical.material.properties.IngotProperty');
+const DustProperty = Java.loadClass('com.gregtechceu.gtceu.api.data.chemical.material.properties.DustProperty');
+const FluidProperty = Java.loadClass('com.gregtechceu.gtceu.api.data.chemical.material.properties.FluidProperty');
+const BlastProperty = Java.loadClass('com.gregtechceu.gtceu.api.data.chemical.material.properties.BlastProperty');
+const FluidPipeProperties = Java.loadClass('com.gregtechceu.gtceu.api.data.chemical.material.properties.FluidPipeProperties');
+const ToolProperty = Java.loadClass('com.gregtechceu.gtceu.api.data.chemical.material.properties.ToolProperty');
+
 //#region icon sets
 global.iconSets = {
     dull: GTMaterialIconSet.DULL,
@@ -42,7 +48,7 @@ global.flags = {
     sticky: GTMaterialFlags.STICKY,
     phosphorescent: GTMaterialFlags.PHOSPHORESCENT,
 
-   // Generation Flags
+    // Generation Flags
     plates: GTMaterialFlags.GENERATE_PLATE,
     dense_plate: GTMaterialFlags.GENERATE_DENSE,
     rod: GTMaterialFlags.GENERATE_ROD,
@@ -52,7 +58,7 @@ global.flags = {
     long_rod: GTMaterialFlags.GENERATE_LONG_ROD,
     block: GTMaterialFlags.FORCE_GENERATE_BLOCK,
 
-   // Ingot Flags
+    // Ingot Flags
     foil: GTMaterialFlags.GENERATE_FOIL,
     ring: GTMaterialFlags.GENERATE_RING,
     spring: GTMaterialFlags.GENERATE_SPRING,
@@ -63,19 +69,19 @@ global.flags = {
     round: GTMaterialFlags.GENERATE_ROUND,
     magnetic: GTMaterialFlags.IS_MAGNETIC,
 
-   // Gem Flags
+    // Gem Flags
     crystallizable: GTMaterialFlags.CRYSTALLIZABLE,
     lens: GTMaterialFlags.GENERATE_LENS,
 
-   // Fluid Flags
+    // Fluid Flags
     solder_mat: GTMaterialFlags.SOLDER_MATERIAL,
     solder_mat_bad: GTMaterialFlags.SOLDER_MATERIAL_BAD,
     solder_mat_good: GTMaterialFlags.SOLDER_MATERIAL_GOOD,
 
-   // Ore Flags
+    // Ore Flags
     more_sifter: GTMaterialFlags.HIGH_SIFTER_OUTPUT,
 
-   // Misc
+    // Misc
     no_block_craft: GTMaterialFlags.EXCLUDE_BLOCK_CRAFTING_RECIPES,
     no_plate_compressor_craft: GTMaterialFlags.EXCLUDE_PLATE_COMPRESSOR_RECIPE,
     no_hand_craft: GTMaterialFlags.EXCLUDE_BLOCK_CRAFTING_BY_HAND_RECIPES,
@@ -86,9 +92,50 @@ global.flags = {
     blast_furnace_double: GTMaterialFlags.BLAST_FURNACE_CALCITE_DOUBLE,
     blast_furnace_triple: GTMaterialFlags.BLAST_FURNACE_CALCITE_TRIPLE,
     no_abs_recipe: GTMaterialFlags.DISABLE_ALLOY_BLAST,
-    not_alloy: GTMaterialFlags.DISABLE_ALLOY_PROPERTY
+    not_alloy: GTMaterialFlags.DISABLE_ALLOY_PROPERTY,
 }
 //#endregion
+
+
+
+// //#region tool flags
+// global.toolTypes = {
+//     sword: GTToolType.SWORD,
+//     pickaxe: GTToolType.PICKAXE,
+//     shovel: GTToolType.SHOVEL,
+//     axe: GTToolType.AXE,
+//     hoe: GTToolType.HOE,
+//     mining_hammer: GTToolType.MINING_HAMMER,
+//     spade: GTToolType.SPADE,
+//     saw: GTToolType.SAW,
+//     hard_hammer: GTToolType.HARD_HAMMER,
+//     soft_mallet: GTToolType.SOFT_MALLET,
+//     wrench: GTToolType.WRENCH,
+//     file: GTToolType.FILE,
+//     crowbar: GTToolType.CROWBAR,
+//     screwdriver: GTToolType.SCREWDRIVER,
+//     mortar: GTToolType.MORTAR,
+//     wire_cutter: GTToolType.WIRE_CUTTER,
+//     scythe: GTToolType.SCYTHE,
+//     knife: GTToolType.KNIFE,
+//     butchery_knife: GTToolType.BUTCHERY_KNIFE,
+//     plunger: GTToolType.PLUNGER,
+//     drill_lv: GTToolType.DRILL_LV,
+//     drill_mv: GTToolType.DRILL_MV,
+//     drill_hv: GTToolType.DRILL_HV,
+//     drill_ev: GTToolType.DRILL_EV,
+//     drill_iv: GTToolType.DRILL_IV,
+//     chainsaw: GTToolType.CHAINSAW_LV,
+//     buzzsaw: GTToolType.BUZZSAW,
+//     screwdriver_lv: GTToolType.SCREWDRIVER_LV,
+//     wrench_lv: GTToolType.WRENCH_LV,
+//     wrench_hv: GTToolType.WRENCH_HV,
+//     wrench_iv: GTToolType.WRENCH_IV,
+//     wire_cutter_lv: GTToolType.WIRE_CUTTER_LV,
+//     wire_cutter_hv: GTToolType.WIRE_CUTTER_HV,
+//     wire_cutter_iv: GTToolType.WIRE_CUTTER_IV
+// }
+// //#endregion
 
 
 
@@ -148,7 +195,7 @@ global.vha = {
 
 
 
-//#region periodic elem helper
+//#region periodic helper
 global.periodicTableElement = (material, type) => {
     let mat = GTMaterials.get(material);
     switch(type) {
@@ -171,14 +218,8 @@ global.periodicTableElement = (material, type) => {
 
 
 
-//#region blast property helper
+//#region blast prop helper
 global.blastProperty = (material, temperature, gasTier, voltage, duration) => {
     let mat = GTMaterials.get(material);
     mat.setProperty(PropertyKey.BLAST, new BlastProperty(temperature, gasTier, voltage, duration, -1, -1));
 }
-
-const IngotProperty = Java.loadClass('com.gregtechceu.gtceu.api.data.chemical.material.properties.IngotProperty');
-const DustProperty = Java.loadClass('com.gregtechceu.gtceu.api.data.chemical.material.properties.DustProperty');
-const FluidProperty = Java.loadClass('com.gregtechceu.gtceu.api.data.chemical.material.properties.FluidProperty');
-const BlastProperty = Java.loadClass('com.gregtechceu.gtceu.api.data.chemical.material.properties.BlastProperty');
-const FluidPipeProperties = Java.loadClass('com.gregtechceu.gtceu.api.data.chemical.material.properties.FluidPipeProperties');

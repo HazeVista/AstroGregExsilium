@@ -56,6 +56,9 @@ ServerEvents.recipes(event => {
         A: 'gtceu:iron_plate',
         B: 'gtceu:magnetic_iron_screw'
     })
+    //#endregion
+
+
 
     //#region quality of life logs
     event.shaped('16x minecraft:stick', [
@@ -83,4 +86,56 @@ ServerEvents.recipes(event => {
     })
 
     event.shapeless('minecraft:coarse_dirt', ['minecraft:dirt', '#forge:gravel'])
+    //#endregion
+
+    //#region armor
+    const armorTypes = [['minecraft:golden', 'gtceu:gold_plate'], 
+                        ['minecraft:diamond',  'gtceu:diamond_plate'],
+                        ['minecraft:iron',  'gtceu:iron_plate'],
+                        ['botania:manasteel',  'gtceu:manasteel_plate'],
+                        ['botania:elementium',  'gtceu:elementium_plate']]
+
+    armorTypes.forEach(armorRecipe)
+
+    function armorRecipe(armor) {
+        const piece = armor[0]
+        const plate = armor[1]
+
+        event.shaped(`${piece}_helmet`, [
+            'AAA',
+            'ABA',
+            '   '
+        ], {
+            A: plate,
+            B: '#forge:tools/hammers'
+        })
+
+        event.shaped(`${piece}_chestplate`, [
+            'ABA',
+            'AAA',
+            'AAA'
+        ], {
+            A: plate,
+            B: '#forge:tools/hammers'
+        })
+        
+        event.shaped(`${piece}_leggings`, [
+            'AAA',
+            'ABA',
+            'A A'
+        ], {
+            A: plate,
+            B: '#forge:tools/hammers'
+        })
+
+        
+        event.shaped(`${piece}_boots`, [
+            '   ',
+            'A A',
+            'ABA'
+        ], {
+            A: plate,
+            B: '#forge:tools/hammers'
+        })
+    }
 });

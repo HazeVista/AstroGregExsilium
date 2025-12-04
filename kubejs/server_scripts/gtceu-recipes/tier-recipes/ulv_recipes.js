@@ -77,14 +77,14 @@ ServerEvents.recipes(event => {
       A: 'farmersdelight:tree_bark'
     });
 
-    event.shaped('ad_astra:desh_plate', [
-      'A',
-      'B',
-      'B'
-    ], {
-      A: '#forge:tools/hammers',
-      B: 'ad_astra:desh_ingot'
-    })
+    // event.shaped('gtceu:desh_plate', [
+    //   'A',
+    //   'B',
+    //   'B'
+    // ], {
+    //   A: '#forge:tools/hammers',
+    //   B: 'ad_astra:desh_ingot'
+    // })
 
     event.shaped('3x dustrial_decor:gold_chain', [
       ' A ',
