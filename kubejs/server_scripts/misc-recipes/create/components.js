@@ -78,7 +78,7 @@ ServerEvents.recipes(event => {
         A: 'gtceu:copper_plate',
         B: 'gtceu:tempered_glass'
     })
-    console.info('Custom Fluid Tank recipe applied.')
+
 
 
     event.shaped('2x create:white_sail', [
