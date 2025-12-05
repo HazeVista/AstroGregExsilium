@@ -69,15 +69,17 @@ ServerEvents.recipes(event => {
         A: 'gtceu:treated_wood_planks',
         B: 'create:water_wheel'
     })
-
+    
     event.shaped('create:fluid_tank', [
         'AAA',
         'B B',
         'AAA'
     ], {
         A: 'gtceu:copper_plate',
-        B: '#forge:glass/silica'
+        B: 'gtceu:tempered_glass'
     })
+    console.info('Custom Fluid Tank recipe applied.')
+
 
     event.shaped('2x create:white_sail', [
         'CAC',
