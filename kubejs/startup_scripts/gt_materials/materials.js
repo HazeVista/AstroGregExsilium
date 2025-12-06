@@ -9,6 +9,9 @@ const $PropertyKey = global.PropertyKey;
 const $ToolProperty = Java.loadClass('com.gregtechceu.gtceu.api.data.chemical.material.properties.ToolProperty');
 const $AstraItems = Java.loadClass('earth.terrarium.adastra.common.registry.ModItems');
 const $AstraBlocks = Java.loadClass('earth.terrarium.adastra.common.registry.ModBlocks');
+//#endregion
+
+
 
 //#region icon sets
 const DULL = GTMaterialIconSet.DULL;
@@ -35,6 +38,9 @@ const CERTUS = GTMaterialIconSet.CERTUS;
 const LAPIS = GTMaterialIconSet.LAPIS;
 const FLUID = GTMaterialIconSet.FLUID;
 const RADIOACTIVE = GTMaterialIconSet.RADIOACTIVE;
+//#endregion
+
+
 
 //#region flags
 // Generic flags
@@ -93,6 +99,9 @@ const blast_furnace_double = GTMaterialFlags.BLAST_FURNACE_CALCITE_DOUBLE;
 const blast_furnace_triple = GTMaterialFlags.BLAST_FURNACE_CALCITE_TRIPLE;
 const no_abs_recipe = GTMaterialFlags.DISABLE_ALLOY_BLAST;
 const not_alloy = GTMaterialFlags.DISABLE_ALLOY_PROPERTY;
+//#endregion
+
+
 
 //#region voltage functions
 const V = (voltage) => {
@@ -110,6 +119,9 @@ const VH = (voltage) => {
 const VHA = (voltage) => {
     return global.vha[voltage];
 }
+//#endregion
+
+
 
 GTCEuStartupEvents.registry('gtceu:material', event => {
 
@@ -150,6 +162,9 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     const blast = global.blastProperty;
 
     //Fluid Pipes
+    //#endregion
+
+
 
     //#region material builders
     const compIngot = (name, elements, color, icon, blasting, flags) => {
@@ -289,10 +304,16 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     const compConductorPlasma = (name, elements, color, icon, blasting, cable, flags) => {
         event.create(name).ingot().plasma().components(elements).color(color).iconSet(icon).flags(flags).blastTemp(blasting[0], blasting[1], blasting[2], blasting[3]).cableProperties(cable[0], cable[1], cable[2], cable[3]);
     }
+    //#endregion
+
+
 
     //#region misc dusts
     compDust('andesite_alloy', ['1x andesite', '1x iron'], 0xa6a08f, [centrifuge]);
     compDust('asteroid_stone', [], 0x70276b, [])
+    //#endregion
+
+
 
     //#region superconductors
     conductorSuper('energized_steel', [], 0xbaa172, [], [V('lv'), 4, 0, true], [150, 130, 3, 12000]);
@@ -304,7 +325,10 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     conductorSuper('gaiaforged_naquadah', [], 0x421218, [7100, 'high', VA('zpm'), 2700], [V('zpm'), 64, 0, true], [1100, 380, 3, 32000]);
     conductorSuper('neptunium_molybdenum_selenide', [], 0x088a5c, [10000, 'higher', VA('uv'), 3000], [V('uv'), 96, 0, true], [2000, 550, 3, 48000]);
     // conductorSuper('', [], 0xccffff, [10799, 'highest', VA('uhv'), 3300], [V('uhv'), 128, 0, true], [3200, 660, 3, 96000]);
-
+    //#endregion
+    
+    
+    
     //#region botania
     compGem('mana_diamond', [], 0x47eaed, DIAMOND, [crystallizable])
     compGem('dragonstone', [], 0xed64d4, DIAMOND, [crystallizable])
@@ -491,8 +515,11 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
             GTToolType.WIRE_CUTTER_IV])
         .magnetic() 
         .build())
-        
+    //#endregion
+
+
+
     //#region ae2
     compIngotLiquidSeccolor('futura_alloy', ['4x stainless_steel', '1x mystery'], 0xebb7ea, 0x000000, SHINY, [1700, 'low', 400, 1200], [frame, plates, rod, dense_plate, mortar_grind, block])
-   
+    //#endregion
 });

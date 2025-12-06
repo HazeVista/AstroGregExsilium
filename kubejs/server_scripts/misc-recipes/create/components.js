@@ -76,7 +76,7 @@ ServerEvents.recipes(event => {
         'AAA'
     ], {
         A: 'gtceu:copper_plate',
-        B: '#forge:glass/silica'
+        B: 'gtceu:tempered_glass'
     })
 
     event.shaped('2x create:white_sail', [
