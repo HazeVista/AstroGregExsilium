@@ -12,7 +12,7 @@ StartupEvents.registry('item', event => {
         {tier:"UHV",color:"§4"}]
         .forEach(circuit=>{
 
-        event.create(`${circuit.tier.toLowerCase()}_modular_circuit`)
+        event.create(`astrogreg:${circuit.tier.toLowerCase()}_modular_circuit`)
                 .texture(`kubejs:item/unicircs/${circuit.tier.toLowerCase()}unicirc`)
                 .displayName(`${circuit.color}${circuit.tier}§r Modular Circuit`)
                 .tooltip('§o§7Use these with AE2 autocrafting!');

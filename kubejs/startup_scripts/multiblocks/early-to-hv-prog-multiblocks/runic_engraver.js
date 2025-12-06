@@ -3,7 +3,7 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
         .category('simple')
         .setEUIO('in')
         .setMaxIOSize(9, 1, 3, 0)
-        .setProgressBar(GuiTextures.PROGRESS_BAR_REPLICATOR, FillDirection.LEFT_TO_RIGHT)
+        .setProgressBar(AstroGUITextures.PROGRESS_BAR_RUNE, FillDirection.LEFT_TO_RIGHT)
         .setSound(GTSoundEntries.ELECTROLYZER)
 })
 

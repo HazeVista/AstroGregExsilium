@@ -15,7 +15,7 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
 		.setEUIO('in')
 		.setMaxIOSize(2, 1, 1, 1)
         .setSlotOverlay(false, false, GuiTextures.BREWER_OVERLAY)
-		.setProgressBar(GuiTextures.PROGRESS_BAR_REPLICATOR, FillDirection.LEFT_TO_RIGHT)
+		.setProgressBar(AstroGUITextures.PROGRESS_BAR_MANA_INFUSION, FillDirection.LEFT_TO_RIGHT)
 		.setSound(GTSoundEntries.REPLICATOR)
 
     event.create('botanic_purification')
@@ -23,6 +23,6 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
 		.setEUIO('in')
 		.setMaxIOSize(2, 1, 1, 1)
         .setSlotOverlay(false, false, GuiTextures.BREWER_OVERLAY)
-		.setProgressBar(GuiTextures.PROGRESS_BAR_REPLICATOR, FillDirection.LEFT_TO_RIGHT)
+		.setProgressBar(AstroGUITextures.PROGRESS_BAR_MANA_INFUSION, FillDirection.LEFT_TO_RIGHT)
 		.setSound(GTSoundEntries.REPLICATOR)
 });

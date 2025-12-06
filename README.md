@@ -1,8 +1,7 @@
-<!-- <p align="center"><img src= alt="Logo"></p> -->
+<p align="center"><img src=https://github.com/HazeVista/AstroGregExsilium/blob/main/kubejs/assets/astrogreg/logo.png alt="logo"></p>
+
 ## The Revolutionary SpaceBlock Mod Pack
-
-
-### About Our Project:
+### What Our Project Has To Offer:
 AstroGreg is a unique 1.20 “SpaceBlock” modpack built around space travel and GTCEu progression.
 
 
@@ -15,7 +14,7 @@ Progression primarily incorporates overhauled Ad Astra space travel and the clas
 
 
 
-Its an easier difficulty GregTech pack, but it's an intermediate modpack overall.
+AstroGreg:Exsilium is a lower difficulty GT pack, but it's still an intermediate modpack overall.
 
 
 
@@ -25,5 +24,5 @@ Owned by Haze Vista. Special thanks to DriftBlueStone, DigestLotion, Wabwit, BGa
 
 
 
-For sneak peeks, questions, or just to chat about the project and its development, check out our [Official Discord Server](https://discord.gg/dUaZeV6Drp)
+For sneak peeks, questions, or just to chat about the project and its development, check out our [Official Discord](https://discord.gg/dUaZeV6Drp)
 

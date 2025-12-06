@@ -80,5 +80,14 @@ GTCEuStartupEvents.registry('gtceu:tag_prefix', e => {
     createStoneTypeOre('ad_astra:mars_stone')
     createStoneTypeOre('ad_astra:venus_stone')
     createStoneTypeOre('ad_astra:mercury_stone')
+    createStoneTypeOre('ad_extendra:pluto_stone')
+    createStoneTypeOre('ad_extendra:ceres_stone')
+    createStoneTypeOre('ad_extendra:jupiter_stone')
+    createStoneTypeOre('ad_extendra:saturn_stone')
+    createStoneTypeOre('ad_extendra:neptune_stone')
+    createStoneTypeOre('ad_extendra:uranus_stone')
+    createStoneTypeOre('gtceu:asteroid_stone')
+    createStoneTypeOre('gtceu:hard_asteroid_stone')
+
 
 })
