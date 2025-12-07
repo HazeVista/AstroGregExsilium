@@ -50,8 +50,6 @@ event.removeAllTagsFrom('createaddition:diamond_grit')
 event.removeAllTagsFrom('createaddition:diamond_grit_sandpaper')
 event.removeAllTagsFrom('farmersdelight:wheat_dough')
 event.removeAllTagsFrom('powah:uraninite_raw')
-// event.removeAllTagsFrom('gtceu:raw_desh')
-// event.removeAllTagsFrom('gtceu:desh_ingot')
 event.removeAllTagsFrom('farmersdelight:golden_knife')
 event.removeAllTagsFrom('farmersdelight:netherite_knife')
 event.removeAllTagsFrom('farmersdelight:diamond_knife')
@@ -95,6 +93,8 @@ event.removeAllTagsFrom('gtceu:wood_plate')
 event.removeAllTagsFrom('gtceu:treated_wood_plate')
 event.removeAllTagsFrom('ae2:certus_quartz_crystal')
 event.removeAllTagsFrom('botania:bifrost_perm')
+event.removeAllTagsFrom('create:powdered_obsidian')
+event.removeAllTagsFrom('create:sturdy_sheet')
 });
 
 
@@ -121,6 +121,9 @@ event.removeAllTagsFrom('ad_astra:fuel')
 event.remove('create:bottomless/allow', 'minecraft:lava')
 event.remove('create:bottomless/allow', 'minecraft:water')
 });
+
+
+
 //#region add tags
 
 

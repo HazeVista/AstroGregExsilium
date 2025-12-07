@@ -73,4 +73,54 @@ ServerEvents.recipes(event => {
         D: 'gtceu:red_alloy_single_cable'
     })
     
+    event.shaped('ad_astra:launch_pad', [
+        'AAA',
+        'ABA',
+        'AAA'
+    ], {
+        A: 'gtceu:dense_steel_plate',
+        B: '#forge:tools/hammers'
+    })
+
+    event.shaped('ad_astra:oxygen_gear', [
+        ' A ',
+        'BCD',
+        'ECE'
+    ], {
+        A: 'gtceu:iron_rod',
+        B: '#forge:tools/hammers',
+        C: 'gtceu:iron_plate',
+        D: '#forge:tools/wrenches',
+        E: 'ad_astra:gas_tank'
+    })
+
+    event.shaped('ad_astra:gas_tank', [
+        'ABA',
+        'ACA',
+        'AAA'
+    ], {
+        A: 'gtceu:iron_plate',
+        B: 'gtceu:iron_ring',
+        C: '#forge:tools/hammers'
+    })
+    
+    event.shaped('ad_astra:large_gas_tank', [
+        'ABA',
+        'ACA',
+        'AAA'
+    ], {
+        A: 'gtceu:steel_plate',
+        B: 'gtceu:steel_ring',
+        C: '#forge:tools/hammers'
+    })
+
+    event.shaped('4x ad_astra:vent', [
+        'ABA',
+        'ACA',
+        'ABA'
+    ], {
+        A: 'gtceu:iron_rod',
+        B: 'gtceu:steel_plate',
+        C: '#forge:tools/hammers'
+    })
 })

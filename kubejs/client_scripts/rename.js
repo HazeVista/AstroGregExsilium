@@ -37,4 +37,32 @@ event.renameItem('botania:terrasteel_block', '§2Terrasteel§f Block')
 event.renameItem('botania:gaia_pylon', '§dElven Pylon§r')
 event.renameItem('botania:mana_pylon', '§bMana Pylon§r')
 event.renameItem('botania:mana_pylon', '§2Natura Pylon§r')
+//#endregion
+
+//#region gregtech
+event.renameItem('gtmutils:neutronium_credit', '§cAstroCredit')
+event.renameItem('gtceu:lv_power_unit', '§7Low Power Unit')
+event.renameItem('gtceu:mv_power_unit', '§bMedium Power Unit')
+event.renameItem('gtceu:hv_power_unit', '§6High Power Unit')
+event.renameItem('gtceu:ev_power_unit', '§5Extreme Power Unit')
+event.renameItem('gtceu:iv_power_unit', '§9Insane Power Unit')
+event.renameItem('gtmutils:luv_power_unit', '§dLudicrous Power Unit')
+event.renameItem('gtmutils:zpm_power_unit', '§cZero Point Power Unit')
+event.renameItem('gtceu:iv_parallel_hatch', '§9Basic Parallel Control Hatch')
+event.renameItem('gtceu:luv_parallel_hatch', '§dAdvanced Parallel Control Hatch')
+event.renameItem('gtceu:zpm_parallel_hatch', '§cElite Parallel Control Hatch')
+event.renameItem('gtceu:uv_parallel_hatch', '§3Ultimate Parallel Control Hatch')
+//#endregion
+
+//#region ad astra
+event.renameItem('ad_astra:wheel', 'Rubber Tire')
+event.renameItem('ad_astra:launch_pad', 'Rocket Launch Platform')
+event.renameItem('ad_astra:tier_1_rocket', '§bASTRO-Falcon')
+event.renameItem('ad_astra:tier_2_rocket', '§6ASTRO-Falcon II')
+event.renameItem('ad_astra:tier_3_rocket', '§5ASTRO-Pegasus')
+event.renameItem('ad_astra:tier_4_rocket', '§9ASTRO-Pegasus II')
+event.renameItem('ad_astra:tier_5_rocket', '§dASTRO-Thunderbird')
+event.renameItem('ad_extendra:tier_6_rocket', '§cASTRO-Thunderbird II')
+event.renameItem('ad_extendra:tier_7_rocket', '§3ASTRO-Thunderbird III')
+event.renameItem('ad_extendra:tier_8_rocket', '§4Final Voyage')
 })
