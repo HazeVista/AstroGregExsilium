@@ -35,7 +35,7 @@ ServerEvents.recipes(event => {
     );
 
     event.recipes.farmersdelight.cooking(
-      ['gtceu:desh_dust', 'gtceu:iron_dust', 'gtceu:red_alloy_dust'],
+      ['astrogreg:desh_dust', 'gtceu:iron_dust', 'gtceu:red_alloy_dust'],
       '3x powah:steel_energized',
       0,
       200,
@@ -77,15 +77,6 @@ ServerEvents.recipes(event => {
       A: 'farmersdelight:tree_bark'
     });
 
-    // event.shaped('gtceu:desh_plate', [
-    //   'A',
-    //   'B',
-    //   'B'
-    // ], {
-    //   A: '#forge:tools/hammers',
-    //   B: 'ad_astra:desh_ingot'
-    // })
-
     event.shaped('3x dustrial_decor:gold_chain', [
       ' A ',
       'BA ',
@@ -102,7 +93,7 @@ ServerEvents.recipes(event => {
         .EUt(10)
 
     event.recipes.gtceu.mixer('mixing_energized_steel_dust')
-        .itemInputs('gtceu:desh_dust', 'gtceu:iron_dust', 'gtceu:red_alloy_dust')
+        .itemInputs('astrogreg:desh_dust', 'gtceu:iron_dust', 'gtceu:red_alloy_dust')
         .itemOutputs('gtceu:energized_steel_dust')
         .duration(200)
         .EUt(7)

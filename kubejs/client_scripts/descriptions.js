@@ -41,5 +41,9 @@ ItemEvents.tooltip(event => {
     event.addAdvanced('gtceu:aether_engine', (item, advanced, text) => {
         text.add(3, Text.of('Converts §3Æther§r into EU'))
     })
+
+    event.addAdvanced('gtmutils:neutronium_credit', (item, advanced, text) => {
+        text.add(Text.of('Coin made out of a confidential, indestructible substance, with a composition only known by the mysterious §4ASTRO Foundation§r'))    
+    })
     
 })

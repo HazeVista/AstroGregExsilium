@@ -38,12 +38,12 @@ ServerEvents.recipes(event => {
     event.recipes.create.mixing('1x gtceu:red_alloy_ingot', ['4x minecraft:redstone', 'gtceu:copper_dust']).heatRequirement('lowheated')
 
     event.recipes.create.mixing('3x powah:steel_energized', ['gtceu:red_alloy_dust', 'ad_astra:desh_ingot', 'minecraft:iron_ingot']).heatRequirement('lowheated')
-    event.recipes.create.mixing('3x powah:steel_energized', ['gtceu:red_alloy_dust', 'gtceu:desh_dust', 'minecraft:iron_ingot']).heatRequirement('lowheated')
-    event.recipes.create.mixing('3x powah:steel_energized', ['gtceu:red_alloy_dust', 'gtceu:desh_dust', 'gtceu:iron_dust']).heatRequirement('lowheated')
+    event.recipes.create.mixing('3x powah:steel_energized', ['gtceu:red_alloy_dust', 'astrogreg:desh_dust', 'minecraft:iron_ingot']).heatRequirement('lowheated')
+    event.recipes.create.mixing('3x powah:steel_energized', ['gtceu:red_alloy_dust', 'astrogreg:desh_dust', 'gtceu:iron_dust']).heatRequirement('lowheated')
     event.recipes.create.mixing('3x powah:steel_energized', ['gtceu:red_alloy_dust', 'ad_astra:desh_ingot', 'gtceu:iron_dust']).heatRequirement('lowheated')
     event.recipes.create.mixing('3x powah:steel_energized', ['gtceu:red_alloy_ingot', 'ad_astra:desh_ingot', 'minecraft:iron_ingot']).heatRequirement('lowheated')
-    event.recipes.create.mixing('3x powah:steel_energized', ['gtceu:red_alloy_ingot', 'gtceu:desh_dust', 'minecraft:iron_ingot']).heatRequirement('lowheated')
-    event.recipes.create.mixing('3x powah:steel_energized', ['gtceu:red_alloy_ingot', 'gtceu:desh_dust', 'gtceu:iron_dust']).heatRequirement('lowheated')
+    event.recipes.create.mixing('3x powah:steel_energized', ['gtceu:red_alloy_ingot', 'astrogreg:desh_dust', 'minecraft:iron_ingot']).heatRequirement('lowheated')
+    event.recipes.create.mixing('3x powah:steel_energized', ['gtceu:red_alloy_ingot', 'astrogreg:desh_dust', 'gtceu:iron_dust']).heatRequirement('lowheated')
     event.recipes.create.mixing('3x powah:steel_energized', ['gtceu:red_alloy_ingot', 'ad_astra:desh_ingot', 'gtceu:iron_dust']).heatRequirement('lowheated')
 
     event.recipes.create.mixing('2x gtceu:cupronickel_ingot', ['minecraft:copper_ingot', 'gtceu:nickel_ingot']).heatRequirement('lowheated')
@@ -71,6 +71,10 @@ ServerEvents.recipes(event => {
     event.recipes.create.pressing('gtceu:iron_ring', 'gtceu:iron_rod')
     event.recipes.create.pressing('2x gtceu:electrum_foil', 'gtceu:electrum_plate')
     event.recipes.create.pressing('2x gtceu:red_alloy_foil', 'gtceu:red_alloy_plate')
+
+    event.recipes.create.pressing(
+        ['gtceu:obsidian_plate'],
+        ['gtceu:obsidian_dust'])
 
     event.recipes.create.pressing(
         ['gtceu:wood_plate'],

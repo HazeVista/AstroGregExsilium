@@ -10,16 +10,16 @@ ServerEvents.recipes(event => {
     const toRemoveOutput = ['ae2:charger', 'ae2:drive', 'ae2:chest', 'createdieselgenerators:pumpjack_hole', 'expatternprovider:ex_inscriber', 'ad:astra_oxygen', 'waystones:warp_dust',
         'expatternprovider:ex_charger', 'expatternprovider:crystal_fixer', 'expatternprovider:caner', 'exmachinis:item_buffer', 'ae2:crystal_resonance_generator', 'laserio:laser_node',
         'ae2:vibration_chamber', 'expatternprovider:circuit_cutter', 'minecraft:mycelium', 'create:brass_block', 'create:zinc_block', 'createaddition:straw', 'ad_astra:hydrogen',
-        'gtceu:me_pattern_buffer_proxy', 'gtceu:me_pattern_buffer', 'create:andesite_alloy', 'ad_astra:desh_plate', 'create:controller_rail', 'create:dough',
+        'gtceu:me_pattern_buffer_proxy', 'gtceu:me_pattern_buffer', 'create:andesite_alloy', 'ad_astra:desh_plate', 'create:controller_rail', 'create:dough', 'ad_astra:rocket_fin',
         'functionalstorage:collector_upgrade', 'functionalstorage:pusher_upgrade', 'functionalstorage:puller_upgrade', 'create:shaft', 'create:blaze_cake_base', 'create:wheat_flour',
-        'createaddition:alternator', 'createaddition:gold_rod', 'effortlessbuilding:golden_randomizer_bag',
+        'createaddition:alternator', 'createaddition:gold_rod', 'effortlessbuilding:golden_randomizer_bag', 'ad_astra:wheel', 'ad_astra:steel_engine', 'ad_astra:launch_pad',
         'createaddition:brass_rod', 'createaddition:copper_rod', 'createaddition:electrum_rod', 'createaddition:electric_motor', 'createaddition:capacitor', 'createaddition:tesla_coil',
         'createaddition:portable_energy_interface', 'createaddition:connector', 'createaddition:large_connector', 'createaddition:festive_spool', 'createaddition:diamond_grit_sandpaper',
         'effortlessbuilding:randomizer_bag', 'create:empty_blaze_burner', 'effortlessbuilding:diamond_randomizer_bag', 'laserio:laser_connector', 'laserio:filter_counting',
         'buildinggadgets2:gadget_building', 'buildinggadgets2:gadget_destruction', 'buildinggadgets2:gadget_cut_paste', 'buildinggadgets2:gadget_copy_paste', 'buildinggadgets2:gadget_exchanging',
         'farmersdelight:pie_crust', 'create:water_wheel', 'create:large_water_wheel', 'create:brass_funnel', 'create:andesite_funnel', 'create:brass_tunnel', 'expatternprovider:assembler_matrix_frame',
         'create:andesite_tunnel', 'botania:glass_pickaxe', 'create:brass_nugget', 'minecraft:compass', 'createaddition:biomass', 'expatternprovider:assembler_matrix_wall', 'ad_extendra:b_sand',
-        'create:cogwheel', 'create:large_cogwheel', 'fluxnetworks:flux_dust', 'createaddition:biomass_pellet', 'create:zinc_nugget', 'ad_astra:photovoltaic_etrium_cell',
+        'create:cogwheel', 'create:large_cogwheel', 'fluxnetworks:flux_dust', 'createaddition:biomass_pellet', 'create:zinc_nugget', 'ad_astra:photovoltaic_etrium_cell', 'ad_astra:engine_frame',
         'ad_astra:photovoltaic_vesnium_cell', 'ad_astra:etrionic_capacitor', 'createaddition:electrum_ingot', 'ad_astra:iron_rod', 'ad_astra:steel_rod', 'ae2:sky_stone_tank',
         'farmersdelight:netherite_knife', 'create:netherite_backtank', 'create:netherite_diving_helmet', 'create:netherite_diving_boots', 'minecraft:netherite_upgrade_smithing_template',
         'ad_astra:fan', 'gtceu:cleaning_maintenance_hatch', 'ad_astra:steel_ingot', 'ad_astra:ice_shard', 'ad_astra:reinforced_door', 'ad_astra:ice_charge', 'gtceu:gravitation_engine_unit',
@@ -27,11 +27,11 @@ ServerEvents.recipes(event => {
         'botania:elf_glass_pane', 'botania:auto_crafting_halo', 'botania:thunder_sword', 'botania:gaia_ingot', 'botania:bifrost_perm', 'botania:manasteel_ingot', 'botania:terrasteel_ingot',
         'botania:elementium_ingot', 'botania:elementium_nugget', 'botania:manasteel_nugget', 'botania:terrasteel_nugget', 'botania:starfield', 'dustrial_decor:cardboard_boots',
         'botania:elementium_block', 'botania:manasteel_block', 'botania:terrasteel_block', 'botania:elementium_shears', 'dustrial_decor:cardboard_leggings', 'botania:terrasteel_helmet',
-        'botania:open_bucket', 'botania:elementium_pickaxe', 'botania:elementium_shovel', 'botania:elementium_hoe', 'botania:elementium_axe', 'botania:gaia_spreader',
+        'botania:open_bucket', 'botania:elementium_pickaxe', 'botania:elementium_shovel', 'botania:elementium_hoe', 'botania:elementium_axe', 'botania:gaia_spreader', 'ad_astra:steel_tank',
         'botania:elementium_sword', 'botania:ender_dagger', 'botania:manasteel_pick', 'botania:manasteel_shovel', 'botania:manasteel_hoe', 'botania:manasteel_axe', 'botania:manasteel_sword',
         'botania:crafting_halo', 'botania:laputa_shard', 'gtceu:ulv_solar_panel', 'dustrial_decor:cardboard_helmet', 'dustrial_decor:cardboard_chestplate', 'botania:terrasteel_chestplate',
         'botania:terrasteel_leggings', 'botania:terrasteel_boots', 'botania:terra_sword', 'botania:terra_axe', 'botania:terra_pick', 'botania:third_eye', 'botania:orechid_ignem',
-        'botania:floating/heisei_dream', 'botania:vinculotus', 'botania:floating_vinculotus', 'create:tree_fertilizer', 'botania:agricarnation', 'botania:agricarnation_chibi', 
+        'botania:floating/heisei_dream', 'botania:vinculotus', 'botania:floating_vinculotus', 'create:tree_fertilizer', 'botania:agricarnation', 'botania:agricarnation_chibi',
         'botania:floating_agricarnation', 'botania:floating_agricarnation_chibi', 'botania:hyacidus', 'botania:floating_hyacidus', 'botania:labellia', 'botania:floating_labellia',
         'botania:loonium', 'botania:floating_loonium', 'botania:spectranthemum', 'botania:floating_spectranthemum', 'botania:daffomill', 'botania:floating_daffomill', 'botania:narslimmus',
         'botania:floating_narslimmus', 'botania:medumone', 'botania:floating_medumone', 'botania:shulk_me_not', 'botania:floating_shulk_me_not', 'botania:rafflowsia', 'botania:floating_rafflowsia',
@@ -39,7 +39,7 @@ ServerEvents.recipes(event => {
         'botania:floating_rannuncarpus_chibi', 'botania:tangleberrie', 'botania:floating_tangleberrie', 'botania:vine_ball', 'botania:orechid', 'botania:endoflame', 'botania:hydroangeas',
         'create:builders_tea', 'create:chocolate_glazed_berries', 'create:bar_of_chocolate', 'ae2:not_so_mysterious_cube', 'ae2:quantum_link', 'ae2:quantum_ring', 'minecraft:recovery_compass',
         'botania:cell_block', 'expandedae:dual_cell_housing', 'expandedae:mega_dual_cell_housing', 'create:copper_diving_helmet', 'create:copper_diving_boots', 'gtceu:tungsten_grinding_head', 
-        'gtceu:diamond_grinding_head'
+        'gtceu:diamond_grinding_head', 'ad_astra:oxygen_gear', 'ad_astra:large_gas_tank', 'ad_astra:gas_tank', 'ad_astra:vent'
     ]
 
     //#region remove recipe id
@@ -50,7 +50,7 @@ ServerEvents.recipes(event => {
         'ae2:transform/damaged_budding_quartz', 'ae2:transform/chipped_budding_quartz', 'ae2:network/blocks/spatial_io_port', 'ae2:network/blocks/io_port', 'laserio:filter_basic', 'farmersdelight:cooking_pot',
         'ae2:transform/flawed_budding_quartz', 'ae2:transform/fluix_crystals', 'ae2:transform/fluix_crystal', 'ae2:network/blocks/interfaces_interface', 'ae2:network/blocks/io_condenser',
         'ae2:network/crafting/molecular_assembler', 'ae2:network/blocks/pattern_providers_interface', 'ae2:network/crafting/cpu_crafting_unit', 'ae2:network/blocks/energy_energy_acceptor',
-        'laserio:filter_mod', 'laserio:filter_count', 'laserio:filter_tag', 'laserio:filter_mod',
+        'laserio:filter_mod', 'laserio:filter_count', 'laserio:filter_tag', 'laserio:filter_mod', 'ad_astra:rocket_nose_cone',
         'botania:mana_infusion/netherrack_dupe', 'createaddition:mixing/netherrack', 'botania:mana_infusion/soul_sand_dupe', 'botania:mana_infusion/glowstone_dupe', 'botania:mana_infusion/redstone_dupe',
         'botania:mana_infusion/quartz_dupe', 'botania:mana_infusion/coal_dupe', 'botania:mana_infusion/gravel_dupe', 'minecraft:netherite_drill_smithing', 'create:crafting/kinetics/fluid_tank',
         'create:crafting/kinetics/white_sail', 'create:crafting/kinetics/fluid_valve', 'farmersdelight:rope', 'gtceu:autoclave/silicon_dioxide_to_quartzite_gem', 'gtceu:assembler/end_crystal',
@@ -179,5 +179,6 @@ ServerEvents.recipes(event => {
     event.remove({id: /gtceu:cutter\/.*_slab/})
     event.remove({id: /gtceu:shaped\/.*_slab_saw/})
     event.remove({id: /ae2:network\/cells\/.*_storage_cell_.*/})
+    event.remove({id: /ad_astra:radium_.*/})
 });
 
