@@ -124,7 +124,6 @@ const VHA = (voltage) => {
 
 
 GTCEuStartupEvents.registry('gtceu:material', event => {
-
     //#region periodic materials
     const element = global.periodicTableElement;
     // Ingots
@@ -151,22 +150,25 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     // Gasses
     element('oganesson', 'gas');
 
-    //Plasmas
-
     // Material modification
     const matmod = (mat, flag) => {
         GTMaterials.get(mat).addFlags(flag);
     }
 
+    matmod('titanium', [dense_plate]);
+    matmod('neutronium', [dense_plate]);
+
      // Blast Properties of periodic table metals
     const blast = global.blastProperty;
-
-    //Fluid Pipes
     //#endregion
 
 
 
     //#region material builders
+    
+    event.create('mystery')
+        .element(GTElements.get('mystery'))
+        
     const compIngot = (name, elements, color, icon, blasting, flags) => {
         if (blasting.includes(blasting[0])){
             event.create(name).ingot().components(elements).color(color).iconSet(icon).flags(flags).blastTemp(blasting[0], blasting[1], blasting[2], blasting[3]);
@@ -190,10 +192,6 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
             event.create(name).ingot().fluid().components(elements).color(color).iconSet(icon).flags(flags);
         }
     }
-
-    // const compBotIngot = (name, elements, color, icon, tool, toolflags, blasting, pipe, flags) => {
-    //     event.create(name).ingot().fluid().components(elements).color(color).iconSet(icon).flags(flags).toolStats(new ToolProperty(tool[0], tool[1], tool[2], tool[3], [toolflags])).blastTemp(blasting[0], blasting[1], blasting[2], blasting[3]).fluidPipeProperties(pipe[0], pipe[1], pipe[2], pipe[3], pipe[4], pipe[5]);
-    // }
 
     const compIngotLiquidSeccolor = (name, elements, color1, color2, icon, blasting, flags) => {
         if (blasting.includes(blasting[0])){
@@ -308,7 +306,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
 
 
 
-    //#region misc dusts
+    //#region 
     compDust('andesite_alloy', ['1x andesite', '1x iron'], 0xa6a08f, [centrifuge]);
     compDust('asteroid_stone', [], 0x70276b, [])
     //#endregion

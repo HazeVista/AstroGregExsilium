@@ -150,7 +150,7 @@ ServerEvents.recipes(event => {
         D: 'ae2:annihilation_core'
     })
 
-    event.shaped('ae2:wireless_receiver', [
+    event.shaped('2x ae2:wireless_receiver', [
         'A C',
         'AB ',
         'BAA'
@@ -249,6 +249,17 @@ ServerEvents.recipes(event => {
         E: 'ae2:quartz_glass'
     })
 
+    event.shaped('ae2:spatial_anchor', [
+        'CAC',
+        'ADA',
+        'CBC'
+    ], {
+        A: 'ae2:spatial_pylon',
+        B: 'ae2:spatial_cell_component_128',
+        C: 'ae2:fluix_glass_cable',
+        D: 'gtceu:futura_alloy_frame'
+    })
+
     event.shaped('expatternprovider:wireless_tool' , [
         ' A ',
         'BCB',
@@ -265,6 +276,67 @@ ServerEvents.recipes(event => {
     ], {
         A: 'gtceu:certus_quartz_gem'
     })
+
+    event.shaped('ae2:charged_staff', [
+        '  A',
+        ' B ',
+        'B  '
+    ], {
+        A: 'ae2:charged_certus_quartz_crystal',
+        B: 'gtceu:futura_alloy_rod'
+    })
+
+    event.shaped('ae2:entropy_manipulator', [
+        ' CD',
+        ' AB',
+        'A  '
+    ], {
+        A: 'gtceu:futura_alloy_rod',
+        B: 'ae2:engineering_processor',
+        C: 'ae2:energy_cell',
+        D: 'ae2:fluix_crystal'
+    })
+
+    event.shaped('megacells:cell_dock', [
+        'CBC',
+        ' A '
+    ], {
+        A: 'ae2:fluix_glass_cable',
+        B: 'gtceu:copper_plate',
+        C: 'gtceu:futura_alloy_plate'
+    })
+
+    event.shaped('ae2:memory_card', [
+        'ABB',
+        'CCC'
+    ], {
+        A: '#gtceu:circuits/ulv',
+        B: 'gtceu:futura_alloy_plate',
+        C: 'gtceu:gold_bolt'
+    })
+
+    event.shaped('ae2:semi_dark_monitor', [
+        'AAA',
+        'ABA',
+        'AAA'
+    ], {
+        A: 'ae2:quartz_vibrant_glass',
+        B: '#simplylight:any_lamp_on'
+    })
+
+    event.shaped('ae2netanalyser:network_analyser', [
+        'AEA',
+        'BCB',
+        'DBD'
+    ], {
+        A: 'gtceu:fine_copper_wire',
+        B: 'gtceu:futura_alloy_plate',
+        C: '#gtceu:circuits/ulv',
+        D: 'gtceu:iron_screw',
+        E: '#gtceu:tools/screwdrivers'
+    })
+
+    event.shapeless('expatternprovider:oversize_interface', ['expatternprovider:ex_interface', 'ae2:logic_processor', 'ae2:logic_processor'])
     //#endregion
 
 
@@ -461,7 +533,7 @@ ServerEvents.recipes(event => {
     ], {
         A: 'gtceu:futura_alloy_frame',
         B: 'gtceu:certus_quartz_plate',
-        C: 'ae2:fluix_smart_cable'
+        C: '#ae2:smart_cable'
     })
     
     event.shaped('2x expatternprovider:assembler_matrix_frame', [
@@ -471,6 +543,43 @@ ServerEvents.recipes(event => {
     ], {
         A: 'gtceu:futura_alloy_frame',
         B: 'gtceu:futura_alloy_plate',
-        C: 'ae2:fluix_smart_cable'
-    })    
+        C: '#ae2:smart_cable'
+    })  
+    
+    event.shaped('2x expatternprovider:assembler_matrix_glass', [
+        'BCB',
+        'CAC',
+        'BCB'
+    ], {
+        A: 'gtceu:futura_alloy_frame',
+        B: 'gtceu:glass_plate',
+        C: '#ae2:smart_cable'
+    })
+    //#endregion
+
+    //#region upgrade cards
+    event.shaped('2x ae2:basic_card', [
+        'AAC',
+        'BAC',
+        'AA '
+    ], {
+        A: 'gtceu:iron_plate',
+        B: 'ae2:calculation_processor',
+        C: 'gtceu:gold_bolt'
+    })
+
+    event.shaped('2x ae2:advanced_card', [
+        'AAC',
+        'BAC',
+        'AA '
+    ], {
+        A: 'gtceu:iron_plate',
+        B: 'ae2:calculation_processor',
+        C: 'gtceu:diamond_bolt'
+    })
+
+    event.shapeless('ae2wtlib:magnet_card', ['ae2:advanced_card', 'gtceu:lv_item_magnet'])
+    event.shapeless('ae2:wireless_booster', ['ae2:advanced_card', 'gtceu:hv_emitter'])
+    //#endregion
+
 });

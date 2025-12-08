@@ -102,4 +102,6 @@ ServerEvents.recipes(event => {
         C:'#functionalstorage:drawer',
         D:'gtceu:quartzite_gem'
     }); 
+
+    event.shapeless('functionalstorage:iron_downgrade', ['gtceu:double_iron_plate', '#functionalstorage:drawer'])
 });

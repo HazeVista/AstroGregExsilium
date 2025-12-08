@@ -59,7 +59,7 @@ parts('assemble_basic_fin')
 
 parts('assemble_elite_fin')
     .itemInputs('2x gtceu:dense_naquadah_alloy_plate', 'gtceu:double_naquadah_plate')
-    .itemOutputs('ad_astra:advanced_rocket_fin')
+    .itemOutputs('ad_astra:elite_rocket_fin')
     .duration(200)
     .circuit(30)
     .EUt(30720)
@@ -75,7 +75,7 @@ parts('assemble_elite_fin')
 
 //#region nose cones
 parts('assemble_basic_nose')
-    .itemInputs('4x gtceu:double_steel_plate', 'gtceu:steel_frame', 'gtceu:mv_emitter')
+    .itemInputs('4x gtceu:double_steel_plate', 'gtceu:aluminium_frame', 'gtceu:mv_emitter')
     .itemOutputs('ad_astra:basic_rocket_nose_cone')
     .duration(300)
     .circuit(30)
@@ -91,7 +91,7 @@ parts('assemble_basic_nose')
 
 //#region misc
 parts('assemble_launch_pad')
-    .itemInputs('7x gtceu:dense_steel_plate')
+    .itemInputs('8x gtceu:dense_steel_plate')
     .itemOutputs('ad_astra:launch_pad')
     .duration(100)
     .circuit(30)

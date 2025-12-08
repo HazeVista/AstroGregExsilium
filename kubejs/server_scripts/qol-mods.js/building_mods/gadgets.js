@@ -55,4 +55,14 @@ event.shaped( 'buildinggadgets2:gadget_cut_paste', [
     D: 'gtceu:magnetic_iron_rod'
 })
 
-});
+event.shaped('buildinggadgets2:template_manager', [
+    'AAA',
+    'BCB',
+    'AAA'
+], {
+    A: 'gtceu:iron_plate',
+    B: 'minecraft:paper',
+    C: 'gtceu:fine_red_alloy_wire'
+})
+
+})

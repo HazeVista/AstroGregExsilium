@@ -95,6 +95,14 @@ event.removeAllTagsFrom('ae2:certus_quartz_crystal')
 event.removeAllTagsFrom('botania:bifrost_perm')
 event.removeAllTagsFrom('create:powdered_obsidian')
 event.removeAllTagsFrom('create:sturdy_sheet')
+event.removeAllTagsFrom('ad_extendra:uranium_plate')
+event.removeAllTagsFrom('ad_extendra:plutonium_ingot')
+event.removeAllTagsFrom('ad_extendra:neptunium_ingot')
+event.removeAllTagsFrom('ad_astra:wrench')
+event.removeAllTagsFrom('powah:wrench')
+event.removeAllTagsFrom('ad_extendra:neptunium_nugget')
+event.removeAllTagsFrom('ad_extendra:plutonium_block')
+event.removeAllTagsFrom('ad_extendra:neptunium_block')
 });
 
 
