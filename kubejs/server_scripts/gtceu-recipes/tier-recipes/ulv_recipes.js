@@ -18,6 +18,7 @@ ServerEvents.recipes(event => {
     event.campfireCooking('minecraft:glass', 'gtceu:glass_dust', 0, 160)
     event.campfireCooking('gtceu:wrought_iron_ingot', 'minecraft:iron_ingot', 0, 160)
     event.campfireCooking('gtceu:tempered_glass', 'minecraft:glass', 0, 600)
+    event.campfireCooking('minecraft:paper', 'create:pulp', 0, 200)
 
     event.smelting('gtceu:asteroid_stone', 'gtceu:cobbled_asteroid_stone')
     event.smelting('gtceu:smooth_asteroid_stone', 'gtceu:asteroid_stone')
@@ -69,11 +70,20 @@ ServerEvents.recipes(event => {
       C: 'gtceu:bronze_rod'
     });
 
-    // event.shaped('2x minecraft:paper', [
-    //   'AAA'
-    // ], {
-    //   A: 'farmersdelight:tree_bark'
-    // });
+    event.shaped('4x create:pulp', [
+    'AAA',
+    'ABA',
+    'AAA'
+    ], {
+    A: 'gtceu:paper_dust',
+    B: 'minecraft:water_bucket'
+    }).replaceIngredient('minecraft:water_bucket', 'minecraft:bucket')
+
+    //event.shaped('2x minecraft:paper', [
+    //  'AAA'
+    //], {
+    //  A: 'farmersdelight:tree_bark'
+    //});
 
     event.shaped('3x dustrial_decor:gold_chain', [
       ' A ',
@@ -103,6 +113,26 @@ ServerEvents.recipes(event => {
       A: 'minecraft:nether_quartz',
       B: '#forge:tools/mortars'
     })
+
+    event.shaped('gtceu:paper_dust', [
+      'A',
+      'B'
+    ], {
+      A: '#create:pulpifiable',
+      B: '#forge:tools/mortars'
+    })
+
+    event.recipes.gtceu.macerator('macerate_paper_dust')
+      .itemInputs('#create:pulpifiable')
+      .itemOutputs('gtceu:paper_dust')
+      .duration(98)
+      .EUt(2)
+
+    event.recipes.gtceu.compressor('compress_pulp')
+      .itemInputs('create:pulp')
+      .itemOutputs('minecraft:paper')
+      .duration(80)
+      .EUt(4)
     //#endregion
 
 

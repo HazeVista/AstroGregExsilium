@@ -65,6 +65,7 @@ ServerEvents.recipes(event => {
     event.recipes.create.mixing('2x gtceu:coke_oven_brick', ['#forge:sand', 'minecraft:clay_ball']).heatRequirement('lowheated')
 
     event.recipes.create.mixing('minecraft:clay', ['#forge:sand', Fluid.of('minecraft:water', 125)])
+    event.recipes.create.mixing('create:pulp', ['gtceu:paper_dust', Fluid.of('minecraft:water', 125)])
     //#endregion
 
     //#region create filling

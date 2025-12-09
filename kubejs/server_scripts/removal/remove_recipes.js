@@ -41,7 +41,7 @@ ServerEvents.recipes(event => {
         'botania:cell_block', 'expandedae:dual_cell_housing', 'expandedae:mega_dual_cell_housing', 'create:copper_diving_helmet', 'create:copper_diving_boots', 'gtceu:tungsten_grinding_head', 
         'gtceu:diamond_grinding_head', 'ad_astra:oxygen_gear', 'ad_astra:large_gas_tank', 'ad_astra:gas_tank', 'ad_astra:vent', 'ad_astra:wrench', 'expatternprovider:assembler_matrix_glass',
         'megacells:sky_steel_ingot', 'ae2:charged_staff', 'megacells:cell_dock', 'ae2:entropy_manipulator', 'functionalstorage:iron_downgrade', 'ae2wtlib:magnet_card', 'ae2:radio',
-        'ae2netanalyser:network_analyser', 'ae2:basic_card', 'ae2:advanced_card', 'functionalstorage:void_upgrade', 'ad_astra:ti_69', 'ad_astra:cheese_block', 'gtceu:dough', 
+        'ae2netanalyser:network_analyser', 'ae2:basic_card', 'ae2:advanced_card', 'functionalstorage:void_upgrade', 'ad_astra:ti_69', 'ad_astra:cheese_block', 'gtceu:dough', 'create:pulp', 
 
     ]
 
@@ -108,7 +108,7 @@ ServerEvents.recipes(event => {
         'minecraft:diamond_helmet', 'minecraft:diamond_chestplate', 'minecraft:diamond_leggings', 'minecraft:diamond_boots', 'minecraft:golden_boots', 'minecraft:golden_leggings', 'minecraft:golden_helmet', 
         'minecraft:golden_chestplate', 'botania:manasteel_boots', 'botania:manasteel_leggings', 'botania:manasteel_chestplate', 'botania:manasteel_helmet', 'botania:elementium_boots', 'botania:elementium_leggings',
         'botania:elementium_chestplate', 'botania:elementium_helmet', 'ae2:network/cells/view_cell', 'ae2:tools/network_memory_card', 'ae2:decorative/quartz_fixture', 'ae2:network/wireless_booster', 
-        'ae2:network/parts/panels_semi_dark_monitor', 'buildinggadgets2:template_manager', 'gtceu:macerator/macerate_hay_block', 
+        'ae2:network/parts/panels_semi_dark_monitor', 'buildinggadgets2:template_manager', 'gtceu:macerator/macerate_hay_block', 'gtceu:macerator/macerate_sugar_cane',
     ]
 
     //#region remove type
