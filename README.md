@@ -20,7 +20,7 @@ AstroGreg:Exsilium is a lower difficulty GT pack, but it's still an intermediate
 
 ### Credits:
 Owned by Haze Vista. Special thanks to DriftBlueStone, DigestLotion, Wabwit, BGame, and Davening for developing the project with me.
-"Borrowed" a little [TerraFirmaGreg](https://github.com/TerraFirmaGreg-Team/Core-Modern/), [Cosmic Frontiers](https://github.com/Frontiers-PackForge/CosmicCore/), and [Star Technology](https://github.com/trulyno/star-technology) code on a few files; also credited on the files themselves.
+"Borrowed" a little [TerraFirmaGreg](https://github.com/TerraFirmaGreg-Team/Core-Modern/), [Cosmic Frontiers](https://github.com/Frontiers-PackForge/CosmicCore/), and [Star Technology](https://github.com/StarT-Dev-Team/Star-Technology) code on a few files; also credited on the files themselves.
 
 
 

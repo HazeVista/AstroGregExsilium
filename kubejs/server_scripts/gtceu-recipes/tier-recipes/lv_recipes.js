@@ -27,6 +27,11 @@ ServerEvents.recipes(event => {
         .itemOutputs('minecraft:brick')
         .duration(200)
         .EUt(2)
+
+    event.recipes.gtceu.compressor('compress_cardboard')
+        .itemInputs('4x minecraft:paper')
+        .itemOutputs('create:cardboard')
+        .duration()
     //#endregion
 
 

@@ -1,6 +1,4 @@
 ServerEvents.recipes(event => {
-    //need to add ways to get lava. bucket + stone in farmers, extractor stone for steam age, create basin with stone too
-
     //#region misc
     event.shaped('gtceu:rubber_plate', [
       'A',
@@ -71,11 +69,11 @@ ServerEvents.recipes(event => {
       C: 'gtceu:bronze_rod'
     });
 
-    event.shaped('2x minecraft:paper', [
-      'AAA'
-    ], {
-      A: 'farmersdelight:tree_bark'
-    });
+    // event.shaped('2x minecraft:paper', [
+    //   'AAA'
+    // ], {
+    //   A: 'farmersdelight:tree_bark'
+    // });
 
     event.shaped('3x dustrial_decor:gold_chain', [
       ' A ',

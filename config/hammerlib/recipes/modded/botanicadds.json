@@ -1,12 +1,6 @@
 {
     "version": 2,
     "active": {
-        "botania:runic_altar": {
-            "botanicadds:rune_tp": false,
-            "botanicadds:rune_energy": false,
-            "botanicadds:mana_tesseract": false,
-            "botanicadds:tesseract_attuner": false
-        },
         "botania:petal_apothecary": {
             "botanicadds:zeitheron_head": false,
             "botanicadds:flowers/necroidus": false,
@@ -17,10 +11,11 @@
             "botanicadds:flowers/apicaria": false,
             "botanicadds:flowers/energizera": false
         },
-        "botanicadds:gaia_plate": {
-            "botanicadds:terrasteel": false,
-            "botanicadds:gaiasteel_ingot": false,
-            "botanicadds:overgrowth_seed": false
+        "botania:runic_altar": {
+            "botanicadds:rune_tp": false,
+            "botanicadds:rune_energy": false,
+            "botanicadds:mana_tesseract": false,
+            "botanicadds:tesseract_attuner": false
         },
         "botania:elven_trade": {
             "botanicadds:elven_lapis": false,
@@ -28,20 +23,21 @@
             "botanicadds:elvenwood_log": false,
             "botanicadds:dreamrock": false
         },
+        "botanicadds:gaia_plate": {
+            "botanicadds:terrasteel": false,
+            "botanicadds:gaiasteel_ingot": false,
+            "botanicadds:overgrowth_seed": false
+        },
+        "botania:pure_daisy": {"botanicadds:dreamwood_from_elvenwood": false},
         "botania:mana_infusion": {
             "botanicadds:mana_lapis": false,
             "botanicadds:mana_lapis_block": false,
             "botanicadds:gaia_shard": false
         },
-        "botania:pure_daisy": {"botanicadds:dreamwood_from_elvenwood": false},
         "minecraft:crafting": {
             "botanicadds:terra_catalyst": false,
-            "botanicadds:mana_lapis_block_1": false,
-            "botanicadds:elven_lapis_block_1": false,
             "botanicadds:gaiasteel_block": true,
             "botanicadds:gaiasteel_ingot_from_nuggets": true,
-            "botanicadds:mana_lapis_1": false,
-            "botanicadds:elven_lapis_1": false,
             "botanicadds:gaiasteel_ingots_from_block": true,
             "botanicadds:gaiasteel_nugget": true,
             "botanicadds:gaia_plate": false,
@@ -64,8 +60,17 @@
             "botanicadds:flowers/floating/necroidus": false,
             "botanicadds:flowers/floating/rainute": true,
             "botanicadds:flowers/floating/tempestea": true,
-            "botanicadds:flowers/floating/vibrantia": false
+            "botanicadds:flowers/floating/vibrantia": false,
+            "botanicadds:mana_lapis_block": true,
+            "botanicadds:elven_lapis_block": true,
+            "botanicadds:mana_lapis": true,
+            "botanicadds:elven_lapis": true
         }
     },
-    "unregistered": {}
+    "unregistered": {"minecraft:crafting": {
+        "botanicadds:mana_lapis_block_1": false,
+        "botanicadds:elven_lapis_block_1": false,
+        "botanicadds:mana_lapis_1": false,
+        "botanicadds:elven_lapis_1": false
+    }}
 }

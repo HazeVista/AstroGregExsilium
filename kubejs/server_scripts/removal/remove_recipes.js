@@ -84,7 +84,7 @@ ServerEvents.recipes(event => {
         'create:crafting/kinetics/mechanical_mixer', 'create:crafting/kinetics/deployer', 'create:crafting/kinetics/millstone', 'create:crafting/kinetics/mechanical_mixer', 'create:crafting/kinetics/mechanical_drill',
         'create:crafting/kinetics/steam_engine', 'create:crafting/kinetics/mechanical_press', 'create:crafting/kinetics/piston_extension_pole', 'create:crafting/kinetics/mechanical_crafter', 
         'create:crafting/kinetics/brass_hand', 'create:crafting/kinetics/hose_pulley', 'create:crafting/kinetics/rope_pulley', 'create:crafting/kinetics/elevator_pulley', 'create:crafting/appliances/chain_from_zinc',
-        'farmerdelight:paper_from_tree_bark', 'create:mixing/chocolate', 'create:mixing/chocolate_melting', 'create:mixing/tea', 'create:mixing/lava_from_cobble', 'create:mixing/honey', 
+        'farmersdelight:paper_from_tree_bark', 'create:mixing/chocolate', 'create:mixing/chocolate_melting', 'create:mixing/tea', 'create:mixing/lava_from_cobble', 'create:mixing/honey', 
         'createaddition:mixing/electrum', 'create:milling/charcoal', 'create:milling/coal', 'create:splashing/crushed_raw_zinc', 'create:splashing/crushed_raw_copper', 'create:splashing/crushed_raw_gold',
         'create:splashing/crushed_raw_iron', 'createaddition:crafting/electrum_block', 'ad_astra:steel_block', 'ad_astra:raw_desh', 'farmersdelight:cutting/gravel', 'gtceu:forge_hammer/gravel_to_sand',
         'create:milling/gravel', 'gtceu:forge_hammer/cobblestone_to_gravel', 'gtceu:macerator/gravel_to_flint', 'create:splashing/sand', 'create:splashing/red_sand', 'minecraft:pumpkin_pie',
@@ -102,7 +102,7 @@ ServerEvents.recipes(event => {
         'gtceu:shapeless/block_decompress_mana_diamond_gem', 'botania:mana_mirror', 'gtceu:shapeless/manadiamond_block_deconstruct', 'gtceu:shaped/block_compress_mana_diamond', 'createlowheated:mixing/chocolate',
         'gtceu:shapeless/dragonstone_block_deconstruct', 'gtceu:shaped/block_compress_mana_diamond', 'botania:spark', 'botania:petal_apothecary/vazkii_head', 'botania:runic_altar/head',
         'botania:heisei_dream', 'gtceu:extruder/nan_certificate', 'gtceu:forming_press/pumpkin_pie', 'createaddition:mixing/bioethanol', 'createaddition:compacting/cake_base', 'botania:shimmerwood_planks',
-        'botania:mana_infusion/flint_to_gunpowder', 'botania:mana_infusion/gunpowder_to_flint', 'gtceu:shapeless/block_decompress_mana_diamond', 'botania:pure_daisy/livingrock', 
+        'botania:mana_infusion/flint_to_gunpowder', 'botania:mana_infusion/gunpowder_to_flint', 'gtceu:shapeless/block_decompress_mana_diamond', 'botania:pure_daisy/livingrock', 'minecraft:paper',
         'botania:pure_daisy/end_stone_to_cobbled_deepslate', 'gtceu:alloy_smelter/form_brick', 'createlowheated:mixing/builders_tea', 'ae2:network/cells/item_cell_housing', 'ae2:network/cells/fluid_cell_housing',
         'createaddition:compat/ae2/charged_certus_quartz', 'ae2:decorative/quartz_block', 'minecraft:iron_chestplate', 'minecraft:iron_helmet', 'minecraft:iron_boots', 'minecraft:iron_leggings',
         'minecraft:diamond_helmet', 'minecraft:diamond_chestplate', 'minecraft:diamond_leggings', 'minecraft:diamond_boots', 'minecraft:golden_boots', 'minecraft:golden_leggings', 'minecraft:golden_helmet', 
@@ -156,7 +156,7 @@ ServerEvents.recipes(event => {
     event.remove({output: 'createaddition:iron_rod'})
     event.remove({output: '#forge:wires'})
     event.remove({input: '#forge:wires'})
-    event.remove({id: 'gtceu:macerator/macerate_wheat'}) //why this no work wtf
+    event.remove({id: 'gtceu:macerator/macerate_wheat'})
     event.remove({id: /.*expatternprovider.*cutter.*/})
     event.remove({output: /gtceu:.*_energy_converter/ })
     event.remove({output: /gtmutils:.*_energy_converter/ })

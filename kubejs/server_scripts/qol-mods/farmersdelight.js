@@ -72,12 +72,12 @@ ServerEvents.recipes(event => {
       .duration(98)
       .EUt(2)
 
-    event.recipes.gtceu.macerator('macerate_hay_bale')
-      .itemInputs('minecraft:hay_block')
-      .itemOutputs('9x gtceu:wheat_dust', '4x farmersdelight:straw')
-      .chancedOutput('farmersdelight:straw', 5000, 0)
-      .duration(882)
-      .EUt(2)
+    // event.recipes.gtceu.macerator('macerate_hay_bale')
+    //   .itemInputs('minecraft:hay_block')
+    //   .itemOutputs('9x gtceu:wheat_dust', '4x farmersdelight:straw')
+    //   .chancedOutput('farmersdelight:straw', 5000, 0)
+    //   .duration(882)
+    //   .EUt(2)
 
     event.recipes.gtceu.mixer('mix_dough')
       .itemInputs('2x gtceu:wheat_dust')

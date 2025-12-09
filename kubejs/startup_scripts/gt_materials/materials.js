@@ -158,9 +158,9 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     matmod('titanium', [dense_plate]);
     matmod('neutronium', [dense_plate]);
     matmod('iron', [foil])
-    matmod('potin', [foil])
-    matmod('brass', [foil])
-    matmod('invar', [ring])
+    matmod('potin', [foil, ring])
+    matmod('brass', [foil, ring])
+    matmod('invar', [ring, foil])
     matmod('red_alloy', [ring])
     matmod('zinc', [bolt_and_screw])
     matmod('nickel', [foil, ring, rod, bolt_and_screw])
