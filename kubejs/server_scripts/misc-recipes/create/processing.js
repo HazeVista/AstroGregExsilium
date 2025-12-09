@@ -129,43 +129,59 @@ ServerEvents.recipes(event => {
     //#endregion
 
     //#region metal processing
-    // const vanillaMetals = [
-    //     { metal: 'iron', ingot: 'minecraft:iron_ingot'},
-    //     { metal: 'gold', ingot: 'minecraft:gold_ingot'},
-    //     { metal: 'copper', ingot: 'minecraft:copper_ingot'},
-    //     { metal: 'energized_steel', ingot: 'powah:steel_energized'}
-    // ]
+    const vanillaMetals = [
+        { metal: 'iron', ingot: 'minecraft:iron_ingot'},
+        { metal: 'gold', ingot: 'minecraft:gold_ingot'},
+        { metal: 'copper', ingot: 'minecraft:copper_ingot'},
+        { metal: 'energized_steel', ingot: 'powah:steel_energized'}
+    ]
 
-    // const gtceuMetals = ['steel', 'wrought_iron', 'tin', 'bronze', 'potin', 'lead', 
-    //     'nickel', 'silver', 'zinc', 'brass', 'invar', 'red_alloy', 'electrum']
+    const gtceuMetals = ['steel', 'wrought_iron', 'tin', 'bronze', 'potin', 'lead', 
+        'nickel', 'silver', 'zinc', 'brass', 'invar', 'red_alloy', 'electrum']
 
-    // function processmetals(config) {
-    //     const metal = config.metal
-    //     const ingot = config.ingot || `gtceu:${metal}_ingot`
-    //     const rod = config.rod || `gtceu:${metal}_rod`
-    //     const plate = config.plate || `gtceu:${metal}_plate`
-    //     const foil = config.foil || `gtceu:${metal}_foil`
-    //     const ring = config.ring || `gtceu:${metal}_ring`
-    //     const screw = config.screw || `gtceu:${metal}_screw`
-    //     const bolt = config.bolt || `gtceu:${metal}_bolt`
+    function processmetals(config) {
+        const metal = config.metal
+        const ingot = config.ingot || `gtceu:${metal}_ingot`
+        const rod = config.rod || `gtceu:${metal}_rod`
+        const plate = config.plate || `gtceu:${metal}_plate`
+        const foil = config.foil || `gtceu:${metal}_foil`
+        const ring = config.ring || `gtceu:${metal}_ring`
+        const screw = config.screw || `gtceu:${metal}_screw`
+        const bolt = config.bolt || `gtceu:${metal}_bolt`
 
-    //     event.custom({
-    //         type: "createaddition:rolling",
-    //         input: { item: ingot },
-    //         result: { item: rod, count: 2 }
-    //     })
-    //     event.recipes.create.pressing([plate], [ingot])
-    //     event.recipes.create.pressing([`2x ${foil}`], [plate])
-    //     event.recipes.create.pressing([ring], [rod])
-    //     event.custom({
-    //         type: "createaddition:rolling",
-    //         input: { item: bolt },
-    //         result: { item: screw }
-    //     })
-    // }
+        // INGOT to ROD
+        event.custom({
+            type: "createaddition:rolling",
+            input: { item: ingot },
+            result: { item: rod, count: 2 }
+        })
+        // INGOT to PLATE
+        event.recipes.create.pressing(plate, ingot)
 
-    // vanillaMetals.forEach(processmetals)
-    // gtceuMetals.forEach(metal => processmetals( metal ))
+        // PLATE to FOIL
+        event.custom({
+            type: "create:pressing",
+            ingredients: [{ item: plate }],
+            results: [{ item: foil, count: 2 }]
+        })
+
+        // ROD to RING
+        event.custom({
+            type: "create:pressing",
+            ingredients: [{ item: rod }],
+            results: [{ item: ring }]
+        })
+
+        // BOLT to SCREW
+        event.custom({
+            type: "createaddition:rolling",
+            input: { item: bolt },
+            result: { item: screw }
+        })
+    }
+
+    vanillaMetals.forEach(processmetals)
+    gtceuMetals.forEach(metal => processmetals({ metal: metal}))
     //#endregion
 
     //#region create washing
