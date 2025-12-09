@@ -65,12 +65,12 @@ ServerEvents.recipes(event => {
     //#endregion
 
     //#region wheat & straw
-    event.recipes.gtceu.macerator('macerate_to_flour')
-      .itemInputs('minecraft:wheat')
-      .itemOutputs('gtceu:wheat_dust')
-      .chancedOutput('farmersdelight:straw', 5000, 0)
-      .duration(98)
-      .EUt(2)
+    // event.recipes.gtceu.macerator('macerate_to_flour')
+    //   .itemInputs('minecraft:wheat')
+    //   .itemOutputs('gtceu:wheat_dust')
+    //   .chancedOutput('farmersdelight:straw', 5000, 0)
+    //   .duration(98)
+    //   .EUt(2)                                            These dont work bc of a GT bug where you can't remove recycling recipes
 
     // event.recipes.gtceu.macerator('macerate_hay_bale')
     //   .itemInputs('minecraft:hay_block')

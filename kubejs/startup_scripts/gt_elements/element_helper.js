@@ -1,10 +1,10 @@
-// priority 1000
+//builder is a courtesy of PhoenixVine, from Phoenix Forge Technologies
 
-global.elementFunction = (event) => {
-    return (name, p, n, sym) => {
+global.elemCreator = (event) => {
+    return (name, proton, neutron, symbol) => {
         event.create(name)
-            .protons(p)
-            .neutrons(n)
-            .symbol(sym);
-    };
+            .protons(proton)
+            .neutrons(neutron)
+            .symbol(symbol)
+    }
 }

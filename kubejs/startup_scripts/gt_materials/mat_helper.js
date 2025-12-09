@@ -5,6 +5,8 @@ const BlastProperty = Java.loadClass('com.gregtechceu.gtceu.api.data.chemical.ma
 const FluidPipeProperties = Java.loadClass('com.gregtechceu.gtceu.api.data.chemical.material.properties.FluidPipeProperties');
 const ToolProperty = Java.loadClass('com.gregtechceu.gtceu.api.data.chemical.material.properties.ToolProperty');
 
+//Global values are a courtesy of TrulyNo from Star Technology
+
 //#region icon sets
 global.iconSets = {
     dull: GTMaterialIconSet.DULL,
@@ -98,47 +100,6 @@ global.flags = {
 
 
 
-// //#region tool flags
-// global.toolTypes = {
-//     sword: GTToolType.SWORD,
-//     pickaxe: GTToolType.PICKAXE,
-//     shovel: GTToolType.SHOVEL,
-//     axe: GTToolType.AXE,
-//     hoe: GTToolType.HOE,
-//     mining_hammer: GTToolType.MINING_HAMMER,
-//     spade: GTToolType.SPADE,
-//     saw: GTToolType.SAW,
-//     hard_hammer: GTToolType.HARD_HAMMER,
-//     soft_mallet: GTToolType.SOFT_MALLET,
-//     wrench: GTToolType.WRENCH,
-//     file: GTToolType.FILE,
-//     crowbar: GTToolType.CROWBAR,
-//     screwdriver: GTToolType.SCREWDRIVER,
-//     mortar: GTToolType.MORTAR,
-//     wire_cutter: GTToolType.WIRE_CUTTER,
-//     scythe: GTToolType.SCYTHE,
-//     knife: GTToolType.KNIFE,
-//     butchery_knife: GTToolType.BUTCHERY_KNIFE,
-//     plunger: GTToolType.PLUNGER,
-//     drill_lv: GTToolType.DRILL_LV,
-//     drill_mv: GTToolType.DRILL_MV,
-//     drill_hv: GTToolType.DRILL_HV,
-//     drill_ev: GTToolType.DRILL_EV,
-//     drill_iv: GTToolType.DRILL_IV,
-//     chainsaw: GTToolType.CHAINSAW_LV,
-//     buzzsaw: GTToolType.BUZZSAW,
-//     screwdriver_lv: GTToolType.SCREWDRIVER_LV,
-//     wrench_lv: GTToolType.WRENCH_LV,
-//     wrench_hv: GTToolType.WRENCH_HV,
-//     wrench_iv: GTToolType.WRENCH_IV,
-//     wire_cutter_lv: GTToolType.WIRE_CUTTER_LV,
-//     wire_cutter_hv: GTToolType.WIRE_CUTTER_HV,
-//     wire_cutter_iv: GTToolType.WIRE_CUTTER_IV
-// }
-// //#endregion
-
-
-
 //#region voltage helpers
 global.v = {
     'ulv': GTValues.V[GTValues.ULV],
@@ -223,3 +184,4 @@ global.blastProperty = (material, temperature, gasTier, voltage, duration) => {
     let mat = GTMaterials.get(material);
     mat.setProperty(PropertyKey.BLAST, new BlastProperty(temperature, gasTier, voltage, duration, -1, -1));
 }
+//#endregion

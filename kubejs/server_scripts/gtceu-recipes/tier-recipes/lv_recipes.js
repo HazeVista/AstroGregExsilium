@@ -31,7 +31,8 @@ ServerEvents.recipes(event => {
     event.recipes.gtceu.compressor('compress_cardboard')
         .itemInputs('4x minecraft:paper')
         .itemOutputs('create:cardboard')
-        .duration()
+        .duration(200)
+        .EUt(2)
     //#endregion
 
 
