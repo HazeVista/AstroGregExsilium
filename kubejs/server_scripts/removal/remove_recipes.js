@@ -41,7 +41,7 @@ ServerEvents.recipes(event => {
         'botania:cell_block', 'expandedae:dual_cell_housing', 'expandedae:mega_dual_cell_housing', 'create:copper_diving_helmet', 'create:copper_diving_boots', 'gtceu:tungsten_grinding_head', 
         'gtceu:diamond_grinding_head', 'ad_astra:oxygen_gear', 'ad_astra:large_gas_tank', 'ad_astra:gas_tank', 'ad_astra:vent', 'ad_astra:wrench', 'expatternprovider:assembler_matrix_glass',
         'megacells:sky_steel_ingot', 'ae2:charged_staff', 'megacells:cell_dock', 'ae2:entropy_manipulator', 'functionalstorage:iron_downgrade', 'ae2wtlib:magnet_card', 'ae2:radio',
-        'ae2netanalyser:network_analyser', 'ae2:basic_card', 'ae2:advanced_card', 'functionalstorage:void_upgrade', 'ad_astra:ti_69', 'ad_astra:cheese_block', 'gtceu:dough', 'create:pulp'
+        'ae2netanalyser:network_analyser', 'ae2:basic_card', 'ae2:advanced_card', 'functionalstorage:void_upgrade', 'ad_astra:ti_69', 'ad_astra:cheese_block', 'gtceu:dough', 'create:pulp', 
 
     ]
 
@@ -53,7 +53,7 @@ ServerEvents.recipes(event => {
         'ae2:transform/damaged_budding_quartz', 'ae2:transform/chipped_budding_quartz', 'ae2:network/blocks/spatial_io_port', 'ae2:network/blocks/io_port', 'laserio:filter_basic', 'farmersdelight:cooking_pot',
         'ae2:transform/flawed_budding_quartz', 'ae2:transform/fluix_crystals', 'ae2:transform/fluix_crystal', 'ae2:network/blocks/interfaces_interface', 'ae2:network/blocks/io_condenser',
         'ae2:network/crafting/molecular_assembler', 'ae2:network/blocks/pattern_providers_interface', 'ae2:network/crafting/cpu_crafting_unit', 'ae2:network/blocks/energy_energy_acceptor',
-        'laserio:filter_mod', 'laserio:filter_count', 'laserio:filter_tag', 'laserio:filter_mod', 'ad_astra:rocket_nose_cone',
+        'laserio:filter_mod', 'laserio:filter_count', 'laserio:filter_tag', 'laserio:filter_mod', 'ad_astra:rocket_nose_cone', 'farmersdelight:apple_pie',
         'botania:mana_infusion/netherrack_dupe', 'createaddition:mixing/netherrack', 'botania:mana_infusion/soul_sand_dupe', 'botania:mana_infusion/glowstone_dupe', 'botania:mana_infusion/redstone_dupe',
         'botania:mana_infusion/quartz_dupe', 'botania:mana_infusion/coal_dupe', 'botania:mana_infusion/gravel_dupe', 'minecraft:netherite_drill_smithing', 'create:crafting/kinetics/fluid_tank',
         'create:crafting/kinetics/white_sail', 'create:crafting/kinetics/fluid_valve', 'farmersdelight:rope', 'gtceu:autoclave/silicon_dioxide_to_quartzite_gem', 'gtceu:assembler/end_crystal',
@@ -156,7 +156,7 @@ ServerEvents.recipes(event => {
     event.remove({output: 'createaddition:iron_rod'})
     event.remove({output: '#forge:wires'})
     event.remove({input: '#forge:wires'})
-    event.remove({id: 'gtceu:macerator/macerate_wheat'})
+    event.remove({id: 'gtceu:macerator/macerate_wheat'}) //why this no work wtf
     event.remove({id: /.*expatternprovider.*cutter.*/})
     event.remove({output: /gtceu:.*_energy_converter/ })
     event.remove({output: /gtmutils:.*_energy_converter/ })
