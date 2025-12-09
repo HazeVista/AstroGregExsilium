@@ -9,11 +9,11 @@ ServerEvents.recipes(event => {
             .itemOutputs(`astrogreg:${tier}_modular_circuit`)
             .EUt(7)
             .duration(1);
-	});
-});
+	})
+})
 
       ServerEvents.tags('item', event => {
             tiers.forEach(tier => {
 		      event.add(`gtceu:circuits/${tier}`, `astrogreg:${tier}_modular_circuit`)});
 
-});
+})

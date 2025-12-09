@@ -7,6 +7,7 @@ ServerEvents.recipes(event => {
     event.recipes.create.crushing('gtceu:cobbled_asteroid_stone', 'gtceu:asteroid_stone')
     event.recipes.create.crushing('gtceu:asteroid_stone', 'gtceu:hard_asteroid_stone')
     event.recipes.create.crushing('gtceu:asteroid_gravel', 'gtceu:cobbled_asteroid_stone')
+    //#endregion
 
     //#region milling
     event.recipes.create.milling('farmersdelight:straw', 'farmersdelight:sandy_shrub')
@@ -15,8 +16,10 @@ ServerEvents.recipes(event => {
     event.recipes.create.milling('gtceu:cobbled_asteroid_stone', 'gtceu:asteroid_stone')
     event.recipes.create.milling('gtceu:asteroid_stone', 'gtceu:hard_asteroid_stone')
     event.recipes.create.milling('gtceu:asteroid_gravel', 'gtceu:cobbled_asteroid_stone')
+    event.recipes.create.milling(['gtceu:wheat_dust', Item.of('farmersdelight:straw').withChance(0.5)], 'minecraft:wheat')
     event.recipes.create.milling(['minecraft:sand', Item.of('minecraft:flint').withChance(0.2), Item.of('minecraft:clay_ball').withChance(0.1)], 'minecraft:gravel')
     event.recipes.create.milling(['gtceu:asteroid_sand', Item.of('minecraft:flint').withChance(0.2), Item.of('minecraft:clay_ball').withChance(0.1)], 'gtceu:asteroid_gravel')
+    //#endregion
 
     //#region mixing
     event.recipes.create.mixing('2x create:andesite_alloy', ['gtceu:iron_dust', 'gtceu:andesite_dust']).heatRequirement('lowheated')
@@ -62,10 +65,13 @@ ServerEvents.recipes(event => {
     event.recipes.create.mixing('2x gtceu:coke_oven_brick', ['#forge:sand', 'minecraft:clay_ball']).heatRequirement('lowheated')
 
     event.recipes.create.mixing('minecraft:clay', ['#forge:sand', Fluid.of('minecraft:water', 125)])
+    //#endregion
 
     //#region create filling
     event.recipes.create.filling('minecraft:clay', [Fluid.of('minecraft:water', 250), '#forge:sand'])
     event.recipes.create.filling('gtceu:treated_wood_planks', [Fluid.of('gtceu:creosote', 125), '#minecraft:planks'])
+    event.recipes.create.filling('gtceu:dough', [Fluid.of('minecraft:water', 125), 'gtceu:wheat_dust'])
+    //#endregion
 
     //#region other metal work
     event.recipes.create.pressing('gtceu:iron_ring', 'gtceu:iron_rod')
@@ -105,7 +111,7 @@ ServerEvents.recipes(event => {
         ['powah:steel_energized'])
 
     event.recipes.create.pressing(
-        ['gtceu:rubber_sheet'],
+        ['gtceu:rubber_plate'],
         ['gtceu:rubber_ingot'])
 
     // Special rolling recipes
@@ -120,50 +126,53 @@ ServerEvents.recipes(event => {
         input: { item: "powah:steel_energized" },
         result: { item: "gtceu:energized_steel_rod", count: 2 }
     })
+    //#endregion
 
     //#region metal processing
-    const vanillaMetals = [
-        { metal: 'iron', ingot: 'minecraft:iron_ingot' },
-        { metal: 'gold', ingot: 'minecraft:gold_ingot' },
-        { metal: 'copper', ingot: 'minecraft:copper_ingot' }
-    ]
+    // const vanillaMetals = [
+    //     { metal: 'iron', ingot: 'minecraft:iron_ingot'},
+    //     { metal: 'gold', ingot: 'minecraft:gold_ingot'},
+    //     { metal: 'copper', ingot: 'minecraft:copper_ingot'},
+    //     { metal: 'energized_steel', ingot: 'powah:steel_energized'}
+    // ]
 
-    const gtceuMetals = ['steel', 'wrought_iron', 'tin', 'bronze', 'potin', 'lead', 'cupronickel', 
-        'silver', 'zinc', 'brass', 'invar', 'red_alloy', 'electrum', 'energized_steel']
+    // const gtceuMetals = ['steel', 'wrought_iron', 'tin', 'bronze', 'potin', 'lead', 
+    //     'nickel', 'silver', 'zinc', 'brass', 'invar', 'red_alloy', 'electrum']
 
-    function processmetals(config) {
-        const metal = config.metal
-        const ingot = config.ingot || `gtceu:${metal}_ingot`
-        const rod = config.rod || `gtceu:${metal}_rod`
-        const plate = config.plate || `gtceu:${metal}_plate`
-        const foil = config.foil || `gtceu:${metal}_foil`
-        const ring = config.ring || `gtceu:${metal}_ring`
-        const screw = config.screw || `gtceu:${metal}_screw`
-        const bolt = config.bolt || `gtceu:${metal}_bolt`
+    // function processmetals(config) {
+    //     const metal = config.metal
+    //     const ingot = config.ingot || `gtceu:${metal}_ingot`
+    //     const rod = config.rod || `gtceu:${metal}_rod`
+    //     const plate = config.plate || `gtceu:${metal}_plate`
+    //     const foil = config.foil || `gtceu:${metal}_foil`
+    //     const ring = config.ring || `gtceu:${metal}_ring`
+    //     const screw = config.screw || `gtceu:${metal}_screw`
+    //     const bolt = config.bolt || `gtceu:${metal}_bolt`
 
-        event.custom({
-            type: "createaddition:rolling",
-            input: { item: ingot },
-            result: { item: rod, count: 2 }
-        })
-        event.recipes.create.pressing([plate], [ingot])
-        event.recipes.create.pressing([`2x ${foil}`], [plate])
-        event.recipes.create.pressing([ring], [rod])
-        event.custom({
-            type: "createaddition:rolling",
-            input: { item: bolt },
-            result: { item: screw }
-        })
-    }
+    //     event.custom({
+    //         type: "createaddition:rolling",
+    //         input: { item: ingot },
+    //         result: { item: rod, count: 2 }
+    //     })
+    //     event.recipes.create.pressing([plate], [ingot])
+    //     event.recipes.create.pressing([`2x ${foil}`], [plate])
+    //     event.recipes.create.pressing([ring], [rod])
+    //     event.custom({
+    //         type: "createaddition:rolling",
+    //         input: { item: bolt },
+    //         result: { item: screw }
+    //     })
+    // }
 
-    vanillaMetals.forEach(processmetals)
-    gtceuMetals.forEach(metal => processmetals( metal ))
+    // vanillaMetals.forEach(processmetals)
+    // gtceuMetals.forEach(metal => processmetals( metal ))
+    //#endregion
 
     //#region create washing
     event.recipes.create.splashing(['minecraft:clay_ball', Item.of('minecraft:iron_nugget').withChance(0.5)], 'gtceu:asteroid_sand')
     event.recipes.create.splashing(['minecraft:clay_ball', Item.of('minecraft:gold_nugget').withChance(0.2)], 'minecraft:red_sand')
     event.recipes.create.splashing(['minecraft:clay_ball', Item.of('minecraft:clay_ball').withChance(0.5)], 'minecraft:sand')
-
+    //#endregion
 
     //#region polarizer
     event.custom({
@@ -191,8 +200,7 @@ ServerEvents.recipes(event => {
         },
         energy: 448
     })
-
-
+    //#endregion
     
     //#region power
     event.shapeless('createaddition:small_light_connector',
@@ -260,6 +268,7 @@ ServerEvents.recipes(event => {
         C: 'create:shaft',
         D: 'gtceu:magnetic_steel_rod'
     })
+    //#endregion
 
     //#region create ore excavation
     event.shaped('createoreexcavation:drill', [
@@ -324,4 +333,5 @@ ServerEvents.recipes(event => {
         A: 'minecraft:book',
         B: 'minecraft:ender_pearl'
     })
+    //#endregion
 })

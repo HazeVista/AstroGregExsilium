@@ -40,8 +40,8 @@ ServerEvents.recipes(event => {
         'create:builders_tea', 'create:chocolate_glazed_berries', 'create:bar_of_chocolate', 'ae2:not_so_mysterious_cube', 'ae2:quantum_link', 'ae2:quantum_ring', 'minecraft:recovery_compass',
         'botania:cell_block', 'expandedae:dual_cell_housing', 'expandedae:mega_dual_cell_housing', 'create:copper_diving_helmet', 'create:copper_diving_boots', 'gtceu:tungsten_grinding_head', 
         'gtceu:diamond_grinding_head', 'ad_astra:oxygen_gear', 'ad_astra:large_gas_tank', 'ad_astra:gas_tank', 'ad_astra:vent', 'ad_astra:wrench', 'expatternprovider:assembler_matrix_glass',
-        'megacells:sky_steel_ingot', 'ae2:charged_staff', 'megacells:cell_dock', 'functional_storage:iron_downgrade', 'ae2:entropy_manipulator', 'functionalstorage:iron_downgrade', 'ae2wtlib:magnet_card',
-        'ae2netanalyser:network_analyser', 'ae2:basic_card', 'ae2:advanced_card'
+        'megacells:sky_steel_ingot', 'ae2:charged_staff', 'megacells:cell_dock', 'ae2:entropy_manipulator', 'functionalstorage:iron_downgrade', 'ae2wtlib:magnet_card', 'ae2:radio',
+        'ae2netanalyser:network_analyser', 'ae2:basic_card', 'ae2:advanced_card', 'functionalstorage:void_upgrade', 'ad_astra:ti_69', 'ad_astra:cheese_block', 'gtceu:dough'
 
     ]
 
@@ -108,7 +108,7 @@ ServerEvents.recipes(event => {
         'minecraft:diamond_helmet', 'minecraft:diamond_chestplate', 'minecraft:diamond_leggings', 'minecraft:diamond_boots', 'minecraft:golden_boots', 'minecraft:golden_leggings', 'minecraft:golden_helmet', 
         'minecraft:golden_chestplate', 'botania:manasteel_boots', 'botania:manasteel_leggings', 'botania:manasteel_chestplate', 'botania:manasteel_helmet', 'botania:elementium_boots', 'botania:elementium_leggings',
         'botania:elementium_chestplate', 'botania:elementium_helmet', 'ae2:network/cells/view_cell', 'ae2:tools/network_memory_card', 'ae2:decorative/quartz_fixture', 'ae2:network/wireless_booster', 
-        'ae2:network/parts/panels_semi_dark_monitor', 'buildinggadgets2:template_manager', 
+        'ae2:network/parts/panels_semi_dark_monitor', 'buildinggadgets2:template_manager', 'gtceu:macerator/macerate_hay_block', 
     ]
 
     //#region remove type
@@ -156,6 +156,7 @@ ServerEvents.recipes(event => {
     event.remove({output: 'createaddition:iron_rod'})
     event.remove({output: '#forge:wires'})
     event.remove({input: '#forge:wires'})
+    event.remove({id: 'gtceu:macerator/macerate_wheat'})
     event.remove({id: /.*expatternprovider.*cutter.*/})
     event.remove({output: /gtceu:.*_energy_converter/ })
     event.remove({output: /gtmutils:.*_energy_converter/ })
@@ -185,5 +186,6 @@ ServerEvents.recipes(event => {
     event.remove({id: /ae2:network\/cells\/.*_storage_cell_.*/})
     event.remove({id: /ad_astra:radium_.*/})
     event.remove({output: /ad_extendra:.*_tank/})
+    event.remove({output: /gtceu:.*_air_scrubber/})
 });
 

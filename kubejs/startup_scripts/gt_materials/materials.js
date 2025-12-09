@@ -157,6 +157,13 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
 
     matmod('titanium', [dense_plate]);
     matmod('neutronium', [dense_plate]);
+    matmod('iron', [foil])
+    matmod('potin', [foil])
+    matmod('brass', [foil])
+    matmod('invar', [ring])
+    matmod('red_alloy', [ring])
+    matmod('zinc', [bolt_and_screw])
+    matmod('nickel', [foil, ring, rod, bolt_and_screw])
 
      // Blast Properties of periodic table metals
     const blast = global.blastProperty;
@@ -164,11 +171,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
 
 
 
-    //#region material builders
-    
-    event.create('mystery')
-        .element(GTElements.get('mystery'))
-        
+    //#region material builders        
     const compIngot = (name, elements, color, icon, blasting, flags) => {
         if (blasting.includes(blasting[0])){
             event.create(name).ingot().components(elements).color(color).iconSet(icon).flags(flags).blastTemp(blasting[0], blasting[1], blasting[2], blasting[3]);
@@ -315,7 +318,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
 
     //#region superconductors
     conductorSuper('energized_steel', [], 0xbaa172, [], [V('lv'), 4, 0, true], [150, 130, 3, 12000]);
-    conductorSuper('blazing_ostrum', [], 0x8ee8ed, [1700, 'low', VA('mv'), 1200], [V('mv'), 8, 0, true], [190, 150, 3, 14000]);
+    conductorSuper('blazing_etrium', [], 0x8ee8ed, [1700, 'low', VA('mv'), 1200], [V('mv'), 8, 0, true], [190, 150, 3, 14000]);
     conductorSuper('niotic_calorite', [], 0xe4eb60, [1700, 'low', VA('hv'), 1500], [V('hv'), 16, 0, true], [220, 170, 3, 16000]);
     conductorSuper('spirited_uranium', [], 0xcb74cc, [3500, 'low', VA('ev'), 1800], [V('ev'), 24, 0, true], [300, 190, 3, 18000]);
     conductorSuper('nitromangaphosphide', [], 0x110c9c, [4400, 'mid', VA('iv'), 2100], [V('iv'), 32, 0, true], [450, 220, 3, 20000]);
@@ -516,8 +519,10 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     //#endregion
 
 
-
     //#region ae2
-    compIngotLiquidSeccolor('futura_alloy', ['4x stainless_steel', '1x mystery'], 0xebb7ea, 0x000000, SHINY, [1700, 'low', 400, 1200], [frame, plates, rod, dense_plate, mortar_grind, block])
+    event.create('sky_stone')
+        .element(GTElements.get('sky_stone'))
+
+    compIngotLiquidSeccolor('futura_alloy', ['4x stainless_steel', 'sky_stone'], 0xebb7ea, 0x000000, SHINY, [1700, 'low', 400, 1200], [frame, plates, rod, dense_plate, mortar_grind, block])
     //#endregion
 });

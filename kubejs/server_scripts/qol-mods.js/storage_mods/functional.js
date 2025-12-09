@@ -104,4 +104,5 @@ ServerEvents.recipes(event => {
     }); 
 
     event.shapeless('functionalstorage:iron_downgrade', ['gtceu:double_iron_plate', '#functionalstorage:drawer'])
+    event.shapeless('functionalstorage:void_upgrade', ['#trashcans:trash_cans', '#functionalstorage:drawer'])
 });

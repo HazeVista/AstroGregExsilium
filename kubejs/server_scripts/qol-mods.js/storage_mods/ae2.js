@@ -333,7 +333,7 @@ ServerEvents.recipes(event => {
         B: 'gtceu:futura_alloy_plate',
         C: '#gtceu:circuits/ulv',
         D: 'gtceu:iron_screw',
-        E: '#gtceu:tools/screwdrivers'
+        E: '#forge:tools/screwdrivers'
     })
 
     event.shapeless('expatternprovider:oversize_interface', ['expatternprovider:ex_interface', 'ae2:logic_processor', 'ae2:logic_processor'])

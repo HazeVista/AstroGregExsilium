@@ -53,6 +53,8 @@ ServerEvents.recipes(event => {
     event.replaceInput({}, 'gtceu:tungsten_grinding_head', 'gtceu:grinding_head_tungsten')
     event.replaceInput({}, 'botania:mana_glass', 'botania:managlass')
     event.replaceInput({}, 'botania:elf_glass', 'botania:alfglass')
+    // event.replaceInput({input: ''}, '', '')
+
     //#endregion
     
     //#region output
@@ -75,4 +77,5 @@ ServerEvents.recipes(event => {
     event.replaceOutput({output: 'gtceu:dragonstone_gem'}, 'gtceu:dragonstone_gem', 'botania:dragonstone')
     event.replaceOutput({output: 'gtceu:dragonstone_block'}, 'gtceu:dragonstone_block', 'botania:dragonstone_block')
     event.replaceOutput({output: 'ae2:certus_quartz_crystal'}, 'ae2:certus_quartz_crystal', 'gtceu:certus_quartz_gem')
+    // event.replaceOutput({output: ''}, '', '')
 });
