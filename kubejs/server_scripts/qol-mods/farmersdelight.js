@@ -18,6 +18,17 @@ ServerEvents.recipes(event => {
       C: 'farmersdelight:pie_crust'
     })
 
+    event.shaped('farmersdelight:apple_pie', [
+      ' C ',
+      'CCC',
+      'DAD'
+    ], {
+      A: 'farmersdelight:pie_crust',
+      B: 'gtceu:dough',
+      C: 'minecraft:apple',
+      D: 'minecraft:sugar'
+    })
+
     event.shaped('createaddition:honey_cake', [
       'AAA',
       'BCB',
@@ -54,7 +65,7 @@ ServerEvents.recipes(event => {
     //#endregion
 
     //#region wheat & straw
-    event.recipes.gtceu.macerator('macerate_wheat_to_flour')
+    event.recipes.gtceu.macerator('macerate_to_flour')
       .itemInputs('minecraft:wheat')
       .itemOutputs('gtceu:wheat_dust')
       .chancedOutput('farmersdelight:straw', 5000, 0)
