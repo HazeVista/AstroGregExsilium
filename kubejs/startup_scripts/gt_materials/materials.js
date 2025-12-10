@@ -126,29 +126,18 @@ const VHA = (voltage) => {
 GTCEuStartupEvents.registry('gtceu:material', event => {
     //#region periodic materials
     const element = global.periodicTableElement;
-    // Ingots
+    // Ingot
     element('neptunium', 'ingot')
-    element('zirconium', 'ingot');
-    element('tellurium', 'ingot');
-    element('polonium', 'ingot');
-    element('astatine', 'ingot');
-    element('hafnium', 'ingot');
-    element('seaborgium', 'ingot');
-    element('flerovium', 'ingot');
-    element('rhenium', 'ingot');
 
-    // Dusts
+    // Dust
     element('selenium', 'dust');
-    element('strontium', 'dust');
-    element('thallium', 'dust');
 
-    // Liquids
-    element('seaborgium', 'fluid');
-    element('flerovium', 'fluid');
+    // Liquid
     element('neptunium', 'fluid')
 
-    // Gasses
-    element('oganesson', 'gas');
+    // Gas
+    
+    // Plasma
 
     // Material modification
     const matmod = (mat, flag) => {
