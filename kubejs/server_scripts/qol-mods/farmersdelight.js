@@ -62,6 +62,50 @@ ServerEvents.recipes(event => {
     event.shapeless('4x create:chocolate_glazed_berries', ['minecraft:sweet_berries', 'minecraft:sweet_berries', 'minecraft:sweet_berries', 'minecraft:sweet_berries', 'minecraft:cocoa_beans', 'farmersdelight:milk_bottle']).replaceIngredient('farmersdelight:milk_bottle', 'minecraft:glass_bottle')
     event.shapeless('8x farmersdelight:sweet_berry_cookie', ['minecraft:sweet_berries', 'gtceu:dough'])
     event.shapeless('8x farmersdelight:honey_cookie', ['minecraft:honey_bottle', 'gtceu:dough']).replaceIngredient('minecraft:honey_bottle', 'minecraft:glass_bottle')
+
+    event.custom({
+      type: "farmersdelight:cutting",
+      ingredients: [
+        { item: "minecraft:pumpkin" }
+      ],
+      tool: { tag: "forge:tools/knives" },
+      result: [
+        { item: "farmersdelight:pumpkin_slice", count: 6 }
+      ]
+    })
+
+    event.custom({
+      type: "farmersdelight:cutting",
+      ingredients: [
+        { item: "farmersdelight:apple_pie" }
+      ],
+      tool: { tag: "forge:tools/knives" },
+      result: [
+        { item: "farmersdelight:apple_pie_slice", count: 6 }
+      ]
+    })
+
+    event.custom({
+      type: "farmersdelight:cutting",
+      ingredients: [
+        { item: "farmersdelight:chocolate_pie" }
+      ],
+      tool: { tag: "forge:tools/knives" },
+      result: [
+        { item: "farmersdelight:chocolate_pie_slice", count: 6 }
+      ]
+    })
+
+    event.custom({
+      type: "farmersdelight:cutting",
+      ingredients: [
+        { item: "farmersdelight:sweet_berry_cheesecake" }
+      ],
+      tool: { tag: "forge:tools/knives" },
+      result: [
+        { item: "farmersdelight:sweet_berry_cheesecake_slice", count: 6 }
+      ]
+    })
     //#endregion
 
     //#region wheat & straw
