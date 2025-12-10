@@ -1,4 +1,3 @@
-//credit to @trulyno and the Star Technology team for most of the builder code
 //#region properties
 const $IngotProperty = global.IngotProperty;
 const $DustProperty = global.DustProperty;
@@ -11,7 +10,20 @@ const $AstraItems = Java.loadClass('earth.terrarium.adastra.common.registry.ModI
 const $AstraBlocks = Java.loadClass('earth.terrarium.adastra.common.registry.ModBlocks');
 //#endregion
 
+//#region elements
+function elemCreator(event, id, p, n,  symbol) {  
+        event.create(id)
+            .protons(p)
+            .neutrons(n)
+            .symbol(symbol)
+}
 
+GTCEuStartupEvents.registry("gtceu:element", event => {
+    const elemCreator = [
+        /*["example_element", -1, -1, "Ee"]*/
+    ]
+})
+//#endregion
 
 //#region icon sets
 const DULL = GTMaterialIconSet.DULL;
@@ -105,20 +117,16 @@ const not_alloy = GTMaterialFlags.DISABLE_ALLOY_PROPERTY;
 
 //#region voltage functions
 const V = (voltage) => {
-    return global.v[voltage];
-}
+    return global.v[voltage]}
 
 const VA = (voltage) => {
-    return global.va[voltage];
-}
+    return global.va[voltage]}
 
 const VH = (voltage) => {
-    return global.vh[voltage];
-}
+    return global.vh[voltage]}
 
 const VHA = (voltage) => {
-    return global.vha[voltage];
-}
+    return global.vha[voltage]}
 //#endregion
 
 
@@ -158,6 +166,8 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     const blast = global.blastProperty;
     //#endregion
 
+
+    //credit to @trulyno and the Star Technology team for most of the builder code below
 
 
     //#region material builders        
@@ -509,9 +519,10 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
 
 
     //#region ae2
-    event.create('sky_stone')
-        .element(GTElements.get('sky_stone'))
 
-    compIngotLiquidSeccolor('futura_alloy', ['4x stainless_steel', 'sky_stone'], 0xebb7ea, 0x000000, SHINY, [1700, 'low', 400, 1200], [frame, plates, rod, dense_plate, mortar_grind, block])
+    /* event.create('sky_stone')
+     .element(GTElements.get('sky_stone'))*/
+
+    compIngotLiquidSeccolor('futura_alloy', ['4x stainless_steel', /*'sky_stone'*/], 0xebb7ea, 0x000000, SHINY, [1700, 'low', 400, 1200], [frame, plates, rod, dense_plate, mortar_grind, block])
     //#endregion
 });
