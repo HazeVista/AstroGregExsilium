@@ -1,0 +1,142 @@
+ServerEvents.recipes(event => {
+    //#region cutting board to cutter
+
+    event.recipes.gtceu.cutter('cut_minced_beef')
+      .itemInputs('minecraft:beef')
+      .itemOutputs('2x farmersdelight:minced_beef')
+      .duration(40)
+      .EUt(2)
+
+    event.recipes.gtceu.cutter('cut_brown_mushroom')
+      .itemInputs('farmersdelight:brown_mushroom_colony')
+      .itemOutputs('5x minecraft:brown_mushroom')
+      .duration(40)
+      .EUt(2)
+    
+    event.recipes.gtceu.cutter('cut_porkchop')
+      .itemInputs('farmersdelight:ham')
+      .itemOutputs('2x minecraft:porkchop', 'minecraft:bone')
+      .duration(100)
+      .EUt(4)  
+    
+    event.recipes.gtceu.cutter('cut_cake_slice')
+      .itemInputs('minecraft:cake')
+      .itemOutputs('7x farmersdelight:cake_slice')
+      .duration(40)
+      .EUt(2)
+      
+    event.recipes.gtceu.cutter('cut_cooked_mutton_chops')
+      .itemInputs('minecraft:cooked_mutton')
+      .itemOutputs('2x farmersdelight:cooked_mutton_chops')
+      .duration(40)
+      .EUt(2) 
+      
+    event.recipes.gtceu.cutter('cut_salmon_slice')
+      .itemInputs('minecraft:salmon')
+      .itemOutputs('2x farmersdelight:salmon_slice', 'minecraft:bone_meal')
+      .duration(70)
+      .EUt(3)   
+
+    event.recipes.gtceu.cutter('cut_cooked_porkchop')
+      .itemInputs('farmersdelight:smoked_ham')
+      .itemOutputs('2x minecraft:cooked_porkchop', 'minecraft:bone')
+      .duration(100)
+      .EUt(4)  
+
+    event.recipes.gtceu.cutter('cut_chicken_cuts')
+      .itemInputs('minecraft:chicken')
+      .itemOutputs('2x farmersdelight:chicken_cuts', 'minecraft:bone_meal')
+      .duration(70)
+      .EUt(3)
+
+    event.recipes.gtceu.cutter('cut_cooked_cod_slice')
+      .itemInputs('minecraft:cooked_cod')
+      .itemOutputs('2x farmersdelight:cooked_cod_slice', 'minecraft:bone_meal')
+      .duration(70)
+      .EUt(3)
+
+    event.recipes.gtceu.cutter('cut_raw_pasta')
+      .itemInputs('gtceu:dough')
+      .itemOutputs('farmersdelight:raw_pasta')
+      .duration(40)
+      .EUt(2)
+
+    event.recipes.gtceu.cutter('cut_kelp_roll_slice')
+      .itemInputs('farmersdelight:kelp_roll')
+      .itemOutputs('3x farmersdelight:kelp_roll_slice')
+      .duration(40)
+      .EUt(2)
+
+    event.recipes.gtceu.cutter('cut_pumpkin_slice')
+      .itemInputs('minecraft:pumpkin')
+      .itemOutputs('6x farmersdelight:pumpkin_slice')
+      .duration(100)
+      .EUt(2)
+
+    event.recipes.gtceu.cutter('cut_apple_pie_slice')
+      .itemInputs('farmersdelight:apple_pie')
+      .itemOutputs('6x farmersdelight:apple_pie_slice')
+      .duration(40)
+      .EUt(2)
+
+    event.recipes.gtceu.cutter('cut_sweet_berry_cheesecake_slice')
+      .itemInputs('farmersdelight:sweet_berry_cheesecake')
+      .itemOutputs('6x farmersdelight:sweet_berry_cheesecake_slice')
+      .duration(40)
+      .EUt(2)      
+
+    event.recipes.gtceu.cutter('cut_rice')
+      .itemInputs('farmersdelight:rice_panicle')
+      .itemOutputs('farmersdelight:rice', 'farmersdelight:straw')
+      .duration(40)
+      .EUt(2)
+
+    event.recipes.gtceu.cutter('cut_chocolate_pie_slice')
+      .itemInputs('farmersdelight:chocolate_pie')
+      .itemOutputs('6x farmersdelight:chocolate_pie_slice')
+      .duration(40)
+      .EUt(2)    
+
+    event.recipes.gtceu.cutter('cut_mutton_chops')
+      .itemInputs('minecraft:mutton')
+      .itemOutputs('2x farmersdelight:mutton_chops')
+      .duration(40)
+      .EUt(2)  
+
+    event.recipes.gtceu.cutter('cut_red_mushroom')
+      .itemInputs('farmersdelight:red_mushroom_colony')
+      .itemOutputs('5x minecraft:red_mushroom')
+      .duration(40)
+      .EUt(2)  
+
+    event.recipes.gtceu.cutter('cooked_salmon_slice')
+      .itemInputs('minecraft:cooked_salmon')
+      .itemOutputs('2x farmersdelight:cooked_salmon_slice', 'minecraft:bone_meal')
+      .duration(70)
+      .EUt(3) 
+
+    event.recipes.gtceu.cutter('cut_bacon')
+      .itemInputs('minecraft:porkchop')
+      .itemOutputs('2x farmersdelight:bacon')
+      .duration(40)
+      .EUt(2)
+
+    event.recipes.gtceu.cutter('cut_cabbage_leaf')
+      .itemInputs('farmersdelight:cabbage')
+      .itemOutputs('2x farmersdelight:cabbage_leaf')
+      .duration(40)
+      .EUt(2)      
+
+    event.recipes.gtceu.cutter('cut_cod_slice')
+      .itemInputs('minecraft:cod')
+      .itemOutputs('2x farmersdelight:cod_slice', 'minecraft:bone_meal')
+      .duration(70)
+      .EUt(3) 
+
+    event.recipes.gtceu.cutter('cut_cooked_chicken_cuts')
+      .itemInputs('minecraft:cooked_chicken')
+      .itemOutputs('2x farmersdelight:cooked_chicken_cuts', 'minecraft:bone_meal')
+      .duration(70)
+      .EUt(3) 
+    //#endregion
+});
