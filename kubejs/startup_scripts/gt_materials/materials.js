@@ -509,9 +509,9 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
 
 
     //#region ae2
-    event.create('sky_stone')
-        .element(GTElements.get('sky_stone'))
+    event.create('mystery')
+        .element(GTElements.get('mystery'))
 
-    compIngotLiquidSeccolor('futura_alloy', ['4x stainless_steel', 'sky_stone'], 0xebb7ea, 0x000000, SHINY, [1700, 'low', 400, 1200], [frame, plates, rod, dense_plate, mortar_grind, block])
+    compIngotLiquidSeccolor('futura_alloy', ['4x stainless_steel', 'mystery'], 0xebb7ea, 0x000000, SHINY, [1700, 'low', 400, 1200], [frame, plates, rod, dense_plate, mortar_grind, block])
     //#endregion
 });
