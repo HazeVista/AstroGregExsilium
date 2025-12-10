@@ -109,6 +109,8 @@ ServerEvents.recipes(event => {
         'minecraft:golden_chestplate', 'botania:manasteel_boots', 'botania:manasteel_leggings', 'botania:manasteel_chestplate', 'botania:manasteel_helmet', 'botania:elementium_boots', 'botania:elementium_leggings',
         'botania:elementium_chestplate', 'botania:elementium_helmet', 'ae2:network/cells/view_cell', 'ae2:tools/network_memory_card', 'ae2:decorative/quartz_fixture', 'ae2:network/wireless_booster', 
         'ae2:network/parts/panels_semi_dark_monitor', 'buildinggadgets2:template_manager', 'gtceu:macerator/macerate_hay_block', 'gtceu:macerator/macerate_sugar_cane',
+        'farmersdelight:apple_pie_from_slices', 'farmersdelight:chocolate_pie_from_slices', 'farmersdelight:sweet_berry_cheesecake_from_slices', 'farmersdelight:pumpkin_from_slices',
+        'farmersdelight:cutting/apple_pie', 'farmersdelight:cutting/chocolate_pie', 'farmersdelight:cutting/sweet_berry_cheesecake', 'farmersdelight:cutting/pumpkin'
     ]
 
     //#region remove type
