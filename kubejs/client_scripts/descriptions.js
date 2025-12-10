@@ -37,6 +37,31 @@ ItemEvents.tooltip(event => {
     event.addAdvanced('gtceu:uv_mana_infuser', (item, advanced, text) => {
         text.add(1, Text.of('§o§7Mystical Mana Mayhem Machine!'))
     })
+    // Mana Producer
+    event.addAdvanced('gtceu:lv_mana_producer', (item, advanced, text) => {
+        text.add(1, Text.of('§o§7Grinding for mana!'))
+    })
+    event.addAdvanced('gtceu:mv_mana_producer', (item, advanced, text) => {
+        text.add(1, Text.of('§o§7Grinding for mana!'))
+    })
+    event.addAdvanced('gtceu:hv_mana_producer', (item, advanced, text) => {
+        text.add(1, Text.of('§o§7Grinding for mana!'))
+    })
+    event.addAdvanced('gtceu:ev_mana_producer', (item, advanced, text) => {
+        text.add(1, Text.of('§o§7Grinding for mana!'))
+    })   
+    event.addAdvanced('gtceu:iv_mana_producer', (item, advanced, text) => {
+        text.add(1, Text.of('§o§7MANA OVERLOAD!!'))
+    })
+    event.addAdvanced('gtceu:luv_mana_producer', (item, advanced, text) => {
+        text.add(1, Text.of('§o§7MANA OVERLOAD!!'))
+    })  
+    event.addAdvanced('gtceu:zpm_mana_producer', (item, advanced, text) => {
+        text.add(1, Text.of('§o§7MANA OVERLOAD!!'))
+    })
+    event.addAdvanced('gtceu:uv_mana_producer', (item, advanced, text) => {
+        text.add(1, Text.of('§o§7Way too much mana to know what to do with'))
+    })
 
     event.addAdvanced('gtceu:aether_engine', (item, advanced, text) => {
         text.add(3, Text.of('Converts §3Æther§r into EU'))
