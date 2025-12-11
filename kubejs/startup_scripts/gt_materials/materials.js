@@ -6,8 +6,6 @@ const $BlastProperty = global.BlastProperty;
 const $FluidPipeProperties = global.FluidPipeProperties;
 const $PropertyKey = global.PropertyKey;
 const $ToolProperty = Java.loadClass('com.gregtechceu.gtceu.api.data.chemical.material.properties.ToolProperty');
-const $AstraItems = Java.loadClass('earth.terrarium.adastra.common.registry.ModItems');
-const $AstraBlocks = Java.loadClass('earth.terrarium.adastra.common.registry.ModBlocks');
 //#endregion
 
 //#region elements
@@ -113,7 +111,46 @@ const no_abs_recipe = GTMaterialFlags.DISABLE_ALLOY_BLAST;
 const not_alloy = GTMaterialFlags.DISABLE_ALLOY_PROPERTY;
 //#endregion
 
+//region Tool Type Types
+    const BotanicTools = [
+        GTToolType.SWORD,
+            GTToolType.PICKAXE,
+            GTToolType.SHOVEL,
+            GTToolType.AXE,
+            GTToolType.HOE,
+            GTToolType.MINING_HAMMER,
+            GTToolType.SPADE,
+            GTToolType.SAW,
+            GTToolType.HARD_HAMMER,
+            GTToolType.SOFT_MALLET,
+            GTToolType.WRENCH,
+            GTToolType.FILE,
+            GTToolType.CROWBAR,
+            GTToolType.SCREWDRIVER,
+            GTToolType.MORTAR,
+            GTToolType.WIRE_CUTTER,
+            GTToolType.SCYTHE,
+            GTToolType.KNIFE,
+            GTToolType.BUTCHERY_KNIFE,
+            GTToolType.PLUNGER,
+            GTToolType.DRILL_LV,
+            GTToolType.DRILL_MV,
+            GTToolType.DRILL_HV,
+            GTToolType.DRILL_EV,
+            GTToolType.DRILL_IV,
+            GTToolType.CHAINSAW_LV,
+            GTToolType.BUZZSAW,
+            GTToolType.SCREWDRIVER_LV,
+            GTToolType.WRENCH_LV,
+            GTToolType.WRENCH_HV,
+            GTToolType.WRENCH_IV,
+            GTToolType.WIRE_CUTTER_LV,
+            GTToolType.WIRE_CUTTER_HV,
+            GTToolType.WIRE_CUTTER_IV
+    ]
+//#endregion
 
+//#region 
 
 //#region voltage functions
 const V = (voltage) => {
@@ -129,7 +166,62 @@ const VHA = (voltage) => {
     return global.vha[voltage]}
 //#endregion
 
+//#region Materials Table
+// For docs visit https://discord.com/channels/1428076898000568492/1431300132443259053/1448515860980432957
 
+// Name, Flags
+const MaterialModifier = [
+    ['titanium', [dense_plate]],
+    ['neutronium', [dense_plate]],
+    ['iron', [foil]],
+    ['potin', [foil, ring]],
+    ['brass', [foil, ring]],
+    ['invar', [ring, foil]],
+    ['red_alloy', [ring]],
+    ['zinc', [bolt_and_screw]],
+    ['nickel', [foil, ring, rod, bolt_and_screw]]
+]
+// Name, Elements, Color, Flags
+const ComponentDust = [
+    ['andesite_alloy', ['1x andesite', '1x iron'], 0xa6a08f, [centrifuge]],
+    ['asteroid_stone', [], 0x70276b, []],
+    ['inactive_terrasteel', [], 0x128719, []],
+    ['livingrock', [], 0xc9c2b1, []],
+    ['livingclay', [], 0xc9c2e7, []]
+]
+// Name, Elements, Color, Icon, Flags
+const ComponentGem = [
+    ['mana_diamond', [], 0x47eaed, DIAMOND, [crystallizable]],
+    ['dragonstone', [], 0xed64d4, DIAMOND, [crystallizable]]
+]
+// Name, Elements, Color, Flags
+const ComponentGas = [
+    ['aether', [], 0x26a33f, []]  
+]
+// Name, Elements, Color, Flags
+const ComponentLiquid = [
+    ['depleted_aether', [], 0x33693e, []]
+]
+// Name, Elements, Color1, Color2, Icon, Blasting, Flags
+const ComponentIngotLiquidTwoColors = [
+    ['futura_alloy', ['4x stainless_steel', /*'sky_stone'*/], 0xebb7ea, 0x000000, SHINY, [1700, 'low', 400, 1200], [frame, plates, rod, dense_plate, mortar_grind, block]]
+]
+// Name, Color, IconSet, Blasting, FluidPipeProperties, ToolStats, Flags
+const BotaniaMaterials = [
+    
+]
+// Name, Elements, Color, Icon, Blasting, Cable, Rotorstats
+const SuperConductors = [
+    ['blazing_etrium', [], 0x8ee8ed, [1700, 'low', VA('mv'), 1200], [V('mv'), 8, 0, true], [190, 150, 3, 14000]],
+    ['niotic_calorite', [], 0xe4eb60, [1700, 'low', VA('hv'), 1500], [V('hv'), 16, 0, true], [220, 170, 3, 16000]],
+    ['spirited_uranium', [], 0xcb74cc, [3500, 'low', VA('ev'), 1800], [V('ev'), 24, 0, true], [300, 190, 3, 18000]],
+    ['nitromangaphosphide', [], 0x110c9c, [4400, 'mid', VA('iv'), 2100], [V('iv'), 32, 0, true], [450, 220, 3, 20000]],
+    ['juperiosaturlytide', [], 0xf66999, [5300, 'mid', VA('luv'), 2400], [V('luv'), 48, 0, true], [700, 260, 3, 24000]],
+    ['gaiaforged_naquadah', [], 0x421218, [7100, 'high', VA('zpm'), 2700], [V('zpm'), 64, 0, true], [1100, 380, 3, 32000]],
+    ['neptunium_molybdenum_selenide', [], 0x088a5c, [10000, 'higher', VA('uv'), 3000], [V('uv'), 96, 0, true], [2000, 550, 3, 48000]],
+    //['', [], 0xccffff, [10799, 'highest', VA('uhv'), 3300], [3200, 660, 3, 96000]]
+]
+// 
 
 GTCEuStartupEvents.registry('gtceu:material', event => {
     //#region periodic materials
@@ -148,195 +240,77 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     // Plasma
 
     // Material modification
-    const matmod = (mat, flag) => {
-        GTMaterials.get(mat).addFlags(flag);
-    }
-
-    matmod('titanium', [dense_plate]);
-    matmod('neutronium', [dense_plate]);
-    matmod('iron', [foil])
-    matmod('potin', [foil, ring])
-    matmod('brass', [foil, ring])
-    matmod('invar', [ring, foil])
-    matmod('red_alloy', [ring])
-    matmod('zinc', [bolt_and_screw])
-    matmod('nickel', [foil, ring, rod, bolt_and_screw])
-
-     // Blast Properties of periodic table metals
-    const blast = global.blastProperty;
+    MaterialModifier.forEach(material => {
+        GTMaterials.get(material[0]).addFlags(material[1]);
+    })
     //#endregion
 
-
-    //credit to @trulyno and the Star Technology team for most of the builder code below
-
-
-    //#region material builders        
-    const compIngot = (name, elements, color, icon, blasting, flags) => {
-        if (blasting.includes(blasting[0])){
-            event.create(name).ingot().components(elements).color(color).iconSet(icon).flags(flags).blastTemp(blasting[0], blasting[1], blasting[2], blasting[3]);
-        } else {
-            event.create(name).ingot().fluid().components(elements).color(color).iconSet(icon);
+    ComponentDust.forEach(material => {
+        event.create(material[0])
+        .dust()
+        .components(material[1])
+        .color(material[2])
+        .flags(material[3]);
+    })
+    ComponentGem.forEach(material => {
+        event.create(material[0])
+        .gem()
+        .components(material[1])
+        .color(material[2])
+        .iconSet(material[3])
+        .flags(material[4]);
+    })
+    ComponentGas.forEach(material => {
+        event.create(material[0])
+        .gas()
+        .components(material[1])
+        .color(material[2])
+        .flags(material[3]);
+    })
+    ComponentLiquid.forEach(material => {
+        event.create(material[0])
+        .fluid()
+        .components(material[1])
+        .color(material[2])
+        .flags(material[3]);
+    })
+    ComponentIngotLiquidTwoColors.forEach(material => {
+        if (material[4].length != 0) {
+            event.create(material[0])
+            .ingot().fluid()
+            .components(material[1])
+            .color(material[2]).secondaryColor(material[3])
+            .iconSet(material[4])
+            .blastTemp(material[5][0], material[5][1], material[5][2], material[5][3])
+            .flags(material[6]);
+            return // early return if it can blast
+        } 
+        event.create(material[0])
+        .ingot().fluid()
+        .components(material[1])
+        .color(material[2]).secondaryColor(material[3])
+        .iconSet(material[4])
+        .flags(material[6]);
+    })
+    SuperConductors.forEach(material => {
+        if (material[3].length != 0) {
+            event.create(material[0])
+            .ingot().fluid()
+            .components(materials[1])
+            .color(materials[2])
+            .blastTemp(material[3][0], material[3][1], material[3][2], material[3][3])
+            .cableProperties(material[4][0], material[4][1], material[4][2], material[4][3])
+            .rotorStats(material[5][0], material[5][1], material[5][2], material[5][3]);
+            return // early return if it can blast
         }
-    }
+        event.create(material[0])
+        .ingot().fluid()
+        .components(materials[1])
+        .color(materials[2])
+        .cableProperties(material[4][0], material[4][1], material[4][2], material[4][3])
+        .rotorStats(material[5][0], material[5][1], material[5][2], material[5][3]);
+    })
 
-    const elemIngot = (name, element, color, icon, blasting, flags) => {
-        if (blasting.includes(blasting[0])){
-            event.create(name).ingot().element(GTElements.get(element)).color(color).iconSet(icon).flags(flags).blastTemp(blasting[0], blasting[1], blasting[2], blasting[3]);
-        } else {
-            event.create(name).ingot().fluid().element(GTElements.get(element)).color(color).iconSet(icon).flags(flags);
-        }
-    }
-
-    const compIngotLiquid = (name, elements, color, icon, blasting, flags) => {
-        if (blasting.includes(blasting[0])){
-            event.create(name).ingot().fluid().components(elements).color(color).iconSet(icon).flags(flags).blastTemp(blasting[0], blasting[1], blasting[2], blasting[3]);
-        } else {
-            event.create(name).ingot().fluid().components(elements).color(color).iconSet(icon).flags(flags);
-        }
-    }
-
-    const compIngotLiquidSeccolor = (name, elements, color1, color2, icon, blasting, flags) => {
-        if (blasting.includes(blasting[0])){
-            event.create(name).ingot().fluid().components(elements).color(color1).secondaryColor(color2).iconSet(icon).flags(flags).blastTemp(blasting[0], blasting[1], blasting[2], blasting[3]);
-        } else {
-            event.create(name).ingot().fluid().components(elements).color(color1).secondaryColor(color2).iconSet(icon).flags(flags);
-        }
-    }
-
-    const elemIngotFluid = (name, color, icon, blasting, flags) => {
-        if (blasting.includes(blasting[0])){
-            event.create(name).ingot().fluid().element(GTElements.get(name)).color(color).iconSet(icon).flags(flags).blastTemp(blasting[0], blasting[1], blasting[2], blasting[3]);
-        } else {
-            event.create(name).ingot().fluid().element(GTElements.get(name)).color(color).iconSet(icon).flags(flags);
-        }
-    }
-    
-    const compLiquid = (name, elements, color, flags) => {
-        event.create(name).fluid().components(elements).color(color).flags(flags);
-    }
-
-    const elemFluid = (name, element, color, flags) => {
-        event.create(name).fluid().element(GTElements.get(element)).color(color).flags(flags);
-    }
-
-    const compLiquidTemp = (name, heat, elements, color, flags) => {
-        event.create(name).liquid(new GTFluidBuilder().temperature(heat)).components(elements).color(color).flags(flags);
-    }
-    
-    const compLiquidStill = (name, elements, flags) => {
-        event.create(name).liquid(new GTFluidBuilder().state(GTFluidState.LIQUID).customStill()).components(elements).flags(flags);
-    }
-    
-    const compDustLiquid = (name, elements, color, flags) => {
-        event.create(name).dust().fluid().components(elements).color(color).flags(flags);
-    }
-
-    const elemDustFluid = (name, color, flags) => {
-        event.create(name).dust().fluid().element(GTElements.get(name)).color(color).flags(flags);
-    }
-    
-    const compDust = (name, elements, color, flags) => {
-        event.create(name).dust().components(elements).color(color).flags(flags);
-    }
-    
-    const compDustIcon = (name, elements, color, icon, flags) => {
-        event.create(name).dust().components(elements).color(color).iconSet(icon).flags(flags);
-    }
-
-    const elemDust = (name, color, flags) => {
-        event.create(name).dust().element(GTElements.get(name)).color(color).flags(flags);
-    }
-    
-    const compGem = (name, elements, color, icon, flags) => {
-        event.create(name).gem().components(elements).color(color).iconSet(icon).flags(flags);
-    }
-
-    const elemGem = (name, color, icon, flags) => {
-        event.create(name).gem().element(GTElements.get(name)).iconSet(icon).color(color).flags(flags);
-    }
-    
-    const compGas = (name, elements, color, flags) => {
-        event.create(name).gas().components(elements).color(color).flags(flags);
-    }
-
-    const elemGas = (name, color, flags) => {
-        event.create(name).gas().element(GTElements.get(name)).color(color).flags(flags);
-    }
-
-    const polymerFluid = (name, elements, color, pipe, flags) => {
-            event.create(name).polymer().fluid().components(elements).color(color).flags(flags).fluidPipeProperties(pipe[0], pipe[1], pipe[2], pipe[3], pipe[4], pipe[5]);
-    }
-
-    const conductor = (name, elements, color, icon, blasting, cable, flags) => {
-        event.create(name).ingot().fluid().components(elements).color(color).iconSet(icon).flags(flags).blastTemp(blasting[0], blasting[1], blasting[2], blasting[3]).cableProperties(cable[0], cable[1], cable[2], cable[3]);
-    }
-    
-    const conductorSuper = (name, elements, color, blasting, cable, rotorstat) => {
-        if (blasting.includes(blasting[0])){
-            event.create(name).ingot().fluid().components(elements).color(color).iconSet(SHINY).flags(foil, gear, long_rod, plates, rod, rotor, small_gear, ring, frame, fine_wire)
-                .blastTemp(blasting[0], blasting[1], blasting[2], blasting[3]).cableProperties(cable[0], cable[1], cable[2], cable[3]).rotorStats(rotorstat[0], rotorstat[1], rotorstat[2], rotorstat[3]);
-        } else {
-            event.create(name).ingot().fluid().components(elements).color(color).iconSet(SHINY).flags(foil, gear, long_rod, plates, rod, rotor, small_gear, ring, frame, fine_wire)
-                .cableProperties(cable[0], cable[1], cable[2], cable[3]).rotorStats(rotorstat[0], rotorstat[1], rotorstat[2], rotorstat[3]);
-        }
-    }
-
-    const compDustLiquidOre = (name, elements, color, flags) => {
-        event.create(name).dust().liquid().ore(2, 1).components(elements).color(color).flags(flags);
-    }
-    
-    const compDustOreIngot = (name, elements, color, blasting) => {
-        if (blasting.includes(blasting[0])){
-        event.create(name).ingot().dust().ore(2, 1).components(elements).color(color).blastTemp(blasting[0], blasting[1], blasting[2], blasting[3]).flags(no_decomp);
-        } else {
-        event.create(name).ingot().dust().ore(2, 1).components(elements).color(color).flags(no_decomp);
-        }
-    }
-    
-    const compGemOre = (name, elements, color, icon) => {
-        event.create(name).gem().ore(2, 1).components(elements).color(color).iconSet(icon);
-    }
-
-    const compIngotPlasma = (name, elements, color, icon, blasting, flags) => {
-        event.create(name).ingot().plasma().components(elements).color(color).iconSet(icon).flags(flags).blastTemp(blasting[0], [1], blasting[2], blasting[3]);
-    }
-
-    const compConductorPlasma = (name, elements, color, icon, blasting, cable, flags) => {
-        event.create(name).ingot().plasma().components(elements).color(color).iconSet(icon).flags(flags).blastTemp(blasting[0], blasting[1], blasting[2], blasting[3]).cableProperties(cable[0], cable[1], cable[2], cable[3]);
-    }
-    //#endregion
-
-
-
-    //#region 
-    compDust('andesite_alloy', ['1x andesite', '1x iron'], 0xa6a08f, [centrifuge]);
-    compDust('asteroid_stone', [], 0x70276b, [])
-    //#endregion
-
-
-
-    //#region superconductors
-    conductorSuper('energized_steel', [], 0xbaa172, [], [V('lv'), 4, 0, true], [150, 130, 3, 12000]);
-    conductorSuper('blazing_etrium', [], 0x8ee8ed, [1700, 'low', VA('mv'), 1200], [V('mv'), 8, 0, true], [190, 150, 3, 14000]);
-    conductorSuper('niotic_calorite', [], 0xe4eb60, [1700, 'low', VA('hv'), 1500], [V('hv'), 16, 0, true], [220, 170, 3, 16000]);
-    conductorSuper('spirited_uranium', [], 0xcb74cc, [3500, 'low', VA('ev'), 1800], [V('ev'), 24, 0, true], [300, 190, 3, 18000]);
-    conductorSuper('nitromangaphosphide', [], 0x110c9c, [4400, 'mid', VA('iv'), 2100], [V('iv'), 32, 0, true], [450, 220, 3, 20000]);
-    conductorSuper('juperiosaturlytide', [], 0xf66999, [5300, 'mid', VA('luv'), 2400], [V('luv'), 48, 0, true], [700, 260, 3, 24000]);
-    conductorSuper('gaiaforged_naquadah', [], 0x421218, [7100, 'high', VA('zpm'), 2700], [V('zpm'), 64, 0, true], [1100, 380, 3, 32000]);
-    conductorSuper('neptunium_molybdenum_selenide', [], 0x088a5c, [10000, 'higher', VA('uv'), 3000], [V('uv'), 96, 0, true], [2000, 550, 3, 48000]);
-    // conductorSuper('', [], 0xccffff, [10799, 'highest', VA('uhv'), 3300], [V('uhv'), 128, 0, true], [3200, 660, 3, 96000]);
-    //#endregion
-    
-    
-    
-    //#region botania
-    compGem('mana_diamond', [], 0x47eaed, DIAMOND, [crystallizable])
-    compGem('dragonstone', [], 0xed64d4, DIAMOND, [crystallizable])
-    compDust('inactive_terrasteel', [], 0x128719, [])
-    compDust('livingrock', [], 0xc9c2b1, [])
-    compDust('livingclay', [], 0xc9c2e7, [])
-    compGas('aether', [], 0x26a33f, [])
-    compLiquid('depleted_aether', [], 0x33693e, [])
 
     event.create('manasteel')
         .ingot()
@@ -346,41 +320,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
         .blastTemp(1000, 'low', 120, 400)
         .fluidPipeProperties(1855, 600, true, false, false, false)
         .flags(foil, gear, plates, rod, dense_plate, ring, frame, bolt_and_screw, mortar_grind)
-        .toolStats(new ToolProperty(8.0, 7.0, 768, 3, 
-            [GTToolType.SWORD,
-            GTToolType.PICKAXE,
-            GTToolType.SHOVEL,
-            GTToolType.AXE,
-            GTToolType.HOE,
-            GTToolType.MINING_HAMMER,
-            GTToolType.SPADE,
-            GTToolType.SAW,
-            GTToolType.HARD_HAMMER,
-            GTToolType.SOFT_MALLET,
-            GTToolType.WRENCH,
-            GTToolType.FILE,
-            GTToolType.CROWBAR,
-            GTToolType.SCREWDRIVER,
-            GTToolType.MORTAR,
-            GTToolType.WIRE_CUTTER,
-            GTToolType.SCYTHE,
-            GTToolType.KNIFE,
-            GTToolType.BUTCHERY_KNIFE,
-            GTToolType.PLUNGER,
-            GTToolType.DRILL_LV,
-            GTToolType.DRILL_MV,
-            GTToolType.DRILL_HV,
-            GTToolType.DRILL_EV,
-            GTToolType.DRILL_IV,
-            GTToolType.CHAINSAW_LV,
-            GTToolType.BUZZSAW,
-            GTToolType.SCREWDRIVER_LV,
-            GTToolType.WRENCH_LV,
-            GTToolType.WRENCH_HV,
-            GTToolType.WRENCH_IV,
-            GTToolType.WIRE_CUTTER_LV,
-            GTToolType.WIRE_CUTTER_HV,
-            GTToolType.WIRE_CUTTER_IV]))
+        .toolStats(new ToolProperty(8.0, 7.0, 768, 3, BotanicTools))
         
     event.create('terrasteel')
         .ingot()
@@ -390,41 +330,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
         .blastTemp(1700, 'low', VA('mv'), 800)
         .fluidPipeProperties(2142, 225, true, false, false, false)
         .flags(foil, gear, plates, rod, dense_plate, ring, frame, bolt_and_screw)
-        .toolStats(new ToolProperty(11.0, 11.0, 2048, 3.0, 
-            [GTToolType.SWORD,
-            GTToolType.PICKAXE,
-            GTToolType.SHOVEL,
-            GTToolType.AXE,
-            GTToolType.HOE,
-            GTToolType.MINING_HAMMER,
-            GTToolType.SPADE,
-            GTToolType.SAW,
-            GTToolType.HARD_HAMMER,
-            GTToolType.SOFT_MALLET,
-            GTToolType.WRENCH,
-            GTToolType.FILE,
-            GTToolType.CROWBAR,
-            GTToolType.SCREWDRIVER,
-            GTToolType.MORTAR,
-            GTToolType.WIRE_CUTTER,
-            GTToolType.SCYTHE,
-            GTToolType.KNIFE,
-            GTToolType.BUTCHERY_KNIFE,
-            GTToolType.PLUNGER,
-            GTToolType.DRILL_LV,
-            GTToolType.DRILL_MV,
-            GTToolType.DRILL_HV,
-            GTToolType.DRILL_EV,
-            GTToolType.DRILL_IV,
-            GTToolType.CHAINSAW_LV,
-            GTToolType.BUZZSAW,
-            GTToolType.SCREWDRIVER_LV,
-            GTToolType.WRENCH_LV,
-            GTToolType.WRENCH_HV,
-            GTToolType.WRENCH_IV,
-            GTToolType.WIRE_CUTTER_LV,
-            GTToolType.WIRE_CUTTER_HV,
-            GTToolType.WIRE_CUTTER_IV]))
+        .toolStats(new ToolProperty(11.0, 11.0, 2048, 3.0, BotanicTools))
             
     event.create('elementium')
         .ingot()
@@ -434,41 +340,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
         .blastTemp(3500, 'mid', VA('iv'), 1600)
         .fluidPipeProperties(2426, 300, true, false, false, false)
         .flags(foil, gear, plates, rod, dense_plate, ring, frame, bolt_and_screw)
-        .toolStats(new ToolProperty(16.0, 13.0, 3072, 4.0, 
-            [GTToolType.SWORD,
-            GTToolType.PICKAXE,
-            GTToolType.SHOVEL,
-            GTToolType.AXE,
-            GTToolType.HOE,
-            GTToolType.MINING_HAMMER,
-            GTToolType.SPADE,
-            GTToolType.SAW,
-            GTToolType.HARD_HAMMER,
-            GTToolType.SOFT_MALLET,
-            GTToolType.WRENCH,
-            GTToolType.FILE,
-            GTToolType.CROWBAR,
-            GTToolType.SCREWDRIVER,
-            GTToolType.MORTAR,
-            GTToolType.WIRE_CUTTER,
-            GTToolType.SCYTHE,
-            GTToolType.KNIFE,
-            GTToolType.BUTCHERY_KNIFE,
-            GTToolType.PLUNGER,
-            GTToolType.DRILL_LV,
-            GTToolType.DRILL_MV,
-            GTToolType.DRILL_HV,
-            GTToolType.DRILL_EV,
-            GTToolType.DRILL_IV,
-            GTToolType.CHAINSAW_LV,
-            GTToolType.BUZZSAW,
-            GTToolType.SCREWDRIVER_LV,
-            GTToolType.WRENCH_LV,
-            GTToolType.WRENCH_HV,
-            GTToolType.WRENCH_IV,
-            GTToolType.WIRE_CUTTER_LV,
-            GTToolType.WIRE_CUTTER_HV,
-            GTToolType.WIRE_CUTTER_IV]))
+        .toolStats(new ToolProperty(16.0, 13.0, 3072, 4.0, BotanicTools))
 
     event.create('gaiasteel')
         .ingot()
@@ -478,41 +350,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
         .blastTemp(7100, 'high', VA('zpm'), 2400)
         .fluidPipeProperties(3776, 400, true, true, true, true)
         .flags(foil, gear, plates, rod, dense_plate, ring, frame, bolt_and_screw)
-        .toolStats(ToolProperty.Builder.of(48.0, 16.0, 4096, 5.0, 
-            [GTToolType.SWORD,
-            GTToolType.PICKAXE,
-            GTToolType.SHOVEL,
-            GTToolType.AXE,
-            GTToolType.HOE,
-            GTToolType.MINING_HAMMER,
-            GTToolType.SPADE,
-            GTToolType.SAW,
-            GTToolType.HARD_HAMMER,
-            GTToolType.SOFT_MALLET,
-            GTToolType.WRENCH,
-            GTToolType.FILE,
-            GTToolType.CROWBAR,
-            GTToolType.SCREWDRIVER,
-            GTToolType.MORTAR,
-            GTToolType.WIRE_CUTTER,
-            GTToolType.SCYTHE,
-            GTToolType.KNIFE,
-            GTToolType.BUTCHERY_KNIFE,
-            GTToolType.PLUNGER,
-            GTToolType.DRILL_LV,
-            GTToolType.DRILL_MV,
-            GTToolType.DRILL_HV,
-            GTToolType.DRILL_EV,
-            GTToolType.DRILL_IV,
-            GTToolType.CHAINSAW_LV,
-            GTToolType.BUZZSAW,
-            GTToolType.SCREWDRIVER_LV,
-            GTToolType.WRENCH_LV,
-            GTToolType.WRENCH_HV,
-            GTToolType.WRENCH_IV,
-            GTToolType.WIRE_CUTTER_LV,
-            GTToolType.WIRE_CUTTER_HV,
-            GTToolType.WIRE_CUTTER_IV])
+        .toolStats(ToolProperty.Builder.of(48.0, 16.0, 4096, 5.0, BotanicTools)
         .magnetic() 
         .build())
     //#endregion
