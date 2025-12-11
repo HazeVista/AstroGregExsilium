@@ -53,7 +53,7 @@ ServerEvents.recipes(event => {
         'ae2:transform/damaged_budding_quartz', 'ae2:transform/chipped_budding_quartz', 'ae2:network/blocks/spatial_io_port', 'ae2:network/blocks/io_port', 'laserio:filter_basic', 'farmersdelight:cooking_pot',
         'ae2:transform/flawed_budding_quartz', 'ae2:transform/fluix_crystals', 'ae2:transform/fluix_crystal', 'ae2:network/blocks/interfaces_interface', 'ae2:network/blocks/io_condenser',
         'ae2:network/crafting/molecular_assembler', 'ae2:network/blocks/pattern_providers_interface', 'ae2:network/crafting/cpu_crafting_unit', 'ae2:network/blocks/energy_energy_acceptor',
-        'laserio:filter_mod', 'laserio:filter_count', 'laserio:filter_tag', 'laserio:filter_mod', 'ad_astra:rocket_nose_cone', 'farmersdelight:apple_pie',
+        'laserio:filter_mod', 'laserio:filter_count', 'laserio:filter_tag', 'laserio:filter_mod', 'ad_astra:rocket_nose_cone', 'farmersdelight:apple_pie', 'delightful:cutting/salmonberry_pie',
         'botania:mana_infusion/netherrack_dupe', 'createaddition:mixing/netherrack', 'botania:mana_infusion/soul_sand_dupe', 'botania:mana_infusion/glowstone_dupe', 'botania:mana_infusion/redstone_dupe',
         'botania:mana_infusion/quartz_dupe', 'botania:mana_infusion/coal_dupe', 'botania:mana_infusion/gravel_dupe', 'minecraft:netherite_drill_smithing', 'create:crafting/kinetics/fluid_tank',
         'create:crafting/kinetics/white_sail', 'create:crafting/kinetics/fluid_valve', 'farmersdelight:rope', 'gtceu:autoclave/silicon_dioxide_to_quartzite_gem', 'gtceu:assembler/end_crystal',
@@ -97,7 +97,7 @@ ServerEvents.recipes(event => {
         'botania:mana_spreader', 'botania:elven_spreader', 'botania:bauble_box', 'botania:fabulous_pool_upgrade', 'botania:shimmerrock', 'botania:forest_eye', 'botania:hourglass', 'botania:spawner_mover',
         'botania:slime_bottle', 'botania:world_seed', 'botania:spawner_claw', 'botania:sextant', 'botania:astrolabe', 'botania:black_hole_talisman', 'botania:spark_changer', 'botania:mana_distributor', 
         'botania:pump', 'botania:knockback_belt', 'botania:travel_belt', 'botania:super_travel_belt', 'botania:speed_up_belt', 'botania:flighttiara_0', 'botania:super_cloud_pendant', 'botania:super_lava_pendant',
-        'botania:conjuration_catalyst', 'botania:alchemy_catalyst', 'botania:conjuration_catalyst', 'botania:redstone_root', 'botania:petal_apothecary/clayconia', 
+        'botania:conjuration_catalyst', 'botania:alchemy_catalyst', 'botania:conjuration_catalyst', 'botania:redstone_root', 'botania:petal_apothecary/clayconia', 'delightful:food/salmonberry_pie_from_slices', 
         'botania:mana_infusion/clayconia_chibi', 'botania:floating_clayconia', 'botania:floating_clayconia_chibi', 'minecraft:blaze_powder', 'gtceu:shapeless/pumpkin_pie_from_dough',
         'gtceu:shapeless/block_decompress_mana_diamond_gem', 'botania:mana_mirror', 'gtceu:shapeless/manadiamond_block_deconstruct', 'gtceu:shaped/block_compress_mana_diamond', 'createlowheated:mixing/chocolate',
         'gtceu:shapeless/dragonstone_block_deconstruct', 'gtceu:shaped/block_compress_mana_diamond', 'botania:spark', 'botania:petal_apothecary/vazkii_head', 'botania:runic_altar/head',
@@ -108,11 +108,11 @@ ServerEvents.recipes(event => {
         'minecraft:diamond_helmet', 'minecraft:diamond_chestplate', 'minecraft:diamond_leggings', 'minecraft:diamond_boots', 'minecraft:golden_boots', 'minecraft:golden_leggings', 'minecraft:golden_helmet', 
         'minecraft:golden_chestplate', 'botania:manasteel_boots', 'botania:manasteel_leggings', 'botania:manasteel_chestplate', 'botania:manasteel_helmet', 'botania:elementium_boots', 'botania:elementium_leggings',
         'botania:elementium_chestplate', 'botania:elementium_helmet', 'ae2:network/cells/view_cell', 'ae2:tools/network_memory_card', 'ae2:decorative/quartz_fixture', 'ae2:network/wireless_booster', 
-        'ae2:network/parts/panels_semi_dark_monitor', 'buildinggadgets2:template_manager', 'gtceu:macerator/macerate_hay_block', 'gtceu:macerator/macerate_sugar_cane',
-        'farmersdelight:apple_pie_from_slices', 'farmersdelight:chocolate_pie_from_slices', 'farmersdelight:sweet_berry_cheesecake_from_slices', 'delightful:melon_slice',
-        'farmersdelight:cutting/apple_pie', 'farmersdelight:cutting/chocolate_pie', 'farmersdelight:cutting/sweet_berry_cheesecake', 
+        'ae2:network/parts/panels_semi_dark_monitor', 'buildinggadgets2:template_manager', 'gtceu:macerator/macerate_hay_block', 'gtceu:macerator/macerate_sugar_cane', 'delightful:food/pumpkin_pie_from_slices',
+        'farmersdelight:apple_pie_from_slices', 'farmersdelight:chocolate_pie_from_slices', 'farmersdelight:sweet_berry_cheesecake_from_slices', 'delightful:melon_slice', 'delightful:cutting/pumpkin_pie',
+        'farmersdelight:cutting/apple_pie', 'farmersdelight:cutting/chocolate_pie', 'farmersdelight:cutting/sweet_berry_cheesecake', 'delightful:food/baklava_from_slices', 'delightful:cutting/baklava',
         'gtceu:macerator/macerate_chicken', 'gtceu:macerator/macerate_rabbit', 'gtceu:macerator/macerate_mutton', 'gtceu:macerator/macerate_steak', 'gtceu:macerator/macerate_pork_chop',
-        'delightful:cutting/salmonberry_pie', 'delightful:cutting/baklava', 'delightful:cutting/pumpkin_pie', 'delightful:food/salmonberry_pie_from_slices', 'delightful:food/pumpkin_pie_from_slices', 'delightful:food/baklava_from_slices',
+        
     ]
 
     //#region remove type

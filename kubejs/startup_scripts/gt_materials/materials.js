@@ -238,7 +238,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     }
     
     const compDust = (name, elements, color, icon, flags) => {
-        event.create(name).dust().components(elements).color(color).iconSet(icon).flags(flags);
+        event.create(name).dust().components(elements).color(color).flags(flags);
     }
     
     const compDustIcon = (name, elements, color, icon, flags) => {
