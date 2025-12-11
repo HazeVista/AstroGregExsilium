@@ -19,6 +19,11 @@
     
     "material.gtceu.andesite_alloy": "Andesite Alloy",
     "material.gtceu.asteroid_stone": "Asteroid",
+    "material.gtceu.acorn": "Acorn",
+    "material.gtceu.tiny_acorn_dust": "Tiny Acorn Flour",
+    "material.gtceu.small_acorn_dust": "Small Acorn Flour",
+    "material.gtceu.acorn_dust": "Acorn Flour",
+
     "material.gtceu.inactive_terrasteel": "Inactive §2Terrasteel§r",
     "material.gtceu.terrasteel": "§2Terrasteel",
     "material.gtceu.manasteel": "§9Manasteel",

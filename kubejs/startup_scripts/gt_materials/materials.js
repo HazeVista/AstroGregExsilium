@@ -237,8 +237,8 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
         event.create(name).dust().fluid().element(GTElements.get(name)).color(color).flags(flags);
     }
     
-    const compDust = (name, elements, color, flags) => {
-        event.create(name).dust().components(elements).color(color).flags(flags);
+    const compDust = (name, elements, color, icon, flags) => {
+        event.create(name).dust().components(elements).color(color).iconSet(icon).flags(flags);
     }
     
     const compDustIcon = (name, elements, color, icon, flags) => {
@@ -250,7 +250,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     }
     
     const compGem = (name, elements, color, icon, flags) => {
-        event.create(name).gem().components(elements).color(color).iconSet(icon).flags(flags);
+        event.create(name).gem().components(elements).color(color).flags(flags);
     }
 
     const elemGem = (name, color, icon, flags) => {
@@ -310,9 +310,10 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
 
 
 
-    //#region 
+    //#region misc dust
     compDust('andesite_alloy', ['1x andesite', '1x iron'], 0xa6a08f, [centrifuge])
     compDust('asteroid_stone', [], 0x70276b, [])
+    compDust('acorn', [], 0x734d15, [])
     //#endregion
 
 
