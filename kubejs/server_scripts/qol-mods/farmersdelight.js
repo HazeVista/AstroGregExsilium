@@ -68,11 +68,11 @@ ServerEvents.recipes(event => {
     event.custom({
       type: "farmersdelight:cutting",
       ingredients: [
-        { item: "minecraft:pumpkin" }
+        { item: "minecraft:pumpkin_pie" }
       ],
       tool: { tag: "forge:tools/knives" },
       result: [
-        { item: "farmersdelight:pumpkin_slice", count: 6 }
+        { item: "delightful:pumpkin_pie_slice", count: 6 }
       ]
     })
 
@@ -108,6 +108,28 @@ ServerEvents.recipes(event => {
         { item: "farmersdelight:sweet_berry_cheesecake_slice", count: 6 }
       ]
     })
+
+    event.custom({
+      type: "farmersdelight:cutting",
+      ingredients: [
+        { item: "delightful:salmonberry_pie" }
+      ],
+      tool: { tag: "forge:tools/knives" },
+      result: [
+        { item: "delightful:salmonberry_pie_slice", count: 6 }
+      ]
+    })    
+
+    event.custom({
+      type: "farmersdelight:cutting",
+      ingredients: [
+        { item: "delightful:baklava" }
+      ],
+      tool: { tag: "forge:tools/knives" },
+      result: [
+        { item: "delightful:baklava_slice", count: 6 }
+      ]
+    })        
     //#endregion
 
     //#region wheat, dough, & straw 
