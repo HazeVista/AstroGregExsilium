@@ -4,8 +4,6 @@ ServerEvents.recipes(event => {
     //#region input
     event.replaceInput({input: 'create:copper_sheet'}, 'create:copper_sheet', 'gtceu:copper_plate');
     event.replaceInput({input: 'create:zinc_ingot'}, 'create:zinc_ingot', 'gtceu:zinc_ingot');
-    event.replaceInput({input: 'gtceu:energized_steel_ingot'}, 'gtceu:energized_steel_ingot','powah:steel_energized');
-    event.replaceInput({input: 'gtceu:energized_steel_block'}, 'gtceu:energized_steel_block','powah:energized_steel_block');
     event.replaceInput({}, 'botania:redstone_root', 'gtceu:red_alloy_dust')
     event.replaceInput({}, 'ad_astra:steel_rod', 'gtceu:steel_rod')
     event.replaceInput({}, 'ad_astra:iron_rod', 'gtceu:iron_rod')
@@ -53,13 +51,13 @@ ServerEvents.recipes(event => {
     event.replaceInput({}, 'gtceu:tungsten_grinding_head', 'gtceu:grinding_head_tungsten')
     event.replaceInput({}, 'botania:mana_glass', 'botania:managlass')
     event.replaceInput({}, 'botania:elf_glass', 'botania:alfglass')
+    event.replaceInput({}, 'ad_extendra:saturlyte_ingot', 'astrogreg:saturlyte_ingot')
+    event.replaceInput({}, 'ad_extendra:juperium_ingot', 'astrogreg:juperium_ingot')
     // event.replaceInput({input: ''}, '', '')
 
     //#endregion
     
     //#region output
-    event.replaceOutput({output: 'gtceu:energized_steel_ingot'}, 'gtceu:energized_steel_ingot','powah:steel_energized');
-    event.replaceOutput({output: 'gtceu:energized_steel_block'}, 'gtceu:energized_steel_block','powah:energized_steel_block');
     event.replaceOutput({output: 'gtceu:manasteel_ingot'}, 'gtceu:manasteel_ingot','botania:manasteel_ingot');
     event.replaceOutput({output: 'gtceu:manasteel_block'}, 'gtceu:manasteel_block','botania:manasteel_block');
     event.replaceOutput({output: 'gtceu:manasteel_nugget'}, 'gtceu:manasteel_nugget','botania:manasteel_nugget');
@@ -77,5 +75,7 @@ ServerEvents.recipes(event => {
     event.replaceOutput({output: 'gtceu:dragonstone_gem'}, 'gtceu:dragonstone_gem', 'botania:dragonstone')
     event.replaceOutput({output: 'gtceu:dragonstone_block'}, 'gtceu:dragonstone_block', 'botania:dragonstone_block')
     event.replaceOutput({output: 'ae2:certus_quartz_crystal'}, 'ae2:certus_quartz_crystal', 'gtceu:certus_quartz_gem')
+    event.replaceOutput({}, 'ad_extendra:saturlyte_ingot', 'astrogreg:saturlyte_ingot')
+    event.replaceOutput({}, 'ad_extendra:juperium_ingot', 'astrogreg:juperium_ingot')
     // event.replaceOutput({output: ''}, '', '')
 });

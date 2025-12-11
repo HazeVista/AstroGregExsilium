@@ -112,6 +112,36 @@ ServerEvents.recipes(event => {
     //#endregion
 
 
+
+    //#region etrium & blazing etrium
+
+    event.recipes.gtceu.mixer('mix_etrium_dust')
+        .itemInputs('3x astrogreg:ostrum_dust', '2x gtceu:electrum_dust')
+        .itemOutputs('5x astrogreg:etrium_dust')
+        .duration(200)
+        .EUt(28)
+
+    event.recipes.gtceu.alloy_smelter('alloy_blast_etrium')
+        .itemInputs('3x astrogreg:ostrum_dust', '2x gtceu:electrum_dust')
+        .outputFluids('astrogreg:etrium 720')
+        .duration(200)
+        .EUt(28)
+
+    event.recipes.gtceu.mixer('mix_blazing_etrium_dust')
+        .itemInputs('2x astrogreg:etrium_dust', 'minecraft:blaze_powder')
+        .itemOutputs('3x gtceu:blazing_etrium_dust')
+        .duration(300)
+        .EUt(28)
+
+    event.recipes.gtceu.alloy_smelter('alloy_blast_blazing_etrium')
+        .itemInputs('2x astrogreg:etrium_dust', 'minecraft:blaze_powder')
+        .outputFluids('gtceu:blazing_etrium 432')
+        .duration(300)
+        .EUt(28)
+
+    //#endregion
+
+
         
     //#region bottling
     event.recipes.gtceu.assembler('bottle_ender_air')

@@ -62,7 +62,9 @@ ServerEvents.recipes(event => {
     event.shapeless('4x create:chocolate_glazed_berries', ['minecraft:sweet_berries', 'minecraft:sweet_berries', 'minecraft:sweet_berries', 'minecraft:sweet_berries', 'minecraft:cocoa_beans', 'farmersdelight:milk_bottle']).replaceIngredient('farmersdelight:milk_bottle', 'minecraft:glass_bottle')
     event.shapeless('8x farmersdelight:sweet_berry_cookie', ['minecraft:sweet_berries', 'gtceu:dough'])
     event.shapeless('8x farmersdelight:honey_cookie', ['minecraft:honey_bottle', 'gtceu:dough']).replaceIngredient('minecraft:honey_bottle', 'minecraft:glass_bottle')
+    //#endregion
 
+    //#region cutting board
     event.custom({
       type: "farmersdelight:cutting",
       ingredients: [
@@ -108,7 +110,7 @@ ServerEvents.recipes(event => {
     })
     //#endregion
 
-    //#region wheat & straw
+    //#region wheat, dough, & straw 
     // event.recipes.gtceu.macerator('macerate_to_flour')
     //   .itemInputs('minecraft:wheat')
     //   .itemOutputs('gtceu:wheat_dust')

@@ -2,8 +2,8 @@ ServerEvents.recipes(event => {
     //#region remove input
     const toRemoveInput = ['ad_astra:moon_desh_ore', 'ad_astra:deepslate_desh_ore', 'ad_astra:ostrum_plate', 'ad_astra:calorite_plate', 'ad_astra:desh_plate',
         'minecraft:netherite_upgrade_smithing_template', 'ad_astra:fan', 'ad_astra:steel_ingot', 'ad_astra:ice_shard', 'gtceu:gaiasteel_ingot', 'create:creative_blaze_cake',
-        'create:blaze_cake_base', 'createaddition:cake_base_baked', 'create:blaze_cake', 'createaddition:cake_base', 'create:bar_of_chocolate', 'create:dough',
-        'expandedae:dual_cell_housing', 'expandedae:mega_dual_cell_housing'
+        'create:blaze_cake_base', 'createaddition:cake_base_baked', 'create:blaze_cake', 'createaddition:cake_base', 'create:dough',
+        'expandedae:dual_cell_housing', 'expandedae:mega_dual_cell_housing', 'astrogreg:tiny_sky_stone_dust', 'astrogreg:small_sky_stone_dust'
     ]
 
     //#region remove output
@@ -97,7 +97,7 @@ ServerEvents.recipes(event => {
         'botania:mana_spreader', 'botania:elven_spreader', 'botania:bauble_box', 'botania:fabulous_pool_upgrade', 'botania:shimmerrock', 'botania:forest_eye', 'botania:hourglass', 'botania:spawner_mover',
         'botania:slime_bottle', 'botania:world_seed', 'botania:spawner_claw', 'botania:sextant', 'botania:astrolabe', 'botania:black_hole_talisman', 'botania:spark_changer', 'botania:mana_distributor', 
         'botania:pump', 'botania:knockback_belt', 'botania:travel_belt', 'botania:super_travel_belt', 'botania:speed_up_belt', 'botania:flighttiara_0', 'botania:super_cloud_pendant', 'botania:super_lava_pendant',
-        'botania:conjuration_catalyst', 'botania:alchemy_catalyst', 'botania:conjuration_catalyst', 'botania:mana_fluxfield', 'botania:redstone_root', 'botania:petal_apothecary/clayconia', 
+        'botania:conjuration_catalyst', 'botania:alchemy_catalyst', 'botania:conjuration_catalyst', 'botania:redstone_root', 'botania:petal_apothecary/clayconia', 
         'botania:mana_infusion/clayconia_chibi', 'botania:floating_clayconia', 'botania:floating_clayconia_chibi', 'minecraft:blaze_powder', 'gtceu:shapeless/pumpkin_pie_from_dough',
         'gtceu:shapeless/block_decompress_mana_diamond_gem', 'botania:mana_mirror', 'gtceu:shapeless/manadiamond_block_deconstruct', 'gtceu:shaped/block_compress_mana_diamond', 'createlowheated:mixing/chocolate',
         'gtceu:shapeless/dragonstone_block_deconstruct', 'gtceu:shaped/block_compress_mana_diamond', 'botania:spark', 'botania:petal_apothecary/vazkii_head', 'botania:runic_altar/head',

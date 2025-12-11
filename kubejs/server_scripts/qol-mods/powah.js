@@ -209,7 +209,7 @@ ServerEvents.recipes(event => {
     ], {
         A: 'gtceu:magnetic_iron_rod',
         B: 'powah:dielectric_paste',
-        C: 'gtceu:fine_energized_steel_wire'
+        C: 'astrogreg:fine_energized_steel_wire'
     })
 
     // event.shaped('4x powah:capacitor_blazing', [
@@ -287,7 +287,7 @@ ServerEvents.recipes(event => {
         A: 'powah:battery_basic',
         B: 'powah:dielectric_rod',
         C: 'powah:capacitor_blazing',
-        D: 'gtceu:energized_steel_single_wire'
+        D: 'astrogreg:energized_steel_single_wire'
     })
     
     // event.shaped('powah:battery_blazing', [

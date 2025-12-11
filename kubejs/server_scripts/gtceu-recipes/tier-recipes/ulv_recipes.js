@@ -102,7 +102,7 @@ ServerEvents.recipes(event => {
 
     event.recipes.gtceu.mixer('mixing_energized_steel_dust')
         .itemInputs('astrogreg:desh_dust', 'gtceu:iron_dust', 'gtceu:red_alloy_dust')
-        .itemOutputs('gtceu:energized_steel_dust')
+        .itemOutputs('astrogreg:energized_steel_dust')
         .duration(200)
         .EUt(7)
 

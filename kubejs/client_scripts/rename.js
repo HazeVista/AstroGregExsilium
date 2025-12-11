@@ -86,4 +86,7 @@ event.renameItem('simplylight:illuminant_magenta_block_on', 'Illuminant Magenta 
 event.renameItem('simplylight:illuminant_pink_block_on', 'Illuminant Pink Block (On)')
 event.renameItem('simplylight:lamp_post', 'Illuminant Lamp Post')
 //#endregion
+
+//region misc
+event.renameItem('powah:steel_energized', 'Energized Steel Ingot')
 })

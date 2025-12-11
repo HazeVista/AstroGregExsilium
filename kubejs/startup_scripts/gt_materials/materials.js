@@ -8,6 +8,8 @@ const $PropertyKey = global.PropertyKey;
 const $ToolProperty = Java.loadClass('com.gregtechceu.gtceu.api.data.chemical.material.properties.ToolProperty');
 const $AstraItems = Java.loadClass('earth.terrarium.adastra.common.registry.ModItems');
 const $AstraBlocks = Java.loadClass('earth.terrarium.adastra.common.registry.ModBlocks');
+
+
 //#endregion
 
 //#region elements
@@ -68,7 +70,7 @@ const phosphorescent = GTMaterialFlags.PHOSPHORESCENT;
 //Generation Flags
 // Dust Flags
 const plates = GTMaterialFlags.GENERATE_PLATE;
-const dense_plate = GTMaterialFlags.GENERATE_DENSE;
+const dense = GTMaterialFlags.GENERATE_DENSE;
 const rod = GTMaterialFlags.GENERATE_ROD;
 const bolt_and_screw = GTMaterialFlags.GENERATE_BOLT_SCREW;
 const frame = GTMaterialFlags.GENERATE_FRAME;
@@ -138,7 +140,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     element('neptunium', 'ingot')
 
     // Dust
-    element('selenium', 'dust');
+    element('selenium', 'dust')
 
     // Liquid
     element('neptunium', 'fluid')
@@ -152,8 +154,8 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
         GTMaterials.get(mat).addFlags(flag);
     }
 
-    matmod('titanium', [dense_plate]);
-    matmod('neutronium', [dense_plate]);
+    matmod('titanium', [dense]);
+    matmod('neutronium', [dense]);
     matmod('iron', [foil])
     matmod('potin', [foil, ring])
     matmod('brass', [foil, ring])
@@ -309,22 +311,21 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
 
 
     //#region 
-    compDust('andesite_alloy', ['1x andesite', '1x iron'], 0xa6a08f, [centrifuge]);
+    compDust('andesite_alloy', ['1x andesite', '1x iron'], 0xa6a08f, [centrifuge])
     compDust('asteroid_stone', [], 0x70276b, [])
     //#endregion
 
 
 
     //#region superconductors
-    conductorSuper('energized_steel', [], 0xbaa172, [], [V('lv'), 4, 0, true], [150, 130, 3, 12000]);
-    conductorSuper('blazing_etrium', [], 0x8ee8ed, [1700, 'low', VA('mv'), 1200], [V('mv'), 8, 0, true], [190, 150, 3, 14000]);
-    conductorSuper('niotic_calorite', [], 0xe4eb60, [1700, 'low', VA('hv'), 1500], [V('hv'), 16, 0, true], [220, 170, 3, 16000]);
-    conductorSuper('spirited_uranium', [], 0xcb74cc, [3500, 'low', VA('ev'), 1800], [V('ev'), 24, 0, true], [300, 190, 3, 18000]);
-    conductorSuper('nitromangaphosphide', [], 0x110c9c, [4400, 'mid', VA('iv'), 2100], [V('iv'), 32, 0, true], [450, 220, 3, 20000]);
-    conductorSuper('juperiosaturlytide', [], 0xf66999, [5300, 'mid', VA('luv'), 2400], [V('luv'), 48, 0, true], [700, 260, 3, 24000]);
-    conductorSuper('gaiaforged_naquadah', [], 0x421218, [7100, 'high', VA('zpm'), 2700], [V('zpm'), 64, 0, true], [1100, 380, 3, 32000]);
-    conductorSuper('neptunium_molybdenum_selenide', [], 0x088a5c, [10000, 'higher', VA('uv'), 3000], [V('uv'), 96, 0, true], [2000, 550, 3, 48000]);
-    // conductorSuper('', [], 0xccffff, [10799, 'highest', VA('uhv'), 3300], [V('uhv'), 128, 0, true], [3200, 660, 3, 96000]);
+    conductorSuper('blazing_etrium', [], 0x8ee8ed, [1700, 'low', VA('mv'), 1200], [V('mv'), 8, 0, true], [190, 150, 3, 14000])
+    conductorSuper('niotic_calorite', [], 0xe4eb60, [1700, 'low', VA('hv'), 1500], [V('hv'), 16, 0, true], [220, 170, 3, 16000])
+    conductorSuper('spirited_uranium', [], 0xcb74cc, [3500, 'low', VA('ev'), 1800], [V('ev'), 24, 0, true], [300, 190, 3, 18000])
+    conductorSuper('nitromangaphosphide', [], 0x110c9c, [4400, 'mid', VA('iv'), 2100], [V('iv'), 32, 0, true], [450, 220, 3, 20000])
+    conductorSuper('juperiosaturlytide', [], 0xf66999, [5300, 'mid', VA('luv'), 2400], [V('luv'), 48, 0, true], [700, 260, 3, 24000])
+    conductorSuper('gaiaforged_naquadah', [], 0x421218, [7100, 'high', VA('zpm'), 2700], [V('zpm'), 64, 0, true], [1100, 380, 3, 32000])
+    conductorSuper('neptunium_molybdenum_selenide', [], 0x088a5c, [10000, 'higher', VA('uv'), 3000], [V('uv'), 96, 0, true], [2000, 550, 3, 48000])
+    /* conductorSuper('', [], 0xccffff, [10799, 'highest', VA('uhv'), 3300], [V('uhv'), 128, 0, true], [3200, 660, 3, 96000]) */
     //#endregion
     
     
@@ -345,7 +346,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
         .iconSet(SHINY)
         .blastTemp(1000, 'low', 120, 400)
         .fluidPipeProperties(1855, 600, true, false, false, false)
-        .flags(foil, gear, plates, rod, dense_plate, ring, frame, bolt_and_screw, mortar_grind)
+        .flags(foil, gear, plates, rod, dense, ring, frame, bolt_and_screw, mortar_grind)
         .toolStats(new ToolProperty(8.0, 7.0, 768, 3, 
             [GTToolType.SWORD,
             GTToolType.PICKAXE,
@@ -389,7 +390,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
         .iconSet(SHINY)
         .blastTemp(1700, 'low', VA('mv'), 800)
         .fluidPipeProperties(2142, 225, true, false, false, false)
-        .flags(foil, gear, plates, rod, dense_plate, ring, frame, bolt_and_screw)
+        .flags(foil, gear, plates, rod, dense, ring, frame, bolt_and_screw)
         .toolStats(new ToolProperty(11.0, 11.0, 2048, 3.0, 
             [GTToolType.SWORD,
             GTToolType.PICKAXE,
@@ -433,7 +434,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
         .iconSet(SHINY)
         .blastTemp(3500, 'mid', VA('iv'), 1600)
         .fluidPipeProperties(2426, 300, true, false, false, false)
-        .flags(foil, gear, plates, rod, dense_plate, ring, frame, bolt_and_screw)
+        .flags(foil, gear, plates, rod, dense, ring, frame, bolt_and_screw)
         .toolStats(new ToolProperty(16.0, 13.0, 3072, 4.0, 
             [GTToolType.SWORD,
             GTToolType.PICKAXE,
@@ -477,7 +478,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
         .iconSet(RADIOACTIVE)
         .blastTemp(7100, 'high', VA('zpm'), 2400)
         .fluidPipeProperties(3776, 400, true, true, true, true)
-        .flags(foil, gear, plates, rod, dense_plate, ring, frame, bolt_and_screw)
+        .flags(foil, gear, plates, rod, dense, ring, frame, bolt_and_screw)
         .toolStats(ToolProperty.Builder.of(48.0, 16.0, 4096, 5.0, 
             [GTToolType.SWORD,
             GTToolType.PICKAXE,
@@ -518,11 +519,4 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     //#endregion
 
 
-    //#region ae2
-
-    /* event.create('sky_stone')
-     .element(GTElements.get('sky_stone'))*/
-
-    compIngotLiquidSeccolor('futura_alloy', ['4x stainless_steel', /*'sky_stone'*/], 0xebb7ea, 0x000000, SHINY, [1700, 'low', 400, 1200], [frame, plates, rod, dense_plate, mortar_grind, block])
-    //#endregion
-});
+})

@@ -107,9 +107,9 @@ ServerEvents.recipes(event => {
         ['gtceu:copper_plate'],
         ['minecraft:copper_ingot'])
 
-    event.recipes.create.pressing(
-        ['gtceu:energized_steel_plate'],
-        ['powah:steel_energized'])
+    // event.recipes.create.pressing(
+    //     ['astrogreg:energized_steel_plate'],
+    //     ['powah:steel_energized'])
 
     event.recipes.create.pressing(
         ['gtceu:rubber_plate'],
@@ -122,11 +122,11 @@ ServerEvents.recipes(event => {
         result: { item: "create:shaft", count: 4 }
     })
 
-    event.custom({
-        type: "createaddition:rolling",
-        input: { item: "powah:steel_energized" },
-        result: { item: "gtceu:energized_steel_rod", count: 2 }
-    })
+    // event.custom({
+    //     type: "createaddition:rolling",
+    //     input: { item: "powah:steel_energized" },
+    //     result: { item: "astrogreg:energized_steel_rod", count: 2 }
+    // })
     //#endregion
 
     //#region metal processing
@@ -134,7 +134,7 @@ ServerEvents.recipes(event => {
         { metal: 'iron', ingot: 'minecraft:iron_ingot'},
         { metal: 'gold', ingot: 'minecraft:gold_ingot'},
         { metal: 'copper', ingot: 'minecraft:copper_ingot'},
-        { metal: 'energized_steel', ingot: 'powah:steel_energized'}
+        // { metal: 'energized_steel', ingot: 'powah:steel_energized'}
     ]
 
     const gtceuMetals = ['steel', 'wrought_iron', 'tin', 'bronze', 'potin', 'lead', 
