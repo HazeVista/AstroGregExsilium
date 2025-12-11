@@ -133,6 +133,20 @@ ServerEvents.recipes(event => {
       .itemOutputs('minecraft:paper')
       .duration(80)
       .EUt(4)
+
+    event.recipes.gtceu.macerator('macerate_meat')
+      .itemInputs('#forge:meat')
+      .itemOutputs('gtceu:meat_dust')
+      .chancedOutput('gtceu:meat_dust', 5000, 0)
+      .itemOutputs('gtceu:tiny_bone_dust')
+      .duration(102)
+      .EUt(2)
+
+    event.recipes.gtceu.macerator('macerate_meat_small')
+      .itemInputs('#forge:meat_small')
+      .itemOutputs('gtceu:meat_dust', 'gtceu:tiny_bone_dust')
+      .duration(102)
+      .EUt(2)      
     //#endregion
 
 

@@ -56,7 +56,7 @@ ServerEvents.recipes(event => {
       .EUt(3)
 
     event.recipes.gtceu.cutter('cut_raw_pasta')
-      .itemInputs('gtceu:dough')
+      .itemInputs('#forge:dough')
       .itemOutputs('farmersdelight:raw_pasta')
       .duration(40)
       .EUt(2)
@@ -69,7 +69,7 @@ ServerEvents.recipes(event => {
 
     event.recipes.gtceu.cutter('cut_pumpkin_slice')
       .itemInputs('minecraft:pumpkin')
-      .itemOutputs('6x farmersdelight:pumpkin_slice')
+      .itemOutputs('4x farmersdelight:pumpkin_slice')
       .duration(100)
       .EUt(2)
 
@@ -138,5 +138,48 @@ ServerEvents.recipes(event => {
       .itemOutputs('2x farmersdelight:cooked_chicken_cuts', 'minecraft:bone_meal')
       .duration(70)
       .EUt(3) 
+
+    event.recipes.gtceu.cutter('cut_pumpkin_pie_slice')
+      .itemInputs('minecraft:pumpkin_pie')
+      .itemOutputs('6x delightful:pumpkin_pie_slice')
+      .duration(100)
+      .EUt(2)      
+
+    event.recipes.gtceu.cutter('cut_baklava_slice')
+      .itemInputs('delightful:baklava')
+      .itemOutputs('6x delightful:baklava_slice')
+      .duration(100)
+      .EUt(2)
+      
+    event.recipes.gtceu.cutter('cut_salmonberry_pie_slice')
+      .itemInputs('delightful:salmonberry_pie')
+      .itemOutputs('6x delightful:salmonberry_pie_slice')
+      .duration(100)
+      .EUt(2)  
+
+    event.recipes.gtceu.cutter('cut_melon_slice1')
+      .itemInputs('minecraft:melon')
+      .itemOutputs('9x minecraft:melon_slice')
+      .duration(100)
+      .EUt(2) 
+
+    event.recipes.gtceu.cutter('cut_melon_slice2')
+      .itemInputs('delightful:mini_melon')
+      .itemOutputs('4x minecraft:melon_slice')
+      .duration(80)
+      .EUt(2)   
+
+    event.recipes.gtceu.cutter('cut_cantaloupe_slice')
+      .itemInputs('delightful:cantaloupe')
+      .itemOutputs('4x delightful:cantaloupe_slice')
+      .duration(80)
+      .EUt(2) 
+      
+    event.recipes.gtceu.cutter('cut_cactus_flesh')
+      .itemInputs('minecraft:cactus')
+      .itemOutputs('2x delightful:cactus_flesh')
+      .chancedOutput('minecraft:green_dye', 5000, 0)
+      .duration(80)
+      .EUt(2)       
     //#endregion
 });
