@@ -146,6 +146,12 @@ ServerEvents.recipes(event => {
       .itemInputs('#forge:meat_small')
       .itemOutputs('gtceu:meat_dust', 'gtceu:tiny_bone_dust')
       .duration(102)
+      .EUt(2)    
+      
+    event.recipes.gtceu.compressor('compress_plant_ball')
+      .itemInputs('#forge:crops')
+      .itemOutputs('gtceu:plant_ball')
+      .duration(300)
       .EUt(2)      
     //#endregion
 
