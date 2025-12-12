@@ -112,6 +112,7 @@ const not_alloy = GTMaterialFlags.DISABLE_ALLOY_PROPERTY;
 //#endregion
 
 //region Tool Type Types
+/*
 const BotanicTools = [
     GTToolType.SWORD,
     GTToolType.PICKAXE,
@@ -147,7 +148,7 @@ const BotanicTools = [
     GTToolType.WIRE_CUTTER_LV,
     GTToolType.WIRE_CUTTER_HV,
     GTToolType.WIRE_CUTTER_IV
-]
+]*/
 //#endregion
 
 //#region voltage functions
@@ -205,12 +206,12 @@ const ComponentIngotLiquidTwoColors = [
     ['futura_alloy', ['4x stainless_steel', /*'sky_stone'*/], 0xebb7ea, 0x000000, SHINY, [1700, 'low', 400, 1200], [frame, plates, rod, dense_plate, mortar_grind, block]]
 ]
 // Name, Color, IconSet, Blasting, FluidPipeProperties, ToolStats, Magnetic, Flags
-const BotaniaTools = [
+/*const BotaniaTools = [
     ['manasteel', 0x228cc9, SHINY, [1000, 'low', 120, 400], [1855, 600, true, false, false, false], [8.0, 7.0, 768, 3, BotanicTools], false, [foils, gear, plates, rod, dense_plate, ring, frame, bolt_and_screw, mortar_grind]],
     ['terrasteel', 0x159e1e, SHINY, [1700, 'low', VA('mv'), 800], [2142, 225, true, false, false, false], [11.0, 11.0, 2048, 3.0, BotanicTools], false, [foil, gear, plates, rod, dense_plate, ring, frame, bolt_and_screw]],
     ['elementium', 0xed64d4, SHINY, [3500, 'mid', VA('iv'), 1600], [2426, 300, true, false, false, false], [16.0, 13.0, 3072, 4.0, BotanicTools], false, [foil, gear, plates, rod, dense_plate, ring, frame, bolt_and_screw]],
     ['gaiasteel', 0x8c2929, RADIOACTIVE, [7100, 'high', VA('zpm'), 2400], [3776, 400, true, true, true, true], [48.0, 16.0, 4096, 5.0, BotanicTools], true, [foil, gear, plates, rod, dense_plate, ring, frame, bolt_and_screw]]
-]
+]*/
 // Name, Elements, Color, Icon, Blasting, Cable, Rotorstats
 const SuperConductors = [
     ['blazing_etrium', [], 0x8ee8ed, [1700, 'low', VA('mv'), 1200], [V('mv'), 8, 0, true], [190, 150, 3, 14000]],
@@ -294,8 +295,8 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
         if (material[3].length != 0) {
             event.create(material[0])
             .ingot().fluid()
-            .components(materials[1])
-            .color(materials[2])
+            .components(material[1])
+            .color(material[2])
             .blastTemp(material[3][0], material[3][1], material[3][2], material[3][3])
             .cableProperties(material[4][0], material[4][1], material[4][2], material[4][3])
             .rotorStats(material[5][0], material[5][1], material[5][2], material[5][3]);
@@ -303,12 +304,13 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
         }
         event.create(material[0])
         .ingot().fluid()
-        .components(materials[1])
-        .color(materials[2])
+        .components(material[1])
+        .color(material[2])
         .cableProperties(material[4][0], material[4][1], material[4][2], material[4][3])
         .rotorStats(material[5][0], material[5][1], material[5][2], material[5][3]);
     })
 
+    /* 
     event.create('manasteel')
         .ingot().fluid()
         .color(0x228cc9)
@@ -345,7 +347,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
         .fluidPipeProperties(3776, 400, true, true, true, true)
         .flags(foil, gear, plates, rod, dense, ring, frame, bolt_and_screw)
         .toolStats(ToolProperty.Builder.of(48.0, 16.0, 4096, 5.0, BotanicTools).magnetic().build());
-    /* Not working code
+    Non Working Rework
     BotaniaTools.forEach(material => {
         if (material[6]) {
             event.create(material[0])
@@ -374,7 +376,5 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
 
     /* event.create('sky_stone')
      .element(GTElements.get('sky_stone'))*/
-
-    compIngotLiquidSeccolor('futura_alloy', ['4x stainless_steel', /*'sky_stone'*/], 0xebb7ea, 0x000000, SHINY, [1700, 'low', 400, 1200], [frame, plates, rod, dense_plate, mortar_grind, block])
     //#endregion
 });
