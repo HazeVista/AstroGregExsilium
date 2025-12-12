@@ -6,8 +6,6 @@ const $BlastProperty = global.BlastProperty
 const $FluidPipeProperties = global.FluidPipeProperties
 const $PropertyKey = global.PropertyKey
 const $ToolProperty = Java.loadClass('com.gregtechceu.gtceu.api.data.chemical.material.properties.ToolProperty')
-
-
 //#endregion
 
 //#region elements
@@ -26,80 +24,68 @@ GTCEuStartupEvents.registry("gtceu:element", event => {
 //#endregion
 
 //#region icon sets
-const DULL = GTMaterialIconSet.DULL;
-const METALLIC = GTMaterialIconSet.METALLIC;
-const MAGNETIC = GTMaterialIconSet.MAGNETIC;
-const SHINY = GTMaterialIconSet.SHINY;
-const BRIGHT = GTMaterialIconSet.BRIGHT;
-const DIAMOND = GTMaterialIconSet.DIAMOND;
-const EMERALD = GTMaterialIconSet.EMERALD;
-const GEM_HORIZONTAL = GTMaterialIconSet.GEM_HORIZONTAL;
-const GEM_VERTICAL = GTMaterialIconSet.GEM_VERTICAL;
-const RUBY = GTMaterialIconSet.RUBY;
-const OPAL = GTMaterialIconSet.OPAL;
-const GLASS = GTMaterialIconSet.GLASS;
-const NETHERSTAR = GTMaterialIconSet.NETHERSTAR;
-const FINE = GTMaterialIconSet.FINE;
-const SAND = GTMaterialIconSet.SAND;
-const WOOD = GTMaterialIconSet.WOOD;
-const ROUGH = GTMaterialIconSet.ROUGH;
-const FLINT = GTMaterialIconSet.FLINT;
-const LIGNITE = GTMaterialIconSet.LIGNITE;
-const QUARTZ = GTMaterialIconSet.QUARTZ;
-const CERTUS = GTMaterialIconSet.CERTUS;
-const LAPIS = GTMaterialIconSet.LAPIS;
-const FLUID = GTMaterialIconSet.FLUID;
-const RADIOACTIVE = GTMaterialIconSet.RADIOACTIVE;
+const DULL = GTMaterialIconSet.DULL
+const METALLIC = GTMaterialIconSet.METALLIC
+const MAGNETIC = GTMaterialIconSet.MAGNETIC
+const SHINY = GTMaterialIconSet.SHINY
+const BRIGHT = GTMaterialIconSet.BRIGHT
+const DIAMOND = GTMaterialIconSet.DIAMOND
+const EMERALD = GTMaterialIconSet.EMERALD
+const GEM_HORIZONTAL = GTMaterialIconSet.GEM_HORIZONTAL
+const GEM_VERTICAL = GTMaterialIconSet.GEM_VERTICAL
+const RUBY = GTMaterialIconSet.RUBY
+const OPAL = GTMaterialIconSet.OPAL
+const GLASS = GTMaterialIconSet.GLASS
+const NETHERSTAR = GTMaterialIconSet.NETHERSTAR
+const FINE = GTMaterialIconSet.FINE
+const SAND = GTMaterialIconSet.SAND
+const WOOD = GTMaterialIconSet.WOOD
+const ROUGH = GTMaterialIconSet.ROUGH
+const FLINT = GTMaterialIconSet.FLINT
+const LIGNITE = GTMaterialIconSet.LIGNITE
+const QUARTZ = GTMaterialIconSet.QUARTZ
+const CERTUS = GTMaterialIconSet.CERTUS
+const LAPIS = GTMaterialIconSet.LAPIS
+const FLUID = GTMaterialIconSet.FLUID
+const RADIOACTIVE = GTMaterialIconSet.RADIOACTIVE
 //#endregion
 
 
 
-//#region flags
-// Generic flags
-const no_unify = GTMaterialFlags.NO_UNIFICATION;
-const electrolyze = GTMaterialFlags.DECOMPOSITION_BY_ELECTROLYZING;
-const centrifuge = GTMaterialFlags.DECOMPOSITION_BY_CENTRIFUGING;
-const no_decomp = GTMaterialFlags.DISABLE_DECOMPOSITION;
-const explosive = GTMaterialFlags.EXPLOSIVE;
-const flammable = GTMaterialFlags.FLAMMABLE;
-const sticky = GTMaterialFlags.STICKY;
-const phosphorescent = GTMaterialFlags.PHOSPHORESCENT;
+//#region material flags
+const no_unify = GTMaterialFlags.NO_UNIFICATION
+const electrolyze = GTMaterialFlags.DECOMPOSITION_BY_ELECTROLYZING
+const centrifuge = GTMaterialFlags.DECOMPOSITION_BY_CENTRIFUGING
+const no_decomp = GTMaterialFlags.DISABLE_DECOMPOSITION
+const explosive = GTMaterialFlags.EXPLOSIVE
+const flammable = GTMaterialFlags.FLAMMABLE
+const sticky = GTMaterialFlags.STICKY
+const magnetic = GTMaterialFlags.IS_MAGNETIC
+const glow = GTMaterialFlags.PHOSPHORESCENT
 
-//Generation Flags
-// Dust Flags
-const plates = GTMaterialFlags.GENERATE_PLATE;
-const dense = GTMaterialFlags.GENERATE_DENSE;
-const rod = GTMaterialFlags.GENERATE_ROD;
-const bolt_and_screw = GTMaterialFlags.GENERATE_BOLT_SCREW;
-const frame = GTMaterialFlags.GENERATE_FRAME;
-const gear = GTMaterialFlags.GENERATE_GEAR;
-const long_rod = GTMaterialFlags.GENERATE_LONG_ROD;
-const block = GTMaterialFlags.FORCE_GENERATE_BLOCK;
+const plates = GTMaterialFlags.GENERATE_PLATE
+const dense = GTMaterialFlags.GENERATE_DENSE
+const rod = GTMaterialFlags.GENERATE_ROD
+const bolt_and_screw = GTMaterialFlags.GENERATE_BOLT_SCREW
+const frame = GTMaterialFlags.GENERATE_FRAME
+const gear = GTMaterialFlags.GENERATE_GEAR
+const long_rod = GTMaterialFlags.GENERATE_LONG_ROD
+const block = GTMaterialFlags.FORCE_GENERATE_BLOCK
+const foil = GTMaterialFlags.GENERATE_FOIL
+const ring = GTMaterialFlags.GENERATE_RING
+const spring = GTMaterialFlags.GENERATE_SPRING
+const small_spring = GTMaterialFlags.GENERATE_SPRING_SMALL
+const small_gear = GTMaterialFlags.GENERATE_SMALL_GEAR
+const fine_wire = GTMaterialFlags.GENERATE_FINE_WIRE
+const rotor = GTMaterialFlags.GENERATE_ROTOR
+const round = GTMaterialFlags.GENERATE_ROUND
 
-// Ingot Flags
-const foil = GTMaterialFlags.GENERATE_FOIL;
-const ring = GTMaterialFlags.GENERATE_RING;
-const spring = GTMaterialFlags.GENERATE_SPRING;
-const small_spring = GTMaterialFlags.GENERATE_SPRING_SMALL;
-const small_gear = GTMaterialFlags.GENERATE_SMALL_GEAR;
-const fine_wire = GTMaterialFlags.GENERATE_FINE_WIRE;
-const rotor = GTMaterialFlags.GENERATE_ROTOR;
-const round = GTMaterialFlags.GENERATE_ROUND;
-const magnetic = GTMaterialFlags.IS_MAGNETIC;
-
-// Gem Flags
-const crystallizable = GTMaterialFlags.CRYSTALLIZABLE;
-const lens = GTMaterialFlags.GENERATE_LENS;
-
-// Fluid Flags
-const solder_mat = GTMaterialFlags.SOLDER_MATERIAL;
-const solder_mat_bad = GTMaterialFlags.SOLDER_MATERIAL_BAD;
-const solder_mat_good = GTMaterialFlags.SOLDER_MATERIAL_GOOD;
-
-// Ore Flags
-const more_sifter = GTMaterialFlags.HIGH_SIFTER_OUTPUT;
-
-// Crafting Flags
+const crystallizable = GTMaterialFlags.CRYSTALLIZABLE
+const lens = GTMaterialFlags.GENERATE_LENS
+const solder_mat = GTMaterialFlags.SOLDER_MATERIAL
+const solder_mat_bad = GTMaterialFlags.SOLDER_MATERIAL_BAD
+const solder_mat_good = GTMaterialFlags.SOLDER_MATERIAL_GOOD
+const more_sifter = GTMaterialFlags.HIGH_SIFTER_OUTPUT
 const no_block_craft = GTMaterialFlags.EXCLUDE_BLOCK_CRAFTING_RECIPES;
 const no_plate_compressor_craft = GTMaterialFlags.EXCLUDE_PLATE_COMPRESSOR_RECIPE;
 const no_hand_craft = GTMaterialFlags.EXCLUDE_BLOCK_CRAFTING_BY_HAND_RECIPES;
@@ -172,8 +158,8 @@ const VHA = (voltage) => {
 
 // Name, Flags
 const MaterialModifier = [
-    ['titanium', [dense_plate]],
-    ['neutronium', [dense_plate]],
+    ['titanium', [dense]],
+    ['neutronium', [dense]],
     ['iron', [foil]],
     ['potin', [foil, ring]],
     ['brass', [foil, ring]],
@@ -188,7 +174,7 @@ const ComponentDust = [
     ['asteroid_stone', [], 0x70276b, []],
     ['inactive_terrasteel', [], 0x128719, []],
     ['livingrock', [], 0xc9c2b1, []],
-    ['livingclay', [], 0xc9c2e7, []]
+    ['livingclay', [], 0xc9c2e7, []],
     ['acorn', [], 0x734d15, []]
 ]
 // Name, Elements, Color, Icon, Flags
@@ -204,17 +190,18 @@ const ComponentGas = [
 const ComponentLiquid = [
     ['depleted_aether', [], 0x33693e, []]
 ]
-// Name, Elements, Color1, Color2, Icon, Blasting, Flags
+// Name, Elements, Color1, Color2, Icon, Blasting, Flags    (using darker colors for color2 almost always looks better)
 const ComponentIngotLiquidTwoColors = [
     []
 ]
 // Name, Color, IconSet, Blasting, FluidPipeProperties, ToolStats, Magnetic, Flags
 /*const BotaniaTools = [
-    ['manasteel', 0x228cc9, SHINY, [1000, 'low', 120, 400], [1855, 600, true, false, false, false], [8.0, 7.0, 768, 3, BotanicTools], false, [foils, gear, plates, rod, dense_plate, ring, frame, bolt_and_screw, mortar_grind]],
-    ['terrasteel', 0x159e1e, SHINY, [1700, 'low', VA('mv'), 800], [2142, 225, true, false, false, false], [11.0, 11.0, 2048, 3.0, BotanicTools], false, [foil, gear, plates, rod, dense_plate, ring, frame, bolt_and_screw]],
-    ['elementium', 0xed64d4, SHINY, [3500, 'mid', VA('iv'), 1600], [2426, 300, true, false, false, false], [16.0, 13.0, 3072, 4.0, BotanicTools], false, [foil, gear, plates, rod, dense_plate, ring, frame, bolt_and_screw]],
-    ['gaiasteel', 0x8c2929, RADIOACTIVE, [7100, 'high', VA('zpm'), 2400], [3776, 400, true, true, true, true], [48.0, 16.0, 4096, 5.0, BotanicTools], true, [foil, gear, plates, rod, dense_plate, ring, frame, bolt_and_screw]]
+    ['manasteel', 0x228cc9, SHINY, [1000, 'low', 120, 400], [1855, 600, true, false, false, false], [8.0, 7.0, 768, 3, BotanicTools], false, [foils, gear, plates, rod, dense, ring, frame, bolt_and_screw, mortar_grind]],
+    ['terrasteel', 0x159e1e, SHINY, [1700, 'low', VA('mv'), 800], [2142, 225, true, false, false, false], [11.0, 11.0, 2048, 3.0, BotanicTools], false, [foil, gear, plates, rod, dense, ring, frame, bolt_and_screw]],
+    ['elementium', 0xed64d4, SHINY, [3500, 'mid', VA('iv'), 1600], [2426, 300, true, false, false, false], [16.0, 13.0, 3072, 4.0, BotanicTools], false, [foil, gear, plates, rod, dense, ring, frame, bolt_and_screw]],
+    ['gaiasteel', 0x8c2929, RADIOACTIVE, [7100, 'high', VA('zpm'), 2400], [3776, 400, true, true, true, true], [48.0, 16.0, 4096, 5.0, BotanicTools], true, [foil, gear, plates, rod, dense, ring, frame, bolt_and_screw]]
 ]*/
+
 // Name, Elements, Color, Icon, Blasting, Cable, Rotorstats
 const SuperConductors = [
     ['blazing_etrium', [], 0x8ee8ed, [1700, 'low', VA('mv'), 1200], [V('mv'), 8, 0, true], [190, 150, 3, 14000]],
@@ -245,6 +232,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
 
     //#region material helpers
     ComponentDust.forEach(material => {
+        console.log(material)
         event.create(material[0])
         .dust()
         .components(material[1])
@@ -310,7 +298,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
         .rotorStats(material[5][0], material[5][1], material[5][2], material[5][3]);
     })
 
-    /* 
+    
     event.create('manasteel')
         .ingot().fluid()
         .color(0x228cc9)
@@ -486,6 +474,4 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
         .magnetic() 
         .build())
     //#endregion
-
-*/
 })
