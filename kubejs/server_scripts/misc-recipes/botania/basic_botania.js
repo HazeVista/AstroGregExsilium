@@ -74,7 +74,7 @@ ServerEvents.recipes(event => {
     event.recipes.botania.mana_infusion('gtceu:flawless_mana_diamond_gem', 'gtceu:flawless_diamond_gem', 20000)
     event.recipes.botania.mana_infusion('botania:mana_diamond', 'minecraft:diamond', 10000)
     event.recipes.botania.mana_infusion('botania:mana_diamond_block', '#forge:storage_blocks/diamond', 10000)
-    event.recipes.botania.mana_infusion('botania:mana_cookie', 'minecraft:cookie', 20000)   
+    event.recipes.botania.mana_infusion('botania:mana_cookie', '#forge:cookies', 20000)   
     event.recipes.botania.mana_infusion('botania:grass_seeds', '#forge:grass', 2500)   
     event.recipes.botania.mana_infusion('botania:mycelium_seeds', '#forge:mushrooms', 2500)   
     event.recipes.botania.mana_infusion('botania:podzol_seeds', 'minecraft:dead_bush', 2500)   

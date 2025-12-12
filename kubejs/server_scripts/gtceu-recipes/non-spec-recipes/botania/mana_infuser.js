@@ -74,7 +74,7 @@ const purify = event.recipes.gtceu.botanic_purification
         .EUt(7)
 
     infuser('infuse_cookie')
-        .itemInputs('minecraft:cookie')
+        .itemInputs('#forge:cookies')
         .inputFluids('manafluid:mana 200')
         .itemOutputs('botania:mana_cookie')
         .duration(300)

@@ -1,6 +1,6 @@
 {
   "dimension": "ad_astra:kuiper_belt",
-  "gravity": 0.0,
+  "gravity": 9.807,
   "oxygen": false,
   "solar_power": 12,
   "solar_system": "ad_astra:solar_system",

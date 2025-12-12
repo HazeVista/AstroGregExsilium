@@ -63,12 +63,12 @@ ServerEvents.recipes(event => {
 
     event.recipes.gtceu.mixer('futura_alloy_mixing')
         .itemInputs('4x gtceu:stainless_steel_dust', 'ae2:sky_dust')
-        .itemOutputs('5x gtceu:futura_alloy_dust')
+        .itemOutputs('5x astrogreg:futura_alloy_dust')
         .duration(200)
         .EUt(450)
 
     event.recipes.gtceu.assembler('assemble_cpu')
-        .itemInputs('gtceu:futura_alloy_frame', '2x ae2:fluix_glass_cable', '2x ae2:calculation_processor', '1x ae2:logic_processor')
+        .itemInputs('astrogreg:futura_alloy_frame', '2x ae2:fluix_glass_cable', '2x ae2:calculation_processor', '1x ae2:logic_processor')
         .inputFluids('gtceu:soldering_alloy 144')
         .itemOutputs('ae2:crafting_unit')
         .circuit(1)
@@ -76,7 +76,7 @@ ServerEvents.recipes(event => {
         .EUt(384)
 
     event.recipes.gtceu.assembler('assemble_mega_cpu')
-        .itemInputs('gtceu:futura_alloy_frame', '2x ae2:crafting_unit', '2x ae2:logic_processor', '1x megacells:accumulation_processor')
+        .itemInputs('astrogreg:futura_alloy_frame', '2x ae2:crafting_unit', '2x ae2:logic_processor', '1x megacells:accumulation_processor')
         .inputFluids('gtceu:soldering_alloy 288')
         .itemOutputs('megacells:mega_crafting_unit')
         .circuit(1)
@@ -105,7 +105,7 @@ ServerEvents.recipes(event => {
         'C C',
         'ABA'
     ],{
-        A: 'gtceu:futura_alloy_plate',
+        A: 'astrogreg:futura_alloy_plate',
         B: 'ae2:engineering_processor',
         C: 'ae2:fluix_glass_cable'
     })
@@ -116,14 +116,14 @@ ServerEvents.recipes(event => {
     ],{
         A: 'minecraft:sticky_piston',
         B: 'ae2:annihilation_core',
-        C: 'gtceu:futura_alloy_plate'
+        C: 'astrogreg:futura_alloy_plate'
     })
 
     event.shaped('ae2:export_bus', [
         'ACA',
         ' B '
     ],{
-        A: 'gtceu:futura_alloy_plate',
+        A: 'astrogreg:futura_alloy_plate',
         B: 'minecraft:piston',
         C: 'ae2:formation_core'
     })
@@ -133,7 +133,7 @@ ServerEvents.recipes(event => {
         'D C',
         'ABA'
     ],{
-        A: 'gtceu:futura_alloy_plate',
+        A: 'astrogreg:futura_alloy_plate',
         B: '#forge:glass',
         C: 'ae2:formation_core',
         D: 'ae2:annihilation_core'
@@ -144,7 +144,7 @@ ServerEvents.recipes(event => {
         'D C',
         'ABA'
     ],{
-        A: 'gtceu:futura_alloy_plate',
+        A: 'astrogreg:futura_alloy_plate',
         B: 'minecraft:crafting_table',
         C: 'ae2:formation_core',
         D: 'ae2:annihilation_core'
@@ -155,7 +155,7 @@ ServerEvents.recipes(event => {
         'AB ',
         'BAA'
     ],{
-        A: 'gtceu:futura_alloy_plate',
+        A: 'astrogreg:futura_alloy_plate',
         B: 'ae2:quartz_fiber',
         C: 'ae2:fluix_pearl'
     })
@@ -165,7 +165,7 @@ ServerEvents.recipes(event => {
         'BEC',
         'ADA'
     ],{
-        A: 'gtceu:futura_alloy_plate',
+        A: 'astrogreg:futura_alloy_plate',
         B: 'ae2:annihilation_core',
         C: 'ae2:formation_core',
         D: 'minecraft:crafting_table',
@@ -177,9 +177,9 @@ ServerEvents.recipes(event => {
         'ACA',
         'AAA'
     ],{
-        A: 'gtceu:futura_alloy_plate',
+        A: 'astrogreg:futura_alloy_plate',
         B: 'ae2:calculation_processor',
-        C: 'gtceu:futura_alloy_frame',
+        C: 'astrogreg:futura_alloy_frame',
         D: 'ae2:quartz_glass'
     })
 
@@ -188,9 +188,9 @@ ServerEvents.recipes(event => {
         'BCB',
         'ABA'
     ],{
-        A: 'gtceu:futura_alloy_plate',
+        A: 'astrogreg:futura_alloy_plate',
         B: 'ae2:fluix_crystal',
-        C: 'gtceu:futura_alloy_frame'
+        C: 'astrogreg:futura_alloy_frame'
     })
 
     event.shaped('ae2:energy_acceptor', [
@@ -198,9 +198,9 @@ ServerEvents.recipes(event => {
         'BCB',
         'ABA'
     ],{
-        A: 'gtceu:futura_alloy_plate',
+        A: 'astrogreg:futura_alloy_plate',
         B: 'ae2:quartz_glass',
-        C: 'gtceu:futura_alloy_frame'
+        C: 'astrogreg:futura_alloy_frame'
     })
 
     event.shaped('ae2:io_port', [
@@ -208,9 +208,9 @@ ServerEvents.recipes(event => {
         'DCD',
         'ABA'
     ],{
-        A: 'gtceu:futura_alloy_plate',
+        A: 'astrogreg:futura_alloy_plate',
         B: 'ae2:logic_processor',
-        C: 'gtceu:futura_alloy_frame',
+        C: 'astrogreg:futura_alloy_frame',
         D: 'ae2:drive',
         E: 'ae2:quartz_glass'
     })
@@ -220,7 +220,7 @@ ServerEvents.recipes(event => {
         'DCD',
         'AAA'
     ],{
-        A: 'gtceu:futura_alloy_plate',
+        A: 'astrogreg:futura_alloy_plate',
         B: 'ae2:terminal',
         C: '#forge:chests/wooden',
         D: 'ae2:fluix_glass_cable',
@@ -232,7 +232,7 @@ ServerEvents.recipes(event => {
         'ACA',
         'BBB'
     ],{
-        A: 'gtceu:futura_alloy_plate',
+        A: 'astrogreg:futura_alloy_plate',
         B: 'ae2:fluix_crystal',
         C: 'ae2:engineering_processor'
     })
@@ -242,7 +242,7 @@ ServerEvents.recipes(event => {
         'DCD',
         'ABA'
     ],{
-        A: 'gtceu:futura_alloy_plate',
+        A: 'astrogreg:futura_alloy_plate',
         B: 'ae2:engineering_processor',
         C: 'ae2:io_port',
         D: 'ae2:fluix_glass_cable',
@@ -257,7 +257,7 @@ ServerEvents.recipes(event => {
         A: 'ae2:spatial_pylon',
         B: 'ae2:spatial_cell_component_128',
         C: 'ae2:fluix_glass_cable',
-        D: 'gtceu:futura_alloy_frame'
+        D: 'astrogreg:futura_alloy_frame'
     })
 
     event.shaped('expatternprovider:wireless_tool' , [
@@ -266,7 +266,7 @@ ServerEvents.recipes(event => {
         ' B '
     ], {
         A: 'ae2:wireless_receiver',
-        B: 'gtceu:futura_alloy_plate',
+        B: 'astrogreg:futura_alloy_plate',
         C: 'ae2:calculation_processor'
     })
 
@@ -283,7 +283,7 @@ ServerEvents.recipes(event => {
         'B  '
     ], {
         A: 'ae2:charged_certus_quartz_crystal',
-        B: 'gtceu:futura_alloy_rod'
+        B: 'astrogreg:futura_alloy_rod'
     })
 
     event.shaped('ae2:entropy_manipulator', [
@@ -291,7 +291,7 @@ ServerEvents.recipes(event => {
         ' AB',
         'A  '
     ], {
-        A: 'gtceu:futura_alloy_rod',
+        A: 'astrogreg:futura_alloy_rod',
         B: 'ae2:engineering_processor',
         C: 'ae2:energy_cell',
         D: 'ae2:fluix_crystal'
@@ -303,7 +303,7 @@ ServerEvents.recipes(event => {
     ], {
         A: 'ae2:fluix_glass_cable',
         B: 'gtceu:copper_plate',
-        C: 'gtceu:futura_alloy_plate'
+        C: 'astrogreg:futura_alloy_plate'
     })
 
     event.shaped('ae2:memory_card', [
@@ -311,7 +311,7 @@ ServerEvents.recipes(event => {
         'CCC'
     ], {
         A: '#gtceu:circuits/ulv',
-        B: 'gtceu:futura_alloy_plate',
+        B: 'astrogreg:futura_alloy_plate',
         C: 'gtceu:gold_bolt'
     })
 
@@ -330,7 +330,7 @@ ServerEvents.recipes(event => {
         'DBD'
     ], {
         A: 'gtceu:fine_copper_wire',
-        B: 'gtceu:futura_alloy_plate',
+        B: 'astrogreg:futura_alloy_plate',
         C: '#gtceu:circuits/ulv',
         D: 'gtceu:iron_screw',
         E: '#forge:tools/screwdrivers'
@@ -347,7 +347,7 @@ ServerEvents.recipes(event => {
         'B B',
         'AAA'
     ],{
-        A: 'gtceu:double_futura_alloy_plate',
+        A: 'astrogreg:double_futura_alloy_plate',
         B: 'gtceu:certus_quartz_plate',
         C: 'ae2:quartz_vibrant_glass'
     })
@@ -357,7 +357,7 @@ ServerEvents.recipes(event => {
         'B B',
         'AAA'
     ],{
-        A: 'gtceu:double_futura_alloy_plate',
+        A: 'astrogreg:double_futura_alloy_plate',
         B: 'gtceu:gold_plate',
         C: 'ae2:quartz_vibrant_glass'
     })
@@ -369,7 +369,7 @@ ServerEvents.recipes(event => {
     ], {
         A: 'ae2:quartz_glass',
         B: 'gtceu:iron_plate',
-        C: 'gtceu:futura_alloy_plate'
+        C: 'astrogreg:futura_alloy_plate'
     })
 
     event.shaped('ae2:fluid_cell_housing', [
@@ -379,7 +379,7 @@ ServerEvents.recipes(event => {
     ], {
         A: 'ae2:quartz_glass',
         B: 'gtceu:copper_plate',
-        C: 'gtceu:futura_alloy_plate'
+        C: 'astrogreg:futura_alloy_plate'
     })
 
     const cellSize = ['1k', '4k', '16k', '64k', '256k']
@@ -404,7 +404,7 @@ ServerEvents.recipes(event => {
         'CBC',
         'AEA'
     ], {
-        A: 'gtceu:futura_alloy_plate',
+        A: 'astrogreg:futura_alloy_plate',
         B: 'gtceu:hv_laser_engraver',
         C: 'gtceu:hv_emitter',
         D: 'gtceu:hv_conveyor_module',
@@ -509,8 +509,8 @@ ServerEvents.recipes(event => {
         'EBE',
         'ACA'
     ], {
-        A: 'gtceu:futura_alloy_plate',
-        B: 'gtceu:futura_alloy_frame',
+        A: 'astrogreg:futura_alloy_plate',
+        B: 'astrogreg:futura_alloy_frame',
         C: 'ae2:engineering_processor',
         D: '#ae2:interface',
         E: 'ae2:crafting_accelerator'
@@ -521,7 +521,7 @@ ServerEvents.recipes(event => {
         'BCB',
         'ABA'
     ], {
-        A: 'gtceu:dense_futura_alloy_plate',
+        A: 'astrogreg:dense_futura_alloy_plate',
         B: 'ae2:quartz_glass',
         C: 'ae2:fluix_dust'
     });
@@ -531,7 +531,7 @@ ServerEvents.recipes(event => {
         'CAC',
         'BCB'
     ], {
-        A: 'gtceu:futura_alloy_frame',
+        A: 'astrogreg:futura_alloy_frame',
         B: 'gtceu:certus_quartz_plate',
         C: '#ae2:smart_cable'
     })
@@ -541,8 +541,8 @@ ServerEvents.recipes(event => {
         'CAC',
         'BCB'
     ], {
-        A: 'gtceu:futura_alloy_frame',
-        B: 'gtceu:futura_alloy_plate',
+        A: 'astrogreg:futura_alloy_frame',
+        B: 'astrogreg:futura_alloy_plate',
         C: '#ae2:smart_cable'
     })  
     
@@ -551,7 +551,7 @@ ServerEvents.recipes(event => {
         'CAC',
         'BCB'
     ], {
-        A: 'gtceu:futura_alloy_frame',
+        A: 'astrogreg:futura_alloy_frame',
         B: 'gtceu:glass_plate',
         C: '#ae2:smart_cable'
     })

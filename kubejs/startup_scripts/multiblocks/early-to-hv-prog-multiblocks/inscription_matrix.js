@@ -26,7 +26,7 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
                 .or(Predicates.abilities(PartAbility.IMPORT_FLUIDS).setPreviewCount(1))
                 .or(Predicates.abilities(PartAbility.INPUT_ENERGY).setPreviewCount(1).setExactLimit(1))
                 .or(Predicates.abilities(PartAbility.MAINTENANCE).setExactLimit(1)))
-            .where('F', Predicates.blocks('gtceu:futura_alloy_frame'))
+            .where('F', Predicates.blocks('astrogreg:futura_alloy_frame'))
             .where('P', Predicates.blocks('gtceu:steel_pipe_casing'))
             .where('S', Predicates.blocks('gtceu:clean_machine_casing'))
             .where('@', Predicates.controller(Predicates.blocks(definition.get())))
