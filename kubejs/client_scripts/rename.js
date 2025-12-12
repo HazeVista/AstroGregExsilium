@@ -89,4 +89,6 @@ event.renameItem('simplylight:lamp_post', 'Illuminant Lamp Post')
 
 //region misc
 event.renameItem('powah:steel_energized', 'Energized Steel Ingot')
+event.renameItem('farmersdelight:honey_cookie', 'Sugar Cookie')
+event.renameItem('farmersdelight:pie_crust', 'Baked Pie Crust')
 })

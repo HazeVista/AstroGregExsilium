@@ -165,7 +165,7 @@ ServerEvents.recipes(event => {
         .duration(20)
         .EUt(7)
 
-    event.recipes.gtceu.extractor('bottle_mana')
+    event.recipes.gtceu.assembler('bottle_mana')
         .itemInputs('minecraft:glass_bottle')
         .inputFluids('manafluid:mana 250')
         .itemOutputs('botania:mana_bottle')
@@ -187,16 +187,16 @@ ServerEvents.recipes(event => {
         .EUt(7)
 
     event.recipes.gtceu.extractor('unbottle_water')
+        .itemInputs(Item.of('minecraft:potion', '{Potion:"minecraft:water"}'))
         .itemOutputs('minecraft:glass_bottle')
         .outputFluids('minecraft:water 250')
-        .itemInputs(Item.of('minecraft:potion', '{Potion:"minecraft:water"}'))
         .duration(20)
         .EUt(7)
 
     event.recipes.gtceu.extractor('unbottle_mana')
+        .itemInputs('botania:mana_bottle')
         .itemOutputs('minecraft:glass_bottle')
         .outputFluids('manafluid:mana 250')
-        .itemInputs('botania:mana_bottle')
         .duration(20)
         .EUt(7)
     //#endregion

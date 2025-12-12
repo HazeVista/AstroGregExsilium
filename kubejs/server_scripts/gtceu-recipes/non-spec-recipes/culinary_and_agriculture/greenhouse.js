@@ -130,7 +130,9 @@ trees.forEach((tree) => {
         ['minecraft:nether_wart', 'minecraft:nether_wart'],
         ['farmersdelight:tomato_seeds', 'farmersdelight:tomato'],
         ['farmersdelight:rice', 'farmersdelight:rice_panicle'],
-        ['farmersdelight:onion', 'farmersdelight:onion']]
+        ['farmersdelight:onion', 'farmersdelight:onion'],
+        ['delightful:salmonberry_pips', 'delightful:salmonberries'],
+        ['delightful:cantaloupe_seeds', 'delightful:cantaloupe']]
 
     crops.forEach((crop) => {
         const seed = crop[0]

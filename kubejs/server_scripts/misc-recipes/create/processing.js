@@ -10,6 +10,7 @@ ServerEvents.recipes(event => {
     //#endregion
 
     //#region milling
+    event.recipes.create.milling('gtceu:cocoa_dust', 'minecraft:cocoa_beans')
     event.recipes.create.milling('farmersdelight:straw', 'farmersdelight:sandy_shrub')
     event.recipes.create.milling('2x farmersdelight:straw', 'minecraft:tall_grass')
     event.recipes.create.milling('farmersdelight:straw', 'minecraft:grass')
@@ -71,7 +72,9 @@ ServerEvents.recipes(event => {
     //#region create filling
     event.recipes.create.filling('minecraft:clay', [Fluid.of('minecraft:water', 250), '#forge:sand'])
     event.recipes.create.filling('gtceu:treated_wood_planks', [Fluid.of('gtceu:creosote', 125), '#minecraft:planks'])
+    event.recipes.create.filling('create:chocolate_glazed_berries', [Fluid.of('create:chocolate', 250), 'minecraft:sweet_berries'])
     event.recipes.create.filling('gtceu:dough', [Fluid.of('minecraft:water', 125), 'gtceu:wheat_dust'])
+    event.recipes.create.filling('delightful:nut_dough', [Fluid.of('minecraft:water', 125), 'gtceu:acorn_dust'])
     //#endregion
 
     //#region other metal work
@@ -82,6 +85,10 @@ ServerEvents.recipes(event => {
     event.recipes.create.pressing(
         ['gtceu:obsidian_plate'],
         ['gtceu:obsidian_dust'])
+        
+    event.recipes.create.pressing(
+        ['gtceu:cocao_dust'],
+        ['minecraft:cocoa_beans'])
 
     event.recipes.create.pressing(
         ['gtceu:wood_plate'],

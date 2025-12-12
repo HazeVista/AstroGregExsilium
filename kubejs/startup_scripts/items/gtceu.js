@@ -27,4 +27,12 @@ StartupEvents.registry('item', event => {
     event.create('gtceu:grinding_head_duranium')
         .displayName('Duranium Grinding Head')
         .texture('kubejs:item/gtceu/duranium_grinding_head')
+
+    event.create('gtceu:formed_rubber_ingot')
+        .displayName('Formed Rubber')
+        .texture('kubejs:item/gtceu/formed_rubber')
+        
+    event.create('gtceu:formed_energized_steel_ingot')
+        .displayName('Formed Energized Steel')
+        .texture('kubejs:item/gtceu/formed_energized_steel')
 })

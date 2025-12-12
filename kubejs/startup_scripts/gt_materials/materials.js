@@ -1,13 +1,11 @@
 //#region properties
-const $IngotProperty = global.IngotProperty;
-const $DustProperty = global.DustProperty;
-const $FluidProperty = global.FluidProperty;
-const $BlastProperty = global.BlastProperty;
-const $FluidPipeProperties = global.FluidPipeProperties;
-const $PropertyKey = global.PropertyKey;
-const $ToolProperty = Java.loadClass('com.gregtechceu.gtceu.api.data.chemical.material.properties.ToolProperty');
-const $AstraItems = Java.loadClass('earth.terrarium.adastra.common.registry.ModItems');
-const $AstraBlocks = Java.loadClass('earth.terrarium.adastra.common.registry.ModBlocks');
+const $IngotProperty = global.IngotProperty
+const $DustProperty = global.DustProperty
+const $FluidProperty = global.FluidProperty
+const $BlastProperty = global.BlastProperty
+const $FluidPipeProperties = global.FluidPipeProperties
+const $PropertyKey = global.PropertyKey
+const $ToolProperty = Java.loadClass('com.gregtechceu.gtceu.api.data.chemical.material.properties.ToolProperty')
 
 
 //#endregion
@@ -310,7 +308,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
 
 
 
-    //#region misc dust
+    //#region misc
     compDust('andesite_alloy', ['1x andesite', '1x iron'], 0xa6a08f, [centrifuge])
     compDust('asteroid_stone', [], 0x70276b, [])
     compDust('acorn', [], 0x734d15, [])
@@ -321,8 +319,8 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     //#region superconductors
     conductorSuper('blazing_etrium', [], 0x8ee8ed, [1700, 'low', VA('mv'), 1200], [V('mv'), 8, 0, true], [190, 150, 3, 14000])
     conductorSuper('niotic_calorite', [], 0xe4eb60, [1700, 'low', VA('hv'), 1500], [V('hv'), 16, 0, true], [220, 170, 3, 16000])
-    conductorSuper('spirited_uranium', [], 0xcb74cc, [3500, 'low', VA('ev'), 1800], [V('ev'), 24, 0, true], [300, 190, 3, 18000])
-    conductorSuper('nitromangaphosphide', [], 0x110c9c, [4400, 'mid', VA('iv'), 2100], [V('iv'), 32, 0, true], [450, 220, 3, 20000])
+    conductorSuper('nitro_flux', [], 0xcb74cc, [3500, 'low', VA('ev'), 1800], [V('ev'), 24, 0, true], [300, 190, 3, 18000])
+    conductorSuper('spirited_uranium', [], 0x110c9c, [4400, 'mid', VA('iv'), 2100], [V('iv'), 32, 0, true], [450, 220, 3, 20000])
     conductorSuper('juperiosaturlytide', [], 0xf66999, [5300, 'mid', VA('luv'), 2400], [V('luv'), 48, 0, true], [700, 260, 3, 24000])
     conductorSuper('gaiaforged_naquadah', [], 0x421218, [7100, 'high', VA('zpm'), 2700], [V('zpm'), 64, 0, true], [1100, 380, 3, 32000])
     conductorSuper('neptunium_molybdenum_selenide', [], 0x088a5c, [10000, 'higher', VA('uv'), 3000], [V('uv'), 96, 0, true], [2000, 550, 3, 48000])

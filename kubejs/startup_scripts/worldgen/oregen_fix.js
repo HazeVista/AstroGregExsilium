@@ -1,6 +1,4 @@
-//"Borrowed" most of this file from Cosmic Frontiers
-console.info('[ASTRO MANAGER] - Worldgen File loaded and attempting to modify worldgen!')
-
+//"Borrowed" parts of this file from Cosmic Frontiers
 WorldgenEvents.remove(event => {
   event.removeOres(props => {
     props.blocks = [
@@ -13,7 +11,19 @@ WorldgenEvents.remove(event => {
         'ad_astra:venus_coal_ore',
         'ad_astra:venus_gold_ore',
         'ad_astra:venus_diamond_ore',
-        'ad_astra:venus_calorite_ore'
+        'ad_astra:venus_calorite_ore',
+        'ad_extendra:jupiter_juperium_ore',
+        'ad_extendra:saturn_saturlyte_ore',
+        'ad_extendra:uranus_uranium_ore',
+        'ad_extendra:uranus_ice_shard_ore',
+        'ad_extendra:uranus_lapis_ore',
+        'ad_extendra:neptune_neptunium_ore',
+        'ad_extendra:sedna_electrolyte_ore',
+        'ad_extendra:b_redstone_ore',
+        'ad_extendra:pluto_plutonium_ore',
+        'ad_extendra:pluto_ice_shard_ore',
+        'ad_extendra:orcus_radium_ore',
+        'ad_extendra:neptune_ice_shard_ore'
     ]
   })
 
@@ -30,7 +40,19 @@ WorldgenEvents.remove(event => {
         'ad_astra:venus_coal_ore',
         'ad_astra:venus_gold_ore',
         'ad_astra:venus_diamond_ore',
-        'ad_astra:venus_calorite_ore'
+        'ad_astra:venus_calorite_ore',
+        'ad_extendra:jupiter_juperium_ore',
+        'ad_extendra:saturn_saturlyte_ore',
+        'ad_extendra:uranus_uranium_ore',
+        'ad_extendra:uranus_ice_shard_ore',
+        'ad_extendra:uranus_lapis_ore',
+        'ad_extendra:neptune_neptunium_ore',
+        'ad_extendra:sedna_electrolyte_ore',
+        'ad_extendra:b_redstone_ore',
+        'ad_extendra:pluto_plutonium_ore',
+        'ad_extendra:pluto_ice_shard_ore',
+        'ad_extendra:orcus_radium_ore',
+        'ad_extendra:neptune_ice_shard_ore'
   ])
   
   event.removeFeatureById('underground_ores', [
@@ -46,7 +68,19 @@ WorldgenEvents.remove(event => {
         'ad_astra:venus_coal_ore',
         'ad_astra:venus_gold_ore',
         'ad_astra:venus_diamond_ore',
-        'ad_astra:venus_calorite_ore'
+        'ad_astra:venus_calorite_ore',
+        'ad_extendra:jupiter_juperium_ore',
+        'ad_extendra:saturn_saturlyte_ore',
+        'ad_extendra:uranus_uranium_ore',
+        'ad_extendra:uranus_ice_shard_ore',
+        'ad_extendra:uranus_lapis_ore',
+        'ad_extendra:neptune_neptunium_ore',
+        'ad_extendra:sedna_electrolyte_ore',
+        'ad_extendra:b_redstone_ore',
+        'ad_extendra:pluto_plutonium_ore',
+        'ad_extendra:pluto_ice_shard_ore',
+        'ad_extendra:orcus_radium_ore',
+        'ad_extendra:neptune_ice_shard_ore'
   ])
   
 })

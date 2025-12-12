@@ -2,8 +2,8 @@ ServerEvents.recipes(event => {
     //#region remove input
     const toRemoveInput = ['ad_astra:moon_desh_ore', 'ad_astra:deepslate_desh_ore', 'ad_astra:ostrum_plate', 'ad_astra:calorite_plate', 'ad_astra:desh_plate',
         'minecraft:netherite_upgrade_smithing_template', 'ad_astra:fan', 'ad_astra:steel_ingot', 'ad_astra:ice_shard', 'gtceu:gaiasteel_ingot', 'create:creative_blaze_cake',
-        'create:blaze_cake_base', 'createaddition:cake_base_baked', 'create:blaze_cake', 'createaddition:cake_base', 'create:dough',
-        'expandedae:dual_cell_housing', 'expandedae:mega_dual_cell_housing', 'astrogreg:tiny_sky_stone_dust', 'astrogreg:small_sky_stone_dust'
+        'create:blaze_cake_base', 'createaddition:cake_base_baked', 'create:blaze_cake', 'create:dough', 'astrogreg:small_sky_stone_dust', 'astrogreg:tiny_sky_stone_dust', 
+        'expandedae:dual_cell_housing', 'expandedae:mega_dual_cell_housing',
     ]
 
     //#region remove output
@@ -15,7 +15,7 @@ ServerEvents.recipes(event => {
         'createaddition:alternator', 'createaddition:gold_rod', 'effortlessbuilding:golden_randomizer_bag', 'ad_astra:wheel', 'ad_astra:steel_engine', 'ad_astra:launch_pad',
         'createaddition:brass_rod', 'createaddition:copper_rod', 'createaddition:electrum_rod', 'createaddition:electric_motor', 'createaddition:capacitor', 'createaddition:tesla_coil',
         'createaddition:portable_energy_interface', 'createaddition:connector', 'createaddition:large_connector', 'createaddition:festive_spool', 'createaddition:diamond_grit_sandpaper',
-        'effortlessbuilding:randomizer_bag', 'create:empty_blaze_burner', 'effortlessbuilding:diamond_randomizer_bag', 'laserio:laser_connector', 'laserio:filter_counting',
+        'effortlessbuilding:randomizer_bag', 'create:empty_blaze_burner', 'effortlessbuilding:diamond_randomizer_bag', 'laserio:laser_connector', 'laserio:filter_counting', 'delightful:_bottle',
         'buildinggadgets2:gadget_building', 'buildinggadgets2:gadget_destruction', 'buildinggadgets2:gadget_cut_paste', 'buildinggadgets2:gadget_copy_paste', 'buildinggadgets2:gadget_exchanging',
         'farmersdelight:pie_crust', 'create:water_wheel', 'create:large_water_wheel', 'create:brass_funnel', 'create:andesite_funnel', 'create:brass_tunnel', 'expatternprovider:assembler_matrix_frame',
         'create:andesite_tunnel', 'botania:glass_pickaxe', 'create:brass_nugget', 'minecraft:compass', 'createaddition:biomass', 'expatternprovider:assembler_matrix_wall', 'ad_extendra:b_sand',
@@ -41,8 +41,8 @@ ServerEvents.recipes(event => {
         'botania:cell_block', 'expandedae:dual_cell_housing', 'expandedae:mega_dual_cell_housing', 'create:copper_diving_helmet', 'create:copper_diving_boots', 'gtceu:tungsten_grinding_head', 
         'gtceu:diamond_grinding_head', 'ad_astra:oxygen_gear', 'ad_astra:large_gas_tank', 'ad_astra:gas_tank', 'ad_astra:vent', 'ad_astra:wrench', 'expatternprovider:assembler_matrix_glass',
         'megacells:sky_steel_ingot', 'ae2:charged_staff', 'megacells:cell_dock', 'ae2:entropy_manipulator', 'functionalstorage:iron_downgrade', 'ae2wtlib:magnet_card', 'ae2:radio',
-        'ae2netanalyser:network_analyser', 'ae2:basic_card', 'ae2:advanced_card', 'functionalstorage:void_upgrade', 'ad_astra:ti_69', 'ad_astra:cheese_block', 'gtceu:dough', 
-
+        'ae2netanalyser:network_analyser', 'ae2:basic_card', 'ae2:advanced_card', 'functionalstorage:void_upgrade', 'ad_astra:ti_69', 'ad_astra:cheese_block', 'gtceu:dough', 'minecraft:cookie',
+        'ad_astra:cheese', 'delightful:nut_butter_bottle', 'farmersdelight:hot_cocoa'
     ]
 
     //#region remove recipe id
@@ -84,13 +84,13 @@ ServerEvents.recipes(event => {
         'create:crafting/kinetics/mechanical_mixer', 'create:crafting/kinetics/deployer', 'create:crafting/kinetics/millstone', 'create:crafting/kinetics/mechanical_mixer', 'create:crafting/kinetics/mechanical_drill',
         'create:crafting/kinetics/steam_engine', 'create:crafting/kinetics/mechanical_press', 'create:crafting/kinetics/piston_extension_pole', 'create:crafting/kinetics/mechanical_crafter', 
         'create:crafting/kinetics/brass_hand', 'create:crafting/kinetics/hose_pulley', 'create:crafting/kinetics/rope_pulley', 'create:crafting/kinetics/elevator_pulley', 'create:crafting/appliances/chain_from_zinc',
-        'farmersdelight:paper_from_tree_bark', 'create:mixing/chocolate', 'create:mixing/chocolate_melting', 'create:mixing/tea', 'create:mixing/lava_from_cobble', 'create:mixing/honey', 
-        'createaddition:mixing/electrum', 'create:milling/charcoal', 'create:milling/coal', 'create:splashing/crushed_raw_zinc', 'create:splashing/crushed_raw_copper', 'create:splashing/crushed_raw_gold',
+        'farmersdelight:paper_from_tree_bark', 'create:mixing/chocolate', 'create:mixing/tea', 'create:mixing/lava_from_cobble', 'create:mixing/honey', 'create:splashing/crushed_raw_gold',
+        'createaddition:mixing/electrum', 'create:milling/charcoal', 'create:milling/coal', 'create:splashing/crushed_raw_zinc', 'create:splashing/crushed_raw_copper', 'gtceu:macerator/macerate_steak',
         'create:splashing/crushed_raw_iron', 'createaddition:crafting/electrum_block', 'ad_astra:steel_block', 'ad_astra:raw_desh', 'farmersdelight:cutting/gravel', 'gtceu:forge_hammer/gravel_to_sand',
         'create:milling/gravel', 'gtceu:forge_hammer/cobblestone_to_gravel', 'gtceu:macerator/gravel_to_flint', 'create:splashing/sand', 'create:splashing/red_sand', 'minecraft:pumpkin_pie',
-        'minecraft:cookie', 'minecraft:bread', 'dustrial_decor:gold_chain', 'botania:cocoon', 'botania:fel_pumpkin', 'botania:terra_plate', 'botania:alfheim_portal', 'simplylight:illuminant_block_on',
+        'minecraft:bread', 'dustrial_decor:gold_chain', 'botania:cocoon', 'botania:fel_pumpkin', 'botania:terra_plate', 'botania:alfheim_portal', 'simplylight:illuminant_block_on',
         'botania:virus_necrodermal', 'botania:virus_nullodermal', 'create:mixing/compat/ae2/fluix_crystal', 'minecraft:clock','botania:fabulous_pool', 'botania:mana_infusion/mana_bottle', 'botania:prism',
-        'botania:avatar', 'botania:star_sword', 'botania:mana_infusion/managlass', 'botania:redstone_spreader', 'farmersdelight:honey_cookie', 'farmersdelight:sweet_berry_cookie',
+        'botania:avatar', 'botania:star_sword', 'botania:mana_infusion/managlass', 'botania:redstone_spreader', 'farmersdelight:honey_cookie', 'farmersdelight:sweet_berry_cookie', 'gtceu:macerator/macerate_pork_chop',
         'minecraft:cake', 'farmersdelight:cake_from_milk_bottle', 'botania:manasteel_shears', 'botania:lens_normal', 'simplylight:illuminant_slab', 'simplylight:walllamp', 'simplylight:rodlamp',
         'simplylight:bulb', 'simplylight:edge_light', 'simplylight:', 'simplylight:lamp_post', 'simplylight:illuminant_block', 'gtceu:shaped/nugget_assembling_gaiasteel', 'gtceu:shaped/block_compress_gaiasteel', 
         'gtceu:shapeless/nugget_disassembling_gaiasteel', 'gtceu:shapeless/block_decompress_gaiasteel', 'botania:thorn_chakram', 'gtceu:centrifuge/ender_air_separation', 'botania:lens_magnet',
@@ -111,8 +111,9 @@ ServerEvents.recipes(event => {
         'ae2:network/parts/panels_semi_dark_monitor', 'buildinggadgets2:template_manager', 'gtceu:macerator/macerate_hay_block', 'gtceu:macerator/macerate_sugar_cane', 'delightful:food/pumpkin_pie_from_slices',
         'farmersdelight:apple_pie_from_slices', 'farmersdelight:chocolate_pie_from_slices', 'farmersdelight:sweet_berry_cheesecake_from_slices', 'delightful:melon_slice', 'delightful:cutting/pumpkin_pie',
         'farmersdelight:cutting/apple_pie', 'farmersdelight:cutting/chocolate_pie', 'farmersdelight:cutting/sweet_berry_cheesecake', 'delightful:food/baklava_from_slices', 'delightful:cutting/baklava',
-        'gtceu:macerator/macerate_chicken', 'gtceu:macerator/macerate_rabbit', 'gtceu:macerator/macerate_mutton', 'gtceu:macerator/macerate_steak', 'gtceu:macerator/macerate_pork_chop',
-        
+        'gtceu:macerator/macerate_chicken', 'gtceu:macerator/macerate_rabbit', 'gtceu:macerator/macerate_mutton', 'ad_extendra:saturlyte_nugget', 'ad_extendra:juperium_nugget', 'delightful:food_oven',
+        'delightful:food/sweet_berry_cheesecake_from_cheese', 'delightful:food/glow_jam_cookie', 'delightful:food/baklava_no_citrus', 'delightful:food/nut_dough', 'delightful:food/salmonberry_pie',
+        'create:milling/cocoa_beans', 'gtceu:shaped/cake_from_dough', 'farmersdelight:sweet_berry_cheesecake'
     ]
 
     //#region remove type
@@ -160,7 +161,7 @@ ServerEvents.recipes(event => {
     event.remove({output: 'createaddition:iron_rod'})
     event.remove({output: '#forge:wires'})
     event.remove({input: '#forge:wires'})
-    event.remove({id: 'gtceu:macerator/macerate_wheat'})
+    event.remove({id: 'create:mixing/chocolate_melting'})    
     event.remove({id: /.*expatternprovider.*cutter.*/})
     event.remove({output: /gtceu:.*_energy_converter/ })
     event.remove({output: /gtmutils:.*_energy_converter/ })

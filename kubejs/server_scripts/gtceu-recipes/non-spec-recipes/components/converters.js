@@ -8,7 +8,7 @@ ServerEvents.recipes(event => {
 
     const EV_UHVMaterials = { 
         ev: 'gtceu:spirited_uranium',
-        iv: 'gtceu:nitromangaphosphide',
+        iv: 'gtceu:nitro_flux',
         luv: 'gtceu:juperiosaturlytide',
         zpm: 'gtceu:gaiaforged_naquadah',
         uv: 'gtceu:neptunium_molybdenum_selenide',

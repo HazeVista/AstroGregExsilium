@@ -105,6 +105,7 @@ event.removeAllTagsFrom('ad_extendra:juperium_ingot')
 event.removeAllTagsFrom('ad_extendra:juperium_plate')
 event.removeAllTagsFrom('ad_extendra:saturlyte_ingot')
 event.removeAllTagsFrom('ad_extendra:saturlyte_plate')
+event.removeAllTagsFrom('delightful:source_berry_cookie')
 event.removeAllTagsFrom(/delightful:.*_knife/)
 });
 
@@ -197,4 +198,5 @@ event.add('forge:meat_small', 'farmersdelight:bacon')
 event.add('forge:meat_small', 'farmersdelight:cod_slice')
 event.add('forge:meat_small', 'farmersdelight:salmon_slice')
 event.add('forge:meat_small', 'farmersdelight:mutton_chops')
+event.add('forge:sweetener', 'minecraft:sugar')
 })
