@@ -206,7 +206,7 @@ const ComponentLiquid = [
 ]
 // Name, Elements, Color1, Color2, Icon, Blasting, Flags
 const ComponentIngotLiquidTwoColors = [
-    ['futura_alloy', ['4x stainless_steel', /*'sky_stone'*/], 0xebb7ea, 0x000000, SHINY, [1700, 'low', 400, 1200], [frame, plates, rod, dense_plate, mortar_grind, block]]
+    []
 ]
 // Name, Color, IconSet, Blasting, FluidPipeProperties, ToolStats, Magnetic, Flags
 /*const BotaniaTools = [
@@ -237,13 +237,13 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     // Liquid
     element('neptunium', 'fluid')
 
-    // Material modification
+    // material modification
     MaterialModifier.forEach(material => {
         GTMaterials.get(material[0]).addFlags(material[1]);
     })
     //#endregion
 
-    //#region adding the materials
+    //#region material helpers
     ComponentDust.forEach(material => {
         event.create(material[0])
         .dust()
@@ -487,5 +487,5 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
         .build())
     //#endregion
 
-
+*/
 })
