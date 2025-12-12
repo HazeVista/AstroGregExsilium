@@ -100,10 +100,6 @@ VoltageNames.forEach((Tier, index) => {
     global["VA"][Tier.toUpperCase()] = GTValues.VA[index];
     global["VH"][Tier.toUpperCase()] = GTValues.VH[index];
     global["VHA"][Tier.toUpperCase()] = GTValues.VHA[index];
-    console.log("Registered global voltage variable V: " + Tier + ", value: " + global["V"][Tier.toUpperCase()]);
-    console.log("Registered global voltage variable VA: " + Tier + ", value: " + global["VA"][Tier.toUpperCase()]);
-    console.log("Registered global voltage variable VH: " +  Tier + ", value: " +  global["VH"][Tier.toUpperCase()]);
-    console.log("Registered global voltage variable VHA: " + Tier + ", value: " + global["VHA"][Tier.toUpperCase()]);
 });
 //#region voltage helpers
 //#endregion
