@@ -13,4 +13,23 @@ StartupEvents.registry('item', event => {
                 .saturation(0.75)
                 .fastToEat()
         })
+
+    event.create('farmersdelight:chocolate_cake_slice')
+        .displayName('Chocolate Cake Slice')
+        .texture('kubejs:item/delight/chocolate_cake_slice')
+        .food(food => {
+            food
+                .hunger(2)
+                .saturation(0.25)
+        })
+        
+    event.create('farmersdelight:_cake_slice')
+        .displayName('Honey Cake Slice')
+        .texture('kubejs:item/delight/honey_cake_slice')
+        .food(food => {
+            food
+                .hunger(2)
+                .saturation(0.25)
+        })
+        
 })

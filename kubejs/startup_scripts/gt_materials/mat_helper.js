@@ -50,19 +50,17 @@ global.flags = {
     explosive: GTMaterialFlags.EXPLOSIVE,
     flammable: GTMaterialFlags.FLAMMABLE,
     sticky: GTMaterialFlags.STICKY,
-    phosphorescent: GTMaterialFlags.PHOSPHORESCENT,
+    magnetic: GTMaterialFlags.IS_MAGNETIC,
+    glow: GTMaterialFlags.PHOSPHORESCENT,
 
-    // Generation Flags
     plates: GTMaterialFlags.GENERATE_PLATE,
-    dense_plate: GTMaterialFlags.GENERATE_DENSE,
+    dense: GTMaterialFlags.GENERATE_DENSE,
     rod: GTMaterialFlags.GENERATE_ROD,
     bolt_and_screw: GTMaterialFlags.GENERATE_BOLT_SCREW,
     frame: GTMaterialFlags.GENERATE_FRAME,
     gear: GTMaterialFlags.GENERATE_GEAR,
     long_rod: GTMaterialFlags.GENERATE_LONG_ROD,
     block: GTMaterialFlags.FORCE_GENERATE_BLOCK,
-
-    // Ingot Flags
     foil: GTMaterialFlags.GENERATE_FOIL,
     ring: GTMaterialFlags.GENERATE_RING,
     spring: GTMaterialFlags.GENERATE_SPRING,
@@ -71,21 +69,13 @@ global.flags = {
     fine_wire: GTMaterialFlags.GENERATE_FINE_WIRE,
     rotor: GTMaterialFlags.GENERATE_ROTOR,
     round: GTMaterialFlags.GENERATE_ROUND,
-    magnetic: GTMaterialFlags.IS_MAGNETIC,
-
-    // Gem Flags
+    
     crystallizable: GTMaterialFlags.CRYSTALLIZABLE,
     lens: GTMaterialFlags.GENERATE_LENS,
-
-    // Fluid Flags
     solder_mat: GTMaterialFlags.SOLDER_MATERIAL,
     solder_mat_bad: GTMaterialFlags.SOLDER_MATERIAL_BAD,
     solder_mat_good: GTMaterialFlags.SOLDER_MATERIAL_GOOD,
-
-    // Ore Flags
     more_sifter: GTMaterialFlags.HIGH_SIFTER_OUTPUT,
-
-    // Misc
     no_block_craft: GTMaterialFlags.EXCLUDE_BLOCK_CRAFTING_RECIPES,
     no_plate_compressor_craft: GTMaterialFlags.EXCLUDE_PLATE_COMPRESSOR_RECIPE,
     no_hand_craft: GTMaterialFlags.EXCLUDE_BLOCK_CRAFTING_BY_HAND_RECIPES,
