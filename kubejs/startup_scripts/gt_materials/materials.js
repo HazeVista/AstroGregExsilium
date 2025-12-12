@@ -100,42 +100,7 @@ const not_alloy = GTMaterialFlags.DISABLE_ALLOY_PROPERTY;
 //#endregion
 
 //region Tool Type Types
-const BotanicTools = [
-    GTToolType.SWORD,
-    GTToolType.PICKAXE,
-    GTToolType.SHOVEL,
-    GTToolType.AXE,
-    GTToolType.HOE,
-    GTToolType.MINING_HAMMER,
-    GTToolType.SPADE,
-    GTToolType.SAW,
-    GTToolType.HARD_HAMMER,
-    GTToolType.SOFT_MALLET,
-    GTToolType.WRENCH,
-    GTToolType.FILE,
-    GTToolType.CROWBAR,
-    GTToolType.SCREWDRIVER,
-    GTToolType.MORTAR,
-    GTToolType.WIRE_CUTTER,
-    GTToolType.SCYTHE,
-    GTToolType.KNIFE,
-    GTToolType.BUTCHERY_KNIFE,
-    GTToolType.PLUNGER,
-    GTToolType.DRILL_LV,
-    GTToolType.DRILL_MV,
-    GTToolType.DRILL_HV,
-    GTToolType.DRILL_EV,
-    GTToolType.DRILL_IV,
-    GTToolType.CHAINSAW_LV,
-    GTToolType.BUZZSAW,
-    GTToolType.SCREWDRIVER_LV,
-    GTToolType.WRENCH_LV,
-    GTToolType.WRENCH_HV,
-    GTToolType.WRENCH_IV,
-    GTToolType.WIRE_CUTTER_LV,
-    GTToolType.WIRE_CUTTER_HV,
-    GTToolType.WIRE_CUTTER_IV
-]
+
 //#endregion
 
 //#region voltage functions
@@ -185,7 +150,6 @@ const ComponentLiquid = [
 ]
 // Name, Elements, Color1, Color2, Icon, Blasting, Flags    (using darker colors for color2 almost always looks better)
 const ComponentIngotLiquidTwoColors = [
-    []
 ]
 // Name, Color, IconSet, Blasting, FluidPipeProperties, ToolStats, Magnetic, Flags
 /*const BotaniaTools = [
@@ -200,7 +164,7 @@ const SuperConductors = [
     ['blazing_etrium', [], 0x8ee8ed, [1700, 'low', va.MV, 1200], [v.MV, 8, 0, true], [190, 150, 3, 14000]],
     ['niotic_calorite', [], 0xe4eb60, [1700, 'low', va.HV, 1500], [v.HV, 16, 0, true], [220, 170, 3, 16000]],
     ['spirited_uranium', [], 0xcb74cc, [3500, 'low', va.EV, 1800], [v.EV, 24, 0, true], [300, 190, 3, 18000]],
-    ['nitro_flux', [], 0x110c9c, [4400, 'mid', va.IV, 2100], [VIV, 32, 0, true], [450, 220, 3, 20000]],
+    ['nitro_flux', [], 0x110c9c, [4400, 'mid', va.IV, 2100], [v.IV, 32, 0, true], [450, 220, 3, 20000]],
     ['juperiosaturlytide', [], 0xf66999, [5300, 'mid', va.LUV, 2400], [v.LUV, 48, 0, true], [700, 260, 3, 24000]],
     ['gaiaforged_naquadah', [], 0x421218, [7100, 'high', va.ZPM, 2700], [v.ZPM, 64, 0, true], [1100, 380, 3, 32000]],
     ['neptunium_molybdenum_selenide', [], 0x088a5c, [10000, 'higher', va.UV, 3000], [v.UV, 96, 0, true], [2000, 550, 3, 48000]],
@@ -291,7 +255,42 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
             .rotorStats(material[5][0], material[5][1], material[5][2], material[5][3]);
     })
 
-    
+    const BotanicTools = [
+        GTToolType.SWORD,
+        GTToolType.PICKAXE,
+        GTToolType.SHOVEL,
+        GTToolType.AXE,
+        GTToolType.HOE,
+        GTToolType.MINING_HAMMER,
+        GTToolType.SPADE,
+        GTToolType.SAW,
+        GTToolType.HARD_HAMMER,
+        GTToolType.SOFT_MALLET,
+        GTToolType.WRENCH,
+        GTToolType.FILE,
+        GTToolType.CROWBAR,
+        GTToolType.SCREWDRIVER,
+        GTToolType.MORTAR,
+        GTToolType.WIRE_CUTTER,
+        GTToolType.SCYTHE,
+        GTToolType.KNIFE,
+        GTToolType.BUTCHERY_KNIFE,
+        GTToolType.PLUNGER,
+        GTToolType.DRILL_LV,
+        GTToolType.DRILL_MV,
+        GTToolType.DRILL_HV,
+        GTToolType.DRILL_EV,
+        GTToolType.DRILL_IV,
+        GTToolType.CHAINSAW_LV,
+        GTToolType.BUZZSAW,
+        GTToolType.SCREWDRIVER_LV,
+        GTToolType.WRENCH_LV,
+        GTToolType.WRENCH_HV,
+        GTToolType.WRENCH_IV,
+        GTToolType.WIRE_CUTTER_LV,
+        GTToolType.WIRE_CUTTER_HV,
+        GTToolType.WIRE_CUTTER_IV
+    ];
     event.create('manasteel')
         .ingot().fluid()
         .color(0x228cc9)
