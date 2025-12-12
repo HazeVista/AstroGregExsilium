@@ -95,7 +95,7 @@ ServerEvents.recipes(event => {
       '4x create:pulp', 
       0, 
       160, 
-    )        
+    )         
 
     event.recipes.gtceu.macerator('macerate_meat')
       .itemInputs('#forge:meat')
