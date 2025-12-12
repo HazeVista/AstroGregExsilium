@@ -1,64 +1,65 @@
 ServerEvents.recipes(event => {
 
-    const LV_HVconverterMaterials = { 
-        lv: 'energized_steel', 
-        mv: 'blazing_ostrum',
-        hv: 'niotic_calorite'
+    const LV_HVMaterials = { 
+        lv: 'astrogreg:energized_steel', 
+        mv: 'gtceu:blazing_ostrum',
+        hv: 'gtceu:niotic_calorite'
         }
 
-    const EV_UHVconverterMaterials = { 
-        ev: 'spirited_uranium',
-        iv: 'nitromangaphosphide',
-        luv: 'juperiosaturlytide',
-        zpm: 'gaiaforged_naquadah',
-        uv: 'neptunium_molybdenum_selenide',
+    const EV_UHVMaterials = { 
+        ev: 'gtceu:spirited_uranium',
+        iv: 'gtceu:nitro_flux',
+        luv: 'gtceu:juperiosaturlytide',
+        zpm: 'gtceu:gaiaforged_naquadah',
+        uv: 'gtceu:neptunium_molybdenum_selenide',
         // uhv: ''
         }
 
-    function converterRecipe(amps, thick){
-        for (const [tier, superconductor] of Object.entries(LV_HVconverterMaterials)) {
-            event.shaped(Item.of(`gtceu:${tier}_${amps}_energy_converter`), [
-                '   ',
-                'ACA',
-                'ABA'
+    function converter(a, wiresize){
+
+        for (const [tier, supercon] of Object.entries(LV_HVMaterials)) {
+            event.shaped(Item.of(`gtceu:${tier}_${a}_energy_converter`), [
+                ' AA',
+                'DBC',
+                ' AA'
             ], {
-                A: `gtceu:${superconductor}_${thick}_wire`,
+                A: `${supercon}_${wiresize}_wire`,
                 B: `gtceu:${tier}_machine_hull`,
-                C: `#gtceu:circuits/${tier}`
+                C: `#gtceu:circuits/${tier}`,
+                D: `${supercon}_single_wire`
             })
-            .id(`gtceu:shaped/${tier}_${amps}_energy_converter`)};      
-        
-        for (const [tier, superconductor] of Object.entries(EV_UHVconverterMaterials)) {
-            event.shaped(Item.of(`gtceu:${tier}_${amps}_energy_converter`), [
-                '   ',
-                'ACA',
-                'ABA'
+        }
+
+        for (const [tier, supercon] of Object.entries(EV_UHVMaterials)) {
+            event.shaped(Item.of(`gtceu:${tier}_${a}_energy_converter`), [
+                ' AA',
+                'DBC',
+                ' AA'
             ], {
-                A: `gtceu:${superconductor}_${thick}_wire`,
+                A: `${supercon}_${wiresize}_wire`,
                 B: `gtceu:${tier}_machine_hull`,
-                C: `#gtceu:circuits/${tier}`
-            })
-            .id(`gtceu:shaped/${tier}_${amps}_energy_converter`)};
-        };
+                C: `#gtceu:circuits/${tier}`,
+                D: `${supercon}_single_wire`
+            })}
+        }
     
-    for (const [tier, superconductor] of Object.entries(EV_UHVconverterMaterials)) {
-        event.recipes.gtceu.assembler(`${tier}_64a_energy_converter`)
-            .itemInputs(`#gtceu:circuits/${tier}`, `16x gtceu:${superconductor}_hex_wire`, `gtceu:${tier}_machine_hull`)
+    for (const [tier, supercon] of Object.entries(EV_UHVMaterials)) {
+        event.recipes.gtceu.assembler(`${tier}_64a_converter`)
+            .itemInputs(`#gtceu:circuits/${tier}`, `16x ${supercon}_hex_wire`, `gtceu:${tier}_machine_hull`)
             .itemOutputs(Item.of(`gtmutils:${tier}_64a_energy_converter`))
-            .duration(600)
+            .duration(400)
             .EUt(1600)
-    };
+    }
 
-    converterRecipe('1a','single');
-    converterRecipe('4a','quadruple');
-    converterRecipe('8a','octal');
-    converterRecipe('16a','hex');
+    converter('1a','single')
+    converter('4a','quadruple')
+    converter('8a','octal')
+    converter('16a','hex')
 
-});
-
+})
+    
     BlockEvents.placed(event => {
 	    let block = event.getBlock();
 	    if (/^(?:gtceu|gtmutils):.*energy_converter$/.test(block.getId())) {
-            block.mergeEntityData({ energyContainer: { feToEu: true } });
-	};
-});
+            block.mergeEntityData({ energyContainer: { feToEu: true } })}
+})

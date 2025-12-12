@@ -17,9 +17,13 @@
     "gtceu.mana_infusion": "Mana Infusion",
     "gtceu.botanic_purification": "Botanic Purification",
     
-    "material.gtceu.futura_alloy": "Futura Steel",
     "material.gtceu.andesite_alloy": "Andesite Alloy",
     "material.gtceu.asteroid_stone": "Asteroid",
+    "material.gtceu.acorn": "Acorn",
+    "item.gtceu.tiny_acorn_dust": "Tiny Acorn Flour",
+    "item.gtceu.small_acorn_dust": "Small Acorn Flour",
+    "item.gtceu.acorn_dust": "Acorn Flour",
+
     "material.gtceu.inactive_terrasteel": "Inactive §2Terrasteel§r",
     "material.gtceu.terrasteel": "§2Terrasteel",
     "material.gtceu.manasteel": "§9Manasteel",
@@ -32,11 +36,10 @@
     "material.gtceu.aether": "§3Æther§r",
     "material.gtceu.depleted_aether": "Depleted §3Æther§r",
 
-    "material.gtceu.energized_steel": "Energized Steel",
     "material.gtceu.blazing_etrium": "Blazing Etrium",
     "material.gtceu.niotic_calorite": "Niotic Calorite",
     "material.gtceu.spirited_uranium": "Spirited Uranium",
-    "material.gtceu.nitromangaphosphide": "Nitromangaphosphide",
+    "material.gtceu.nitro_flux": "Nitro-Flux",
     "material.gtceu.juperiosaturlytide": "Juperiosaturlytide",
     "material.gtceu.gaiaforged_naquadah": "Gaia-Forged Naquadah",
     "material.gtceu.neptunium_molybdenum_selenide": "Neptunium Molybdenum Selenide",

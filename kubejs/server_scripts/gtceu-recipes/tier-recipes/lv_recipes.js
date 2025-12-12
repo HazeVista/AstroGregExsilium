@@ -112,6 +112,36 @@ ServerEvents.recipes(event => {
     //#endregion
 
 
+
+    //#region etrium & blazing etrium
+
+    event.recipes.gtceu.mixer('mix_etrium_dust')
+        .itemInputs('3x astrogreg:ostrum_dust', '2x gtceu:electrum_dust')
+        .itemOutputs('5x astrogreg:etrium_dust')
+        .duration(200)
+        .EUt(28)
+
+    event.recipes.gtceu.alloy_smelter('alloy_blast_etrium')
+        .itemInputs('3x astrogreg:ostrum_dust', '2x gtceu:electrum_dust')
+        .outputFluids('astrogreg:etrium 720')
+        .duration(200)
+        .EUt(28)
+
+    event.recipes.gtceu.mixer('mix_blazing_etrium_dust')
+        .itemInputs('2x astrogreg:etrium_dust', 'minecraft:blaze_powder')
+        .itemOutputs('3x gtceu:blazing_etrium_dust')
+        .duration(300)
+        .EUt(28)
+
+    event.recipes.gtceu.alloy_smelter('alloy_blast_blazing_etrium')
+        .itemInputs('2x astrogreg:etrium_dust', 'minecraft:blaze_powder')
+        .outputFluids('gtceu:blazing_etrium 432')
+        .duration(300)
+        .EUt(28)
+
+    //#endregion
+
+
         
     //#region bottling
     event.recipes.gtceu.assembler('bottle_ender_air')
@@ -135,7 +165,7 @@ ServerEvents.recipes(event => {
         .duration(20)
         .EUt(7)
 
-    event.recipes.gtceu.extractor('bottle_mana')
+    event.recipes.gtceu.assembler('bottle_mana')
         .itemInputs('minecraft:glass_bottle')
         .inputFluids('manafluid:mana 250')
         .itemOutputs('botania:mana_bottle')
@@ -157,16 +187,16 @@ ServerEvents.recipes(event => {
         .EUt(7)
 
     event.recipes.gtceu.extractor('unbottle_water')
+        .itemInputs(Item.of('minecraft:potion', '{Potion:"minecraft:water"}'))
         .itemOutputs('minecraft:glass_bottle')
         .outputFluids('minecraft:water 250')
-        .itemInputs(Item.of('minecraft:potion', '{Potion:"minecraft:water"}'))
         .duration(20)
         .EUt(7)
 
     event.recipes.gtceu.extractor('unbottle_mana')
+        .itemInputs('botania:mana_bottle')
         .itemOutputs('minecraft:glass_bottle')
         .outputFluids('manafluid:mana 250')
-        .itemInputs('botania:mana_bottle')
         .duration(20)
         .EUt(7)
     //#endregion

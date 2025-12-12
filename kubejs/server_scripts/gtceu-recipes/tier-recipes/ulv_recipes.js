@@ -25,59 +25,14 @@ ServerEvents.recipes(event => {
     event.smelting('minecraft:glass', 'gtceu:glass_dust')
 
 
-    event.recipes.farmersdelight.cooking(
-      ['gtceu:raw_rubber_dust', 'gtceu:raw_rubber_dust', 'gtceu:raw_rubber_dust', 'gtceu:sulfur_dust'],
-      'gtceu:rubber_ingot',
-      0,
-      320,
-      'gtceu:brick_wooden_form'
-    );
-
-    event.recipes.farmersdelight.cooking(
-      ['astrogreg:desh_dust', 'gtceu:iron_dust', 'gtceu:red_alloy_dust'],
-      '3x powah:steel_energized',
-      0,
-      200,
-      'gtceu:brick_wooden_form'
-    );
-
-    event.shaped('farmersdelight:stove', [
-      'CCC',
-      'A A',
-      'ABA'
-    ], {
-      A: 'minecraft:bricks',
-      B: 'minecraft:campfire',
-      C: 'gtceu:wrought_iron_plate'
-    });
-
-    event.shaped('farmersdelight:skillet', [
-      ' BB',
-      ' BB',
-      'A  '
-    ], {
-      A: 'gtceu:bronze_rod',
-      B: 'gtceu:wrought_iron_plate'
-    });
-
-    event.shaped('farmersdelight:cooking_pot', [
-      'C C',
-      'ABA',
-      'AAA'
-    ], {
-      A: 'gtceu:wrought_iron_plate',
-      B: 'minecraft:bucket',
-      C: 'gtceu:bronze_rod'
-    });
-
-    event.shaped('4x create:pulp', [
-    'AAA',
-    'ABA',
-    'AAA'
-    ], {
-    A: 'gtceu:paper_dust',
-    B: 'minecraft:water_bucket'
-    }).replaceIngredient('minecraft:water_bucket', 'minecraft:bucket')
+     // event.shaped('4x create:pulp', [
+    // 'AAA',
+    // 'ABA',
+    // 'AAA'
+    // ], {
+    // A: 'gtceu:paper_dust',
+    // B: 'minecraft:water_bucket'
+    // }).replaceIngredient('minecraft:water_bucket', 'minecraft:bucket')
 
     //event.shaped('2x minecraft:paper', [
     //  'AAA'
@@ -102,7 +57,7 @@ ServerEvents.recipes(event => {
 
     event.recipes.gtceu.mixer('mixing_energized_steel_dust')
         .itemInputs('astrogreg:desh_dust', 'gtceu:iron_dust', 'gtceu:red_alloy_dust')
-        .itemOutputs('gtceu:energized_steel_dust')
+        .itemOutputs('astrogreg:energized_steel_dust')
         .duration(200)
         .EUt(7)
 
@@ -133,9 +88,85 @@ ServerEvents.recipes(event => {
       .itemOutputs('minecraft:paper')
       .duration(80)
       .EUt(4)
+    
+    event.recipes.farmersdelight.cooking( 
+      ['gtceu:paper_dust', 'gtceu:paper_dust', 
+        'gtceu:paper_dust', 'gtceu:paper_dust', 'minecraft:water_bucket'], 
+      '4x create:pulp', 
+      0, 
+      160, 
+    )         
+
+    event.recipes.gtceu.macerator('macerate_meat')
+      .itemInputs('#forge:meat')
+      .itemOutputs('gtceu:meat_dust')
+      .chancedOutput('gtceu:meat_dust', 5000, 0)
+      .itemOutputs('gtceu:tiny_bone_dust')
+      .duration(102)
+      .EUt(2)
+
+    event.recipes.gtceu.macerator('macerate_meat_small')
+      .itemInputs('#forge:meat_small')
+      .itemOutputs('gtceu:meat_dust', 'gtceu:tiny_bone_dust')
+      .duration(102)
+      .EUt(2)    
+      
+    event.recipes.gtceu.compressor('compress_plant_ball')
+      .itemInputs('#forge:crops')
+      .itemOutputs('gtceu:plant_ball')
+      .duration(300)
+      .EUt(2)      
     //#endregion
 
+    //#region gt delight
+    event.recipes.farmersdelight.cooking(
+      ['gtceu:raw_rubber_dust', 'gtceu:raw_rubber_dust', 'gtceu:raw_rubber_dust', 'gtceu:sulfur_dust'],
+      'gtceu:formed_rubber_ingot',
+      0,
+      100,
+      'gtceu:brick_wooden_form'
+    )
 
+    event.recipes.farmersdelight.cooking(
+      ['astrogreg:desh_dust', 'gtceu:iron_dust', 'gtceu:red_alloy_dust'],
+      'gtceu:formed_energized_steel_ingot',
+      0,
+      100,
+      'gtceu:brick_wooden_form'
+    )
+
+    event.shapeless('gtceu:rubber_ingot', 'gtceu:formed_rubber_ingot').replaceIngredient('gtceu:formed_rubber_ingot', 'gtceu:brick_wooden_form')
+    event.shapeless('3x powah:steel_energized', 'gtceu:formed_energized_steel_ingot').replaceIngredient('gtceu:formed_energized_steel_ingot', 'gtceu:brick_wooden_form')
+
+    event.shaped('farmersdelight:stove', [
+      'CCC',
+      'A A',
+      'ABA'
+    ], {
+      A: 'minecraft:bricks',
+      B: 'minecraft:campfire',
+      C: 'gtceu:wrought_iron_plate'
+    })
+
+    event.shaped('farmersdelight:skillet', [
+      ' BB',
+      ' BB',
+      'A  '
+    ], {
+      A: 'gtceu:bronze_rod',
+      B: 'gtceu:wrought_iron_plate'
+    })
+
+    event.shaped('farmersdelight:cooking_pot', [
+      'C C',
+      'ABA',
+      'AAA'
+    ], {
+      A: 'gtceu:wrought_iron_plate',
+      B: 'minecraft:bucket',
+      C: 'gtceu:bronze_rod'
+    })
+    //#endregion
 
     //#region water source
     event.recipes.gtceu.water_source('pump_water')

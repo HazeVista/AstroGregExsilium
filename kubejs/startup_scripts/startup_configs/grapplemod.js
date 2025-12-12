@@ -1,5 +1,5 @@
 "use strict";
-
+//from TFG to accompany the grapplemod changes
 global.GRAPPLEMOD_DISABLED_ITEMS = [
 	"grapplemod:launcheritem",
 	"grapplemod:repeller",
