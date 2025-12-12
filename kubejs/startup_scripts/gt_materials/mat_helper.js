@@ -90,60 +90,18 @@ global.flags = {
 }
 //#endregion
 
-
-
+global["V"] = {};
+global["VA"] = {};
+global["VH"] = {};
+global["VHA"] = {};
+const VoltageNames = GTValues.VN;
+VoltageNames.forEach((Tier, index) => {
+    global["V"][Tier.toUpperCase()] = GTValues.V[index];
+    global["VA"][Tier.toUpperCase()] = GTValues.VA[index];
+    global["VH"][Tier.toUpperCase()] = GTValues.VH[index];
+    global["VHA"][Tier.toUpperCase()] = GTValues.VHA[index];
+});
 //#region voltage helpers
-global.v = {
-    'ulv': GTValues.V[GTValues.ULV],
-    'lv': GTValues.V[GTValues.LV],
-    'mv': GTValues.V[GTValues.MV],
-    'hv': GTValues.V[GTValues.HV],
-    'ev': GTValues.V[GTValues.EV],
-    'iv': GTValues.V[GTValues.IV],
-    'luv': GTValues.V[GTValues.LuV],
-    'zpm': GTValues.V[GTValues.ZPM],
-    'uv': GTValues.V[GTValues.UV],
-    'uhv': GTValues.V[GTValues.UHV]
-};
- 
-global.va = {
-    'ulv': GTValues.VA[GTValues.ULV],
-    'lv': GTValues.VA[GTValues.LV],
-    'mv': GTValues.VA[GTValues.MV],
-    'hv': GTValues.VA[GTValues.HV],
-    'ev': GTValues.VA[GTValues.EV],
-    'iv': GTValues.VA[GTValues.IV],
-    'luv': GTValues.VA[GTValues.LuV],
-    'zpm': GTValues.VA[GTValues.ZPM],
-    'uv': GTValues.VA[GTValues.UV],
-    'uhv': GTValues.VA[GTValues.UHV]
-};
-
-global.vh = {
-    'ulv': GTValues.VH[GTValues.ULV],
-    'lv': GTValues.VH[GTValues.LV],
-    'mv': GTValues.VH[GTValues.MV],
-    'hv': GTValues.VH[GTValues.HV],
-    'ev': GTValues.VH[GTValues.EV],
-    'iv': GTValues.VH[GTValues.IV],
-    'luv': GTValues.VH[GTValues.LuV],
-    'zpm': GTValues.VH[GTValues.ZPM],
-    'uv': GTValues.VH[GTValues.UV],
-    'uhv': GTValues.VH[GTValues.UHV]
-};
-
-global.vha = {
-    'ulv': GTValues.VHA[GTValues.ULV],
-    'lv': GTValues.VHA[GTValues.LV],
-    'mv': GTValues.VHA[GTValues.MV],
-    'hv': GTValues.VHA[GTValues.HV],
-    'ev': GTValues.VHA[GTValues.EV],
-    'iv': GTValues.VHA[GTValues.IV],
-    'luv': GTValues.VHA[GTValues.LuV],
-    'zpm': GTValues.VHA[GTValues.ZPM],
-    'uv': GTValues.VHA[GTValues.UV],
-    'uhv': GTValues.VHA[GTValues.UHV]
-};
 //#endregion
 
 
