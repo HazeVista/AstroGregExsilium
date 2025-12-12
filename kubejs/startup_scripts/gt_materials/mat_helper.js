@@ -38,8 +38,6 @@ global.iconSets = {
 }
 //#endregion
 
-
-
 //#region flags
 global.flags = {
     // Generic flags
@@ -90,6 +88,7 @@ global.flags = {
 }
 //#endregion
 
+//#region voltages
 global["V"] = {};
 global["VA"] = {};
 global["VH"] = {};
@@ -101,5 +100,4 @@ VoltageNames.forEach((Tier, index) => {
     global["VH"][Tier.toUpperCase()] = GTValues.VH[index];
     global["VHA"][Tier.toUpperCase()] = GTValues.VHA[index];
 });
-//#region voltage helpers
 //#endregion
