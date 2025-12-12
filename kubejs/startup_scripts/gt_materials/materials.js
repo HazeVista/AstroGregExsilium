@@ -1,26 +1,10 @@
 //#region properties
-const $IngotProperty = global.IngotProperty
-const $DustProperty = global.DustProperty
-const $FluidProperty = global.FluidProperty
-const $BlastProperty = global.BlastProperty
-const $FluidPipeProperties = global.FluidPipeProperties
-const $PropertyKey = global.PropertyKey
-const $ToolProperty = Java.loadClass('com.gregtechceu.gtceu.api.data.chemical.material.properties.ToolProperty')
-//#endregion
-
-//#region elements
-function elemCreator(event, id, p, n,  symbol) {  
-        event.create(id)
-            .protons(p)
-            .neutrons(n)
-            .symbol(symbol)
-}
-
-GTCEuStartupEvents.registry("gtceu:element", event => {
-    const elemCreator = [
-        /*["example_element", -1, -1, "Ee"]*/
-    ]
-})
+const IngotProperty = Java.loadClass('com.gregtechceu.gtceu.api.data.chemical.material.properties.IngotProperty');
+const DustProperty = Java.loadClass('com.gregtechceu.gtceu.api.data.chemical.material.properties.DustProperty');
+const FluidProperty = Java.loadClass('com.gregtechceu.gtceu.api.data.chemical.material.properties.FluidProperty');
+const BlastProperty = Java.loadClass('com.gregtechceu.gtceu.api.data.chemical.material.properties.BlastProperty');
+const FluidPipeProperties = Java.loadClass('com.gregtechceu.gtceu.api.data.chemical.material.properties.FluidPipeProperties');
+const ToolProperty = Java.loadClass('com.gregtechceu.gtceu.api.data.chemical.material.properties.ToolProperty');
 //#endregion
 
 //#region icon sets
@@ -49,8 +33,6 @@ const LAPIS = GTMaterialIconSet.LAPIS
 const FLUID = GTMaterialIconSet.FLUID
 const RADIOACTIVE = GTMaterialIconSet.RADIOACTIVE
 //#endregion
-
-
 
 //#region material flags
 const no_unify = GTMaterialFlags.NO_UNIFICATION
@@ -99,11 +81,19 @@ const no_abs_recipe = GTMaterialFlags.DISABLE_ALLOY_BLAST;
 const not_alloy = GTMaterialFlags.DISABLE_ALLOY_PROPERTY;
 //#endregion
 
-//region Tool Type Types
-
-//#endregion
-
 //#region voltage functions
+
+global["V"] = {};
+global["VA"] = {};
+global["VH"] = {};
+global["VHA"] = {};
+const VoltageNames = GTValues.VN;
+VoltageNames.forEach((Tier, index) => {
+    global["V"][Tier.toUpperCase()] = GTValues.V[index];
+    global["VA"][Tier.toUpperCase()] = GTValues.VA[index];
+    global["VH"][Tier.toUpperCase()] = GTValues.VH[index];
+    global["VHA"][Tier.toUpperCase()] = GTValues.VHA[index];
+});
 
 const v = global.V
 const va = global.VA
