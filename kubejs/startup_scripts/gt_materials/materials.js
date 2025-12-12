@@ -170,16 +170,22 @@ const SuperConductors = [
     ['neptunium_molybdenum_selenide', [], 0x088a5c, [10000, 'higher', va.UV, 3000], [v.UV, 96, 0, true], [2000, 550, 3, 48000]],
     //['', [], 0xccffff, [10799, 'highest', va.UHV, 3300], [3200, 660, 3, 96000]]
 ]
+//Name, Type (array)
+const PeriodicTableElements = [
+    ['neptunium', ['ingot', 'fluid']],
+]
 //endregion
 
 GTCEuStartupEvents.registry('gtceu:material', event => {
     //#region periodic materials
-    const element = global.periodicTableElement;
-    // Ingot
-    element('neptunium', 'ingot')
-
-    // Liquid
-    element('neptunium', 'fluid')
+    PeriodicTableElements.forEach(material => {
+        if (material[1].includes('ingot')) {
+            GTMaterials.get(material[0]).setProperty(PropertyKey.INGOT, new IngotProperty());
+        }
+        if (material[1].includes('dust')) {
+            GTMaterials.get(material[0]).setProperty(PropertyKey.DUST, new DustProperty());
+        }
+    })
 
     // material modification
     MaterialModifier.forEach(material => {

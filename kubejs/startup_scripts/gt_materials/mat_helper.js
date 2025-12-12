@@ -103,35 +103,3 @@ VoltageNames.forEach((Tier, index) => {
 });
 //#region voltage helpers
 //#endregion
-
-
-
-//#region periodic helper
-global.periodicTableElement = (material, type) => {
-    let mat = GTMaterials.get(material);
-    switch(type) {
-        case 'ingot': mat.setProperty(PropertyKey.INGOT, new IngotProperty()); break;
-        case 'dust': mat.setProperty(PropertyKey.DUST, new DustProperty()); break;
-        case 'fluid': case 'gas': case 'plasma': case 'exotic': {
-            let prop = new FluidProperty();
-            switch(type) {
-                case 'fluid': prop.getStorage().enqueueRegistration(GTFluidStorageKeys.LIQUID, new GTFluidBuilder()); break;
-                case 'gas': prop.getStorage().enqueueRegistration(GTFluidStorageKeys.GAS, new GTFluidBuilder()); break;
-                case 'plasma': prop.getStorage().enqueueRegistration(GTFluidStorageKeys.PLASMA, new GTFluidBuilder()); break;
-                case 'exotic': prop.getStorage().enqueueRegistration(GTFluidStorageKeys.EXOTIC, new GTFluidBuilder()); break;
-            }
-            mat.setProperty(PropertyKey.FLUID, prop); 
-            break;
-        }  
-    }
-}
-//#endregion
-
-
-
-//#region blast prop helper
-global.blastProperty = (material, temperature, gasTier, voltage, duration) => {
-    let mat = GTMaterials.get(material);
-    mat.setProperty(PropertyKey.BLAST, new BlastProperty(temperature, gasTier, voltage, duration, -1, -1));
-}
-//#endregion
