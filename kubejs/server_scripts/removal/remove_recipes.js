@@ -111,9 +111,10 @@ ServerEvents.recipes(event => {
         'ae2:network/parts/panels_semi_dark_monitor', 'buildinggadgets2:template_manager', 'gtceu:macerator/macerate_hay_block', 'gtceu:macerator/macerate_sugar_cane', 'delightful:food/pumpkin_pie_from_slices',
         'farmersdelight:apple_pie_from_slices', 'farmersdelight:chocolate_pie_from_slices', 'farmersdelight:sweet_berry_cheesecake_from_slices', 'delightful:melon_slice', 'delightful:cutting/pumpkin_pie',
         'farmersdelight:cutting/apple_pie', 'farmersdelight:cutting/chocolate_pie', 'farmersdelight:cutting/sweet_berry_cheesecake', 'delightful:food/baklava_from_slices', 'delightful:cutting/baklava',
-        'gtceu:macerator/macerate_chicken', 'gtceu:macerator/macerate_rabbit', 'gtceu:macerator/macerate_mutton', 'ad_extendra:saturlyte_nugget', 'ad_extendra:juperium_nugget', 'delightful:food_oven',
-        'delightful:food/sweet_berry_cheesecake_from_cheese', 'delightful:food/glow_jam_cookie', 'delightful:food/baklava_no_citrus', 'delightful:food/nut_dough', 'delightful:food/salmonberry_pie',
-        'create:milling/cocoa_beans', 'gtceu:shaped/cake_from_dough', 'farmersdelight:sweet_berry_cheesecake'
+        'gtceu:macerator/macerate_chicken', 'gtceu:macerator/macerate_rabbit', 'gtceu:macerator/macerate_mutton', 'gtceu:macerator/macerate_steak', 'gtceu:macerator/macerate_pork_chop',, 'ad_extendra:saturlyte_nugget', 
+        'ad_extendra:juperium_nugget', 'delightful:food_oven', 'delightful:food/sweet_berry_cheesecake_from_cheese', 'delightful:food/glow_jam_cookie', 'delightful:food/baklava_no_citrus', 
+        'delightful:food/nut_dough', 'delightful:food/salmonberry_pie', 'create:milling/cocoa_beans', 'gtceu:shaped/cake_from_dough', 'farmersdelight:sweet_berry_cheesecake'
+        
     ]
 
     //#region remove type
