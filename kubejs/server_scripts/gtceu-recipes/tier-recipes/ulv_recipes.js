@@ -70,14 +70,14 @@ ServerEvents.recipes(event => {
       C: 'gtceu:bronze_rod'
     });
 
-    event.shaped('4x create:pulp', [
-    'AAA',
-    'ABA',
-    'AAA'
-    ], {
-    A: 'gtceu:paper_dust',
-    B: 'minecraft:water_bucket'
-    }).replaceIngredient('minecraft:water_bucket', 'minecraft:bucket')
+    //event.shaped('4x create:pulp', [
+    //'AAA',
+    //'ABA',
+    //'AAA'
+    //], {
+    //A: 'gtceu:paper_dust',
+    //B: 'minecraft:water_bucket'
+    //}).replaceIngredient('minecraft:water_bucket', 'minecraft:bucket')
 
     //event.shaped('2x minecraft:paper', [
     //  'AAA'
@@ -133,6 +133,14 @@ ServerEvents.recipes(event => {
       .itemOutputs('minecraft:paper')
       .duration(80)
       .EUt(4)
+    
+    event.recipes.farmersdelight.cooking( 
+      ['gtceu:paper_dust', 'gtceu:paper_dust', 
+        'gtceu:paper_dust', 'gtceu:paper_dust', 'minecraft:water_bucket'], 
+      '4x create:pulp', 
+      0, 
+      160, 
+    )        
 
     event.recipes.gtceu.macerator('macerate_meat')
       .itemInputs('#forge:meat')
