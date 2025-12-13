@@ -189,7 +189,6 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
 
     //#region material helpers
     ComponentDust.forEach(material => {
-        console.log(material)
         event.create(material[0])
             .dust()
             .components(material[1])

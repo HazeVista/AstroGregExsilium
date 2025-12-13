@@ -1,205 +1,209 @@
-//#region remove tags
-
-//make sure items, fluids, and blocks go under their respective regions or they won't work
-
-
 
 //#region items
+
 ServerEvents.tags('item', event => {
-event.removeAllTagsFrom('ad_astra:steel_rod')
-event.removeAllTagsFrom('ad_astra:steel_block')
-event.removeAllTagsFrom('ad_astra:steel_plate')
-event.removeAllTagsFrom('ad_astra:steel_nugget')
-event.removeAllTagsFrom('ad_astra:steel_ingot')
-event.removeAllTagsFrom('ad_astra:iron_rod')
-event.removeAllTagsFrom('ad_astra:iron_plate')
-event.removeAllTagsFrom('ad_astra:iron_nugget')
-event.removeAllTagsFrom('ad_astra:moon_desh_ore')
-event.removeAllTagsFrom('ad_astra:deepslate_desh_ore')
-event.removeAllTagsFrom('ad_extendra:raw_plutonium')
-event.removeAllTagsFrom('ad_extendra:plutonium_nugget')
-event.removeAllTagsFrom('ad_extendra:uraninium_nugget')
-event.removeAllTagsFrom('ad_extendra:uraninium_ingot')
-event.removeAllTagsFrom('ad_extendra:uraninium_plate')
-event.removeAllTagsFrom('ad_extendra:raw_uranium')
-event.removeAllTagsFrom('ad_extendra:uranium_ingot')
-event.removeAllTagsFrom('ad_extendra:uranium_nugget')
-event.removeAllTagsFrom('gtceu:skystone_dust')
-event.removeAllTagsFrom('create:iron_plate')
-event.removeAllTagsFrom('create:iron_sheet')
-event.removeAllTagsFrom('create:brass_sheet')
-event.removeAllTagsFrom('create:copper_sheet')
-event.removeAllTagsFrom('create:golden_sheet')
-event.removeAllTagsFrom('create:brass_ingot')
-event.removeAllTagsFrom('create:brass_nugget')
-event.removeAllTagsFrom('create:zinc_nugget')
-event.removeAllTagsFrom('create:zinc_ingot')
-event.removeAllTagsFrom('create:dough')
-event.removeAllTagsFrom('create:red_sand_paper')
-event.removeAllTagsFrom('createaddition:zinc_sheet')
-event.removeAllTagsFrom('createaddition:zinc_nugget')
-event.removeAllTagsFrom('createaddition:electrum_sheet')
-event.removeAllTagsFrom('createaddition:electrum_nugget')
-event.removeAllTagsFrom('createaddition:electrum_ingot')
-event.removeAllTagsFrom('createaddition:copper_rod')
-event.removeAllTagsFrom('createaddition:gold_rod')
-event.removeAllTagsFrom('createaddition:iron_rod')
-event.removeAllTagsFrom('createaddition:electrum_rod')
-event.removeAllTagsFrom('createaddition:electrum_block')
-event.removeAllTagsFrom('createaddition:brass_rod')
-event.removeAllTagsFrom('createaddition:diamond_grit')
-event.removeAllTagsFrom('createaddition:diamond_grit_sandpaper')
-event.removeAllTagsFrom('farmersdelight:wheat_dough')
-event.removeAllTagsFrom('powah:uraninite_raw')
-event.removeAllTagsFrom(/farmersdelight:.*_knife/)
-event.removeAllTagsFrom('gtceu:elementium_ingot')
-event.removeAllTagsFrom('gtceu:elementium_nugget')
-event.removeAllTagsFrom('gtceu:manasteel_ingot')
-event.removeAllTagsFrom('gtceu:manasteel_nugget')
-event.removeAllTagsFrom('gtceu:terrasteel_ingot')
-event.removeAllTagsFrom('gtceu:terrasteel_nugget')
-event.removeAllTagsFrom('gtceu:gaiasteel_ingot')
-event.removeAllTagsFrom('gtceu:gaiasteel_nugget')
-event.removeAllTagsFrom('gtceu:elementium_block')
-event.removeAllTagsFrom('gtceu:manasteel_block')
-event.removeAllTagsFrom('gtceu:terrasteel_block')
-event.removeAllTagsFrom('gtceu:gaiasteel_block')
-event.removeAllTagsFrom('ae2:ender_dust')
-event.removeAllTagsFrom('gtceu:mana_diamond_gem')
-event.removeAllTagsFrom('gtceu:mana_diamond_block')
-event.removeAllTagsFrom('gtceu:dragonstone_gem')
-event.removeAllTagsFrom('gtceu:dragonstone_block')
-event.removeAllTagsFrom('powah:crystal_niotic')
-event.removeAllTagsFrom('powah:crystal_spirited')
-event.removeAllTagsFrom('powah:crystal_blazing')
-event.removeAllTagsFrom('powah:crystal_nitro')
-event.removeAllTagsFrom(/botania:rune_.*/)
-event.removeAllTagsFrom('ad_extendra:glacian_sapling')
-event.removeAllTagsFrom('create:blaze_cake')
-event.removeAllTagsFrom('create:creative_blaze_cake')
-event.removeAllTagsFrom('create:blaze_cake_base')
-event.removeAllTagsFrom('createaddition:cake_base')
-event.removeAllTagsFrom('createaddition:cake_base_baked')
-event.removeAllTagsFrom('create:builders_tea')
-event.removeAllTagsFrom('createaddition:bioethanol_bucket')
-event.removeAllTagsFrom('botania:mana_glass')
-event.removeAllTagsFrom('botania:elf_glass')
-event.removeAllTagsFrom('botania:mana_glass_pane')
-event.removeAllTagsFrom('botania:elf_glass_pane')
-event.removeAllTagsFrom('gtceu:wood_plate')
-event.removeAllTagsFrom('gtceu:treated_wood_plate')
-event.removeAllTagsFrom('ae2:certus_quartz_crystal')
-event.removeAllTagsFrom('botania:bifrost_perm')
-event.removeAllTagsFrom('create:powdered_obsidian')
-event.removeAllTagsFrom('create:sturdy_sheet')
-event.removeAllTagsFrom('ad_extendra:uranium_plate')
-event.removeAllTagsFrom('ad_extendra:plutonium_ingot')
-event.removeAllTagsFrom('ad_extendra:neptunium_ingot')
-event.removeAllTagsFrom('ad_astra:wrench')
-event.removeAllTagsFrom('powah:wrench')
-event.removeAllTagsFrom('ad_extendra:neptunium_nugget')
-event.removeAllTagsFrom('ad_extendra:plutonium_block')
-event.removeAllTagsFrom('ad_extendra:neptunium_block')
-event.removeAllTagsFrom('ae2:certus_quartz_dust')
-event.removeAllTagsFrom('ad_extendra:juperium_ingot')
-event.removeAllTagsFrom('ad_extendra:juperium_plate')
-event.removeAllTagsFrom('ad_extendra:saturlyte_ingot')
-event.removeAllTagsFrom('ad_extendra:saturlyte_plate')
-event.removeAllTagsFrom('delightful:source_berry_cookie')
-event.removeAllTagsFrom(/delightful:.*_knife/)
-});
+
+
+
+    //#region remove item tags
+    const itemsToStrip = [
+        'ad_astra:steel_rod', 'ad_astra:steel_block', 'ad_astra:steel_plate',
+        'ad_astra:steel_nugget', 'ad_astra:steel_ingot', 'ad_astra:iron_rod',
+        'ad_astra:iron_plate', 'ad_astra:iron_nugget', 'ad_astra:moon_desh_ore',
+        'ad_astra:deepslate_desh_ore', 'ad_extendra:raw_plutonium',
+        'ad_extendra:plutonium_nugget', 'ad_extendra:uraninium_nugget',
+        'ad_extendra:uraninium_ingot', 'ad_extendra:uraninium_plate',
+        'ad_extendra:raw_uranium', 'ad_extendra:uranium_ingot',
+        'ad_extendra:uranium_nugget', 'gtceu:skystone_dust',
+        'create:iron_plate', 'create:iron_sheet', 'create:brass_sheet',
+        'create:copper_sheet', 'create:golden_sheet', 'create:brass_ingot',
+        'create:brass_nugget', 'create:zinc_nugget', 'create:zinc_ingot',
+        'create:dough', 'create:red_sand_paper', 'createaddition:zinc_sheet',
+        'createaddition:zinc_nugget', 'createaddition:electrum_sheet',
+        'createaddition:electrum_nugget', 'createaddition:electrum_ingot',
+        'createaddition:copper_rod', 'createaddition:gold_rod',
+        'createaddition:iron_rod', 'createaddition:electrum_rod',
+        'createaddition:electrum_block', 'createaddition:brass_rod',
+        'createaddition:diamond_grit', 'createaddition:diamond_grit_sandpaper',
+        'farmersdelight:wheat_dough', 'powah:uraninite_raw',
+        'gtceu:elementium_ingot', 'gtceu:elementium_nugget',
+        'gtceu:manasteel_ingot', 'gtceu:manasteel_nugget',
+        'gtceu:terrasteel_ingot', 'gtceu:terrasteel_nugget',
+        'gtceu:gaiasteel_ingot', 'gtceu:gaiasteel_nugget',
+        'gtceu:elementium_block', 'gtceu:manasteel_block',
+        'gtceu:terrasteel_block', 'gtceu:gaiasteel_block',
+        'ae2:ender_dust', 'gtceu:mana_diamond_gem',
+        'gtceu:mana_diamond_block', 'gtceu:dragonstone_gem',
+        'gtceu:dragonstone_block', 'powah:crystal_niotic',
+        'powah:crystal_spirited', 'powah:crystal_blazing',
+        'powah:crystal_nitro', 'ad_extendra:glacian_sapling',
+        'create:blaze_cake', 'create:creative_blaze_cake',
+        'create:blaze_cake_base', 'createaddition:cake_base',
+        'createaddition:cake_base_baked', 'create:builders_tea',
+        'createaddition:bioethanol_bucket', 'botania:mana_glass',
+        'botania:elf_glass', 'botania:mana_glass_pane',
+        'botania:elf_glass_pane', 'gtceu:wood_plate',
+        'gtceu:treated_wood_plate', 'ae2:certus_quartz_crystal',
+        'botania:bifrost_perm', 'create:powdered_obsidian',
+        'create:sturdy_sheet', 'ad_extendra:uranium_plate',
+        'ad_extendra:plutonium_ingot', 'ad_extendra:neptunium_ingot',
+        'ad_astra:wrench', 'powah:wrench', 'ad_extendra:neptunium_nugget',
+        'ad_extendra:plutonium_block', 'ad_extendra:neptunium_block',
+        'ae2:certus_quartz_dust', 'ad_extendra:juperium_ingot',
+        'ad_extendra:juperium_plate', 'ad_extendra:saturlyte_ingot',
+        'ad_extendra:saturlyte_plate', 'delightful:source_berry_cookie',
+        'astrogreg:small_sky_stone_dust', 'astrogreg:tiny_sky_stone_dust',
+        'expandedae:dual_cell_housing', 'expandedae:mega_dual_cell_housing'
+    ]
+
+        //wildcard removals
+        event.removeAllTagsFrom(/farmersdelight:.*_knife/)
+        event.removeAllTagsFrom(/botania:rune_.*/)
+        event.removeAllTagsFrom(/delightful:.*_knife/)
+
+    //#endregion
+    
+
+
+    //#region add item tags
+    const itemTagAdditions = {
+        'botania:elvenwood': 
+            ['botanicadds:elvenwood', 'botanicadds:elvenwood_log'],
+
+        'minecraft:logs_that_burn': 
+            ['botanicadds:elvenwood', 'botanicadds:elvenwood_log'],
+
+        'minecraft:logs': 
+            ['botanicadds:elvenwood', 'botanicadds:elvenwood_log'],
+
+        'forge:lenses': 
+            ['botania:lens_normal', 'botania:terra_lens', 'botania:pixie_lens', 'botania:gaia_lens'],
+            
+        'forge:rods/wooden': 
+            ['botania:livingwood_twig'],
+
+        'botania:runes': 
+            ['botania:air_rune', 'botania:fire_rune', 'botania:water_rune',
+            'botania:earth_rune', 'botania:spring_rune', 'botania:summer_rune',
+            'botania:autumn_rune', 'botania:winter_rune', 'botania:mana_rune',
+            'botania:lust_rune', 'botania:gluttony_rune', 'botania:greed_rune',
+            'botania:sloth_rune', 'botania:wrath_rune', 'botania:envy_rune',
+            'botania:pride_rune', 'botania:energy_rune', 'botania:space_rune',
+            'botania:life_rune', 'botania:gaia_rune'],
+
+        'forge:grass': 
+            ['minecraft:grass', 'farmersdelight:sandy_shrub', 'minecraft:tall_grass'],
+
+        'forge:fruit_slice': 
+            ['minecraft:melon_slice', 'farmersdelight:melon_slice'],
+        
+        'c:glass_panes': 
+            ['botania:managlass_pane'],
+            
+        'trashcans:trash_cans': 
+            ['trashcans:liquid_trash_can', 'trashcans:energy_trash_can',
+            'trashcans:item_trash_can', 'trashcans:ultimate_trash_can'],
+
+        'create:pulpifiable': 
+            ['farmersdelight:tree_bark'],
+        'forge:meat': 
+            ['minecraft:beef', 'minecraft:chicken', 'minecraft:mutton',
+            'minecraft:porkchop', 'minecraft:rabbit', 'delightful:raw_goat'],
+
+        'forge:meat_small': ['farmersdelight:minced_beef', 'farmersdelight:chicken_cuts',
+            'farmersdelight:bacon', 'farmersdelight:cod_slice',
+            'farmersdelight:salmon_slice', 'farmersdelight:mutton_chops'],
+
+        'forge:sweetener': ['minecraft:sugar']
+    }
+    //#endregion
+
+    //modular circuits
+    const tiers = ['ulv', 'lv', 'mv', 'hv', 'ev', 'iv', 'luv', 'zpm', 'uv', 'uhv'];
+    tiers.forEach(tier => {event.add(`gtceu:circuits/${tier}`, `astrogreg:${tier}_modular_circuit`)})
+
+    //helpers
+    itemsToStrip.forEach(item => event.removeAllTagsFrom(item))
+
+    Object.entries(itemTagAdditions).forEach(([tag, items]) => {items.forEach(item => event.add(tag, item))})
+
+})
+//#endregion
 
 
 
 //#region blocks
 ServerEvents.tags('block', event => {
-event.removeAllTagsFrom('ad_extendra:raw_plutonium_block')
-event.removeAllTagsFrom('ad_extendra:plutonium_block' )
-event.removeAllTagsFrom('ad_extendra:uraninium_block')
-event.removeAllTagsFrom('ad_extendra:raw_uranium_block')
-event.removeAllTagsFrom('createaddition:electrum_block')
-});
+
+
+
+    //#region remove block tags
+    const blocksToStrip = [
+        'ad_extendra:raw_plutonium_block', 'ad_extendra:plutonium_block',
+        'ad_extendra:uraninium_block', 'ad_extendra:raw_uranium_block',
+        'createaddition:electrum_block'
+    ]
+    //#endregion
+
+
+
+    //#region add block tags
+    const blockTagAdditions = [
+        
+    ]
+    //#endregion 
+
+
+
+    //helpers
+    blocksToStrip.forEach(block => event.removeAllTagsFrom(block))
+    
+    Object.entries(blockTagAdditions).forEach(([tag, items]) => {
+        items.forEach(item => event.add(tag, item))
+    })
+
+})
+//#endregion
 
 
 
 //#region fluids
 ServerEvents.tags('fluid', event => {
-event.removeAllTagsFrom('ad_astra:hydrogen')
-event.removeAllTagsFrom('ad_astra:cryo_fuel')
-event.removeAllTagsFrom('ad_astra:oxygen')
-event.removeAllTagsFrom('ad_astra:oil')
-event.removeAllTagsFrom('ad_astra:fuel')
-event.removeAllTagsFrom('createaddition:bioethanol')
-event.removeAllTagsFrom('createaddition:seed_oil')
-event.remove('create:bottomless/allow', 'minecraft:lava')
-event.remove('create:bottomless/allow', 'minecraft:water')
-});
 
 
 
-//#region add tags
+    //#region remove fluid tags
+    const fluidsToStrip = [
+        'ad_astra:hydrogen', 'ad_astra:cryo_fuel', 'ad_astra:oxygen',
+        'ad_astra:oil', 'ad_astra:fuel', 'createaddition:bioethanol',
+        'createaddition:seed_oil'
+    ]
 
 
 
+    //#region remove single fluid tag
+    const fluidTagRemovals = [
+        
+    ]
+    //#endregion
+    //#endregion
 
-//#region items
-ServerEvents.tags('item', event => {
-event.add('botania:elvenwood', 'botanicadds:elvenwood')
-event.add('botania:elvenwood', 'botanicadds:elvenwood_log')
-event.add('minecraft:logs_that_burn', 'botanicadds:elvenwood')
-event.add('minecraft:logs_that_burn', 'botanicadds:elvenwood_log')
-event.add('minecraft:logs', 'botanicadds:elvenwood')
-event.add('minecraft:logs', 'botanicadds:elvenwood_log')
-event.add('forge:lenses', 'botania:lens_normal')
-event.add('forge:lenses', 'botania:terra_lens')
-event.add('forge:lenses', 'botania:pixie_lens')
-event.add('forge:lenses', 'botania:gaia_lens')
-event.add('forge:rods/wooden', 'botania:livingwood_twig')
-event.add('botania:runes', 'botania:air_rune')
-event.add('botania:runes', 'botania:fire_rune')
-event.add('botania:runes', 'botania:water_rune')
-event.add('botania:runes', 'botania:earth_rune')
-event.add('botania:runes', 'botania:spring_rune')
-event.add('botania:runes', 'botania:summer_rune')
-event.add('botania:runes', 'botania:autumn_rune')
-event.add('botania:runes', 'botania:winter_rune')
-event.add('botania:runes', 'botania:mana_rune')
-event.add('botania:runes', 'botania:lust_rune')
-event.add('botania:runes', 'botania:gluttony_rune')
-event.add('botania:runes', 'botania:greed_rune')
-event.add('botania:runes', 'botania:sloth_rune')
-event.add('botania:runes', 'botania:wrath_rune')
-event.add('botania:runes', 'botania:envy_rune')
-event.add('botania:runes', 'botania:pride_rune')
-event.add('botania:runes', 'botania:energy_rune')
-event.add('botania:runes', 'botania:space_rune')
-event.add('botania:runes', 'botania:life_rune')
-event.add('botania:runes', 'botania:gaia_rune')
-event.add('forge:grass', 'minecraft:grass')
-event.add('forge:grass', 'farmersdelight:sandy_shrub')
-event.add('forge:grass', 'minecraft:tall_grass')
-event.add('forge:fruit_slice', 'minecraft:melon_slice')
-event.add('forge:fruit_slice', 'farmersdelight:melon_slice')
-event.add('c:glass_panes', 'botania:managlass_pane')
-event.add('trashcans:trash_cans', 'trashcans:liquid_trash_can')
-event.add('trashcans:trash_cans', 'trashcans:energy_trash_can')
-event.add('trashcans:trash_cans', 'trashcans:item_trash_can')
-event.add('trashcans:trash_cans', 'trashcans:ultimate_trash_can')
-event.add('create:pulpifiable', 'farmersdelight:tree_bark')
-event.add('forge:meat', 'minecraft:beef')
-event.add('forge:meat', 'minecraft:chicken')
-event.add('forge:meat', 'minecraft:mutton')
-event.add('forge:meat', 'minecraft:porkchop')
-event.add('forge:meat', 'minecraft:rabbit')
-event.add('forge:meat', 'delightful:raw_goat')
-event.add('forge:meat_small', 'farmersdelight:minced_beef')
-event.add('forge:meat_small', 'farmersdelight:chicken_cuts')
-event.add('forge:meat_small', 'farmersdelight:bacon')
-event.add('forge:meat_small', 'farmersdelight:cod_slice')
-event.add('forge:meat_small', 'farmersdelight:salmon_slice')
-event.add('forge:meat_small', 'farmersdelight:mutton_chops')
-event.add('forge:sweetener', 'minecraft:sugar')
 
-const tiers = ['ulv', 'lv', 'mv', 'hv', 'ev', 'iv', 'luv', 'zpm', 'uv', 'uhv']
-tiers.forEach(tier => {event.add(`gtceu:circuits/${tier}`, `astrogreg:${tier}_modular_circuit`)})
+
+    //#region add fluid tags
+    const fluidTagAdditions = [
+        'create:bottomless/allow', 
+            ['minecraft:lava', 'minecraft:water']
+    ]
+    //#endregion 
+
+
+    
+    //helpers
+    fluidsToStrip.forEach(fluid => event.removeAllTagsFrom(fluid));
+
+    Object.entries(fluidTagAdditions).forEach(([tag, items]) => {items.forEach(item => event.add(tag, item))})
+    Object.entries(fluidTagRemovals).forEach(([tag, items]) => {items.forEach(item => event.remove(tag, item))})
+
 })
+//#endregion

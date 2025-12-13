@@ -1,13 +1,16 @@
 ServerEvents.recipes(event => {
     //#region remove input
-    const toRemoveInput = ['ad_astra:moon_desh_ore', 'ad_astra:deepslate_desh_ore', 'ad_astra:ostrum_plate', 'ad_astra:calorite_plate', 'ad_astra:desh_plate',
+    const toRemoveInput = new Set(['ad_astra:moon_desh_ore', 'ad_astra:deepslate_desh_ore', 'ad_astra:ostrum_plate', 'ad_astra:calorite_plate', 'ad_astra:desh_plate',
         'minecraft:netherite_upgrade_smithing_template', 'ad_astra:fan', 'ad_astra:steel_ingot', 'ad_astra:ice_shard', 'gtceu:gaiasteel_ingot', 'create:creative_blaze_cake',
         'create:blaze_cake_base', 'createaddition:cake_base_baked', 'create:blaze_cake', 'create:dough', 'astrogreg:small_sky_stone_dust', 'astrogreg:tiny_sky_stone_dust', 
         'expandedae:dual_cell_housing', 'expandedae:mega_dual_cell_housing', '#create:pulpifiable',
-    ]
+    ])
+    //#endregion
+
+
 
     //#region remove output
-    const toRemoveOutput = ['ae2:charger', 'ae2:drive', 'ae2:chest', 'createdieselgenerators:pumpjack_hole', 'expatternprovider:ex_inscriber', 'ad:astra_oxygen', 'waystones:warp_dust',
+    const toRemoveOutput = new Set(['ae2:charger', 'ae2:drive', 'ae2:chest', 'createdieselgenerators:pumpjack_hole', 'expatternprovider:ex_inscriber', 'ad:astra_oxygen', 'waystones:warp_dust',
         'expatternprovider:ex_charger', 'expatternprovider:crystal_fixer', 'expatternprovider:caner', 'exmachinis:item_buffer', 'ae2:crystal_resonance_generator', 'laserio:laser_node',
         'ae2:vibration_chamber', 'expatternprovider:circuit_cutter', 'minecraft:mycelium', 'create:brass_block', 'create:zinc_block', 'createaddition:straw', 'ad_astra:hydrogen',
         'gtceu:me_pattern_buffer_proxy', 'gtceu:me_pattern_buffer', 'create:andesite_alloy', 'ad_astra:desh_plate', 'create:controller_rail', 'create:dough', 'ad_astra:rocket_fin',
@@ -43,10 +46,13 @@ ServerEvents.recipes(event => {
         'megacells:sky_steel_ingot', 'ae2:charged_staff', 'megacells:cell_dock', 'ae2:entropy_manipulator', 'functionalstorage:iron_downgrade', 'ae2wtlib:magnet_card', 'ae2:radio',
         'ae2netanalyser:network_analyser', 'ae2:basic_card', 'ae2:advanced_card', 'functionalstorage:void_upgrade', 'ad_astra:ti_69', 'ad_astra:cheese_block', 'gtceu:dough', 'minecraft:cookie',
         'ad_astra:cheese', 'delightful:nut_butter_bottle', 'farmersdelight:hot_cocoa'
-    ]
+    ])
+    //#endregion
+
+
 
     //#region remove recipe id
-    const toRemoveId = ['create:haunting/crimson_fungus', 'create:haunting/warped_fungus', 'create:milling/compat/ae2/sky_stone_block', 'create:milling/compat/ae2/fluix_crystal', 'minecraft:coarse_dirt',
+    const toRemoveId = (['create:haunting/crimson_fungus', 'create:haunting/warped_fungus', 'create:milling/compat/ae2/sky_stone_block', 'create:milling/compat/ae2/fluix_crystal', 'minecraft:coarse_dirt',
         'create:milling/compat/ae2/ender_pearl', 'create:milling/compat/ae2/certus_quartz', 'create:crushing/raw_platinum_ore', 'create:crushing/raw_platinum_block', 'farmersdelight:stove',
         'create:crushing/raw_uranium_ore', 'create:crushing/raw_uranium_block', 'create:crafting/appliances/slime_ball', 'minecraft:fire_charge', 'gtceu:shapeless/dust_bronze', 'farmersdelight:skillet',
         'gtceu:shapeless/dust_brass', 'create:mixing/brass_ingot',  'createaddition:crafting/rolling_mill', 'ae2:transform/certus_quartz_crystals', 'ae2:network/blocks/cell_workbench',
@@ -115,39 +121,35 @@ ServerEvents.recipes(event => {
         'ad_extendra:juperium_nugget', 'delightful:food_oven', 'delightful:food/sweet_berry_cheesecake_from_cheese', 'delightful:food/glow_jam_cookie', 'delightful:food/baklava_no_citrus', 
         'delightful:food/nut_dough', 'delightful:food/salmonberry_pie', 'create:milling/cocoa_beans', 'gtceu:shaped/cake_from_dough', 'farmersdelight:sweet_berry_cheesecake'
         
-    ]
+    ])
+    //#endregion
+
+
 
     //#region remove type
-    const toRemoveType = ['expatternprovider:cutter', 'ae2:inscriber', 'ae2:charger', 'create:crushing', 'ad_astra:alloying', 'createaddition:liquid_burning', 'create:pressing',
+    const toRemoveType = (['expatternprovider:cutter', 'ae2:inscriber', 'ae2:charger', 'create:crushing', 'ad_astra:alloying', 'createaddition:liquid_burning', 'create:pressing',
         'botania:orechid_ignem', 'botania:orechid', 'create:potion_mixing', 'ad_astra:compressing', 'ad_astra:cryo_freezing', 'ad_astra:nasa_workbench', 'create:deploying',
         'create:automatic_brewing', 'powah:heat_sources', 'functionalstorage:dissolution', 'create:mystery_conversion', 'botania:mana_infusion'
-    ]
+    ])
+    //#endregion
+
+
 
     //#region remove whole mod
-    const toRemoveMod = ['createoreexcavation', 'scannable', 'storagenetwork', 'powah', 'grapplemod', 'fluxnetworks', 'trashcans', 'toolbelt', 'constructionwand',
+    const toRemoveMod = (['createoreexcavation', 'scannable', 'storagenetwork', 'powah', 'grapplemod', 'fluxnetworks', 'trashcans', 'toolbelt', 'constructionwand'])
+    //#endregion
 
-    ]
+
 
     //#region helpers
-    toRemoveOutput.forEach(element => {
-        event.remove({ output: element})
-    })
+    event.remove({ input: Array.from(toRemoveInput) })
+    event.remove({ output: Array.from(toRemoveOutput) })
+    toRemoveType.forEach(string => {event.remove({ type: string})})
+    toRemoveInput.forEach(string => {event.remove({ input: string})})
+    toRemoveMod.forEach(string => {event.remove({ mod: string})})
+    //#endregion
 
-    toRemoveId.forEach(element => {
-        event.remove({ id: element})
-    })
 
-    toRemoveType.forEach(element => {
-        event.remove({ type: element})
-    })
-
-    toRemoveInput.forEach(element => {
-        event.remove({ input: element})
-    })
-
-    toRemoveMod.forEach(element => {
-        event.remove({ mod: element})
-    })
 
     //#region oddball
     event.remove({input: 'botania:terra_sword'})
@@ -162,36 +164,25 @@ ServerEvents.recipes(event => {
     event.remove({output: 'createaddition:iron_rod'})
     event.remove({output: '#forge:wires'})
     event.remove({input: '#forge:wires'})
-    event.remove({id: 'create:mixing/chocolate_melting'})    
-    event.remove({id: /.*expatternprovider.*cutter.*/})
-    event.remove({output: /gtceu:.*_energy_converter/ })
-    event.remove({output: /gtmutils:.*_energy_converter/ })
-    event.remove({output: /ad_astra:.*_sliding_door/})
-    event.remove({output: /ad_extendra:.*_sliding_door/})
-    event.remove({output: /create:.*_sheet/})
-    event.remove({output: /create:.*_ingot/})
-    event.remove({output: /create:.*_plate/})
-    event.remove({output: /create:.*_dust/})
-    event.remove({output: /farmersdelight:.*_knife/})
-    event.remove({output: /botania:.*_rod/})
-    event.remove({output: /botania:.*_pylon/})
-    event.remove({id: /botania:glimmering_.*/})
-    event.remove({id: /botania:glimmering_stripped_.*/})
-    event.remove({id: /botania:glimmering_stripped_.*_log/})
-    event.remove({id: /botania:glimmering_.*_log/})
-    event.remove({id: /botania:.*_ring/})
-    event.remove({id: /botania:.*_ring_greater/})
-    event.remove({id: /botania:spark_upgrade_.*/})
-    event.remove({output: /botania:rune_.*/})
-    event.remove({output: /botania:quartz_.*/})
-    event.remove({output: /botania:.*_cloak/})
-    event.remove({id: /gtceu:cutter\/.*_slab_distilled_water/})
-    event.remove({id: /gtceu:cutter\/.*_slab_water/})
-    event.remove({id: /gtceu:cutter\/.*_slab/})
-    event.remove({id: /gtceu:shaped\/.*_slab_saw/})
-    event.remove({id: /ae2:network\/cells\/.*_storage_cell_.*/})
-    event.remove({id: /ad_astra:radium_.*/})
-    event.remove({output: /ad_extendra:.*_tank/})
-    event.remove({output: /gtceu:.*_air_scrubber/})
-});
+
+    event.remove({id: /.*expatternprovider.*cutter.*/});
+    event.remove({ output: /gtceu:.*_energy_converter/ });
+    event.remove({ output: /gtmutils:.*_energy_converter/ });
+    event.remove({ output: /ad_astra:.*_sliding_door/ });
+    event.remove({ output: /ad_extendra:.*_sliding_door/ });
+    event.remove({ output: /create:.*_(sheet|ingot|plate|dust)/ });
+    event.remove({ output: /farmersdelight:.*_knife/ });
+    event.remove({ output: /botania:.*(rod|pylon|cloak)/ });
+    event.remove({ id: /botania:glimmering_.*/ });
+    event.remove({ id: /botania:.*_ring(_greater)?/ });
+    event.remove({ id: /botania:spark_upgrade_.*/ });
+    event.remove({ output: /botania:rune_.*/ });
+    event.remove({ output: /botania:quartz_.*/ });
+    event.remove({ id: /gtceu:(cutter|shaped)\/.*_slab/ });
+    event.remove({ id: /ae2:network\/cells\/.*_storage_cell_.*/ });
+    event.remove({ id: /ad_astra:radium_.*/ });
+    event.remove({ output: /ad_extendra:.*_tank/ });
+    event.remove({ output: /gtceu:.*_air_scrubber/ });
+    //#endregion
+})
 
