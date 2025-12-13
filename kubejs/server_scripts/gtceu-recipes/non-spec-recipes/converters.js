@@ -43,6 +43,12 @@ ServerEvents.recipes(event => {
 BlockEvents.placed(event => {
     let block = event.getBlock()
     if (/^(?:gtceu|gtmutils):.*energy_converter$/.test(block.getId())) {
-        block.mergeEntityData({ energyContainer: { feToEu: true } })
+        let blockEntity = block.getEntity()
+        if (blockEntity) {
+            let metaMachine = blockEntity.getMetaMachine()
+            if (metaMachine && metaMachine.setFeToEu) {
+                metaMachine.setFeToEu(true)
+            }
+        }
     }
 })
