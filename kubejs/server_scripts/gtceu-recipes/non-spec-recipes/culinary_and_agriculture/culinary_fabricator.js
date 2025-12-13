@@ -27,7 +27,7 @@ ServerEvents.recipes(event => {
 //     const cable = part[2] 
 //     const glass = part[3] 
 
-//     event.shaped('gtceu:culinary_fabricator', [
+//     event.shaped(`gtceu:${tier}_culinary_fabricator`, [
 //         'CBC',
 //         'AFA',
 //         'DED'
