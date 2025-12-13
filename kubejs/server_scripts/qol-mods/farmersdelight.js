@@ -356,12 +356,12 @@ ServerEvents.recipes(event => {
 
     event.recipes.gtceu.macerator('macerate_leaves')
       .itemInputs('#minecraft:leaves')
-      .chancedOutput('delightful:green_tea_leaves', 7500, 0)
+      .chancedOutput('delightful:green_tea_leaf', 7500, 0)
       .duration(120)
       .EUt(2)
       
     event.recipes.gtceu.macerator('macerate_tea')
-      .itemInputs('delightful:green_tea_leaves')
+      .itemInputs('delightful:green_tea_leaf')
       .itemOutputs('minecraft:green_dye')
       .chancedOutput('delightful:matcha', 4000, 0)
       .duration(120)
@@ -371,7 +371,7 @@ ServerEvents.recipes(event => {
       'A',
       'B'
     ], {
-      A: 'delightful:green_tea_leaves',
+      A: 'delightful:green_tea_leaf',
       B: '#forge:tools/mortars'
     })
     
