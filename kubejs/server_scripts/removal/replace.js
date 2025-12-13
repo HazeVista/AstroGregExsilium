@@ -55,6 +55,7 @@ ServerEvents.recipes(event => {
     event.replaceInput({}, 'botania:elf_glass', 'botania:alfglass')
     event.replaceInput({}, 'ad_extendra:saturlyte_ingot', 'astrogreg:saturlyte_ingot')
     event.replaceInput({}, 'ad_extendra:juperium_ingot', 'astrogreg:juperium_ingot')
+    event.replaceInput({output: 'farmersdelight:apple_cider'}, 'minecraft:apple', 'farmersdelight:apple_slice')     
     // event.replaceInput({input: ''}, '', '')
 
     //#endregion

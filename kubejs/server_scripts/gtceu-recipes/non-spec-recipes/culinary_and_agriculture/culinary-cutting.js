@@ -21,7 +21,7 @@ ServerEvents.recipes(event => {
     
     event.recipes.gtceu.cutter('cut_cake_slice')
       .itemInputs('minecraft:cake')
-      .itemOutputs('7x farmersdelight:cake_slice')
+      .itemOutputs('6x farmersdelight:cake_slice')
       .duration(40)
       .EUt(2)
       
@@ -180,6 +180,24 @@ ServerEvents.recipes(event => {
       .itemOutputs('2x delightful:cactus_flesh')
       .chancedOutput('minecraft:green_dye', 5000, 0)
       .duration(80)
+      .EUt(2)  
+      
+    event.recipes.gtceu.cutter('cut_apple_slice')
+      .itemInputs('minecraft:apple')
+      .itemOutputs('4x farmersdelight:apple_slice')
+      .duration(80)
+      .EUt(2)    
+      
+    event.recipes.gtceu.cutter('cut_chocolate_cake_slice')
+      .itemInputs('createaddition:chocolate_cake')
+      .itemOutputs('6x farmersdelight:chocolate_cake_slice')
+      .duration(40)
+      .EUt(2)  
+      
+    event.recipes.gtceu.cutter('cut_honey_cake_slice')
+      .itemInputs('createaddition:honey_cake')
+      .itemOutputs('6x farmersdelight:honey_cake_slice')
+      .duration(40)
       .EUt(2)       
     //#endregion
 });

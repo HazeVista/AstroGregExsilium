@@ -212,7 +212,53 @@ ServerEvents.recipes(event => {
       result: [
         { item: "delightful:baklava_slice", count: 6 }
       ]
-    })        
+    })      
+    
+    event.custom({
+      type: "farmersdelight:cutting",
+      ingredients: [
+        { item: "minecraft:cake" }
+      ],
+      tool: { tag: "forge:tools/knives" },
+      result: [
+        { item: "farmersdelight:cake_slice", count: 6 }
+      ]
+    })   
+    
+    
+    event.custom({
+      type: "farmersdelight:cutting",
+      ingredients: [
+        { item: "minecraft:apple" }
+      ],
+      tool: { tag: "forge:tools/knives" },
+      result: [
+        { item: "farmersdelight:apple_slice", count: 4 }
+      ]
+    })   
+    
+    event.custom({
+      type: "farmersdelight:cutting",
+      ingredients: [
+        { item: "createaddition:chocolate_cake" }
+      ],
+      tool: { tag: "forge:tools/knives" },
+      result: [
+        { item: "farmersdelight:chocolate_cake_slice", count: 6 }
+      ]
+    })    
+
+    event.custom({
+      type: "farmersdelight:cutting",
+      ingredients: [
+        { item: "createaddition:honey_cake" }
+      ],
+      tool: { tag: "forge:tools/knives" },
+      result: [
+        { item: "farmersdelight:honey_cake_slice", count: 6 }
+      ]
+    })    
+    
     //#endregion
 
     //#region wheat, dough, & straw 
@@ -374,6 +420,19 @@ ServerEvents.recipes(event => {
       A: 'delightful:green_tea_leaf',
       B: '#forge:tools/mortars'
     })
+
+    event.shaped('farmersdelight:fruit_salad', [
+      'ABC',
+      'DEE',
+      'F  '
+    ], {
+      A: 'farmersdelight:apple_slice',
+      B: 'minecraft:melon_slice',
+      C: 'farmersdelight:pumpkin_slice',
+      D: '#forge:fruits',
+      E: '#minecraft:fox_food',
+      F: 'minecraft:bowl',
+    })    
     
     event.shapeless('create:honeyed_apple', ['minecraft:honey_bottle', 'minecraft:apple']).replaceIngredient('minecraft:honey_bottle', 'minecraft:glass_bottle')
     event.shapeless('4x create:chocolate_glazed_berries', ['minecraft:sweet_berries', 'minecraft:sweet_berries', 'minecraft:sweet_berries', 'minecraft:sweet_berries', 'create:chocolate_bucket']).replaceIngredient('create:chocolate_bucket', 'minecraft:bucket')
