@@ -199,4 +199,7 @@ event.add('forge:meat_small', 'farmersdelight:cod_slice')
 event.add('forge:meat_small', 'farmersdelight:salmon_slice')
 event.add('forge:meat_small', 'farmersdelight:mutton_chops')
 event.add('forge:sweetener', 'minecraft:sugar')
+
+const tiers = ['ulv', 'lv', 'mv', 'hv', 'ev', 'iv', 'luv', 'zpm', 'uv', 'uhv']
+tiers.forEach(tier => {event.add(`gtceu:circuits/${tier}`, `astrogreg:${tier}_modular_circuit`)})
 })

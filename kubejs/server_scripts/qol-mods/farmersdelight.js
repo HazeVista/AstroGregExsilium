@@ -349,10 +349,31 @@ ServerEvents.recipes(event => {
     //#region misc
     event.recipes.gtceu.fluid_solidifier('solidify_cheese')
       .notConsumable('gtceu:ingot_casting_mold')
-      .inputFluids('minecraft:milk 144')
+      .inputFluids('minecraft:milk 125')
       .itemOutputs('ad_astra:cheese')
       .duration(200)
       .EUt(7)
+
+    event.recipes.gtceu.macerator('macerate_leaves')
+      .itemInputs('#minecraft:leaves')
+      .chancedOutput('delightful:green_tea_leaves', 7500, 0)
+      .duration(120)
+      .EUt(2)
+      
+    event.recipes.gtceu.macerator('macerate_tea')
+      .itemInputs('delightful:green_tea_leaves')
+      .itemOutputs('minecraft:green_dye')
+      .chancedOutput('delightful:matcha', 4000, 0)
+      .duration(120)
+      .EUt(2)
+
+    event.shaped('minecraft:green_dye', [
+      'A',
+      'B'
+    ], {
+      A: 'delightful:green_tea_leaves',
+      B: '#forge:tools/mortars'
+    })
     
     event.shapeless('create:honeyed_apple', ['minecraft:honey_bottle', 'minecraft:apple']).replaceIngredient('minecraft:honey_bottle', 'minecraft:glass_bottle')
     event.shapeless('4x create:chocolate_glazed_berries', ['minecraft:sweet_berries', 'minecraft:sweet_berries', 'minecraft:sweet_berries', 'minecraft:sweet_berries', 'create:chocolate_bucket']).replaceIngredient('create:chocolate_bucket', 'minecraft:bucket')

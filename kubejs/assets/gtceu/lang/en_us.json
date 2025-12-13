@@ -13,7 +13,8 @@
 
     "block.gtceu.ulv_water_source": "Water Source",
     "gtceu.water_source": "Water Source",
-    "gtceu.mana_production": "Mana Production",
+    "gtceu.mana_production": "Mana Simulation",
+    "block.gtceu.manafield_simulator": "Manafield Simulator",
     "gtceu.mana_infusion": "Mana Infusion",
     "gtceu.botanic_purification": "Botanic Purification",
     

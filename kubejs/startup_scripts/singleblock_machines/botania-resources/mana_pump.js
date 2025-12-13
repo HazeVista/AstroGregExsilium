@@ -1,5 +1,5 @@
 GTCEuStartupEvents.registry('gtceu:machine', event => {
-	event.create('mana_pump', 'simple')
+	event.create('manafield_simulator', 'simple')
 		.tiers(GTValues.LV, GTValues.MV, GTValues.HV, GTValues.EV, GTValues.IV, GTValues.LuV, GTValues.ZPM, GTValues.UV)
 		.definition((tier, builder) => {
 			return builder

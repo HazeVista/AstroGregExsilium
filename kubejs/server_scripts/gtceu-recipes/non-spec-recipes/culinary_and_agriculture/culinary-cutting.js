@@ -159,7 +159,7 @@ ServerEvents.recipes(event => {
 
     event.recipes.gtceu.cutter('cut_melon_slice1')
       .itemInputs('minecraft:melon')
-      .itemOutputs('9x minecraft:melon_slice')
+      .itemOutputs('8x minecraft:melon_slice')
       .duration(100)
       .EUt(2) 
 

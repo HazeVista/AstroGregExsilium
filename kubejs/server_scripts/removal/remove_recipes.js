@@ -3,7 +3,7 @@ ServerEvents.recipes(event => {
     const toRemoveInput = ['ad_astra:moon_desh_ore', 'ad_astra:deepslate_desh_ore', 'ad_astra:ostrum_plate', 'ad_astra:calorite_plate', 'ad_astra:desh_plate',
         'minecraft:netherite_upgrade_smithing_template', 'ad_astra:fan', 'ad_astra:steel_ingot', 'ad_astra:ice_shard', 'gtceu:gaiasteel_ingot', 'create:creative_blaze_cake',
         'create:blaze_cake_base', 'createaddition:cake_base_baked', 'create:blaze_cake', 'create:dough', 'astrogreg:small_sky_stone_dust', 'astrogreg:tiny_sky_stone_dust', 
-        'expandedae:dual_cell_housing', 'expandedae:mega_dual_cell_housing',
+        'expandedae:dual_cell_housing', 'expandedae:mega_dual_cell_housing', '#create:pulpifiable',
     ]
 
     //#region remove output

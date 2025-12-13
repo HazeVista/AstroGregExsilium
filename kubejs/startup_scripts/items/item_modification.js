@@ -30,6 +30,66 @@ ItemEvents.modification(event => {
                 .saturation(0.4)
         }
     })
+
+    event.modify('delightful:wrapped_cantaloupe', item => {
+        item.foodProperties = food => {
+            food
+                .hunger(4)
+                .saturation(1.25)
+        }
+    })
+    
+    event.modify('delightful:salmonberries', item => {
+        item.foodProperties = food => {
+            food
+                .hunger(1)
+                .saturation(1)
+        }
+    })
+     
+    event.modify('delightful:cactus_chunk', item => {
+        item.foodProperties = food => {
+            food
+                .hunger(1)
+                .saturation(1)
+        }
+    })
+     
+    event.modify('delightful:roasted_acorn', item => {
+        item.foodProperties = food => {
+            food
+                .hunger(2)
+                .saturation(0.5)
+        }
+    })
+         
+    event.modify('farmersdelight:cooked_rice', item => {
+        item.foodProperties = food => {
+            food
+                .hunger(5)
+                .saturation(0.6)
+        }
+    })
+             
+    event.modify('create:honeyed_apple', item => {
+        item.foodProperties = food => {
+            food
+                .hunger(4)
+                .saturation(1)
+        }
+    })
+
+    event.modify('delightful:animal_fat', item => {
+        item.foodProperties = null
+    })
+
+    event.modify('delightful:acorn', item => {
+        item.foodProperties = null
+    })
+    
+    event.modify('minecraft:pumpkin_pie', item => {
+        item.foodProperties = null
+    })
     //#endregion
 
     /*
