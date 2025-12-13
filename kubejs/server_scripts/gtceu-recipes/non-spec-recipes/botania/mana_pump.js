@@ -28,7 +28,7 @@ function singleblocks(part) {
     const cable = part[1] 
     const glass = part[2] 
 
-    event.shaped('gtceu:manafield_simulator', [
+    event.shaped(`gtceu:${tier}_manafield_simulator`, [
         'DAD',
         'FEF',
         'BCB'
