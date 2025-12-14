@@ -23,7 +23,7 @@ StartupEvents.registry('item', event => {
                 .saturation(0.25)
         })
         
-    event.create('farmersdelight:_cake_slice')
+    event.create('farmersdelight:honey_cake_slice')
         .displayName('Honey Cake Slice')
         .texture('kubejs:item/delight/honey_cake_slice')
         .food(food => {

@@ -20,11 +20,11 @@ features:
 
   # Base amount of WAT coolant to drain every second.
   # (Setting both this amount and the IO multiplier to 0 disables the coolant mechanic.)
-  pterbCoolantBaseDrain: 1
+  pterbCoolantBaseDrain: 0
 
   # Multiplier over IO amount for additional coolant drain.
   # (Setting both this and the base drain amount to 0 disables the coolant mechanic.)
-  pterbCoolantIOMultiplier: 1.0
+  pterbCoolantIOMultiplier: 0
 
   # Whether the coins/credits are enabled.
   coinsEnabled: true

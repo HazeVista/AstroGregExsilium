@@ -112,6 +112,8 @@ ServerEvents.recipes(event => {
       .EUt(6)  
     //#endregion
 
+
+    
     //#region cookies
     event.shapeless('8x farmersdelight:sweet_berry_cookie', ['#forge:dough', 'minecraft:sweet_berries'])
     event.shapeless('8x farmersdelight:honey_cookie', ['#forge:dough', 'minecraft:honey_bottle']).replaceIngredient('minecraft:honey_bottle', 'minecraft:glass_bottle')
@@ -147,73 +149,34 @@ ServerEvents.recipes(event => {
       .EUt(6)
     //#endregion
 
+
+
     //#region cutting board
+    const cuttingRecipes = [
+      { input: "minecraft:apple", output: "farmersdelight:apple_slice", count: 4 },
+      { input: "minecraft:pumpkin_pie", output: "delightful:pumpkin_pie_slice", count: 6 },
+      { input: "farmersdelight:apple_pie", output: "farmersdelight:apple_pie_slice", count: 6 },
+      { input: "farmersdelight:chocolate_pie", output: "farmersdelight:chocolate_pie_slice", count: 6 },
+      { input: "farmersdelight:sweet_berry_cheesecake", output: "farmersdelight:sweet_berry_cheesecake_slice", count: 6 },
+      { input: "delightful:salmonberry_pie", output: "delightful:salmonberry_pie_slice", count: 6 },
+      { input: "delightful:baklava", output: "delightful:baklava_slice", count: 6 },
+      { input: "minecraft:cake", output: "farmersdelight:cake_slice", count: 6 },
+      { input: "createaddition:chocolate_cake", output: "farmersdelight:chocolate_cake_slice", count: 6 },
+      { input: "createaddition:honey_cake", output: "farmersdelight:honey_cake_slice", count: 6 }
+    ]
+
+  cuttingRecipes.forEach(recipe => {
     event.custom({
       type: "farmersdelight:cutting",
-      ingredients: [
-        { item: "minecraft:pumpkin_pie" }
-      ],
+      ingredients: [{ item: recipe.input }],
       tool: { tag: "forge:tools/knives" },
-      result: [
-        { item: "delightful:pumpkin_pie_slice", count: 6 }
-      ]
+      result: [{ item: recipe.output, count: recipe.count }]
     })
+  })
 
-    event.custom({
-      type: "farmersdelight:cutting",
-      ingredients: [
-        { item: "farmersdelight:apple_pie" }
-      ],
-      tool: { tag: "forge:tools/knives" },
-      result: [
-        { item: "farmersdelight:apple_pie_slice", count: 6 }
-      ]
-    })
-
-    event.custom({
-      type: "farmersdelight:cutting",
-      ingredients: [
-        { item: "farmersdelight:chocolate_pie" }
-      ],
-      tool: { tag: "forge:tools/knives" },
-      result: [
-        { item: "farmersdelight:chocolate_pie_slice", count: 6 }
-      ]
-    })
-
-    event.custom({
-      type: "farmersdelight:cutting",
-      ingredients: [
-        { item: "farmersdelight:sweet_berry_cheesecake" }
-      ],
-      tool: { tag: "forge:tools/knives" },
-      result: [
-        { item: "farmersdelight:sweet_berry_cheesecake_slice", count: 6 }
-      ]
-    })
-
-    event.custom({
-      type: "farmersdelight:cutting",
-      ingredients: [
-        { item: "delightful:salmonberry_pie" }
-      ],
-      tool: { tag: "forge:tools/knives" },
-      result: [
-        { item: "delightful:salmonberry_pie_slice", count: 6 }
-      ]
-    })    
-
-    event.custom({
-      type: "farmersdelight:cutting",
-      ingredients: [
-        { item: "delightful:baklava" }
-      ],
-      tool: { tag: "forge:tools/knives" },
-      result: [
-        { item: "delightful:baklava_slice", count: 6 }
-      ]
-    })        
     //#endregion
+
+
 
     //#region wheat, dough, & straw 
     // event.recipes.gtceu.macerator('macerate_to_flour')
@@ -252,6 +215,8 @@ ServerEvents.recipes(event => {
       .duration(40)
       .EUt(2)
     //#endregion
+
+
 
     //#region acorn dough & butter
     event.shaped('8x delightful:nut_dough', [
@@ -304,6 +269,8 @@ ServerEvents.recipes(event => {
     )
     //#endregion
 
+
+
     //#region chocolate
     event.recipes.gtceu.fluid_solidifier('solidify_chocolate')
       .notConsumable('gtceu:ingot_casting_mold')
@@ -346,6 +313,8 @@ ServerEvents.recipes(event => {
       .EUt(7)
     //#endregion
 
+
+
     //#region misc
     event.recipes.gtceu.fluid_solidifier('solidify_cheese')
       .notConsumable('gtceu:ingot_casting_mold')
@@ -378,4 +347,4 @@ ServerEvents.recipes(event => {
     event.shapeless('create:honeyed_apple', ['minecraft:honey_bottle', 'minecraft:apple']).replaceIngredient('minecraft:honey_bottle', 'minecraft:glass_bottle')
     event.shapeless('4x create:chocolate_glazed_berries', ['minecraft:sweet_berries', 'minecraft:sweet_berries', 'minecraft:sweet_berries', 'minecraft:sweet_berries', 'create:chocolate_bucket']).replaceIngredient('create:chocolate_bucket', 'minecraft:bucket')
     //#endregion
-});
+})

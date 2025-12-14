@@ -87,7 +87,7 @@ ServerEvents.recipes(event => {
         ['gtceu:obsidian_dust'])
         
     event.recipes.create.pressing(
-        ['gtceu:cocao_dust'],
+        ['gtceu:cocoa_dust'],
         ['minecraft:cocoa_beans'])
 
     event.recipes.create.pressing(

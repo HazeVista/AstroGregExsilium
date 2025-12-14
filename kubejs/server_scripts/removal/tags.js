@@ -26,15 +26,7 @@ ServerEvents.tags('item', event => {
         'createaddition:electrum_block', 'createaddition:brass_rod',
         'createaddition:diamond_grit', 'createaddition:diamond_grit_sandpaper',
         'farmersdelight:wheat_dough', 'powah:uraninite_raw',
-        'gtceu:elementium_ingot', 'gtceu:elementium_nugget',
-        'gtceu:manasteel_ingot', 'gtceu:manasteel_nugget',
-        'gtceu:terrasteel_ingot', 'gtceu:terrasteel_nugget',
-        'gtceu:gaiasteel_ingot', 'gtceu:gaiasteel_nugget',
-        'gtceu:elementium_block', 'gtceu:manasteel_block',
-        'gtceu:terrasteel_block', 'gtceu:gaiasteel_block',
-        'ae2:ender_dust', 'gtceu:mana_diamond_gem',
-        'gtceu:mana_diamond_block', 'gtceu:dragonstone_gem',
-        'gtceu:dragonstone_block', 'powah:crystal_niotic',
+        'ae2:ender_dust', 'powah:crystal_niotic',
         'powah:crystal_spirited', 'powah:crystal_blazing',
         'powah:crystal_nitro', 'ad_extendra:glacian_sapling',
         'create:blaze_cake', 'create:creative_blaze_cake',
@@ -95,7 +87,13 @@ ServerEvents.tags('item', event => {
             ['minecraft:grass', 'farmersdelight:sandy_shrub', 'minecraft:tall_grass'],
 
         'forge:fruit_slice': 
-            ['minecraft:melon_slice', 'farmersdelight:melon_slice'],
+            ['minecraft:melon_slice', 'farmersdelight:melon_slice', 'farmersdelight:apple_slice'],
+
+        'forge:fruits':
+            ['farmersdelight:apple_slice'],
+            
+        'forge:fruits/sweet':
+            ['farmersdelight:apple_slice'],
         
         'c:glass_panes': 
             ['botania:managlass_pane'],
@@ -106,6 +104,7 @@ ServerEvents.tags('item', event => {
 
         'create:pulpifiable': 
             ['farmersdelight:tree_bark'],
+
         'forge:meat': 
             ['minecraft:beef', 'minecraft:chicken', 'minecraft:mutton',
             'minecraft:porkchop', 'minecraft:rabbit', 'delightful:raw_goat'],
@@ -148,9 +147,9 @@ ServerEvents.tags('block', event => {
 
 
     //#region add block tags
-    const blockTagAdditions = [
+    const blockTagAdditions = {
         
-    ]
+    }
     //#endregion 
 
 
@@ -182,9 +181,10 @@ ServerEvents.tags('fluid', event => {
 
 
     //#region remove single fluid tag
-    const fluidTagRemovals = [
-        
-    ]
+    const fluidTagRemovals = {
+        'create:bottomless/allow':
+            ['minecraft:lava', 'minecraft:water']
+    }
     //#endregion
     //#endregion
 
@@ -192,8 +192,7 @@ ServerEvents.tags('fluid', event => {
 
     //#region add fluid tags
     const fluidTagAdditions = [
-        'create:bottomless/allow', 
-            ['minecraft:lava', 'minecraft:water']
+
     ]
     //#endregion 
 

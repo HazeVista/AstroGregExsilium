@@ -20,7 +20,7 @@ AstroGreg:Exsilium aims to be a lower difficulty GT pack, but it's still an inte
 
 ### Credits:
 Owned by Haze Vista. Special thanks to DriftBlueStone, DigestLotion, Wabwit, BGame, Swan, and Davening for developing the project with me.
-Props to the [TerraFirmaGreg](https://github.com/TerraFirmaGreg-Team/Core-Modern/) Team for the beautiful (GrappleMod overhaul)[https://github.com/HazeVista/AstroGregExsilium/blob/main/kubejs/server_scripts/qol-mods/travel_mods/grapplemod.js], and to the [Cosmic Frontiers](https://github.com/Frontiers-PackForge/CosmicCore/) Team for parts of our [Oregen Fix](https://github.com/HazeVista/AstroGregExsilium/blob/main/kubejs/startup_scripts/worldgen/oregen_fix.js) file.
+Props to Nebby from the [TerraFirmaGreg Team](https://github.com/TerraFirmaGreg-Team/Core-Modern/) for the beautiful (GrappleMod overhaul)[https://github.com/HazeVista/AstroGregExsilium/blob/main/kubejs/server_scripts/qol-mods/travel_mods/grapplemod.js].
 
 
 

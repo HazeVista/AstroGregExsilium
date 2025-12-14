@@ -119,39 +119,35 @@ const MaterialModifier = [
     ['zinc', [bolt_screw]],
     ['nickel', [foil, ring, rod, bolt_screw]]
 ]
+
 // Name, Elements, Color, Flags
 const ComponentDust = [
     ['andesite_alloy', ['1x andesite', '1x iron'], 0xa6a08f, [centrifuge]],
     ['asteroid_stone', [], 0x70276b, []],
-    ['inactive_terrasteel', [], 0x128719, []],
     ['livingrock', [], 0xc9c2b1, []],
     ['livingclay', [], 0xc9c2e7, []],
     ['acorn', [], 0x734d15, []]
 ]
+
 // Name, Elements, Color, Icon, Flag
 const ComponentGem = [
-    ['mana_diamond', [], 0x47eaed, DIAMOND, [crystallizable, lens, plates]],
-    ['dragonstone', [], 0xed64d4, DIAMOND, [crystallizable, lens, plates]]
-]
-// Name, Elements, Color, Flags
-const ComponentGas = [
-    ['aether', [], 0x26a33f, []]  
-]
-// Name, Elements, Color, Flags
-const ComponentLiquid = [
-    ['depleted_aether', [], 0x33693e, []]
-]
-// Name, Elements, Color1, Color2, Icon, Blasting, Flags    (using darker colors for color2 almost always looks better)
-const ComponentIngotLiquidTwoColors = [
+
 ]
 
-// Name, Color, IconSet, Blasting, FluidPipeProperties, ToolStats, Magnetic, Flags
-/*const BotaniaTools = [
-    ['manasteel', 0x228cc9, SHINY, [1000, 'low', 120, 400], [1855, 600, true, false, false, false], [8.0, 7.0, 768, 3, BotanicTools], false, [foils, gear, plates, rod, dense, ring, frame, bolt_screw, mortar_grind]],
-    ['terrasteel', 0x159e1e, SHINY, [1700, 'low', v.MV, 800], [2142, 225, true, false, false, false], [11.0, 11.0, 2048, 3.0, BotanicTools], false, [foil, gear, plates, rod, dense, ring, frame, bolt_screw]],
-    ['elementium', 0xed64d4, SHINY, [3500, 'mid', va.IV, 1600], [2426, 300, true, false, false, false], [16.0, 13.0, 3072, 4.0, BotanicTools], false, [foil, gear, plates, rod, dense, ring, frame, bolt_screw]],
-    ['gaiasteel', 0x8c2929, RADIOACTIVE, [7100, 'high', va.ZPM, 2400], [3776, 400, true, true, true, true], [48.0, 16.0, 4096, 5.0, BotanicTools], true, [foil, gear, plates, rod, dense, ring, frame, bolt_screw]]
-]*/
+// Name, Elements, Color, Flags
+const ComponentGas = [
+
+]
+
+// Name, Elements, Color, Flags
+const ComponentLiquid = [
+
+]
+
+// Name, Elements, Color1, Color2, Icon, Blasting, Flags    (using darker colors for color2 almost always looks better)
+const ComponentIngotLiquidTwoColors = [
+
+]
 
 // Name, Elements, Color, Icon, Blasting, Cable, Rotorstats
 const SuperConductors = [
@@ -226,7 +222,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
                 .iconSet(material[4])
                 .blastTemp(material[5][0], material[5][1], material[5][2], material[5][3])
                 .flags(material[6]);
-            return // early return if it can blast
+            return
         } 
         event.create(material[0])
             .ingot().fluid()
@@ -244,7 +240,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
                 .blastTemp(material[3][0], material[3][1], material[3][2], material[3][3])
                 .cableProperties(material[4][0], material[4][1], material[4][2], material[4][3])
                 .rotorStats(material[5][0], material[5][1], material[5][2], material[5][3]);
-            return // early return if it can blast
+            return
         }
         event.create(material[0])
             .ingot().fluid()
@@ -253,81 +249,4 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
             .cableProperties(material[4][0], material[4][1], material[4][2], material[4][3])
             .rotorStats(material[5][0], material[5][1], material[5][2], material[5][3]);
     })
-
-    //#region botania tools
-    //to be removed for java
-    const BotanicTools = [
-        GTToolType.SWORD,
-        GTToolType.PICKAXE,
-        GTToolType.SHOVEL,
-        GTToolType.AXE,
-        GTToolType.HOE,
-        GTToolType.MINING_HAMMER,
-        GTToolType.SPADE,
-        GTToolType.SAW,
-        GTToolType.HARD_HAMMER,
-        GTToolType.SOFT_MALLET,
-        GTToolType.WRENCH,
-        GTToolType.FILE,
-        GTToolType.CROWBAR,
-        GTToolType.SCREWDRIVER,
-        GTToolType.MORTAR,
-        GTToolType.WIRE_CUTTER,
-        GTToolType.SCYTHE,
-        GTToolType.KNIFE,
-        GTToolType.BUTCHERY_KNIFE,
-        GTToolType.PLUNGER,
-        GTToolType.DRILL_LV,
-        GTToolType.DRILL_MV,
-        GTToolType.DRILL_HV,
-        GTToolType.DRILL_EV,
-        GTToolType.DRILL_IV,
-        GTToolType.CHAINSAW_LV,
-        GTToolType.BUZZSAW,
-        GTToolType.SCREWDRIVER_LV,
-        GTToolType.WRENCH_LV,
-        GTToolType.WRENCH_HV,
-        GTToolType.WRENCH_IV,
-        GTToolType.WIRE_CUTTER_LV,
-        GTToolType.WIRE_CUTTER_HV,
-        GTToolType.WIRE_CUTTER_IV
-    ];
-
-    event.create('manasteel')
-        .ingot().fluid()
-        .color(0x228cc9)
-        .iconSet(SHINY)
-        .blastTemp(1000, 'low', 120, 400)
-        .fluidPipeProperties(1855, 600, true, false, false, false)
-        .flags(foil, gear, plates, rod, dense, ring, frame, bolt_screw, mortar_grind)
-        .toolStats(new ToolProperty(8.0, 7.0, 768, 3, BotanicTools))
-        
-    event.create('terrasteel')
-        .ingot().fluid()
-        .color(0x159e1e)
-        .iconSet(SHINY)
-        .blastTemp(1700, 'low', va.MV, 800)
-        .fluidPipeProperties(2142, 225, true, false, false, false)
-        .flags(foil, gear, plates, rod, dense, ring, frame, bolt_screw)
-        .toolStats(new ToolProperty(11.0, 11.0, 2048, 3.0, BotanicTools))
-            
-    event.create('elementium')
-        .ingot().fluid()
-        .color(0xed64d4)
-        .iconSet(SHINY)
-        .blastTemp(3500, 'mid', va.IV, 1600)
-        .fluidPipeProperties(2426, 300, true, false, false, false)
-        .flags(foil, gear, plates, rod, dense, ring, frame, bolt_screw)
-        .toolStats(new ToolProperty(16.0, 13.0, 3072, 4.0, BotanicTools))
-
-    event.create('gaiasteel')
-        .ingot()
-        .fluid()
-        .color(0x8c2929)
-        .iconSet(RADIOACTIVE)
-        .blastTemp(7100, 'high', va.ZPM, 2400)
-        .fluidPipeProperties(3776, 400, true, true, true, true)
-        .flags(foil, gear, plates, rod, dense, ring, frame, bolt_screw)
-        .toolStats(ToolProperty.Builder.of(48.0, 16.0, 4096, 5.0, BotanicTools).magnetic().build())
-    //#endregion
 })

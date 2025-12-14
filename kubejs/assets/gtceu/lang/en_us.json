@@ -24,18 +24,8 @@
     "item.gtceu.tiny_acorn_dust": "Tiny Acorn Flour",
     "item.gtceu.small_acorn_dust": "Small Acorn Flour",
     "item.gtceu.acorn_dust": "Acorn Flour",
-
-    "material.gtceu.inactive_terrasteel": "Inactive §2Terrasteel§r",
-    "material.gtceu.terrasteel": "§2Terrasteel",
-    "material.gtceu.manasteel": "§9Manasteel",
-    "material.gtceu.elementium": "§dAlfsteel",
-    "material.gtceu.gaiasteel": "§cGaiasteel",
-    "material.gtceu.mana_diamond": "Mana Diamond",
-    "material.gtceu.dragonstone": "Dragonstone",
     "material.gtceu.livingclay": "Livingclay",
     "material.gtceu.livingrock": "Livingrock",
-    "material.gtceu.aether": "§3Æther§r",
-    "material.gtceu.depleted_aether": "Depleted §3Æther§r",
 
     "material.gtceu.blazing_etrium": "Blazing Etrium",
     "material.gtceu.niotic_calorite": "Niotic Calorite",

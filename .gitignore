@@ -51,7 +51,6 @@ config/entityculling*
 config/ferritecore-mixin*
 config/fluxnetworks-client*
 config/fluxnetworks-common*
-config/fml*
 config/forge-client*
 config/framedblocks-client*
 config/framedblocks-common*

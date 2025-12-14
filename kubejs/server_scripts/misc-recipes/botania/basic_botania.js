@@ -485,7 +485,7 @@ ServerEvents.recipes(event => {
         'A'
     ], {
        A: 'gtceu:terrasteel_ring',
-       B: 'gtceu:mana_diamonds_lens'
+       B: 'astrogreg:mana_diamond_lens'
     })
 
     event.shaped('botania:gaia_lens', [
