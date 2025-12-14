@@ -1,0 +1,129 @@
+{
+  "custom_clouds": true,
+  "custom_sky": true,
+  "custom_weather": true,
+  "dimension": "ad_astra:kuiper_belt",
+  "has_fog": false,
+  "has_thick_fog": false,
+  "render_in_rain": true,
+  "sky_renderables": [
+    {
+      "back_light_color": 12632256,
+      "back_light_scale": 100.0,
+      "blend": true,
+      "global_rotation": [
+        82.0,
+        0.0,
+        0.0
+      ],
+      "local_rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "movement_type": "TIME_OF_DAY",
+      "scale": 20.0,
+      "texture": "ad_astra:textures/environment/sun.png"
+    },
+    {
+      "back_light_color": 0,
+      "back_light_scale": 0.0,
+      "blend": false,
+      "global_rotation": [
+        82.0,
+        0.0,
+        -25.0
+      ],
+      "local_rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "movement_type": "STATIC",
+      "scale": 15.0,
+      "texture": "ad_extendra:textures/environment/jupiter.png"
+    },
+    {
+      "back_light_color": 0,
+      "back_light_scale": 0.0,
+      "blend": false,
+      "global_rotation": [
+        82.0,
+        0.0,
+        -12.0
+      ],
+      "local_rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "movement_type": "STATIC",
+      "scale": 18.0,
+      "texture": "ad_extendra:textures/environment/saturn.png"
+    },
+    {
+      "back_light_color": 0,
+      "back_light_scale": 0.0,
+      "blend": false,
+      "global_rotation": [
+        82.0,
+        0.0,
+        2.0
+      ],
+      "local_rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "movement_type": "STATIC",
+      "scale": 12.0,
+      "texture": "ad_extendra:textures/environment/uranus.png"
+    },
+    {
+      "back_light_color": 0,
+      "back_light_scale": 0.0,
+      "blend": false,
+      "global_rotation": [
+        82.0,
+        0.0,
+        15.0
+      ],
+      "local_rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "movement_type": "STATIC",
+      "scale": 13.0,
+      "texture": "ad_extendra:textures/environment/neptune.png"
+    },
+    {
+      "back_light_color": 0,
+      "back_light_scale": 0.0,
+      "blend": false,
+      "global_rotation": [
+        82.0,
+        0.0,
+        28.0
+      ],
+      "local_rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "movement_type": "STATIC",
+      "scale": 7.0,
+      "texture": "ad_extendra:textures/environment/pluto.png"
+    }
+  ],
+  "star_brightness": 0.5,
+  "star_colors": [
+    {
+      "data": -1,
+      "weight": 100
+    }
+  ],
+  "stars": 12000,
+  "sunrise_angle": 0,
+  "sunrise_color": 0
+}
