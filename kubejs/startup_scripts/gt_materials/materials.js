@@ -249,4 +249,5 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
             .cableProperties(material[4][0], material[4][1], material[4][2], material[4][3])
             .rotorStats(material[5][0], material[5][1], material[5][2], material[5][3]);
     })
+    
 })

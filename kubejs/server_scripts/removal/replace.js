@@ -11,22 +11,6 @@ ServerEvents.recipes(event => {
     event.replaceInput({}, 'minecraft:sand', '#forge:sand')
     event.replaceInput({id: 'farmersdelight:roast_chicken_block'}, '#forge:eggs', 'farmersdelight:fried_egg')
     event.replaceInput({id: 'delightful:food/pumpkin_pie'}, '#forge:eggs', 'farmersdelight:fried_egg')
-    event.replaceInput({input: 'gtceu:manasteel_ingot'}, 'gtceu:manasteel_ingot','botania:manasteel_ingot')
-    event.replaceInput({input: 'gtceu:manasteel_block'}, 'gtceu:manasteel_block','botania:manasteel_block')
-    event.replaceInput({input: 'gtceu:manasteel_nugget'}, 'gtceu:manasteel_nugget','botania:manasteel_nugget')
-    event.replaceInput({input: 'gtceu:terrasteel_ingot'}, 'gtceu:terrasteel_ingot','botania:terrasteel_ingot')
-    event.replaceInput({input: 'gtceu:terrasteel_block'}, 'gtceu:terrasteel_block','botania:terrasteel_block')
-    event.replaceInput({input: 'gtceu:terrasteel_nugget'}, 'gtceu:terrasteel_nugget','botania:terrasteel_nugget')
-    event.replaceInput({input: 'gtceu:gaiasteel_ingot'}, 'gtceu:gaiasteel_ingot','botanicadds:gaiasteel_ingot')
-    event.replaceInput({input: 'gtceu:gaiasteel_block'}, 'gtceu:gaiasteel_block','botanicadds:gaiasteel_block')
-    event.replaceInput({input: 'gtceu:gaiasteel_nugget'}, 'gtceu:gaiasteel_nugget','botanicadds:gaiasteel_nugget')
-    event.replaceInput({input: 'gtceu:elementium_ingot'}, 'gtceu:elementium_ingot','botania:elementium_ingot')
-    event.replaceInput({input: 'gtceu:elementium_block'}, 'gtceu:elementium_block','botania:elementium_block')
-    event.replaceInput({input: 'gtceu:elementium_nugget'}, 'gtceu:elementium_nugget','botania:elementium_nugget')
-    event.replaceInput({input: 'gtceu:mana_diamond_gem',}, 'gtceu:mana_diamond_gem', 'botania:mana_diamond')
-    event.replaceInput({input: 'gtceu:mana_diamond_block',}, 'gtceu:mana_diamond_block', 'botania:mana_diamond_block')
-    event.replaceInput({input: 'gtceu:dragonstone_gem'}, 'gtceu:dragonstone_gem', 'botania:dragonstone')
-    event.replaceInput({input: 'gtceu:dragonstone_block'}, 'gtceu:dragonstone_block', 'botania:dragonstone_block')
     event.replaceInput({input: 'botania:rune_fire'}, 'botania:rune_fire', 'botania:fire_rune')
     event.replaceInput({input: 'botania:rune_water'}, 'botania:rune_water', 'botania:water_rune')
     event.replaceInput({input: 'botania:rune_air'}, 'botania:rune_air', 'botania:air_rune')
@@ -56,28 +40,12 @@ ServerEvents.recipes(event => {
     event.replaceInput({}, 'ad_extendra:saturlyte_ingot', 'astrogreg:saturlyte_ingot')
     event.replaceInput({}, 'ad_extendra:juperium_ingot', 'astrogreg:juperium_ingot')
     // event.replaceInput({input: ''}, '', '')
-
     //#endregion
     
     //#region output
-    event.replaceOutput({output: 'gtceu:manasteel_ingot'}, 'gtceu:manasteel_ingot','botania:manasteel_ingot');
-    event.replaceOutput({output: 'gtceu:manasteel_block'}, 'gtceu:manasteel_block','botania:manasteel_block');
-    event.replaceOutput({output: 'gtceu:manasteel_nugget'}, 'gtceu:manasteel_nugget','botania:manasteel_nugget');
-    event.replaceOutput({output: 'gtceu:terrasteel_ingot'}, 'gtceu:terrasteel_ingot','botania:terrasteel_ingot');
-    event.replaceOutput({output: 'gtceu:terrasteel_block'}, 'gtceu:terrasteel_block','botania:terrasteel_block');
-    event.replaceOutput({output: 'gtceu:terrasteel_nugget'}, 'gtceu:terrasteel_nugget','botania:terrasteel_nugget');
-    event.replaceOutput({output: 'gtceu:gaiasteel_ingot'}, 'gtceu:gaiasteel_ingot','botanicadds:gaiasteel_ingot');
-    event.replaceOutput({output: 'gtceu:gaiasteel_block'}, 'gtceu:gaiasteel_block','botanicadds:gaiasteel_block');
-    event.replaceOutput({output: 'gtceu:gaiasteel_nugget'}, 'gtceu:gaiasteel_nugget','botanicadds:gaiasteel_nugget');
-    event.replaceOutput({output: 'gtceu:elementium_ingot'}, 'gtceu:elementium_ingot','botania:elementium_ingot');
-    event.replaceOutput({output: 'gtceu:elementium_block'}, 'gtceu:elementium_block','botania:elementium_block');
-    event.replaceOutput({output: 'gtceu:elementium_nugget'}, 'gtceu:elementium_nugget','botania:elementium_nugget');
-    event.replaceOutput({output: 'gtceu:mana_diamond_block',}, 'gtceu:mana_diamond_block', 'botania:mana_diamond_block')
-    event.replaceOutput({output: 'gtceu:mana_diamond_gem',}, 'gtceu:mana_diamond_gem', 'botania:mana_diamond');
-    event.replaceOutput({output: 'gtceu:dragonstone_gem'}, 'gtceu:dragonstone_gem', 'botania:dragonstone')
-    event.replaceOutput({output: 'gtceu:dragonstone_block'}, 'gtceu:dragonstone_block', 'botania:dragonstone_block')
     event.replaceOutput({output: 'ae2:certus_quartz_crystal'}, 'ae2:certus_quartz_crystal', 'gtceu:certus_quartz_gem')
     event.replaceOutput({}, 'ad_extendra:saturlyte_ingot', 'astrogreg:saturlyte_ingot')
     event.replaceOutput({}, 'ad_extendra:juperium_ingot', 'astrogreg:juperium_ingot')
     // event.replaceOutput({output: ''}, '', '')
+    //#endregion
 });

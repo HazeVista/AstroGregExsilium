@@ -55,7 +55,7 @@ ServerEvents.recipes(event => {
     })
 
     event.recipes.gtceu.assembler('assembler_mana_pylon')
-        .itemInputs('4x botania:manasteel_nugget', '4x gtceu:double_gold_plate', 'gtceu:exquisite_mana_diamond_gem')
+        .itemInputs('4x botania:manasteel_nugget', '4x gtceu:double_gold_plate', 'astrogreg:exquisite_mana_diamond_gem')
         .inputFluids('manafluid:mana 1000')
         .itemOutputs('botania:mana_pylon')
         .duration(400)
@@ -70,8 +70,8 @@ ServerEvents.recipes(event => {
     event.recipes.botania.mana_infusion('botania:mana_powder', 'gtceu:stone_dust', 100)
     event.recipes.botania.mana_infusion('botania:mana_powder', 'gtceu:asteroid_stone_dust', 100)
     event.recipes.botania.mana_infusion('botania:managlass', 'gtceu:tempered_glass', 100)
-    event.recipes.botania.mana_infusion('gtceu:exquisite_mana_diamond_gem', 'gtceu:exquisite_diamond_gem', 40000)
-    event.recipes.botania.mana_infusion('gtceu:flawless_mana_diamond_gem', 'gtceu:flawless_diamond_gem', 20000)
+    event.recipes.botania.mana_infusion('astrogreg:exquisite_mana_diamond_gem', 'gtceu:exquisite_diamond_gem', 40000)
+    event.recipes.botania.mana_infusion('astrogreg:flawless_mana_diamond_gem', 'gtceu:flawless_diamond_gem', 20000)
     event.recipes.botania.mana_infusion('botania:mana_diamond', 'minecraft:diamond', 10000)
     event.recipes.botania.mana_infusion('botania:mana_diamond_block', '#forge:storage_blocks/diamond', 10000)
     event.recipes.botania.mana_infusion('botania:mana_cookie', '#forge:cookies', 20000)   
@@ -89,7 +89,7 @@ ServerEvents.recipes(event => {
 
 
     //#region low level materials
-    event.shaped('4x gtceu:manasteel_dust', [
+    event.shaped('4x astrogreg:manasteel_dust', [
         'ABA',
         'BAB',
         'ABA'
@@ -100,7 +100,7 @@ ServerEvents.recipes(event => {
 
     event.recipes.gtceu.mixer('mix_manasteel_dust')
         .itemInputs('botania:mana_powder', 'gtceu:wrought_iron_dust')
-        .itemOutputs('gtceu:manasteel_dust')
+        .itemOutputs('astrogreg:manasteel_dust')
         .duration(80)
         .EUt(7)
 
@@ -150,8 +150,8 @@ ServerEvents.recipes(event => {
         .EUt(2000)
 
     event.recipes.gtceu.mixer('mix_inactive_terrasteel')
-        .itemInputs('gtceu:manasteel_dust', 'gtceu:beryllium_dust', 'gtceu:aluminium_dust')
-        .itemOutputs('3x gtceu:inactive_terrasteel_dust')
+        .itemInputs('astrogreg:manasteel_dust', 'gtceu:beryllium_dust', 'gtceu:aluminium_dust')
+        .itemOutputs('3x astrogreg:dormant_terrasteel_dust')
         .duration(300)
         .EUt(120)
     //#endregion
@@ -166,7 +166,7 @@ ServerEvents.recipes(event => {
     ], {
         A: 'gtceu:gold_plate',
         B: 'botania:managlass_pane',
-        C: 'gtceu:manasteel_plate'
+        C: 'astrogreg:manasteel_plate'
     })
 
     event.shaped('botania:forest_eye', [
@@ -174,7 +174,7 @@ ServerEvents.recipes(event => {
         'BCB',
         'ABA'
     ], {
-        A: 'gtceu:manasteel_plate',
+        A: 'astrogreg:manasteel_plate',
         B: 'botania:livingrock',
         C: 'minecraft:ender_eye'
     })
@@ -213,7 +213,7 @@ ServerEvents.recipes(event => {
     ], {
         A: 'botanicadds:elvenwood_log',
         B: 'botania:mana_spreader',
-        C: 'gtceu:double_elementium_plate',
+        C: 'astrogreg:double_elementium_plate',
         D: 'botania:pixie_lens'
     })
 
@@ -224,7 +224,7 @@ ServerEvents.recipes(event => {
     ], {
         A: '#botania:dreamwood_logs',
         B: 'botania:elven_spreader',
-        C: 'gtceu:double_gaiasteel_plate',
+        C: 'astrogreg:double_gaiasteel_plate',
         D: 'botania:gaia_lens'
     })
 
@@ -244,9 +244,9 @@ ServerEvents.recipes(event => {
         'CAC',
         'BBB'
     ], {
-       A: 'gtceu:manasteel_frame',
+       A: 'astrogreg:manasteel_frame',
        B: 'botania:livingrock',
-       C: 'gtceu:manasteel_ring'
+       C: 'astrogreg:manasteel_ring'
     })
 
     event.shaped('2x botania:pump', [
@@ -254,7 +254,7 @@ ServerEvents.recipes(event => {
         'C B',
         'ADA'
     ], {
-       A: 'gtceu:manasteel_plate',
+       A: 'astrogreg:manasteel_plate',
        B: '#forge:tools/hammers',
        C: '#forge:tools/wrenches',
        D: 'botania:livingrock'
@@ -265,7 +265,7 @@ ServerEvents.recipes(event => {
         'CAC',
         'BBB'
     ], {
-        A: 'gtceu:flawless_mana_diamond_gem',
+        A: 'astrogreg:flawless_mana_diamond_gem',
         B: 'botania:livingrock',
         C: 'gtceu:gold_double_plate'
     })
@@ -275,32 +275,32 @@ ServerEvents.recipes(event => {
 
     //#region manasteel cooking
         event.recipes.gtceu.primitive_blast_furnace('manasteel_charcoal')
-        .itemInputs('gtceu:manasteel_dust', 'minecraft:charcoal')
+        .itemInputs('astrogreg:manasteel_dust', 'minecraft:charcoal')
         .itemOutputs('botania:manasteel_ingot', 'gtceu:tiny_dark_ash_dust')
         .duration(900)
 
     event.recipes.gtceu.primitive_blast_furnace('manasteel_coal')
-        .itemInputs('gtceu:manasteel_dust', 'minecraft:coal')
+        .itemInputs('astrogreg:manasteel_dust', 'minecraft:coal')
         .itemOutputs('botania:manasteel_ingot', 'gtceu:tiny_dark_ash_dust')
         .duration(900)
 
     event.recipes.gtceu.primitive_blast_furnace('manasteel_coke')
-        .itemInputs('gtceu:manasteel_dust', 'gtceu:coke_gem')
+        .itemInputs('astrogreg:manasteel_dust', 'gtceu:coke_gem')
         .itemOutputs('botania:manasteel_ingot', 'gtceu:tiny_dark_ash_dust')
         .duration(750)
 
     event.recipes.gtceu.primitive_blast_furnace('manasteel_charcoal_dust')
-        .itemInputs('gtceu:manasteel_dust', 'gtceu:charcoal_dust')
+        .itemInputs('astrogreg:manasteel_dust', 'gtceu:charcoal_dust')
         .itemOutputs('botania:manasteel_ingot', 'gtceu:tiny_dark_ash_dust')
         .duration(900)
 
     event.recipes.gtceu.primitive_blast_furnace('manasteel_coal_dust')
-        .itemInputs('gtceu:manasteel_dust', 'gtceu:coal_dust')
+        .itemInputs('astrogreg:manasteel_dust', 'gtceu:coal_dust')
         .itemOutputs('botania:manasteel_ingot', 'gtceu:tiny_dark_ash_dust')
         .duration(900)
 
     event.recipes.gtceu.primitive_blast_furnace('manasteel_coke_dust')
-        .itemInputs('gtceu:manasteel_dust', 'gtceu:coke_dust')
+        .itemInputs('astrogreg:manasteel_dust', 'gtceu:coke_dust')
         .itemOutputs('botania:manasteel_ingot', 'gtceu:tiny_dark_ash_dust')
         .duration(750)
     //#endregion
@@ -313,7 +313,7 @@ ServerEvents.recipes(event => {
         'BCB',
         'ABA'
     ], {
-        A: 'gtceu:manasteel_plate',
+        A: 'astrogreg:manasteel_plate',
         B: 'minecraft:crafting_table',
         C: 'botania:mana_pearl'
     })
@@ -343,7 +343,7 @@ ServerEvents.recipes(event => {
         'AAA'
     ], {
         A: 'minecraft:vine',
-        B: 'gtceu:terrasteel_ring'
+        B: 'astrogreg:terrasteel_ring'
     })
 
     event.shaped('botania:bauble_box', [
@@ -352,7 +352,7 @@ ServerEvents.recipes(event => {
         'BBB'
     ], {
         A: '#forge:chests',
-        B: 'gtceu:manasteel_plate',
+        B: 'astrogreg:manasteel_plate',
         C: 'gtceu:gold_ring'
     })
 
@@ -362,8 +362,8 @@ ServerEvents.recipes(event => {
         'BBB'
     ], {
         A: 'botania:livingwood_twig',
-        B: 'gtceu:manasteel_plate',
-        C: 'gtceu:manasteel_rod'
+        B: 'astrogreg:manasteel_plate',
+        C: 'astrogreg:manasteel_rod'
     })
 
     event.shaped('botania:super_lava_pendant', [
@@ -390,7 +390,7 @@ ServerEvents.recipes(event => {
         'A  '
     ], {
         A: 'botania:livingwood_twig',
-        B: 'gtceu:terrasteel_plate',
+        B: 'astrogreg:terrasteel_plate',
         C: 'botania:mana_tablet'
     })
     //#endregion
@@ -403,7 +403,7 @@ ServerEvents.recipes(event => {
         'BC'
     ], {
        A: '#forge:tools/hammers',
-       B: 'gtceu:manasteel_plate',
+       B: 'astrogreg:manasteel_plate',
        C: '#forge:tools/files'
     })
 
@@ -412,7 +412,7 @@ ServerEvents.recipes(event => {
         'BC'
     ], {
        A: '#forge:tools/hammers',
-       B: 'gtceu:elementium_plate',
+       B: 'astrogreg:elementium_plate',
        C: '#forge:tools/files'
     })
 
@@ -421,7 +421,7 @@ ServerEvents.recipes(event => {
         ' B '
     ], {
         A: '#forge:tools/hammers',
-        B: 'gtceu:elementium_plate'
+        B: 'astrogreg:elementium_plate'
     })
 
     event.shaped('botania:terrasteel_boots', [
@@ -430,7 +430,7 @@ ServerEvents.recipes(event => {
         ' B '
     ], {
         A: 'botania:livingwood_twig',
-        B: 'gtceu:terrasteel_plate',
+        B: 'astrogreg:terrasteel_plate',
         C: 'botania:winter_rune',
         D: 'botania:manasteel_boots'
     })
@@ -441,7 +441,7 @@ ServerEvents.recipes(event => {
         ' B '
     ], {
         A: 'botania:livingwood_twig',
-        B: 'gtceu:terrasteel_plate',
+        B: 'astrogreg:terrasteel_plate',
         C: 'botania:autumn_rune',
         D: 'botania:manasteel_leggings'
     })
@@ -452,7 +452,7 @@ ServerEvents.recipes(event => {
         ' B '
     ], {
         A: 'botania:livingwood_twig',
-        B: 'gtceu:terrasteel_plate',
+        B: 'astrogreg:terrasteel_plate',
         C: 'botania:spring_rune',
         D: 'botania:manasteel_helmet'
     })
@@ -463,7 +463,7 @@ ServerEvents.recipes(event => {
         ' B '
     ], {
         A: 'botania:livingwood_twig',
-        B: 'gtceu:terrasteel_plate',
+        B: 'astrogreg:terrasteel_plate',
         C: 'botania:summer_rune',
         D: 'botania:manasteel_chestplate'
     })
@@ -476,7 +476,7 @@ ServerEvents.recipes(event => {
         'B',
         'A'
     ], {
-       A: 'gtceu:manasteel_ring',
+       A: 'astrogreg:manasteel_ring',
        B: 'botania:managlass_pane'
     })
 
@@ -484,7 +484,7 @@ ServerEvents.recipes(event => {
         'B',
         'A'
     ], {
-       A: 'gtceu:terrasteel_ring',
+       A: 'astrogreg:terrasteel_ring',
        B: 'astrogreg:mana_diamond_lens'
     })
 
@@ -493,15 +493,15 @@ ServerEvents.recipes(event => {
         'A'
     ], {
        A: 'gtceu:gaiasteel_ring',
-       B: 'gtceu:dragonstone_lens'
+       B: 'astrogreg:dragonstone_lens'
     })
 
     event.shaped('botania:pixie_lens', [
         'B',
         'A'
     ], {
-       A: 'gtceu:elementium_ring',
-       B: 'gtceu:dragonstone_lens'
+       A: 'astrogreg:elementium_ring',
+       B: 'astrogreg:dragonstone_lens'
     })
 
     event.shaped('botania:lens_magnet', [
@@ -523,8 +523,8 @@ ServerEvents.recipes(event => {
         'BAB',
         ' B '
     ], {
-        A: 'gtceu:manasteel_ring',
-        B: 'gtceu:manasteel_plate',
+        A: 'astrogreg:manasteel_ring',
+        B: 'astrogreg:manasteel_plate',
         C: 'botania:mana_tablet'
     })
 
@@ -533,8 +533,8 @@ ServerEvents.recipes(event => {
         'BAB',
         ' B '
     ], {
-        A: 'gtceu:manasteel_ring',
-        B: 'gtceu:manasteel_plate',
+        A: 'astrogreg:manasteel_ring',
+        B: 'astrogreg:manasteel_plate',
         C: 'botania:lens_magnet'
     })
     
@@ -543,8 +543,8 @@ ServerEvents.recipes(event => {
         'BAB',
         ' B '
     ], {
-        A: 'gtceu:manasteel_ring',
-        B: 'gtceu:manasteel_plate',
+        A: 'astrogreg:manasteel_ring',
+        B: 'astrogreg:manasteel_plate',
         C: 'botania:mana_rune'
     })
     
@@ -553,8 +553,8 @@ ServerEvents.recipes(event => {
         'BAB',
         'DBC'
     ], {
-        A: 'gtceu:manasteel_ring',
-        B: 'gtceu:manasteel_plate',
+        A: 'astrogreg:manasteel_ring',
+        B: 'astrogreg:manasteel_plate',
         C: 'botania:water_rune',
         D: '#minecraft:fishes'
     })
@@ -564,8 +564,8 @@ ServerEvents.recipes(event => {
         'BAB',
         'EBF'
     ], {
-        A: 'gtceu:manasteel_ring',
-        B: 'gtceu:manasteel_plate',
+        A: 'astrogreg:manasteel_ring',
+        B: 'astrogreg:manasteel_plate',
         C: 'minecraft:clay',
         D: '#forge:stone',
         E: '#minecraft:logs',
@@ -577,8 +577,8 @@ ServerEvents.recipes(event => {
         'BAB',
         ' BD'
     ], {
-        A: 'gtceu:manasteel_ring',
-        B: 'gtceu:manasteel_plate',
+        A: 'astrogreg:manasteel_ring',
+        B: 'astrogreg:manasteel_plate',
         C: 'botania:air_rune',
         D: 'botania:fire_rune'
     })
@@ -588,8 +588,8 @@ ServerEvents.recipes(event => {
         'BAB',
         'DBC'
     ], {
-        A: 'gtceu:manasteel_ring',
-        B: 'gtceu:manasteel_plate',
+        A: 'astrogreg:manasteel_ring',
+        B: 'astrogreg:manasteel_plate',
         C: 'botania:earth_rune',
         D: 'minecraft:diamond_pickaxe'
     })
@@ -600,7 +600,7 @@ ServerEvents.recipes(event => {
         ' B '
     ], {
         A: 'botania:magnet_ring',
-        B: 'gtceu:terrasteel_plate',
+        B: 'astrogreg:terrasteel_plate',
         C: 'botania:lens_magnet'
     })
      
@@ -610,7 +610,7 @@ ServerEvents.recipes(event => {
         ' B '
     ], {
         A: 'botania:aura_ring',
-        B: 'gtceu:terrasteel_plate',
+        B: 'astrogreg:terrasteel_plate',
         C: 'botania:mana_rune'
     })
         
@@ -620,7 +620,7 @@ ServerEvents.recipes(event => {
         ' B '
     ], {
         A: 'botania:mana_ring',
-        B: 'gtceu:terrasteel_plate',
+        B: 'astrogreg:terrasteel_plate',
         C: 'botania:mana_tablet'
     })
 
@@ -629,8 +629,8 @@ ServerEvents.recipes(event => {
         'BAB',
         ' B '
     ], {
-        A: 'gtceu:elementium_ring',
-        B: 'gtceu:elementium_plate',
+        A: 'astrogreg:elementium_ring',
+        B: 'astrogreg:elementium_plate',
         C: 'botania:pixie_dust'
     })
 
@@ -639,8 +639,8 @@ ServerEvents.recipes(event => {
         'BAB',
         ' B '
     ], {
-        A: 'gtceu:elementium_ring',
-        B: 'gtceu:elementium_plate',
+        A: 'astrogreg:elementium_ring',
+        B: 'astrogreg:elementium_plate',
         C: 'botania:pride_rune'
     })
 
@@ -673,7 +673,7 @@ ServerEvents.recipes(event => {
         'ABA',
         'CAC'
     ], {
-        A: 'gtceu:manasteel_plate',
+        A: 'astrogreg:manasteel_plate',
         B: 'botania:water_rune',
         C: 'botania:pixie_dust'
     })
@@ -683,7 +683,7 @@ ServerEvents.recipes(event => {
         'ABA',
         'CAC'
     ], {
-        A: 'gtceu:manasteel_plate',
+        A: 'astrogreg:manasteel_plate',
         B: 'botania:fire_rune',
         C: 'botania:pixie_dust'
     })
@@ -693,7 +693,7 @@ ServerEvents.recipes(event => {
         'ABA',
         'CAC'
     ], {
-        A: 'gtceu:manasteel_plate',
+        A: 'astrogreg:manasteel_plate',
         B: 'botania:earth_rune',
         C: 'botania:pixie_dust'
     })
@@ -703,7 +703,7 @@ ServerEvents.recipes(event => {
         'ABA',
         'CAC'
     ], {
-        A: 'gtceu:manasteel_plate',
+        A: 'astrogreg:manasteel_plate',
         B: 'botania:air_rune',
         C: 'botania:pixie_dust'
     }) 
@@ -713,9 +713,9 @@ ServerEvents.recipes(event => {
         'BCB',
         'ABA'
     ], {
-        A: 'gtceu:elementium_plate',
+        A: 'astrogreg:elementium_plate',
         B: 'botania:livingrock',
-        C: 'gtceu:manasteel_plate'
+        C: 'astrogreg:manasteel_plate'
     })
     //#endregion
 

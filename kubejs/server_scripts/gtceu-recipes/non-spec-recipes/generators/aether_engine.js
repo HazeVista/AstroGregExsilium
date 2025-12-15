@@ -6,9 +6,9 @@ ServerEvents.recipes(event => {
         'DBD'
     ], {
         A: '#gtceu:circuits/iv',
-        B: 'gtceu:elementium_gear',
+        B: 'astrogreg:elementium_gear',
         C: 'gtceu:iv_machine_hull',
-        D: 'gtceu:elementium_large_fluid_pipe'
+        D: 'astrogreg:elementium_large_fluid_pipe'
     })
 
     event.recipes.gtceu.aether_engine('burn_aether')

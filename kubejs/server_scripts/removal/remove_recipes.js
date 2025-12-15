@@ -45,7 +45,7 @@ ServerEvents.recipes(event => {
         'gtceu:diamond_grinding_head', 'ad_astra:oxygen_gear', 'ad_astra:large_gas_tank', 'ad_astra:gas_tank', 'ad_astra:vent', 'ad_astra:wrench', 'expatternprovider:assembler_matrix_glass',
         'megacells:sky_steel_ingot', 'ae2:charged_staff', 'megacells:cell_dock', 'ae2:entropy_manipulator', 'functionalstorage:iron_downgrade', 'ae2wtlib:magnet_card', 'ae2:radio',
         'ae2netanalyser:network_analyser', 'ae2:basic_card', 'ae2:advanced_card', 'functionalstorage:void_upgrade', 'ad_astra:ti_69', 'ad_astra:cheese_block', 'gtceu:dough', 'minecraft:cookie',
-        'ad_astra:cheese', 'delightful:nut_butter_bottle', 'farmersdelight:hot_cocoa'
+        'ad_astra:cheese', 'delightful:nut_butter_bottle', 'farmersdelight:hot_cocoa', 'astrogreg:small_sky_stone_dust', 'astrogreg:tiny_sky_stone_dust',
     ])
     //#endregion
 
@@ -184,5 +184,6 @@ ServerEvents.recipes(event => {
     event.remove({ id: /ad_astra:radium_.*/ });
     event.remove({ output: /ad_extendra:.*_tank/ });
     event.remove({ output: /gtceu:.*_air_scrubber/ });
+    event.remove({ output: /minecraft:.*_armor_trim_smithing_template/})
     //#endregion
 })

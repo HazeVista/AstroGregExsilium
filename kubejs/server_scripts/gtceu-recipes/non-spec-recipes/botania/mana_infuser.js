@@ -34,14 +34,14 @@ const purify = event.recipes.gtceu.botanic_purification
     infuser('infuse_mana_diamond_exquisite')
         .itemInputs('gtceu:exquisite_diamond_gem')
         .inputFluids('manafluid:mana 400')
-        .itemOutputs('gtceu:exquisite_mana_diamond_gem')
+        .itemOutputs('astrogreg:exquisite_mana_diamond_gem')
         .duration(640)
         .EUt(28)    
 
     infuser('infuse_mana_diamond_flawless')
         .itemInputs('gtceu:flawless_diamond_gem')
         .inputFluids('manafluid:mana 200')
-        .itemOutputs('gtceu:flawless_mana_diamond_gem')
+        .itemOutputs('astrogreg:flawless_mana_diamond_gem')
         .duration(320)
         .EUt(28) 
     
@@ -114,10 +114,10 @@ const purify = event.recipes.gtceu.botanic_purification
 
 //#region alchemy
     infuser('infused_terrasteel')
-        .itemInputs('gtceu:inactive_terrasteel_dust')
+        .itemInputs('astrogreg:dormant_terrasteel_dust')
         .notConsumable('botania:alchemy_catalyst')
         .inputFluids('manafluid:mana 100')
-        .itemOutputs('gtceu:terrasteel_dust')
+        .itemOutputs('astrogreg:terrasteel_dust')
         .duration(150)
         .EUt(120)
 
