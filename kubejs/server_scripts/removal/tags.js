@@ -26,7 +26,7 @@ ServerEvents.tags('item', event => {
         'createaddition:electrum_block', 'createaddition:brass_rod',
         'createaddition:diamond_grit', 'createaddition:diamond_grit_sandpaper',
         'farmersdelight:wheat_dough', 'powah:uraninite_raw',
-        'ae2:ender_dust', 'powah:crystal_niotic',
+        'ae2:ender_dust', 'powah:crystal_niotic', 'create:wheat_flour',
         'powah:crystal_spirited', 'powah:crystal_blazing',
         'powah:crystal_nitro', 'ad_extendra:glacian_sapling',
         'create:blaze_cake', 'create:creative_blaze_cake',
@@ -113,7 +113,17 @@ ServerEvents.tags('item', event => {
             'farmersdelight:bacon', 'farmersdelight:cod_slice',
             'farmersdelight:salmon_slice', 'farmersdelight:mutton_chops'],
 
-        'forge:sweetener': ['minecraft:sugar']
+        'forge:sweetener': 
+            ['minecraft:sugar'],
+        
+        'forge:lenses/light_blue':
+            ['astrogreg:mana_diamond_lens'],
+ 
+        'forge:lenses/purple':
+            ['astrogreg:fluix_lens'],
+                    
+        'forge:lenses/pink':
+            ['astrogreg:dragonstone_lens'],
     }
     //#endregion
 

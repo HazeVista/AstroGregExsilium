@@ -1,555 +1,196 @@
 ServerEvents.recipes(event => {
+
 const infuser = event.recipes.gtceu.mana_infusion
 const purify = event.recipes.gtceu.botanic_purification
 
 //#region no catalyst
-    infuser('infuse_mana_powder')
-        .itemInputs('gtceu:asteroid_stone_dust')
-        .inputFluids('manafluid:mana 1')
-        .itemOutputs('botania:mana_powder')
-        .duration(100)
-        .EUt(7)
-  
-    infuser('infuse_mana_powder_alt')
-        .itemInputs('gtceu:stone_dust')
-        .inputFluids('manafluid:mana 1')
-        .itemOutputs('botania:mana_powder')
-        .duration(100)
-        .EUt(7)
+    //output, input, mana consumed in mb, duration in ticks, EUt
+    const basic_infusions = [
+        ['botania:mana_powder', 'gtceu:asteroid_stone_dust', 1, 100, 7],
+        ['botania:mana_powder', 'gtceu:stone_dust', 1, 100, 7],
+        ['botania:mana_diamond', 'minecraft:diamond', 100, 160, 28],
+        ['botania:mana_diamond_block', '#forge:storage_blocks/diamond', 900, 1440, 28],
+        ['gtceu:exquisite_mana_diamond_gem', 'gtceu:exquisite_diamond_gem', 400, 640, 28],
+        ['gtceu:flawless_mana_diamond_gem', 'gtceu:flawless_diamond_gem', 200, 320, 28],
+        ['botania:mana_pearl', 'minecraft:ender_pearl', 60, 100, 14],
+        ['botania:manaweave_cloth', 'farmersdelight:canvas', 40, 160, 7],
+        ['botania:mana_string', 'minecraft:string', 10, 40, 7],
+        ['botania:managlass', 'gtceu:tempered_glass', 1, 200, 7],
+        ['botania:mana_cookie', '#forge:cookies', 200, 300, 28],
+        ['botania:piston_relay', 'minecraft:piston', 150, 300, 28],
+        ['botania:grass_seeds', '#forge:grass', 25, 80, 7],
+        ['botania:mycelium_seeds', '#forge:mushrooms', 25, 80, 7],
+        ['botania:podzol_seeds', 'minecraft:dead_bush', 25, 80, 7]
+    ];
 
-    infuser('infuse_mana_diamond')
-        .itemInputs('minecraft:diamond')
-        .inputFluids('manafluid:mana 100')
-        .itemOutputs('botania:mana_diamond')
-        .duration(160)
-        .EUt(28)
-
-    infuser('infuse_mana_diamond_block')
-        .itemInputs('#forge:storage_blocks/diamond')
-        .inputFluids('manafluid:mana 900')
-        .itemOutputs('botania:mana_diamond_block')
-        .duration(1440)
-        .EUt(28)    
-
-    infuser('infuse_mana_diamond_exquisite')
-        .itemInputs('gtceu:exquisite_diamond_gem')
-        .inputFluids('manafluid:mana 400')
-        .itemOutputs('astrogreg:exquisite_mana_diamond_gem')
-        .duration(640)
-        .EUt(28)    
-
-    infuser('infuse_mana_diamond_flawless')
-        .itemInputs('gtceu:flawless_diamond_gem')
-        .inputFluids('manafluid:mana 200')
-        .itemOutputs('astrogreg:flawless_mana_diamond_gem')
-        .duration(320)
-        .EUt(28) 
-    
-    infuser('infuse_mana_pearl')
-        .itemInputs('minecraft:ender_pearl')
-        .inputFluids('manafluid:mana 60')
-        .itemOutputs('botania:mana_pearl')
-        .duration(100)
-        .EUt(14)
-
-    infuser('infuse_mana_cloth')
-        .itemInputs('farmersdelight:canvas')
-        .inputFluids('manafluid:mana 40')
-        .itemOutputs('botania:manaweave_cloth')
-        .duration(160)
-        .EUt(7)
-
-    infuser('infuse_string')
-        .itemInputs('minecraft:string')
-        .inputFluids('manafluid:mana 10')
-        .itemOutputs('botania:mana_string')
-        .duration(40)
-        .EUt(7)
-
-    infuser('infuse_glass')
-        .itemInputs('gtceu:tempered_glass')
-        .inputFluids('manafluid:mana 1')
-        .itemOutputs('botania:managlass')
-        .duration(200)
-        .EUt(7)
-
-    infuser('infuse_cookie')
-        .itemInputs('#forge:cookies')
-        .inputFluids('manafluid:mana 200')
-        .itemOutputs('botania:mana_cookie')
-        .duration(300)
-        .EUt(28)
-
-    infuser('infuse_relay')
-        .itemInputs('minecraft:piston')
-        .inputFluids('manafluid:mana 150')
-        .itemOutputs('botania:piston_relay')
-        .duration(300)
-        .EUt(28)
-
-    infuser('infused_grass')
-        .itemInputs('#forge:grass')
-        .inputFluids('manafluid:mana 25')
-        .itemOutputs('botania:grass_seeds')
-        .duration(80)
-        .EUt(7)
-
-    infuser('infused_mycelium')
-        .itemInputs('#forge:mushrooms')
-        .inputFluids('manafluid:mana 25')
-        .itemOutputs('botania:mycelium_seeds')
-        .duration(80)
-        .EUt(7)
-
-    infuser('infused_podzol')
-        .itemInputs('minecraft:dead_bush')
-        .inputFluids('manafluid:mana 25')
-        .itemOutputs('botania:podzol_seeds')
-        .duration(80)
-        .EUt(7)
+    basic_infusions.forEach(([output, input, mana, duration, eu]) => {
+        infuser(`infuse_${output.replace(':', '_')}`)
+            .itemInputs(input)
+            .inputFluids(`manafluid:mana ${mana}`)
+            .itemOutputs(output)
+            .duration(duration)
+            .EUt(eu);
+    })
 
 //#endregion
 
 
 
 //#region alchemy
-    infuser('infused_terrasteel')
-        .itemInputs('astrogreg:dormant_terrasteel_dust')
-        .notConsumable('botania:alchemy_catalyst')
-        .inputFluids('manafluid:mana 100')
-        .itemOutputs('astrogreg:terrasteel_dust')
-        .duration(150)
-        .EUt(120)
+    //output, input, mana consumed in mb, duration in ticks
+    const alchemy_recipes = [
+        ['astrogreg:terrasteel_dust', 'astrogreg:dormant_terrasteel_dust', 100, 150],
+        ['minecraft:nether_wart', 'minecraft:blaze_rod', 40, 300],
+        ['minecraft:ice', 'minecraft:snow_block', 10, 300],
+        ['minecraft:red_sand', 'minecraft:sand', 10, 300],
+        ['minecraft:sweet_berries', 'minecraft:apple', 2, 300],
+        ['minecraft:glow_berries', 'minecraft:sweet_berries', 2, 300],
+        ['minecraft:apple', 'minecraft:glow_berries', 2, 300],
+        ['minecraft:cactus', 'minecraft:slime_ball', 12, 300],
+        ['minecraft:slime_ball', 'minecraft:cactus', 12, 300]
+    ];
 
-    infuser('infused_nether_wart')
-        .itemInputs('minecraft:blaze_rod')
-        .notConsumable('botania:alchemy_catalyst')
-        .inputFluids('manafluid:mana 40')
-        .itemOutputs('minecraft:nether_wart')
-        .duration(300)
-        .EUt(120)
+    alchemy_recipes.forEach(([output, input, mana, duration, eu]) => {
+        infuser(`infused_${output.replace(':', '_')}`)
+            .itemInputs(input)
+            .notConsumable('botania:alchemy_catalyst')
+            .inputFluids(`manafluid:mana ${mana}`)
+            .itemOutputs(output)
+            .duration(duration)
+            .EUt(120);
+    })
 
-    infuser('infused_ice')
-        .itemInputs('minecraft:snow_block')
-        .notConsumable('botania:alchemy_catalyst')
-        .inputFluids('manafluid:mana 10')
-        .itemOutputs('minecraft:ice')
-        .duration(300)
-        .EUt(120)
+    //output seed, input seed
+    //if you mess with this you have to make sure they cycle properly
+    //talk to me (Haze) if you're confused
+    const seed_cycle = [
+        ['minecraft:melon_seeds', 'minecraft:beetroot_seeds'],
+        ['minecraft:pumpkin_seeds', 'minecraft:melon_seeds'],
+        ['minecraft:cocoa_beans', 'minecraft:pumpkin_seeds'],
+        ['minecraft:wheat_seeds', 'minecraft:cocoa_beans'],
+        ['farmersdelight:rice', 'minecraft:wheat_seeds'],
+        ['farmersdelight:cabbage_seeds', 'farmersdelight:rice'],
+        ['farmersdelight:tomato_seeds', 'farmersdelight:cabbage_seeds'],
+        ['farmersdelight:onion', 'farmersdelight:tomato_seeds'],
+        ['minecraft:carrot', 'farmersdelight:onion'],
+        ['minecraft:potato', 'minecraft:carrot'],
+        ['minecraft:beetroot_seeds', 'minecraft:potato']
+    ]
 
-    infuser('infused_red_sand')
-        .itemInputs('minecraft:sand')
-        .notConsumable('botania:alchemy_catalyst')
-        .inputFluids('manafluid:mana 10')
-        .itemOutputs('minecraft:red_sand')
-        .duration(300)
-        .EUt(120)
+    seed_cycle.forEach(([output, input]) => {
+        infuser(`infused_${output.replace(':', '_')}`)
+            .itemInputs(input)
+            .notConsumable('botania:alchemy_catalyst')
+            .inputFluids('manafluid:mana 60')
+            .itemOutputs(output)
+            .duration(300)
+            .EUt(120);
+    })
         
-    infuser('infused_sweet_berries')
-        .itemInputs('minecraft:apple')
-        .notConsumable('botania:alchemy_catalyst')
-        .inputFluids('manafluid:mana 2')
-        .itemOutputs('minecraft:sweet_berries')
-        .duration(300)
-        .EUt(120)
+    //probably don't mess with this cycle
+    const dust_cycle = [
+        ['minecraft:redstone', 'minecraft:glowstone_dust'],
+        ['minecraft:glowstone_dust', 'minecraft:redstone']
+    ]
+
+    dust_cycle.forEach(([output, input]) => {
+        infuser(`infused_${output.replace(':', '_')}`)
+            .itemInputs(input)
+            .notConsumable('botania:alchemy_catalyst')
+            .inputFluids('manafluid:mana 2')
+            .itemOutputs(output)
+            .duration(300)
+            .EUt(120);
+    })
         
-    infuser('infused_glow_berries')
-        .itemInputs('minecraft:sweet_berries')
-        .notConsumable('botania:alchemy_catalyst')
-        .inputFluids('manafluid:mana 2')
-        .itemOutputs('minecraft:glow_berries')
-        .duration(300)
-        .EUt(120)
-        
-    infuser('infused_apple')
-        .itemInputs('minecraft:glow_berries')
-        .notConsumable('botania:alchemy_catalyst')
-        .inputFluids('manafluid:mana 2')
-        .itemOutputs('minecraft:apple')
-        .duration(300)
-        .EUt(120)
-        
-    infuser('infused_cactus')
-        .itemInputs('minecraft:slime_ball')
-        .notConsumable('botania:alchemy_catalyst')
-        .inputFluids('manafluid:mana 12')
-        .itemOutputs('minecraft:cactus')
-        .duration(300)
-        .EUt(120)
-        
-    infuser('infused_slime_ball')
-        .itemInputs('minecraft:cactus')
-        .notConsumable('botania:alchemy_catalyst')
-        .inputFluids('manafluid:mana 12')
-        .itemOutputs('minecraft:slime_ball')
-        .duration(300)
-        .EUt(120)
-        
-    infuser('infused_melon_seeds')
-        .itemInputs('minecraft:beetroot_seeds')
-        .notConsumable('botania:alchemy_catalyst')
-        .inputFluids('manafluid:mana 60')
-        .itemOutputs('minecraft:melon_seeds')
-        .duration(300)
-        .EUt(120)
-        
-    infuser('infused_pumpkin_seeds')
-        .itemInputs('minecraft:melon_seeds')
-        .notConsumable('botania:alchemy_catalyst')
-        .inputFluids('manafluid:mana 60')
-        .itemOutputs('minecraft:pumpkin_seeds')
-        .duration(300)
-        .EUt(120)
-        
-    infuser('infused_cocoa_beans')
-        .itemInputs('minecraft:pumpkin_seeds')
-        .notConsumable('botania:alchemy_catalyst')
-        .inputFluids('manafluid:mana 60')
-        .itemOutputs('minecraft:cocoa_beans')
-        .duration(300)
-        .EUt(120)
-        
-    infuser('infused_wheat_seeds')
-        .itemInputs('minecraft:cocoa_beans')
-        .notConsumable('botania:alchemy_catalyst')
-        .inputFluids('manafluid:mana 60')
-        .itemOutputs('minecraft:wheat_seeds')
-        .duration(300)
-        .EUt(120)
-        
-    infuser('infused_rice')
-        .itemInputs('minecraft:wheat_seeds')
-        .notConsumable('botania:alchemy_catalyst')
-        .inputFluids('manafluid:mana 60')
-        .itemOutputs('farmersdelight:rice')
-        .duration(300)
-        .EUt(120)
-        
-    infuser('infused_cabbage_seeds')
-        .itemInputs('farmersdelight:rice')
-        .notConsumable('botania:alchemy_catalyst')
-        .inputFluids('manafluid:mana 60')
-        .itemOutputs('farmersdelight:cabbage_seeds')
-        .duration(300)
-        .EUt(120)
-        
-    infuser('infused_tomato_seeds')
-        .itemInputs('farmersdelight:cabbage_seeds')
-        .notConsumable('botania:alchemy_catalyst')
-        .inputFluids('manafluid:mana 60')
-        .itemOutputs('farmersdelight:tomato_seeds')
-        .duration(300)
-        .EUt(120)
-        
-    infuser('infused_onion')
-        .itemInputs('farmersdelight:tomato_seeds')
-        .notConsumable('botania:alchemy_catalyst')
-        .inputFluids('manafluid:mana 60')
-        .itemOutputs('farmersdelight:onion')
-        .duration(300)
-        .EUt(120)
-        
-    infuser('infused_carrot')
-        .itemInputs('farmersdelight:onion')
-        .notConsumable('botania:alchemy_catalyst')
-        .inputFluids('manafluid:mana 60')
-        .itemOutputs('minecraft:carrot')
-        .duration(300)
-        .EUt(120)
-        
-    infuser('infused_potato')
-        .itemInputs('minecraft:carrot')
-        .notConsumable('botania:alchemy_catalyst')
-        .inputFluids('manafluid:mana 60')
-        .itemOutputs('minecraft:potato')
-        .duration(300)
-        .EUt(120)
-        
-    infuser('infused_beetroot_seeds')
-        .itemInputs('minecraft:potato')
-        .notConsumable('botania:alchemy_catalyst')
-        .inputFluids('manafluid:mana 60')
-        .itemOutputs('minecraft:beetroot_seeds')
-        .duration(300)
-        .EUt(120)
-        
-    infuser('infused_redstone')
-        .itemInputs('minecraft:glowstone_dust')
-        .notConsumable('botania:alchemy_catalyst')
-        .inputFluids('manafluid:mana 2')
-        .itemOutputs('minecraft:redstone')
-        .duration(300)
-        .EUt(120)
-        
-    infuser('infused_glowstone')
-        .itemInputs('minecraft:redstone')
-        .notConsumable('botania:alchemy_catalyst')
-        .inputFluids('manafluid:mana 2')
-        .itemOutputs('minecraft:glowstone_dust')
-        .duration(300)
-        .EUt(120)
-        
-    infuser('infused_dark_oak')
-        .itemInputs('gtceu:rubber_sapling')
-        .notConsumable('botania:alchemy_catalyst')
-        .inputFluids('manafluid:mana 1')
-        .itemOutputs('minecraft:dark_oak_sapling')
-        .duration(300)
-        .EUt(120)
-        
-    infuser('infused_mangrove_propagule')
-        .itemInputs('minecraft:dark_oak_sapling')
-        .notConsumable('botania:alchemy_catalyst')
-        .inputFluids('manafluid:mana 1')
-        .itemOutputs('minecraft:mangrove_propagule')
-        .duration(300)
-        .EUt(120)
-        
-    infuser('infused_cherry_sapling')
-        .itemInputs('minecraft:mangrove_propagule')
-        .notConsumable('botania:alchemy_catalyst')
-        .inputFluids('manafluid:mana 1')
-        .itemOutputs('minecraft:cherry_sapling')
-        .duration(300)
-        .EUt(120)
-        
-    infuser('infused_oak_sapling')
-        .itemInputs('minecraft:cherry_sapling')
-        .notConsumable('botania:alchemy_catalyst')
-        .inputFluids('manafluid:mana 1')
-        .itemOutputs('minecraft:oak_sapling')
-        .duration(300)
-        .EUt(120)
-        
-    infuser('infused_spruce_sapling')
-        .itemInputs('minecraft:oak_sapling')
-        .notConsumable('botania:alchemy_catalyst')
-        .inputFluids('manafluid:mana 1')
-        .itemOutputs('minecraft:spruce_sapling')
-        .duration(300)
-        .EUt(120)
-        
-    infuser('infused_birch_sapling')
-        .itemInputs('minecraft:spruce_sapling')
-        .notConsumable('botania:alchemy_catalyst')
-        .inputFluids('manafluid:mana 1')
-        .itemOutputs('minecraft:birch_sapling')
-        .duration(300)
-        .EUt(120)
-        
-    infuser('infused_jungle_sapling')
-        .itemInputs('minecraft:birch_sapling')
-        .notConsumable('botania:alchemy_catalyst')
-        .inputFluids('manafluid:mana 1')
-        .itemOutputs('minecraft:jungle_sapling')
-        .duration(300)
-        .EUt(120)
-        
-    infuser('infused_acacia_sapling')
-        .itemInputs('minecraft:jungle_sapling')
-        .notConsumable('botania:alchemy_catalyst')
-        .inputFluids('manafluid:mana 1')
-        .itemOutputs('minecraft:acacia_sapling')
-        .duration(300)
-        .EUt(120)
-          
-    infuser('infused_rubber_sapling')
-        .itemInputs('minecraft:acacia_sapling')
-        .notConsumable('botania:alchemy_catalyst')
-        .inputFluids('manafluid:mana 1')
-        .itemOutputs('gtceu:rubber_sapling')
-        .duration(300)
-        .EUt(120)        
+    //output sapling, input sapling
+    //if you mess with this you have to make sure they cycle properly
+    //talk to me (Haze) if you're confused
+    const sapling_cycle = [
+        ['minecraft:dark_oak_sapling', 'gtceu:rubber_sapling'],
+        ['minecraft:mangrove_propagule', 'minecraft:dark_oak_sapling'],
+        ['minecraft:cherry_sapling', 'minecraft:mangrove_propagule'],
+        ['minecraft:oak_sapling', 'minecraft:cherry_sapling'],
+        ['minecraft:spruce_sapling', 'minecraft:oak_sapling'],
+        ['minecraft:birch_sapling', 'minecraft:spruce_sapling'],
+        ['minecraft:jungle_sapling', 'minecraft:birch_sapling'],
+        ['minecraft:acacia_sapling', 'minecraft:jungle_sapling'],
+        ['gtceu:rubber_sapling', 'minecraft:acacia_sapling']
+    ];
+
+    sapling_cycle.forEach(([output, input]) => {
+        infuser(`infused_${output.replace(':', '_')}`)
+            .itemInputs(input)
+            .notConsumable('botania:alchemy_catalyst')
+            .inputFluids('manafluid:mana 1')
+            .itemOutputs(output)
+            .duration(300)
+            .EUt(120);
+    });       
 
 //#endregion
 
 
 
 //#region purification
-    purify('pure_snow')
-        .notConsumable('botania:pure_daisy')
-        .inputFluids('minecraft:water 8000')
-        .itemOutputs('8x minecraft:snow_block')
-        .duration(1200)
-        .EUt(2)
+    //output, input (both 8x), duration in ticks, EUt
+    const purification = [
+        ['8x minecraft:snow_block', 'minecraft:water 8000', [], 1200, 2],
+        ['8x minecraft:packed_ice', '8x minecraft:ice', [], 1200, 2],
+        ['8x minecraft:blue_ice', '8x minecraft:packed_ice', [], 1200, 2],
+        ['8x minecraft:sand', '8x minecraft:soul_sand', [], 1200, 2],
+        ['8x minecraft:clay', '8x #forge:sand', [], 600, 2],
+        ['8x botania:livingwood_log', '8x #minecraft:logs', [], 1200, 2],
+        ['8x botania:livingrock', '8x #forge:stone', [], 1200, 2],
+        ['8x minecraft:end_stone', '8x minecraft:blackstone', [], 1200, 2],
+        ['8x minecraft:obsidian', '8x botania:blaze_block', [], 1200, 2],
+        ['8x minecraft:cobblestone', '8x minecraft:netherrack', [], 1200, 2]
+    ];
 
-    purify('pure_packed_ice')
-        .notConsumable('botania:pure_daisy')
-        .itemInputs('8x minecraft:ice')
-        .itemOutputs('8x minecraft:packed_ice')
-        .duration(1200)
-        .EUt(2)
+    purification.forEach(([output, input, items, duration, eu]) => {
+        const recipe = purify(`pure_${output.replace(/\d+x\s*/, '').replace(':', '_')}`)
+            .notConsumable('botania:pure_daisy')
+            .itemOutputs(output)
+            .duration(duration)
+            .EUt(eu);
         
-    purify('pure_blue_ice')
-        .notConsumable('botania:pure_daisy')
-        .itemInputs('8x minecraft:packed_ice')
-        .itemOutputs('8x minecraft:blue_ice')
-        .duration(1200)
-        .EUt(2)
-        
-    purify('pure_sand')
-        .notConsumable('botania:pure_daisy')
-        .itemInputs('8x minecraft:soul_sand')
-        .itemOutputs('8x minecraft:sand')
-        .duration(1200)
-        .EUt(2)
-        
-    purify('pure_clay')
-        .notConsumable('botania:pure_daisy')
-        .itemInputs('8x #forge:sand')
-        .itemOutputs('8x minecraft:clay')
-        .duration(600)
-        .EUt(2)
-        
-    purify('pure_logs')
-        .notConsumable('botania:pure_daisy')
-        .itemInputs('8x #minecraft:logs')
-        .itemOutputs('8x botania:livingwood_log')
-        .duration(1200)
-        .EUt(2)
-        
-    purify('pure_stone')
-        .notConsumable('botania:pure_daisy')
-        .itemInputs('8x #forge:stone')
-        .itemOutputs('8x botania:livingrock')
-        .duration(1200)
-        .EUt(2)
-                
-    purify('pure_end_stone')
-        .notConsumable('botania:pure_daisy')
-        .itemInputs('8x minecraft:blackstone')
-        .itemOutputs('8x minecraft:end_stone')
-        .duration(1200)
-        .EUt(2)
-                        
-    purify('pure_obsidian')
-        .notConsumable('botania:pure_daisy')
-        .itemInputs('8x botania:blaze_block')
-        .itemOutputs('8x minecraft:obsidian')
-        .duration(1200)
-        .EUt(2)
-                        
-    purify('pure_cobble')
-        .notConsumable('botania:pure_daisy')
-        .itemInputs('8x minecraft:netherrack')
-        .itemOutputs('8x minecraft:cobblestone')
-        .duration(1200)
-        .EUt(2)
+        if (input.includes('minecraft:water')) {
+            recipe.inputFluids(input);
+        } else {
+            recipe.itemInputs(input);
+        }
+    })
 //#endregion
 
 
 
 //#region machine recipes
 
-    event.shaped('gtceu:lv_mana_infuser', [
-        'CAC',
-        'BDB',
-        'EBF'
-    ], {
-        A: 'gtceu:tempered_glass',
-        B: 'gtceu:tin_single_cable',
-        C: '#gtceu:circuits/lv',
-        D: 'gtceu:lv_machine_hull',
-        E: 'gtceu:lv_electric_pump',
-        F: 'gtceu:lv_conveyor_module'
-    })
 
-    event.shaped('gtceu:mv_mana_infuser', [
-        'CAC',
-        'BDB',
-        'EBF'
-    ], {
-        A: 'botania:managlass',
-        B: 'gtceu:copper_single_cable',
-        C: '#gtceu:circuits/mv',
-        D: 'gtceu:mv_machine_hull',
-        E: 'gtceu:mv_electric_pump',
-        F: 'gtceu:mv_conveyor_module'
+    const tiered_machines = [
+        ['lv', 'tin', 'gtceu:tempered_glass'],
+        ['mv', 'copper', 'botania:managlass'],
+        ['hv', 'gold', 'botania:managlass'],
+        ['ev', 'aluminium', 'botania:managlass'],
+        ['iv', 'platinum', 'botania:alfglass'],
+        ['luv', 'niobium_titanium', 'botania:alfglass'],
+        ['zpm', 'vanadium_gallium', 'botania:bifrost_perm'],
+        ['uv', 'yttrium_barium_cuprate', 'botania:bifrost_perm']
+    ]
+
+    tiered_machines.forEach(([tier, cable, glass]) => {
+        event.shaped(`gtceu:${tier}_mana_infuser`, [
+            'CAC',
+            'BDB',
+            'EBF'
+        ], {
+            A: glass,
+            B: `gtceu:${cable}_single_cable`,
+            C: `#gtceu:circuits/${tier}`,
+            D: `gtceu:${tier}_machine_hull`,
+            E: `gtceu:${tier}_electric_pump`,
+            F: `gtceu:${tier}_conveyor_module`
+        })
     })
-    
-    event.shaped('gtceu:hv_mana_infuser', [
-        'CAC',
-        'BDB',
-        'EBF'
-    ], {
-        A: 'botania:managlass',
-        B: 'gtceu:gold_single_cable',
-        C: '#gtceu:circuits/hv',
-        D: 'gtceu:hv_machine_hull',
-        E: 'gtceu:hv_electric_pump',
-        F: 'gtceu:hv_conveyor_module'
-    })
-      
-    event.shaped('gtceu:ev_mana_infuser', [
-        'CAC',
-        'BDB',
-        'EBF'
-    ], {
-        A: 'botania:managlass',
-        B: 'gtceu:aluminium_single_cable',
-        C: '#gtceu:circuits/ev',
-        D: 'gtceu:ev_machine_hull',
-        E: 'gtceu:ev_electric_pump',
-        F: 'gtceu:ev_conveyor_module'
-    })  
-      
-    event.shaped('gtceu:iv_mana_infuser', [
-        'CAC',
-        'BDB',
-        'EBF'
-    ], {
-        A: 'botania:alfglass',
-        B: 'gtceu:platinum_single_cable',
-        C: '#gtceu:circuits/iv',
-        D: 'gtceu:iv_machine_hull',
-        E: 'gtceu:iv_electric_pump',
-        F: 'gtceu:iv_conveyor_module'
-    })  
-      
-    event.shaped('gtceu:luv_mana_infuser', [
-        'CAC',
-        'BDB',
-        'EBF'
-    ], {
-        A: 'botania:alfglass',
-        B: 'gtceu:niobium_titanium_single_cable',
-        C: '#gtceu:circuits/luv',
-        D: 'gtceu:luv_machine_hull',
-        E: 'gtceu:luv_electric_pump',
-        F: 'gtceu:luv_conveyor_module'
-    }) 
-      
-    event.shaped('gtceu:zpm_mana_infuser', [
-        'CAC',
-        'BDB',
-        'EBF'
-    ], {
-        A: 'botania:bifrost_perm',
-        B: 'gtceu:vanadium_gallium_single_cable',
-        C: '#gtceu:circuits/zpm',
-        D: 'gtceu:zpm_machine_hull',
-        E: 'gtceu:zpm_electric_pump',
-        F: 'gtceu:zpm_conveyor_module'
-    }) 
-      
-    event.shaped('gtceu:uv_mana_infuser', [
-        'CAC',
-        'BDB',
-        'EBF'
-    ], {
-        A: 'botania:bifrost_perm',
-        B: 'gtceu:yttrium_barium_cuprate_single_cable',
-        C: '#gtceu:circuits/uv',
-        D: 'gtceu:uv_machine_hull',
-        E: 'gtceu:uv_electric_pump',
-        F: 'gtceu:uv_conveyor_module'
-    }) 
 //#endregion
-
-    // infuser('infuse_')
-    //     .itemInputs()
-    //     .inputFluids('manafluid:mana ')
-    //     .itemOutputs()
-    //     .duration()
-    //     .EUt()
 })

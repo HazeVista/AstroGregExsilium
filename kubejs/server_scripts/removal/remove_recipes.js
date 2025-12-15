@@ -3,7 +3,8 @@ ServerEvents.recipes(event => {
     const toRemoveInput = new Set(['ad_astra:moon_desh_ore', 'ad_astra:deepslate_desh_ore', 'ad_astra:ostrum_plate', 'ad_astra:calorite_plate', 'ad_astra:desh_plate',
         'minecraft:netherite_upgrade_smithing_template', 'ad_astra:fan', 'ad_astra:steel_ingot', 'ad_astra:ice_shard', 'gtceu:gaiasteel_ingot', 'create:creative_blaze_cake',
         'create:blaze_cake_base', 'createaddition:cake_base_baked', 'create:blaze_cake', 'create:dough', 'astrogreg:small_sky_stone_dust', 'astrogreg:tiny_sky_stone_dust', 
-        'expandedae:dual_cell_housing', 'expandedae:mega_dual_cell_housing', '#create:pulpifiable',
+        'expandedae:dual_cell_housing', 'expandedae:mega_dual_cell_housing', '#create:pulpifiable','astrogreg:flawless_fluix_pearl_gem', 'astrogreg:exquisite_fluix_pearl_gem',
+
     ])
     //#endregion
 
@@ -45,7 +46,8 @@ ServerEvents.recipes(event => {
         'gtceu:diamond_grinding_head', 'ad_astra:oxygen_gear', 'ad_astra:large_gas_tank', 'ad_astra:gas_tank', 'ad_astra:vent', 'ad_astra:wrench', 'expatternprovider:assembler_matrix_glass',
         'megacells:sky_steel_ingot', 'ae2:charged_staff', 'megacells:cell_dock', 'ae2:entropy_manipulator', 'functionalstorage:iron_downgrade', 'ae2wtlib:magnet_card', 'ae2:radio',
         'ae2netanalyser:network_analyser', 'ae2:basic_card', 'ae2:advanced_card', 'functionalstorage:void_upgrade', 'ad_astra:ti_69', 'ad_astra:cheese_block', 'gtceu:dough', 'minecraft:cookie',
-        'ad_astra:cheese', 'delightful:nut_butter_bottle', 'farmersdelight:hot_cocoa', 'astrogreg:small_sky_stone_dust', 'astrogreg:tiny_sky_stone_dust',
+        'ad_astra:cheese', 'delightful:nut_butter_bottle', 'farmersdelight:hot_cocoa', 'astrogreg:small_sky_stone_dust', 'astrogreg:tiny_sky_stone_dust', 'astrogreg:flawless_fluix_pearl_gem',
+        'astrogreg:exquisite_fluix_pearl_gem',
     ])
     //#endregion
 
@@ -153,6 +155,7 @@ ServerEvents.recipes(event => {
 
 
     //#region oddball
+    event.remove({ id:  'gtceu:electrolyzer/decomposition_electrolyzing_fluix_pearl',})
     event.remove({input: 'botania:terra_sword'})
     event.remove({type: 'gtceu:gas_collector'})
     event.remove({output: 'farmersdelight:wheat_dough'})

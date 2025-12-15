@@ -82,6 +82,8 @@ ServerEvents.recipes(event => {
         .circuit(1)
         .duration(80)
         .EUt(7680)
+    //#endregion
+
 
 
     //#region various shaped
@@ -502,6 +504,9 @@ ServerEvents.recipes(event => {
         .itemOutputs('megacells:cell_component_256m')
         .duration(300)
         .EUt(1638400)
+    //#endregion
+
+
 
     //#region ae2 machines
     event.shaped('merequester:requester', [
@@ -557,6 +562,8 @@ ServerEvents.recipes(event => {
     })
     //#endregion
 
+
+
     //#region upgrade cards
     event.shaped('2x ae2:basic_card', [
         'AAC',
@@ -582,4 +589,20 @@ ServerEvents.recipes(event => {
     event.shapeless('ae2:wireless_booster', ['ae2:advanced_card', 'gtceu:hv_emitter'])
     //#endregion
 
+
+
+    //#region fluix
+    event.recipes.gtceu.mixer('mix_fluix_pearl_dust')
+        .itemInputs('8x ae2:fluix_dust', 'gtceu:ender_eye_dust')
+        .itemOutputs('astrogreg:fluix_pearl_dust')
+        .duration(240)
+        .EUt(480)
+
+    event.recipes.gtceu.centrifuge('centrifuge_fluix_pearl_dust')
+        .itemInputs('astrogreg:fluix_pearl_dust')
+        .itemOutputs('8x ae2:fluix_dust', 'gtceu:ender_eye_dust')
+        .duration(240)
+        .EUt(120)
+        
+    //#endregion
 });
