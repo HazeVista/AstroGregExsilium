@@ -121,13 +121,7 @@ const MaterialModifier = [
 ]
 
 // Name, Elements, Color, Flags
-const ComponentDust = [
-    ['andesite_alloy', ['1x andesite', '1x iron'], 0xa6a08f, [centrifuge]],
-    ['asteroid_stone', [], 0x70276b, []],
-    ['livingrock', [], 0xc9c2b1, []],
-    ['livingclay', [], 0xc9c2e7, []],
-    ['acorn', [], 0x734d15, []]
-]
+const ComponentDust = []
 
 // Name, Elements, Color, Icon, Flag
 const ComponentGem = [
@@ -158,96 +152,8 @@ const SuperConductors = [
     ['juperiosaturlytide', [], 0xf66999, [5300, 'mid', va.LUV, 2400], [v.LUV, 48, 0, true], [700, 260, 3, 24000]],
     ['gaiaforged_naquadah', [], 0x421218, [7100, 'high', va.ZPM, 2700], [v.ZPM, 64, 0, true], [1100, 380, 3, 32000]],
     ['neptunium_molybdenum_selenide', [], 0x088a5c, [10000, 'higher', va.UV, 3000], [v.UV, 96, 0, true], [2000, 550, 3, 48000]],
-    //['', [], 0xccffff, [10799, 'highest', va.UHV, 3300], [3200, 660, 3, 96000]]
 ]
-//Name, Type (array)
+
 const PeriodicTableElements = [
     ['neptunium', ['ingot', 'fluid']],
 ]
-//endregion
-
-GTCEuStartupEvents.registry('gtceu:material', event => {
-    //#region periodic materials
-    PeriodicTableElements.forEach(material => {
-        if (material[1].includes('ingot')) {
-            GTMaterials.get(material[0]).setProperty(PropertyKey.INGOT, new IngotProperty());
-        }
-        if (material[1].includes('dust')) {
-            GTMaterials.get(material[0]).setProperty(PropertyKey.DUST, new DustProperty());
-        }
-    })
-
-    //material modification
-    MaterialModifier.forEach(material => {
-        GTMaterials.get(material[0]).addFlags(material[1]);
-    })
-    //#endregion
-
-    //#region material helpers
-    ComponentDust.forEach(material => {
-        event.create(material[0])
-            .dust()
-            .components(material[1])
-            .color(material[2])
-            .flags(material[3]);
-    })
-    ComponentGem.forEach(material => {
-        event.create(material[0])
-            .gem()
-            .components(material[1])
-            .color(material[2])
-            .iconSet(material[3])
-            .flags(material[4]);
-    })
-    ComponentGas.forEach(material => {
-        event.create(material[0])
-            .gas()
-            .components(material[1])
-            .color(material[2])
-            .flags(material[3]);
-    })
-    ComponentLiquid.forEach(material => {
-        event.create(material[0])
-            .fluid()
-            .components(material[1])
-            .color(material[2])
-            .flags(material[3]);
-    })
-    ComponentIngotLiquidTwoColors.forEach(material => {
-        if (material[4].length != 0) {
-            event.create(material[0])
-                .ingot().fluid()
-                .components(material[1])
-                .color(material[2]).secondaryColor(material[3])
-                .iconSet(material[4])
-                .blastTemp(material[5][0], material[5][1], material[5][2], material[5][3])
-                .flags(material[6]);
-            return
-        } 
-        event.create(material[0])
-            .ingot().fluid()
-            .components(material[1])
-            .color(material[2]).secondaryColor(material[3])
-            .iconSet(material[4])
-            .flags(material[6]);
-    })
-    SuperConductors.forEach(material => {
-        if (material[3].length != 0) {
-            event.create(material[0])
-                .ingot().fluid()
-                .components(material[1])
-                .color(material[2])
-                .blastTemp(material[3][0], material[3][1], material[3][2], material[3][3])
-                .cableProperties(material[4][0], material[4][1], material[4][2], material[4][3])
-                .rotorStats(material[5][0], material[5][1], material[5][2], material[5][3]);
-            return
-        }
-        event.create(material[0])
-            .ingot().fluid()
-            .components(material[1])
-            .color(material[2])
-            .cableProperties(material[4][0], material[4][1], material[4][2], material[4][3])
-            .rotorStats(material[5][0], material[5][1], material[5][2], material[5][3]);
-    })
-    
-})

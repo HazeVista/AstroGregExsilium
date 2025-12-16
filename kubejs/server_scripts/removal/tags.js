@@ -124,6 +124,10 @@ ServerEvents.tags('item', event => {
                     
         'forge:lenses/pink':
             ['astrogreg:dragonstone_lens'],
+
+        'forge:stone_dust':
+            ['gtceu:asteroid_dust', 'gtceu:blackstone_dust', 'gtceu:stone_dust', 
+                'gtceu:soapstone_dust', 'gtceu:endstone_dust']
     }
     //#endregion
 

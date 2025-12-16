@@ -155,7 +155,6 @@ ServerEvents.recipes(event => {
 
 
     //#region oddball
-    event.remove({ id:  'gtceu:electrolyzer/decomposition_electrolyzing_fluix_pearl',})
     event.remove({input: 'botania:terra_sword'})
     event.remove({type: 'gtceu:gas_collector'})
     event.remove({output: 'farmersdelight:wheat_dough'})

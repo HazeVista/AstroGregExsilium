@@ -6,12 +6,11 @@ const purify = event.recipes.gtceu.botanic_purification
 //#region no catalyst
     //output, input, mana consumed in mb, duration in ticks, EUt
     const basic_infusions = [
-        ['botania:mana_powder', 'gtceu:asteroid_stone_dust', 1, 100, 7],
-        ['botania:mana_powder', 'gtceu:stone_dust', 1, 100, 7],
+        ['botania:mana_powder', '#forge:stone_dust', 1, 100, 7],
         ['botania:mana_diamond', 'minecraft:diamond', 100, 160, 28],
         ['botania:mana_diamond_block', '#forge:storage_blocks/diamond', 900, 1440, 28],
-        ['gtceu:exquisite_mana_diamond_gem', 'gtceu:exquisite_diamond_gem', 400, 640, 28],
-        ['gtceu:flawless_mana_diamond_gem', 'gtceu:flawless_diamond_gem', 200, 320, 28],
+        ['astrogreg:exquisite_mana_diamond_gem', 'gtceu:exquisite_diamond_gem', 400, 640, 28],
+        ['astrogreg:flawless_mana_diamond_gem', 'gtceu:flawless_diamond_gem', 200, 320, 28],
         ['botania:mana_pearl', 'minecraft:ender_pearl', 60, 100, 14],
         ['botania:manaweave_cloth', 'farmersdelight:canvas', 40, 160, 7],
         ['botania:mana_string', 'minecraft:string', 10, 40, 7],
