@@ -106,7 +106,7 @@ ServerEvents.recipes(event => {
         ['gtceu:treated_wood_planks', [Fluid.of('gtceu:creosote', 125), '#minecraft:planks']],
         ['create:chocolate_glazed_berries', [Fluid.of('create:chocolate', 250), 'minecraft:sweet_berries']],
         ['gtceu:dough', [Fluid.of('minecraft:water', 125), 'gtceu:wheat_dust']],
-        ['delightful:nut_dough', [Fluid.of('minecraft:water', 125), 'gtceu:acorn_dust']]
+        ['delightful:nut_dough', [Fluid.of('minecraft:water', 125), 'astrogreg:acorn_dust']]
     ]
     
     fillingRecipes.forEach(([output, inputs]) => {

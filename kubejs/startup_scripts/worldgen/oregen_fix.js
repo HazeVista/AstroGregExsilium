@@ -1,3 +1,4 @@
+//inspired by a file made by Cosmic Frontiers, albeit significantly improved for our specific use
 WorldgenEvents.remove(event => {
 
     const removeOres = [
@@ -31,11 +32,11 @@ WorldgenEvents.remove(event => {
     ];
 
     event.removeOres(props => {
-        props.blocks = removeOres;
+        props.blocks = removeOres
     });
 
-    event.removeFeatureById('raw_generation', removeOres);
-    event.removeFeatureById('underground_ores', removeOres);
+    event.removeFeatureById('raw_generation', removeOres)
+    event.removeFeatureById('underground_ores', removeOres)
 });
 
 GTCEuStartupEvents.registry('gtceu:tag_prefix', e => {
@@ -86,6 +87,6 @@ GTCEuStartupEvents.registry('gtceu:tag_prefix', e => {
     ];
 
     stoneTypes.forEach(function(type) { 
-        oreStone(type); 
+        oreStone(type)
     });
 })

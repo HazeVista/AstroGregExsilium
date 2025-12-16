@@ -373,9 +373,9 @@ ServerEvents.recipes(event => {
     event.shapeless('2x gtceu:andesite_dust', ['gtceu:stone_dust', 'gtceu:quartz_sand_dust'])
     event.shapeless('2x gtceu:andesite_dust', ['gtceu:asteroid_stone_dust', 'gtceu:nether_quartz_dust'])
     event.shapeless('2x gtceu:andesite_dust', ['gtceu:asteroid_stone_dust', 'gtceu:quartz_sand_dust'])
-    event.shapeless('1x gtceu:andesite_alloy_dust', ['gtceu:andesite_dust', 'gtceu:iron_dust'])
+    event.shapeless('1x astrogreg:andesite_alloy_dust', ['gtceu:andesite_dust', 'gtceu:iron_dust'])
     event.shapeless('2x create:shaft', ['create:andesite_alloy', '#forge:tools/files'])
-    event.smelting('1x create:andesite_alloy', 'gtceu:andesite_alloy_dust')
+    event.smelting('1x create:andesite_alloy', 'astrogreg:andesite_alloy_dust')
 
     event.shaped('gtceu:andesite_dust', [
         'A',
@@ -387,7 +387,7 @@ ServerEvents.recipes(event => {
 
     event.recipes.gtceu.mixer('mixing_andesite_alloy_dust')
         .itemInputs('gtceu:iron_dust', 'gtceu:andesite_dust')
-        .itemOutputs('2x gtceu:andesite_alloy_dust')
+        .itemOutputs('2x astrogreg:andesite_alloy_dust')
         .duration(80)
         .EUt(7)
 

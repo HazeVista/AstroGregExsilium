@@ -126,7 +126,7 @@ ServerEvents.tags('item', event => {
             ['astrogreg:dragonstone_lens'],
 
         'forge:stone_dust':
-            ['gtceu:asteroid_dust', 'gtceu:blackstone_dust', 'gtceu:stone_dust', 
+            ['astrogreg:asteroid_stone_dust', 'gtceu:blackstone_dust', 'gtceu:stone_dust', 
                 'gtceu:soapstone_dust', 'gtceu:endstone_dust']
     }
     //#endregion

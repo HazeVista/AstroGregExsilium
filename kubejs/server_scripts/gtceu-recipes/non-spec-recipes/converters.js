@@ -3,13 +3,13 @@ ServerEvents.recipes(event => {
 
     const superconductors = {
         lv: 'astrogreg:energized_steel',
-        mv: 'gtceu:blazing_etrium',
-        hv: 'gtceu:niotic_calorite',
-        ev: 'gtceu:spirited_uranium',
-        iv: 'gtceu:nitro_flux',
-        luv: 'gtceu:juperiosaturlytide',
-        zpm: 'gtceu:gaiaforged_naquadah',
-        uv: 'gtceu:neptunium_molybdenum_selenide'
+        mv: 'astrogreg:blazing_etrium',
+        hv: 'astrogreg:niotic_calorite',
+        ev: 'astrogreg:spirited_uranium',
+        iv: 'astrogreg:nitro_flux',
+        luv: 'astrogreg:juperiosaturlytide',
+        zpm: 'astrogreg:gaiaforged_naquadah',
+        uv: 'astrogreg:neptunium_molybdenum_selenide'
     }
 
     const amps = { single: '1a', quadruple: '4a', octal: '8a', hex: '16a' }

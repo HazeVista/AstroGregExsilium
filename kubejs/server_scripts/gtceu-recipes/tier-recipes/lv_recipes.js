@@ -129,13 +129,13 @@ ServerEvents.recipes(event => {
 
     event.recipes.gtceu.mixer('mix_blazing_etrium_dust')
         .itemInputs('2x astrogreg:etrium_dust', 'minecraft:blaze_powder')
-        .itemOutputs('3x gtceu:blazing_etrium_dust')
+        .itemOutputs('3x astrogreg:blazing_etrium_dust')
         .duration(300)
         .EUt(28)
 
     event.recipes.gtceu.alloy_smelter('alloy_blast_blazing_etrium')
         .itemInputs('2x astrogreg:etrium_dust', 'minecraft:blaze_powder')
-        .outputFluids('gtceu:blazing_etrium 432')
+        .outputFluids('astrogreg:blazing_etrium 432')
         .duration(300)
         .EUt(28)
 

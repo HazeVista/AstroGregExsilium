@@ -365,7 +365,7 @@ ServerEvents.recipes(event => {
     }).replaceIngredient('minecraft:water_bucket', 'minecraft:bucket')
 
     event.recipes.create.pressing('gtceu:compressed_fireclay', 'gtceu:fireclay_dust')
-    event.recipes.create.pressing('gtceu:compressed_livingclay', 'gtceu:livingclay_dust')
+    event.recipes.create.pressing('gtceu:compressed_livingclay', 'astrogreg:livingclay_dust')
     event.recipes.create.pressing('gtceu:compressed_clay', 'minecraft:clay_ball')
 
     event.recipes.farmersdelight.cutting('#forge:sand', '#forge:tools/shovels', ['minecraft:clay_ball', 'minecraft:clay_ball'])
@@ -398,35 +398,35 @@ ServerEvents.recipes(event => {
 
     event.recipes.gtceu.macerator('macerate_livingrock')
       .itemInputs('botania:livingrock')
-      .itemOutputs('gtceu:livingrock_dust')
+      .itemOutputs('astrogreg:livingrock_dust')
       .duration(98)
       .EUt(2)
 
     event.recipes.gtceu.macerator('macerate_livingbrick')
       .itemInputs('gtceu:livingbrick')
-      .itemOutputs('gtceu:livingclay_dust')
+      .itemOutputs('astrogreg:livingclay_dust')
       .duration(98)
       .EUt(2)
       
     event.recipes.gtceu.macerator('macerate_livingbrick_alt')
       .itemInputs('gtceu:livingbricks')
-      .itemOutputs('4x gtceu:livingclay_dust')
+      .itemOutputs('4x astrogreg:livingclay_dust')
       .duration(98)
       .EUt(2)
       
     event.recipes.gtceu.macerator('macerate_livingbrick_alt1')
       .itemInputs('gtceu:compressed_livingclay')
-      .itemOutputs('gtceu:livingclay_dust')
+      .itemOutputs('astrogreg:livingclay_dust')
       .duration(98)
       .EUt(2)
 
     event.recipes.gtceu.compressor('compress_livingbrick')
-      .itemInputs('gtceu:livingclay_dust')
+      .itemInputs('astrogreg:livingclay_dust')
       .itemOutputs('gtceu:compressed_livingclay')
       .duration(80)
       .EUt(4)
     
-    event.shaped('gtceu:livingrock_dust', [
+    event.shaped('astrogreg:livingrock_dust', [
       'A',
       'B'
     ], {
@@ -434,7 +434,7 @@ ServerEvents.recipes(event => {
       B: '#forge:tools/mortars'
     })
 
-    event.shapeless('2x gtceu:livingclay_dust', ['gtceu:livingrock_dust', 'gtceu:clay_dust'])
+    event.shapeless('2x astrogreg:livingclay_dust', ['astrogreg:livingrock_dust', 'gtceu:clay_dust'])
 
     event.shaped('gtceu:livingbricks', [
       'AA',
@@ -448,7 +448,7 @@ ServerEvents.recipes(event => {
       'ABA',
       'AAA'
     ], {
-      A: 'gtceu:livingclay_dust',
+      A: 'astrogreg:livingclay_dust',
       B: 'gtceu:brick_wooden_form'
     }).keepIngredient('gtceu:brick_wooden_form')
 

@@ -224,18 +224,18 @@ ServerEvents.recipes(event => {
       'ABA',
       'AAA'
     ], {
-      A: 'gtceu:acorn_dust',
+      A: 'astrogreg:acorn_dust',
       B: 'minecraft:water_bucket'
     }).replaceIngredient('minecraft:water_bucket', 'minecraft:bucket')
 
     event.recipes.gtceu.mixer('mix_nut_dough')
-      .itemInputs('2x gtceu:acorn_dust')
+      .itemInputs('2x astrogreg:acorn_dust')
       .inputFluids('minecraft:water 250')
       .itemOutputs('3x gtceu:dough')
       .duration(200)
       .EUt(7)
 
-    event.shaped('gtceu:acorn_dust', [
+    event.shaped('astrogreg:acorn_dust', [
       'A',
       'B'
     ], {
@@ -250,18 +250,18 @@ ServerEvents.recipes(event => {
       ],
       tool: { tag: "forge:tools/hammers" },
       result: [
-        { item: "gtceu:acorn_dust", count: 1 }
+        { item: "astrogreg:acorn_dust", count: 1 }
       ]
     })
 
     event.recipes.gtceu.macerator('macerate_acorn')
       .itemInputs('delightful:acorn')
-      .itemOutputs('gtceu:acorn_dust')
+      .itemOutputs('astrogreg:acorn_dust')
       .duration(98)
       .EUt(2)
 
     event.recipes.farmersdelight.cooking(
-      ['gtceu:acorn_dust', 'gtceu:acorn_dust', 'gtceu:acorn_dust', 'gtceu:salt_dust', 'minecraft:sugar'],
+      ['astrogreg:acorn_dust', 'astrogreg:acorn_dust', 'astrogreg:acorn_dust', 'gtceu:salt_dust', 'minecraft:sugar'],
       'delightful:nut_butter_bottle',
       1,
       200,
