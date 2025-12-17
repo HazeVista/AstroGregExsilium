@@ -1,6 +1,10 @@
 ServerEvents.recipes(event => {
 
     //#region constants & functions
+
+
+
+    //#region constants
     const Materials = {
         FUTURA_PLATE: 'astrogreg:futura_alloy_plate',
         FUTURA_FRAME: 'astrogreg:futura_alloy_frame',
@@ -23,8 +27,11 @@ ServerEvents.recipes(event => {
         ANNIHILATION: 'ae2:annihilation_core',
         FORMATION: 'ae2:formation_core'
     }
+    //#endregion
 
 
+    
+    //#region functions
     //mixer recipes
     function mixing(id, input1, input2, outputs, duration, eut) {
         event.recipes.gtceu.mixer(id)
@@ -44,28 +51,28 @@ ServerEvents.recipes(event => {
     }
 
     //processor inscription recipes
-    function processors(name, plateInput, lens, output, eut = 100) {
-        event.recipes.gtceu.inscription(`inscribe_${name}_processor`)
-            .itemInputs(plateInput)
-            .inputFluids('gtceu:silicon 144')
-            .notConsumable(lens)
-            .itemOutputs(`2x ${output}`)
-            .duration(300)
-            .EUt(eut)
+    function processors(name, plateInput, lens, output, eut) {
+            if (eut === undefined) eut = 100
+            event.recipes.gtceu.inscription(`inscribe_${name}_processor`)
+                .itemInputs(plateInput)
+                .inputFluids('gtceu:silicon 144')
+                .notConsumable(lens)
+                .itemOutputs(`2x ${output}`)
+                .duration(300)
+                .EUt(eut)
     }
 
-    
     //storage component inscription recipes
-    function storageComponents(config) {
-        event.recipes.gtceu.inscription(`inscribe_${config.size}`)
-            .itemInputs.forEach(input => recipe.itemInputs(input))
-            .itemOutputs(config.output)
+    function storageComponent(config) {
+        const recipe = event.recipes.gtceu.inscription(`inscribe_${config.size}`)
+        config.inputs.forEach(input => recipe.itemInputs(input))
+        recipe.itemOutputs(config.output)
             .duration(300)
             .EUt(config.eut)
     }
 
     //cell housings
-    function cellHousing(type, plateType, glassType, baseOutput) {
+    function cellHousing(plateType, glassType, baseOutput) {
         event.shaped(baseOutput, [
             'ABA',
             'B B',
@@ -74,25 +81,25 @@ ServerEvents.recipes(event => {
             A: glassType,
             B: plateType,
             C: Materials.FUTURA_PLATE
-        });
+        })
     }
 
     //frame-style recipes
-    function frame(output, topBlock, cableBlock = Materials.FLUIX_CABLE) {
+    function frame(output, midBlock) {
         event.shaped(output, [
             'ABA',
             'C C',
             'ABA'
         ], {
             A: Materials.FUTURA_PLATE,
-            B: topBlock,
-            C: cableBlock
+            B: midBlock,
+            C: Materials.FLUIX_CABLE
         })
     }
 
     //buses
     function bus(output, pistonType, core, isImport) {
-        const pattern = isImport ? [' B ', 'CAC'] : ['ACA', ' B '];
+        const pattern = isImport ? [' B ', 'CAC'] : ['ACA', ' B ']
         event.shaped(output, pattern, {
             A: Materials.FUTURA_PLATE,
             B: pistonType,
@@ -101,7 +108,7 @@ ServerEvents.recipes(event => {
     }
 
     //interface style pattern
-    function interface(output, topBlock) {
+    function interfaces(output, topBlock) {
         event.shaped(output, [
             'ABA',
             'D C',
@@ -127,15 +134,16 @@ ServerEvents.recipes(event => {
         })
     }
     //#endregion
+    //#endregion
 
 
 
     //#region basic mats & components
     //basic materials
-    mixing('mixer_ender_eye_dust', ['gtceu:ender_pearl_dust', 'minecraft:blaze_powder'], '2x gtceu:ender_eye_dust', 160, 9)
-    mixing('skystone_dust_mixing', ['gtceu:certus_quartz_dust', '3x gtceu:stone_dust'], '4x ae2:sky_dust', 160, 120)
-    mixing('futura_alloy_mixing', ['4x gtceu:stainless_steel_dust', 'ae2:sky_dust'], '5x astrogreg:futura_alloy_dust', 200, 450)
-    mixing('mix_fluix_pearl_dust', ['8x ae2:fluix_dust', 'gtceu:ender_eye_dust'], 'astrogreg:fluix_pearl_dust', 240, 480)
+    mixing('mixer_ender_eye_dust', 'gtceu:ender_pearl_dust', 'minecraft:blaze_powder', '2x gtceu:ender_eye_dust', 160, 9)
+    mixing('skystone_dust_mixing', 'gtceu:certus_quartz_dust', '3x gtceu:stone_dust', '4x ae2:sky_dust', 160, 120)
+    mixing('futura_alloy_mixing', '4x gtceu:stainless_steel_dust', 'ae2:sky_dust', '5x astrogreg:futura_alloy_dust', 200, 450)
+    mixing('mix_fluix_pearl_dust', '8x ae2:fluix_dust', 'gtceu:ender_eye_dust', 'astrogreg:fluix_pearl_dust', 240, 480)
         
     event.recipes.gtceu.polarizer('polarize_certus')
         .itemInputs('gtceu:certus_quartz_gem')
@@ -168,7 +176,7 @@ ServerEvents.recipes(event => {
         A: 'gtceu:silicon_dioxide_dust',
         B: 'ae2:fluix_dust',
         C: Processors.LOGIC
-    });
+    })
 
     event.shaped('ae2:controller', [
         'ABA',
@@ -178,7 +186,7 @@ ServerEvents.recipes(event => {
         A: Materials.FUTURA_PLATE,
         B: 'ae2:fluix_crystal',
         C: Materials.FUTURA_FRAME
-    });
+    })
 
     event.shaped('ae2:energy_acceptor', [
         'ABA',
@@ -195,8 +203,8 @@ ServerEvents.recipes(event => {
 
 
     //#region glass & cables
-    alloying('quartz_glass_alloying', ['#forge:dusts/certus_quartz', '#forge:glass'], Materials.QUARTZ_GLASS, 160, 7)
-    alloying('vib_quartz_glass_alloying', [Materials.QUARTZ_GLASS, '2x minecraft:glowstone_dust'], Materials.QUARTZ_VIB_GLASS, 160, 7)
+    alloying('quartz_glass_alloying', '#forge:dusts/certus_quartz', '#forge:glass', Materials.QUARTZ_GLASS, 160, 7)
+    alloying('vib_quartz_glass_alloying', Materials.QUARTZ_GLASS, '2x minecraft:glowstone_dust', Materials.QUARTZ_VIB_GLASS, 160, 7)
 
     event.recipes.gtceu.wiremill('mill_quartz_fiber')
         .itemInputs(Materials.QUARTZ_GLASS)
@@ -261,7 +269,7 @@ ServerEvents.recipes(event => {
     ]
 
     processorRecipes.forEach(proc => {
-        processors(proc.name, proc.plate, proc.lens, proc.output);
+        processors(proc.name, proc.plate, proc.lens, proc.output)
     })
     
     event.recipes.gtceu.inscription('inscribe_mega_processor')
@@ -335,14 +343,14 @@ ServerEvents.recipes(event => {
         }
     ]
 
-    storageComponents.forEach(createStorageComponent)
+    storageComponents.forEach(storageComponent)
     //#endregion
 
 
 
     //#region cells & cell housings
-    cellHousing('item', 'gtceu:iron_plate', Materials.QUARTZ_GLASS, 'ae2:item_cell_housing');
-    cellHousing('fluid', 'gtceu:copper_plate', Materials.QUARTZ_GLASS, 'ae2:fluid_cell_housing');
+    cellHousing('item', 'gtceu:iron_plate', Materials.QUARTZ_GLASS, 'ae2:item_cell_housing')
+    cellHousing('fluid', 'gtceu:copper_plate', Materials.QUARTZ_GLASS, 'ae2:fluid_cell_housing')
 
     event.shaped('megacells:mega_item_cell_housing', [
         'CBC',
@@ -352,7 +360,7 @@ ServerEvents.recipes(event => {
         A: Materials.DOUBLE_FUTURA_PLATE,
         B: 'gtceu:certus_quartz_plate',
         C: Materials.QUARTZ_VIB_GLASS
-    });
+    })
 
     event.shaped('megacells:mega_fluid_cell_housing', [
         'CBC',
@@ -362,15 +370,15 @@ ServerEvents.recipes(event => {
         A: Materials.DOUBLE_FUTURA_PLATE,
         B: 'gtceu:gold_plate',
         C: Materials.QUARTZ_VIB_GLASS
-    });
+    })
 
-    const cellSizes = ['1k', '4k', '16k', '64k', '256k'];
+    const cellSizes = ['1k', '4k', '16k', '64k', '256k']
 
     cellSizes.forEach(size => {
         event.shapeless(`ae2:fluid_storage_cell_${size}`, [
             `ae2:cell_component_${size}`,
             'ae2:fluid_cell_housing'
-        ]);
+        ])
         
         event.shapeless(`ae2:item_storage_cell_${size}`, [
             `ae2:cell_component_${size}`,
@@ -386,7 +394,7 @@ ServerEvents.recipes(event => {
     ]
 
     spatialCells.forEach(spatial => {
-        event.shapeless(spatial.cell, [spatial.component, 'ae2:item_cell_housing']);
+        event.shapeless(spatial.cell, [spatial.component, 'ae2:item_cell_housing'])
     })
     
     frame('ae2:drive', Processors.ENGINEERING, Materials.FUTURA_PLATE, Materials.FLUIX_CABLE)
@@ -436,7 +444,7 @@ ServerEvents.recipes(event => {
         C: 'ae2:io_port',
         D: Materials.FLUIX_CABLE,
         E: Materials.QUARTZ_GLASS
-    });
+    })
 
     event.shaped('ae2:spatial_anchor', [
         'CAC',
@@ -452,114 +460,6 @@ ServerEvents.recipes(event => {
 
 
 
-    //#region inscription
-    event.shaped('gtceu:inscription_matrix', [
-        'ADA',
-        'CBC',
-        'AEA'
-    ], {
-        A: 'astrogreg:futura_alloy_plate',
-        B: 'gtceu:hv_laser_engraver',
-        C: 'gtceu:hv_emitter',
-        D: 'gtceu:hv_conveyor_module',
-        E: '#gtceu:circuits/ev'
-    });
-
-    event.recipes.gtceu.inscription('inscribe_logic_processor')
-        .itemInputs('gtceu:gold_plate')
-        .inputFluids('gtceu:silicon 144')
-        .notConsumable('gtceu:yellow_glass_lens')
-        .itemOutputs('2x ae2:logic_processor')
-        .duration(300)
-        .EUt(100)
-
-    event.recipes.gtceu.inscription('inscribe_calc_processor')
-        .itemInputs('gtceu:certus_quartz_plate')
-        .inputFluids('gtceu:silicon 144')
-        .notConsumable('gtceu:cyan_glass_lens')
-        .itemOutputs('2x ae2:calculation_processor')
-        .duration(300)
-        .EUt(100)
-
-    event.recipes.gtceu.inscription('inscribe_eng_processor')
-        .itemInputs('gtceu:diamond_plate')
-        .inputFluids('gtceu:silicon 144')
-        .notConsumable('#forge:lenses/light_blue')
-        .itemOutputs('2x ae2:engineering_processor')
-        .duration(300)
-        .EUt(100)
-    
-    event.recipes.gtceu.inscription('inscribe_mega_processor')
-        .itemInputs('ae2:logic_processor', 'ae2:calculation_processor', 'ae2:engineering_processor')
-        .inputFluids('gtceu:silicon 144', 'gtceu:neon 100')
-        .notConsumable('gtceu:black_glass_lens')
-        .itemOutputs('2x megacells:accumulation_processor')
-        .duration(300)
-        .EUt(3200)
-
-    event.recipes.gtceu.inscription('inscribe_1k')
-        .itemInputs('4x gtceu:certus_quartz_gem', '4x minecraft:redstone', 'ae2:logic_processor')
-        .itemOutputs('ae2:cell_component_1k')
-        .duration(300)
-        .EUt(25)
-
-    event.recipes.gtceu.inscription('inscribe_4k')
-        .itemInputs('3x ae2:cell_component_1k', '4x minecraft:redstone', 'ae2:calculation_processor', '#gtceu:circuits/lv')
-        .itemOutputs('ae2:cell_component_4k')
-        .duration(300)
-        .EUt(25)
-
-    event.recipes.gtceu.inscription('inscribe_16k')
-        .itemInputs('3x ae2:cell_component_4k', '4x minecraft:glowstone_dust', 'ae2:calculation_processor', '#gtceu:circuits/mv')
-        .itemOutputs('ae2:cell_component_16k')
-        .duration(300)
-        .EUt(100)
-
-    event.recipes.gtceu.inscription('inscribe_64k')
-        .itemInputs('3x ae2:cell_component_16k', '4x minecraft:glowstone_dust', 'ae2:calculation_processor', '#gtceu:circuits/hv')
-        .itemOutputs('ae2:cell_component_64k')
-        .duration(300)
-        .EUt(400)
-
-    event.recipes.gtceu.inscription('inscribe_256k')
-        .itemInputs('3x ae2:cell_component_64k', '4x ae2:sky_dust', 'ae2:calculation_processor', '#gtceu:circuits/ev')
-        .itemOutputs('ae2:cell_component_256k')
-        .duration(300)
-        .EUt(1600)
-
-    event.recipes.gtceu.inscription('inscribe_1m')
-        .itemInputs('3x ae2:cell_component_256k', '4x ae2:sky_dust', 'megacells:accumulation_processor', '#gtceu:circuits/iv')
-        .itemOutputs('megacells:cell_component_1m')
-        .duration(300)
-        .EUt(6400)
-
-    event.recipes.gtceu.inscription('inscribe_4m')
-        .itemInputs('3x megacells:cell_component_1m', '4x gtceu:ender_pearl_dust', 'megacells:accumulation_processor', '#gtceu:circuits/luv')
-        .itemOutputs('megacells:cell_component_4m')
-        .duration(300)
-        .EUt(25600)
-
-    event.recipes.gtceu.inscription('inscribe_16m')
-        .itemInputs('3x megacells:cell_component_4m', '4x gtceu:ender_pearl_dust', 'megacells:accumulation_processor', '#gtceu:circuits/zpm')
-        .itemOutputs('megacells:cell_component_16m')
-        .duration(300)
-        .EUt(102400)
-
-    event.recipes.gtceu.inscription('inscribe_64m')
-        .itemInputs('3x megacells:cell_component_16m', '4x gtceu:ender_eye_dust', 'megacells:accumulation_processor', '#gtceu:circuits/uv')
-        .itemOutputs('megacells:cell_component_64m')
-        .duration(300)
-        .EUt(409600)
-
-    event.recipes.gtceu.inscription('inscribe_256m')
-        .itemInputs('3x megacells:cell_component_64m', '4x gtceu:ender_eye_dust', 'megacells:accumulation_processor', '#gtceu:circuits/uhv')
-        .itemOutputs('megacells:cell_component_256m')
-        .duration(300)
-        .EUt(1638400)
-    //#endregion
-
-
-
     //#region crafting & automation
     event.recipes.gtceu.canner('pattern_canning')
         .itemInputs('#forge:dusts/certus_quartz', '4x gtceu:fluid_cell')
@@ -571,8 +471,8 @@ ServerEvents.recipes(event => {
     bus('ae2:import_bus', 'minecraft:sticky_piston', Cores.ANNIHILATION, true)
     bus('ae2:export_bus', 'minecraft:piston', Cores.FORMATION, false)
 
-    interface('ae2:interface', '#forge:glass')
-    interface('ae2:pattern_provider', 'minecraft:crafting_table')
+    interfaces('ae2:interface', '#forge:glass')
+    interfaces('ae2:pattern_provider', 'minecraft:crafting_table')
 
     event.shapeless('expatternprovider:oversize_interface', ['expatternprovider:ex_interface', Processors.LOGIC, Processors.LOGIC])
 
@@ -601,8 +501,8 @@ ServerEvents.recipes(event => {
     })
 
     // Assembler matrix blocks
-    matrixBlock('expatternprovider:assembler_matrix_wall', 'gtceu:certus_quartz_plate');
-    matrixBlock('expatternprovider:assembler_matrix_frame', Materials.FUTURA_PLATE);
+    matrixBlock('expatternprovider:assembler_matrix_wall', 'gtceu:certus_quartz_plate')
+    matrixBlock('expatternprovider:assembler_matrix_frame', Materials.FUTURA_PLATE)
     matrixBlock('expatternprovider:assembler_matrix_glass', 'gtceu:glass_plate')  
     //#endregion
 
@@ -619,7 +519,7 @@ ServerEvents.recipes(event => {
         B: Processors.CALCULATION,
         C: Materials.FUTURA_FRAME,
         D: Materials.QUARTZ_GLASS
-    });
+    })
 
     event.shaped('ae2:condenser', [
         'ABA',
@@ -629,7 +529,7 @@ ServerEvents.recipes(event => {
         A: Materials.DENSE_FUTURA_PLATE,
         B: Materials.QUARTZ_GLASS,
         C: 'ae2:fluix_dust'
-    });
+    })
 
     event.shaped('ae2:semi_dark_monitor', [
         'AAA',
@@ -649,7 +549,7 @@ ServerEvents.recipes(event => {
         A: Materials.FUTURA_PLATE,
         B: 'ae2:fluix_crystal',
         C: Processors.ENGINEERING
-    });
+    })
 
     event.shaped('2x ae2:wireless_receiver', [
         'A C',
@@ -669,7 +569,7 @@ ServerEvents.recipes(event => {
     ], {
         A: 'ae2:charged_certus_quartz_crystal',
         B: Materials.FUTURA_ROD
-    });
+    })
 
     event.shaped('ae2:entropy_manipulator', [
         ' CD',
@@ -680,7 +580,7 @@ ServerEvents.recipes(event => {
         B: Processors.ENGINEERING,
         C: 'ae2:energy_cell',
         D: 'ae2:fluix_crystal'
-    });
+    })
 
     event.shaped('expatternprovider:wireless_tool', [
         ' A ',
@@ -690,7 +590,7 @@ ServerEvents.recipes(event => {
         A: 'ae2:wireless_receiver',
         B: Materials.FUTURA_PLATE,
         C: Processors.CALCULATION
-    });
+    })
 
     event.shaped('ae2:memory_card', [
         'ABB',
@@ -699,7 +599,7 @@ ServerEvents.recipes(event => {
         A: '#gtceu:circuits/ulv',
         B: Materials.FUTURA_PLATE,
         C: 'gtceu:gold_bolt'
-    });
+    })
 
     event.shaped('ae2netanalyser:network_analyser', [
         'AEA',
@@ -717,6 +617,11 @@ ServerEvents.recipes(event => {
 
 
     //#region upgrade cards
+    const cardRecipes = [
+        { output: '2x ae2:basic_card', bolt: 'gtceu:gold_bolt' },
+        { output: '2x ae2:advanced_card', bolt: 'gtceu:diamond_bolt' }
+    ]
+
     cardRecipes.forEach(card => {
         event.shaped(card.output, [
             'AAC',
@@ -729,20 +634,16 @@ ServerEvents.recipes(event => {
         })
     })
 
-    event.shaped('ae2:capacity_card', [
-        'AB'
-    ], {
-        A: 'ae2:charged_certus_quartz_crystal',
-        B: 'ae2:basic_card'
-    })
-
     const upgradeCards = [
         { output: 'ae2wtlib:magnet_card', component: 'gtceu:lv_item_magnet' },
-        { output: 'ae2:wireless_booster', component: 'gtceu:hv_emitter' }
+        { output: 'ae2:wireless_booster', component: 'gtceu:hv_emitter' },
+        { output: 'ae2:capacity_card', component: 'ae2:charged_certus_quartz_crystal'}
     ]
 
     upgradeCards.forEach(upgrade => {
-        event.shapeless(upgrade.output, ['ae2:advanced_card', upgrade.component]);
+        event.shapeless(upgrade.output, ['ae2:advanced_card', upgrade.component])
     })
+
+    event.shapeless('pccard:card_programmed_circuit', ['ae2:crafting_card', 'gtceu:programmed_circuit', '#gtceu:circuits/ev'])
     //#endregion
-});
+})
