@@ -139,19 +139,19 @@ ServerEvents.recipes(event => {
     })
 
     event.recipes.gtceu.mixer('mixing_dielectric_paste')
-        .itemInputs('3x gtceu:charcoal_dust', '2x gtceu:clay_dust', 'gtceu:small_blaze_dust')
+        .itemInputs('3x gtceu:charcoal_dust', '2x gtceu:clay_dust', 'minecraft:blaze_powder')
         .itemOutputs('4x powah:dielectric_paste')
         .EUt(20)
         .duration(200)
 
     event.recipes.gtceu.mixer('mixing_dielectric_paste1')
-        .itemInputs('3x gtceu:coal_dust', '2x gtceu:clay_dust', 'gtceu:small_blaze_dust')
+        .itemInputs('3x gtceu:coal_dust', '2x gtceu:clay_dust', 'minecraft:blaze_powder')
         .itemOutputs('4x powah:dielectric_paste')
         .EUt(20)
         .duration(200)
 
     event.recipes.gtceu.mixer('mixing_dielectric_paste2')
-        .itemInputs('3x gtceu:carbon_dust', '2x gtceu:clay_dust', 'gtceu:small_blaze_dust')
+        .itemInputs('3x gtceu:carbon_dust', '2x gtceu:clay_dust', 'minecraft:blaze_powder')
         .itemOutputs('4x powah:dielectric_paste')
         .EUt(20)
         .duration(200)

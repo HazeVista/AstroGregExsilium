@@ -5,6 +5,7 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
         .setMaxIOSize(9, 1, 3, 0)
         .setProgressBar(AstroGUITextures.PROGRESS_BAR_RUNE, FillDirection.LEFT_TO_RIGHT)
         .setSound(GTSoundEntries.ELECTROLYZER)
+        // .setIconSupplier(()=> Item.get('botania:gregorious_rune'))
 })
 
 GTCEuStartupEvents.registry('gtceu:machine', event => {
@@ -26,7 +27,7 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
             .where('P', Predicates.blocks('botania:mana_pylon'))
             .where('G', Predicates.blocks('botania:managlass'))
             .where('@', Predicates.controller(Predicates.blocks(definition.get())))
-        .build()    
+        .build()
         )
 
     .workableCasingModel(
