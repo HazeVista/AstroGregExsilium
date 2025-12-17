@@ -17,23 +17,6 @@
     "block.gtceu.manafield_simulator": "Manafield Simulator",
     "gtceu.mana_infusion": "Mana Infusion",
     "gtceu.botanic_purification": "Botanic Purification",
-    
-    "material.gtceu.andesite_alloy": "Andesite Alloy",
-    "material.gtceu.asteroid_stone": "Asteroid",
-    "material.gtceu.acorn": "Acorn",
-    "item.gtceu.tiny_acorn_dust": "Tiny Acorn Flour",
-    "item.gtceu.small_acorn_dust": "Small Acorn Flour",
-    "item.gtceu.acorn_dust": "Acorn Flour",
-    "material.gtceu.livingclay": "Livingclay",
-    "material.gtceu.livingrock": "Livingrock",
-
-    "material.gtceu.blazing_etrium": "Blazing Etrium",
-    "material.gtceu.niotic_calorite": "Niotic Calorite",
-    "material.gtceu.spirited_uranium": "Spirited Uranium",
-    "material.gtceu.nitro_flux": "Nitro-Flux",
-    "material.gtceu.juperiosaturlytide": "Juperiosaturlytide",
-    "material.gtceu.gaiaforged_naquadah": "Gaia-Forged Naquadah",
-    "material.gtceu.neptunium_molybdenum_selenide": "Neptunium Molybdenum Selenide",
 
     "tagprefix.mars_stone": "Mars Stone %s Ore",
     "tagprefix.venus_stone": "Venus Stone %s Ore",

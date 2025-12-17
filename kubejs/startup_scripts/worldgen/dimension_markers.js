@@ -18,6 +18,6 @@ GTCEuStartupEvents.registry('gtceu:dimension_marker', event => {
         event.create(`${body.namespace}:${body.id}`)
             .iconSupplier(() => Item.of(body.icon).getItem())
             .tier(0)
-            .overrideName(`§b${body.name}`);
+            .overrideName(`§b${body.name}`)
     })
 })

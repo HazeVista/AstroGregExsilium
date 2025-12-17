@@ -226,7 +226,7 @@ ServerEvents.recipes(event => {
 
     event.recipes.gtceu.macerator('macerator_asteroid_flint')
         .itemInputs('gtceu:asteroid_gravel')
-        .itemOutputs('gtceu:asteroid_stone_dust')
+        .itemOutputs('astrogreg:asteroid_stone_dust')
         .chancedOutput('minecraft:flint', 3300, 0)
         .duration(400)
         .EUt(2)
@@ -258,25 +258,25 @@ ServerEvents.recipes(event => {
 
     event.recipes.gtceu.macerator('macerator_asteroid_dust')
         .itemInputs('gtceu:hard_asteroid_stone')
-        .itemOutputs('gtceu:asteroid_stone_dust')
+        .itemOutputs('astrogreg:asteroid_stone_dust')
         .duration(98)
         .EUt(2)
 
     event.recipes.gtceu.macerator('macerator_asteroid_dust_1')
         .itemInputs('gtceu:asteroid_stone')
-        .itemOutputs('gtceu:asteroid_stone_dust')
+        .itemOutputs('astrogreg:asteroid_stone_dust')
         .duration(98)
         .EUt(2)
 
     event.recipes.gtceu.macerator('macerator_asteroid_dust_2')
         .itemInputs('gtceu:smooth_asteroid_stone')
-        .itemOutputs('gtceu:asteroid_stone_dust')
+        .itemOutputs('astrogreg:asteroid_stone_dust')
         .duration(98)
         .EUt(2)
 
     event.recipes.gtceu.macerator('macerator_asteroid_dust_3')
         .itemInputs('gtceu:cobbled_asteroid_stone')
-        .itemOutputs('gtceu:asteroid_stone_dust')
+        .itemOutputs('astrogreg:asteroid_stone_dust')
         .duration(98)
         .EUt(2)
 
