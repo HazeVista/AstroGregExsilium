@@ -351,6 +351,7 @@ ServerEvents.recipes(event => {
       F: 'minecraft:bowl'
     })
 
+
     event.shaped('minecraft:green_dye', [
       'A',
       'B'
@@ -359,6 +360,7 @@ ServerEvents.recipes(event => {
       B: '#forge:tools/mortars'
     })
     
+    event.shapeless('farmersdelight:chicken_sandwich', ['minecraft:bread', '#forge:cooked_chicken', 'farmersdelight:cabbage_leaf', 'minecraft:carrot', 'farmersdelight:tomato_slice'])
     event.shapeless('create:honeyed_apple', ['minecraft:honey_bottle', 'minecraft:apple']).replaceIngredient('minecraft:honey_bottle', 'minecraft:glass_bottle')
     event.shapeless('4x create:chocolate_glazed_berries', ['minecraft:sweet_berries', 'minecraft:sweet_berries', 'minecraft:sweet_berries', 'minecraft:sweet_berries', 'create:chocolate_bucket']).replaceIngredient('create:chocolate_bucket', 'minecraft:bucket')
     //#endregion

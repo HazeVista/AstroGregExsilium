@@ -87,6 +87,8 @@ event.renameItem('simplylight:lamp_post', 'Illuminant Lamp Post')
 
 //#region farmer's delight
 event.renameItem('delightful:deluxe_cheeseburger', 'Deluxe Double Bacon Cheeseburger')
+event.renameItem('farmersdelight:chicken_sandwich', 'Chicken Sub')
+event.renameItem('farmersdelight:bacon_sandwich', 'BLT Sandwich')
 event.renameItem('farmersdelight:honey_cookie', 'Sugar Cookie')
 event.renameItem('farmersdelight:pie_crust', 'Baked Pie Crust')
 event.renameItem('minecraft:cookie', 'Chocolate Chip Cookie')

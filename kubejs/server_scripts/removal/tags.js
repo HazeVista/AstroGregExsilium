@@ -127,7 +127,16 @@ ServerEvents.tags('item', event => {
 
         'forge:stone_dust':
             ['astrogreg:asteroid_stone_dust', 'gtceu:blackstone_dust', 'gtceu:stone_dust', 
-                'gtceu:soapstone_dust', 'gtceu:endstone_dust']
+                'gtceu:soapstone_dust', 'gtceu:endstone_dust'],
+        
+        'forge:vegetables':
+            ['farmersdelight:tomato_slice'],
+        
+        'forge:crops':
+            ['farmersdelight:tomato_slice'],
+        
+        'forge:crops/tomatoes':
+            ['farmersdelight:tomato', 'farmersdelight:tomato_slice'],
     }
     //#endregion
 

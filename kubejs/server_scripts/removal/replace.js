@@ -41,6 +41,16 @@ ServerEvents.recipes(event => {
     event.replaceInput({}, 'ad_extendra:juperium_ingot', 'astrogreg:juperium_ingot')
     event.replaceInput({output: 'farmersdelight:mixed_salad'}, 'farmersdelight:tomato', 'farmersdelight:tomato_slice')
     event.replaceInput({output: 'farmersdelight:fruit_salad'}, 'minecraft:apple', 'farmersdelight:apple_slice')
+    event.replaceInput({output: 'farmersdelight:bacon_sandwich'}, 'farmersdelight:tomato', 'farmersdelight:tomato_slice')
+    event.replaceInput({output: 'farmersdelight:hamburger'}, 'farmersdelight:tomato', 'farmersdelight:tomato_slice')
+    event.replaceInput({output: 'delightful:cheeseburger'}, 'farmersdelight:tomato', 'farmersdelight:tomato_slice')
+    event.replaceInput({output: 'delightful:deluxe_cheeseburger'}, 'farmersdelight:tomato', 'farmersdelight:tomato_slice')
+    event.replaceInput({output: 'gtceu:ev_hermetic_casing'}, 'gtceu:stainless_steel_large_fluid_pipe', 'gtceu:tungsten_carbide_large_fluid_pipe')
+    event.replaceInput({output: 'gtceu:iv_hermetic_casing'}, 'gtceu:titanium_large_fluid_pipe', 'gtceu:osmiridium_large_fluid_pipe')
+    event.replaceInput({output: 'gtceu:luv_hermetic_casing'}, 'gtceu:tungsten_steel_large_fluid_pipe', 'gtceu:polybenzimidazole_large_fluid_pipe')
+    event.replaceInput({output: 'delightful:uv_hermetic_casing'}, 'gtceu:naquadah_large_fluid_pipe', 'gtceu:duranium_large_fluid_pipe')
+    event.replaceInput({output: 'delightful:uhv_hermetic_casing'}, 'gtceu:duranium_large_fluid_pipe', 'astrogreg:polyamide_imide_large_fluid_pipe')
+    event.replaceInput({}, '#forge:crops/cabbage', 'farmersdelight:cabbage_leaf')
     // event.replaceInput({input: ''}, '', '')
     //#endregion
     
