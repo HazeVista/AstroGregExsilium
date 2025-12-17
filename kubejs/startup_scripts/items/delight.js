@@ -31,5 +31,15 @@ StartupEvents.registry('item', event => {
                 .hunger(2)
                 .saturation(0.25)
         })
+
+    event.create('farmersdelight:tomato_slice')
+        .displayName('Tomato Slice')
+        .texture('kubejs:item/delight/tomato_slice')
+                .food(food => {
+            food
+                .hunger(1)
+                .saturation(0.25)
+        })
         
+    
 })

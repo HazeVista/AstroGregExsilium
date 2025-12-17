@@ -105,7 +105,7 @@ ServerEvents.recipes(event => {
         'botania:mana_spreader', 'botania:elven_spreader', 'botania:bauble_box', 'botania:fabulous_pool_upgrade', 'botania:shimmerrock', 'botania:forest_eye', 'botania:hourglass', 'botania:spawner_mover',
         'botania:slime_bottle', 'botania:world_seed', 'botania:spawner_claw', 'botania:sextant', 'botania:astrolabe', 'botania:black_hole_talisman', 'botania:spark_changer', 'botania:mana_distributor', 
         'botania:pump', 'botania:knockback_belt', 'botania:travel_belt', 'botania:super_travel_belt', 'botania:speed_up_belt', 'botania:flighttiara_0', 'botania:super_cloud_pendant', 'botania:super_lava_pendant',
-        'botania:conjuration_catalyst', 'botania:alchemy_catalyst', 'botania:conjuration_catalyst', 'botania:redstone_root', 'botania:petal_apothecary/clayconia', 'delightful:food/salmonberry_pie_from_slices', 
+        'botania:conjuration_catalyst', 'botania:alchemy_catalyst', 'botania:conjuration_catalyst', 'botania:redstone_root', 'botania:petal_apothecary/clayconia', 'farmersdelight:fruit_salad', 
         'botania:mana_infusion/clayconia_chibi', 'botania:floating_clayconia', 'botania:floating_clayconia_chibi', 'minecraft:blaze_powder', 'gtceu:shapeless/pumpkin_pie_from_dough',
         'gtceu:shapeless/block_decompress_mana_diamond_gem', 'botania:mana_mirror', 'gtceu:shapeless/manadiamond_block_deconstruct', 'gtceu:shaped/block_compress_mana_diamond', 'createlowheated:mixing/chocolate',
         'gtceu:shapeless/dragonstone_block_deconstruct', 'gtceu:shaped/block_compress_mana_diamond', 'botania:spark', 'botania:petal_apothecary/vazkii_head', 'botania:runic_altar/head',
@@ -116,13 +116,11 @@ ServerEvents.recipes(event => {
         'minecraft:diamond_helmet', 'minecraft:diamond_chestplate', 'minecraft:diamond_leggings', 'minecraft:diamond_boots', 'minecraft:golden_boots', 'minecraft:golden_leggings', 'minecraft:golden_helmet', 
         'minecraft:golden_chestplate', 'botania:manasteel_boots', 'botania:manasteel_leggings', 'botania:manasteel_chestplate', 'botania:manasteel_helmet', 'botania:elementium_boots', 'botania:elementium_leggings',
         'botania:elementium_chestplate', 'botania:elementium_helmet', 'ae2:network/cells/view_cell', 'ae2:tools/network_memory_card', 'ae2:decorative/quartz_fixture', 'ae2:network/wireless_booster', 
-        'ae2:network/parts/panels_semi_dark_monitor', 'buildinggadgets2:template_manager', 'gtceu:macerator/macerate_hay_block', 'gtceu:macerator/macerate_sugar_cane', 'delightful:food/pumpkin_pie_from_slices',
-        'farmersdelight:apple_pie_from_slices', 'farmersdelight:chocolate_pie_from_slices', 'farmersdelight:sweet_berry_cheesecake_from_slices', 'delightful:melon_slice', 'delightful:cutting/pumpkin_pie',
-        'farmersdelight:cutting/apple_pie', 'farmersdelight:cutting/chocolate_pie', 'farmersdelight:cutting/sweet_berry_cheesecake', 'delightful:food/baklava_from_slices', 'delightful:cutting/baklava',
+        'ae2:network/parts/panels_semi_dark_monitor', 'buildinggadgets2:template_manager', 'gtceu:macerator/macerate_hay_block', 'gtceu:macerator/macerate_sugar_cane', 'farmersdelight:roasted_mutton_chops', 
+        'delightful:melon_slice', 'delightful:cutting/pumpkin_pie', 'farmersdelight:cutting/apple_pie', 'farmersdelight:cutting/chocolate_pie', 'farmersdelight:cutting/sweet_berry_cheesecake', 'delightful:cutting/baklava',
         'gtceu:macerator/macerate_chicken', 'gtceu:macerator/macerate_rabbit', 'gtceu:macerator/macerate_mutton', 'gtceu:macerator/macerate_steak', 'gtceu:macerator/macerate_pork_chop',, 'ad_extendra:saturlyte_nugget', 
         'ad_extendra:juperium_nugget', 'delightful:food_oven', 'delightful:food/sweet_berry_cheesecake_from_cheese', 'delightful:food/glow_jam_cookie', 'delightful:food/baklava_no_citrus', 
         'delightful:food/nut_dough', 'delightful:food/salmonberry_pie', 'create:milling/cocoa_beans', 'gtceu:shaped/cake_from_dough', 'farmersdelight:sweet_berry_cheesecake', 'farmersdelight:cutting/cake',
-        'farmersdelight:cake_from_slices', 'farmersdelight:fruit_salad',
         
     ])
     //#endregion
@@ -148,7 +146,7 @@ ServerEvents.recipes(event => {
     event.remove({ input: Array.from(toRemoveInput) })
     event.remove({ output: Array.from(toRemoveOutput) })
     toRemoveType.forEach(string => {event.remove({ type: string})})
-    toRemoveId.forEach(string => {event.remove({ input: string})})
+    toRemoveId.forEach(string => {event.remove({ id: string})})
     toRemoveMod.forEach(string => {event.remove({ mod: string})})
     //#endregion
 
@@ -187,5 +185,7 @@ ServerEvents.recipes(event => {
     event.remove({ output: /ad_extendra:.*_tank/ });
     event.remove({ output: /gtceu:.*_air_scrubber/ });
     event.remove({ output: /minecraft:.*_armor_trim_smithing_template/})
+    event.remove({ id: /farmersdelight:.*_pie_from_slices/})
+    event.remove({ id: /delightful:food\/.*_pie_from_slices/})
     //#endregion
 })

@@ -3,7 +3,7 @@ ServerEvents.recipes(event => {
     //#region food cutting
     //cut_ + recipe id, input item id, output item id array, duration: x, EUt: x
     const culinaryCutting = [
-      { id: 'minced_beef', input: 'minecraft:beef', outputs: ['2x farmersdelight:minced_beef'], duration: 40, EUt: 2 },
+      { id: 'minced_beef', input: 'minecraft:beef', outputs: ['farmersdelight:minced_beef'], duration: 40, EUt: 2 },
       { id: 'brown_mushroom', input: 'farmersdelight:brown_mushroom_colony', outputs: ['5x minecraft:brown_mushroom'], duration: 40, EUt: 2 },
       { id: 'porkchop', input: 'farmersdelight:ham', outputs: ['2x minecraft:porkchop', 'minecraft:bone'], duration: 100, EUt: 4 },
       { id: 'cake_slice', input: 'minecraft:cake', outputs: ['6x farmersdelight:cake_slice'], duration: 40, EUt: 2 },
@@ -32,8 +32,8 @@ ServerEvents.recipes(event => {
       { id: 'pumpkin_pie_slice', input: 'minecraft:pumpkin_pie', outputs: ['6x delightful:pumpkin_pie_slice'], duration: 100, EUt: 2 },
       { id: 'baklava_slice', input: 'delightful:baklava', outputs: ['6x delightful:baklava_slice'], duration: 100, EUt: 2 },
       { id: 'salmonberry_pie_slice', input: 'delightful:salmonberry_pie', outputs: ['6x delightful:salmonberry_pie_slice'], duration: 100, EUt: 2 },
-      { id: 'melon_slice1', input: 'minecraft:melon', outputs: ['8x minecraft:melon_slice'], duration: 100, EUt: 2 },
-      { id: 'melon_slice2', input: 'delightful:mini_melon', outputs: ['4x minecraft:melon_slice'], duration: 80, EUt: 2 },
+      { id: 'melon_slice_alt', input: 'minecraft:melon', outputs: ['8x minecraft:melon_slice'], duration: 100, EUt: 2 },
+      { id: 'melon_slice_alt2', input: 'delightful:mini_melon', outputs: ['4x minecraft:melon_slice'], duration: 80, EUt: 2 },
       { id: 'cantaloupe_slice', input: 'delightful:cantaloupe', outputs: ['4x delightful:cantaloupe_slice'], duration: 80, EUt: 2 },
       { id: 'cactus_flesh', input: 'minecraft:cactus', outputs: ['2x delightful:cactus_flesh'], duration: 80, EUt: 2}
     ]

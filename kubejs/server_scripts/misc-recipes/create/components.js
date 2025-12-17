@@ -366,6 +366,9 @@ ServerEvents.recipes(event => {
     })
 
     event.shapeless('create:speedometer', ['create:gearbox', 'minecraft:compass'])
+    //#endregion
+
+
 
     //#region Andesite Alloy
     //mostly by @digestlotion
@@ -375,6 +378,7 @@ ServerEvents.recipes(event => {
     event.shapeless('2x gtceu:andesite_dust', ['astrogreg:asteroid_stone_dust', 'gtceu:quartz_sand_dust'])
     event.shapeless('1x astrogreg:andesite_alloy_dust', ['gtceu:andesite_dust', 'gtceu:iron_dust'])
     event.shapeless('2x create:shaft', ['create:andesite_alloy', '#forge:tools/files'])
+    event.shapeless('9x create:andesite_alloy', 'create:andesite_alloy_block')
     event.smelting('1x create:andesite_alloy', 'astrogreg:andesite_alloy_dust')
 
     event.shaped('gtceu:andesite_dust', [
@@ -444,4 +448,11 @@ ServerEvents.recipes(event => {
         .itemOutputs('create:polished_rose_quartz')
         .duration(120)
         .EUt(7)
+
+    event.recipes.gtceu.centrifuge('decompose_andesite_alloy')
+        .itemInputs('2x astrogreg:andesite_alloy_dust')
+        .itemOutputs('gtceu:andesite_dust', 'gtceu:iron_dust')
+        .duration(80)
+        .EUt(7)
+    //#endregion
 })

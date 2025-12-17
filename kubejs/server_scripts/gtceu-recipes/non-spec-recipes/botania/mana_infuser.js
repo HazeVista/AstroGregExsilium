@@ -38,7 +38,7 @@ const purify = event.recipes.gtceu.botanic_purification
 //#region alchemy
     //output, input, mana consumed in mb, duration in ticks
     const alchemy_recipes = [
-        ['astrogreg:terrasteel_dust', 'astrogreg:dormant_terrasteel_dust', 100, 150],
+        ['astrogreg:terrasteel_dust', 'astrogreg:dormant_terrasteel_dust', 10, 150],
         ['minecraft:nether_wart', 'minecraft:blaze_rod', 40, 300],
         ['minecraft:ice', 'minecraft:snow_block', 10, 300],
         ['minecraft:red_sand', 'minecraft:sand', 10, 300],

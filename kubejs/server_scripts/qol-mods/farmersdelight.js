@@ -162,7 +162,9 @@ ServerEvents.recipes(event => {
       { input: "delightful:baklava", output: "delightful:baklava_slice", count: 6 },
       { input: "minecraft:cake", output: "farmersdelight:cake_slice", count: 6 },
       { input: "createaddition:chocolate_cake", output: "farmersdelight:chocolate_cake_slice", count: 6 },
-      { input: "createaddition:honey_cake", output: "farmersdelight:honey_cake_slice", count: 6 }
+      { input: "createaddition:honey_cake", output: "farmersdelight:honey_cake_slice", count: 6 },
+      { input: "minecraft:beef", output: "farmersdelight:minced_beef", count: 1},
+      { input: "farmersdelight:tomato", output: "farmersdelight:tomato_slice", count: 4}
     ]
 
   cuttingRecipes.forEach(recipe => {
@@ -335,6 +337,19 @@ ServerEvents.recipes(event => {
       .chancedOutput('delightful:matcha', 4000, 0)
       .duration(120)
       .EUt(2)
+
+    event.shaped('farmersdelight:roasted_mutton_chops', [
+      'DAC',
+      'BEB',
+      ' F '
+    ], {
+      A: 'farmersdelight:cooked_mutton_chops',
+      B: 'farmersdelight:tomato_slice',
+      C: 'minecraft:beetroot',
+      D: 'minecraft:carrot',
+      E: 'farmersdelight:cooked_rice',
+      F: 'minecraft:bowl'
+    })
 
     event.shaped('minecraft:green_dye', [
       'A',

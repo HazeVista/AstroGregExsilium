@@ -1,10 +1,5 @@
 ClientEvents.lang('en_us', event => {
 //#region botania
-event.renameItem('botania:elementium_sword', '§dAlfsteel§r Sword')
-event.renameItem('botania:elementium_hoe', '§dAlfsteel§r Hoe')
-event.renameItem('botania:elementium_axe', '§dAlfsteel§r Axe')
-event.renameItem('botania:elementium_shovel', '§dAlfsteel§r Shovel')
-event.renameItem('botania:elementium_pickaxe', '§dAlfsteel§r Pickaxe')
 event.renameItem('botania:elementium_boots', '§dAlfsteel§r Boots')
 event.renameItem('botania:elementium_leggings', '§dAlfsteel§r Leggings')
 event.renameItem('botania:elementium_chestplate', '§dAlfsteel§r Chestplate')
@@ -13,11 +8,6 @@ event.renameItem('botania:elementium_shears', '§dAlfsteel§r Shears')
 event.renameItem('botania:elementium_nugget', '§dAlfsteel§r Nugget')
 event.renameItem('botania:elementium_ingot', '§dAlfsteel§r Ingot')
 event.renameItem('botania:elementium_block', '§dAlfsteel§r Block')
-event.renameItem('botania:manasteel_sword', '§9Manasteel§r Sword')
-event.renameItem('botania:manasteel_hoe', '§9Manasteel§r Hoe')
-event.renameItem('botania:manasteel_axe', '§9Manasteel§r Axe')
-event.renameItem('botania:manasteel_shovel', '§9Manasteel§r Shovel')
-event.renameItem('botania:manasteel_pick', '§9Manasteel§r Pickaxe')
 event.renameItem('botania:manasteel_boots', '§9Manasteel§r Boots')
 event.renameItem('botania:manasteel_leggings', '§9Manasteel§r Leggings')
 event.renameItem('botania:manasteel_chestplate', '§9Manasteel§r Chestplate')
@@ -39,6 +29,8 @@ event.renameItem('botania:mana_pylon', '§bMana Pylon§r')
 event.renameItem('botania:mana_pylon', '§2Natura Pylon§r')
 //#endregion
 
+
+
 //#region gregtech
 event.renameItem('gtmutils:neutronium_credit', '§cAstroCredit')
 event.renameItem('gtceu:lv_power_unit', '§7Low Power Unit')
@@ -54,6 +46,8 @@ event.renameItem('gtceu:zpm_parallel_hatch', '§cElite Parallel Control Hatch')
 event.renameItem('gtceu:uv_parallel_hatch', '§3Ultimate Parallel Control Hatch')
 //#endregion
 
+
+
 //#region ad astra
 event.renameItem('ad_astra:wheel', 'Rubber Tire')
 event.renameItem('ad_astra:launch_pad', 'Rocket Launch Platform')
@@ -67,6 +61,8 @@ event.renameItem('ad_extendra:tier_7_rocket', '§3ASTRO-Thunderbird III')
 event.renameItem('ad_extendra:tier_8_rocket', '§4ASTRO-Atlas')
 event.renameItem('ad_astra:tier_1_rover', '§bASTRO-Scarab')
 //#endregion
+
+
 
 //region simply light
 event.renameItem('simplylight:illuminant_block_on', 'Illuminant Block (On)')
@@ -87,10 +83,19 @@ event.renameItem('simplylight:illuminant_pink_block_on', 'Illuminant Pink Block 
 event.renameItem('simplylight:lamp_post', 'Illuminant Lamp Post')
 //#endregion
 
-//region misc
-event.renameItem('powah:steel_energized', 'Energized Steel Ingot')
+
+
+//#region farmer's delight
+event.renameItem('delightful:deluxe_cheeseburger', 'Deluxe Double Bacon Cheeseburger')
 event.renameItem('farmersdelight:honey_cookie', 'Sugar Cookie')
 event.renameItem('farmersdelight:pie_crust', 'Baked Pie Crust')
 event.renameItem('minecraft:cookie', 'Chocolate Chip Cookie')
 event.renameItem('delightful:animal_fat', 'Tallow')
+//#endregion
+
+
+
+//region misc
+event.renameItem('powah:steel_energized', 'Energized Steel Ingot')
+//#endregion
 })
