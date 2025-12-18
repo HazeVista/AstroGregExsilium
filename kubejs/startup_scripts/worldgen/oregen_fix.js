@@ -28,7 +28,13 @@ WorldgenEvents.remove(event => {
         'ad_extendra:pluto_plutonium_ore',
         'ad_extendra:pluto_ice_shard_ore',
         'ad_extendra:orcus_radium_ore',
-        'ad_extendra:neptune_ice_shard_ore'
+        'ad_extendra:neptune_ice_shard_ore',
+        'powah:uraninite_ore_dense',
+        'powah:uraninite_ore_poor',
+        'powah:uraninite_ore',
+        'powah:deepslate_uraninite_ore_dense',
+        'powah:deepslate_uraninite_ore_poor',
+        'powah:deepslate_uraninite_ore'
     ];
 
     event.removeOres(props => {

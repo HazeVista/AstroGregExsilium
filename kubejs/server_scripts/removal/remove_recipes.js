@@ -106,8 +106,8 @@ ServerEvents.recipes(event => {
         'botania:mana_spreader', 'botania:elven_spreader', 'botania:bauble_box', 'botania:fabulous_pool_upgrade', 'botania:shimmerrock', 'botania:forest_eye', 'botania:hourglass', 'botania:spawner_mover',
         'botania:slime_bottle', 'botania:world_seed', 'botania:spawner_claw', 'botania:sextant', 'botania:astrolabe', 'botania:black_hole_talisman', 'botania:spark_changer', 'botania:mana_distributor', 
         'botania:pump', 'botania:knockback_belt', 'botania:travel_belt', 'botania:super_travel_belt', 'botania:speed_up_belt', 'botania:flighttiara_0', 'botania:super_cloud_pendant', 'botania:super_lava_pendant',
-        'botania:conjuration_catalyst', 'botania:alchemy_catalyst', 'botania:conjuration_catalyst', 'botania:redstone_root', 'botania:petal_apothecary/clayconia', 'farmersdelight:fruit_salad', 
-        'botania:mana_infusion/clayconia_chibi', 'botania:floating_clayconia', 'botania:floating_clayconia_chibi', 'minecraft:blaze_powder', 'gtceu:shapeless/pumpkin_pie_from_dough', 
+        'botania:conjuration_catalyst', 'botania:alchemy_catalyst', 'botania:conjuration_catalyst', 'botania:redstone_root', 'botania:petal_apothecary/clayconia', 'pccard:item/card_programmed_circuit',
+        'botania:mana_infusion/clayconia_chibi', 'botania:floating_clayconia', 'botania:floating_clayconia_chibi', 'minecraft:blaze_powder', 'gtceu:shapeless/pumpkin_pie_from_dough', 'farmersdelight:chicken_sandwich',
         'gtceu:shapeless/block_decompress_mana_diamond_gem', 'botania:mana_mirror', 'gtceu:shapeless/manadiamond_block_deconstruct', 'gtceu:shaped/block_compress_mana_diamond', 'createlowheated:mixing/chocolate',
         'gtceu:shapeless/dragonstone_block_deconstruct', 'gtceu:shaped/block_compress_mana_diamond', 'botania:spark', 'botania:petal_apothecary/vazkii_head', 'botania:runic_altar/head',
         'botania:heisei_dream', 'gtceu:extruder/nan_certificate', 'gtceu:forming_press/pumpkin_pie', 'createaddition:mixing/bioethanol', 'createaddition:compacting/cake_base', 'botania:shimmerwood_planks',
@@ -122,7 +122,7 @@ ServerEvents.recipes(event => {
         'gtceu:macerator/macerate_chicken', 'gtceu:macerator/macerate_rabbit', 'gtceu:macerator/macerate_mutton', 'gtceu:macerator/macerate_steak', 'gtceu:macerator/macerate_pork_chop',, 'ad_extendra:saturlyte_nugget', 
         'ad_extendra:juperium_nugget', 'delightful:food_oven', 'delightful:food/sweet_berry_cheesecake_from_cheese', 'delightful:food/glow_jam_cookie', 'delightful:food/baklava_no_citrus', 
         'delightful:food/nut_dough', 'delightful:food/salmonberry_pie', 'create:milling/cocoa_beans', 'gtceu:shaped/cake_from_dough', 'farmersdelight:sweet_berry_cheesecake', 'farmersdelight:cutting/cake',
-        'pccard:item/card_programmed_circuit'
+        
     ])
     //#endregion
 

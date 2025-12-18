@@ -23,12 +23,10 @@ defaultconfigs/ftbquests
 defaultconfigs/ftbultimine
 defaultconfigs/ftbxmodcompat
 defaultconfigs/ftbessentials-server.snbt
-config/ae2/*
 config/craftingtweaks/*
 config/functionalstorage/*
 config/jade/*
 config/konkrete/*
-config/ae2/*
 config/openloader/*
 config/titanium/*
 config/travelanchors/*

@@ -131,6 +131,10 @@ ItemEvents.tooltip(event => {
     event.addAdvanced('gtmutils:neutronium_credit', (item, advanced, text) => {
         text.add(Text.of('Coin made out of a confidential, indestructible substance, with a composition only known by the mysterious §4ASTRO Foundation§r'))    
     })
+
+    event.addAdvanced('farmersdelight:bacon_sandwich', (item, advanced, text) => {
+        text.add(Text.of('§o§7Mmmmm... Tasty!§r§7 - Ubit3y'))
+    })
     //#endregion
     
 })
