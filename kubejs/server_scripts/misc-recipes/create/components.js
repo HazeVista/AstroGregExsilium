@@ -372,10 +372,8 @@ ServerEvents.recipes(event => {
 
     //#region Andesite Alloy
     //mostly by @digestlotion
-    event.shapeless('2x gtceu:andesite_dust', ['gtceu:stone_dust', 'gtceu:nether_quartz_dust'])
-    event.shapeless('2x gtceu:andesite_dust', ['gtceu:stone_dust', 'gtceu:quartz_sand_dust'])
-    event.shapeless('2x gtceu:andesite_dust', ['astrogreg:asteroid_stone_dust', 'gtceu:nether_quartz_dust'])
-    event.shapeless('2x gtceu:andesite_dust', ['astrogreg:asteroid_stone_dust', 'gtceu:quartz_sand_dust'])
+    event.shapeless('2x gtceu:andesite_dust', ['#forge:stone_dust', 'gtceu:nether_quartz_dust'])
+    event.shapeless('2x gtceu:andesite_dust', ['#forge:stone_dust', 'gtceu:quartz_sand_dust'])
     event.shapeless('1x astrogreg:andesite_alloy_dust', ['gtceu:andesite_dust', 'gtceu:iron_dust'])
     event.shapeless('2x create:shaft', ['create:andesite_alloy', '#forge:tools/files'])
     event.shapeless('9x create:andesite_alloy', 'create:andesite_alloy_block')
@@ -396,13 +394,13 @@ ServerEvents.recipes(event => {
         .EUt(7)
 
     event.recipes.gtceu.mixer('mixing_andesite_dust')
-        .itemInputs('gtceu:quartz_sand_dust', 'astrogreg:asteroid_stone_dust')
+        .itemInputs('gtceu:quartz_sand_dust', '#forge:stone_dust')
         .itemOutputs('2x gtceu:andesite_dust')
         .duration(80)
         .EUt(7)
 
     event.recipes.gtceu.mixer('mixing_andesite_dust_alt')
-        .itemInputs('gtceu:nether_quartz_dust', 'astrogreg:asteroid_stone_dust')
+        .itemInputs('gtceu:nether_quartz_dust', '#forge:stone_dust')
         .itemOutputs('2x gtceu:andesite_dust')
         .duration(80)
         .EUt(7)

@@ -41,6 +41,8 @@ ServerEvents.recipes(event => {
     event.replaceInput({}, 'ad_extendra:juperium_ingot', 'astrogreg:juperium_ingot')
     event.replaceInput({output: 'farmersdelight:mixed_salad'}, 'farmersdelight:tomato', 'farmersdelight:tomato_slice')
     event.replaceInput({output: 'farmersdelight:fruit_salad'}, 'minecraft:apple', 'farmersdelight:apple_slice')
+    event.replaceInput({type: 'gtceu:mixer'}, 'gtceu:stone_dust', '#forge:stone_dust')
+    event.replaceInput({type: 'gtceu:compressor'}, 'gtceu:stone_dust', '#forge:stone_dust')    
     // event.replaceInput({input: ''}, '', '')
     //#endregion
     
