@@ -51,6 +51,8 @@ ServerEvents.recipes(event => {
     event.replaceInput({output: 'delightful:uv_hermetic_casing'}, 'gtceu:naquadah_large_fluid_pipe', 'gtceu:duranium_large_fluid_pipe')
     event.replaceInput({output: 'delightful:uhv_hermetic_casing'}, 'gtceu:duranium_large_fluid_pipe', 'astrogreg:polyamide_imide_large_fluid_pipe')
     event.replaceInput({}, '#forge:crops/cabbage', 'farmersdelight:cabbage_leaf')
+    event.replaceInput({type: 'gtceu:mixer'}, 'gtceu:stone_dust', '#forge:stone_dust')
+    event.replaceInput({type: 'gtceu:compressor'}, 'gtceu:stone_dust', '#forge:stone_dust')  
     // event.replaceInput({input: ''}, '', '')
     //#endregion
     

@@ -73,7 +73,9 @@ const purify = event.recipes.gtceu.botanic_purification
         ['farmersdelight:onion', 'farmersdelight:tomato_seeds'],
         ['minecraft:carrot', 'farmersdelight:onion'],
         ['minecraft:potato', 'minecraft:carrot'],
-        ['minecraft:beetroot_seeds', 'minecraft:potato']
+        ['delightful:cantaloupe_seeds', 'minecraft:potato'],
+        ['delightful:salmonberry_pips', 'delightful:cantaloupe_seeds'],
+        ['minecraft:beetroot_seeds', 'delightful:salmonberry_pips']
     ]
 
     seed_cycle.forEach(([output, input]) => {
