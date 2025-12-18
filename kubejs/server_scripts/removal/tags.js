@@ -112,7 +112,8 @@ ServerEvents.tags('item', event => {
             ['minecraft:beef', 'minecraft:chicken', 'minecraft:mutton',
             'minecraft:porkchop', 'minecraft:rabbit', 'delightful:raw_goat'],
 
-        'forge:meat_small': ['farmersdelight:minced_beef', 'farmersdelight:chicken_cuts',
+        'forge:meat_small': 
+            ['farmersdelight:minced_beef', 'farmersdelight:chicken_cuts',
             'farmersdelight:bacon', 'farmersdelight:cod_slice',
             'farmersdelight:salmon_slice', 'farmersdelight:mutton_chops'],
 
@@ -130,7 +131,7 @@ ServerEvents.tags('item', event => {
 
         'forge:stone_dust':
             ['gtceu:stone_dust', 'astrogreg:asteroid_stone_dust', 'gtceu:blackstone_dust',  
-                'gtceu:soapstone_dust', 'gtceu:endstone_dust'],
+            'gtceu:soapstone_dust', 'gtceu:endstone_dust'],
         
         'forge:vegetables':
             ['farmersdelight:tomato_slice'],
