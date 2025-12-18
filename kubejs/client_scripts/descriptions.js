@@ -15,117 +15,61 @@ ItemEvents.tooltip(event => {
     })
     //#endregion
 
-    //#region singleblocks
+
     
+    //#region singleblocks
+    //unique
     event.addAdvanced('gtceu:ulv_water_source', (item, advanced, text) => {
         text.add(1, Text.of('§o§7A Great Source of Water!'))
         text.add(2, Text.of('§o§7This machine does not require power to operate.'))
     })
 
-    //mana in
-    event.addAdvanced('gtceu:lv_mana_infuser', (item, advanced, text) => {
-        text.add(1, Text.of('§o§7Who needs mana pools?'))
-    })
-    event.addAdvanced('gtceu:mv_mana_infuser', (item, advanced, text) => {
-        text.add(1, Text.of('§o§7Who needs mana pools?'))
-    })
-    event.addAdvanced('gtceu:hv_mana_infuser', (item, advanced, text) => {
-        text.add(1, Text.of('§o§7Who needs mana pools?'))
-    })
-    event.addAdvanced('gtceu:ev_mana_infuser', (item, advanced, text) => {
-        text.add(1, Text.of('§o§7Who needs mana pools?'))
-    })   
-    event.addAdvanced('gtceu:iv_mana_infuser', (item, advanced, text) => {
-        text.add(1, Text.of('§o§7Base Botania is for chumps anyways.'))
-    })
-    event.addAdvanced('gtceu:luv_mana_infuser', (item, advanced, text) => {
-        text.add(1, Text.of('§o§7Base Botania is for chumps anyways.'))
-    })  
-    event.addAdvanced('gtceu:zpm_mana_infuser', (item, advanced, text) => {
-        text.add(1, Text.of('§o§7Base Botania is for chumps anyways.'))
-    })
-    event.addAdvanced('gtceu:uv_mana_infuser', (item, advanced, text) => {
-        text.add(1, Text.of('§o§7Mechanized Mana Manipulation Matrix'))
-    })
+    /*
+    *   Singleblock Tooltip Builder
+    *   how to use:
+    *       
+    *   'machine_name': {
+    *       'lv,mv,hv,ev': '§o§7Blah blah blah something witty',
+    *       'iv,luv,zpm': '§o§7Something witty and cool',
+    *       'uv': '§o§7This tooltip has aura'
+    *   }
+    */
+    const machineTooltips = {
+        'mana_infuser': {
+            'lv,mv,hv,ev': '§o§7Who needs mana pools?',
+            'iv,luv,zpm': '§o§7Base Botania is for chumps anyways.',
+            'uv': '§o§7Mechanized Mana Manipulation Matrix'
+        },
+        'manafield_simulator': {
+            'lv,mv,hv,ev': '§o§7Produces Mana, Allegedly',
+            'iv,luv,zpm': '§o§7Miniature Mystical Powerhouse',
+            'uv': '§o§7The Arcane, Reduced to Math'
+        },
+        'culinary_fabricator': {
+            'lv,mv,hv,ev': '§o§7Chef in a Box',
+            'iv,luv,zpm': '§o§7Robotic Restaurant',
+            'uv': '§o§7Sustanance at Scale'
+        },
+        'beverage_processor': {
+            'lv,mv,hv,ev': '§o§7Barista in a Box',
+            'iv,luv,zpm': '§o§7Robotic Refreshment',
+            'uv': '§o§7Hydration at Scale'
+        }
+    }
 
-    //manafield simulators
-    event.addAdvanced('gtceu:_manafield_simulator', (item, advanced, text) => {
-        text.add(1, Text.of('§o§7Produces Mana, Allegedly'))
+    //
+    Object.entries(machineTooltips).forEach(([machine, tierGroups]) => {
+        Object.entries(tierGroups).forEach(([tiers, tooltip]) => {
+            tiers.split(',').forEach(tier => {
+                event.addAdvanced(`gtceu:${tier}_${machine}`, (item, advanced, text) => {
+                    text.add(1, Text.of(tooltip));
+                })
+            })
+        })
     })
-    event.addAdvanced('gtceu:_manafield_simulator', (item, advanced, text) => {
-        text.add(1, Text.of('§o§7Produces Mana, Allegedly'))
-    })
-    event.addAdvanced('gtceu:_manafield_simulator', (item, advanced, text) => {
-        text.add(1, Text.of('§o§7Produces Mana, Allegedly'))
-    })
-    event.addAdvanced('gtceu:ev_manafield_simulator', (item, advanced, text) => {
-        text.add(1, Text.of('§o§7Produces Mana, Allegedly'))
-    })
-    event.addAdvanced('gtceu:iv_manafield_simulator', (item, advanced, text) => {
-        text.add(1, Text.of('§o§7Miniature Mystical Powerhouse'))
-    })
-    event.addAdvanced('gtceu:luv_manafield_simulator', (item, advanced, text) => {
-        text.add(1, Text.of('§o§7Miniature Mystical Powerhouse'))
-    })
-    event.addAdvanced('gtceu:zpm_manafield_simulator', (item, advanced, text) => {
-        text.add(1, Text.of('§o§7Miniature Mystical Powerhouse'))
-    })
-    event.addAdvanced('gtceu:uv_manafield_simulator', (item, advanced, text) => {
-        text.add(1, Text.of('§o§7The Arcane, Reduced to Math'))
-    })
-
-    //culinary fabricators
-    event.addAdvanced('gtceu:lv_culinary_fabricator', (item, advanced, text) => {
-        text.add(1, Text.of('§o§7Chef in a Box'))
-    })      
-    event.addAdvanced('gtceu:mv_culinary_fabricator', (item, advanced, text) => {
-        text.add(1, Text.of('§o§7Chef in a Box'))
-    })    
-    event.addAdvanced('gtceu:hv_culinary_fabricator', (item, advanced, text) => {
-        text.add(1, Text.of('§o§7Chef in a Box'))
-    })     
-    event.addAdvanced('gtceu:ev_culinary_fabricator', (item, advanced, text) => {
-        text.add(1, Text.of('§o§7Chef in a Box'))
-    })
-    event.addAdvanced('gtceu:iv_culinary_fabricator', (item, advanced, text) => {
-        text.add(1, Text.of('§o§7Robotic Restaurant'))
-    })     
-    event.addAdvanced('gtceu:luv_culinary_fabricator', (item, advanced, text) => {
-        text.add(1, Text.of('§o§7Robotic Restaurant'))
-    })    
-    event.addAdvanced('gtceu:zpm_culinary_fabricator', (item, advanced, text) => {
-        text.add(1, Text.of('§o§7Robotic Restaurant'))
-    })  
-    event.addAdvanced('gtceu:uv_culinary_fabricator', (item, advanced, text) => {
-        text.add(1, Text.of('§o§7Sustanance at Scale'))
-    })
-
-    //beverage processor
-    event.addAdvanced('gtceu:lv_beverage_processor', (item, advanced, text) => {
-        text.add(1, Text.of('§o§7Barista in a Box'))
-    }) 
-    event.addAdvanced('gtceu:mv_beverage_processor', (item, advanced, text) => {
-        text.add(1, Text.of('§o§7Barista in a Box'))
-    }) 
-    event.addAdvanced('gtceu:hv_beverage_processor', (item, advanced, text) => {
-        text.add(1, Text.of('§o§7Barista in a Box'))
-    }) 
-    event.addAdvanced('gtceu:ev_beverage_processor', (item, advanced, text) => {
-        text.add(1, Text.of('§o§7Barista in a Box'))
-    }) 
-    event.addAdvanced('gtceu:iv_beverage_processor', (item, advanced, text) => {
-        text.add(1, Text.of('§o§7Robotic Refreshment'))
-    }) 
-    event.addAdvanced('gtceu:luv_beverage_processor', (item, advanced, text) => {
-        text.add(1, Text.of('§o§7Robotic Refreshment'))
-    })  
-    event.addAdvanced('gtceu:zpm_beverage_processor', (item, advanced, text) => {
-        text.add(1, Text.of('§o§7Robotic Refreshment'))
-    }) 
-    event.addAdvanced('gtceu:uv_beverage_processor', (item, advanced, text) => {
-        text.add(1, Text.of('§o§7Hydration at Scale'))
-    }) 
     //#endregion
+
+
 
     //#region items with lore
     event.addAdvanced('gtmutils:neutronium_credit', (item, advanced, text) => {
