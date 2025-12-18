@@ -13,6 +13,16 @@ StartupEvents.registry('item', event => {
                 .saturation(0.75)
                 .fastToEat()
         })
+    
+    event.create('farmersdelight:tomato_slice')
+        .displayName('Tomato Slice')
+        .texture('kubejs:item/delight/tomato_slice')
+                .food(food => {
+            food
+                .hunger(1)
+                .saturation(0.25)
+                .fastToEat()
+        })
 
     event.create('farmersdelight:chocolate_cake_slice')
         .displayName('Chocolate Cake Slice')
@@ -30,16 +40,6 @@ StartupEvents.registry('item', event => {
             food
                 .hunger(2)
                 .saturation(0.25)
-        })
-
-    event.create('farmersdelight:tomato_slice')
-        .displayName('Tomato Slice')
-        .texture('kubejs:item/delight/tomato_slice')
-                .food(food => {
-            food
-                .hunger(1)
-                .saturation(0.25)
-        })
-        
+        })       
     
 })
