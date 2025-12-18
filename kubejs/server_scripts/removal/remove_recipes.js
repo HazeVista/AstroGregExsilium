@@ -122,6 +122,7 @@ ServerEvents.recipes(event => {
         'ad_extendra:juperium_nugget', 'delightful:food_oven', 'delightful:food/sweet_berry_cheesecake_from_cheese', 'delightful:food/glow_jam_cookie', 'delightful:food/baklava_no_citrus', 
         'delightful:food/nut_dough', 'delightful:food/salmonberry_pie', 'create:milling/cocoa_beans', 'gtceu:shaped/cake_from_dough', 'farmersdelight:sweet_berry_cheesecake', 'farmersdelight:cutting/cake',
         
+        
     ])
     //#endregion
 
@@ -186,6 +187,6 @@ ServerEvents.recipes(event => {
     event.remove({ output: /gtceu:.*_air_scrubber/ });
     event.remove({ output: /minecraft:.*_armor_trim_smithing_template/})
     event.remove({ id: /farmersdelight:.*_pie_from_slices/})
-    event.remove({ id: /delightful:food\/.*_pie_from_slices/})
+    event.remove({ id: /delightful:food\/.*_from_slices/})
     //#endregion
 })

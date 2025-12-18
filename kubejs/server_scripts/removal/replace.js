@@ -48,8 +48,8 @@ ServerEvents.recipes(event => {
     event.replaceInput({output: 'gtceu:ev_hermetic_casing'}, 'gtceu:stainless_steel_large_fluid_pipe', 'gtceu:tungsten_carbide_large_fluid_pipe')
     event.replaceInput({output: 'gtceu:iv_hermetic_casing'}, 'gtceu:titanium_large_fluid_pipe', 'gtceu:osmiridium_large_fluid_pipe')
     event.replaceInput({output: 'gtceu:luv_hermetic_casing'}, 'gtceu:tungsten_steel_large_fluid_pipe', 'gtceu:polybenzimidazole_large_fluid_pipe')
-    event.replaceInput({output: 'delightful:uv_hermetic_casing'}, 'gtceu:naquadah_large_fluid_pipe', 'gtceu:duranium_large_fluid_pipe')
-    event.replaceInput({output: 'delightful:uhv_hermetic_casing'}, 'gtceu:duranium_large_fluid_pipe', 'astrogreg:polyamide_imide_large_fluid_pipe')
+    event.replaceInput({output: 'gtceu:uv_hermetic_casing'}, 'gtceu:naquadah_large_fluid_pipe', 'gtceu:duranium_large_fluid_pipe')
+    event.replaceInput({output: 'gtceu:uhv_hermetic_casing'}, 'gtceu:duranium_large_fluid_pipe', 'astrogreg:polyamide_imide_large_fluid_pipe')
     event.replaceInput({}, '#forge:crops/cabbage', 'farmersdelight:cabbage_leaf')
     // event.replaceInput({input: ''}, '', '')
     //#endregion
