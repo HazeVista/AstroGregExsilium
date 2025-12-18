@@ -141,7 +141,7 @@ ServerEvents.recipes(event => {
     //#region basic mats & components
     //basic materials
     mixing('mixer_ender_eye_dust', 'gtceu:ender_pearl_dust', 'minecraft:blaze_powder', '2x gtceu:ender_eye_dust', 160, 9)
-    mixing('skystone_dust_mixing', 'gtceu:certus_quartz_dust', '3x gtceu:stone_dust', '4x ae2:sky_dust', 160, 120)
+    mixing('skystone_dust_mixing', 'gtceu:certus_quartz_dust', '3x #forge:stone_dust', '4x ae2:sky_dust', 160, 120)
     mixing('futura_alloy_mixing', '4x gtceu:stainless_steel_dust', 'ae2:sky_dust', '5x astrogreg:futura_alloy_dust', 200, 450)
     mixing('mix_fluix_pearl_dust', '8x ae2:fluix_dust', 'gtceu:ender_eye_dust', 'astrogreg:fluix_pearl_dust', 240, 480)
         
