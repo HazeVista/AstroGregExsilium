@@ -1,140 +1,147 @@
 ItemEvents.tooltip(event => {
-    //#region multiblocks
-    //greenhouses
-    event.addAdvanced('gtceu:greenhouse', (item, advanced, text) => {
-        text.add(1, Text.of('§o§7Electric Garden!'))
-    })
-    event.addAdvanced('gtceu:conservatory', (item, advanced, text) => {
-        text.add(1, Text.of('§o§7Electric Plantation!'))
-        text.add(2, Text.of('§o§7Can parallelize with Parallel Control Hatches'))
-    })
-
-    //generators
-    event.addAdvanced('gtceu:aether_engine', (item, advanced, text) => {
-        text.add(3, Text.of('Converts §3Æther§r into EU'))
-    })
+    
+    //#region tooltip design guide
+    /*
+    *   
+    *   Reference this spreadsheet for information on formatting text color and style in Minecraft:
+    *   https://docs.google.com/spreadsheets/d/1Wb28oe5-VFauhTez_u2o7bBstofGxM35DeMtv6cvrQY/edit?usp=sharing
+    *      
+    *   Adding a space between your code and text will create a space on the tooltip. Use that knowledge accordingly.
+    *   §o§7 is the default light gray code I personally use for most tooltips.
+    * 
+    */
     //#endregion
 
-    //#region singleblocks
     
+    
+    //#region multiblocks
+    /*
+    *   Multiblock Tooltip Builder
+    *   how to use:
+    *    
+    *       multiTooltip(event, 'multiblock_id', [
+    *           {text: '§o§7Brief witty line!'},            You can add one or multiple lines like this, defaults to line 1
+    *           {text: '§o§7Some important description.'}   A new line under a machine will go to the next line, as many as you want
+    *       ])
+    * 
+    *       multiTooltip(event, 'multiblock_id', [
+    *           {line: 4, text: '§o§7Brief witty line!'}    This will add your tooltip to a specific line. In this example, line 4
+    *       ])                                              You can continue this with more lines as well
+    * 
+    */
+    multiTooltip(event, 'gtceu:greenhouse', [
+        { text: '§o§7Electric Garden!' }
+    ])
+
+    multiTooltip(event, 'gtceu:conservatory', [
+        { text: '§o§7Electric Plantation!' },
+        { text: '§o§7Can parallelize with Parallel Control Hatches' }
+    ])
+
+    multiTooltip(event, 'gtceu:aether_engine', [
+        { line: 3, text: 'Converts §3Æther§r into EU' }
+    ])
+
+    function multiTooltip(event, machineId, tooltips) {
+        event.addAdvanced(machineId, (item, advanced, text) => {
+            tooltips.forEach(tooltip => {
+                const line = tooltip.line !== undefined ? tooltip.line : text.size() + 1
+                text.add(line, Text.of(tooltip.text))
+            })
+        })
+    }
+    //#endregion
+
+
+    
+    //#region singleblocks
+    /*
+    *   Singleblock Tooltip Builder
+    *   how to use:
+    *       
+    *   'machine_id': {
+    *       'lv,mv,hv,ev': '§o§7Blah blah blah something witty',
+    *       'iv,luv,zpm': '§o§7Something witty and cool',
+    *       'uv': '§o§7This tooltip has aura'
+    *   }
+    */
+    const singleTooltip = {
+        'mana_infuser': {
+            'lv,mv,hv,ev': '§o§7Who needs mana pools?',
+            'iv,luv,zpm': '§o§7Base Botania is for chumps anyways',
+            'uv': '§o§7Mechanized Mana Manipulation Matrix'
+        },
+        'manafield_simulator': {
+            'lv,mv,hv,ev': '§o§7Produces Mana, Allegedly',
+            'iv,luv,zpm': '§o§7Miniature Mystical Powerhouse',
+            'uv': '§o§7The Arcane, Reduced to Math'
+        },
+        'culinary_fabricator': {
+            'lv,mv,hv,ev': '§o§7Chef in a Box',
+            'iv,luv,zpm': '§o§7Robotic Restaurant',
+            'uv': '§o§7Sustanance at Scale'
+        },
+        'beverage_processor': {
+            'lv,mv,hv,ev': '§o§7Barista in a Box',
+            'iv,luv,zpm': '§o§7Robotic Refreshment',
+            'uv': '§o§7Hydration at Scale'
+        }
+    }
+
+    //tooltip builder
+    Object.entries(singleTooltip).forEach(([machine, tierGroups]) => {
+        Object.entries(tierGroups).forEach(([tiers, tooltip]) => {
+            tiers.split(',').forEach(tier => {
+                event.addAdvanced(`gtceu:${tier}_${machine}`, (item, advanced, text) => {
+                    text.add(1, Text.of(tooltip));
+                })
+            })
+        })
+    })
+
+    //unique
     event.addAdvanced('gtceu:ulv_water_source', (item, advanced, text) => {
         text.add(1, Text.of('§o§7A Great Source of Water!'))
         text.add(2, Text.of('§o§7This machine does not require power to operate.'))
     })
-
-    //mana in
-    event.addAdvanced('gtceu:lv_mana_infuser', (item, advanced, text) => {
-        text.add(1, Text.of('§o§7Who needs mana pools?'))
-    })
-    event.addAdvanced('gtceu:mv_mana_infuser', (item, advanced, text) => {
-        text.add(1, Text.of('§o§7Who needs mana pools?'))
-    })
-    event.addAdvanced('gtceu:hv_mana_infuser', (item, advanced, text) => {
-        text.add(1, Text.of('§o§7Who needs mana pools?'))
-    })
-    event.addAdvanced('gtceu:ev_mana_infuser', (item, advanced, text) => {
-        text.add(1, Text.of('§o§7Who needs mana pools?'))
-    })   
-    event.addAdvanced('gtceu:iv_mana_infuser', (item, advanced, text) => {
-        text.add(1, Text.of('§o§7Base Botania is for chumps anyways.'))
-    })
-    event.addAdvanced('gtceu:luv_mana_infuser', (item, advanced, text) => {
-        text.add(1, Text.of('§o§7Base Botania is for chumps anyways.'))
-    })  
-    event.addAdvanced('gtceu:zpm_mana_infuser', (item, advanced, text) => {
-        text.add(1, Text.of('§o§7Base Botania is for chumps anyways.'))
-    })
-    event.addAdvanced('gtceu:uv_mana_infuser', (item, advanced, text) => {
-        text.add(1, Text.of('§o§7Mechanized Mana Manipulation Matrix'))
-    })
-
-    //manafield simulators
-    event.addAdvanced('gtceu:_manafield_simulator', (item, advanced, text) => {
-        text.add(1, Text.of('§o§7Produces Mana, Allegedly'))
-    })
-    event.addAdvanced('gtceu:_manafield_simulator', (item, advanced, text) => {
-        text.add(1, Text.of('§o§7Produces Mana, Allegedly'))
-    })
-    event.addAdvanced('gtceu:_manafield_simulator', (item, advanced, text) => {
-        text.add(1, Text.of('§o§7Produces Mana, Allegedly'))
-    })
-    event.addAdvanced('gtceu:ev_manafield_simulator', (item, advanced, text) => {
-        text.add(1, Text.of('§o§7Produces Mana, Allegedly'))
-    })
-    event.addAdvanced('gtceu:iv_manafield_simulator', (item, advanced, text) => {
-        text.add(1, Text.of('§o§7Miniature Mystical Powerhouse'))
-    })
-    event.addAdvanced('gtceu:luv_manafield_simulator', (item, advanced, text) => {
-        text.add(1, Text.of('§o§7Miniature Mystical Powerhouse'))
-    })
-    event.addAdvanced('gtceu:zpm_manafield_simulator', (item, advanced, text) => {
-        text.add(1, Text.of('§o§7Miniature Mystical Powerhouse'))
-    })
-    event.addAdvanced('gtceu:uv_manafield_simulator', (item, advanced, text) => {
-        text.add(1, Text.of('§o§7The Arcane, Reduced to Math'))
-    })
-
-    //culinary fabricators
-    event.addAdvanced('gtceu:lv_culinary_fabricator', (item, advanced, text) => {
-        text.add(1, Text.of('§o§7Chef in a Box'))
-    })      
-    event.addAdvanced('gtceu:mv_culinary_fabricator', (item, advanced, text) => {
-        text.add(1, Text.of('§o§7Chef in a Box'))
-    })    
-    event.addAdvanced('gtceu:hv_culinary_fabricator', (item, advanced, text) => {
-        text.add(1, Text.of('§o§7Chef in a Box'))
-    })     
-    event.addAdvanced('gtceu:ev_culinary_fabricator', (item, advanced, text) => {
-        text.add(1, Text.of('§o§7Chef in a Box'))
-    })
-    event.addAdvanced('gtceu:iv_culinary_fabricator', (item, advanced, text) => {
-        text.add(1, Text.of('§o§7Robotic Restaurant'))
-    })     
-    event.addAdvanced('gtceu:luv_culinary_fabricator', (item, advanced, text) => {
-        text.add(1, Text.of('§o§7Robotic Restaurant'))
-    })    
-    event.addAdvanced('gtceu:zpm_culinary_fabricator', (item, advanced, text) => {
-        text.add(1, Text.of('§o§7Robotic Restaurant'))
-    })  
-    event.addAdvanced('gtceu:uv_culinary_fabricator', (item, advanced, text) => {
-        text.add(1, Text.of('§o§7Sustanance at Scale'))
-    })
-
-    //beverage processor
-    event.addAdvanced('gtceu:lv_beverage_processor', (item, advanced, text) => {
-        text.add(1, Text.of('§o§7Barista in a Box'))
-    }) 
-    event.addAdvanced('gtceu:mv_beverage_processor', (item, advanced, text) => {
-        text.add(1, Text.of('§o§7Barista in a Box'))
-    }) 
-    event.addAdvanced('gtceu:hv_beverage_processor', (item, advanced, text) => {
-        text.add(1, Text.of('§o§7Barista in a Box'))
-    }) 
-    event.addAdvanced('gtceu:ev_beverage_processor', (item, advanced, text) => {
-        text.add(1, Text.of('§o§7Barista in a Box'))
-    }) 
-    event.addAdvanced('gtceu:iv_beverage_processor', (item, advanced, text) => {
-        text.add(1, Text.of('§o§7Robotic Refreshment'))
-    }) 
-    event.addAdvanced('gtceu:luv_beverage_processor', (item, advanced, text) => {
-        text.add(1, Text.of('§o§7Robotic Refreshment'))
-    })  
-    event.addAdvanced('gtceu:zpm_beverage_processor', (item, advanced, text) => {
-        text.add(1, Text.of('§o§7Robotic Refreshment'))
-    }) 
-    event.addAdvanced('gtceu:uv_beverage_processor', (item, advanced, text) => {
-        text.add(1, Text.of('§o§7Hydration at Scale'))
-    }) 
     //#endregion
+
+
 
     //#region items with lore
-    event.addAdvanced('gtmutils:neutronium_credit', (item, advanced, text) => {
-        text.add(Text.of('Coin made out of a confidential, indestructible substance, with a composition only known by the mysterious §4ASTRO Foundation§r'))    
-    })
+    /*
+    *   Lore Item Tooltip Builder
+    *   how to use:
+    *   
+    *       
+    *       loreTooltip(event, 'multiblock_id', [
+    *           {text: '§o§7Something interesting!'},       You can add one or multiple lines like this, defaults to line 1
+    *           {text: '§o§7An important description.'}     A new line under a machine will go to the next line, as many as you want
+    *       ])
+    * 
+    *       loreTooltip(event, 'multiblock_id', [
+    *           {line: 4, text: '§o§7Something interesting!'}    This will add your tooltip to a specific line. In this example, line 4
+    *       ])                                                   You can continue this with more lines as well
+    * 
+    */
+    loreTooltip(event, 'gtmutils:neutronium_credit', [
+        {text: 'Coin made out of a confidential, indestructible substance, with a composition only known by the mysterious §4ASTRO Foundation§r'}    
+    ])
 
-    event.addAdvanced('farmersdelight:bacon_sandwich', (item, advanced, text) => {
-        text.add(Text.of('§o§7Mmmmm... Tasty!§r§7 - Ubit3y'))
-    })
-    //#endregion
-    
+    loreTooltip(event, 'farmersdelight:bacon_sandwich', [
+        {text: '§o§7Mmmmm... Tasty!§r§7 - Ubit3y'},
+    ])
+
+
+    //lore tooltip builder
+    function loreTooltip(event, machineId, tooltips) {
+        event.addAdvanced(machineId, (item, advanced, text) => {
+            tooltips.forEach(tooltip => {
+                const line = tooltip.line !== undefined ? tooltip.line : text.size() + 1
+                text.add(line, Text.of(tooltip.text))
+            })
+        })
+    }
+    //#endregion    
+
 })

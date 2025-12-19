@@ -21,8 +21,10 @@ StartupEvents.registry('item', event => {
     'spring', 'summer', 'autumn', 'winter',
     'mana', 'lust', 'gluttony', 'greed',
     'sloth', 'wrath', 'envy', 'pride',
-    'energy', 'space', 'life', 'gaia',
-    'gregorious'
+    'energy', 'space', 'life', 'mercury', 
+    'venus', 'gaia', 'mars', 'ceres',
+    'jupiter', 'saturn', 'uranus', 
+    'neptune', 'gregorious'
     ]
 
     runes.forEach(rune => {

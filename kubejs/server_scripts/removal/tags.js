@@ -81,7 +81,10 @@ ServerEvents.tags('item', event => {
             'botania:lust_rune', 'botania:gluttony_rune', 'botania:greed_rune',
             'botania:sloth_rune', 'botania:wrath_rune', 'botania:envy_rune',
             'botania:pride_rune', 'botania:energy_rune', 'botania:space_rune',
-            'botania:life_rune', 'botania:gaia_rune'],
+            'botania:life_rune', 'botania:mercury_rune', 'botania:venus_rune',
+            'botania:gaia_rune', 'botania:mars_rune', 'botania:ceres_rune', 
+            'botania:jupiter_rune', 'botania:saturn_rune', 'botania:uranus_rune', 
+            'botania:neptune_rune'],
 
         'forge:grass': 
             ['minecraft:grass', 'farmersdelight:sandy_shrub', 'minecraft:tall_grass'],
@@ -109,7 +112,8 @@ ServerEvents.tags('item', event => {
             ['minecraft:beef', 'minecraft:chicken', 'minecraft:mutton',
             'minecraft:porkchop', 'minecraft:rabbit', 'delightful:raw_goat'],
 
-        'forge:meat_small': ['farmersdelight:minced_beef', 'farmersdelight:chicken_cuts',
+        'forge:meat_small': 
+            ['farmersdelight:minced_beef', 'farmersdelight:chicken_cuts',
             'farmersdelight:bacon', 'farmersdelight:cod_slice',
             'farmersdelight:salmon_slice', 'farmersdelight:mutton_chops'],
 
@@ -126,8 +130,8 @@ ServerEvents.tags('item', event => {
             ['astrogreg:dragonstone_lens'],
 
         'forge:stone_dust':
-            ['astrogreg:asteroid_stone_dust', 'gtceu:blackstone_dust', 'gtceu:stone_dust', 
-                'gtceu:soapstone_dust', 'gtceu:endstone_dust'],
+            ['gtceu:stone_dust', 'astrogreg:asteroid_stone_dust', 'gtceu:blackstone_dust',  
+            'gtceu:soapstone_dust', 'gtceu:endstone_dust'],
         
         'forge:vegetables':
             ['farmersdelight:tomato_slice'],
