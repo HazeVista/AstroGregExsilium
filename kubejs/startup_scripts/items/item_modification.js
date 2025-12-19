@@ -90,6 +90,22 @@ ItemEvents.modification(event => {
     event.modify('minecraft:pumpkin_pie', item => {
         item.foodProperties = null
     })
+ 
+    event.modify('delightful:matcha_milkshake', item => {
+        item.foodProperties = food => {
+            food
+                .hunger(4)
+                .saturation(1)
+        }
+    })
+  
+    event.modify('delightful:salmonberry_milkshake', item => {
+        item.foodProperties = food => {
+            food
+                .hunger(4)
+                .saturation(1)
+        }
+    })     
     //#endregion
 
     /*
