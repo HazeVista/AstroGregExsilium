@@ -114,12 +114,12 @@ ItemEvents.tooltip(event => {
     *   how to use:
     *   
     *       
-    *       loreTooltip(event, 'multiblock_id', [
+    *       loreTooltip(event, 'item_id', [
     *           {text: '§o§7Something interesting!'},       You can add one or multiple lines like this, defaults to line 1
     *           {text: '§o§7An important description.'}     A new line under a machine will go to the next line, as many as you want
     *       ])
     * 
-    *       loreTooltip(event, 'multiblock_id', [
+    *       loreTooltip(event, 'item_id', [
     *           {line: 4, text: '§o§7Something interesting!'}    This will add your tooltip to a specific line. In this example, line 4
     *       ])                                                   You can continue this with more lines as well
     * 
@@ -143,5 +143,37 @@ ItemEvents.tooltip(event => {
         })
     }
     //#endregion    
+
+
+
+    //#region items with tips
+    /*
+    *   Item Tips Tooltip Builder
+    *   how to use:
+    *   
+    *       
+    *       loreTooltip(event, 'item_id', [
+    *           {text: '§o§7A helpful tip'},                You can add one or multiple lines like this, defaults to line 1
+    *           {text: '§o§7An important description.'}     A new line under a machine will go to the next line, as many as you want
+    *       ])
+    * 
+    *       loreTooltip(event, 'item_id', [
+    *           {line: 4, text: '§o§7A helpful tip'}        This will add your tooltip to a specific line. In this example, line 4
+    *       ])                                              You can continue this with more lines as well
+    * 
+    */
+
+    tipTooltip(event, 'astrogreg:uhv_parallel_hatch', [
+        {text: 'Allows to run up to 1024 recipes in parallel'},
+        {text: 'Multiblock Sharing §4Disabled'}
+    ])
+
+    function tipTooltip(event, machineId, tooltips) {
+        event.addAdvanced(machineId, (item, advanced, text) => {
+            const line = tooltip.line !== undefined ? tooltip.line : text.size() + 1
+            text.add(line, Text.of(tooltip.next))
+        })
+    }
+    //#endregion
 
 })

@@ -95,7 +95,7 @@ ItemEvents.modification(event => {
         item.foodProperties = food => {
             food
                 .hunger(4)
-                .saturation(1)
+                .saturation(0.75)
         }
     })
   
@@ -103,7 +103,7 @@ ItemEvents.modification(event => {
         item.foodProperties = food => {
             food
                 .hunger(4)
-                .saturation(1)
+                .saturation(0.75)
         }
     })     
     //#endregion

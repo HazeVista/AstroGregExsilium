@@ -83,7 +83,8 @@ ClientEvents.lang('en_us', event => {
         ['iv_parallel_hatch', '§9Basic Parallel Control Hatch'],
         ['luv_parallel_hatch', '§dAdvanced Parallel Control Hatch'],
         ['zpm_parallel_hatch', '§cElite Parallel Control Hatch'],
-        ['uv_parallel_hatch', '§3Ultimate Parallel Control Hatch']
+        ['uv_parallel_hatch', '§3Ultimate Parallel Control Hatch'],
+        ['uhv_parallel_hatch', '§4Quintessential Parallel Control Hatch']
     ])
     //#endregion
 

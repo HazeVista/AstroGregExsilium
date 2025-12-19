@@ -9,29 +9,29 @@ const processor = event.recipes.gtceu.beverage_processor
 //#region machine recipes
 
 
-    const tiered_machines = [
-        ['lv', 'tin', '#forge:glass'],
-        ['mv', 'copper', '#forge:glass'],
-        ['hv', 'gold', 'gtceu:tempered_glass'],
-        ['ev', 'aluminium', 'gtceu:tempered_glass'],
-        ['iv', 'platinum', 'gtceu:laminated_glass'],
-        ['luv', 'niobium_titanium', 'gtceu:laminated_glass'],
-        ['zpm', 'vanadium_gallium', 'gtceu:fusion_glass'],
-        ['uv', 'yttrium_barium_cuprate', 'gtceu:fusion_glass']
+    const tieredParts = [
+        ['lv', 'cobalt_brass', 'tin', '#forge:glass'],
+        ['mv', 'vanadium_steel', 'copper', '#forge:glass'],
+        ['hv', 'red_steel', 'gold', 'gtceu:tempered_glass'],
+        ['ev', 'ultimet', 'aluminium', 'gtceu:tempered_glass'],
+        ['iv', 'tungsten_carbide', 'platinum', 'gtceu:laminated_glass'],
+        ['luv', 'hsse', 'niobium_titanium', 'gtceu:laminated_glass'],
+        ['zpm', 'naquadah_alloy', 'vanadium_gallium', 'gtceu:fusion_glass'],
+        ['uv', 'duranium', 'yttrium_barium_cuprate', 'gtceu:fusion_glass']
     ]
 
-    tiered_machines.forEach(([tier, cable, glass]) => {
+    tieredParts.forEach(([tier, buzzsaw, cable, glass]) => {
         event.shaped(`gtceu:${tier}_beverage_processor`, [
             'FCF',
             'BDB',
             'EAG'
         ], {
-            A: glass,
+            A: `#gtceu:circuits/${tier}`,
             B: `gtceu:${cable}_single_cable`,
-            C: `#gtceu:circuits/${tier}`,
+            C: `gtceu:${buzzsaw}_buzzsaw_blade`,    
             D: `gtceu:${tier}_machine_hull`,
             E: `gtceu:${tier}_electric_pump`,
-            F: `minecraft:glass_bottle`,
+            F: glass,
             G: `gtceu:${tier}_conveyor_module`
         })
     })
