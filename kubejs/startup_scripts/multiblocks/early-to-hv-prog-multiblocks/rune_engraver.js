@@ -4,7 +4,7 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
         .setEUIO('in')
         .setMaxIOSize(9, 1, 3, 0)
         .setProgressBar(AstroGUITextures.PROGRESS_BAR_RUNE, FillDirection.LEFT_TO_RIGHT)
-        .setSound(GTSoundEntries.ELECTROLYZER)
+        .setSound(AstroSoundEntries.RUNE_ENGRAVER)
         // .setIconSupplier(()=> Item.get('botania:gregorious_rune'))  //need to do this in java, removes all custom recipes otherwise
 })
 

@@ -24,7 +24,7 @@ features:
 
   # Multiplier over IO amount for additional coolant drain.
   # (Setting both this and the base drain amount to 0 disables the coolant mechanic.)
-  pterbCoolantIOMultiplier: 0
+  pterbCoolantIOMultiplier: 0.0
 
   # Whether the coins/credits are enabled.
   coinsEnabled: true
@@ -46,4 +46,7 @@ features:
 
   # Whether the custom ZPM tools are enabled.
   customZPMToolsEnabled: true
+
+  # Whether the Auto Turbo Chargers are enabled.
+  autoChargersEnabled: false
 
