@@ -1,18 +1,17 @@
 {
-  "ambient_light": 1,
+  "ambient_light": 0.1,
   "bed_works": true,
   "coordinate_scale": 1,
   "effects": "ad_astra:kuiper_belt",
-  "fixed_time": 6000,
   "has_ceiling": false,
   "has_raids": false,
-  "has_skylight": true,
+  "has_skylight": false,
   "height": 256,
   "infiniburn": "#minecraft:infiniburn_end",
   "logical_height": 256,
   "min_y": 0,
   "monster_spawn_block_light_limit": 0,
-  "monster_spawn_light_level": {
+  "monster_spawn_light_level": {  
     "type": "minecraft:uniform",
     "value": {
       "max_inclusive": 7,
