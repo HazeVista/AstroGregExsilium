@@ -151,12 +151,12 @@ ItemEvents.tooltip(event => {
     *   how to use:
     *   
     *       
-    *       loreTooltip(event, 'item_id', [
+    *       tipTooltip(event, 'item_id', [
     *           {text: '§o§7A helpful tip'},                You can add one or multiple lines like this, defaults to line 1
     *           {text: '§o§7An important description.'}     A new line under a machine will go to the next line, as many as you want
     *       ])
     * 
-    *       loreTooltip(event, 'item_id', [
+    *       tipTooltip(event, 'item_id', [
     *           {line: 4, text: '§o§7A helpful tip'}        This will add your tooltip to a specific line. In this example, line 4
     *       ])                                              You can continue this with more lines as well
     * 
