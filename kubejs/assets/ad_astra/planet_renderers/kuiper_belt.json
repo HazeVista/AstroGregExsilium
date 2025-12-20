@@ -3,16 +3,16 @@
   "custom_sky": true,
   "custom_weather": true,
   "dimension": "ad_astra:kuiper_belt",
-  "has_fog": false,
+  "has_fog": true,
   "has_thick_fog": false,
   "render_in_rain": true,
   "sky_renderables": [
     {
-      "back_light_color": 12632256,
-      "back_light_scale": 100.0,
-      "blend": true,
+      "back_light_color": 0,
+      "back_light_scale": 0.0,
+      "blend": false,
       "global_rotation": [
-        82.0,
+        90.0,
         0.0,
         0.0
       ],
@@ -22,7 +22,7 @@
         0.0
       ],
       "movement_type": "TIME_OF_DAY",
-      "scale": 20.0,
+      "scale": 8.0,
       "texture": "ad_astra:textures/environment/sun.png"
     },
     {
@@ -30,17 +30,17 @@
       "back_light_scale": 0.0,
       "blend": false,
       "global_rotation": [
-        82.0,
+        100.0,
         0.0,
-        -25.0
+        -35.0
       ],
       "local_rotation": [
         0.0,
         0.0,
         0.0
       ],
-      "movement_type": "STATIC",
-      "scale": 15.0,
+      "movement_type": "TIME_OF_DAY",
+      "scale": 4.0,
       "texture": "ad_extendra:textures/environment/jupiter.png"
     },
     {
@@ -48,17 +48,17 @@
       "back_light_scale": 0.0,
       "blend": false,
       "global_rotation": [
-        82.0,
+        95.0,
         0.0,
-        -12.0
+        -18.0
       ],
       "local_rotation": [
         0.0,
         0.0,
         0.0
       ],
-      "movement_type": "STATIC",
-      "scale": 18.0,
+      "movement_type": "TIME_OF_DAY",
+      "scale": 5.5,
       "texture": "ad_extendra:textures/environment/saturn.png"
     },
     {
@@ -66,17 +66,17 @@
       "back_light_scale": 0.0,
       "blend": false,
       "global_rotation": [
-        82.0,
+        85.0,
         0.0,
-        2.0
+        10.0
       ],
       "local_rotation": [
         0.0,
         0.0,
         0.0
       ],
-      "movement_type": "STATIC",
-      "scale": 12.0,
+      "movement_type": "TIME_OF_DAY",
+      "scale": 3.0,
       "texture": "ad_extendra:textures/environment/uranus.png"
     },
     {
@@ -84,17 +84,17 @@
       "back_light_scale": 0.0,
       "blend": false,
       "global_rotation": [
-        82.0,
+        80.0,
         0.0,
-        15.0
+        25.0
       ],
       "local_rotation": [
         0.0,
         0.0,
         0.0
       ],
-      "movement_type": "STATIC",
-      "scale": 13.0,
+      "movement_type": "TIME_OF_DAY",
+      "scale": 3.0,
       "texture": "ad_extendra:textures/environment/neptune.png"
     },
     {
@@ -102,28 +102,64 @@
       "back_light_scale": 0.0,
       "blend": false,
       "global_rotation": [
-        82.0,
+        75.0,
         0.0,
-        28.0
+        42.0
       ],
       "local_rotation": [
         0.0,
         0.0,
         0.0
       ],
-      "movement_type": "STATIC",
-      "scale": 7.0,
+      "movement_type": "TIME_OF_DAY",
+      "scale": 1.5,
       "texture": "ad_extendra:textures/environment/pluto.png"
     }
   ],
   "star_brightness": 0.5,
   "star_colors": [
     {
-      "data": -1,
+      "data": -1447239681,
+      "weight": 3
+    },
+    {
+      "data": -1143472129,
+      "weight": 5
+    },
+    {
+      "data": -726785,
       "weight": 100
+    },
+    {
+      "data": -3038977,
+      "weight": 80
+    },
+    {
+      "data": -7697665,
+      "weight": 150
+    },
+    {
+      "data": -12254977,
+      "weight": 10
+    },
+    {
+      "data": -2817,
+      "weight": 60
+    },
+    {
+      "data": -464897,
+      "weight": 40
+    },
+    {
+      "data": -256,
+      "weight": 20
+    },
+    {
+      "data": -65536,
+      "weight": 1
     }
   ],
   "stars": 12000,
   "sunrise_angle": 0,
-  "sunrise_color": 0
+  "sunrise_color": 16777215
 }
