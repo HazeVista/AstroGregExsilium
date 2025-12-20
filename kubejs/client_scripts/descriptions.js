@@ -129,9 +129,8 @@ ItemEvents.tooltip(event => {
     ])
 
     loreTooltip(event, 'farmersdelight:bacon_sandwich', [
-        {text: '§o§7Mmmmm... Tasty!§r§7 - Ubit3y'},
+        {text: '§o§7Mmmmm... Tasty!§r§7 - Ubit3y'}
     ])
-
 
     //lore tooltip builder
     function loreTooltip(event, machineId, tooltips) {
@@ -162,16 +161,14 @@ ItemEvents.tooltip(event => {
     *       ])                                              You can continue this with more lines as well
     * 
     */
-
-    tipTooltip(event, 'astrogreg:uhv_parallel_hatch', [
-        {text: 'Allows to run up to 1024 recipes in parallel'},
-        {text: 'Multiblock Sharing §4Disabled'}
-    ])
-
+ 
+    //tips tooltip builder
     function tipTooltip(event, machineId, tooltips) {
         event.addAdvanced(machineId, (item, advanced, text) => {
-            const line = tooltip.line !== undefined ? tooltip.line : text.size() + 1
-            text.add(line, Text.of(tooltip.next))
+            tooltips.forEach(tooltip => {
+                const line = tooltip.line !== undefined ? tooltip.line : text.size() + 1
+                text.add(line, Text.of(tooltip.text))
+            })
         })
     }
     //#endregion
