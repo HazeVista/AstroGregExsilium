@@ -45,7 +45,7 @@ ServerEvents.tags('item', event => {
         'ad_extendra:juperium_plate', 'ad_extendra:saturlyte_ingot',
         'ad_extendra:saturlyte_plate', 'delightful:source_berry_cookie',
         'astrogreg:small_sky_stone_dust', 'astrogreg:tiny_sky_stone_dust',
-        'expandedae:dual_cell_housing', 'expandedae:mega_dual_cell_housing'
+        'expandedae:dual_cell_housing', 'expandedae:mega_dual_cell_housing',
     ]
 
         //wildcard removals
@@ -170,8 +170,10 @@ ServerEvents.tags('block', event => {
     const blocksToStrip = [
         'ad_extendra:raw_plutonium_block', 'ad_extendra:plutonium_block',
         'ad_extendra:uraninium_block', 'ad_extendra:raw_uranium_block',
-        'createaddition:electrum_block', 'ad_extendra:b_sand'
+        'createaddition:electrum_block',
     ]
+
+    event.removeAllTagsFrom(/ad_extendra:.b_.*/)
     //#endregion
 
 

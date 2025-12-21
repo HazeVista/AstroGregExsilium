@@ -1,4 +1,6 @@
 ServerEvents.recipes(event => {
+
+    //#region helpers
     const gt = event.recipes.gtceu
 
     const planets = [
@@ -13,7 +15,11 @@ ServerEvents.recipes(event => {
         ['ad_extendra:neptune', 'neptune'], 
         ['ad_extendra:pluto', 'pluto']
     ]
+    //#endregion
 
+
+
+    //#region gtceu integration
     planets.forEach(([dimension, planet]) => {
         const modId = dimension.split(':')[0]
         
@@ -189,4 +195,42 @@ ServerEvents.recipes(event => {
             .duration(20)
             .EUt(2)
     })
+    //#endregion
+
+
+
+    //#region sandstone
+    gt.compressor('compress_sandstone')
+        .itemInputs('minecraft:sand')
+        .itemOutputs('minecraft:sandstone')
+        .duration(300)
+        .EUt(2)
+
+    event.shaped('minecraft:sandstone', [
+        'AA',
+        'AA'
+    ], {
+        A: 'minecraft:sand'
+    })
+
+    gt.compressor('compress_venus_sandstone')
+        .itemInputs('ad_astra:venus_sand')
+        .itemOutputs('ad_astra:venus_sandstone')
+        .duration(300)
+        .EUt(2)
+
+    gt.assembler('assemble_venus_sandstone_bricks')
+        .itemInputs('3x ad_astra:venus_sandstone_bricks')
+        .itemOutputs('4x ad_astra:venus_sandstone_brick_stairs')
+        .duration(80)
+        .circuit(7)
+        .EUt(8)
+
+    gt.assembler('assemble_venus_sandstone_bricks')
+        .itemInputs('ad_astra:venus_sandstone')
+        .itemOutputs('ad_astra:venus_sandstone_bricks')
+        .duration(80)
+        .circuit(4)
+        .EUt(8)
+    //#endregion
 })
