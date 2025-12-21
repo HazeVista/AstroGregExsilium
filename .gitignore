@@ -1,7 +1,7 @@
 # Ignore everything so repository can be used in game instance
 /*
 
-# Add directories with soure code
+# Add directories with source code
 !config/
 !defaultconfigs/
 !kubejs/

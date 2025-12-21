@@ -14,7 +14,7 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
 		.category('simple')
 		.setEUIO('in')
 		.setMaxIOSize(2, 1, 1, 1)
-        .setSlotOverlay(false, false, GuiTextures.BREWER_OVERLAY)
+        .setSlotOverlay(false, false, true, GuiTextures.BREWER_OVERLAY)
 		.setProgressBar(AstroGUITextures.PROGRESS_BAR_MANA_INFUSION, FillDirection.LEFT_TO_RIGHT)
 		.setSound(GTSoundEntries.REPLICATOR)
 
@@ -22,7 +22,7 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
 		.category('simple')
 		.setEUIO('in')
 		.setMaxIOSize(2, 1, 1, 1)
-        .setSlotOverlay(false, false, GuiTextures.BREWER_OVERLAY)
+        .setSlotOverlay(false, false, true, GuiTextures.BREWER_OVERLAY)
 		.setProgressBar(AstroGUITextures.PROGRESS_BAR_MANA_INFUSION, FillDirection.LEFT_TO_RIGHT)
 		.setSound(GTSoundEntries.REPLICATOR)
 });
