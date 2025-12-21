@@ -47,7 +47,7 @@ StartupEvents.registry('block', event => {
         .resistance(0.8)
         .soundType('sand')
         .requiresTool(false)
-        .tagBoth('forge:sand')
+        .tagBoth('minecraft:smelts_to_glass')
         .mapColor('terracotta_purple' )
         .tagBlock('mineable/shovel')
         .textureAll('kubejs:block/rocks/asteroid_sand')

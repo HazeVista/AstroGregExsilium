@@ -62,7 +62,7 @@ const engrave = event.recipes.gtceu.rune_inscription
         
     engrave('summer_rune')
         .notConsumable('botania:lens_normal')
-        .itemInputs('#forge:sand', 'botania:manasteel_ingot', '#minecraft:logs', 'botania:earth_rune', 'botania:air_rune', 'botania:livingrock')
+        .itemInputs('#minecraft:smelts_to_glass', 'botania:manasteel_ingot', '#minecraft:logs', 'botania:earth_rune', 'botania:air_rune', 'botania:livingrock')
         .inputFluids('manafluid:mana 75')
         .itemOutputs('botania:summer_rune')
         .duration(200)

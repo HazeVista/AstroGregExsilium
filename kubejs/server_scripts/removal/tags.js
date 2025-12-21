@@ -130,8 +130,11 @@ ServerEvents.tags('item', event => {
             ['astrogreg:dragonstone_lens'],
 
         'forge:stone_dust':
-            ['gtceu:stone_dust', 'astrogreg:asteroid_stone_dust', 'gtceu:blackstone_dust',  
-            'gtceu:soapstone_dust', 'gtceu:endstone_dust'],
+            ['gtceu:stone_dust', 'astrogreg:asteroid_stone_dust', 'astrogreg:mercury_stone_dust', 
+            'astrogreg:venus_stone_dust', 'astrogreg:moon_stone_dust', 'astrogreg:mars_stone_dust', 
+            'astrogreg:ceres_stone_dust', 'astrogreg:jupiter_stone_dust', 'astrogreg:saturn_stone_dust',
+            'astrogreg:uranus_stone_dust', 'astrogreg:neptune_stone_dust', 'astrogreg:pluto_stone_dust',
+            'gtceu:blackstone_dust', 'gtceu:soapstone_dust', 'gtceu:endstone_dust'],
         
         'forge:vegetables':
             ['farmersdelight:tomato_slice'],
@@ -140,7 +143,7 @@ ServerEvents.tags('item', event => {
             ['farmersdelight:tomato_slice'],
         
         'forge:crops/tomatoes':
-            ['farmersdelight:tomato', 'farmersdelight:tomato_slice'],
+            ['farmersdelight:tomato', 'farmersdelight:tomato_slice']
     }
     //#endregion
 
@@ -167,7 +170,7 @@ ServerEvents.tags('block', event => {
     const blocksToStrip = [
         'ad_extendra:raw_plutonium_block', 'ad_extendra:plutonium_block',
         'ad_extendra:uraninium_block', 'ad_extendra:raw_uranium_block',
-        'createaddition:electrum_block'
+        'createaddition:electrum_block', 'ad_extendra:b_sand'
     ]
     //#endregion
 

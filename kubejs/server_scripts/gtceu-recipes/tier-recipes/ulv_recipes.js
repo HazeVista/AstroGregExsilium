@@ -344,7 +344,7 @@ ServerEvents.recipes(event => {
       
 
     //#region clay, fireclay, coke
-    event.recipes.botania.pure_daisy('minecraft:clay', '#forge:sand', 75)
+    event.recipes.botania.pure_daisy('minecraft:clay', '#minecraft:smelts_to_glass', 75)
 
     event.shaped(Item.of('8x gtceu:compressed_fireclay'), [
         'AAA',
@@ -361,14 +361,14 @@ ServerEvents.recipes(event => {
       'BBB'
     ], {
       A: 'minecraft:water_bucket',
-      B: '#forge:sand'
+      B: '#minecraft:smelts_to_glass'
     }).replaceIngredient('minecraft:water_bucket', 'minecraft:bucket')
 
     event.recipes.create.pressing('gtceu:compressed_fireclay', 'gtceu:fireclay_dust')
     event.recipes.create.pressing('gtceu:compressed_livingclay', 'astrogreg:livingclay_dust')
     event.recipes.create.pressing('gtceu:compressed_clay', 'minecraft:clay_ball')
 
-    event.recipes.farmersdelight.cutting('#forge:sand', '#forge:tools/shovels', ['minecraft:clay_ball', 'minecraft:clay_ball'])
+    event.recipes.farmersdelight.cutting('#minecraft:smelts_to_glass', '#forge:tools/shovels', ['minecraft:clay_ball', 'minecraft:clay_ball'])
 
     event.campfireCooking('minecraft:brick', 'gtceu:compressed_clay', 0, 80)
     event.campfireCooking('gtceu:firebrick', 'gtceu:compressed_fireclay', 0, 80)

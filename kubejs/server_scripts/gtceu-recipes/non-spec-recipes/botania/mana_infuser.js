@@ -140,7 +140,7 @@ const purify = event.recipes.gtceu.botanic_purification
         ['8x minecraft:packed_ice', '8x minecraft:ice', [], 1200, 2],
         ['8x minecraft:blue_ice', '8x minecraft:packed_ice', [], 1200, 2],
         ['8x minecraft:sand', '8x minecraft:soul_sand', [], 1200, 2],
-        ['8x minecraft:clay', '8x #forge:sand', [], 600, 2],
+        ['8x minecraft:clay', '8x #minecraft:smelts_to_glass', [], 600, 2],
         ['8x botania:livingwood_log', '8x #minecraft:logs', [], 1200, 2],
         ['8x botania:livingrock', '8x #forge:stone', [], 1200, 2],
         ['8x minecraft:end_stone', '8x minecraft:blackstone', [], 1200, 2],

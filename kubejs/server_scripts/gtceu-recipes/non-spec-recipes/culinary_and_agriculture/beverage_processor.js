@@ -2,7 +2,8 @@ ServerEvents.recipes(event => {
 const processor = event.recipes.gtceu.beverage_processor
 
 //#region beverage recipes
-    //output, input, duration in ticks, EUt
+
+
 
 //#endregion
 
@@ -28,7 +29,7 @@ const processor = event.recipes.gtceu.beverage_processor
         ], {
             A: `#gtceu:circuits/${tier}`,
             B: `gtceu:${cable}_single_cable`,
-            C: `gtceu:${buzzsaw}_buzzsaw_blade`,    
+            C: `gtceu:${buzzsaw}_buzz_saw_blade`,    
             D: `gtceu:${tier}_machine_hull`,
             E: `gtceu:${tier}_electric_pump`,
             F: glass,

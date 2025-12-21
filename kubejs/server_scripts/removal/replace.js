@@ -8,7 +8,7 @@ ServerEvents.recipes(event => {
     event.replaceInput({}, 'ad_astra:steel_rod', 'gtceu:steel_rod')
     event.replaceInput({}, 'ad_astra:iron_rod', 'gtceu:iron_rod')
     event.replaceInput({}, 'minecraft:gravel', '#forge:gravel')
-    event.replaceInput({}, 'minecraft:sand', '#forge:sand')
+    event.replaceInput({}, 'minecraft:sand', '#minecraft:smelts_to_glass')
     event.replaceInput({id: 'farmersdelight:roast_chicken_block'}, '#forge:eggs', 'farmersdelight:fried_egg')
     event.replaceInput({id: 'delightful:food/pumpkin_pie'}, '#forge:eggs', 'farmersdelight:fried_egg')
     event.replaceInput({input: 'botania:rune_fire'}, 'botania:rune_fire', 'botania:fire_rune')
@@ -52,6 +52,7 @@ ServerEvents.recipes(event => {
     event.replaceInput({output: 'gtceu:uhv_hermetic_casing'}, 'gtceu:duranium_large_fluid_pipe', 'astrogreg:polyamide_imide_large_fluid_pipe')
     event.replaceInput({}, '#forge:crops/cabbage', 'farmersdelight:cabbage_leaf')
     event.replaceInput({type: 'gtceu:mixer'}, 'gtceu:stone_dust', '#forge:stone_dust')
+    event.replaceInput({type: 'gtceu:compressor'}, 'gtceu:stone_dust', '#forge:stone_dust')
     // event.replaceInput({input: ''}, '', '')
     //#endregion
     

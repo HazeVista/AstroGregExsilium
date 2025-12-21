@@ -85,9 +85,9 @@ ServerEvents.recipes(event => {
        
         ['16x minecraft:glass', ['16x gtceu:quartz_sand_dust', 'gtceu:flint_dust'], 'lowheated'],
        
-        ['2x gtceu:coke_oven_brick', ['#forge:sand', 'minecraft:clay_ball'], 'lowheated'],
+        ['2x gtceu:coke_oven_brick', ['#minecraft:smelts_to_glass', 'minecraft:clay_ball'], 'lowheated'],
       
-        ['minecraft:clay', ['#forge:sand', Fluid.of('minecraft:water', 125)], null],
+        ['minecraft:clay', ['#minecraft:smelts_to_glass', Fluid.of('minecraft:water', 125)], null],
         ['create:pulp', ['gtceu:paper_dust', Fluid.of('minecraft:water', 125)], null]
     ]
 
@@ -102,7 +102,7 @@ ServerEvents.recipes(event => {
     //#region create filling
     //output, [Fluid.of(fluid input, amount), input item]
     const fillingRecipes = [
-        ['minecraft:clay', [Fluid.of('minecraft:water', 250), '#forge:sand']],
+        ['minecraft:clay', [Fluid.of('minecraft:water', 250), '#minecraft:smelts_to_glass']],
         ['gtceu:treated_wood_planks', [Fluid.of('gtceu:creosote', 125), '#minecraft:planks']],
         ['create:chocolate_glazed_berries', [Fluid.of('create:chocolate', 250), 'minecraft:sweet_berries']],
         ['gtceu:dough', [Fluid.of('minecraft:water', 125), 'gtceu:wheat_dust']],

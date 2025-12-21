@@ -34,8 +34,8 @@ ItemEvents.modification(event => {
     event.modify('delightful:wrapped_cantaloupe', item => {
         item.foodProperties = food => {
             food
-                .hunger(4)
-                .saturation(1.25)
+                .hunger(7)
+                .saturation(.5)
         }
     })
     
