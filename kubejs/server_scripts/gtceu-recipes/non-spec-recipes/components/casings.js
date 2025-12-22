@@ -1,5 +1,7 @@
 ServerEvents.recipes(event => {
 
+    const gt = event.recipes.gtceu  
+
     const ageCasings = [
     ['astrogreg:futura_alloy_frame', 'astrogreg:futura_alloy_plate', '2x gtceu:futura_casing', 'futura_casing'],
     ['gtceu:livingbricks', 'astrogreg:manasteel_plate', '2x astrogreg:manasteel_brick_machine_casing', 'manasteel_brick_casing'],
@@ -23,7 +25,7 @@ ServerEvents.recipes(event => {
             D: '#forge:tools/wrenches'
         })
 
-        event.recipes.gtceu.assembler(name)
+        gt.assembler(name)
             .itemInputs(`6x ${plate}`, frame)
             .itemOutputs(block)
             .circuit(6)
@@ -41,7 +43,7 @@ ServerEvents.recipes(event => {
         C: 'astrogreg:manasteel_frame'
     })
 
-    event.recipes.gtceu.assembler('manasteel_firebox_casing')
+    gt.assembler('manasteel_firebox_casing')
         .itemInputs('4x astrogreg:manasteel_plate', '4x astrogreg:manasteel_rod', 'astrogreg:manasteel_frame')
         .itemOutputs('2x astrogreg:manasteel_firebox_casing')
         .circuit(6)
@@ -58,7 +60,7 @@ ServerEvents.recipes(event => {
         C: 'astrogreg:manasteel_frame'
     })
 
-    event.recipes.gtceu.assembler('manasteel_pipe_casing')
+    gt.assembler('manasteel_pipe_casing')
         .itemInputs('4x astrogreg:manasteel_plate', '4x astrogreg:manasteel_normal_fluid_pipe', 'astrogreg:manasteel_frame')
         .itemOutputs('2x astrogreg:manasteel_pipe_casing')
         .circuit(6)
@@ -75,7 +77,7 @@ ServerEvents.recipes(event => {
         C: 'astrogreg:terrasteel_frame'
     })
 
-    event.recipes.gtceu.assembler('terrasteel_firebox_casing')
+    gt.assembler('terrasteel_firebox_casing')
         .itemInputs('4x astrogreg:terrasteel_plate', '4x astrogreg:terrasteel_rod', 'astrogreg:terrasteel_frame')
         .itemOutputs('2x astrogreg:terrasteel_firebox_casing')
         .circuit(6)
@@ -92,7 +94,7 @@ ServerEvents.recipes(event => {
         C: 'astrogreg:terrasteel_frame'
     })
 
-    event.recipes.gtceu.assembler('terrasteel_pipe_casing')
+    gt.assembler('terrasteel_pipe_casing')
         .itemInputs('4x astrogreg:terrasteel_plate', '4x astrogreg:terrasteel_normal_fluid_pipe', 'astrogreg:terrasteel_frame')
         .itemOutputs('2x astrogreg:terrasteel_pipe_casing')
         .circuit(6)
@@ -109,7 +111,7 @@ ServerEvents.recipes(event => {
         C: 'astrogreg:elementium_frame'
     })
 
-    event.recipes.gtceu.assembler('alfsteel_firebox_casing')
+    gt.assembler('alfsteel_firebox_casing')
         .itemInputs('4x astrogreg:elementium_plate', '4x astrogreg:elementium_rod', 'astrogreg:elementium_frame')
         .itemOutputs('2x astrogreg:alfsteel_firebox_casing')
         .circuit(6)
@@ -126,7 +128,7 @@ ServerEvents.recipes(event => {
         C: 'astrogreg:elementium_frame'
     })
 
-    event.recipes.gtceu.assembler('alfsteel_pipe_casing')
+    gt.assembler('alfsteel_pipe_casing')
         .itemInputs('4x astrogreg:elementium_plate', '4x astrogreg:elementium_normal_fluid_pipe', 'astrogreg:elementium_frame')
         .itemOutputs('2x astrogreg:alfsteel_pipe_casing')
         .circuit(6)
@@ -145,7 +147,7 @@ ServerEvents.recipes(event => {
         E: '#forge:tools/wrenches',
     })
 
-    event.recipes.gtceu.assembler('alfsteel_gearbox_casing')
+    gt.assembler('alfsteel_gearbox_casing')
         .itemInputs('4x astrogreg:elementium_plate', '2x astrogreg:elementium_gear', 'astrogreg:elementium_frame')
         .itemOutputs('2x astrogreg:alfsteel_gearbox_casing')
         .circuit(4)

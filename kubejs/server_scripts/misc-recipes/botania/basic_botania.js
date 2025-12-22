@@ -1,5 +1,7 @@
 ServerEvents.recipes(event => {
 
+    const gt = event.recipes.gtceu
+
     //#region Botania KubeJS guide
     /* Helper for botania recipes:
     # The documentation is pretty poor and the format is extremely inconsistent, 
@@ -54,7 +56,7 @@ ServerEvents.recipes(event => {
         A: 'botanicadds:dreamrock'
     })
 
-    event.recipes.gtceu.assembler('assembler_mana_pylon')
+    gt.assembler('assembler_mana_pylon')
         .itemInputs('4x botania:manasteel_nugget', '4x gtceu:double_gold_plate', 'astrogreg:exquisite_mana_diamond_gem')
         .inputFluids('manafluid:mana 1000')
         .itemOutputs('botania:mana_pylon')
@@ -97,7 +99,7 @@ ServerEvents.recipes(event => {
         B: 'gtceu:wrought_iron_dust'
     })
 
-    event.recipes.gtceu.mixer('mix_manasteel_dust')
+    gt.mixer('mix_manasteel_dust')
         .itemInputs('botania:mana_powder', 'gtceu:wrought_iron_dust')
         .itemOutputs('astrogreg:manasteel_dust')
         .duration(80)
@@ -110,7 +112,7 @@ ServerEvents.recipes(event => {
        B: '#forge:tools/saws'
     })    
 
-    event.recipes.gtceu.cutter('cutting_managlass')
+    gt.cutter('cutting_managlass')
         .itemInputs('3x botania:managlass')
         .itemOutputs('8x botania:managlass_pane')
         .duration(50)
@@ -123,7 +125,7 @@ ServerEvents.recipes(event => {
        B: '#forge:tools/saws'
     })    
 
-    event.recipes.gtceu.cutter('cutting_bifrost_glass')
+    gt.cutter('cutting_bifrost_glass')
         .itemInputs('3x botania:bifrost_perm')
         .itemOutputs('8x botania:bifrost_pane')
         .duration(50)
@@ -136,19 +138,19 @@ ServerEvents.recipes(event => {
        B: '#forge:tools/saws'
     })    
 
-    event.recipes.gtceu.cutter('cutting_alfglass')
+    gt.cutter('cutting_alfglass')
         .itemInputs('3x botania:alfglass')
         .itemOutputs('8x botania:alfglass_pane')
         .duration(50)
         .EUt(7)
 
-    event.recipes.gtceu.forge_hammer('forge_hammer_gaia_shard')
+    gt.forge_hammer('forge_hammer_gaia_shard')
         .itemInputs('botania:life_essence')
         .itemOutputs('5x botanicadds:gaia_shard')
         .duration(100)
         .EUt(2000)
 
-    event.recipes.gtceu.mixer('mix_inactive_terrasteel')
+    gt.mixer('mix_inactive_terrasteel')
         .itemInputs('astrogreg:manasteel_dust', 'gtceu:beryllium_dust', 'gtceu:aluminium_dust')
         .itemOutputs('3x astrogreg:dormant_terrasteel_dust')
         .duration(300)
@@ -273,32 +275,32 @@ ServerEvents.recipes(event => {
 
 
     //#region manasteel cooking
-        event.recipes.gtceu.primitive_blast_furnace('manasteel_charcoal')
+        gt.primitive_blast_furnace('manasteel_charcoal')
         .itemInputs('astrogreg:manasteel_dust', 'minecraft:charcoal')
         .itemOutputs('botania:manasteel_ingot', 'gtceu:tiny_dark_ash_dust')
         .duration(900)
 
-    event.recipes.gtceu.primitive_blast_furnace('manasteel_coal')
+    gt.primitive_blast_furnace('manasteel_coal')
         .itemInputs('astrogreg:manasteel_dust', 'minecraft:coal')
         .itemOutputs('botania:manasteel_ingot', 'gtceu:tiny_dark_ash_dust')
         .duration(900)
 
-    event.recipes.gtceu.primitive_blast_furnace('manasteel_coke')
+    gt.primitive_blast_furnace('manasteel_coke')
         .itemInputs('astrogreg:manasteel_dust', 'gtceu:coke_gem')
         .itemOutputs('botania:manasteel_ingot', 'gtceu:tiny_dark_ash_dust')
         .duration(750)
 
-    event.recipes.gtceu.primitive_blast_furnace('manasteel_charcoal_dust')
+    gt.primitive_blast_furnace('manasteel_charcoal_dust')
         .itemInputs('astrogreg:manasteel_dust', 'gtceu:charcoal_dust')
         .itemOutputs('botania:manasteel_ingot', 'gtceu:tiny_dark_ash_dust')
         .duration(900)
 
-    event.recipes.gtceu.primitive_blast_furnace('manasteel_coal_dust')
+    gt.primitive_blast_furnace('manasteel_coal_dust')
         .itemInputs('astrogreg:manasteel_dust', 'gtceu:coal_dust')
         .itemOutputs('botania:manasteel_ingot', 'gtceu:tiny_dark_ash_dust')
         .duration(900)
 
-    event.recipes.gtceu.primitive_blast_furnace('manasteel_coke_dust')
+    gt.primitive_blast_furnace('manasteel_coke_dust')
         .itemInputs('astrogreg:manasteel_dust', 'gtceu:coke_dust')
         .itemOutputs('botania:manasteel_ingot', 'gtceu:tiny_dark_ash_dust')
         .duration(750)
@@ -815,7 +817,7 @@ ServerEvents.recipes(event => {
     function logInput(log) {
         event.recipes.botania.mana_infusion(`botania:glimmering_${log}`, `botania:${log}`, 100)
 
-        event.recipes.gtceu.mana_infusion(`glamify_${log}`)
+        gt.mana_infusion(`glamify_${log}`)
             .itemInputs(`botania:${log}`)
             .inputFluids('manafluid:mana 1')
             .itemOutputs(`botania:glimmering_${log}`)
@@ -839,13 +841,13 @@ ServerEvents.recipes(event => {
         B: '#botania:dreamwood_logs'
     })
 
-    event.recipes.gtceu.cutter('cut_livingwood_logs')
+    gt.cutter('cut_livingwood_logs')
         .itemInputs('#botania:livingwood_logs')
         .itemOutputs('6x botania:livingwood_planks', '2x gtceu:wood_dust')
         .duration(400)
         .EUt(7)
         
-    event.recipes.gtceu.cutter('cut_dreamwood_logs')
+    gt.cutter('cut_dreamwood_logs')
         .itemInputs('#botania:dreamwood_logs')
         .itemOutputs('6x botania:dreamwood_planks', '2x gtceu:wood_dust')
         .duration(400)
@@ -856,7 +858,7 @@ ServerEvents.recipes(event => {
 
     //#region cell
 
-    event.recipes.gtceu.compressor('compress_biomass')
+    gt.compressor('compress_biomass')
         .itemInputs('9x gtceu:bio_chaff')
         .itemOutputs('botania:cell_block')
         .duration(600)

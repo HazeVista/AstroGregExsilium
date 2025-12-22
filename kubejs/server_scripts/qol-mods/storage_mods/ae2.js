@@ -1,12 +1,14 @@
 ServerEvents.recipes(event => {
 
+    const gt = event.recipes.gtceu
+
     //#region processors
     for (const [processor, plate, lens] of [
         ['ae2:logic_processor', 'gtceu:gold_plate', 'gtceu:yellow_glass_lens'],
         ['ae2:calculation_processor', 'gtceu:certus_quartz_plate', 'gtceu:cyan_glass_lens'],
         ['ae2:engineering_processor', 'gtceu:diamond_plate', '#forge:lenses/light_blue']
     ]) {
-        event.recipes.gtceu.inscription(`${processor.split(':')[1]}_inscribing`)
+        gt.inscription(`${processor.split(':')[1]}_inscribing`)
             .notConsumable(lens)
             .itemInputs(plate)
             .inputFluids('gtceu:silicon 144')
@@ -15,7 +17,7 @@ ServerEvents.recipes(event => {
             .EUt(100)
     }
 
-    event.recipes.gtceu.inscription('inscribe_accumulation_processor')
+    gt.inscription('inscribe_accumulation_processor')
         .notConsumable('gtceu:black_glass_lens')
         .itemInputs('ae2:logic_processor', 'ae2:calculation_processor', 'ae2:engineering_processor')
         .inputFluids('gtceu:silicon 144', 'gtceu:neon 100')
@@ -34,7 +36,7 @@ ServerEvents.recipes(event => {
         [['8x ae2:fluix_dust', 'gtceu:ender_eye_dust'], 'astrogreg:fluix_pearl_dust', 240, 480],
         [['#forge:dusts/certus_quartz', 'gtceu:obsidian_dust', 'minecraft:redstone'], '3x ae2:fluix_dust', 200, 520]
     ]) {
-        event.recipes.gtceu.mixer(`${output.split(' ').pop().split(':')[1]}_mixing`)
+        gt.mixer(`${output.split(' ').pop().split(':')[1]}_mixing`)
             .itemInputs(input)
             .itemOutputs(output)
             .duration(d)
@@ -50,7 +52,7 @@ ServerEvents.recipes(event => {
         [['#forge:dusts/certus_quartz', '#forge:glass'], 'ae2:quartz_glass', 160, 7],
         [['2x minecraft:glowstone_dust', 'ae2:quartz_glass'], 'ae2:quartz_vibrant_glass', 160, 7],
     ]) {
-        event.recipes.gtceu.alloy_smelter(`${output.split(':')[1]}_alloying`)
+        gt.alloy_smelter(`${output.split(':')[1]}_alloying`)
             .itemInputs(input)
             .itemOutputs(output)
             .duration(d)
@@ -76,11 +78,11 @@ ServerEvents.recipes(event => {
         let kDust = DUSTS[Math.min(Math.floor(i / 2), 2)]
         let mDust = DUSTS[Math.min(Math.floor(i / 2) + 2, 4)]
 
-        event.recipes.gtceu.inscription(`inscribe_${size}k`)
+        gt.inscription(`inscribe_${size}k`)
             .itemInputs(i > 0 ? `3x ae2:cell_component_${size / 4}k` : '4x ae2:certus_quartz_crystal', `4x ${kDust}`, 'ae2:calculation_processor', `#gtceu:circuits/${tiers[i]}`)
             .itemOutputs(`ae2:cell_component_${size}k`).duration(300).EUt(size * 7)
 
-        event.recipes.gtceu.inscription(`inscribe_${size}m`)
+        gt.inscription(`inscribe_${size}m`)
             .itemInputs(i > 0 ? `3x megacells:cell_component_${size / 4}m` : '3x ae2:cell_component_256k', `4x ${mDust}`, 'megacells:accumulation_processor', `#gtceu:circuits/${tiers[i + 5]}`)
             .itemOutputs(`megacells:cell_component_${size}m`).duration(300).EUt(size * 7 * 1024)
     }
@@ -157,9 +159,9 @@ ServerEvents.recipes(event => {
 
 
     //#region gem recipes
-    event.recipes.gtceu.polarizer('polarize_certus').itemInputs('ae2:certus_quartz_crystal').itemOutputs('ae2:charged_certus_quartz_crystal').duration(150).EUt(400)
-    event.recipes.gtceu.macerator('macerate_fluix').itemInputs('ae2:fluix_crystal').itemOutputs('ae2:fluix_dust').duration(200)
-    event.recipes.gtceu.centrifuge('centrifuge_fluix_pearl_dust').itemInputs('astrogreg:fluix_pearl_dust').itemOutputs('8x ae2:fluix_dust', 'gtceu:ender_eye_dust').duration(240).EUt(120)
+    gt.polarizer('polarize_certus').itemInputs('ae2:certus_quartz_crystal').itemOutputs('ae2:charged_certus_quartz_crystal').duration(150).EUt(400)
+    gt.macerator('macerate_fluix').itemInputs('ae2:fluix_crystal').itemOutputs('ae2:fluix_dust').duration(200)
+    gt.centrifuge('centrifuge_fluix_pearl_dust').itemInputs('astrogreg:fluix_pearl_dust').itemOutputs('8x ae2:fluix_dust', 'gtceu:ender_eye_dust').duration(240).EUt(120)
     event.shaped('ae2:quartz_block', ['AA', 'AA'], { A: 'ae2:certus_quartz_crystal' })
 
         
@@ -232,15 +234,15 @@ ServerEvents.recipes(event => {
 
 
     //#region glass & cables
-    event.recipes.gtceu.wiremill('mill_quartz_fiber').itemInputs('ae2:quartz_glass').itemOutputs('2x ae2:quartz_fiber').duration(80).EUt(28)
-    event.recipes.gtceu.wiremill('mill_fluix').itemInputs('ae2:fluix_crystal').itemOutputs('4x ae2:fluix_glass_cable').duration(160).EUt(28)
-    event.recipes.gtceu.chemical_bath('wash_glass_cables').itemInputs('#ae2:glass_cable').inputFluids('minecraft:water 144').itemOutputs('ae2:fluix_glass_cable').duration(40).EUt(20)
+    gt.wiremill('mill_quartz_fiber').itemInputs('ae2:quartz_glass').itemOutputs('2x ae2:quartz_fiber').duration(80).EUt(28)
+    gt.wiremill('mill_fluix').itemInputs('ae2:fluix_crystal').itemOutputs('4x ae2:fluix_glass_cable').duration(160).EUt(28)
+    gt.chemical_bath('wash_glass_cables').itemInputs('#ae2:glass_cable').inputFluids('minecraft:water 144').itemOutputs('ae2:fluix_glass_cable').duration(40).EUt(20)
     // #endregion
 
 
 
     //#region cpu assembly
-    event.recipes.gtceu.assembler('assemble_cpu')
+    gt.assembler('assemble_cpu')
         .itemInputs('astrogreg:futura_alloy_frame', '2x ae2:fluix_glass_cable', '2x ae2:calculation_processor', 'ae2:logic_processor')
         .inputFluids('gtceu:soldering_alloy 144')
         .itemOutputs('ae2:crafting_unit')
@@ -248,7 +250,7 @@ ServerEvents.recipes(event => {
         .duration(80)
         .EUt(384)
 
-    event.recipes.gtceu.assembler('assemble_mega_cpu')
+    gt.assembler('assemble_mega_cpu')
         .itemInputs('astrogreg:futura_alloy_frame', '2x ae2:crafting_unit', '2x ae2:logic_processor', 'megacells:accumulation_processor')
         .inputFluids('gtceu:soldering_alloy 288')
         .itemOutputs('megacells:mega_crafting_unit')
@@ -280,7 +282,7 @@ ServerEvents.recipes(event => {
         })
     }
 
-    event.recipes.gtceu.canner('pattern_canning')
+    gt.canner('pattern_canning')
         .itemInputs('#forge:dusts/certus_quartz', '4x gtceu:fluid_cell')
         .inputFluids('gtceu:glowstone 576')
         .itemOutputs('4x ae2:blank_pattern')

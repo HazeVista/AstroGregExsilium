@@ -1,5 +1,7 @@
 ServerEvents.recipes(event => {
 
+    const gt = event.recipes.gtceu
+
     //#region shaped recipes
     event.shaped('create:precision_mechanism', [
         'ADA',
@@ -387,67 +389,67 @@ ServerEvents.recipes(event => {
         B: '#forge:tools/files'
     })
 
-    event.recipes.gtceu.mixer('mixing_andesite_alloy_dust')
+    gt.mixer('mixing_andesite_alloy_dust')
         .itemInputs('gtceu:iron_dust', 'gtceu:andesite_dust')
         .itemOutputs('2x astrogreg:andesite_alloy_dust')
         .duration(80)
         .EUt(7)
 
-    event.recipes.gtceu.mixer('mixing_andesite_dust')
+    gt.mixer('mixing_andesite_dust')
         .itemInputs('gtceu:quartz_sand_dust', '#forge:stone_dust')
         .itemOutputs('2x gtceu:andesite_dust')
         .duration(80)
         .EUt(7)
 
-    event.recipes.gtceu.mixer('mixing_andesite_dust_alt')
+    gt.mixer('mixing_andesite_dust_alt')
         .itemInputs('gtceu:nether_quartz_dust', '#forge:stone_dust')
         .itemOutputs('2x gtceu:andesite_dust')
         .duration(80)
         .EUt(7)
 
-    event.recipes.gtceu.alloy_smelter('alloying_andesite_alloy')
+    gt.alloy_smelter('alloying_andesite_alloy')
         .itemInputs('gtceu:iron_dust', 'gtceu:andesite_dust')
         .itemOutputs('2x create:andesite_alloy')
         .duration(120)
         .EUt(15)
 
-    event.recipes.gtceu.alloy_smelter('alloying_andesite_alloy_alt')
+    gt.alloy_smelter('alloying_andesite_alloy_alt')
         .itemInputs('minecraft:iron_ingot', 'gtceu:andesite_dust')
         .itemOutputs('2x create:andesite_alloy')
         .duration(120)
         .EUt(15)
 
-    event.recipes.gtceu.alloy_smelter('alloying_andesite_alloy_alt1')
+    gt.alloy_smelter('alloying_andesite_alloy_alt1')
         .itemInputs('gtceu:iron_dust', 'minecraft:andesite')
         .itemOutputs('2x create:andesite_alloy')
         .duration(120)
         .EUt(15)
 
-    event.recipes.gtceu.alloy_smelter('alloying_andesite_alloy_alt2')
+    gt.alloy_smelter('alloying_andesite_alloy_alt2')
         .itemInputs('minecraft:iron_ingot', 'minecraft:andesite')
         .itemOutputs('2x create:andesite_alloy')
         .duration(120)
         .EUt(15)
 
-    event.recipes.gtceu.lathe('lathing_shaft')
+    gt.lathe('lathing_shaft')
         .itemInputs('1x create:andesite_alloy')
         .itemOutputs('8x create:shaft')
         .duration(80)
         .EUt(15)
 
-    event.recipes.gtceu.cutter('cutting_shaft')
+    gt.cutter('cutting_shaft')
         .itemInputs('1x create:andesite_alloy')
         .itemOutputs('8x create:shaft')
         .duration(60)
         .EUt(15)
 
-    event.recipes.gtceu.lathe('lathe_polished_rose_quartz')
+    gt.lathe('lathe_polished_rose_quartz')
         .itemInputs('create:rose_quartz')
         .itemOutputs('create:polished_rose_quartz')
         .duration(120)
         .EUt(7)
 
-    event.recipes.gtceu.centrifuge('decompose_andesite_alloy')
+    gt.centrifuge('decompose_andesite_alloy')
         .itemInputs('2x astrogreg:andesite_alloy_dust')
         .itemOutputs('gtceu:andesite_dust', 'gtceu:iron_dust')
         .duration(80)

@@ -1,4 +1,7 @@
 ServerEvents.recipes(event => {
+
+  const gt = event.recipes.gtceu
+
     //#region misc
     event.shaped('gtceu:rubber_plate', [
       'A',
@@ -9,7 +12,7 @@ ServerEvents.recipes(event => {
       B: 'gtceu:rubber_ingot'
     })
 
-  event.recipes.gtceu.alloy_smelter('alloy_smelter_rose_quartz')
+  gt.alloy_smelter('alloy_smelter_rose_quartz')
     .itemInputs('minecraft:quartz', '4x minecraft:redstone')
     .itemOutputs('create:rose_quartz')
     .duration(50)
@@ -49,13 +52,13 @@ ServerEvents.recipes(event => {
       B: '#forge:tools/wrenches'
     })
 
-    event.recipes.gtceu.assembler('assemble_gold_chain')
+    gt.assembler('assemble_gold_chain')
         .itemInputs('3x gtceu:gold_ring')
         .itemOutputs('9x dustrial_decor:gold_chain')
         .duration(40)
         .EUt(10)
 
-    event.recipes.gtceu.mixer('mixing_energized_steel_dust')
+    gt.mixer('mixing_energized_steel_dust')
         .itemInputs('astrogreg:desh_dust', 'gtceu:iron_dust', 'gtceu:red_alloy_dust')
         .itemOutputs('astrogreg:energized_steel_dust')
         .duration(200)
@@ -77,13 +80,13 @@ ServerEvents.recipes(event => {
       B: '#forge:tools/mortars'
     })
 
-    event.recipes.gtceu.macerator('macerate_paper_dust')
+    gt.macerator('macerate_paper_dust')
       .itemInputs('#create:pulpifiable')
       .itemOutputs('gtceu:paper_dust')
       .duration(98)
       .EUt(2)
 
-    event.recipes.gtceu.compressor('compress_pulp')
+    gt.compressor('compress_pulp')
       .itemInputs('create:pulp')
       .itemOutputs('minecraft:paper')
       .duration(80)
@@ -97,7 +100,7 @@ ServerEvents.recipes(event => {
       160, 
     )         
 
-    event.recipes.gtceu.macerator('macerate_meat')
+    gt.macerator('macerate_meat')
       .itemInputs('#forge:meat')
       .itemOutputs('gtceu:meat_dust')
       .chancedOutput('gtceu:meat_dust', 5000, 0)
@@ -105,13 +108,13 @@ ServerEvents.recipes(event => {
       .duration(102)
       .EUt(2)
 
-    event.recipes.gtceu.macerator('macerate_meat_small')
+    gt.macerator('macerate_meat_small')
       .itemInputs('#forge:meat_small')
       .itemOutputs('gtceu:meat_dust', 'gtceu:tiny_bone_dust')
       .duration(102)
       .EUt(2)    
       
-    event.recipes.gtceu.compressor('compress_plant_ball')
+    gt.compressor('compress_plant_ball')
       .itemInputs('#forge:crops')
       .itemOutputs('gtceu:plant_ball')
       .duration(300)
@@ -169,12 +172,12 @@ ServerEvents.recipes(event => {
     //#endregion
 
     //#region water source
-    event.recipes.gtceu.water_source('pump_water')
+    gt.water_source('pump_water')
         .circuit(0)
         .outputFluids(Fluid.of('minecraft:water', 1000))
         .duration(20)
         
-    event.recipes.gtceu.water_source('pump_water_alt')
+    gt.water_source('pump_water_alt')
         .circuit(1)
         .outputFluids(Fluid.of('minecraft:water', 100))
         .duration(2)
@@ -200,81 +203,81 @@ ServerEvents.recipes(event => {
     event.recipes.farmersdelight.cutting('gtceu:asteroid_gravel', '#forge:tools/hammers', ['gtceu:asteroid_sand', Item.of('minecraft:flint').withChance(0.2)])
     event.recipes.farmersdelight.cutting('minecraft:gravel', '#forge:tools/hammers', ['minecraft:sand', Item.of('minecraft:flint').withChance(0.2)])
 
-    event.recipes.gtceu.forge_hammer('forge_hammer_andesite')
+    gt.forge_hammer('forge_hammer_andesite')
         .itemInputs('minecraft:andesite')
         .itemOutputs('gtceu:andesite_dust')
         .duration(10)
         .EUt(16)
 
-    event.recipes.gtceu.forge_hammer('forge_hammer_sand')
+    gt.forge_hammer('forge_hammer_sand')
         .itemInputs('minecraft:gravel')
         .itemOutputs('minecraft:sand')
         .duration(10)
         .EUt(16)  
 
-    event.recipes.gtceu.forge_hammer('forge_hammer_gravel')
+    gt.forge_hammer('forge_hammer_gravel')
         .itemInputs('minecraft:cobblestone')
         .itemOutputs('minecraft:gravel')
         .duration(10)
         .EUt(16)  
 
-    event.recipes.gtceu.forge_hammer('forge_hammer_asteroid_sand')
+    gt.forge_hammer('forge_hammer_asteroid_sand')
         .itemInputs('gtceu:asteroid_gravel')
         .itemOutputs('gtceu:asteroid_sand')
         .duration(10)
         .EUt(16)
 
-    event.recipes.gtceu.macerator('macerator_asteroid_flint')
+    gt.macerator('macerator_asteroid_flint')
         .itemInputs('gtceu:asteroid_gravel')
         .itemOutputs('astrogreg:asteroid_stone_dust')
         .chancedOutput('minecraft:flint', 3300, 0)
         .duration(400)
         .EUt(2)
 
-    event.recipes.gtceu.macerator('macerator_flint')
+    gt.macerator('macerator_flint')
         .itemInputs('minecraft:gravel')
         .itemOutputs('gtceu:stone_dust')
         .chancedOutput('minecraft:flint', 3300, 0)
         .duration(400)
         .EUt(2)
 
-    event.recipes.gtceu.forge_hammer('forge_hammer_asteroid_gravel')
+    gt.forge_hammer('forge_hammer_asteroid_gravel')
         .itemInputs('gtceu:cobbled_asteroid_stone')
         .itemOutputs('gtceu:asteroid_gravel')
         .duration(10)
         .EUt(16)
 
-    event.recipes.gtceu.forge_hammer('forge_hammer_asteroid_cobble')
+    gt.forge_hammer('forge_hammer_asteroid_cobble')
         .itemInputs('gtceu:asteroid_stone')
         .itemOutputs('gtceu:cobbled_asteroid_stone')
         .duration(10)
         .EUt(16)
 
-    event.recipes.gtceu.forge_hammer('forge_hammer_asteroid_stone')
+    gt.forge_hammer('forge_hammer_asteroid_stone')
         .itemInputs('gtceu:hard_asteroid_stone')
         .itemOutputs('gtceu:asteroid_stone')
         .duration(10)
         .EUt(16)
 
-    event.recipes.gtceu.macerator('macerator_asteroid_dust')
+    gt.macerator('macerator_asteroid_dust')
         .itemInputs('gtceu:hard_asteroid_stone')
         .itemOutputs('astrogreg:asteroid_stone_dust')
         .duration(98)
         .EUt(2)
 
-    event.recipes.gtceu.macerator('macerator_asteroid_dust_1')
+    gt.macerator('macerator_asteroid_dust_1')
         .itemInputs('gtceu:asteroid_stone')
         .itemOutputs('astrogreg:asteroid_stone_dust')
         .duration(98)
         .EUt(2)
 
-    event.recipes.gtceu.macerator('macerator_asteroid_dust_2')
+    gt.macerator('macerator_asteroid_dust_2')
         .itemInputs('gtceu:smooth_asteroid_stone')
         .itemOutputs('astrogreg:asteroid_stone_dust')
         .duration(98)
         .EUt(2)
 
-    event.recipes.gtceu.macerator('macerator_asteroid_dust_3')
+    gt.macerator('macerator_asteroid_dust_3')
         .itemInputs('gtceu:cobbled_asteroid_stone')
         .itemOutputs('astrogreg:asteroid_stone_dust')
         .duration(98)
@@ -319,21 +322,21 @@ ServerEvents.recipes(event => {
       A: 'gtceu:asteroid_stone'
     })
 
-    event.recipes.gtceu.rock_breaker('rock_dupe_asteroid_hard')
+    gt.rock_breaker('rock_dupe_asteroid_hard')
       .notConsumable('gtceu:hard_asteroid_stone')
       .itemOutputs('gtceu:hard_asteroid_stone')
       .adjacentFluids('minecraft:water', 'minecraft:lava')
       .duration(16)
       .EUt(7)
 
-    event.recipes.gtceu.rock_breaker('rock_dupe_asteroid_cobble')
+    gt.rock_breaker('rock_dupe_asteroid_cobble')
       .notConsumable('gtceu:cobbled_asteroid_stone')
       .itemOutputs('gtceu:cobbled_asteroid_stone')
       .adjacentFluids('minecraft:water', 'minecraft:lava')
       .duration(16)
       .EUt(7)
 
-    event.recipes.gtceu.rock_breaker('rock_dupe_asteroid_stone')
+    gt.rock_breaker('rock_dupe_asteroid_stone')
       .notConsumable('gtceu:asteroid_stone')
       .itemOutputs('gtceu:asteroid_stone')      
       .adjacentFluids('minecraft:water', 'minecraft:lava')
@@ -384,43 +387,43 @@ ServerEvents.recipes(event => {
       B: 'gtceu:brick_wooden_form'
     }).keepIngredient('gtceu:brick_wooden_form')
 
-    event.recipes.gtceu.compressor('compress_clay_ball')
+    gt.compressor('compress_clay_ball')
       .itemInputs('minecraft:clay_ball')
       .itemOutputs('gtceu:compressed_clay')
       .duration(80)
       .EUt(4)
     
-    event.recipes.gtceu.compressor('compress_clay_dust')
+    gt.compressor('compress_clay_dust')
       .itemInputs('gtceu:clay_dust')
       .itemOutputs('gtceu:compressed_clay')
       .duration(80)
       .EUt(4)
 
-    event.recipes.gtceu.macerator('macerate_livingrock')
+    gt.macerator('macerate_livingrock')
       .itemInputs('botania:livingrock')
       .itemOutputs('astrogreg:livingrock_dust')
       .duration(98)
       .EUt(2)
 
-    event.recipes.gtceu.macerator('macerate_livingbrick')
+    gt.macerator('macerate_livingbrick')
       .itemInputs('gtceu:livingbrick')
       .itemOutputs('astrogreg:livingclay_dust')
       .duration(98)
       .EUt(2)
       
-    event.recipes.gtceu.macerator('macerate_livingbrick_alt')
+    gt.macerator('macerate_livingbrick_alt')
       .itemInputs('gtceu:livingbricks')
       .itemOutputs('4x astrogreg:livingclay_dust')
       .duration(98)
       .EUt(2)
       
-    event.recipes.gtceu.macerator('macerate_livingbrick_alt1')
+    gt.macerator('macerate_livingbrick_alt1')
       .itemInputs('gtceu:compressed_livingclay')
       .itemOutputs('astrogreg:livingclay_dust')
       .duration(98)
       .EUt(2)
 
-    event.recipes.gtceu.compressor('compress_livingbrick')
+    gt.compressor('compress_livingbrick')
       .itemInputs('astrogreg:livingclay_dust')
       .itemOutputs('gtceu:compressed_livingclay')
       .duration(80)
@@ -452,7 +455,7 @@ ServerEvents.recipes(event => {
       B: 'gtceu:brick_wooden_form'
     }).keepIngredient('gtceu:brick_wooden_form')
 
-    event.recipes.gtceu.extractor('extract_livingbricks')
+    gt.extractor('extract_livingbricks')
       .itemInputs('gtceu:livingbricks')
       .itemOutputs('4x gtceu:livingbrick')
       .duration(300)
@@ -473,7 +476,7 @@ ServerEvents.recipes(event => {
       'minecraft:bucket'
     )
 
-    event.recipes.gtceu.extractor('extract_lava_from_stone')
+    gt.extractor('extract_lava_from_stone')
       .itemInputs('#minecraft:stone_crafting_materials')
       .outputFluids('minecraft:lava 250')
       .duration(80)
@@ -485,32 +488,32 @@ ServerEvents.recipes(event => {
     
 
     //#region damascus steel
-    event.recipes.gtceu.primitive_blast_furnace('dam_steel_charcoal')
+    gt.primitive_blast_furnace('dam_steel_charcoal')
         .itemInputs('gtceu:steel_ingot', 'minecraft:charcoal')
         .itemOutputs('gtceu:damascus_steel_ingot', 'gtceu:tiny_dark_ash_dust')
         .duration(1200)
 
-    event.recipes.gtceu.primitive_blast_furnace('dam_steel_coal')
+    gt.primitive_blast_furnace('dam_steel_coal')
         .itemInputs('gtceu:steel_ingot', 'minecraft:coal')
         .itemOutputs('gtceu:damascus_steel_ingot', 'gtceu:tiny_dark_ash_dust')
         .duration(1200)
 
-    event.recipes.gtceu.primitive_blast_furnace('dam_steel_coke')
+    gt.primitive_blast_furnace('dam_steel_coke')
         .itemInputs('gtceu:steel_ingot', 'gtceu:coke_gem')
         .itemOutputs('gtceu:damascus_steel_ingot', 'gtceu:tiny_dark_ash_dust')
         .duration(900)
 
-    event.recipes.gtceu.primitive_blast_furnace('dam_steel_charcoal_dust')
+    gt.primitive_blast_furnace('dam_steel_charcoal_dust')
         .itemInputs('gtceu:steel_ingot', 'gtceu:charcoal_dust')
         .itemOutputs('gtceu:damascus_steel_ingot', 'gtceu:tiny_dark_ash_dust')
         .duration(1200)
 
-    event.recipes.gtceu.primitive_blast_furnace('dam_steel_coal_dust')
+    gt.primitive_blast_furnace('dam_steel_coal_dust')
         .itemInputs('gtceu:steel_ingot', 'gtceu:coal_dust')
         .itemOutputs('gtceu:damascus_steel_ingot', 'gtceu:tiny_dark_ash_dust')
         .duration(1200)
 
-    event.recipes.gtceu.primitive_blast_furnace('dam_steel_coke_dust')
+    gt.primitive_blast_furnace('dam_steel_coke_dust')
         .itemInputs('gtceu:steel_ingot', 'gtceu:coke_dust')
         .itemOutputs('gtceu:damascus_steel_ingot', 'gtceu:tiny_dark_ash_dust')
         .duration(900)
@@ -528,7 +531,7 @@ ServerEvents.recipes(event => {
       B: '#minecraft:planks'
     })
 
-    event.recipes.gtceu.cutter('cut_planks')
+    gt.cutter('cut_planks')
       .itemInputs('#minecraft:planks')
       .itemOutputs('2x gtceu:wood_plate')
       .duration(200)
@@ -541,7 +544,7 @@ ServerEvents.recipes(event => {
       B: 'gtceu:treated_wood_planks'
     })
 
-    event.recipes.gtceu.cutter('cut_planks_treated')
+    gt.cutter('cut_planks_treated')
       .itemInputs('gtceu:treated_wood_planks')
       .itemOutputs('2x gtceu:treated_wood_plate')
       .duration(200)

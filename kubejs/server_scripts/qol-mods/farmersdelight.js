@@ -1,4 +1,7 @@
 ServerEvents.recipes(event => {
+
+  const gt = event.recipes.gtceu
+
     //#region cakes & pies
     event.shaped('2x farmersdelight:raw_pie_crust', [
       '   ',
@@ -97,14 +100,14 @@ ServerEvents.recipes(event => {
       D: '#forge:dough'
     }).replaceIngredient('minecraft:honey_bottle', 'minecraft:glass_bottle')
     
-    event.recipes.gtceu.forming_press('form_pie_crust')
+    gt.forming_press('form_pie_crust')
       .notConsumable('gtceu:cylinder_casting_mold')
       .itemInputs('5x #forge:dough', 'minecraft:sugar')
       .itemOutputs('3x farmersdelight:raw_pie_crust')
       .duration(100)
       .EUt(6)    
 
-    event.recipes.gtceu.forming_press('form_cake_base')
+    gt.forming_press('form_cake_base')
       .notConsumable('gtceu:cylinder_casting_mold')
       .itemInputs('3x #forge:dough', '2x #forge:sweetener', 'minecraft:egg')
       .itemOutputs('2x createaddition:cake_base')
@@ -120,28 +123,28 @@ ServerEvents.recipes(event => {
     event.shapeless('8x delightful:glow_jam_cookie', ['#forge:dough', 'delightful:glow_jam_jar']).replaceIngredient('delightful:glow_jam_jar', 'minecraft:glass_bottle')
     event.shapeless('8x minecraft:cookie', ['#forge:dough', 'create:bar_of_chocolate'])
 
-    event.recipes.gtceu.forming_press('form_choco_cookie')
+    gt.forming_press('form_choco_cookie')
       .notConsumable('gtceu:cylinder_casting_mold')
       .itemInputs('#forge:dough', '2x create:bar_of_chocolate')
       .itemOutputs('12x minecraft:cookie')
       .duration(200)
       .EUt(6)
             
-    event.recipes.gtceu.forming_press('form_sugar_cookie')
+    gt.forming_press('form_sugar_cookie')
       .notConsumable('gtceu:cylinder_casting_mold')
       .itemInputs('#forge:dough', '2x #forge:sweetener')
       .itemOutputs('12x farmersdelight:honey_cookie')
       .duration(200)
       .EUt(6)
     
-    event.recipes.gtceu.forming_press('form_glow_cookie')
+    gt.forming_press('form_glow_cookie')
       .notConsumable('gtceu:cylinder_casting_mold')
       .itemInputs('#forge:dough', '2x minecraft:glow_berries')
       .itemOutputs('12x delightful:glow_jam_cookie')
       .duration(200)
       .EUt(6)
       
-    event.recipes.gtceu.forming_press('form_berry_cookie')
+    gt.forming_press('form_berry_cookie')
       .notConsumable('gtceu:cylinder_casting_mold')
       .itemInputs('#forge:dough', '2x minecraft:sweet_berries')
       .itemOutputs('12x farmersdelight:sweet_berry_cookie')
@@ -181,21 +184,21 @@ ServerEvents.recipes(event => {
 
 
     //#region wheat, dough, & straw 
-    // event.recipes.gtceu.macerator('macerate_to_flour')
+    // gt.macerator('macerate_to_flour')
     //   .itemInputs('minecraft:wheat')
     //   .itemOutputs('gtceu:wheat_dust')
     //   .chancedOutput('farmersdelight:straw', 5000, 0)
     //   .duration(98)
     //   .EUt(2)                                            These dont work bc of a GT bug where you can't remove recycling recipes
 
-    // event.recipes.gtceu.macerator('macerate_hay_bale')
+    // gt.macerator('macerate_hay_bale')
     //   .itemInputs('minecraft:hay_block')
     //   .itemOutputs('9x gtceu:wheat_dust', '4x farmersdelight:straw')
     //   .chancedOutput('farmersdelight:straw', 5000, 0)
     //   .duration(882)
     //   .EUt(2)
 
-    event.recipes.gtceu.mixer('mix_dough')
+    gt.mixer('mix_dough')
       .itemInputs('2x gtceu:wheat_dust')
       .inputFluids('minecraft:water 250')
       .itemOutputs('3x gtceu:dough')
@@ -211,7 +214,7 @@ ServerEvents.recipes(event => {
       B: 'minecraft:water_bucket'
     }).replaceIngredient('minecraft:water_bucket', 'minecraft:bucket')
   
-    event.recipes.gtceu.macerator('macerate_grass')
+    gt.macerator('macerate_grass')
       .itemInputs('#forge:grass')
       .itemOutputs('2x farmersdelight:straw')
       .duration(40)
@@ -230,7 +233,7 @@ ServerEvents.recipes(event => {
       B: 'minecraft:water_bucket'
     }).replaceIngredient('minecraft:water_bucket', 'minecraft:bucket')
 
-    event.recipes.gtceu.mixer('mix_nut_dough')
+    gt.mixer('mix_nut_dough')
       .itemInputs('2x astrogreg:acorn_dust')
       .inputFluids('minecraft:water 250')
       .itemOutputs('3x gtceu:dough')
@@ -256,7 +259,7 @@ ServerEvents.recipes(event => {
       ]
     })
 
-    event.recipes.gtceu.macerator('macerate_acorn')
+    gt.macerator('macerate_acorn')
       .itemInputs('delightful:acorn')
       .itemOutputs('astrogreg:acorn_dust')
       .duration(98)
@@ -274,7 +277,7 @@ ServerEvents.recipes(event => {
 
 
     //#region chocolate
-    event.recipes.gtceu.fluid_solidifier('solidify_chocolate')
+    gt.fluid_solidifier('solidify_chocolate')
       .notConsumable('gtceu:ingot_casting_mold')
       .inputFluids('create:chocolate 250')
       .itemOutputs('create:bar_of_chocolate')
@@ -307,7 +310,7 @@ ServerEvents.recipes(event => {
       'minecraft:glass_bottle'
     )
 
-    event.recipes.gtceu.mixer('mix_chocolate')
+    gt.mixer('mix_chocolate')
       .itemInputs('2x gtceu:cocoa_dust', 'minecraft:sugar')
       .inputFluids('minecraft:milk 250')
       .outputFluids('create:chocolate 500')
@@ -318,20 +321,20 @@ ServerEvents.recipes(event => {
 
 
     //#region misc
-    event.recipes.gtceu.fluid_solidifier('solidify_cheese')
+    gt.fluid_solidifier('solidify_cheese')
       .notConsumable('gtceu:ingot_casting_mold')
       .inputFluids('minecraft:milk 125')
       .itemOutputs('ad_astra:cheese')
       .duration(200)
       .EUt(7)
 
-    event.recipes.gtceu.macerator('macerate_leaves')
+    gt.macerator('macerate_leaves')
       .itemInputs('#minecraft:leaves')
       .chancedOutput('delightful:green_tea_leaf', 7500, 0)
       .duration(120)
       .EUt(2)
       
-    event.recipes.gtceu.macerator('macerate_tea')
+    gt.macerator('macerate_tea')
       .itemInputs('delightful:green_tea_leaf')
       .itemOutputs('minecraft:green_dye')
       .chancedOutput('delightful:matcha', 4000, 0)

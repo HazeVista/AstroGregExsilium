@@ -1,3 +1,6 @@
+const RecipeLogic = Java.loadClass("com.gregtechceu.gtceu.api.machine.trait.RecipeLogic")
+const List = Java.loadClass('java.util.List')
+
 GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
     event.create('greenhouse_trees')
         .category('simple')
@@ -55,10 +58,29 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
             .where('#', Predicates.any())
             .build()    
     )
-    .workableCasingModel(
-        "gtceu:block/casings/solid/machine_casing_solid_steel",
-        "gtceu:block/multiblock/primitive_pump"
-    )
+    .modelProperty(GTModelProperties.RECIPE_LOGIC_STATUS, RecipeLogic.Status.IDLE)
+    .model(GTMachineModels
+        .createWorkableCasingMachineModel(
+            GTCEu.id("gtceu:block/casings/solid/machine_casing_solid_steel"),
+            GTCEu.id("gtceu:block/multiblock/primitive_pump"))
+            ["andThen(java.util.function.Consumer)"](b => b.addDynamicRenderer(()=> GTDynamicRenders.makeGrowingPlantRender(List.of(
+                new Vector3f(-1, 1, -1),
+                new Vector3f(-1, 1, -2),
+                new Vector3f(-1, 1, -4),
+                new Vector3f(-1, 1, -5),
+                new Vector3f(-2, 1, -1),
+                new Vector3f(-2, 1, -2),
+                new Vector3f(-2, 1, -4),
+                new Vector3f(-2, 1, -5),
+                new Vector3f(1, 1, -1),
+                new Vector3f(1, 1, -2),
+                new Vector3f(1, 1, -4),
+                new Vector3f(1, 1, -5),
+                new Vector3f(2, 1, -1),
+                new Vector3f(2, 1, -2),
+                new Vector3f(2, 1, -4),
+                new Vector3f(2, 1, -5),
+            )))))
 
     
     

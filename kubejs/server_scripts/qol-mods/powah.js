@@ -1,4 +1,7 @@
 ServerEvents.recipes(event => {
+
+    const gt = event.recipes.gtceu
+
     //#region basic components
     event.shaped('powah:player_aerial_pearl', [
         'BCB',
@@ -33,7 +36,7 @@ ServerEvents.recipes(event => {
         B: '#gtceu:tools/crafting_wrenches'
     });
 
-    event.recipes.gtceu.assembler('assembler_dielectric_casing')
+    gt.assembler('assembler_dielectric_casing')
         .itemInputs('4x powah:dielectric_rod')
         .itemOutputs('powah:dielectric_casing')
         .duration(64)
@@ -138,53 +141,53 @@ ServerEvents.recipes(event => {
         C: 'minecraft:lava_bucket'
     })
 
-    event.recipes.gtceu.mixer('mixing_dielectric_paste')
+    gt.mixer('mixing_dielectric_paste')
         .itemInputs('3x gtceu:charcoal_dust', '2x gtceu:clay_dust', 'minecraft:blaze_powder')
         .itemOutputs('4x powah:dielectric_paste')
         .EUt(20)
         .duration(200)
 
-    event.recipes.gtceu.mixer('mixing_dielectric_paste1')
+    gt.mixer('mixing_dielectric_paste1')
         .itemInputs('3x gtceu:coal_dust', '2x gtceu:clay_dust', 'minecraft:blaze_powder')
         .itemOutputs('4x powah:dielectric_paste')
         .EUt(20)
         .duration(200)
 
-    event.recipes.gtceu.mixer('mixing_dielectric_paste2')
+    gt.mixer('mixing_dielectric_paste2')
         .itemInputs('3x gtceu:carbon_dust', '2x gtceu:clay_dust', 'minecraft:blaze_powder')
         .itemOutputs('4x powah:dielectric_paste')
         .EUt(20)
         .duration(200)
 
-    event.recipes.gtceu.mixer('mixing_dielectric_paste_lava')
+    gt.mixer('mixing_dielectric_paste_lava')
         .itemInputs('3x gtceu:charcoal_dust', '2x gtceu:clay_dust')
         .itemOutputs('4x powah:dielectric_paste')
         .inputFluids('minecraft:lava 100')
         .EUt(20)
         .duration(200)
 
-    event.recipes.gtceu.mixer('mixing_dielectric_paste_lava1')
+    gt.mixer('mixing_dielectric_paste_lava1')
         .itemInputs('3x gtceu:coal_dust', '2x gtceu:clay_dust')
         .itemOutputs('4x powah:dielectric_paste')
         .inputFluids('minecraft:lava 100')
         .EUt(20)
         .duration(200)
 
-    event.recipes.gtceu.mixer('mixing_dielectric_paste_lava2')
+    gt.mixer('mixing_dielectric_paste_lava2')
         .itemInputs('3x gtceu:carbon_dust', '2x gtceu:clay_dust')
         .inputFluids('minecraft:lava 100')
         .itemOutputs('4x powah:dielectric_paste')
         .EUt(20)
         .duration(200)
 
-    event.recipes.gtceu.assembler('assembling_thermoelectric_plate')
+    gt.assembler('assembling_thermoelectric_plate')
         .itemInputs('4x gtceu:copper_plate', 'powah:dielectric_paste')    
         .inputFluids('gtceu:blaze 576')
         .itemOutputs('powah:thermoelectric_plate')
         .EUt(15)
         .duration(80)
 
-    event.recipes.gtceu.vacuum_freezer('cool_carbon_dioxide')
+    gt.vacuum_freezer('cool_carbon_dioxide')
         .notConsumable('gtceu:block_casting_mold')
         .inputFluids('gtceu:carbon_dioxide 1296')
         .itemOutputs('powah:dry_ice')
