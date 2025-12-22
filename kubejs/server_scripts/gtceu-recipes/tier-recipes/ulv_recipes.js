@@ -368,14 +368,14 @@ ServerEvents.recipes(event => {
     }).replaceIngredient('minecraft:water_bucket', 'minecraft:bucket')
 
     event.recipes.create.pressing('gtceu:compressed_fireclay', 'gtceu:fireclay_dust')
-    event.recipes.create.pressing('gtceu:compressed_livingclay', 'astrogreg:livingclay_dust')
+    event.recipes.create.pressing('astrogreg:compressed_livingclay', 'astrogreg:livingclay_dust')
     event.recipes.create.pressing('gtceu:compressed_clay', 'minecraft:clay_ball')
 
     event.recipes.farmersdelight.cutting('#minecraft:smelts_to_glass', '#forge:tools/shovels', ['minecraft:clay_ball', 'minecraft:clay_ball'])
 
     event.campfireCooking('minecraft:brick', 'gtceu:compressed_clay', 0, 80)
     event.campfireCooking('gtceu:firebrick', 'gtceu:compressed_fireclay', 0, 80)
-    event.campfireCooking('astrogreg:livingbrick', 'gtceu:compressed_livingclay', 0, 80)
+    event.campfireCooking('astrogreg:livingbrick', 'astrogreg:compressed_livingclay', 0, 80)
     event.campfireCooking('gtceu:coke_oven_brick', 'gtceu:compressed_coke_clay', 0, 80)
 
     event.shaped('8x gtceu:compressed_clay', [
@@ -418,14 +418,14 @@ ServerEvents.recipes(event => {
       .EUt(2)
       
     gt.macerator('macerate_livingbrick_alt1')
-      .itemInputs('gtceu:compressed_livingclay')
+      .itemInputs('astrogreg:compressed_livingclay')
       .itemOutputs('astrogreg:livingclay_dust')
       .duration(98)
       .EUt(2)
 
     gt.compressor('compress_livingbrick')
       .itemInputs('astrogreg:livingclay_dust')
-      .itemOutputs('gtceu:compressed_livingclay')
+      .itemOutputs('astrogreg:compressed_livingclay')
       .duration(80)
       .EUt(4)
     
@@ -446,7 +446,7 @@ ServerEvents.recipes(event => {
       A: 'astrogreg:livingbrick'
     })
 
-    event.shaped('8x gtceu:compressed_livingclay', [
+    event.shaped('8x astrogreg:compressed_livingclay', [
       'AAA',
       'ABA',
       'AAA'
@@ -461,7 +461,7 @@ ServerEvents.recipes(event => {
       .duration(300)
       .EUt(2)
 
-    event.smelting('astrogreg:livingbrick', 'gtceu:compressed_livingclay')
+    event.smelting('astrogreg:livingbrick', 'astrogreg:compressed_livingclay')
     //#endregion
 
 
