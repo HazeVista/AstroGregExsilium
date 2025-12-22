@@ -29,6 +29,18 @@ ItemEvents.tooltip(event => {
     *       ])                                              You can continue this with more lines as well
     * 
     */
+
+    //multiblock tooltip builder
+    function multiTooltip(event, machineId, tooltips) {
+        event.addAdvanced(machineId, (item, advanced, text) => {
+            tooltips.forEach(tooltip => {
+                const line = tooltip.line !== undefined ? tooltip.line : text.size() + 1
+                text.add(line, Text.of(tooltip.text))
+            })
+        })
+    }
+    
+    //add tooltips below
     multiTooltip(event, 'gtceu:greenhouse', [
         { text: '§o§7Electric Garden!' }
     ])
@@ -41,15 +53,6 @@ ItemEvents.tooltip(event => {
     multiTooltip(event, 'gtceu:aether_engine', [
         { line: 3, text: 'Converts §3Æther§r into EU' }
     ])
-
-    function multiTooltip(event, machineId, tooltips) {
-        event.addAdvanced(machineId, (item, advanced, text) => {
-            tooltips.forEach(tooltip => {
-                const line = tooltip.line !== undefined ? tooltip.line : text.size() + 1
-                text.add(line, Text.of(tooltip.text))
-            })
-        })
-    }
     //#endregion
 
 
@@ -124,13 +127,6 @@ ItemEvents.tooltip(event => {
     *       ])                                                   You can continue this with more lines as well
     * 
     */
-    loreTooltip(event, 'gtmutils:neutronium_credit', [
-        {text: 'Coin made out of a confidential, indestructible substance, with a composition only known by the mysterious §4ASTRO Foundation§r'}    
-    ])
-
-    loreTooltip(event, 'farmersdelight:bacon_sandwich', [
-        {text: '§o§7Mmmmm... Tasty!§r§7 - Ubit3y'}
-    ])
 
     //lore tooltip builder
     function loreTooltip(event, machineId, tooltips) {
@@ -141,6 +137,15 @@ ItemEvents.tooltip(event => {
             })
         })
     }
+
+    //add tooltips below
+    loreTooltip(event, 'gtmutils:neutronium_credit', [
+        {text: 'Coin made out of a confidential, indestructible substance, with a composition only known by the mysterious §4ASTRO Foundation§r'}    
+    ])
+
+    loreTooltip(event, 'farmersdelight:bacon_sandwich', [
+        {text: '§o§7Mmmmm... Tasty!§r§7 - Ubit3y'}
+    ])
     //#endregion    
 
 
@@ -171,6 +176,9 @@ ItemEvents.tooltip(event => {
             })
         })
     }
+
+    //add tooltips below
+
     //#endregion
 
 })

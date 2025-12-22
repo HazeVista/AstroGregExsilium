@@ -26,6 +26,7 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
     
 GTCEuStartupEvents.registry('gtceu:machine', event => {
 
+    //#region greenhouse
     event.create('greenhouse', 'multiblock')
         .recipeTypes([
             GTRecipeTypes.get('greenhouse_trees'),
@@ -64,26 +65,28 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
             GTCEu.id("gtceu:block/casings/solid/machine_casing_solid_steel"),
             GTCEu.id("gtceu:block/multiblock/primitive_pump"))
             ["andThen(java.util.function.Consumer)"](b => b.addDynamicRenderer(()=> GTDynamicRenders.makeGrowingPlantRender(List.of(
-                new Vector3f(-1, 1, -1),
-                new Vector3f(-1, 1, -2),
-                new Vector3f(-1, 1, -4),
-                new Vector3f(-1, 1, -5),
-                new Vector3f(-2, 1, -1),
-                new Vector3f(-2, 1, -2),
-                new Vector3f(-2, 1, -4),
-                new Vector3f(-2, 1, -5),
-                new Vector3f(1, 1, -1),
-                new Vector3f(1, 1, -2),
-                new Vector3f(1, 1, -4),
-                new Vector3f(1, 1, -5),
-                new Vector3f(2, 1, -1),
-                new Vector3f(2, 1, -2),
-                new Vector3f(2, 1, -4),
-                new Vector3f(2, 1, -5),
+                new Vector3f(-1, 0.938, -1),
+                new Vector3f(-1, 0.938, -2),
+                new Vector3f(-1, 0.938, -4),
+                new Vector3f(-1, 0.938, -5),
+                new Vector3f(-2, 0.938, -1),
+                new Vector3f(-2, 0.938, -2),
+                new Vector3f(-2, 0.938, -4),
+                new Vector3f(-2, 0.938, -5),
+                new Vector3f(1, 0.938, -1),
+                new Vector3f(1, 0.938, -2),
+                new Vector3f(1, 0.938, -4),
+                new Vector3f(1, 0.938, -5),
+                new Vector3f(2, 0.938, -1),
+                new Vector3f(2, 0.938, -2),
+                new Vector3f(2, 0.938, -4),
+                new Vector3f(2, 0.938, -5),
             )))))
+    //#endregion
+
 
     
-    
+    //#region convervatory
     event.create('conservatory', 'multiblock')
     .recipeTypes([
             GTRecipeTypes.get('greenhouse_trees'),
@@ -122,7 +125,45 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
             .where('#', Predicates.any())
             .build()    
     )
-    .workableCasingModel(
+        .modelProperty(GTModelProperties.RECIPE_LOGIC_STATUS, RecipeLogic.Status.IDLE)
+    .model(GTMachineModels
+        .createWorkableCasingMachineModel(
+            GTCEu.id("gtceu:block/casings/solid/machine_casing_solid_steel"),
+            GTCEu.id("gtceu:block/multiblock/primitive_pump"))
+            ["andThen(java.util.function.Consumer)"](b => b.addDynamicRenderer(()=> GTDynamicRenders.makeGrowingPlantRender(List.of(
+                new Vector3f(-1, 0.938, -1),
+                new Vector3f(-1, 0.938, -2),
+                new Vector3f(-1, 0.938, -3),
+                new Vector3f(-1, 0.938, -4),
+                new Vector3f(-1, 0.938, -6),
+                new Vector3f(-1, 0.938, -7),
+                new Vector3f(-1, 0.938, -8),
+                new Vector3f(-1, 0.938, -9),
+                new Vector3f(-2, 0.938, -1),
+                new Vector3f(-2, 0.938, -2),
+                new Vector3f(-2, 0.938, -3),
+                new Vector3f(-2, 0.938, -4),
+                new Vector3f(-2, 0.938, -6),
+                new Vector3f(-2, 0.938, -7),
+                new Vector3f(-2, 0.938, -8),
+                new Vector3f(-2, 0.938, -9),
+                new Vector3f(1, 0.938, -1),
+                new Vector3f(1, 0.938, -2),
+                new Vector3f(1, 0.938, -3),
+                new Vector3f(1, 0.938, -4),
+                new Vector3f(1, 0.938, -6),
+                new Vector3f(1, 0.938, -7),
+                new Vector3f(1, 0.938, -8),
+                new Vector3f(1, 0.938, -9),
+                new Vector3f(2, 0.938, -1),
+                new Vector3f(2, 0.938, -2),
+                new Vector3f(2, 0.938, -3),
+                new Vector3f(2, 0.938, -4),
+                new Vector3f(2, 0.938, -6),
+                new Vector3f(2, 0.938, -7),
+                new Vector3f(2, 0.938, -8),
+                new Vector3f(2, 0.938, -9)
+            ))))).workableCasingModel(
             "gtceu:block/casings/solid/machine_casing_robust_tungstensteel",
             "gtceu:block/multiblock/primitive_pump"
         )
