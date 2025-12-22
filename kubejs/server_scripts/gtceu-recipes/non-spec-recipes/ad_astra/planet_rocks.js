@@ -214,12 +214,12 @@ ServerEvents.recipes(event => {
     })
 
     gt.compressor('compress_venus_sandstone')
-        .itemInputs('ad_astra:venus_sand')
+        .itemInputs('4x ad_astra:venus_sand')
         .itemOutputs('ad_astra:venus_sandstone')
         .duration(300)
         .EUt(2)
 
-    gt.assembler('assemble_venus_sandstone_bricks')
+    gt.assembler('assemble_venus_sandstone_brick_stairs')
         .itemInputs('3x ad_astra:venus_sandstone_bricks')
         .itemOutputs('4x ad_astra:venus_sandstone_brick_stairs')
         .duration(80)
@@ -232,5 +232,35 @@ ServerEvents.recipes(event => {
         .duration(80)
         .circuit(4)
         .EUt(8)
+
+    gt.macerator('recycle_venus_sandstone')
+        .itemInputs('ad_astra:venus_sandstone')
+        .itemOutputs('gtceu:quartz_sand_dust')
+        .duration(20)
+        .EUt(4)
+        
+    gt.macerator('recycle_venus_sandstone_bricks')
+        .itemInputs('ad_astra:venus_sandstone_bricks')
+        .itemOutputs('gtceu:quartz_sand_dust')
+        .duration(20)
+        .EUt(4)
+        
+    gt.macerator('recycle_cracked_venus_sandstone_bricks')
+        .itemInputs('ad_astra:cracked_venus_sandstone_bricks')
+        .itemOutputs('gtceu:quartz_sand_dust')
+        .duration(20)
+        .EUt(4)
+        
+    gt.macerator('recycle_venus_sandstone_brick_slab')
+        .itemInputs('ad_astra:venus_sandstone_brick_slab')
+        .itemOutputs('2x gtceu:small_quartz_sand_dust')
+        .duration(10)
+        .EUt(4)
+        
+    gt.macerator('recycle_venus_sandstone_brick_stairs')
+        .itemInputs('ad_astra:venus_sandstone_brick_stairs')
+        .itemOutputs('3x gtceu:small_quartz_sand_dust')
+        .duration(15)
+        .EUt(4)
     //#endregion
 })

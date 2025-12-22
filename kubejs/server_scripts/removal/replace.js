@@ -28,7 +28,6 @@ ServerEvents.recipes(event => {
     event.replaceInput({input: 'botania:rune_gluttony'}, 'botania:rune_gluttony', 'botania:gluttony_rune')
     event.replaceInput({input: 'botania:rune_envy'}, 'botania:rune_envy', 'botania:envy_rune')
     event.replaceInput({output: 'minecraft:brick'}, 'minecraft:clay_ball', 'gtceu:compressed_clay')
-    event.replaceInput({input: 'ae2:certus_quartz_crystal'}, 'ae2:certus_quartz_crystal', 'gtceu:certus_quartz_gem')
     event.replaceInput({output: /gtceu:lv_.*/}, 'minecraft:diamond', 'gtceu:grinding_head_damascus_steel')
     event.replaceInput({output: /gtceu:mv_.*/}, 'minecraft:diamond', 'gtceu:grinding_head_damascus_steel')
     event.replaceInput({output: /gtceu:zpm_.*/}, 'gtceu:tungsten_grinding_head', 'gtceu:grinding_head_duranium')
@@ -57,7 +56,6 @@ ServerEvents.recipes(event => {
     //#endregion
     
     //#region output
-    event.replaceOutput({output: 'ae2:certus_quartz_crystal'}, 'ae2:certus_quartz_crystal', 'gtceu:certus_quartz_gem')
     event.replaceOutput({}, 'ad_extendra:saturlyte_ingot', 'astrogreg:saturlyte_ingot')
     event.replaceOutput({}, 'ad_extendra:juperium_ingot', 'astrogreg:juperium_ingot')
     // event.replaceOutput({output: ''}, '', '')

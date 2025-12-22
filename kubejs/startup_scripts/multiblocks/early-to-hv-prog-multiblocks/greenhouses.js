@@ -3,21 +3,21 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
         .category('simple')
         .setEUIO('in')
         .setMaxIOSize(6, 6, 3, 3)
-        .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)
+        .setProgressBar(AstroGUITextures.PROGRESS_BAR_SAPLING, FillDirection.DOWN_TO_UP)
         .setSound(GTSoundEntries.CHAINSAW_TOOL)
 
     event.create('greenhouse_crops')
         .category('simple')
         .setEUIO('in')
         .setMaxIOSize(6, 6, 3, 3)
-        .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)
-        .setSound(GTSoundEntries.COOLING)
+        .setProgressBar(AstroGUITextures.PROGRESS_BAR_CROP, FillDirection.DOWN_TO_UP)
+        .setSound(GTSoundEntries.REPLICATOR)
         
     event.create('greenhouse_flowers')
         .category('simple')
         .setEUIO('in')
         .setMaxIOSize(6, 6, 3, 3)
-        .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)
+        .setProgressBar(AstroGUITextures.PROGRESS_BAR_FLOWER, FillDirection.DOWN_TO_UP)
         .setSound(GTSoundEntries.COOLING)
     });
     
@@ -54,11 +54,11 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
             .where('@', Predicates.controller(Predicates.blocks(definition.get())))
             .where('#', Predicates.any())
             .build()    
-        )
-        .workableCasingModel(
-            "gtceu:block/casings/solid/machine_casing_solid_steel",
-            "gtceu:block/multiblock/primitive_pump"
-        )
+    )
+    .workableCasingModel(
+        "gtceu:block/casings/solid/machine_casing_solid_steel",
+        "gtceu:block/multiblock/primitive_pump"
+    )
 
     
     
@@ -104,5 +104,5 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
             "gtceu:block/casings/solid/machine_casing_robust_tungstensteel",
             "gtceu:block/multiblock/primitive_pump"
         )
-    });
+    })
 

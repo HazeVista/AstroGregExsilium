@@ -5,7 +5,7 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
 			return builder
 				.recipeType('mana_infusion')
                 .recipeType('botanic_purification')
-				.workableTieredHullModel('gtceu:block/machines/replicator')
+				.workableTieredHullModel('astrogreg:block/machines/mana_infuser')
 	})
 })
 
@@ -14,15 +14,18 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
 		.category('simple')
 		.setEUIO('in')
 		.setMaxIOSize(2, 1, 1, 1)
-        .setSlotOverlay(false, false, true, GuiTextures.BREWER_OVERLAY)
+        .setSlotOverlay(false, true, AstroGUITextures.SHIMMER_OVERLAY)
+        .setSlotOverlay(false, false, true, AstroGUITextures.CATALYST_OVERLAY)
 		.setProgressBar(AstroGUITextures.PROGRESS_BAR_MANA_INFUSION, FillDirection.LEFT_TO_RIGHT)
-		.setSound(GTSoundEntries.REPLICATOR)
+		.setSound(AstroSoundEntries.MANAFIELD_SIMULATOR)
+
 
     event.create('botanic_purification')
 		.category('simple')
 		.setEUIO('in')
 		.setMaxIOSize(2, 1, 1, 1)
-        .setSlotOverlay(false, false, true, GuiTextures.BREWER_OVERLAY)
+        .setSlotOverlay(false, true, AstroGUITextures.SHIMMER_OVERLAY)
+        .setSlotOverlay(false, false, true, AstroGUITextures.FLOWER_OVERLAY)
 		.setProgressBar(AstroGUITextures.PROGRESS_BAR_MANA_INFUSION, FillDirection.LEFT_TO_RIGHT)
-		.setSound(GTSoundEntries.REPLICATOR)
-});
+		.setSound(AstroSoundEntries.MANAFIELD_SIMULATOR)
+})

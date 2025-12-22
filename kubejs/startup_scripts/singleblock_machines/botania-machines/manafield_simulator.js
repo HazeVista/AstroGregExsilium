@@ -3,18 +3,19 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
 		.tiers(GTValues.LV, GTValues.MV, GTValues.HV, GTValues.EV, GTValues.IV, GTValues.LuV, GTValues.ZPM, GTValues.UV)
 		.definition((tier, builder) => {
 			return builder
-				.recipeType('mana_production')
-				.workableTieredHullModel('gtceu:block/machines/replicator')
+				.recipeType('manafield_simulation')
+				.workableTieredHullModel('astrogreg:block/machines/manafield_simulator')
 	})
 })
 
 GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
-	event.create('mana_production')
+	event.create('manafield_simulation')
 		.category('simple')
 		.setEUIO('in')
-		.setMaxIOSize(2, 1, 1, 1)
-        .setSlotOverlay(false, false, GuiTextures.BREWER_OVERLAY)
+		.setMaxIOSize(2, 0, 2, 1)
+        .setSlotOverlay(true, true, AstroGUITextures.SHIMMER_OVERLAY)
+        .setSlotOverlay(false, false, true, AstroGUITextures.FLOWER_OVERLAY)
 		.setProgressBar(AstroGUITextures.PROGRESS_BAR_BLUE_ARROW, FillDirection.LEFT_TO_RIGHT)
-		.setSound(GTSoundEntries.REPLICATOR)
+		.setSound(AstroSoundEntries.MANAFIELD_SIMULATOR)
 
 });
