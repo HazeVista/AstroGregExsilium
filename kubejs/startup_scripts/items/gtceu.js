@@ -1,9 +1,6 @@
 StartupEvents.registry('item', event => {
     //id, name, texture, optional tooltip
     const items = [
-    { id: 'data_disk', name: 'Data Disk', texture: 'data_disk', tooltip: '§o§7An Ultra-Low Capacity Data Storage' },
-    { id: 'compressed_livingclay', name: 'Compressed Livingclay', texture: 'raw_livingbrick' },
-    { id: 'livingbrick', name: 'Livingbrick', texture: 'livingbrick' },
     { id: 'grinding_head_damascus_steel', name: 'Damascus Steel Grinding Head', texture: 'damascus_grinding_head' },
     { id: 'grinding_head_diamond', name: 'Diamond Grinding Head', texture: 'diamond_grinding_head' },
     { id: 'grinding_head_tungsten', name: 'Tungsten Grinding Head', texture: 'tungsten_grinding_head' },

@@ -93,7 +93,7 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
             GTRecipeTypes.get('greenhouse_crops'),
             GTRecipeTypes.get('greenhouse_flowers')
         ])
-    .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH])
+    .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.OC_NON_PERFECT_SUBTICK])
     .appearanceBlock(() => Block.getBlock('gtceu:robust_machine_casing'))
     .pattern(definition => FactoryBlockPattern.start()
         .aisle('RRRRRRR', 'FBGGGBF', 'FBGGGBF', 'FBGGGBF', '#FBBBF#', '##FFF##')

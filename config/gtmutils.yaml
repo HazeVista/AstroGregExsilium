@@ -27,7 +27,7 @@ features:
   pterbCoolantIOMultiplier: 0.0
 
   # Whether the coins/credits are enabled.
-  coinsEnabled: true
+  coinsEnabled: false
 
   # Whether the custom MV tools are enabled.
   customMVToolsEnabled: true
@@ -48,5 +48,5 @@ features:
   customZPMToolsEnabled: true
 
   # Whether the Auto Turbo Chargers are enabled.
-  autoChargersEnabled: false
+  autoChargersEnabled: true
 

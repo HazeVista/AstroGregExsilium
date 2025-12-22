@@ -18,4 +18,4 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
 		.setProgressBar(AstroGUITextures.PROGRESS_BAR_BLUE_ARROW, FillDirection.LEFT_TO_RIGHT)
 		.setSound(AstroSoundEntries.MANAFIELD_SIMULATOR)
 
-});
+})

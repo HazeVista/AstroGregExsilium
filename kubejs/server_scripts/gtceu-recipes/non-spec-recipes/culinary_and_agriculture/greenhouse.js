@@ -95,7 +95,7 @@ trees.forEach((tree) => {
             const greenhouse_flower_base = greg.greenhouse_flowers(RecipeName)
                 .notConsumable(flower)
                 .inputFluids('water 100')
-                .itemOutputs(flower)
+                .itemOutputs(`8x ${flower}`)
                 .duration(Duration)
                 .EUt(30)
                 .circuit(Circuit)

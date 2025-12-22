@@ -375,7 +375,7 @@ ServerEvents.recipes(event => {
 
     event.campfireCooking('minecraft:brick', 'gtceu:compressed_clay', 0, 80)
     event.campfireCooking('gtceu:firebrick', 'gtceu:compressed_fireclay', 0, 80)
-    event.campfireCooking('gtceu:livingbrick', 'gtceu:compressed_livingclay', 0, 80)
+    event.campfireCooking('astrogreg:livingbrick', 'gtceu:compressed_livingclay', 0, 80)
     event.campfireCooking('gtceu:coke_oven_brick', 'gtceu:compressed_coke_clay', 0, 80)
 
     event.shaped('8x gtceu:compressed_clay', [
@@ -406,13 +406,13 @@ ServerEvents.recipes(event => {
       .EUt(2)
 
     gt.macerator('macerate_livingbrick')
-      .itemInputs('gtceu:livingbrick')
+      .itemInputs('astrogreg:livingbrick')
       .itemOutputs('astrogreg:livingclay_dust')
       .duration(98)
       .EUt(2)
       
     gt.macerator('macerate_livingbrick_alt')
-      .itemInputs('gtceu:livingbricks')
+      .itemInputs('astrogreg:livingbricks')
       .itemOutputs('4x astrogreg:livingclay_dust')
       .duration(98)
       .EUt(2)
@@ -439,11 +439,11 @@ ServerEvents.recipes(event => {
 
     event.shapeless('2x astrogreg:livingclay_dust', ['astrogreg:livingrock_dust', 'gtceu:clay_dust'])
 
-    event.shaped('gtceu:livingbricks', [
+    event.shaped('astrogreg:livingbricks', [
       'AA',
       'AA'
     ], {
-      A: 'gtceu:livingbrick'
+      A: 'astrogreg:livingbrick'
     })
 
     event.shaped('8x gtceu:compressed_livingclay', [
@@ -456,12 +456,12 @@ ServerEvents.recipes(event => {
     }).keepIngredient('gtceu:brick_wooden_form')
 
     gt.extractor('extract_livingbricks')
-      .itemInputs('gtceu:livingbricks')
-      .itemOutputs('4x gtceu:livingbrick')
+      .itemInputs('astrogreg:livingbricks')
+      .itemOutputs('4x astrogreg:livingbrick')
       .duration(300)
       .EUt(2)
 
-    event.smelting('gtceu:livingbrick', 'gtceu:compressed_livingclay')
+    event.smelting('astrogreg:livingbrick', 'gtceu:compressed_livingclay')
     //#endregion
 
 

@@ -4,7 +4,7 @@ ServerEvents.recipes(event => {
 
     const ageCasings = [
     ['astrogreg:futura_alloy_frame', 'astrogreg:futura_alloy_plate', '2x gtceu:futura_casing', 'futura_casing'],
-    ['gtceu:livingbricks', 'astrogreg:manasteel_plate', '2x astrogreg:manasteel_brick_machine_casing', 'manasteel_brick_casing'],
+    ['astrogreg:livingbricks', 'astrogreg:manasteel_plate', '2x astrogreg:manasteel_brick_machine_casing', 'manasteel_brick_casing'],
     ['astrogreg:terrasteel_frame', 'astrogreg:terrasteel_plate', '2x astrogreg:solid_terrasteel_machine_casing', 'solid_terrasteel_casing'],
     ['astrogreg:elementium_frame', 'astrogreg:elementium_plate', '2x astrogreg:solid_alfsteel_machine_casing', 'alfsteel_turbine_casing']]
 

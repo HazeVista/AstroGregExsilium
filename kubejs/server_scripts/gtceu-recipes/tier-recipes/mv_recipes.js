@@ -7,7 +7,7 @@ ServerEvents.recipes(event => {
         .itemInputs('gtceu:plastic_printed_circuit_board', 'gtceu:cpu_chip', '2x gtceu:ram_chip',
             '2x gtceu:tin_bolt', '8x gtceu:fine_red_alloy_wire', '2x gtceu:polyethylene_plate')
         .inputFluids('gtceu:tin 144')
-        .itemOutputs('gtceu:data_disk')
+        .itemOutputs('astrogreg:data_disk')
         .duration(300)
         .EUt(45)
 
@@ -15,7 +15,7 @@ ServerEvents.recipes(event => {
         .itemInputs('gtceu:plastic_printed_circuit_board', 'gtceu:cpu_chip', '2x gtceu:ram_chip',
             '2x gtceu:tin_bolt', '8x gtceu:fine_red_alloy_wire', '2x gtceu:polyethylene_plate')
         .inputFluids('gtceu:soldering_alloy 72')
-        .itemOutputs('gtceu:data_disk')
+        .itemOutputs('astrogreg:data_disk')
         .duration(300)
         .EUt(45)
 

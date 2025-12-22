@@ -14,7 +14,7 @@ StartupEvents.registry('block', event => {
 		.fullBlock(true)
 		.opaque(true)
 
-    event.create('gtceu:livingbricks')
+    event.create('astrogreg:livingbricks')
         .displayName('Livingbricks')
         .hardness(0.8)
         .resistance(0.8)

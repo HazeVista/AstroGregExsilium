@@ -34,8 +34,11 @@ ItemEvents.tooltip(event => {
     function multiTooltip(event, machineId, tooltips) {
         event.addAdvanced(machineId, (item, advanced, text) => {
             tooltips.forEach(tooltip => {
-                const line = tooltip.line !== undefined ? tooltip.line : text.size() + 1
-                text.add(line, Text.of(tooltip.text))
+                if (tooltip.line !== undefined) {
+                    text.add(tooltip.line, Text.of(tooltip.text))
+                } else {
+                    text.add(Text.of(tooltip.text))
+                }
             })
         })
     }
@@ -132,17 +135,16 @@ ItemEvents.tooltip(event => {
     function loreTooltip(event, machineId, tooltips) {
         event.addAdvanced(machineId, (item, advanced, text) => {
             tooltips.forEach(tooltip => {
-                const line = tooltip.line !== undefined ? tooltip.line : text.size() + 1
-                text.add(line, Text.of(tooltip.text))
+                if (tooltip.line !== undefined) {
+                    text.add(tooltip.line, Text.of(tooltip.text))
+                } else {
+                    text.add(Text.of(tooltip.text))
+                }
             })
         })
     }
 
     //add tooltips below
-    loreTooltip(event, 'gtmutils:neutronium_credit', [
-        {text: 'Coin made out of a confidential, indestructible substance, with a composition only known by the mysterious §4ASTRO Foundation§r'}    
-    ])
-
     loreTooltip(event, 'farmersdelight:bacon_sandwich', [
         {text: '§o§7Mmmmm... Tasty!§r§7 - Ubit3y'}
     ])
@@ -171,8 +173,11 @@ ItemEvents.tooltip(event => {
     function tipTooltip(event, machineId, tooltips) {
         event.addAdvanced(machineId, (item, advanced, text) => {
             tooltips.forEach(tooltip => {
-                const line = tooltip.line !== undefined ? tooltip.line : text.size() + 1
-                text.add(line, Text.of(tooltip.text))
+                if (tooltip.line !== undefined) {
+                    text.add(tooltip.line, Text.of(tooltip.text))
+                } else {
+                    text.add(Text.of(tooltip.text))
+                }
             })
         })
     }

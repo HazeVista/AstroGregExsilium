@@ -69,7 +69,6 @@ ClientEvents.lang('en_us', event => {
     
     //#region gregtech
     renameItems('gtmutils', [
-        ['neutronium_credit', '§cAstroCredit'],
         ['luv_power_unit', '§dLudicrous Power Unit'],
         ['zpm_power_unit', '§cZero Point Power Unit']
     ])
