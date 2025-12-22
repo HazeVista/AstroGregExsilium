@@ -1,10 +1,5 @@
 ItemEvents.tooltip(event => {
-    event.addAdvanced(Ingredient.all, (item, advanced, text) => {
-        if (item.nbt) {
-            if (event.alt) { text.add(Text.of('NBT: ').append(Text.prettyPrintNbt(item.nbt))) }
-            else { text.add(Text.of('§o§7Press Alt for  nbt')) }
-        }
-    })
+    
     //#region tooltip design guide
     /*
     *   
@@ -17,13 +12,13 @@ ItemEvents.tooltip(event => {
     */
     //#endregion
 
-
-
+    
+    
     //#region multiblocks
     /*
     *   Multiblock Tooltip Builder
     *   how to use:
-    *       
+    *    
     *       multiTooltip(event, 'multiblock_id', [
     *           {text: '§o§7Brief witty line!'},            You can add one or multiple lines like this, defaults to line 1
     *           {text: '§o§7Some important description.'}   A new line under a machine will go to the next line, as many as you want
@@ -36,42 +31,35 @@ ItemEvents.tooltip(event => {
     */
 
     //multiblock tooltip builder
-    function multiTooltip(machineId, tooltips) {
+    function multiTooltip(event, machineId, tooltips) {
         event.addAdvanced(machineId, (item, advanced, text) => {
             tooltips.forEach(tooltip => {
                 if (tooltip.line !== undefined) {
                     text.add(tooltip.line, Text.of(tooltip.text))
                 } else {
-                    text.add(1, Text.of(tooltip.text))
+                    text.add(Text.of(tooltip.text))
                 }
             })
         })
     }
-
-    // --- Add Tooltips Below ---
-
-    multiTooltip('gtceu:greenhouse', [
+    
+    //add tooltips below
+    multiTooltip(event, 'gtceu:greenhouse', [
         { text: '§o§7Electric Garden!' }
     ])
 
-    multiTooltip('gtceu:conservatory', [
+    multiTooltip(event, 'gtceu:conservatory', [
         { text: '§o§7Electric Plantation!' },
         { text: '§o§7Can parallelize with Parallel Control Hatches' }
     ])
 
-    multiTooltip('astrogreg:aether_turbine', [
-        { text: 'Converts §3Æther§r into EU' }
-    ])
-    event.addAdvanced('gtmutils:pterb_machine', (item, advanced, text) => {
-        text.remove(1)
-    })
-    multiTooltip('gtmutils:pterb_machine', [
-        { line: 1, text: 'Chunkload both machines for cross-dimensional transfer!' }
+    multiTooltip(event, 'gtceu:aether_engine', [
+        { line: 3, text: 'Converts §3Æther§r into EU' }
     ])
     //#endregion
 
 
-
+    
     //#region singleblocks
     /*
     *   Singleblock Tooltip Builder
@@ -158,7 +146,7 @@ ItemEvents.tooltip(event => {
 
     //add tooltips below
     loreTooltip(event, 'farmersdelight:bacon_sandwich', [
-        { text: '§o§7Mmmmm... Tasty!§r§7 - Ubit3y' }
+        {text: '§o§7Mmmmm... Tasty!§r§7 - Ubit3y'}
     ])
     //#endregion    
 
@@ -180,7 +168,7 @@ ItemEvents.tooltip(event => {
     *       ])                                              You can continue this with more lines as well
     * 
     */
-
+ 
     //tips tooltip builder
     function tipTooltip(event, machineId, tooltips) {
         event.addAdvanced(machineId, (item, advanced, text) => {
