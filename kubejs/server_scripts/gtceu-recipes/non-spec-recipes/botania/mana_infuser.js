@@ -1,7 +1,7 @@
 ServerEvents.recipes(event => {
 
 const infuser = event.recipes.gtceu.mana_infusion
-const purify = event.recipes.gtceu.botanic_purification
+const purify = event.recipes.gtceu.mana_infusions
 
 //#region no catalyst
     //output, input, mana consumed in mb, duration in ticks, EUt
