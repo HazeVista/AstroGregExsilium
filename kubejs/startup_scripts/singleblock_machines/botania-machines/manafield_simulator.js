@@ -12,7 +12,7 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
 	event.create('manafield_simulation')
 		.category('simple')
 		.setEUIO('in')
-		.setMaxIOSize(2, 0, 1, 1)
+		.setMaxIOSize(2, 1, 1, 1)
         .setSlotOverlay(true, true, AstroGUITextures.SHIMMER_OVERLAY)
         .setSlotOverlay(false, false, true, AstroGUITextures.FLOWER_OVERLAY)
 		.setProgressBar(AstroGUITextures.PROGRESS_BAR_BLUE_ARROW, FillDirection.LEFT_TO_RIGHT)

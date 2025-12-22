@@ -25,6 +25,7 @@ ServerEvents.tags('item', event => {
         'createaddition:iron_rod', 'createaddition:electrum_rod',
         'createaddition:electrum_block', 'createaddition:brass_rod',
         'createaddition:diamond_grit', 'createaddition:diamond_grit_sandpaper',
+        'createaddition:biomass',
         'farmersdelight:wheat_dough', 'powah:uraninite_raw',
         'ae2:ender_dust', 'powah:crystal_niotic', 'create:wheat_flour',
         'powah:crystal_spirited', 'powah:crystal_blazing',
@@ -143,7 +144,12 @@ ServerEvents.tags('item', event => {
             ['farmersdelight:tomato_slice'],
         
         'forge:crops/tomatoes':
-            ['farmersdelight:tomato', 'farmersdelight:tomato_slice']
+            ['farmersdelight:tomato', 'farmersdelight:tomato_slice'],
+        
+        'forge:tnt':
+            ['minecraft:tnt', 'gtceu:industrial_tnt'],
+        'forge:fuels':
+            ['#minecraft:coals', '#minecraft:logs_that_burn', 'create:blaze_cake']
     }
     //#endregion
 
