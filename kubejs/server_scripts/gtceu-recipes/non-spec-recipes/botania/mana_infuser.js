@@ -150,8 +150,8 @@ const purify = event.recipes.gtceu.mana_infusion
 
     purification.forEach(([output, input, items, duration, eu]) => {
         const recipe = purify(`pure_${output.replace(/\d+x\s*/, '').replace(':', '_')}`)
-            .notConsumable('botania:pure_daisy')
             .itemOutputs(output)
+            .notConsumable('botania:pure_daisy')
             .duration(duration)
             .EUt(eu);
         

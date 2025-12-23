@@ -8,7 +8,7 @@
   "render_in_rain": true,
   "sky_renderables": [
     {
-      "back_light_color": 0,
+      "back_light_color": 12632256,
       "back_light_scale": 0.0,
       "blend": false,
       "global_rotation": [

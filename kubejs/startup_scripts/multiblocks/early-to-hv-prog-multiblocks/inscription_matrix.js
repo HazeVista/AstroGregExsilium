@@ -13,7 +13,7 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
         .rotationState(RotationState.NON_Y_AXIS)
         .recipeTypes([GTRecipeTypes.get('inscription')])
         .appearanceBlock(() => Block.getBlock('gtceu:futura_casing'))
-        .recipeModifiers([GTRecipeModifiers.OC_PERFECT_SUBTICK])
+        .recipeModifiers([GTRecipeModifiers.OC_PERFECT_SUBTICK, GTRecipeModifiers.BATCH_MODE])
         .pattern(definition => FactoryBlockPattern.start()
             .aisle('F###F','AAAAA','AAAAA','#AAA#')
             .aisle('#####','ASSSA','A#P#A','ASSSA')

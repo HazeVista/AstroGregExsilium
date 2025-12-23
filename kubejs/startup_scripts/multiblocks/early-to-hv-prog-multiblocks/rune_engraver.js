@@ -13,7 +13,7 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
         .rotationState(RotationState.NON_Y_AXIS)
         .recipeTypes([GTRecipeTypes.get('rune_inscription')])
         .appearanceBlock(() => Block.getBlock('astrogreg:manasteel_brick_machine_casing'))
-        .recipeModifiers([GTRecipeModifiers.OC_NON_PERFECT])
+        .recipeModifiers([GTRecipeModifiers.OC_NON_PERFECT, GTRecipeModifiers.BATCH_MODE])
         .pattern(definition => FactoryBlockPattern.start()
             .aisle('AAA','AAA','AAA')
             .aisle('AAA','GPG','AAA')
