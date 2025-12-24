@@ -146,7 +146,11 @@ ItemEvents.tooltip(event => {
 
     //add tooltips below
     loreTooltip(event, 'farmersdelight:bacon_sandwich', [
-        {text: '§o§7Mmmmm... Tasty!§r§7 - Ubit3y'}
+        { text: '§o§7Mmmmm... Tasty!§r§7 - Ubit3y'}
+    ])
+
+    loreTooltip(event, 'minecraft:netherite_scrap', [
+        { text: '§o§7The unique remnants of an ancient civilization'}
     ])
     //#endregion    
 

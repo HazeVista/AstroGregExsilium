@@ -155,7 +155,8 @@ ClientEvents.lang('en_us', event => {
     ])
 
     renameItems('minecraft', [
-        ['cookie', 'Chocolate Chip Cookie']
+        ['cookie', 'Chocolate Chip Cookie'],
+        ['netherite_scrap', 'Raw Debris Chunk']
     ])
     //#endregion
 
