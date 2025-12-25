@@ -123,7 +123,7 @@ ServerEvents.recipes(event => {
         'ad_extendra:juperium_nugget', 'delightful:food_oven', 'delightful:food/sweet_berry_cheesecake_from_cheese', 'delightful:food/glow_jam_cookie', 'delightful:food/baklava_no_citrus', 'gtceu:compressor/sandstone',
         'delightful:food/nut_dough', 'delightful:food/salmonberry_pie', 'create:milling/cocoa_beans', 'gtceu:shaped/cake_from_dough', 'farmersdelight:sweet_berry_cheesecake', 'farmersdelight:cutting/cake',  
         'farmersdelight:sweet_berry_cheesecake_from_slices', 'farmersdelight:cake_from_slices', 'gtceu:shaped/small_dust_assembling_skystone', 'gtceu:shaped/tiny_dust_assembling_skystone', 'minecraft:sandstone',
-        'gtmutils:ulv_auto_charger_4x', 'gtmutils:uhv_auto_charger_4x'
+    
     ])
     //#endregion
 
@@ -169,8 +169,10 @@ ServerEvents.recipes(event => {
     event.remove({input: '#forge:wires'})
 
     event.remove({id: /.*expatternprovider.*cutter.*/});
+    event.remove({ output: /gtceu:.*_charger_4x/ });
     event.remove({ output: /gtceu:.*_energy_converter/ });
     event.remove({ output: /gtmutils:.*_energy_converter/ });
+    event.remove({ output: /gtmutils:.*_auto_charger_4x/ });
     event.remove({ output: /ad_astra:.*_sliding_door/ });
     event.remove({ output: /ad_extendra:.*_sliding_door/ });
     event.remove({ output: /create:.*_(sheet|ingot|plate|dust)/ });

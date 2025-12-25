@@ -52,6 +52,8 @@ ServerEvents.recipes(event => {
     event.replaceInput({}, '#forge:crops/cabbage', 'farmersdelight:cabbage_leaf')
     event.replaceInput({type: 'gtceu:mixer'}, 'gtceu:stone_dust', '#forge:stone_dust')
     event.replaceInput({type: 'gtceu:compressor'}, 'gtceu:stone_dust', '#forge:stone_dust')
+    event.replaceInput({input: 'megacells:bulk_cell_component'}, 'gtceu:netherite_dust', 'ae2:sky_dust')
+    event.replaceInput({input: 'megacells:bulk_item_cell'}, 'gtceu:dense_netherite_plate', 'minecraft:netherite_ingot')
     // event.replaceInput({input: ''}, '', '')
     //#endregion
     

@@ -166,8 +166,6 @@ const purify = event.recipes.gtceu.mana_infusion
 
 
 //#region machine recipes
-
-
     const tiered_machines = [
         ['lv', 'tin', 'gtceu:tempered_glass'],
         ['mv', 'copper', 'botania:managlass'],
