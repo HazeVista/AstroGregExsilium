@@ -6,9 +6,9 @@ ServerEvents.recipes(event => {
         ['farmersdelight:straw', 'farmersdelight:sandy_shrub'],
         ['2x farmersdelight:straw', 'minecraft:tall_grass'],
         ['farmersdelight:straw', 'minecraft:grass'],
-        ['gtceu:cobbled_asteroid_stone', 'gtceu:asteroid_stone'],
-        ['gtceu:asteroid_stone', 'gtceu:hard_asteroid_stone'],
-        ['gtceu:asteroid_gravel', 'gtceu:cobbled_asteroid_stone']
+        ['astrogreg:cobbled_asteroid_stone', 'astrogreg:asteroid_stone'],
+        ['astrogreg:asteroid_stone', 'astrogreg:hard_asteroid_stone'],
+        ['astrogreg:asteroid_gravel', 'astrogreg:cobbled_asteroid_stone']
     ]
     
     crushingRecipes.forEach(([output, input]) => {
@@ -26,12 +26,12 @@ ServerEvents.recipes(event => {
         ['farmersdelight:straw', 'farmersdelight:sandy_shrub', null],
         ['2x farmersdelight:straw', 'minecraft:tall_grass', null],
         ['farmersdelight:straw', 'minecraft:grass', null],
-        ['gtceu:cobbled_asteroid_stone', 'gtceu:asteroid_stone', null],
-        ['gtceu:asteroid_stone', 'gtceu:hard_asteroid_stone', null],
-        ['gtceu:asteroid_gravel', 'gtceu:cobbled_asteroid_stone', null],
+        ['astrogreg:cobbled_asteroid_stone', 'astrogreg:asteroid_stone', null],
+        ['astrogreg:asteroid_stone', 'astrogreg:hard_asteroid_stone', null],
+        ['astrogreg:asteroid_gravel', 'astrogreg:cobbled_asteroid_stone', null],
         [['gtceu:wheat_dust', Item.of('farmersdelight:straw').withChance(0.5)], 'minecraft:wheat', null],
         [['minecraft:sand', Item.of('minecraft:flint').withChance(0.2), Item.of('minecraft:clay_ball').withChance(0.1)], 'minecraft:gravel', null],
-        [['gtceu:asteroid_sand', Item.of('minecraft:flint').withChance(0.2), Item.of('minecraft:clay_ball').withChance(0.1)], 'gtceu:asteroid_gravel', null]
+        [['astrogreg:asteroid_sand', Item.of('minecraft:flint').withChance(0.2), Item.of('minecraft:clay_ball').withChance(0.1)], 'astrogreg:asteroid_gravel', null]
     ]
     
     millingRecipes.forEach(([output, input]) => {
@@ -219,7 +219,7 @@ ServerEvents.recipes(event => {
     //#region create washing
     //output (optional array, follow examples below for chanced output), input
     const washingRecipes = [
-        [['minecraft:clay_ball', Item.of('minecraft:iron_nugget').withChance(0.5)], 'gtceu:asteroid_sand'],
+        [['minecraft:clay_ball', Item.of('minecraft:iron_nugget').withChance(0.5)], 'astrogreg:asteroid_sand'],
         [['minecraft:clay_ball', Item.of('minecraft:gold_nugget').withChance(0.2)], 'minecraft:red_sand'],
         [['minecraft:clay_ball', Item.of('minecraft:clay_ball').withChance(0.5)], 'minecraft:sand']
     ]

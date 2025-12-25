@@ -266,7 +266,7 @@ const engrave = event.recipes.gtceu.rune_inscription
 
     engrave('space_rune')
         .notConsumable('botania:terra_lens')
-        .itemInputs('ae2:fluix_crystal', 'gtceu:asteroid_stone', 'minecraft:end_stone', 'botania:mana_diamond', 'botania:livingrock')
+        .itemInputs('ae2:fluix_crystal', 'astrogreg:asteroid_stone', 'minecraft:end_stone', 'botania:mana_diamond', 'botania:livingrock')
         .inputFluids('manafluid:mana 200')
         .itemOutputs('botania:space_rune')
         .duration(200)

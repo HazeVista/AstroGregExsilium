@@ -1,34 +1,6 @@
 StartupEvents.registry('block', event => {
-    
-    event.create('gtceu:asteroid_stone')
-        .displayName('Asteroid Stone')
-        .hardness(0.8)
-        .resistance(0.8)
-        .soundType('stone')
-        .requiresTool(true)
-        .tagBoth('forge:stone')
-        .mapColor('terracotta_purple' )
-        .tagBlock('forge:asteroid_stone')
-        .tagBlock('mineable/pickaxe')
-        .textureAll('kubejs:block/rocks/asteroid_stone')
-		.fullBlock(true)
-		.opaque(true);
 
-    event.create('gtceu:hard_asteroid_stone')
-        .displayName('Hard Asteroid Stone')
-        .hardness(0.8)
-        .resistance(0.8)
-        .soundType('stone')
-        .requiresTool(true)
-        .tagBoth('forge:stone')
-        .mapColor('terracotta_purple' )
-        .tagBlock('forge:asteroid_stone')
-        .tagBlock('mineable/pickaxe')
-        .textureAll('kubejs:block/rocks/hard_asteroid_stone')
-		.fullBlock(true)
-		.opaque(true);
-
-    event.create('gtceu:asteroid_gravel','falling')
+    event.create('astrogreg:asteroid_gravel','falling')
         .displayName('Asteroid Gravel')
         .hardness(0.8)
         .resistance(0.8)
@@ -41,7 +13,7 @@ StartupEvents.registry('block', event => {
 		.fullBlock(true)
 		.opaque(true);
 
-    event.create('gtceu:asteroid_sand','falling')
+    event.create('astrogreg:asteroid_sand','falling')
         .displayName('Asteroid Sand')
         .hardness(0.8)
         .resistance(0.8)
@@ -54,7 +26,7 @@ StartupEvents.registry('block', event => {
 		.fullBlock(true)
 		.opaque(true);
 
-    event.create('gtceu:cobbled_asteroid_stone')
+    event.create('astrogreg:cobbled_asteroid_stone')
         .displayName('Cobbled Asteroid Stone')
         .hardness(0.8)
         .resistance(0.8)
@@ -68,7 +40,7 @@ StartupEvents.registry('block', event => {
 		.fullBlock(true)
 		.opaque(true);
 
-    event.create('gtceu:smooth_asteroid_stone')
+    event.create('astrogreg:smooth_asteroid_stone')
         .displayName('Smooth Asteroid Stone')
         .hardness(0.8)
         .resistance(0.8)

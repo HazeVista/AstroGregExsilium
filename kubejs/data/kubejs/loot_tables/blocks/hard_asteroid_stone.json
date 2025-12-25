@@ -7,7 +7,7 @@
 			"entries": [
 				{
 					"type": "minecraft:item",
-					"name": "gtceu:cobbled_asteroid_stone",
+					"name": "astrogreg:cobbled_asteroid_stone",
 					"functions": [
 						{
 							"function": "minecraft:set_count",

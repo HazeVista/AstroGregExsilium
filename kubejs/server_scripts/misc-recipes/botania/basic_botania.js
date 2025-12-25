@@ -44,7 +44,7 @@ ServerEvents.recipes(event => {
         ' A ',
         'AAA'
     ], {
-        A: 'gtceu:cobbled_asteroid_stone',
+        A: 'astrogreg:cobbled_asteroid_stone',
         B: '#botania:petals'
     })
     

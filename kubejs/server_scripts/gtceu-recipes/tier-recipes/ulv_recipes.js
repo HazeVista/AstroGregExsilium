@@ -23,8 +23,8 @@ ServerEvents.recipes(event => {
     event.campfireCooking('gtceu:tempered_glass', 'minecraft:glass', 0, 600)
     event.campfireCooking('minecraft:paper', 'create:pulp', 0, 200)
 
-    event.smelting('gtceu:asteroid_stone', 'gtceu:cobbled_asteroid_stone')
-    event.smelting('gtceu:smooth_asteroid_stone', 'gtceu:asteroid_stone')
+    event.smelting('astrogreg:asteroid_stone', 'astrogreg:cobbled_asteroid_stone')
+    event.smelting('astrogreg:smooth_asteroid_stone', 'astrogreg:asteroid_stone')
     event.smelting('minecraft:glass', 'gtceu:glass_dust')
 
 
@@ -198,9 +198,9 @@ ServerEvents.recipes(event => {
 
     //#region stone crushing 
     event.recipes.farmersdelight.cutting('minecraft:cobblestone', '#forge:tools/hammers', 'minecraft:gravel')
-    event.recipes.farmersdelight.cutting('gtceu:cobbled_asteroid_stone', '#forge:tools/pickaxes', 'gtceu:asteroid_gravel')
-    event.recipes.farmersdelight.cutting('gtceu:asteroid_stone', '#forge:tools/pickaxes', 'gtceu:cobbled_asteroid_stone')
-    event.recipes.farmersdelight.cutting('gtceu:asteroid_gravel', '#forge:tools/hammers', ['gtceu:asteroid_sand', Item.of('minecraft:flint').withChance(0.2)])
+    event.recipes.farmersdelight.cutting('astrogreg:cobbled_asteroid_stone', '#forge:tools/pickaxes', 'astrogreg:asteroid_gravel')
+    event.recipes.farmersdelight.cutting('astrogreg:asteroid_stone', '#forge:tools/pickaxes', 'astrogreg:cobbled_asteroid_stone')
+    event.recipes.farmersdelight.cutting('astrogreg:asteroid_gravel', '#forge:tools/hammers', ['astrogreg:asteroid_sand', Item.of('minecraft:flint').withChance(0.2)])
     event.recipes.farmersdelight.cutting('minecraft:gravel', '#forge:tools/hammers', ['minecraft:sand', Item.of('minecraft:flint').withChance(0.2)])
 
     gt.forge_hammer('forge_hammer_andesite')
@@ -222,13 +222,13 @@ ServerEvents.recipes(event => {
         .EUt(16)  
 
     gt.forge_hammer('forge_hammer_asteroid_sand')
-        .itemInputs('gtceu:asteroid_gravel')
-        .itemOutputs('gtceu:asteroid_sand')
+        .itemInputs('astrogreg:asteroid_gravel')
+        .itemOutputs('astrogreg:asteroid_sand')
         .duration(10)
         .EUt(16)
 
     gt.macerator('macerator_asteroid_flint')
-        .itemInputs('gtceu:asteroid_gravel')
+        .itemInputs('astrogreg:asteroid_gravel')
         .itemOutputs('astrogreg:asteroid_stone_dust')
         .chancedOutput('minecraft:flint', 3300, 0)
         .duration(400)
@@ -242,43 +242,43 @@ ServerEvents.recipes(event => {
         .EUt(2)
 
     gt.forge_hammer('forge_hammer_asteroid_gravel')
-        .itemInputs('gtceu:cobbled_asteroid_stone')
-        .itemOutputs('gtceu:asteroid_gravel')
+        .itemInputs('astrogreg:cobbled_asteroid_stone')
+        .itemOutputs('astrogreg:asteroid_gravel')
         .duration(10)
         .EUt(16)
 
     gt.forge_hammer('forge_hammer_asteroid_cobble')
-        .itemInputs('gtceu:asteroid_stone')
-        .itemOutputs('gtceu:cobbled_asteroid_stone')
+        .itemInputs('astrogreg:asteroid_stone')
+        .itemOutputs('astrogreg:cobbled_asteroid_stone')
         .duration(10)
         .EUt(16)
 
     gt.forge_hammer('forge_hammer_asteroid_stone')
-        .itemInputs('gtceu:hard_asteroid_stone')
-        .itemOutputs('gtceu:asteroid_stone')
+        .itemInputs('astrogreg:hard_asteroid_stone')
+        .itemOutputs('astrogreg:asteroid_stone')
         .duration(10)
         .EUt(16)
 
     gt.macerator('macerator_asteroid_dust')
-        .itemInputs('gtceu:hard_asteroid_stone')
+        .itemInputs('astrogreg:hard_asteroid_stone')
         .itemOutputs('astrogreg:asteroid_stone_dust')
         .duration(98)
         .EUt(2)
 
     gt.macerator('macerator_asteroid_dust_1')
-        .itemInputs('gtceu:asteroid_stone')
+        .itemInputs('astrogreg:asteroid_stone')
         .itemOutputs('astrogreg:asteroid_stone_dust')
         .duration(98)
         .EUt(2)
 
     gt.macerator('macerator_asteroid_dust_2')
-        .itemInputs('gtceu:smooth_asteroid_stone')
+        .itemInputs('astrogreg:smooth_asteroid_stone')
         .itemOutputs('astrogreg:asteroid_stone_dust')
         .duration(98)
         .EUt(2)
 
     gt.macerator('macerator_asteroid_dust_3')
-        .itemInputs('gtceu:cobbled_asteroid_stone')
+        .itemInputs('astrogreg:cobbled_asteroid_stone')
         .itemOutputs('astrogreg:asteroid_stone_dust')
         .duration(98)
         .EUt(2)
@@ -299,46 +299,46 @@ ServerEvents.recipes(event => {
       B: 'minecraft:gravel'
     })  
     
-    event.shaped('gtceu:asteroid_gravel', [
+    event.shaped('astrogreg:asteroid_gravel', [
       'A',
       'B'
     ], {
       A: '#forge:tools/hammers',
-      B: 'gtceu:cobbled_asteroid_stone'
+      B: 'astrogreg:cobbled_asteroid_stone'
     })    
 
-    event.shaped('gtceu:asteroid_sand', [
+    event.shaped('astrogreg:asteroid_sand', [
       'A',
       'B'
     ], {
       A: '#forge:tools/hammers',
-      B: 'gtceu:asteroid_gravel'
+      B: 'astrogreg:asteroid_gravel'
     }) 
 
-    event.shaped('gtceu:hard_asteroid_stone', [
+    event.shaped('astrogreg:hard_asteroid_stone', [
       'AA ',
       'AA '
     ], {
-      A: 'gtceu:asteroid_stone'
+      A: 'astrogreg:asteroid_stone'
     })
 
     gt.rock_breaker('rock_dupe_asteroid_hard')
-      .notConsumable('gtceu:hard_asteroid_stone')
-      .itemOutputs('gtceu:hard_asteroid_stone')
+      .notConsumable('astrogreg:hard_asteroid_stone')
+      .itemOutputs('astrogreg:hard_asteroid_stone')
       .adjacentFluids('minecraft:water', 'minecraft:lava')
       .duration(16)
       .EUt(7)
 
     gt.rock_breaker('rock_dupe_asteroid_cobble')
-      .notConsumable('gtceu:cobbled_asteroid_stone')
-      .itemOutputs('gtceu:cobbled_asteroid_stone')
+      .notConsumable('astrogreg:cobbled_asteroid_stone')
+      .itemOutputs('astrogreg:cobbled_asteroid_stone')
       .adjacentFluids('minecraft:water', 'minecraft:lava')
       .duration(16)
       .EUt(7)
 
     gt.rock_breaker('rock_dupe_asteroid_stone')
-      .notConsumable('gtceu:asteroid_stone')
-      .itemOutputs('gtceu:asteroid_stone')      
+      .notConsumable('astrogreg:asteroid_stone')
+      .itemOutputs('astrogreg:asteroid_stone')      
       .adjacentFluids('minecraft:water', 'minecraft:lava')
       .duration(16)
       .EUt(7)

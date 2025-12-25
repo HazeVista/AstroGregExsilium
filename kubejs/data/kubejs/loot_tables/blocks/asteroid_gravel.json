@@ -10,7 +10,7 @@
           "children": [
             {
               "type": "minecraft:item",
-              "name": "gtceu:asteroid_gravel",
+              "name": "astrogreg:asteroid_gravel",
               "conditions": [
                 {
                   "condition": "minecraft:match_tool",
@@ -48,7 +48,7 @@
                 },
                 {
                   "type": "minecraft:item",
-                  "name": "gtceu:asteroid_gravel"
+                  "name": "astrogreg:asteroid_gravel"
                 }
               ],
               "conditions": [
