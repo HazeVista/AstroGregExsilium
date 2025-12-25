@@ -27,6 +27,7 @@ ServerEvents.recipes(event => {
                 C: `#gtceu:circuits/${tier}`,
                 D: `${material}_single_wire`
             })
+            // .addMaterialInfo()
         })
     })
 
@@ -37,6 +38,7 @@ ServerEvents.recipes(event => {
             .itemOutputs(Item.of(`gtmutils:${tier}_64a_energy_converter`))
             .duration(400)
             .EUt(1600)
+            // .addMaterialInfo(true)
     })
 })
 

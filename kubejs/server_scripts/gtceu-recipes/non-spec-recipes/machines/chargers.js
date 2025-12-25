@@ -9,7 +9,6 @@ ServerEvents.recipes(event => {
         ['luv', 'niobium_titanium', 'niobium_titanium'],
         ['zpm', 'vanadium_gallium', 'vanadium_gallium'],
         ['uv', 'yttrium_barium_cuprate', 'yttrium_barium_cuprate']
-
     ]
 
     tiered_machines.forEach(([tier, cable, wire]) => {
@@ -24,5 +23,6 @@ ServerEvents.recipes(event => {
             D: `gtceu:${tier}_machine_hull`,
             E: `#gtceu:circuits/${tier}`
         })
+        // .addMaterialInfo()
     })
 })

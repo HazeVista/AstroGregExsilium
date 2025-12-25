@@ -187,6 +187,9 @@ ItemEvents.tooltip(event => {
     }
 
     //add tooltips below
+    tipTooltip(event, 'gtmutils:pterb_machine', [
+        {line: 4, text: '§o§7Force load chunks with this machine in them to ensure the connection works properly.'}
+    ])
 
     //#endregion
 

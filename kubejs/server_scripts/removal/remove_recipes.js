@@ -169,9 +169,13 @@ ServerEvents.recipes(event => {
     event.remove({input: '#forge:wires'})
 
     event.remove({id: /.*expatternprovider.*cutter.*/});
+    event.remove({ input: /gtceu:.*_charger_4x/ });
     event.remove({ output: /gtceu:.*_charger_4x/ });
+    event.remove({ input: /gtceu:.*_energy_converter/ });
+    event.remove({ input: /gtmutils:.*_energy_converter/ });
     event.remove({ output: /gtceu:.*_energy_converter/ });
     event.remove({ output: /gtmutils:.*_energy_converter/ });
+    event.remove({ input: /gtmutils:.*_auto_charger_4x/ });
     event.remove({ output: /gtmutils:.*_auto_charger_4x/ });
     event.remove({ output: /ad_astra:.*_sliding_door/ });
     event.remove({ output: /ad_extendra:.*_sliding_door/ });

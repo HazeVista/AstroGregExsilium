@@ -31,8 +31,7 @@
     "tagprefix.neptune_stone": "Neptune Stone %s Ore",
     "tagprefix.uranus_stone": "Uranus Stone %s Ore",
 
-    
-    "block.gtmutils.pterb_machine": "cPower Transfer§r§b Einstein-Rosen§r§c Bridge",
+    "block.gtmutils.pterb_machine": "§cPower Transfer§r§b Einstein-Rosen§r§c Bridge",
     "tooltip.pterb_machine.purpose": "Wireless Active Transformer (WAT)",
     "config.jade.plugin_gtmutils.pterb_info": "PTERB Info",
     "tooltip.pterb_machine.frequencies": "§7Every§r§c PTERB§r§7 with the same frequency will wirelessly transfer energy between each other like a single Active Transformer.§r",
