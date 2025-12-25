@@ -1,16 +1,18 @@
 GTCEuStartupEvents.registry('gtceu:world_gen_layer', event => {
 
-const planets = [
-    { name: 'moon', dimension: 'ad_astra:moon' },
-    { name: 'venus', dimension: 'ad_astra:venus' },
-    { name: 'mercury', dimension: 'ad_astra:mercury' },
-    { name: 'mars', dimension: 'ad_astra:mars' }
-];
+    const planets = [
+        { name: 'moon', dimension: 'ad_astra:moon' },
+        { name: 'venus', dimension: 'ad_astra:venus' },
+        { name: 'mercury', dimension: 'ad_astra:mercury' },
+        { name: 'mars', dimension: 'ad_astra:mars' }
+    ];
 
-planets.forEach(planet => {
-    event.create(`${planet.name}_stone`)
-        .targets(`ad_astra:${planet.name}_stone`)
-        .dimensions(planet.dimension);
+    planets.forEach(planet => {
+        event.create(`${planet.name}_stone`)
+            .targets(`ad_astra:${planet.name}_stone`)
+            .dimensions(planet.dimension);
+    })
+        
 })
 
 WorldgenEvents.remove(event => {
@@ -58,5 +60,3 @@ WorldgenEvents.remove(event => {
     event.removeFeatureById('raw_generation', removeOres)
     event.removeFeatureById('underground_ores', removeOres)
 });
-        
-})
