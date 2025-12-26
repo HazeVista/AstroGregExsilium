@@ -65,7 +65,7 @@ parts('assemble_advanced_fin')
     .EUt(1920)
 
 parts('assemble_elite_fin')
-    .itemInputs('2x gtceu:dense_naquadah_alloy_plate', 'gtceu:double_naquadah_plate')
+    .itemInputs('2x gtceu:dense_naquadah_alloy_plate', 'gtceu:double_netherite_plate')
     .itemOutputs('ad_astra:elite_rocket_fin')
     .duration(200)
     .circuit(30)

@@ -63,6 +63,13 @@ ClientEvents.lang('en_us', event => {
         ['mana_pylon', '§bMana Pylon§r'],
         ['natura_pylon', '§2Natura Pylon§r']
     ])
+
+    renameItems('botanicadds', [
+        ['gaiasteel_nugget', '§cGaiasteel§r§f Nugget'],
+        ['gaiasteel_ingot', '§cGaiasteel§r§f Ingot'],
+        ['gaiasteel_block', '§cGaiasteel§r§f Block'],
+        ['gaiasteel_pylon', '§cGaia Pylon§r']
+    ])
     //#endregion
 
 

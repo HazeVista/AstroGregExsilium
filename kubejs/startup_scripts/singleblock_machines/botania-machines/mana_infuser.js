@@ -12,7 +12,7 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
 	event.create('mana_infusion')
 		.category('simple')
 		.setEUIO('in')
-		.setMaxIOSize(2, 1, 1, 1)
+		.setMaxIOSize(2, 1, 1, 0)
         .setSlotOverlay(false, true, AstroGUITextures.SHIMMER_OVERLAY)
         .setSlotOverlay(false, false, true, AstroGUITextures.CATALYST_OVERLAY)
 		.setProgressBar(AstroGUITextures.PROGRESS_BAR_MANA_INFUSION, FillDirection.LEFT_TO_RIGHT)

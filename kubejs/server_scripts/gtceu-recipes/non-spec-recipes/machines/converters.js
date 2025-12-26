@@ -17,7 +17,7 @@ ServerEvents.recipes(event => {
     // Create all shaped recipes
     Object.entries(amps).forEach(([wiresize, amp]) => {
         Object.entries(superconductors).forEach(([tier, material]) => {
-            event.shaped(Item.of(`gtceu:${tier}_${amp}_energy_converter`), [
+            event.recipes.gtceu.shaped(Item.of(`gtceu:${tier}_${amp}_energy_converter`), [
                 ' AA',
                 'DBC',
                 ' AA'
@@ -27,7 +27,7 @@ ServerEvents.recipes(event => {
                 C: `#gtceu:circuits/${tier}`,
                 D: `${material}_single_wire`
             })
-            // .addMaterialInfo()
+            .addMaterialInfo()
         })
     })
 
@@ -38,7 +38,7 @@ ServerEvents.recipes(event => {
             .itemOutputs(Item.of(`gtmutils:${tier}_64a_energy_converter`))
             .duration(400)
             .EUt(1600)
-            // .addMaterialInfo(true)
+            .addMaterialInfo(true)
     })
 })
 
