@@ -42,4 +42,27 @@ StartupEvents.registry('item', event => {
                 .saturation(0.25)
         })       
     
+    event.create('farmersdelight:chocolate_ice_cream')
+        .displayName('Chocolate Ice Cream')
+        .texture('kubejs:item/delight/chocolate_ice_cream')
+        .food(food => {
+            food
+                .hunger(4)
+                .saturation(0.5)
+                .eaten(ctx => {
+                ctx.player.give('minecraft:bowl')
+            })
+        })
+
+    event.create('farmersdelight:chocolate_milkshake')
+        .displayName('Chocolate Milkshake')
+        .texture('kubejs:item/delight/chocolate_milkshake')
+        .food(food => {
+            food
+                .hunger(6)
+                .saturation(0.5)
+                .eaten(ctx => {
+                    ctx.player.give('minecraft:glass_bottle')
+                })
+        })
 })

@@ -123,7 +123,7 @@ ServerEvents.recipes(event => {
         'ad_extendra:juperium_nugget', 'delightful:food_oven', 'delightful:food/sweet_berry_cheesecake_from_cheese', 'delightful:food/glow_jam_cookie', 'delightful:food/baklava_no_citrus', 'gtceu:compressor/sandstone',
         'delightful:food/nut_dough', 'delightful:food/salmonberry_pie', 'create:milling/cocoa_beans', 'gtceu:shaped/cake_from_dough', 'farmersdelight:sweet_berry_cheesecake', 'farmersdelight:cutting/cake',  
         'farmersdelight:sweet_berry_cheesecake_from_slices', 'farmersdelight:cake_from_slices', 'gtceu:shaped/small_dust_assembling_skystone', 'gtceu:shaped/tiny_dust_assembling_skystone', 'minecraft:sandstone',
-    
+        'delightful:food/matcha_milkshake', 'delightful:food/salmonberry_milkshake', 'delightful:food/matcha_ice_cream_no_neapolitan', 'delightful:food/salmonberry_ice_cream_no_neapolitan',
     ])
     //#endregion
 

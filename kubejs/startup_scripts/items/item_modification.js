@@ -94,18 +94,34 @@ ItemEvents.modification(event => {
     event.modify('delightful:matcha_milkshake', item => {
         item.foodProperties = food => {
             food
-                .hunger(4)
-                .saturation(0.75)
+                .hunger(6)
+                .saturation(0.5)
         }
     })
   
     event.modify('delightful:salmonberry_milkshake', item => {
         item.foodProperties = food => {
             food
-                .hunger(4)
-                .saturation(0.75)
+                .hunger(6)
+                .saturation(0.5)
         }
-    })     
+    })
+
+    event.modify('delightful:matcha_ice_cream', item => {
+        item.foodProperties = food => {
+            food
+                hunger(4)
+                .saturation(0.5)
+        }
+    })
+
+    event.modify('delightful:salmonberry_ice_cream', item => {
+        item.foodProperties = food => {
+            food
+                hunger(4)
+                .saturation(0.5)
+        }
+    })
     //#endregion
 
     /*

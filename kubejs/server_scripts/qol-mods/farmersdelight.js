@@ -183,7 +183,7 @@ ServerEvents.recipes(event => {
 
 
 
-    //#region wheat, dough, & straw 
+    //#region wheat flour recipes 
     // gt.macerator('macerate_to_flour')
     //   .itemInputs('minecraft:wheat')
     //   .itemOutputs('gtceu:wheat_dust')
@@ -223,7 +223,7 @@ ServerEvents.recipes(event => {
 
 
 
-    //#region acorn dough & butter
+    //#region acorn flour recipes
     event.shaped('8x delightful:nut_dough', [
       'AAA',
       'ABA',
@@ -316,6 +316,25 @@ ServerEvents.recipes(event => {
       .outputFluids('create:chocolate 500')
       .duration(200)
       .EUt(7)
+    //#endregion
+
+
+
+    //#region ice cream
+    event.shaped('gtceu:ice_dust', [
+      'A',
+      'B'
+    ], {
+      A: 'minecraft:ice',
+      B: '#forge:tools/mortars'
+    })
+
+    event.shapeless('delightful:salmonberry_ice_cream', ['minecraft:bowl', 'delightful:salmonberries', '#forge:milk', 'gtceu:ice_dust', 'minecraft:sugar'])
+    event.shapeless('delightful:matcha_ice_cream', ['minecraft:bowl', 'delightful:matcha', '#forge:milk', 'gtceu:ice_dust', 'minecraft:sugar'])
+    event.shapeless('farmersdelight:chocolate_ice_cream', ['minecraft:bowl', 'create:bar_of_chocolate', '#forge:milk', 'gtceu:ice_dust', 'minecraft:sugar'])
+    event.shapeless('delightful:matcha_milkshake', ['minecraft:glass_bottle', 'delightful:matcha_ice_cream', '#forge:milk'])
+    event.shapeless('delightful:salmonberry_milkshake', ['minecraft:glass_bottle', 'delightful:salmonberry_ice_cream', '#forge:milk'])
+    event.shapeless('farmersdelight:chocolate_milkshake', ['minecraft:glass_bottle', 'farmersdelight:chocolate_ice_cream', '#forge:milk'])
     //#endregion
 
 
