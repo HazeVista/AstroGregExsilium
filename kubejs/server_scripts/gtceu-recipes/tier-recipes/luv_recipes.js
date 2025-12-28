@@ -9,4 +9,7 @@ ServerEvents.recipes(event => {
         C: 'gtceu:zpm_robot_arm',
         D: 'gtceu:luv_machine_hull'
     })
+
+    // event.remove({id: 'gtceu:assembly_line/pterb'})
+    // event.remove({id: 'gtceu:research_station/1x_gtceu_active_transformer'})
 })

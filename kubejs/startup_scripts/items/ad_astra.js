@@ -3,35 +3,35 @@ StartupEvents.registry('item', event => {
 //#region engines
 
     event.create('gtceu:lv_rocket_engine')
-        .displayName('§7LV Rocket Engine')
+        .displayName('§7LV§r Rocket Engine')
         .texture('kubejs:item/ad_astra/lv_engine')
 
     event.create('gtceu:mv_rocket_engine')
-        .displayName('§bMV Rocket Engine')
+        .displayName('§bMV§r Rocket Engine')
         .texture('kubejs:item/ad_astra/mv_engine')
 
     event.create('gtceu:hv_rocket_engine')
-        .displayName('§6HV Rocket Engine')
+        .displayName('§6HV§r Rocket Engine')
         .texture('kubejs:item/ad_astra/hv_engine')
 
     event.create('gtceu:ev_rocket_engine')
-        .displayName('§5EV Rocket Engine')
+        .displayName('§5EV§r Rocket Engine')
         .texture('kubejs:item/ad_astra/ev_engine')
 
     event.create('gtceu:iv_rocket_engine')
-        .displayName('§9IV Rocket Engine')
+        .displayName('§9IV§r Rocket Engine')
         .texture('kubejs:item/ad_astra/iv_engine')
 
     event.create('gtceu:luv_rocket_engine')
-        .displayName('§dLuV Rocket Engine')
+        .displayName('§dLuV§r Rocket Engine')
         .texture('kubejs:item/ad_astra/luv_engine')
 
     event.create('gtceu:zpm_rocket_engine')
-        .displayName('§cZPM Rocket Engine')
+        .displayName('§cZPM§r Rocket Engine')
         .texture('kubejs:item/ad_astra/zpm_engine')
 
     event.create('gtceu:uv_rocket_engine')
-        .displayName('§3UV Rocket Engine')
+        .displayName('§3UV§r Rocket Engine')
         .texture('kubejs:item/ad_astra/uv_engine')
 
 //#endregion

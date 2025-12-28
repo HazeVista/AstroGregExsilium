@@ -91,6 +91,48 @@ ClientEvents.lang('en_us', event => {
         ['zpm_parallel_hatch', '§cElite Parallel Control Hatch'],
         ['uv_parallel_hatch', '§3Ultimate Parallel Control Hatch']
     ])
+
+    const tiers = [
+        ['lv', '§7LV§r'],
+        ['mv', '§bMV§r'],
+        ['hv', '§6HV§r'],
+        ['ev', '§5EV§r'],
+        ['iv', '§9IV§r'],
+        ['luv', '§dLuV§r'],
+        ['zpm', '§cZPM§r'],
+        ['uv', '§3UV§r']
+    ]
+
+    tiers.forEach(([tier, name]) => {
+        renameItems('gtceu', [
+            [`${tier}_electric_motor`, `${name} Electric Motor`],
+            [`${tier}_electric_piston`, `${name} Electric Piston`],
+            [`${tier}_electric_pump`, `${name} Electric Pump`],
+            [`${tier}_fluid_regulator`, `${name} Fluid Regulator`],
+            [`${tier}_robot_arm`, `${name} Robot Arm`],
+            [`${tier}_field_generator`, `${name} Field Generator`],
+            [`${tier}_emitter`, `${name} Emitter`],
+            [`${tier}_sensor`, `${name} Sensor`],
+        ])
+    })
+
+    const hermeticTiers = [
+        ['lv', '§7', 'I'],
+        ['mv', '§b', 'II'],
+        ['hv', '§6', 'III'],
+        ['ev', '§5', 'IV'],
+        ['iv', '§9', 'V'],
+        ['luv', '§d', 'VI'],
+        ['zpm', '§c', 'VII'],
+        ['uv', '§3', 'VII'],
+        ['uhv', '§4', 'VIII']
+    ]
+
+    hermeticTiers.forEach(([tier, color, numeral]) => {
+        renameItems('gtceu', [
+            [`${tier}_hermetic_casing`, `${color}Hermetic Casing ${numeral}`]
+        ])
+    })
     //#endregion
 
 
