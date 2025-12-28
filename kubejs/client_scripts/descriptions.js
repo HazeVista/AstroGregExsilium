@@ -191,6 +191,30 @@ ItemEvents.tooltip(event => {
         {line: 4, text: '§o§7Force load chunks with this machine in them to ensure the connection works properly.'}
     ])
 
+    tipTooltip(event, 'gtceu:pill_casting_mold', [
+        {text: '§o§7Mold for making Pills'},
+        {text: '§o§7What, you couldn\'t just go to the doctor? - Phoenixvine'}
+    ])
+
+
+    const moldTips = [
+        ['small_gear', 'Small Gears'],
+        ['tiny_pipe', 'Tiny Pipes'],
+        ['small_pipe', 'Small Pipes'],
+        ['normal_pipe', 'Normal Pipes'],
+        ['large_pipe', 'Large Pipes'],
+        ['huge_pipe', 'Huge Pipes']
+    ]
+
+    moldTips.forEach(([mold, name]) => {
+        tipTooltip(event, `gtceu:${mold}_extruder_mold`, [
+            {text: `§o§7Extruder Shape for making ${name}`}
+        ])
+
+        tipTooltip(event, `gtceu:${mold}_casting_mold`, [
+            {text: `§o§7Mold for making ${name}`}
+        ])
+    })
     //#endregion
 
 })

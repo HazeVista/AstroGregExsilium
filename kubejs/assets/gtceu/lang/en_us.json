@@ -33,7 +33,7 @@
 
     "block.gtmutils.pterb_machine": "§cPower Transfer§r§b Einstein-Rosen§r§c Bridge",
     "tooltip.pterb_machine.purpose": "Wireless Active Transformer",
-    "config.jade.plugin_gtmutils.pterb_info": "PTERB Info",
+    "config.jade.plugin_gtmutils.pterb_info": "§cPTERB§r Info",
     "tooltip.pterb_machine.frequencies": "§cPTERB§r§7s on the same frequency will wirelessly transfer energy between each other like a single Active Transformer.§r",
     "gtmutils.pterb_machine.invalid_frequency": "A §cPTERB§r will not work on frequency 0!",
 
