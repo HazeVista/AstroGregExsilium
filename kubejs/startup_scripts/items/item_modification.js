@@ -110,7 +110,7 @@ ItemEvents.modification(event => {
     event.modify('delightful:matcha_ice_cream', item => {
         item.foodProperties = food => {
             food
-                hunger(4)
+                .hunger(4)
                 .saturation(0.5)
         }
     })
@@ -118,7 +118,7 @@ ItemEvents.modification(event => {
     event.modify('delightful:salmonberry_ice_cream', item => {
         item.foodProperties = food => {
             food
-                hunger(4)
+                .hunger(4)
                 .saturation(0.5)
         }
     })
