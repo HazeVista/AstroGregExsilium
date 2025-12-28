@@ -30,6 +30,7 @@ ServerEvents.recipes(event => {
         .itemOutputs('gtceu:pterb_machine')
         .duration(1200)
         .EUt(24000)
+        .addMaterialInfo(true)
         ["scannerResearch(java.util.function.UnaryOperator)"]
         (b => b
             .researchStack("gtceu:active_transformer")

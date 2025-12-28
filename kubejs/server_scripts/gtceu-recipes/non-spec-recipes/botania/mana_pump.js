@@ -28,7 +28,7 @@ function singleblocks(part) {
     const cable = part[1] 
     const glass = part[2] 
 
-    event.shaped(`gtceu:${tier}_manafield_simulator`, [
+    event.recipes.gtceu.shaped(`gtceu:${tier}_manafield_simulator`, [
         'DAD',
         'FEF',
         'BCB'
@@ -40,6 +40,7 @@ function singleblocks(part) {
         E: `gtceu:${tier}_machine_hull`,
         F: `#gtceu:circuits/${tier}`
     })
+    .addMaterialInfo()
 }
 // #endregion
 })

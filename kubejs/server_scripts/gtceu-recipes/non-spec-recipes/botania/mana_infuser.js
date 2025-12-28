@@ -178,7 +178,7 @@ const purify = event.recipes.gtceu.mana_infusion
     ]
 
     tiered_machines.forEach(([tier, cable, glass]) => {
-        event.shaped(`gtceu:${tier}_mana_infuser`, [
+        event.recipes.gtceu.shaped(`gtceu:${tier}_mana_infuser`, [
             'CAC',
             'BDB',
             'EBF'
@@ -190,6 +190,7 @@ const purify = event.recipes.gtceu.mana_infusion
             E: `gtceu:${tier}_electric_pump`,
             F: `gtceu:${tier}_conveyor_module`
         })
+        .addMaterialInfo()
     })
 //#endregion
 })

@@ -182,7 +182,7 @@ ServerEvents.recipes(event => {
         .outputFluids(Fluid.of('minecraft:water', 100))
         .duration(2)
 
-    event.shaped('gtceu:ulv_water_source', [
+    gt.shaped('gtceu:ulv_water_source', [
         'ABA',
         'CDC',
         'ABA'
@@ -191,7 +191,9 @@ ServerEvents.recipes(event => {
       B: 'gtceu:tempered_glass',
       C: 'minecraft:water_bucket',
       D: 'gtceu:wood_drum'
-    }).replaceIngredient('minecraft:water_bucket', 'minecraft:bucket')
+    })
+    .replaceIngredient('minecraft:water_bucket', 'minecraft:bucket')
+    .addMaterialInfo()
     //#endregion
 
 
