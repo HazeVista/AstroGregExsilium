@@ -12,11 +12,22 @@ ServerEvents.recipes(event => {
       B: 'gtceu:rubber_ingot'
     })
 
-  gt.alloy_smelter('alloy_smelter_rose_quartz')
-    .itemInputs('minecraft:quartz', '4x minecraft:redstone')
-    .itemOutputs('create:rose_quartz')
-    .duration(50)
-    .EUt(30)
+    gt.shaped('gtceu:ulv_machine_hull', [
+      'ABA',
+      'CDC'
+    ], {
+      A: 'gtceu:wood_plate',
+      B: 'gtceu:wrought_iron_plate',
+      C: 'gtceu:red_alloy_single_cable',
+      D: 'gtceu:ulv_machine_casing'
+    })
+    .addMaterialInfo()
+
+    gt.alloy_smelter('alloy_smelter_rose_quartz')
+      .itemInputs('minecraft:quartz', '4x minecraft:redstone')
+      .itemOutputs('create:rose_quartz')
+      .duration(50)
+      .EUt(30)
 
     event.campfireCooking('minecraft:glass', 'gtceu:glass_dust', 0, 160)
     event.campfireCooking('gtceu:wrought_iron_ingot', 'minecraft:iron_ingot', 0, 160)
