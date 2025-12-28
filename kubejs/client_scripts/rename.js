@@ -108,6 +108,7 @@ ClientEvents.lang('en_us', event => {
             [`${tier}_electric_motor`, `${name} Electric Motor`],
             [`${tier}_electric_piston`, `${name} Electric Piston`],
             [`${tier}_electric_pump`, `${name} Electric Pump`],
+            [`${tier}_conveyor_module`, `${name} Conveyor Module`],
             [`${tier}_fluid_regulator`, `${name} Fluid Regulator`],
             [`${tier}_robot_arm`, `${name} Robot Arm`],
             [`${tier}_field_generator`, `${name} Field Generator`],
