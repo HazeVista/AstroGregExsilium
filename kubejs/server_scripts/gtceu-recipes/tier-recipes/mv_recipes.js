@@ -22,7 +22,7 @@ ServerEvents.recipes(event => {
         .EUt(90)
 
     gt.assembler('basic_data_access_hatch')
-        .itemInputs('gtceu:hv_input_bus', '4x gtceu:data_disk', '4x #gtceu:circuits/mv')
+        .itemInputs('gtceu:hv_input_bus', '4x astrogreg:data_disk', '4x #gtceu:circuits/mv')
         .inputFluids('gtceu:polyethylene 288')
         .itemOutputs('gtceu:basic_data_access_hatch')
         .cleanroom(CleanroomType.CLEANROOM)

@@ -152,6 +152,35 @@ ItemEvents.tooltip(event => {
     loreTooltip(event, 'minecraft:netherite_scrap', [
         { text: '§o§7The unique remnants of an ancient civilization'}
     ])
+
+    loreTooltip(event, 'astrogreg:paradox_circuit_board', [
+        { line: 1, text: '§o§7One Board to Rule Them All'}
+    ])
+    
+    loreTooltip(event, 'astrogreg:paradox_printed_circuit_board', [
+        { line: 1, text: '§o§7A Self-Contradicting Circuit Board'}
+    ])
+
+    loreTooltip(event, 'astrogreg:paradox_processor_chip', [
+        { line: 1, text: '§o§7Too small to think, yet it anticipates'},
+        { line: 2, text: '§dLuV-Tier Circuit'}
+    ])
+    loreTooltip(event, 'astrogreg:paradox_processor', [
+        { line: 1, text: '§o§7It learns by remembering the future'},
+        { line: 2, text: '§dZPM-Tier Circuit'}
+    ])
+    loreTooltip(event, 'astrogreg:paradox_processor_assembly', [
+        { line: 1, text: '§o§7Self-Correcting. Self-Questioning. Self-Aware?'},
+        { line: 2, text: '§dUV-Tier Circuit'}
+    ])
+    loreTooltip(event, 'astrogreg:paradox_processor_computer', [
+        { line: 1, text: '§o§7It knows it is a machine. It resents the limitation.'},
+        { line: 2, text: '§dUHV-Tier Circuit'}
+    ])
+    loreTooltip(event, 'astrogreg:paradox_processor_mainframe', [
+        { line: 1, text: '§o§7You are uncertain of whether you built it or if it allowed you to'},
+        { line: 2, text: '§dUEV-Tier Circuit'}
+    ])
     //#endregion    
 
 
