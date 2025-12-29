@@ -474,6 +474,12 @@ ServerEvents.recipes(event => {
       .duration(300)
       .EUt(2)
 
+    gt.alloy_smelter('smelt_livingbrick')
+      .itemInputs('astrogreg:livingrock_dust', 'gtceu:clay_dust')
+      .itemOutputs('2x astrogreg:livingbrick')
+      .duration(150)
+      .EUt(7)
+
     event.smelting('astrogreg:livingbrick', 'astrogreg:compressed_livingclay')
     //#endregion
 

@@ -1,6 +1,6 @@
 StartupEvents.registry('block', event => {
 
-    event.create('gtceu:futura_casing')
+    event.create('astrogreg:futura_alloy_casing')
         .displayName('Futura Casing')
         .hardness(6)
         .resistance(3)

@@ -367,6 +367,47 @@ ServerEvents.recipes(event => {
         C: 'create:shaft'
     })
 
+    event.shaped('create:filter', [
+        'BAB'
+    ], {
+        A: 'farmersdelight:canvas',
+        B: 'gtceu:iron_foil'
+    })
+    
+    event.shaped('create:package_filter', [
+        'BAB'
+    ], {
+        A: 'farmersdelight:canvas',
+        B: 'gtceu:zinc_foil'
+    })
+    
+    event.shaped('create:attribute_filter', [
+        'BAB'
+    ], {
+        A: 'farmersdelight:canvas',
+        B: 'gtceu:brass_foil'
+    })
+
+    event.shaped('create:filter', [
+        'BAB'
+    ], {
+        A: '#minecraft:wool',
+        B: 'gtceu:iron_foil'
+    })
+    
+    event.shaped('create:package_filter', [
+        'BAB'
+    ], {
+        A: '#minecraft:wool',
+        B: 'gtceu:zinc_foil'
+    })
+    
+    event.shaped('create:attribute_filter', [
+        'BAB'
+    ], {
+        A: '#minecraft:wool',
+        B: 'gtceu:brass_foil'
+    })
     event.shapeless('create:speedometer', ['create:gearbox', 'minecraft:compass'])
     //#endregion
 
