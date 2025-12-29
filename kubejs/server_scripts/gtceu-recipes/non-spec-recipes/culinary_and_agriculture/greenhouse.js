@@ -22,6 +22,9 @@ function applyItemOutput(recipe, toApply) {
        recipe.itemOutputs(toApply); 
     } 
 }
+//#endregion
+
+
 
 //#region trees
 const trees = [
@@ -54,7 +57,9 @@ trees.forEach((tree) => {
 
         const greenhouse_tree_base = greg.greenhouse_trees(RecipeName)
             .notConsumable(sapling)
-            .inputFluids('water 1000')
+            .perTick(true)
+            .inputFluids('minecraft:water 1')
+            .perTick(false)
             .itemOutputs(`16x ${log}`, `4x ${leaf}`, `${sapling}`)
             .circuit(Circuit)
             .duration(Duration)
@@ -76,6 +81,8 @@ trees.forEach((tree) => {
 })
     //#endregion
 
+
+    
     //#region flowers
     const flowers = ['minecraft:dandelion', 'minecraft:poppy', 'minecraft:blue_orchid', 'minecraft:allium',
         'minecraft:azure_bluet', 'minecraft:red_tulip', 'minecraft:orange_tulip', 'minecraft:white_tulip', 'minecraft:pink_tulip', 
@@ -94,7 +101,9 @@ trees.forEach((tree) => {
             }
             const greenhouse_flower_base = greg.greenhouse_flowers(RecipeName)
                 .notConsumable(flower)
-                .inputFluids('water 100')
+                .perTick(true)
+                .inputFluids('minecraft:water 1')
+                .perTick(false)
                 .itemOutputs(`8x ${flower}`)
                 .duration(Duration)
                 .EUt(30)
@@ -110,6 +119,8 @@ trees.forEach((tree) => {
         GreenHouseHelperFlower('botania:overgrowth_seed', '', 3, 150, 'overgrowth')
     })
     //#endregion
+
+
 
     //#region crops
     const crops = [
@@ -146,7 +157,9 @@ trees.forEach((tree) => {
             }
             const greenhouse_crop_base = greg.greenhouse_crops(RecipeName)
                 .notConsumable(seed)
-                .inputFluids('minecraft:water 1000')
+                .perTick(true)
+                .inputFluids('minecraft:water 1')
+                .perTick(false)
                 .itemOutputs(`16x ${plant}`, `${seed}`)
                 .duration(Duration)
                 .EUt(30)

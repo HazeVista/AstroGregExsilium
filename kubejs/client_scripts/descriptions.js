@@ -45,12 +45,12 @@ ItemEvents.tooltip(event => {
     
     //add tooltips below
     multiTooltip(event, 'gtceu:greenhouse', [
-        { text: '§o§7Electric Garden!' }
+        { text: '§o§7Electric Garden!' },
     ])
 
     multiTooltip(event, 'gtceu:conservatory', [
         { text: '§o§7Electric Plantation!' },
-        { text: '§o§7Can parallelize with Parallel Control Hatches' }
+        { text: 'Can parallelize with Parallel Control Hatches' }
     ])
 
     multiTooltip(event, 'gtceu:aether_engine', [

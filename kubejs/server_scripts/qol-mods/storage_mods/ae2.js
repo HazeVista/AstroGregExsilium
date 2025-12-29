@@ -290,8 +290,26 @@ ServerEvents.recipes(event => {
         .EUt(384)
 
     event.shapeless('expatternprovider:oversize_interface', ['expatternprovider:ex_interface', 'ae2:logic_processor', 'ae2:logic_processor'])
-    event.shaped('ae2:molecular_assembler', ['ADA', 'BEC', 'ADA'], { A: 'astrogreg:futura_alloy_plate', B: 'ae2:annihilation_core', C: 'ae2:formation_core', D: 'minecraft:crafting_table', E: 'ae2:quartz_glass' })
-    event.shaped('merequester:requester', ['ADA', 'EBE', 'ACA'], { A: 'astrogreg:futura_alloy_plate', B: 'astrogreg:futura_alloy_frame', C: 'ae2:engineering_processor', D: '#ae2:interface', E: 'ae2:crafting_accelerator' })
+    
+    event.shaped('ae2:molecular_assembler', [
+        'ADA', 
+        'BEC', 
+        'ADA'
+    ], { 
+        A: 'astrogreg:futura_alloy_plate', 
+        B: 'ae2:annihilation_core', 
+        C: 'ae2:formation_core', 
+        D: 'minecraft:crafting_table', 
+        E: 'ae2:quartz_glass' 
+    })
+
+    gt.assembler('me_requester')
+        .itemInputs('2x #gtceu:circuits/ev', 'ae2:crafting_accelerator', 'astrogreg:futura_alloy_frame', 
+            '6x astrogreg:futura_alloy_plate', 'ae2:engineering_processor', '4x #ae2:glass_cable')
+        .inputFluids('gtceu:soldering_alloy 576')
+        .itemOutputs('merequester:requester')
+        .duration(400)
+        .EUt(480)
     // #endregion
 
 

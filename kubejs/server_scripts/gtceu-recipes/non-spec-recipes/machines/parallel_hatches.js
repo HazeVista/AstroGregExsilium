@@ -90,9 +90,9 @@ ServerEvents.recipes(event => {
         .addMaterialInfo(true)
         .stationResearch(
             researchRecipeBuilder => researchRecipeBuilder
-                .researchStack(Item.of(`gtceu:zpm_parallel_hatch`))
+                .researchStack(Item.of(`gtceu:uv_parallel_hatch`))
                 .dataStack('gtceu:data_module')
                 .CWUt(144, 256000)
-                .EUt(122880)
+                .EUt(488000)
         )    
 })
