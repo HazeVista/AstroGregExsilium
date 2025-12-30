@@ -54,7 +54,7 @@ ServerEvents.recipes(event => {
         'gtceu:uhv_forming_press', 'gtceu:uhv_lathe', 'gtceu:uhv_scanner', 'gtceu:uhv_mixer', 'gtceu:uhv_ore_washer', 'gtceu:uhv_packer', 'gtceu:uhv_polarizer', 'gtceu:uhv_extractor',  
         'gtceu:uhv_electrolyzer', 'gtceu:uhv_distillery', 'gtceu:uhv_cutter', 'gtceu:uhv_compressor', 'gtceu:uhv_chemical_reactor', 'gtceu:uhv_chemical_bath', 'gtceu:uhv_centrifuge', 
         'gtceu:uhv_bender', 'gtceu:uhv_alloy_smelter', 'gtceu:uhv_arc_furnace', 'gtceu:uhv_assembler', 'gtceu:uhv_autoclave', 'gtceu:uhv_item_passthrough_hatch', 'gtceu:uhv_canner', 
-        'gtceu:uhv_fluid_passthrough_hatch', 'gtceu:uhv_machine_hull', 
+        'gtceu:uhv_fluid_passthrough_hatch', 'gtceu:uhv_machine_hull', 'gtceu:uhv_muffler_hatch'
     ])
     //#endregion
 

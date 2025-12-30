@@ -26,7 +26,7 @@ ServerEvents.recipes(event => {
     gt.assembler('uhv_machine_hull')
         .itemInputs('gtceu:uhv_machine_casing', '2x gtceu:europium_single_cable')
         .inputFluids('astrogreg:polyamide_imide 288')
-        .itemOutputs('gtceu:uhv_machine_casing')
+        .itemOutputs('gtceu:uhv_machine_hull')
         .addMaterialInfo(true)
         .duration(50)
         .EUt(16)
@@ -36,7 +36,7 @@ ServerEvents.recipes(event => {
         'CDC'
     ], {
         A: 'astrogreg:polyamide_imide_plate',
-        B: 'gtceu:',
+        B: 'gtceu:neutronium_plate',
         C: 'gtceu:europium_single_cable',
         D: 'gtceu:uhv_machine_casing'
     })
@@ -46,9 +46,9 @@ ServerEvents.recipes(event => {
         'CD'
     ], {
         A: 'gtceu:uhv_machine_hull',
-        B: 'gtceu:uhv_motor',
+        B: 'gtceu:uhv_electric_motor',
         C: 'astrogreg:polyamide_imide_normal_fluid_pipe',
-        D: 'gtceu:abyssalloy_239_rotor'
+        D: 'astrogreg:abyssalloy_239_rotor'
     })
     .addMaterialInfo()
 
@@ -266,7 +266,7 @@ ServerEvents.recipes(event => {
         .itemInputs('64x gtceu:advanced_smd_resistor')
         .itemInputs('64x gtceu:advanced_smd_transistor')
         .itemInputs('64x gtceu:advanced_smd_inductor')
-        .itemInputs('16x gtceu:neutronium_bolt')
+        .itemInputs('16x astrogreg:abyssalloy_239_bolt')
         .itemInputs('64x gtceu:fine_ruthenium_trinium_americium_neutronate_wire')
         .itemInputs('64x gtceu:fine_ruthenium_trinium_americium_neutronate_wire')
         .itemInputs('64x gtceu:fine_ruthenium_trinium_americium_neutronate_wire')
@@ -287,4 +287,14 @@ ServerEvents.recipes(event => {
         ) 
     //#endregion 
 
+
+
+    //#region 
+    gt.mixer('abyssalloy_239_dust')
+        .itemInputs('6x gtceu:netherite_dust', '5x gtceu:plutonium_dust', '8x gtceu:naquadah_alloy_dust')
+        .itemOutputs('19x astrogreg:abyssalloy_239_dust')
+        .duration(3676)
+        .circuit(1)
+        .EUt(UV * 4)
+    //#endregion
 })

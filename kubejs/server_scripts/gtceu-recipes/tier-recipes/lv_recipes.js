@@ -44,9 +44,9 @@ ServerEvents.recipes(event => {
         .EUt(10)
 
     gt.bender('fluid_cell_pai')
+        .circuit(12)
         .itemInputs('astrogreg:polyamide_imide_plate')
         .itemOutputs('32x gtceu:fluid_cell')
-        .circuit(12)
         .duration(100)
         .EUt(7)
     //#endregion
