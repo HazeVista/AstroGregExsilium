@@ -100,7 +100,8 @@ ClientEvents.lang('en_us', event => {
         ['iv', '§9IV§r'],
         ['luv', '§dLuV§r'],
         ['zpm', '§cZPM§r'],
-        ['uv', '§3UV§r']
+        ['uv', '§3UV§r'],
+        ['uhv', '§4UHV§r']
     ]
 
     tiers.forEach(([tier, name]) => {

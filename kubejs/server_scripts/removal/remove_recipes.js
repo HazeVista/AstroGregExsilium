@@ -48,7 +48,13 @@ ServerEvents.recipes(event => {
         'ae2netanalyser:network_analyser', 'ae2:basic_card', 'ae2:advanced_card', 'functionalstorage:void_upgrade', 'ad_astra:ti_69', 'ad_astra:cheese_block', 'gtceu:dough', 'minecraft:cookie',
         'ad_astra:cheese', 'delightful:nut_butter_bottle', 'farmersdelight:hot_cocoa', 'astrogreg:small_sky_stone_dust', 'astrogreg:tiny_sky_stone_dust', 'astrogreg:flawless_fluix_pearl_gem',
         'astrogreg:exquisite_fluix_pearl_gem', 'ae2:fluix_pickaxe', 'ae2:fluix_hoe', 'ae2:fluix_shovel', 'ae2:fluix_axe', 'ae2:fluix_sword', 'ae2:fluix_upgrade_smithing_template', 
-        'ae2:certus_quartz_pickaxe', 'ae2:certus_quartz_hoe', 'ae2:certus_quartz_shovel', 'ae2:certus_quartz_axe', 'ae2:certus_quartz_sword', 
+        'ae2:certus_quartz_pickaxe', 'ae2:certus_quartz_hoe', 'ae2:certus_quartz_shovel', 'ae2:certus_quartz_axe', 'ae2:certus_quartz_sword','gtceu:uhv_electric_furnace', 'gtceu:uhv_rock_crusher', 
+        'gtceu:uhv_gas_collector', 'gtceu:uhv_macerator', 'gtceu:uhv_circuit_assembler', 'gtceu:uhv_wiremill', 'gtceu:uhv_fluid_solidifier', 'gtceu:uhv_forge_hammer','gtceu:uhv_brewery', 
+        'gtceu:uhv_thermal_centrifuge', 'gtceu:uhv_sifter', 'gtceu:uhv_laser_engraver', 'gtceu:uhv_extruder', 'gtceu:uhv_fermenter', 'gtceu:uhv_fluid_heater',  'gtceu:uhv_electromagnetic_separator',
+        'gtceu:uhv_forming_press', 'gtceu:uhv_lathe', 'gtceu:uhv_scanner', 'gtceu:uhv_mixer', 'gtceu:uhv_ore_washer', 'gtceu:uhv_packer', 'gtceu:uhv_polarizer', 'gtceu:uhv_extractor',  
+        'gtceu:uhv_electrolyzer', 'gtceu:uhv_distillery', 'gtceu:uhv_cutter', 'gtceu:uhv_compressor', 'gtceu:uhv_chemical_reactor', 'gtceu:uhv_chemical_bath', 'gtceu:uhv_centrifuge', 
+        'gtceu:uhv_bender', 'gtceu:uhv_alloy_smelter', 'gtceu:uhv_arc_furnace', 'gtceu:uhv_assembler', 'gtceu:uhv_autoclave', 'gtceu:uhv_item_passthrough_hatch', 'gtceu:uhv_canner', 
+        'gtceu:uhv_fluid_passthrough_hatch',
     ])
     //#endregion
 
@@ -125,7 +131,7 @@ ServerEvents.recipes(event => {
         'farmersdelight:sweet_berry_cheesecake_from_slices', 'farmersdelight:cake_from_slices', 'gtceu:shaped/small_dust_assembling_skystone', 'gtceu:shaped/tiny_dust_assembling_skystone', 'minecraft:sandstone',
         'delightful:food/matcha_milkshake', 'delightful:food/salmonberry_milkshake', 'delightful:food/matcha_ice_cream_no_neapolitan', 'delightful:food/salmonberry_ice_cream_no_neapolitan', 'gtceu:shaped/ulv_machine_hull',
         'gtceu:assembler/basic_data_access_hatch', 'gtceu:circuit_assembler/data_stick', 'gtceu:circuit_assembler/data_stick_soldering_alloy', 'create:crafting/kinetics/filter', 'create:crafting/kinetics/package_filter', 
-        'create:crafting/kinetics/attribute_filter',
+        'create:crafting/kinetics/attribute_filter', 
     ])
     //#endregion
 
@@ -149,9 +155,9 @@ ServerEvents.recipes(event => {
     //#region helpers
     event.remove({ input: Array.from(toRemoveInput) })
     event.remove({ output: Array.from(toRemoveOutput) })
-    toRemoveType.forEach(string => {event.remove({ type: string})})
-    toRemoveId.forEach(string => {event.remove({ id: string})})
-    toRemoveMod.forEach(string => {event.remove({ mod: string})})
+    toRemoveType.forEach(string => {event.remove({ type: string })})
+    toRemoveId.forEach(string => {event.remove({ id: string })})
+    toRemoveMod.forEach(string => {event.remove({ mod: string })})
     //#endregion
 
 
@@ -200,5 +206,9 @@ ServerEvents.recipes(event => {
     event.remove({ output: /gtceu:.*_drill_head/})
     event.remove({ output: /gtceu:.*_electric_motor/})
     event.remove({ output: /gtceu:.*_parallel_hatch/})
+    event.remove({ output: /gtceu:uev_.*/})
+    event.remove({ output: /gtceu:uiv_.*/})
+    event.remove({ output: /gtceu:uxv_.*/})
+    event.remove({ output: /gtceu:opv_.*/})
     //#endregion
 })
