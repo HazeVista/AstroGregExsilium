@@ -29,7 +29,7 @@ parts('assemble_large_tank')
 
 //#region rover
 parts('assemble_wheel')
-    .itemInputs('gtceu:long_steel_rod', '4x gtceu:steel_rod', 'gtceu:steel_ring')
+    .itemInputs('gtceu:long_steel_rod', '4x gtceu:steel_rod', 'gtceu:steel_sleeve')
     .inputFluids('gtceu:rubber 1152')
     .itemOutputs('ad_astra:wheel')
     .duration(200)
@@ -37,7 +37,7 @@ parts('assemble_wheel')
     .EUt(30)
 
 parts('assemble_wheel_alt')
-    .itemInputs('gtceu:long_steel_rod', '4x gtceu:steel_rod', 'gtceu:steel_ring', '8x gtceu:rubber_plate')
+    .itemInputs('gtceu:long_steel_rod', '4x gtceu:steel_rod', 'gtceu:steel_sleeve', '8x gtceu:rubber_plate')
     .itemOutputs('ad_astra:wheel')
     .duration(200)
     .circuit(30)

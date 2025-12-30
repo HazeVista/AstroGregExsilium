@@ -35,6 +35,20 @@ ServerEvents.recipes(event => {
         .itemOutputs('create:cardboard')
         .duration(200)
         .EUt(2)
+
+    gt.chemical_reactor('plastic_board_pai')
+        .itemInputs('astrogreg:polyamide_imide_plate', '4x gtceu:copper_foil')
+        .inputFluids('gtceu:sulfuric_acid 250')
+        .itemOutputs('16x gtceu:plastic_circuit_board')
+        .duration(500)
+        .EUt(10)
+
+    gt.bender('fluid_cell_pai')
+        .itemInputs('astrogreg:polyamide_imide_plate')
+        .itemOutputs('32x gtceu:fluid_cell')
+        .circuit(12)
+        .duration(100)
+        .EUt(7)
     //#endregion
 
 
