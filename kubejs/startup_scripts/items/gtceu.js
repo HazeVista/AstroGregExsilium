@@ -8,7 +8,8 @@ StartupEvents.registry('item', event => {
     { id: 'formed_rubber_ingot', name: 'Formed Rubber', texture: 'formed_rubber' },
     { id: 'formed_energized_steel_ingot', name: 'Formed Energized Steel', texture: 'formed_energized_steel' },
     { id: 'sleeve_casting_mold', name: 'Casting Mold (Sleeve)', texture: 'sleeve_casting_mold', tooltip: '§o§7Mold for making Sleeves'},
-    { id: 'sleeve_extruder_mold', name: 'Extruder Mold (Sleeve)', texture: 'sleeve_extruder_mold', tooltip: '§o§7Extruder Shape for making Sleeves'}
+    { id: 'sleeve_extruder_mold', name: 'Extruder Mold (Sleeve)', texture: 'sleeve_extruder_mold', tooltip: '§o§7Extruder Shape for making Sleeves'},
+    { id: 'uhv_voltage_coil', name: 'Ultra High Voltage Coil', texture: 'uhv_voltage_coil', tooltip: 'Quintessential Coil'}
     ]
 
     items.forEach(item => {

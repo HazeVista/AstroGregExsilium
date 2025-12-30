@@ -9,7 +9,8 @@ ServerEvents.recipes(event => {
         iv: 'astrogreg:nitro_flux',
         luv: 'astrogreg:juperiosaturlytide',
         zpm: 'astrogreg:gaiaforged_naquadah',
-        uv: 'astrogreg:neptunium_molybdenum_selenide'
+        uv: 'astrogreg:neptunium_molybdenum_selenide',
+        uhv: 'astrogreg:electrolyte'
     }
 
     const amps = { single: '1a', quadruple: '4a', octal: '8a', hex: '16a' }

@@ -52,6 +52,10 @@ ServerEvents.tags('item', event => {
         event.removeAllTagsFrom(/farmersdelight:.*_knife/)
         event.removeAllTagsFrom(/botania:rune_.*/)
         event.removeAllTagsFrom(/delightful:.*_knife/)
+        event.removeAllTagsFrom(/gtceu:uev_.*/)
+        event.removeAllTagsFrom(/gtceu:uiv_.*/)
+        event.removeAllTagsFrom(/gtceu:uxv_.*/)
+        event.removeAllTagsFrom(/gtceu:opv_.*/)
 
     //#endregion
     

@@ -61,6 +61,7 @@ ServerEvents.recipes(event => {
     event.replaceInput({ id: 'gtceu:assembly_line/electric_piston_zpm'}, 'gtceu:osmiridium_rod', 'gtceu:duranium_sleeve')
     event.replaceInput({ id: 'gtceu:assembly_line/conveyor_module_uv'}, 'gtceu:tritanium_plate', 'gtceu:tritanium_sleeve')
     event.replaceInput({ id: 'gtceu:assembly_line/electric_piston_uv'}, 'gtceu:tritanium_rod', 'gtceu:tritanium_sleeve')
+    event.replaceInput({ output: 'gtceu:uhv_energy_hatch'}, 'gtceu:ruthenium_trinium_americium_neutronate_double_wire', 'gtceu:uhv_voltage_coil')
     // event.replaceInput({input: ''}, '', '')
     //#endregion
     
