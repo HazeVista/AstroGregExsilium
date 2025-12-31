@@ -179,7 +179,7 @@ trees.forEach((tree) => {
 
 
     //#region controllers
-    event.shaped('gtceu:greenhouse', [
+    event.recipes.gtceu.shaped('gtceu:greenhouse', [
         'EBF',
         'DAD',
         'CBG'
@@ -192,8 +192,9 @@ trees.forEach((tree) => {
         F: 'gtceu:steel_scythe',
         G: 'gtceu:lv_conveyor_module'
     })
+    .addMaterialInfo()
 
-    event.shaped('gtceu:conservatory', [
+    event.recipes.gtceu.shaped('gtceu:conservatory', [
         'EBF',
         'DAD',
         'CBG'
@@ -206,5 +207,6 @@ trees.forEach((tree) => {
         F: 'gtceu:tungsten_steel_scythe',
         G: 'gtceu:iv_conveyor_module'
     })
+    .addMaterialInfo()
 
 })

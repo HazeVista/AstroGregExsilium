@@ -217,7 +217,8 @@ ItemEvents.tooltip(event => {
 
     //add tooltips below
     tipTooltip(event, 'gtmutils:pterb_machine', [
-        {line: 4, text: '§o§7Force load chunks with this machine in them to ensure the connection works properly.'}
+        {line: 4, text: '§o§7Force load chunks with this machine in them to ensure the connection works properly.'},
+        {line: 5, text: '§o§7Multiblock Controller'}
     ])
 
     tipTooltip(event, 'gtceu:pill_casting_mold', [
@@ -225,6 +226,56 @@ ItemEvents.tooltip(event => {
         {text: '§o§7What, you couldn\'t just go to the doctor? - Phoenixvine'}
     ])
 
+    const ageControllers = [ 
+        ['aether_turbine'], 
+        ['alfsteel_mana_large_boiler'], 
+        ['terrasteel_mana_large_boiler'], 
+        ['manasteel_mana_large_boiler'], 
+    ] 
+
+    ageControllers.forEach(([name, tooltip]) => { 
+        const tooltips = [{text: '§o§7Multiblock Controller'}]
+        
+        if (tooltip) {
+            tooltips.splice(1, 0, {text: tooltip, line: 1})
+        }
+        
+        tipTooltip(event, `astrogreg:${name}`, tooltips)
+    })
+
+    const controllers = [
+        ['greenhouse'], ['conservatory'], ['mega_vacuum_freezer'], ['mega_blast_furnace'],
+        ['large_wiremill'], ['large_solidifier'], ['large_extruder'], ['large_extractor'],
+        ['large_distillery'], ['large_cutter'], ['large_brewer'], ['large_material_press'],
+        ['large_autoclave'], ['large_sifting_funnel'], ['large_engraving_laser'], 
+        ['large_arc_smelter'], ['large_circuit_assembler'], ['large_assembler'], ['large_packer'],
+        ['large_electromagnet'], ['large_electrolyzer'], ['large_mixer'], ['large_centrifuge'],
+        ['large_chemical_bath'], ['large_maceration_tower'], ['bronze_large_boiler'], 
+        ['steel_large_boiler'], ['titanium_large_boiler'], ['tungstensteel_large_boiler'], 
+        ['steam_large_turbine'], ['steam_oven'], ['steam_grinder'], ['ev_large_miner'], 
+        ['iv_large_miner'], ['luv_large_miner'], ['mv_bedrock_ore_miner'], ['ev_bedrock_ore_miner'], 
+        ['large_chemical_reactor'], ['luv_fusion_reactor'], ['zpm_fusion_reactor'], 
+        ['uv_fusion_reactor'], ['large_combustion_engine'], ['gas_large_turbine'],
+        ['plasma_large_turbine'], ['extreme_combustion_engine'], ['primitive_pump'], 
+        ['mv_fluid_drilling_rig'], ['ev_fluid_drilling_rig'], ['hv_fluid_drilling_rig'], 
+        ['network_switch'], ['high_performance_computation_array'], ['active_transformer'], 
+        ['central_monitor'], ['cleanroom'], ['research_station'], ['assembly_line'], 
+        ['pyrolyse_oven'], ['cracker'], ['data_bank'], ['multi_smelter'], ['alloy_blast_smelter'], 
+        ['electric_blast_furnace'], ['primitive_blast_furnace'], ['bronze_multiblock_tank'], 
+        ['steel_multiblock_tank'], ['wooden_multiblock_tank'], ['coke_oven'],
+        ['power_substation'], ['inscription_matrix'], ['implosion_compressor'], 
+        ['coal_pile_igniter'], ['distillation_tower'], ['runic_engraver'], ['vacuum_freezer']
+    ]
+
+    controllers.forEach(([name, tooltip]) => {
+        const tooltips = [{text: '§o§7Multiblock Controller'}]
+
+        if (tooltip) {
+            tooltips.splice(1, 0, {text: tooltip, line: 1})
+        }
+
+        tipTooltip(event, `gtceu:${name}`, tooltips)
+    })
 
     const moldTips = [
         ['small_gear', 'Small Gears'],

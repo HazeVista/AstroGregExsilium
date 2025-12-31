@@ -14,7 +14,7 @@ const burn = event.recipes.gtceu.mana_boiler
     //     .itemInputs('botania:blacker_lotus')
     //     .duration(1000000)
 
-    event.shaped('astrogreg:manasteel_mana_large_boiler', [
+    event.recipes.gtceu.shaped('astrogreg:manasteel_mana_large_boiler', [
         'ABA',
         'BCB',
         'ABA'
@@ -23,8 +23,9 @@ const burn = event.recipes.gtceu.mana_boiler
         B: '#gtceu:circuits/mv',
         C: 'astrogreg:manasteel_firebox_casing'
     })
+    .addMaterialInfo()
 
-    event.shaped('astrogreg:terrasteel_mana_large_boiler', [
+    event.recipes.gtceu.shaped('astrogreg:terrasteel_mana_large_boiler', [
         'ABA',
         'BCB',
         'ABA'
@@ -33,8 +34,9 @@ const burn = event.recipes.gtceu.mana_boiler
         B: '#gtceu:circuits/hv',
         C: 'astrogreg:terrasteel_firebox_casing'
     })
+    .addMaterialInfo()
     
-    event.shaped('astrogreg:alfsteel_mana_large_boiler', [
+    event.recipes.gtceu.shaped('astrogreg:alfsteel_mana_large_boiler', [
         'ABA',
         'BCB',
         'ABA'
@@ -43,4 +45,5 @@ const burn = event.recipes.gtceu.mana_boiler
         B: '#gtceu:circuits/ev',
         C: 'astrogreg:alfsteel_firebox_casing'
     })
+    .addMaterialInfo()
 })

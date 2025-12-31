@@ -1,6 +1,6 @@
 ServerEvents.recipes(event => {
     
-    event.shaped('astrogreg:aether_turbine', [
+    event.recipes.gtceu.shaped('astrogreg:aether_turbine', [
         'ABA',
         'BCB',
         'DBD'
@@ -10,6 +10,7 @@ ServerEvents.recipes(event => {
         C: 'gtceu:iv_machine_hull',
         D: 'astrogreg:elementium_large_fluid_pipe'
     })
+    .addMaterialInfo()
 
     event.recipes.gtceu.aether_engine('burn_aether')
         .inputFluids('astrogreg:aether 4')

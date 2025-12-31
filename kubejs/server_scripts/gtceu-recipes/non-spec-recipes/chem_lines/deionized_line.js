@@ -16,4 +16,24 @@ ServerEvents.recipes(event => {
         .EUt(1920)
     //#endregion
 
+    //#region multiblock
+    // gt.assembly_line('filtration_plant')
+    //     .itemInputs('gtceu:distillation_tower')
+    //     .itemInputs('2x #gtceu:circuits/luv')
+    //     .itemInputs('4x gtceu:iv_electric_pump')
+    //     .itemInputs('4x gtceu:polybenzimidazole_large_fluid_pipe')
+    //     .itemInputs('16x gtceu:fluid_filter')
+    //     .itemInputs('4x gtceu:tungsten_cable')
+    //     .inputFluids('gtceu:soldering_alloy 576')
+    //     .itemOutputs('astrogreg:filtration_plant')
+    //     .duration(400)
+    //     .EUt(6000)
+    //     ["scannerResearch(java.util.function.UnaryOperator)"]
+    //     (b => b
+    //         .researchStack("gtceu:distillation_tower")
+    //         .duration(900)
+    //         .EUt(1920)
+    //     )
+    //#endregion
+
 })

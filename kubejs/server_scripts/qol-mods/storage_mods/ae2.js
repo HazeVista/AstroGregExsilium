@@ -63,13 +63,18 @@ ServerEvents.recipes(event => {
     
     
     //#region inscription matrix & cells
-    event.shaped('gtceu:inscription_matrix', ['ADA', 'CBC', 'AEA'], {
+    event.recipes.gtceu.shaped('gtceu:inscription_matrix', [
+        'ADA', 
+        'CBC', 
+        'AEA'
+    ], {
         A: 'astrogreg:futura_alloy_plate',
         B: 'gtceu:hv_laser_engraver',
         C: 'gtceu:hv_emitter',
         D: 'gtceu:hv_conveyor_module',
         E: '#gtceu:circuits/ev'
     })
+    .addMaterialInfo()
 
     const DUSTS = ['minecraft:redstone', 'minecraft:glowstone_dust', 'ae2:sky_dust', 'gtceu:ender_pearl_dust', 'gtceu:ender_eye_dust']
     const tiers = ['ulv', 'lv', 'mv', 'hv', 'ev', 'iv', 'luv', 'zpm', 'uv', 'uhv']
