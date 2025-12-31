@@ -54,7 +54,7 @@ ServerEvents.recipes(event => {
         'gtceu:uhv_forming_press', 'gtceu:uhv_lathe', 'gtceu:uhv_scanner', 'gtceu:uhv_mixer', 'gtceu:uhv_ore_washer', 'gtceu:uhv_packer', 'gtceu:uhv_polarizer', 'gtceu:uhv_extractor',  
         'gtceu:uhv_electrolyzer', 'gtceu:uhv_distillery', 'gtceu:uhv_cutter', 'gtceu:uhv_compressor', 'gtceu:uhv_chemical_reactor', 'gtceu:uhv_chemical_bath', 'gtceu:uhv_centrifuge', 
         'gtceu:uhv_bender', 'gtceu:uhv_alloy_smelter', 'gtceu:uhv_arc_furnace', 'gtceu:uhv_assembler', 'gtceu:uhv_autoclave', 'gtceu:uhv_item_passthrough_hatch', 'gtceu:uhv_canner', 
-        'gtceu:uhv_fluid_passthrough_hatch', 'gtceu:uhv_machine_hull', 'gtceu:uhv_muffler_hatch'
+        'gtceu:uhv_fluid_passthrough_hatch', 'gtceu:uhv_machine_hull', 'gtceu:uhv_muffler_hatch', 'expatternprovider:silicon_block', 'ae2:silicon'
     ])
     //#endregion
 
@@ -131,7 +131,7 @@ ServerEvents.recipes(event => {
         'farmersdelight:sweet_berry_cheesecake_from_slices', 'farmersdelight:cake_from_slices', 'gtceu:shaped/small_dust_assembling_skystone', 'gtceu:shaped/tiny_dust_assembling_skystone', 'minecraft:sandstone',
         'delightful:food/matcha_milkshake', 'delightful:food/salmonberry_milkshake', 'delightful:food/matcha_ice_cream_no_neapolitan', 'delightful:food/salmonberry_ice_cream_no_neapolitan', 'gtceu:shaped/ulv_machine_hull',
         'gtceu:assembler/basic_data_access_hatch', 'gtceu:circuit_assembler/data_stick', 'gtceu:circuit_assembler/data_stick_soldering_alloy', 'create:crafting/kinetics/filter', 'create:crafting/kinetics/package_filter', 
-        'create:crafting/kinetics/attribute_filter', 
+        'create:crafting/kinetics/attribute_filter', 'gtceu:shaped/steam_oven_from_hp', 'gtceu:shaped/steam_grinder_from_hp'
     ])
     //#endregion
 

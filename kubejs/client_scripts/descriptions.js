@@ -262,9 +262,10 @@ ItemEvents.tooltip(event => {
         ['central_monitor'], ['cleanroom'], ['research_station'], ['assembly_line'], 
         ['pyrolyse_oven'], ['cracker'], ['data_bank'], ['multi_smelter'], ['alloy_blast_smelter'], 
         ['electric_blast_furnace'], ['primitive_blast_furnace'], ['bronze_multiblock_tank'], 
-        ['steel_multiblock_tank'], ['wooden_multiblock_tank'], ['coke_oven'],
+        ['steel_multiblock_tank'], ['wooden_multiblock_tank'], ['coke_oven'], ['vacuum_freezer'],
         ['power_substation'], ['inscription_matrix'], ['implosion_compressor'], 
-        ['coal_pile_igniter'], ['distillation_tower'], ['runic_engraver'], ['vacuum_freezer']
+        ['charcoal_pile_igniter'], ['distillation_tower'], ['runic_engraver'],
+        ['hv_bedrock_ore_miner']
     ]
 
     controllers.forEach(([name, tooltip]) => {
