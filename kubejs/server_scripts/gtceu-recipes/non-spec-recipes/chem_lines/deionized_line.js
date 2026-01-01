@@ -14,7 +14,15 @@ ServerEvents.recipes(event => {
         .itemOutputs('astrogreg:empty_filter_cartridge')
         .duration(300)
         .EUt(1920)
+
+    gt.canner('fill_cartridge')
+        .itemInputs('astrogreg:empty_filter_cartridge', '4x astrogreg:resin_beads')
+        .itemOutputs('astrogreg:filter_cartridge')
+        .duration(80)
+        .EUt(7)
     //#endregion
+
+
 
     //#region multiblock
     // gt.assembly_line('filtration_plant')
@@ -34,6 +42,45 @@ ServerEvents.recipes(event => {
     //         .duration(900)
     //         .EUt(1920)
     //     )
+    //
+    // gt.filtration_plant('deionized_water')
+    //     .itemInputs('astrogreg:filter_cartridge')
+    //     .perTick(true)
+    //     .inputFluids('minecraft:water 1')
+    //     .outputFluids('astrgreg:deionized_water 1')
+    //     .perTick(false)
+    //     .itemOutputs('astrogreg:empty_filter_cartridge')
+    //     .duration(10000)
+    //     .EUt(6000)
+    //#endregion
+
+
+
+    //#region S-DVB bead line
+    gt.chemical_reactor('diethylbenzene')
+        .inputFluids('gtceu:ethylbenzene')
+        .inputFluids('gtceu:ethanol')
+        .outputFluids('astrogreg:diethylbenzene')
+        .outputFluids('minecraft:water')
+        .circuit(1)
+        .duration(200)
+        .EUt(480)
+
+    gt.chemical_reactor('divinylbenzene')
+        .notConsumable('gtceu:cerium_dust')
+        .inputFluids('astrogreg:diethylbenzene')
+        .outputFluids('gtceu:hydrogen 4000')
+        .itemOutputs('astrogreg:divinylbenzene_dust')
+        .duration(200)
+        .EUt(1920)
+
+    gt.mixer('resin_beads')
+        .itemInputs('4x astrogreg:divinylbenzene_dust')
+        .inputFluids('minecraft:water')
+        .inputFluids('gtceu:styrene 250')
+        .itemOutputs('astrogreg:resin_beads')
+        .duration(100)
+        .EUt(480)
     //#endregion
 
 })

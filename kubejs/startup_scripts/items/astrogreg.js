@@ -8,7 +8,7 @@ StartupEvents.registry('item', event => {
         { id: 'livingbrick', name: 'Livingbrick', texture: 'livingbrick' },
         { id: 'filter_cartridge', name: '§cAstroTek§r Filter Cartridge', texture: 'filter_cartridge', tooltip: '§o§7A cartridge for use in advanced water filtration systems.'},
         { id: 'empty_filter_cartridge', name: '§cAstroTek§r Filter Cartridge (Empty)', texture: 'empty_filter_cartridge', tooltip: '§o§7An empty cartridge that can be filled with S-DVB Beads for use in advanced water filtration systems.'},
-        { id: 'resin_beads', name: 'S-DVB Beads', texture: 'sdvb_beads'},
+        { id: 'resin_beads', name: 'S-DVB Resin Beads', texture: 'sdvb_beads'},
         { id: 'paradox_circuit_board', name: '§cAstroTek§r CogniBoard', texture: 'paradox_circuits/paradox_circuit_board'},
         { id: 'paradox_printed_circuit_board', name: '§cAstroTek§r Printed CogniBoard', texture: 'paradox_circuits/paradox_printed_circuit_board'},
         { id: 'paradox_processor_chip', name: 'Paradox Processor Chip', texture: 'paradox_circuits/paradox_processor_chip', tags: 'gtceu:circuits/luv'},
