@@ -46,11 +46,11 @@ ServerEvents.tags('item', event => {
         'ad_extendra:saturlyte_plate', 'delightful:source_berry_cookie',
         'astrogreg:small_sky_stone_dust', 'astrogreg:tiny_sky_stone_dust',
         'expandedae:dual_cell_housing', 'expandedae:mega_dual_cell_housing',
-        'ad_extendra:electrolyte_plate', 'ad_extendra:electrolyte_ingot',
         'expatternprovider:silicon_block'
     ]
 
         //wildcard removals
+        event.removeAllTagsFrom(/ad_extendra:electrolyte_.*/)
         event.removeAllTagsFrom(/farmersdelight:.*_knife/)
         event.removeAllTagsFrom(/botania:rune_.*/)
         event.removeAllTagsFrom(/delightful:.*_knife/)

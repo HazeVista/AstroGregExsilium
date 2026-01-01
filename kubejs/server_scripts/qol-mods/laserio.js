@@ -1,6 +1,6 @@
  ServerEvents.recipes(event => {
     //LaserIO
-     event.shaped('laserio:laser_wrench', [
+    event.shaped('laserio:laser_wrench', [
             'ABA',
             ' C ',
             ' D '
@@ -11,18 +11,20 @@
             D: 'gtceu:iron_plate',
         })
 
-    event.shaped('laserio:logic_chip_raw', [
-            'ABA',
-            'CDC',
-            'ABA'
+    event.shaped('4x laserio:logic_chip_raw', [
+            'ADA',
+            'ACA',
+            'BBB'
         ], {
-            A: 'minecraft:redstone',
-            B: 'minecraft:gold_nugget',
-            C: 'minecraft:clay_ball',
-            D: 'minecraft:sand',
+            A: 'powah:dielectric_paste',
+            B: 'gtceu:gold_bolt',
+            C: 'gtceu:tin_plate',
+            D: '#c:glass_panes',
         })
 
-        event.shaped('laserio:laser_node', [
+    event.campfireCooking('laserio:logic_chip', 'laserio:logic_chip_raw', 0, 100)
+
+    event.shaped('laserio:laser_node', [
             'ABA',
             'BCB',
             'ABA'

@@ -49,6 +49,12 @@ ServerEvents.recipes(event => {
         .itemOutputs('32x gtceu:fluid_cell')
         .duration(100)
         .EUt(7)
+
+    gt.chemical_reactor('ethylbenzene_to_styrene')
+        .circuit(2)
+        .inputFluids('gtceu:ethylbenzene')
+        .outputFluids('gtceu:styrene')
+        .outputFluids('gtceu:hydrogen 2000')
     //#endregion
 
 
