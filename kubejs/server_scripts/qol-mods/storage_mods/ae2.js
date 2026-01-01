@@ -288,7 +288,7 @@ ServerEvents.recipes(event => {
     }
 
     gt.canner('pattern_canning')
-        .itemInputs('#forge:dusts/certus_quartz', '4x gtceu:fluid_cell')
+        .itemInputs('4x gtceu:fluid_cell', '#forge:dusts/certus_quartz')
         .inputFluids('gtceu:glowstone 576')
         .itemOutputs('4x ae2:blank_pattern')
         .duration(300)
