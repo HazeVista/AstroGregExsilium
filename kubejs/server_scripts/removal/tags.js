@@ -46,7 +46,8 @@ ServerEvents.tags('item', event => {
         'ad_extendra:saturlyte_plate', 'delightful:source_berry_cookie',
         'astrogreg:small_sky_stone_dust', 'astrogreg:tiny_sky_stone_dust',
         'expandedae:dual_cell_housing', 'expandedae:mega_dual_cell_housing',
-        'expatternprovider:silicon_block'
+        'expatternprovider:silicon_block', 'create:experience_nugget',
+        'ad_extendra:radium_nugget'
     ]
 
         //wildcard removals

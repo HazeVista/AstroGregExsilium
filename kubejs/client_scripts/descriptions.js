@@ -296,6 +296,24 @@ ItemEvents.tooltip(event => {
             {text: `§o§7Mold for making ${name}`}
         ])
     })
+
+    const superconductors = [
+        ['powah:steel_energized', 'LV'],
+        ['astrogreg:blazing_etrium_ingot', 'MV'],
+        ['astrogreg:niotic_calorite_ingot', 'HV'],
+        ['astrogreg:spirited_uranium_ingot', 'EV'],
+        ['astrogreg:nitro_flux_ingot', 'IV'],
+        ['astrogreg:juperiosaturlytide_ingot', 'LuV'],
+        ['astrogreg:gaiaforged_naquadah_ingot', 'ZPM'],
+        ['astrogreg:neptunium_molybdenum_selenide_ingot', 'UV'],
+        ['astrogreg:electrolyte_ingot', 'UHV']
+    ]
+
+    superconductors.forEach(([id, tier]) => {
+        tipTooltip(event, id, [
+            {text: `${tier}§d Superconductor`}
+        ])
+    })
     //#endregion
 
 })
