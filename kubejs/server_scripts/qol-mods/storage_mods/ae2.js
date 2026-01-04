@@ -155,7 +155,7 @@ ServerEvents.recipes(event => {
         ['ae2:wireless_booster', 'gtceu:hv_emitter'],
         ['ae2:capacity_card', 'ae2:charged_certus_quartz_crystal']
     ]) {
-        event.shapeless(output, ['ae2:advanced_card', component])
+        event.shapeless(output, [component, 'ae2:advanced_card'])
     }
 
     event.shapeless('pccard:card_programmed_circuit', ['ae2:crafting_card', 'gtceu:programmed_circuit', '#gtceu:circuits/ev'])

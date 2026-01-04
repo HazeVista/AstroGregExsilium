@@ -37,13 +37,24 @@ StartupEvents.registry('item', event => {
     })
 
     //stabilizers
-    const tiers = ['lv', 'mv', 'hv', 'ev', 'iv', 'luv', 'zpm', 'uv', 'uhv']
+    const tiers = [
+        ['lv', '§7LV§r'], 
+        ['mv', '§bMV§r'], 
+        ['hv', '§6HV§r'], 
+        ['ev', '§5EV§r'], 
+        ['iv', '§9IV§r'], 
+        ['luv', '§dLuV§r'], 
+        ['zpm', '§cZPM§r'], 
+        ['uv', '§3UV§r'], 
+        ['uhv', '§4UHV§r']
+    ]
     
-    tiers.forEach(tier => {
-        const displayTier = tier === 'luv' ? 'LuV' : tier.toUpperCase()
-        
+    tiers.forEach(([tier, displayTier]) => { 
+
         event.create(`astrogreg:${tier}_stabilizer`)
             .displayName(`${displayTier} Stabilizer`)
             .texture(`kubejs:item/gtceu/arcane_stabilizers/${tier}_arcane_stabilizer`)
+
     })
+
 })

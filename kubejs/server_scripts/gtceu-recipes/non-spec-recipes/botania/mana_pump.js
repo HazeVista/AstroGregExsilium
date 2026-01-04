@@ -34,7 +34,7 @@ function singleblocks(part) {
         'BCB'
     ], {
         A: `gtceu:${tier}_emitter`,
-        B: `gtceu:${tier}_electric_pump`,
+        B: `gtceu:${tier}_stabilizer`,
         C: `gtceu:${cable}_single_cable`,
         D:  glass,
         E: `gtceu:${tier}_machine_hull`,

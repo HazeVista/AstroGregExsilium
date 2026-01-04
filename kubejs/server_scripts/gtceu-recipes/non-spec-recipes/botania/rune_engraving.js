@@ -11,7 +11,7 @@ const engrave = event.recipes.gtceu.rune_inscription
         B: 'gtceu:copper_single_cable',
         C: 'gtceu:mv_emitter',
         D: 'astrogreg:manasteel_brick_machine_casing',
-        E: 'gtceu:mv_conveyor_module'
+        E: 'gtceu:mv_stabilizer'
     })
 
 //#endregion
