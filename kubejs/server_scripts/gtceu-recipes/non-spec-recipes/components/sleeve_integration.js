@@ -167,7 +167,7 @@ ServerEvents.recipes(event => {
         .itemOutputs(`gtceu:zpm_electric_motor`)
         .duration(600)
         .EUt(24000)
-        ["scannerResearch(java.util.function.UnaryOperator)"]
+        ['scannerResearch(java.util.function.UnaryOperator)']
         (b => b
             .researchStack("gtceu:luv_electric_motor")
             .duration(1200)

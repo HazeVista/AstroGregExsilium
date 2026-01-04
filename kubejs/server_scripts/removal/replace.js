@@ -64,7 +64,8 @@ ServerEvents.recipes(event => {
     event.replaceInput({ output: 'gtceu:uhv_energy_output_hatch'}, 'gtceu:ruthenium_trinium_americium_neutronate_double_wire', 'gtceu:uhv_voltage_coil')
     event.replaceInput({ output: 'gtceu:uhv_energy_input_hatch'}, 'gtceu:ruthenium_trinium_americium_neutronate_double_wire', 'gtceu:uhv_voltage_coil')
     event.replaceInput({ output: 'expandedae:exp_pattern_provider'}, 'ae2:cable_pattern_provider', 'expatternprovider:ex_pattern_provider')
-    // event.replaceInput({input: ''}, '', '')
+    event.replaceInput({ id: 'expatternprovider:wireless_hub'}, 'ae2:quantum_link', '#gtceu:circuits/ev')
+    // event.replaceInput({ input: ''}, '', '')
     //#endregion
     
     //#region output

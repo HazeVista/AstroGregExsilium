@@ -4,7 +4,6 @@ ServerEvents.recipes(event => {
         'minecraft:netherite_upgrade_smithing_template', 'ad_astra:fan', 'ad_astra:steel_ingot', 'ad_astra:ice_shard', 'gtceu:gaiasteel_ingot', 'create:creative_blaze_cake',
         'create:blaze_cake_base', 'createaddition:cake_base_baked', 'create:blaze_cake', 'create:dough', 'astrogreg:small_sky_stone_dust', 'astrogreg:tiny_sky_stone_dust', 
         'expandedae:dual_cell_housing', 'expandedae:mega_dual_cell_housing', '#create:pulpifiable','astrogreg:flawless_fluix_pearl_gem', 'astrogreg:exquisite_fluix_pearl_gem',
-
     ])
     //#endregion
 
@@ -14,7 +13,7 @@ ServerEvents.recipes(event => {
     const toRemoveOutput = new Set(['ae2:charger', 'ae2:drive', 'ae2:chest', 'createdieselgenerators:pumpjack_hole', 'expatternprovider:ex_inscriber', 'ad:astra_oxygen', 'waystones:warp_dust',
         'expatternprovider:ex_charger', 'expatternprovider:crystal_fixer', 'expatternprovider:caner', 'exmachinis:item_buffer', 'ae2:crystal_resonance_generator', 'laserio:laser_node',
         'ae2:vibration_chamber', 'expatternprovider:circuit_cutter', 'minecraft:mycelium', 'create:brass_block', 'create:zinc_block', 'createaddition:straw', 'ad_astra:hydrogen',
-        'gtceu:me_pattern_buffer_proxy', 'gtceu:me_pattern_buffer', 'create:andesite_alloy', 'ad_astra:desh_plate', 'create:controller_rail', 'create:dough', 'ad_astra:rocket_fin',
+        'create:andesite_alloy', 'ad_astra:desh_plate', 'create:controller_rail', 'create:dough', 'ad_astra:rocket_fin', 'expatternprovider:silicon_block', 'ae2:silicon',
         'functionalstorage:collector_upgrade', 'functionalstorage:pusher_upgrade', 'functionalstorage:puller_upgrade', 'create:shaft', 'create:blaze_cake_base', 'create:wheat_flour',
         'createaddition:alternator', 'createaddition:gold_rod', 'effortlessbuilding:golden_randomizer_bag', 'ad_astra:wheel', 'ad_astra:steel_engine', 'ad_astra:launch_pad',
         'createaddition:brass_rod', 'createaddition:copper_rod', 'createaddition:electrum_rod', 'createaddition:electric_motor', 'createaddition:capacitor', 'createaddition:tesla_coil',
@@ -54,7 +53,7 @@ ServerEvents.recipes(event => {
         'gtceu:uhv_forming_press', 'gtceu:uhv_lathe', 'gtceu:uhv_scanner', 'gtceu:uhv_mixer', 'gtceu:uhv_ore_washer', 'gtceu:uhv_packer', 'gtceu:uhv_polarizer', 'gtceu:uhv_extractor',  
         'gtceu:uhv_electrolyzer', 'gtceu:uhv_distillery', 'gtceu:uhv_cutter', 'gtceu:uhv_compressor', 'gtceu:uhv_chemical_reactor', 'gtceu:uhv_chemical_bath', 'gtceu:uhv_centrifuge', 
         'gtceu:uhv_bender', 'gtceu:uhv_alloy_smelter', 'gtceu:uhv_arc_furnace', 'gtceu:uhv_assembler', 'gtceu:uhv_autoclave', 'gtceu:uhv_item_passthrough_hatch', 'gtceu:uhv_canner', 
-        'gtceu:uhv_fluid_passthrough_hatch', 'gtceu:uhv_machine_hull', 'gtceu:uhv_muffler_hatch', 'expatternprovider:silicon_block', 'ae2:silicon'
+        'gtceu:uhv_fluid_passthrough_hatch', 'gtceu:uhv_machine_hull', 'gtceu:uhv_muffler_hatch', 
     ])
     //#endregion
 
@@ -214,5 +213,7 @@ ServerEvents.recipes(event => {
     event.remove({ output: /gtceu:max_.*/})
     event.remove({ output: /ad_extendra:electrolyte_.*/})
     event.remove({ id: /botania:elven_trade\/.*/})
+    event.remove({ input: /gtceu:.*_dual_.*_hatch/})
+    event.remove({ output: /gtceu:.*_dual_.*_hatch/})
     //#endregion
 })

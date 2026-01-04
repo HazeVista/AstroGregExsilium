@@ -55,6 +55,8 @@ ServerEvents.recipes(event => {
         .inputFluids('gtceu:ethylbenzene')
         .outputFluids('gtceu:styrene')
         .outputFluids('gtceu:hydrogen 2000')
+        .duration(200)
+        .EUt(28)
     //#endregion
 
 
