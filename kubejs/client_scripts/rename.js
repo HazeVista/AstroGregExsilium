@@ -107,7 +107,7 @@ ClientEvents.lang('en_us', event => {
             [`${tier}_robot_arm`, `${name} Robot Arm`],
             [`${tier}_field_generator`, `${name} Field Generator`],
             [`${tier}_emitter`, `${name} Emitter`],
-            [`${tier}_sensor`, `${name} Sensor`],
+            [`${tier}_sensor`, `${name} Sensor`]
         ])
     })
 

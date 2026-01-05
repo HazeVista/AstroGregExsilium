@@ -13,6 +13,8 @@ ServerEvents.recipes(event => {
     event.shapeless('9x astrogreg:energized_steel_nugget', 'powah:steel_energized')
     //#endregion
 
+
+
     //#region etrium
     event.shaped('ad_astra:etrium_block', [
         'AAA',
@@ -68,5 +70,10 @@ ServerEvents.recipes(event => {
         A: 'astrogreg:etrium_plate',
         B: 'gtceu:steel_rod'
     })
+    //#endregion
+
+
+    //#region botania metals
+    
     //#endregion
 })

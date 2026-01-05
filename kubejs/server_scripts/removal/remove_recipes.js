@@ -4,6 +4,7 @@ ServerEvents.recipes(event => {
         'minecraft:netherite_upgrade_smithing_template', 'ad_astra:fan', 'ad_astra:steel_ingot', 'ad_astra:ice_shard', 'gtceu:gaiasteel_ingot', 'create:creative_blaze_cake',
         'create:blaze_cake_base', 'createaddition:cake_base_baked', 'create:blaze_cake', 'create:dough', 'astrogreg:small_sky_stone_dust', 'astrogreg:tiny_sky_stone_dust', 
         'expandedae:dual_cell_housing', 'expandedae:mega_dual_cell_housing', '#create:pulpifiable','astrogreg:flawless_fluix_pearl_gem', 'astrogreg:exquisite_fluix_pearl_gem',
+        'delightful:animal_oil_bottle'
     ])
     //#endregion
 
@@ -27,10 +28,9 @@ ServerEvents.recipes(event => {
         'farmersdelight:netherite_knife', 'create:netherite_backtank', 'create:netherite_diving_helmet', 'create:netherite_diving_boots', 'minecraft:netherite_upgrade_smithing_template',
         'ad_astra:fan', 'gtceu:cleaning_maintenance_hatch', 'ad_astra:steel_ingot', 'ad_astra:ice_shard', 'ad_astra:reinforced_door', 'ad_astra:ice_charge', 'gtceu:gravitation_engine_unit',
         'gtceu:solar_panel', 'create:red_sand_paper', 'botania:mana_powder', 'botania:monocle', 'botania:mana_glass_pane', 'botania:bifrost_pane', 'botania:red_string', 'botania:turntable',
-        'botania:elf_glass_pane', 'botania:auto_crafting_halo', 'botania:thunder_sword', 'botania:gaia_ingot', 'botania:bifrost_perm', 'botania:manasteel_ingot', 'botania:terrasteel_ingot',
-        'botania:elementium_ingot', 'botania:elementium_nugget', 'botania:manasteel_nugget', 'botania:terrasteel_nugget', 'botania:starfield', 'dustrial_decor:cardboard_boots',
-        'botania:elementium_block', 'botania:manasteel_block', 'botania:terrasteel_block', 'botania:elementium_shears', 'dustrial_decor:cardboard_leggings', 'botania:terrasteel_helmet',
-        'botania:open_bucket', 'botania:elementium_pickaxe', 'botania:elementium_shovel', 'botania:elementium_hoe', 'botania:elementium_axe', 'botania:gaia_spreader', 'ad_astra:steel_tank',
+        'botania:elf_glass_pane', 'botania:auto_crafting_halo', 'botania:thunder_sword', 'botania:gaia_ingot', 'botania:bifrost_perm', 'botania:starfield', 'dustrial_decor:cardboard_boots',
+        'botania:elementium_shears', 'dustrial_decor:cardboard_leggings', 'botania:terrasteel_helmet', 'botania:open_bucket', 'botania:elementium_pickaxe', 'botania:elementium_shovel', 
+        'botania:elementium_hoe', 'botania:elementium_axe', 'botania:gaia_spreader', 'ad_astra:steel_tank', 'ae2:quantum_entangled_singularity',
         'botania:elementium_sword', 'botania:ender_dagger', 'botania:manasteel_pick', 'botania:manasteel_shovel', 'botania:manasteel_hoe', 'botania:manasteel_axe', 'botania:manasteel_sword',
         'botania:crafting_halo', 'botania:laputa_shard', 'gtceu:ulv_solar_panel', 'dustrial_decor:cardboard_helmet', 'dustrial_decor:cardboard_chestplate', 'botania:terrasteel_chestplate',
         'botania:terrasteel_leggings', 'botania:terrasteel_boots', 'botania:terra_sword', 'botania:terra_axe', 'botania:terra_pick', 'botania:third_eye', 'botania:orechid_ignem',
@@ -53,7 +53,7 @@ ServerEvents.recipes(event => {
         'gtceu:uhv_forming_press', 'gtceu:uhv_lathe', 'gtceu:uhv_scanner', 'gtceu:uhv_mixer', 'gtceu:uhv_ore_washer', 'gtceu:uhv_packer', 'gtceu:uhv_polarizer', 'gtceu:uhv_extractor',  
         'gtceu:uhv_electrolyzer', 'gtceu:uhv_distillery', 'gtceu:uhv_cutter', 'gtceu:uhv_compressor', 'gtceu:uhv_chemical_reactor', 'gtceu:uhv_chemical_bath', 'gtceu:uhv_centrifuge', 
         'gtceu:uhv_bender', 'gtceu:uhv_alloy_smelter', 'gtceu:uhv_arc_furnace', 'gtceu:uhv_assembler', 'gtceu:uhv_autoclave', 'gtceu:uhv_item_passthrough_hatch', 'gtceu:uhv_canner', 
-        'gtceu:uhv_fluid_passthrough_hatch', 'gtceu:uhv_machine_hull', 'gtceu:uhv_muffler_hatch', 
+        'gtceu:uhv_fluid_passthrough_hatch', 'gtceu:uhv_machine_hull', 'gtceu:uhv_muffler_hatch', 'minecraft:spyglass',
     ])
     //#endregion
 
@@ -131,7 +131,7 @@ ServerEvents.recipes(event => {
         'delightful:food/matcha_milkshake', 'delightful:food/salmonberry_milkshake', 'delightful:food/matcha_ice_cream_no_neapolitan', 'delightful:food/salmonberry_ice_cream_no_neapolitan', 'gtceu:shaped/ulv_machine_hull',
         'gtceu:assembler/basic_data_access_hatch', 'gtceu:circuit_assembler/data_stick', 'gtceu:circuit_assembler/data_stick_soldering_alloy', 'create:crafting/kinetics/filter', 'create:crafting/kinetics/package_filter', 
         'create:crafting/kinetics/attribute_filter', 'gtceu:shaped/steam_oven_from_hp', 'gtceu:shaped/steam_grinder_from_hp', 'gtceu:large_chemical_reactor/styrene_from_ethylbenzene', 
-        'gtceu:chemical_reactor/styrene_from_ethylbenzene', 'ad_extendra:encased_electrolyte_block'
+        'gtceu:chemical_reactor/styrene_from_ethylbenzene', 'ad_extendra:encased_electrolyte_block', 'gtceu:brewery/bacteria', 'gtceu:autoclave/agar', 'botania:mushroom_stew', 'minecraft:suspicious_stew',
     ])
     //#endregion
 

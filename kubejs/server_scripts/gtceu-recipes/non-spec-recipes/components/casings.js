@@ -14,7 +14,7 @@ ServerEvents.recipes(event => {
         const block = ageCasing[2]
         const name = ageCasing[3]
 
-        event.shaped(block, [
+        gt.shaped(block, [
             'ABA',
             'ACA',
             'ADA'
@@ -31,9 +31,10 @@ ServerEvents.recipes(event => {
             .circuit(6)
             .duration(50)
             .EUt(16)
+            .addMaterialInfo(true)
     })
 
-    event.shaped('2x astrogreg:manasteel_firebox_casing', [
+    gt.shaped('2x astrogreg:manasteel_firebox_casing', [
         'ABA',
         'BCB',
         'ABA'
@@ -49,8 +50,9 @@ ServerEvents.recipes(event => {
         .circuit(6)
         .duration(50)
         .EUt(16)
+        .addMaterialInfo(true)
 
-    event.shaped('2x astrogreg:manasteel_pipe_casing', [
+    gt.shaped('2x astrogreg:manasteel_pipe_casing', [
         'ABA',
         'BCB',
         'ABA'
@@ -66,8 +68,9 @@ ServerEvents.recipes(event => {
         .circuit(6)
         .duration(50)
         .EUt(16)
+        .addMaterialInfo(true)
         
-    event.shaped('2x astrogreg:terrasteel_firebox_casing', [
+    gt.shaped('2x astrogreg:terrasteel_firebox_casing', [
         'ABA',
         'BCB',
         'ABA'
@@ -83,8 +86,9 @@ ServerEvents.recipes(event => {
         .circuit(6)
         .duration(50)
         .EUt(16)
+        .addMaterialInfo(true)
                
-    event.shaped('2x astrogreg:terrasteel_pipe_casing', [
+    gt.shaped('2x astrogreg:terrasteel_pipe_casing', [
         'ABA',
         'BCB',
         'ABA'
@@ -100,8 +104,9 @@ ServerEvents.recipes(event => {
         .circuit(6)
         .duration(50)
         .EUt(16)
+        .addMaterialInfo(true)
         
-    event.shaped('2x astrogreg:alfsteel_firebox_casing', [
+    gt.shaped('2x astrogreg:alfsteel_firebox_casing', [
         'ABA',
         'BCB',
         'ABA'
@@ -117,8 +122,9 @@ ServerEvents.recipes(event => {
         .circuit(6)
         .duration(50)
         .EUt(16)
+        .addMaterialInfo(true)
 
-    event.shaped('2x astrogreg:alfsteel_pipe_casing', [
+    gt.shaped('2x astrogreg:alfsteel_pipe_casing', [
         'ABA',
         'BCB',
         'ABA'
@@ -134,8 +140,9 @@ ServerEvents.recipes(event => {
         .circuit(6)
         .duration(50)
         .EUt(16)
+        .addMaterialInfo(true)
         
-    event.shaped('2x astrogreg:alfsteel_gearbox_casing', [
+    gt.shaped('2x astrogreg:alfsteel_gearbox_casing', [
         'ADA',
         'BCB',
         'AEA'
@@ -153,4 +160,5 @@ ServerEvents.recipes(event => {
         .circuit(4)
         .duration(50)
         .EUt(16)
+        .addMaterialInfo(true)
 })

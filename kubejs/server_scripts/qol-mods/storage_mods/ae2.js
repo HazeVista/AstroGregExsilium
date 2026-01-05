@@ -332,4 +332,19 @@ ServerEvents.recipes(event => {
     event.shaped('ae2:memory_card', ['ABB', 'CCC'], { A: '#gtceu:circuits/ulv', B: 'astrogreg:futura_alloy_plate', C: 'gtceu:gold_bolt' })
     event.shaped('ae2netanalyser:network_analyser', ['AEA', 'BCB', 'DBD'], { A: 'gtceu:fine_copper_wire', B: 'astrogreg:futura_alloy_plate', C: '#gtceu:circuits/ulv', D: 'gtceu:iron_screw', E: '#forge:tools/screwdrivers' })
     //#endregion
+
+
+
+    //#region singularity
+    const explosives = [['gtceu:industrial_tnt', 'itnt'], ['4x minecraft:tnt', 'tnt'],
+                        ['2x gtceu:dynamite', 'dynamite'], ['8x gtceu:powderbarrel', 'powderbar']]
+
+    explosives.forEach(([explosive, name]) => {
+        gt.implosion_compressor(`quantum_singularity_from_${name}`)
+            .itemInputs('2x astrogreg:futura_alloy_dust', 'ae2:singularity', explosive)
+            .itemOutputs('ae2:quantum_entangled_singularity')
+            .duration(20)
+            .EUt(30)
+    })
+    //#endregion
 })

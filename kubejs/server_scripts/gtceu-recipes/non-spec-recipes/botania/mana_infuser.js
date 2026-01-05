@@ -187,7 +187,7 @@ const purify = event.recipes.gtceu.mana_infusion
             B: `gtceu:${cable}_single_cable`,
             C: `#gtceu:circuits/${tier}`,
             D: `gtceu:${tier}_machine_hull`,
-            E: `gtceu:${tier}_stabilizer`,
+            E: `astrogreg:${tier}_stabilizer`,
             F: `gtceu:${tier}_conveyor_module`
         })
         .addMaterialInfo()
