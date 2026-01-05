@@ -85,11 +85,17 @@ ServerEvents.recipes(event => {
 
         gt.inscription(`inscribe_${size}k`)
             .itemInputs(i > 0 ? `3x ae2:cell_component_${size / 4}k` : '4x ae2:certus_quartz_crystal', `4x ${kDust}`, 'ae2:calculation_processor', `#gtceu:circuits/${tiers[i]}`)
-            .itemOutputs(`ae2:cell_component_${size}k`).duration(300).EUt(size * 7)
+            .itemOutputs(`ae2:cell_component_${size}k`)
+            .duration(300)
+            .EUt(size * 7)
+            .addMaterialInfo(true)
 
         gt.inscription(`inscribe_${size}m`)
             .itemInputs(i > 0 ? `3x megacells:cell_component_${size / 4}m` : '3x ae2:cell_component_256k', `4x ${mDust}`, 'megacells:accumulation_processor', `#gtceu:circuits/${tiers[i + 5]}`)
-            .itemOutputs(`megacells:cell_component_${size}m`).duration(300).EUt(size * 7 * 1024)
+            .itemOutputs(`megacells:cell_component_${size}m`)
+            .duration(300)
+            .EUt(size * 7 * 1024)
+            .addMaterialInfo(true)
     }
 
     for (const size of ['2', '16', '128']) {
@@ -102,16 +108,19 @@ ServerEvents.recipes(event => {
     
     //#region cell housing
     for (const type of ['item', 'fluid']) {
-        event.shaped(`ae2:${type}_cell_housing`, ['ABA', 'B B', 'CCC'], {
+        gt.shaped(`ae2:${type}_cell_housing`, ['ABA', 'B B', 'CCC'], {
             A: 'ae2:quartz_glass',
             B: type == 'item' ? 'gtceu:iron_plate' : 'gtceu:copper_plate',
             C: 'astrogreg:futura_alloy_plate'
         })
-        event.shaped(`megacells:mega_${type}_cell_housing`, ['CBC', 'B B', 'AAA'], {
+        .addMaterialInfo()
+
+        gt.shaped(`megacells:mega_${type}_cell_housing`, ['CBC', 'B B', 'AAA'], {
             A: 'astrogreg:double_futura_alloy_plate',
             B: type == 'item' ? 'gtceu:certus_quartz_plate' : 'gtceu:gold_plate',
             C: 'ae2:quartz_vibrant_glass'
         })
+        .addMaterialInfo()
     }
     // #endregion
     
@@ -239,9 +248,25 @@ ServerEvents.recipes(event => {
 
 
     //#region glass & cables
-    gt.wiremill('mill_quartz_fiber').itemInputs('ae2:quartz_glass').itemOutputs('2x ae2:quartz_fiber').duration(80).EUt(28)
-    gt.wiremill('mill_fluix').itemInputs('ae2:fluix_crystal').itemOutputs('4x ae2:fluix_glass_cable').duration(160).EUt(28)
-    gt.chemical_bath('wash_glass_cables').itemInputs('#ae2:glass_cable').inputFluids('minecraft:water 144').itemOutputs('ae2:fluix_glass_cable').duration(40).EUt(20)
+    gt.wiremill('mill_quartz_fiber')
+        .itemInputs('ae2:quartz_glass')
+        .itemOutputs('2x ae2:quartz_fiber')
+        .duration(80)
+        .EUt(28)
+
+    gt.wiremill('mill_fluix')
+        .itemInputs('ae2:fluix_crystal')
+        .itemOutputs('4x ae2:fluix_glass_cable')
+        .duration(160)
+        .EUt(28)
+        .addMaterialInfo(true)
+    
+    gt.chemical_bath('wash_glass_cables')
+        .itemInputs('#ae2:glass_cable')
+        .inputFluids('minecraft:water 144')
+        .itemOutputs('ae2:fluix_glass_cable')
+        .duration(40)
+        .EUt(20)
     // #endregion
 
 
@@ -254,6 +279,7 @@ ServerEvents.recipes(event => {
         .circuit(1)
         .duration(80)
         .EUt(384)
+        .addMaterialInfo(true)
 
     gt.assembler('assemble_mega_cpu')
         .itemInputs('astrogreg:futura_alloy_frame', '2x ae2:crafting_unit', '2x ae2:logic_processor', 'megacells:accumulation_processor')
@@ -262,24 +288,94 @@ ServerEvents.recipes(event => {
         .circuit(1)
         .duration(80)
         .EUt(7680)
+        .addMaterialInfo(true)
     // #endregion 
 
 
 
     //#region devices & networking
-    event.shaped('ae2:drive', ['ABA', 'C C', 'ABA'], { A: 'astrogreg:futura_alloy_plate', B: 'ae2:engineering_processor', C: 'ae2:fluix_glass_cable' })
-    event.shaped('ae2:chest', ['EBE', 'DCD', 'AAA'], { A: 'astrogreg:futura_alloy_plate', B: 'ae2:terminal', C: '#forge:chests/wooden', D: 'ae2:fluix_glass_cable', E: 'ae2:quartz_glass' })
-    event.shaped('ae2:io_port', ['EEE', 'DCD', 'ABA'], { A: 'astrogreg:futura_alloy_plate', B: 'ae2:logic_processor', C: 'astrogreg:futura_alloy_frame', D: 'ae2:drive', E: 'ae2:quartz_glass' })
-    event.shaped('megacells:cell_dock', ['CBC', ' A '], { A: 'ae2:fluix_glass_cable', B: 'gtceu:copper_plate', C: 'astrogreg:futura_alloy_plate' })
-    event.shaped('ae2:spatial_io_port', ['EEE', 'DCD', 'ABA'], { A: 'astrogreg:futura_alloy_plate', B: 'ae2:engineering_processor', C: 'ae2:io_port', D: 'ae2:fluix_glass_cable', E: 'ae2:quartz_glass' })
-    event.shaped('ae2:spatial_anchor', ['CAC', 'ADA', 'CBC'], { A: 'ae2:spatial_pylon', B: 'ae2:spatial_cell_component_128', C: 'ae2:fluix_glass_cable', D: 'astrogreg:futura_alloy_frame' })
+    gt.shaped('ae2:drive', [
+        'ABA', 
+        'C C', 
+        'ABA'
+    ], { 
+        A: 'astrogreg:futura_alloy_plate', 
+        B: 'ae2:engineering_processor', 
+        C: 'ae2:fluix_glass_cable' 
+    })
+    .addMaterialInfo()
+
+    gt.shaped('ae2:chest', [
+        'EBE', 
+        'DCD', 
+        'AAA'
+    ], { 
+        A: 'astrogreg:futura_alloy_plate', 
+        B: 'ae2:terminal', 
+        C: '#forge:chests/wooden', 
+        D: 'ae2:fluix_glass_cable', 
+        E: 'ae2:quartz_glass' 
+    })
+    .addMaterialInfo()
+
+    gt.shaped('ae2:io_port', [
+        'EEE', 
+        'DCD', 
+        'ABA'
+    ], { 
+        A: 'astrogreg:futura_alloy_plate', 
+        B: 'ae2:logic_processor', 
+        C: 'astrogreg:futura_alloy_frame', 
+        D: 'ae2:drive', 
+        E: 'ae2:quartz_glass' 
+    })
+    .addMaterialInfo()
+
+    gt.shaped('megacells:cell_dock', [
+        'CBC', 
+        ' A '
+    ], { 
+        A: 'ae2:fluix_glass_cable', 
+        B: 'gtceu:copper_plate', 
+        C: 'astrogreg:futura_alloy_plate' 
+    })
+    .addMaterialInfo()
+
+    gt.shaped('ae2:spatial_io_port', [
+        'EEE', 
+        'DCD', 
+        'ABA'
+    ], { 
+        A: 'astrogreg:futura_alloy_plate', 
+        B: 'ae2:engineering_processor', 
+        C: 'ae2:io_port', 
+        D: 'ae2:fluix_glass_cable', 
+        E: 'ae2:quartz_glass'
+    })
+    .addMaterialInfo()
+
+    gt.shaped('ae2:spatial_anchor', [
+        'CAC', 
+        'ADA', 
+        'CBC'
+    ], { 
+        A: 'ae2:spatial_pylon', 
+        B: 'ae2:spatial_cell_component_128', 
+        C: 'ae2:fluix_glass_cable', 
+        D: 'astrogreg:futura_alloy_frame' 
+    })
+    .addMaterialInfo()
     // #endregion
 
 
 
     //#region crafting & automation
         for (const type of ['interface', 'pattern_provider']) {
-        event.shaped(`ae2:${type}`, ['ABA', 'D C', 'ABA'], {
+        event.shaped(`ae2:${type}`, [
+            'ABA', 
+            'D C', 
+            'ABA'
+        ], {
             A: 'astrogreg:futura_alloy_plate',
             B: type == 'interface' ? '#forge:glass' : 'minecraft:crafting_table',
             C: 'ae2:formation_core',
@@ -293,6 +389,7 @@ ServerEvents.recipes(event => {
         .itemOutputs('4x ae2:blank_pattern')
         .duration(300)
         .EUt(384)
+        .addMaterialInfo(true, true)
 
     event.shapeless('expatternprovider:oversize_interface', ['expatternprovider:ex_interface', 'ae2:logic_processor', 'ae2:logic_processor'])
     
@@ -320,17 +417,107 @@ ServerEvents.recipes(event => {
 
 
     //#region utilities
-    event.shaped('ae2:cell_workbench', ['DBD', 'ACA', 'AAA'], { A: 'astrogreg:futura_alloy_plate', B: 'ae2:calculation_processor', C: 'astrogreg:futura_alloy_frame', D: 'ae2:quartz_glass' })
-    event.shaped('ae2:condenser', ['ABA', 'BCB', 'ABA'], { A: 'astrogreg:dense_futura_alloy_plate', B: 'ae2:quartz_glass', C: 'ae2:fluix_dust' })
-    event.shaped('ae2:semi_dark_monitor', ['AAA', 'ABA', 'AAA'], { A: 'ae2:quartz_vibrant_glass', B: '#simplylight:any_lamp_on' })
+    event.shaped('ae2:cell_workbench', [
+        'DBD', 
+        'ACA', 
+        'AAA'
+    ], { 
+        A: 'astrogreg:futura_alloy_plate', 
+        B: 'ae2:calculation_processor', 
+        C: 'astrogreg:futura_alloy_frame', 
+        D: 'ae2:quartz_glass' 
+    })
 
-    event.shaped('ae2:me_p2p_tunnel', [' A ', 'ACA', 'BBB'], { A: 'astrogreg:futura_alloy_plate', B: 'ae2:fluix_crystal', C: 'ae2:engineering_processor' })
-    event.shaped('2x ae2:wireless_receiver', ['A C', 'AB ', 'BAA'], { A: 'astrogreg:futura_alloy_plate', B: 'ae2:quartz_fiber', C: 'ae2:fluix_pearl' })
-    event.shaped('ae2:charged_staff', ['  A', ' B ', 'B  '], { A: 'ae2:charged_certus_quartz_crystal', B: 'astrogreg:futura_alloy_rod' })
-    event.shaped('ae2:entropy_manipulator', [' CD', ' AB', 'A  '], { A: 'astrogreg:futura_alloy_rod', B: 'ae2:engineering_processor', C: 'ae2:energy_cell', D: 'ae2:fluix_crystal' })
-    event.shaped('expatternprovider:wireless_tool', [' A ', 'BCB', ' B '], { A: 'ae2:wireless_receiver', B: 'astrogreg:futura_alloy_plate', C: 'ae2:calculation_processor' })
-    event.shaped('ae2:memory_card', ['ABB', 'CCC'], { A: '#gtceu:circuits/ulv', B: 'astrogreg:futura_alloy_plate', C: 'gtceu:gold_bolt' })
-    event.shaped('ae2netanalyser:network_analyser', ['AEA', 'BCB', 'DBD'], { A: 'gtceu:fine_copper_wire', B: 'astrogreg:futura_alloy_plate', C: '#gtceu:circuits/ulv', D: 'gtceu:iron_screw', E: '#forge:tools/screwdrivers' })
+    event.shaped('ae2:condenser', [
+        'ABA', 
+        'BCB', 
+        'ABA'
+    ], { 
+        A: 'astrogreg:dense_futura_alloy_plate', 
+        B: 'ae2:quartz_glass', 
+        C: 'ae2:fluix_dust' 
+    })
+
+    event.shaped('ae2:semi_dark_monitor', [
+        'AAA', 
+        'ABA', 
+        'AAA'
+    ], { 
+        A: 'ae2:quartz_vibrant_glass', 
+        B: '#simplylight:any_lamp_on'
+    })
+
+    event.shaped('ae2:me_p2p_tunnel', [
+        ' A ', 
+        'ACA', 
+        'BBB'
+    ], { 
+        A: 'astrogreg:futura_alloy_plate', 
+        B: 'ae2:fluix_crystal', 
+        C: 'ae2:engineering_processor' 
+    })
+
+    event.shaped('2x ae2:wireless_receiver', [
+        'A C', 
+        'AB ', 
+        'BAA'
+    ], { 
+        A: 'astrogreg:futura_alloy_plate', 
+        B: 'ae2:quartz_fiber', 
+        C: 'ae2:fluix_pearl' 
+    })
+
+    event.shaped('ae2:charged_staff', [
+        '  A', 
+        ' B ', 
+        'B  '
+    ], { 
+        A: 'ae2:charged_certus_quartz_crystal', 
+        B: 'astrogreg:futura_alloy_rod' 
+    })
+    
+    event.shaped('ae2:entropy_manipulator', [
+        ' CD', 
+        ' AB', 
+        'A  '
+    ], { 
+        A: 'astrogreg:futura_alloy_rod', 
+        B: 'ae2:engineering_processor', 
+        C: 'ae2:energy_cell', 
+        D: 'ae2:fluix_crystal' 
+    })
+
+    event.shaped('expatternprovider:wireless_tool', [
+            ' A ', 
+            'BCB', 
+            ' B '
+    ], { 
+        A: 'ae2:wireless_receiver', 
+        B: 'astrogreg:futura_alloy_plate', 
+        C: 'ae2:calculation_processor' 
+    })
+
+    event.shaped('ae2:memory_card', [
+        'ABB', 
+        'CCC'
+    ], { 
+        A: '#gtceu:circuits/ulv',
+        B: 'astrogreg:futura_alloy_plate', 
+        C: 'gtceu:gold_bolt' 
+    })
+
+    event.shaped('ae2netanalyser:network_analyser', [
+        'AEA', 
+        'BCB', 
+        'DBD'
+    ], { 
+        A: 'gtceu:fine_copper_wire', 
+        B: 'astrogreg:futura_alloy_plate', 
+        C: '#gtceu:circuits/ulv',
+        D: 'gtceu:iron_screw', 
+        E: '#forge:tools/screwdrivers' 
+    })
+
     //#endregion
 
 

@@ -1,5 +1,8 @@
 ServerEvents.recipes(event => {
-    event.shaped('ad_astra:gravity_normalizer', [
+
+    const gt = event.recipes.gtceu
+
+    gt.shaped('ad_astra:gravity_normalizer', [
         ' C ',
         'ABA',
         'DED'
@@ -10,8 +13,9 @@ ServerEvents.recipes(event => {
         D: 'gtceu:mv_field_generator',
         E: 'gtceu:hv_machine_hull'
     })
+    .addMaterialInfo()
 
-    event.shaped('ad_astra:oxygen_distributor', [
+    gt.shaped('ad_astra:oxygen_distributor', [
         'CDC',
         'EAE',
         'CBC'
@@ -22,8 +26,9 @@ ServerEvents.recipes(event => {
         D: 'gtceu:tin_rotor',
         E: 'gtceu:fluid_filter'
     })
+    .addMaterialInfo()
 
-    event.shaped('gtceu:gravitation_engine_unit', [
+    gt.shaped('gtceu:gravitation_engine_unit', [
         'BDA',
         'DCD',
         'ADB'
@@ -33,6 +38,7 @@ ServerEvents.recipes(event => {
         C: '#gtceu:batteries/mv',
         D: 'gtceu:double_aluminium_plate'
     })
+    .addMaterialInfo()
 
     event.shaped('ad_astra:reinforced_door', [
         'ABA',
@@ -114,7 +120,7 @@ ServerEvents.recipes(event => {
         C: '#forge:tools/hammers'
     })
 
-    event.shaped('4x ad_astra:vent', [
+    gt.shaped('4x ad_astra:vent', [
         'ABA',
         'ACA',
         'ABA'
@@ -123,4 +129,35 @@ ServerEvents.recipes(event => {
         B: 'gtceu:steel_plate',
         C: '#forge:tools/hammers'
     })
+    .addMaterialInfo()
+
+    gt.shaped('ad_astra:etrionic_core', [
+        'ABA',
+        'CDC',
+        'ABA'
+    ], {
+        A: 'gtceu:iron_plate',
+        B: 'gtceu:silver_ring',
+        C: 'astrogreg:fine_etrium_wire',
+        D: 'gtceu:lead_spring'
+    })
+    .addMaterialInfo()
+
+    gt.shaped('3x ad_astra:photovoltaic_etrium_cell', [
+        'AAA',
+        'BBB',
+        'CCC'
+    ], {
+        A: 'gtceu:tempered_glass',
+        B: 'ad_astra:etrionic_core',
+        C: 'gtceu:double_silver_plate'
+    })
+
+    gt.assembler('photovoltaic_etrium_cell')
+        .itemInputs('gtceu:tempered_glass', 'ad_astra:etrionic_core', 'gtceu:double_silver_plate')
+        .itemOutputs('ad_astra:photovoltaic_etrium_cell')
+        .circuit(30)
+        .duration(100)
+        .EUt(28)
+        .addMaterialInfo(true)
 })
