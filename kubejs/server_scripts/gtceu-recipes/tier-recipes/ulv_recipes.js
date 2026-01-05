@@ -3,6 +3,18 @@ ServerEvents.recipes(event => {
   const gt = event.recipes.gtceu
 
     //#region misc
+    gt.shaped('gtceu:terminal', [
+      'ABA',
+      'CDC',
+      'CEC'
+    ], {
+      A: 'gtceu:silver_bolt',
+      B: '#forge:glass_panes',
+      C: 'gtceu:iron_plate',
+      D: '#gtceu:circuits/ulv',
+      E: 'gtceu:fine_red_alloy_wire'
+    })
+
     event.shaped('gtceu:rubber_plate', [
       'A',
       'B',
@@ -38,8 +50,8 @@ ServerEvents.recipes(event => {
     event.smelting('astrogreg:smooth_asteroid_stone', 'astrogreg:asteroid_stone')
     event.smelting('minecraft:glass', 'gtceu:glass_dust')
 
-
-     // event.shaped('4x create:pulp', [
+    // removed due to being too simple and unrealistic
+    // event.shaped('4x create:pulp', [
     // 'AAA',
     // 'ABA',
     // 'AAA'
