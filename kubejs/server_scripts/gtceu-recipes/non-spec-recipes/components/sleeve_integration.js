@@ -249,13 +249,13 @@ ServerEvents.recipes(event => {
         .itemInputs('4x gtceu:niobium_titanium_single_cable')
         .inputFluids('gtceu:soldering_alloy 1152')
         .inputFluids('gtceu:lubricant 1000')
-        .itemOutputs('gtceu:luv_rocket_engine')
+        .itemOutputs('astrogreg:luv_rocket_engine')
         .duration(1200)
         .EUt(6000)
         .addMaterialInfo(true)
         ["scannerResearch(java.util.function.UnaryOperator)"]
         (b => b
-            .researchStack("gtceu:iv_rocket_engine")
+            .researchStack("astrogreg:iv_rocket_engine")
             .duration(1800)
             .EUt(1920)
         )
@@ -279,13 +279,13 @@ ServerEvents.recipes(event => {
         .itemInputs('4x gtceu:vanadium_gallium_single_cable')
         .inputFluids('gtceu:soldering_alloy 2304')
         .inputFluids('gtceu:lubricant 2000')
-        .itemOutputs('gtceu:zpm_rocket_engine')
+        .itemOutputs('astrogreg:zpm_rocket_engine')
         .duration(1200)
         .EUt(24000)
         .addMaterialInfo(true)
         .stationResearch(
             researchRecipeBuilder => researchRecipeBuilder
-                .researchStack(Item.of(`gtceu:luv_rocket_engine `))
+                .researchStack(Item.of(`astrogreg:luv_rocket_engine `))
                 .dataStack('gtceu:data_orb')
                 .CWUt(8, 64000)
                 .EUt(30720)
@@ -311,13 +311,13 @@ ServerEvents.recipes(event => {
         .inputFluids('gtceu:soldering_alloy 4608')
         .inputFluids('gtceu:lubricant 4000')
         .inputFluids('gtceu:naquadria 1152')
-        .itemOutputs('gtceu:uv_rocket_engine')
+        .itemOutputs('astrogreg:uv_rocket_engine')
         .duration(1200)
         .EUt(96000)
         .addMaterialInfo(true)
         .stationResearch(
             researchRecipeBuilder => researchRecipeBuilder
-                .researchStack(Item.of(`gtceu:zpm_rocket_engine`))
+                .researchStack(Item.of(`astrogreg:zpm_rocket_engine`))
                 .dataStack('gtceu:data_module')
                 .CWUt(48, 256000)
                 .EUt(122880)

@@ -143,7 +143,7 @@ ServerEvents.recipes(event => {
     })
     .addMaterialInfo()
 
-    gt.shaped('3x ad_astra:photovoltaic_etrium_cell', [
+    gt.shaped('ad_astra:photovoltaic_etrium_cell', [
         'AAA',
         'BBB',
         'CCC'
@@ -154,7 +154,7 @@ ServerEvents.recipes(event => {
     })
 
     gt.assembler('photovoltaic_etrium_cell')
-        .itemInputs('gtceu:tempered_glass', 'ad_astra:etrionic_core', 'gtceu:double_silver_plate')
+        .itemInputs('3x gtceu:tempered_glass', '3x ad_astra:etrionic_core', '3x gtceu:double_silver_plate')
         .itemOutputs('ad_astra:photovoltaic_etrium_cell')
         .circuit(30)
         .duration(100)

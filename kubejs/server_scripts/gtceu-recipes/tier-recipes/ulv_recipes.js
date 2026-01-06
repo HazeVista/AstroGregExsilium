@@ -9,7 +9,7 @@ ServerEvents.recipes(event => {
       'CEC'
     ], {
       A: 'gtceu:silver_bolt',
-      B: '#forge:glass_panes',
+      B: '#c:glass_panes',
       C: 'gtceu:iron_plate',
       D: '#gtceu:circuits/ulv',
       E: 'gtceu:fine_red_alloy_wire'

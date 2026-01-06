@@ -137,7 +137,7 @@ ServerEvents.recipes(event => {
 
 
 
-    //#region etrium & blazing etrium
+    //#region etrium
 
     gt.mixer('mix_etrium_dust')
         .itemInputs('3x astrogreg:ostrum_dust', '2x gtceu:electrum_dust')

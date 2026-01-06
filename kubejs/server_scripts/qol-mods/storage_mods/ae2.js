@@ -438,15 +438,6 @@ ServerEvents.recipes(event => {
         C: 'ae2:fluix_dust' 
     })
 
-    event.shaped('ae2:semi_dark_monitor', [
-        'AAA', 
-        'ABA', 
-        'AAA'
-    ], { 
-        A: 'ae2:quartz_vibrant_glass', 
-        B: '#simplylight:any_lamp_on'
-    })
-
     event.shaped('ae2:me_p2p_tunnel', [
         ' A ', 
         'ACA', 
@@ -518,6 +509,12 @@ ServerEvents.recipes(event => {
         E: '#forge:tools/screwdrivers' 
     })
 
+    gt.assembler('semi_dark_monitor')
+        .itemInputs('gtceu:computer_monitor_cover')
+        .itemOutputs('ae2:semi_dark_monitor')
+        .circuit(2)
+        .duration(20)
+        .EUt(7)
     //#endregion
 
 

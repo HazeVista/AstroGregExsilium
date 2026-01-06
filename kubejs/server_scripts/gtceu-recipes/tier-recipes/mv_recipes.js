@@ -2,6 +2,28 @@ ServerEvents.recipes(event => {
 
     const gt = event.recipes.gtceu
 
+    //#region misc
+    gt.assembler('monitor_casing_tin')
+        .itemInputs('gtceu:mv_machine_hull', 'gtceu:computer_monitor_cover', 
+            '4x gtceu:glass_plate', 'gtceu:fine_red_alloy_wire')
+        .inputFluids('gtceu:tin 288')
+        .itemOutputs('2x gtceu:monitor')
+        .circuit(1)
+        .duration(1000)
+        .EUt(120)
+
+    gt.assembler('monitor_casing_soldering_alloy')
+        .itemInputs('gtceu:mv_machine_hull', 'gtceu:computer_monitor_cover', 
+            '4x gtceu:glass_plate', 'gtceu:fine_red_alloy_wire')
+        .inputFluids('gtceu:soldering_alloy 144')
+        .itemOutputs('2x gtceu:monitor')
+        .circuit(1)
+        .duration(1000)
+        .EUt(120)
+    //#endregion
+
+
+
     //#region data disk
     gt.circuit_assembler('assemble_data_disk_tin')
         .itemInputs('gtceu:plastic_printed_circuit_board', 'gtceu:cpu_chip', '2x gtceu:ram_chip',
