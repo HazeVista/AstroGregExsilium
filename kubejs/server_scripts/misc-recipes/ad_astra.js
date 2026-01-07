@@ -21,7 +21,7 @@ ServerEvents.recipes(event => {
         'CBC'
     ], {
         A: 'gtceu:lv_electric_motor',
-        B: 'gtceu:lv_machine_hull',
+        B: 'gtceu:ulv_machine_hull',
         C: 'gtceu:steel_plate',
         D: 'gtceu:tin_rotor',
         E: 'gtceu:fluid_filter'

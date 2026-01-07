@@ -64,30 +64,30 @@ ServerEvents.recipes(event => {
       'AAA',
       'BCB'
     ], {
-      A: 'farmersdelight:milk_bottle',
+      A: '#forge:milk',
       B: 'minecraft:sugar',
       C: 'createaddition:cake_base_baked'
-    }).replaceIngredient('farmersdelight:milk_bottle', 'minecraft:glass_bottle')
+    })
 
     event.shaped('createaddition:honey_cake', [
       '   ',
       'AAA',
       'BCB'
     ], {
-      A: 'farmersdelight:milk_bottle',
+      A: '#forge:milk',
       B: 'minecraft:honey_bottle',
       C: 'createaddition:cake_base_baked'
-    }).replaceIngredient('farmersdelight:milk_bottle', 'minecraft:glass_bottle').replaceIngredient('minecraft:honey_bottle', 'minecraft:glass_bottle')
+    })
 
     event.shaped('createaddition:chocolate_cake', [
       '   ',
       'AAA',
       'BCB'
     ], {
-      A: 'farmersdelight:milk_bottle',
+      A: '#forge:milk',
       B: 'create:bar_of_chocolate',
       C: 'createaddition:cake_base_baked'
-    }).replaceIngredient('farmersdelight:milk_bottle', 'minecraft:glass_bottle')
+    }).replaceIngredient('minecraft:honey_bottle', 'minecraft:glass_bottle')
 
     event.shaped('delightful:baklava', [
       ' A ',
