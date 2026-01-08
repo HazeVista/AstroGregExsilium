@@ -55,8 +55,8 @@ ServerEvents.recipes(event => {
     event.replaceInput({ output: 'megacells:bulk_cell_component'}, 'ae2:sky_dust', 'gtceu:netherite_dust')
     event.replaceInput({ output: 'megacells:bulk_item_cell'}, 'ae2:sky_dust', 'gtceu:dense_netherite_plate')
     event.replaceInput({ output: 'megacells:bulk_item_cell'}, 'minecraft:netherite_ingot', 'astrogreg:dense_futura_alloy_plate')
-    event.replaceInput({ id: 'gtceu:assembly_line/conveyor_module_luv'}, 'gtceu:hsss_plate', 'gtceu:hsss_sleeve')
-    event.replaceInput({ id: 'gtceu:assembly_line/electric_piston_luv'}, 'gtceu:hsss_rod', 'gtceu:hsss_sleeve')
+    event.replaceInput({ id: 'gtceu:assembly_line/conveyor_module_luv'}, 'gtceu:hsss_plate', 'gtceu:netherite_sleeve')
+    event.replaceInput({ id: 'gtceu:assembly_line/electric_piston_luv'}, 'gtceu:hsss_rod', 'gtceu:netherite_sleeve')
     event.replaceInput({ id: 'gtceu:assembly_line/conveyor_module_zpm'}, 'gtceu:osmiridium_plate', 'gtceu:duranium_sleeve')
     event.replaceInput({ id: 'gtceu:assembly_line/electric_piston_zpm'}, 'gtceu:osmiridium_rod', 'gtceu:duranium_sleeve')
     event.replaceInput({ id: 'gtceu:assembly_line/conveyor_module_uv'}, 'gtceu:tritanium_plate', 'gtceu:tritanium_sleeve')
@@ -66,6 +66,7 @@ ServerEvents.recipes(event => {
     event.replaceInput({ output: 'expandedae:exp_pattern_provider'}, 'ae2:cable_pattern_provider', 'expatternprovider:ex_pattern_provider')
     event.replaceInput({ id: 'expatternprovider:wireless_hub'}, 'ae2:quantum_link', '#gtceu:circuits/ev')
     event.replaceInput({ output: 'createaddition:spool'}, 'minecraft:iron_nugget', 'gtceu:iron_bolt')
+    event.replaceInput({}, 'gtceu:hsss_round', 'gtceu:netherite_round')
     // event.replaceInput({ input: ''}, '', '')
     //#endregion
     

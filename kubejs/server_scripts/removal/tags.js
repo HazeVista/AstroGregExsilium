@@ -174,10 +174,10 @@ ServerEvents.tags('item', event => {
     //machine components
     const componentTypes = [
         'electric_motor',
-        'electric_piston',
         'electric_pump',
-        'conveyor_module',
         'fluid_regulator',
+        'conveyor_module',
+        'electric_piston',
         'robot_arm',
         'field_generator',
         'emitter',

@@ -4,9 +4,12 @@ ServerEvents.recipes(event => {
         ['lv', 'steel', 'tin', 'tin', 'gtceu:quartzite_gem'],
         ['mv', 'aluminium', 'steel', 'copper', 'gtceu:exquisite_emerald_gem'],
         ['hv', 'stainless_steel', 'stainless_steel', 'gold', 'minecraft:ender_eye'],
-        ['ev', 'titanium', 'ultimet', 'aluminium', 'gtceu:quantum_eye'],
-        ['iv', 'tungsten_steel', 'tungsten_carbide', 'platinum', 'minecraft:nether_star']
     ]    
+
+    const assemblerStabilizers = [
+        ['ev', 'titanium', 'ultimet', 'kanthal', 'aluminium', 'gtceu:quantum_eye', 1500],
+        ['iv', 'tungsten_steel', 'tungsten_carbide', 'graphene', 'platinum', 'minecraft:nether_star', 6000]
+    ]
 
     const stationStabilizers = [
         ['zpm', 'naquadah_alloy', 'osmiridium', 'duranium' , '64x gtceu:fine_uranium_rhodium_dinaquadide_wire', '4x gtceu:vanadium_gallium_single_cable', 'gtceu:quantum_star', 'luv', 12, 56000, 'gtceu:data_stick',  24000, 7680, 1],
@@ -27,7 +30,6 @@ ServerEvents.recipes(event => {
             D: tip,
             E: `gtceu:${cable}_single_cable`
         })
-        .addMaterialInfo()
 
         event.recipes.gtceu.assembler(`${tier}_stabilizer`)
             .itemInputs(`4x gtceu:${basemetal}_plate`, `gtceu:${tier}_electric_motor`, `gtceu:${sleeve}_sleeve`, tip, `2x gtceu:${cable}_single_cable`)
@@ -39,13 +41,26 @@ ServerEvents.recipes(event => {
 
     })
 
+    assemblerStabilizers.forEach(([tier, basemetal, sleevemetal, wire, cable, tip, EU]) => {
+
+        event.recipes.gtceu.assembler(`${tier}_stabilizer`)
+            .itemInputs(`4x gtceu:${basemetal}_plate`, `2x gtceu:${tier}_electric_motor`, `2x gtceu:${sleevemetal}_sleeve`, tip, `64x gtceu:fine_${wire}_wire`, `2x gtceu:${cable}_single_cable`)
+            .inputFluids('gtceu:soldering_alloy 144')
+            .itemOutputs(`astrogreg:${tier}_stabilizer`)
+            .circuit(1)
+            .duration(200)
+            .EUt(EU)
+            .addMaterialInfo(true)
+
+    })
+
     event.recipes.gtceu.assembly_line('luv_stabilizer')
         .itemInputs('gtceu:hsss_frame')
         .itemInputs('4x gtceu:hsss_plate')
         .itemInputs('2x gtceu:luv_electric_motor')
         .itemInputs('gtceu:luv_sensor')
         .itemInputs('gtceu:luv_emitter')
-        .itemInputs('2x gtceu:hsss_sleeve')
+        .itemInputs('2x gtceu:netherite_sleeve')
         .itemInputs('64x gtceu:fine_indium_tin_barium_titanium_cuprate_wire')
         .itemInputs('64x gtceu:fine_indium_tin_barium_titanium_cuprate_wire')
         .itemInputs('4x gtceu:niobium_titanium_single_cable')

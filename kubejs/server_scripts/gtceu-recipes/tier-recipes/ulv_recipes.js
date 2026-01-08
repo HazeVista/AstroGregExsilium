@@ -12,8 +12,9 @@ ServerEvents.recipes(event => {
       B: '#c:glass_panes',
       C: 'gtceu:iron_plate',
       D: '#gtceu:circuits/ulv',
-      E: 'gtceu:fine_red_alloy_wire'
+      E: 'gtceu:fine_tin_wire'
     })
+    .addMaterialInfo()
 
     event.shaped('gtceu:rubber_plate', [
       'A',

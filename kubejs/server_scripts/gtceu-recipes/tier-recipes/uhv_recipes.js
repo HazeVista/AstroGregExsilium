@@ -250,17 +250,17 @@ ServerEvents.recipes(event => {
                 .CWUt(144, 256000)
                 .EUt(488000)
         ) 
-
+        
     event.remove({ id: 'gtceu:assembly_line/ultimate_battery' })
     event.remove({ id: 'gtceu:research_station/1x_gtceu_energy_cluster' })
 
     gt.assembly_line('gtceu:max_battery')
         .itemInputs('16x gtceu:double_darmstadtium_plate')
         .itemInputs('4x #gtceu:circuits/uhv')
-        .itemInputs('16x gtceu:energy_cluster')
         .itemInputs('64x gtceu:uhpic_wafer')
         .itemInputs('64x gtceu:uhpic_wafer')
         .itemInputs('2x gtceu:uhv_field_generator')
+        .itemInputs('16x gtceu:energy_cluster')
         .itemInputs('64x gtceu:advanced_smd_diode')
         .itemInputs('64x gtceu:advanced_smd_capacitor')
         .itemInputs('64x gtceu:advanced_smd_resistor')
