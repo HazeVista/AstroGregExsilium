@@ -311,7 +311,7 @@ machines:
 
   # Default maximum parallel of steam multiblocks
   # Default: 8
-  steamMultiParallelAmount: 16
+  steamMultiParallelAmount: 8
 
   # Whether the Drums can input fluids from the output side (bottom).
   allowDrumsInputFluidsFromOutputSide: false
@@ -346,7 +346,7 @@ machines:
   largeBoilers:
     # The conversion rate between water and steam in Large Boilers.
     # Default: 160
-    steamPerWater: 160
+    steamPerWater: 160  
 
     # The max temperature of the Large Bronze Boiler.
     # Default: 800

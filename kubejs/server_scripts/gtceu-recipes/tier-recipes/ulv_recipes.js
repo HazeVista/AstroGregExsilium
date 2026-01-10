@@ -145,6 +145,8 @@ ServerEvents.recipes(event => {
       .EUt(2)      
     //#endregion
 
+    
+
     //#region gt delight
     event.recipes.farmersdelight.cooking(
       ['gtceu:raw_rubber_dust', 'gtceu:raw_rubber_dust', 'gtceu:raw_rubber_dust', 'gtceu:sulfur_dust'],
@@ -194,6 +196,8 @@ ServerEvents.recipes(event => {
       C: 'gtceu:bronze_rod'
     })
     //#endregion
+
+
 
     //#region water source
     gt.water_source('pump_water')
@@ -372,7 +376,7 @@ ServerEvents.recipes(event => {
 
       
 
-    //#region clay, fireclay, coke
+    //#region clay & bricks
     event.recipes.botania.pure_daisy('minecraft:clay', '#minecraft:smelts_to_glass', 75)
 
     event.shaped(Item.of('8x gtceu:compressed_fireclay'), [

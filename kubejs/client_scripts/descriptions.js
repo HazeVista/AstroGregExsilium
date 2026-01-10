@@ -231,6 +231,9 @@ ItemEvents.tooltip(event => {
         ['alfsteel_mana_large_boiler'], 
         ['terrasteel_mana_large_boiler'], 
         ['manasteel_mana_large_boiler'], 
+        ['industrial_coke_oven'],
+        ['steam_blast_furnace'],
+        ['solar_boiler_array']
     ] 
 
     ageControllers.forEach(([name, tooltip]) => { 
