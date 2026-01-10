@@ -2,13 +2,15 @@ ServerEvents.recipes(event => {
 
 const burn = event.recipes.gtceu.mana_boiler
 
+    // event.recipes.gtceu.chemical_reactor('aetherize_wither_rose')
+
     burn('boil_mana')
         .inputFluids(Fluid.of('manafluid:mana', 1))
         .duration(100)
         
-    burn('boil_lotus')
-        .itemInputs('botania:black_lotus')
-        .duration(8000)
+    // burn('boil_lotus')
+    //     .itemInputs('botania:black_lotus')
+    //     .duration(8000)
                 
     // burn('boil_blacker_lotus')
     //     .itemInputs('botania:blacker_lotus')

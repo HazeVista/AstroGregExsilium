@@ -4,7 +4,7 @@ ServerEvents.recipes(event => {
         'minecraft:netherite_upgrade_smithing_template', 'ad_astra:fan', 'ad_astra:steel_ingot', 'ad_astra:ice_shard', 'gtceu:gaiasteel_ingot', 'create:creative_blaze_cake',
         'create:blaze_cake_base', 'createaddition:cake_base_baked', 'create:blaze_cake', 'create:dough', 'astrogreg:small_sky_stone_dust', 'astrogreg:tiny_sky_stone_dust', 
         'expandedae:dual_cell_housing', 'expandedae:mega_dual_cell_housing', '#create:pulpifiable','astrogreg:flawless_fluix_pearl_gem', 'astrogreg:exquisite_fluix_pearl_gem',
-        'delightful:animal_oil_bottle'
+        'delightful:animal_oil_bottle', 'minecraft:pitcher_pod', 'minecraft:pitcher_plant', 'minecraft:torchflower', 'minecraft:torchflower_seeds'
     ])
     //#endregion
 
@@ -55,7 +55,8 @@ ServerEvents.recipes(event => {
         'gtceu:uhv_bender', 'gtceu:uhv_alloy_smelter', 'gtceu:uhv_arc_furnace', 'gtceu:uhv_assembler', 'gtceu:uhv_autoclave', 'gtceu:uhv_item_passthrough_hatch', 'gtceu:uhv_canner', 
         'gtceu:uhv_fluid_passthrough_hatch', 'gtceu:uhv_machine_hull', 'gtceu:uhv_muffler_hatch', 'minecraft:spyglass', 'botania:mana_fluxfield', 'gtceu:terminal', 'gtceu:ev_electric_pump',
         'gtceu:iv_electric_pump', 'gtceu:ev_electric_piston', 'gtceu:iv_electric_piston', 'gtceu:ev_emitter', 'gtceu:iv_emitter', 'gtceu:ev_sensor', 'gtceu:iv_sensor', 'gtceu:ev_field_generator',
-        'gtceu:iv_field_generator', 'gtceu:ev_robot_arm', 'gtceu:iv_robot_arm', 'gtceu:ev_conveyor_module', 'gtceu:iv_conveyor_module'
+        'gtceu:iv_field_generator', 'gtceu:ev_robot_arm', 'gtceu:iv_robot_arm', 'gtceu:ev_conveyor_module', 'gtceu:iv_conveyor_module', 'botania:vial', 'botania:flask', 'minecraft:pitcher_pod', 
+        'minecraft:pitcher_plant', 'minecraft:torchflower', 'minecraft:torchflower_seeds'
     ])
     //#endregion
 

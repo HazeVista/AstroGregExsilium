@@ -55,7 +55,9 @@ ServerEvents.tags('item', event => {
         'delightful:aged_fish_roe', 'delightful:aged_prawn_roe',
         'delightful:cactus_soup_cup', 'delightful:chunkwich',
         'delightful:crab_rangoon', 'delightful:venison_stew_cup',
-        'delightful:sinigang_cup'
+        'delightful:sinigang_cup', 'minecraft:pitcher_pod', 
+        'minecraft:pitcher_plant', 'minecraft:torchflower', 
+        'minecraft:torchflower_seeds'
     ]
 
         //wildcard removals

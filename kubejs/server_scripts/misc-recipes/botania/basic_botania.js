@@ -887,4 +887,21 @@ ServerEvents.recipes(event => {
         .circuit(1)
         .addMaterialInfo(true)
     //#endregion
+
+
+
+    //#region bottles
+    event.shaped('botania:vial', [
+        'A A',
+        ' A '
+    ], {
+        A: 'botania:managlass_pane'
+    })
+    
+    event.shaped('botania:flask', [
+        'A A',
+        ' A '
+    ], {
+        A: 'botania:alfglass_pane'
+    })
 })

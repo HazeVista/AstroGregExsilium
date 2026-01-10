@@ -85,7 +85,7 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
     //#endregion
 
 
-    
+            
     //#region convervatory
     event.create('conservatory', 'multiblock')
     .recipeTypes([
@@ -128,7 +128,7 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
         .modelProperty(GTModelProperties.RECIPE_LOGIC_STATUS, RecipeLogic.Status.IDLE)
     .model(GTMachineModels
         .createWorkableCasingMachineModel(
-            GTCEu.id("gtceu:block/casings/solid/machine_casing_solid_steel"),
+            GTCEu.id("gtceu:block/casings/solid/machine_casing_robust_tungstensteel"),
             GTCEu.id("gtceu:block/multiblock/primitive_pump"))
             ["andThen(java.util.function.Consumer)"](b => b.addDynamicRenderer(()=> GTDynamicRenders.makeGrowingPlantRender(List.of(
                 new Vector3f(-1, 0.938, -1),
@@ -163,9 +163,6 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
                 new Vector3f(2, 0.938, -7),
                 new Vector3f(2, 0.938, -8),
                 new Vector3f(2, 0.938, -9)
-            ))))).workableCasingModel(
-            "gtceu:block/casings/solid/machine_casing_robust_tungstensteel",
-            "gtceu:block/multiblock/primitive_pump"
-        )
-    })
+            )))))
+})
 
