@@ -1,13 +1,3 @@
-GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
-    event.create('rune_inscription')
-        .category('simple')
-        .setEUIO('in')
-        .setMaxIOSize(9, 1, 3, 0)
-        .setProgressBar(AstroGUITextures.PROGRESS_BAR_RUNE, FillDirection.LEFT_TO_RIGHT)
-        .setSound(AstroSoundEntries.RUNE_ENGRAVER)
-        // .setIconSupplier(()=> Item.get('botania:gregorious_rune'))  //need to do this in java, removes all custom recipes otherwise
-})
-
 GTCEuStartupEvents.registry('gtceu:machine', event => {
     event.create('runic_engraver', 'multiblock')
         .rotationState(RotationState.NON_Y_AXIS)
