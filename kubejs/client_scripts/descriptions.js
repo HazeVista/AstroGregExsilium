@@ -50,7 +50,8 @@ ItemEvents.tooltip(event => {
 
     multiTooltip(event, 'gtceu:conservatory', [
         { text: '§o§7Electric Plantation!' },
-        { text: 'Can parallelize with Parallel Control Hatches' }
+        { text: 'Can parallelize with Parallel Control Hatches' },
+        { text: 'Available Recipe Types: Greenhouse Trees, Greenhouse Crops, Greenhouse Flowers' }
     ])
 
     multiTooltip(event, 'gtceu:aether_engine', [

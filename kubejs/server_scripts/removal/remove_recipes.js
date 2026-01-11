@@ -30,7 +30,7 @@ ServerEvents.recipes(event => {
         'gtceu:solar_panel', 'create:red_sand_paper', 'botania:mana_powder', 'botania:monocle', 'botania:mana_glass_pane', 'botania:bifrost_pane', 'botania:red_string', 'botania:turntable',
         'botania:elf_glass_pane', 'botania:auto_crafting_halo', 'botania:thunder_sword', 'botania:gaia_ingot', 'botania:bifrost_perm', 'botania:starfield', 'dustrial_decor:cardboard_boots',
         'botania:elementium_shears', 'dustrial_decor:cardboard_leggings', 'botania:terrasteel_helmet', 'botania:open_bucket', 'botania:elementium_pickaxe', 'botania:elementium_shovel', 
-        'botania:elementium_hoe', 'botania:elementium_axe', 'botania:gaia_spreader', 'ad_astra:steel_tank', 'ae2:quantum_entangled_singularity',
+        'botania:elementium_hoe', 'botania:elementium_axe', 'botania:gaia_spreader', 'ad_astra:steel_tank', 'ae2:quantum_entangled_singularity', 'minecraft:torchflower', 'minecraft:torchflower_seeds',
         'botania:elementium_sword', 'botania:ender_dagger', 'botania:manasteel_pick', 'botania:manasteel_shovel', 'botania:manasteel_hoe', 'botania:manasteel_axe', 'botania:manasteel_sword',
         'botania:crafting_halo', 'botania:laputa_shard', 'gtceu:ulv_solar_panel', 'dustrial_decor:cardboard_helmet', 'dustrial_decor:cardboard_chestplate', 'botania:terrasteel_chestplate',
         'botania:terrasteel_leggings', 'botania:terrasteel_boots', 'botania:terra_sword', 'botania:terra_axe', 'botania:terra_pick', 'botania:third_eye', 'botania:orechid_ignem',
@@ -56,7 +56,7 @@ ServerEvents.recipes(event => {
         'gtceu:uhv_fluid_passthrough_hatch', 'gtceu:uhv_machine_hull', 'gtceu:uhv_muffler_hatch', 'minecraft:spyglass', 'botania:mana_fluxfield', 'gtceu:terminal', 'gtceu:ev_electric_pump',
         'gtceu:iv_electric_pump', 'gtceu:ev_electric_piston', 'gtceu:iv_electric_piston', 'gtceu:ev_emitter', 'gtceu:iv_emitter', 'gtceu:ev_sensor', 'gtceu:iv_sensor', 'gtceu:ev_field_generator',
         'gtceu:iv_field_generator', 'gtceu:ev_robot_arm', 'gtceu:iv_robot_arm', 'gtceu:ev_conveyor_module', 'gtceu:iv_conveyor_module', 'botania:vial', 'botania:flask', 'minecraft:pitcher_pod', 
-        'minecraft:pitcher_plant', 'minecraft:torchflower', 'minecraft:torchflower_seeds'
+        'minecraft:pitcher_plant', 'gtceuterminal:multi_strucure_manager', 'gtceuterminal:schematic_interface'
     ])
     //#endregion
 

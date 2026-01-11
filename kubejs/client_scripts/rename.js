@@ -85,6 +85,11 @@ ClientEvents.lang('en_us', event => {
         ['uv_parallel_hatch', '§3Ultimate Parallel Control Hatch']
     ])
 
+    renameItems('gtceuterminal', [
+        ['multi_structure_manager', '§cAstroTek§r§e Multiblock Manager'],
+        ['schematic_interface', '§cAstroTek§r§d Schematic Interface']
+    ])
+
     const tiers = [
         ['lv', '§7LV§r'],
         ['mv', '§bMV§r'],

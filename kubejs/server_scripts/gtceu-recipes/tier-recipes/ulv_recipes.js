@@ -3,19 +3,6 @@ ServerEvents.recipes(event => {
   const gt = event.recipes.gtceu
 
     //#region misc
-    gt.shaped('gtceu:terminal', [
-      'ABA',
-      'CDC',
-      'CEC'
-    ], {
-      A: 'gtceu:silver_bolt',
-      B: '#c:glass_panes',
-      C: 'gtceu:iron_plate',
-      D: '#gtceu:circuits/ulv',
-      E: 'gtceu:fine_tin_wire'
-    })
-    .addMaterialInfo()
-
     event.shaped('gtceu:rubber_plate', [
       'A',
       'B',
