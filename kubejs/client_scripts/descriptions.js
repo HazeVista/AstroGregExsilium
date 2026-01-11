@@ -50,7 +50,8 @@ ItemEvents.tooltip(event => {
 
     multiTooltip(event, 'gtceu:conservatory', [
         { text: '§o§7Electric Plantation!' },
-        { text: 'Can parallelize with Parallel Control Hatches' }
+        { text: 'Can parallelize with Parallel Control Hatches' },
+        { text: 'Available Recipe Types: Greenhouse Trees, Greenhouse Crops, Greenhouse Flowers' }
     ])
 
     multiTooltip(event, 'gtceu:aether_engine', [
@@ -231,6 +232,9 @@ ItemEvents.tooltip(event => {
         ['alfsteel_mana_large_boiler'], 
         ['terrasteel_mana_large_boiler'], 
         ['manasteel_mana_large_boiler'], 
+        ['industrial_coke_oven'],
+        ['steam_blast_furnace'],
+        ['solar_boiler_array']
     ] 
 
     ageControllers.forEach(([name, tooltip]) => { 
@@ -294,6 +298,24 @@ ItemEvents.tooltip(event => {
 
         tipTooltip(event, `gtceu:${mold}_casting_mold`, [
             {text: `§o§7Mold for making ${name}`}
+        ])
+    })
+
+    const superconductors = [
+        ['powah:steel_energized', 'LV'],
+        ['astrogreg:blazing_etrium_ingot', 'MV'],
+        ['astrogreg:niotic_calorite_ingot', 'HV'],
+        ['astrogreg:spirited_uranium_ingot', 'EV'],
+        ['astrogreg:nitro_flux_ingot', 'IV'],
+        ['astrogreg:juperiosaturlytide_ingot', 'LuV'],
+        ['astrogreg:gaiaforged_naquadah_ingot', 'ZPM'],
+        ['astrogreg:neptunium_molybdenum_selenide_ingot', 'UV'],
+        ['astrogreg:electrolyte_ingot', 'UHV']
+    ]
+
+    superconductors.forEach(([id, tier]) => {
+        tipTooltip(event, id, [
+            {text: `${tier}§d Superconductor`}
         ])
     })
     //#endregion

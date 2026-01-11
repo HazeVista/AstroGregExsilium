@@ -46,7 +46,18 @@ ServerEvents.tags('item', event => {
         'ad_extendra:saturlyte_plate', 'delightful:source_berry_cookie',
         'astrogreg:small_sky_stone_dust', 'astrogreg:tiny_sky_stone_dust',
         'expandedae:dual_cell_housing', 'expandedae:mega_dual_cell_housing',
-        'expatternprovider:silicon_block'
+        'expatternprovider:silicon_block', 'create:experience_nugget',
+        'ad_extendra:radium_nugget', 'minecraft:suspicious_stew',
+        'createaddition:seed_oil_bucket', 'delightful:animal_oil_bottle',
+        'delightful:long_prickly_pear_juice', 'delightful:prickly_pear_juice',
+        'delightful:azalea_tea', 'delightful:lavender_tea',
+        'delightful:venison_stew', 'delightful:coconut_curry',
+        'delightful:aged_fish_roe', 'delightful:aged_prawn_roe',
+        'delightful:cactus_soup_cup', 'delightful:chunkwich',
+        'delightful:crab_rangoon', 'delightful:venison_stew_cup',
+        'delightful:sinigang_cup', 'minecraft:pitcher_pod', 
+        'minecraft:pitcher_plant', 'minecraft:torchflower', 
+        'minecraft:torchflower_seeds'
     ]
 
         //wildcard removals
@@ -153,9 +164,38 @@ ServerEvents.tags('item', event => {
     }
     //#endregion
 
+    
+
     //modular circuits
-    const tiers = ['ulv', 'lv', 'mv', 'hv', 'ev', 'iv', 'luv', 'zpm', 'uv', 'uhv'];
-    tiers.forEach(tier => {event.add(`gtceu:circuits/${tier}`, `astrogreg:${tier}_modular_circuit`)})
+    const tiers = ['ulv', 'lv', 'mv', 'hv', 'ev', 'iv', 'luv', 'zpm', 'uv', 'uhv']
+
+    tiers.forEach(tier => {
+        event.add(`gtceu:circuits/${tier}`, `astrogreg:${tier}_modular_circuit`)
+    })
+
+    //machine components
+    const componentTypes = [
+        'electric_motor',
+        'electric_pump',
+        'fluid_regulator',
+        'conveyor_module',
+        'electric_piston',
+        'robot_arm',
+        'field_generator',
+        'emitter',
+        'sensor'
+    ]
+
+    tiers.forEach(tier => {
+        componentTypes.forEach(type => {
+            event.add(`gtceu:components/${tier}`, `gtceu:${tier}_${type}`)
+            event.add(`gtceu:components/${type}`, `gtceu:${tier}_${type}`)
+        })
+        
+        event.add(`gtceu:components/${tier}`, `astrogreg:${tier}_stabilizer`)
+        event.add(`gtceu:components/stabilizer`, `astrogreg:${tier}_stabilizer`)
+    })
+    
 
     //helpers
     itemsToStrip.forEach(item => event.removeAllTagsFrom(item))

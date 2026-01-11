@@ -866,4 +866,42 @@ ServerEvents.recipes(event => {
 
     //#endregion
 
+
+
+    //#region mana fluxfield
+    gt.assembler('mana_fluxfield_tin')
+        .itemInputs('astrogreg:livingbricks', '2x astrogreg:manasteel_gear', '2x astrogreg:lv_stabilizer', 'botania:energy_rune')
+        .inputFluids('gtceu:tin 288')
+        .itemOutputs('botania:mana_fluxfield')
+        .duration(300)
+        .EUt(30)
+        .circuit(1)
+        .addMaterialInfo(true)
+        
+    gt.assembler('mana_fluxfield_soldering_alloy')
+        .itemInputs('astrogreg:livingbricks', '2x astrogreg:manasteel_gear', '2x astrogreg:lv_stabilizer', 'botania:energy_rune')
+        .inputFluids('gtceu:soldering_alloy 144')
+        .itemOutputs('botania:mana_fluxfield')
+        .duration(300)
+        .EUt(30)
+        .circuit(1)
+        .addMaterialInfo(true)
+    //#endregion
+
+
+
+    //#region bottles
+    event.shaped('botania:vial', [
+        'A A',
+        ' A '
+    ], {
+        A: 'botania:managlass_pane'
+    })
+    
+    event.shaped('botania:flask', [
+        'A A',
+        ' A '
+    ], {
+        A: 'botania:alfglass_pane'
+    })
 })

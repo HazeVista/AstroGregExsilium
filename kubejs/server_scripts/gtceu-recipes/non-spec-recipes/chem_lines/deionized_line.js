@@ -10,7 +10,7 @@ ServerEvents.recipes(event => {
         .EUt(7)
 
     gt.assembler('assemble_empty_cartridge')
-        .itemInputs('gtceu:tungsten_steel_fluid_cell', '6x gtceu:polyvinyl_butyral_plate', 'gtceu:fluid_filter')
+        .itemInputs('gtceu:tungsten_steel_fluid_cell', '6x gtceu:polyvinyl_butyral_plate', 'gtceu:ev_electric_pump')
         .itemOutputs('astrogreg:empty_filter_cartridge')
         .duration(300)
         .EUt(1920)
@@ -83,4 +83,31 @@ ServerEvents.recipes(event => {
         .EUt(480)
     //#endregion
 
+
+
+    //#region water integration
+    gt.electrolyzer('deionized_water')
+        .inputFluids('astrogreg:deionized_water')
+        .outputFluids('gtceu:hydrogen 2000')
+        .outputFluids('gtceu:oxygen')
+        .cleanroom(CleanroomType.STERILE_CLEANROOM)
+        .duration(1500)
+        .EUt(30)
+
+    gt.brewery('bacteria_from_deionized')
+        .inputFluids('astrogreg:deionized_water')
+        .itemInputs('4x gtceu:bio_chaff')
+        .outputFluids('gtceu:bacteria')
+        .cleanroom(CleanroomType.STERILE_CLEANROOM)
+        .duration(300)
+        .EUt(480)
+
+    gt.autoclave('agar_from_deionized')
+        .inputFluids('astrogreg:deionized_water')
+        .itemInputs('gtceu:gelatin_dust')
+        .itemOutputs('gtceu:agar_dust')
+        .cleanroom(CleanroomType.STERILE_CLEANROOM)
+        .duration(600)
+        .EUt(480)
+    //#endregion
 })

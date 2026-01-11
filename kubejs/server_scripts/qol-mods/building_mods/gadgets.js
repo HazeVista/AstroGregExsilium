@@ -1,68 +1,76 @@
 ServerEvents.recipes(event => {
+
+    const gt = event.recipes.gtceu
     
-event.shaped( 'buildinggadgets2:gadget_exchanging', [
-    'CBC',
-    'ABA',
-    'CDC'
-], {
-    A: 'gtceu:ruby_dust',
-    B: 'gtceu:fine_red_alloy_wire',
-    C: 'gtceu:iron_plate',
-    D: 'gtceu:magnetic_iron_rod'
-})
+    gt.shaped( 'buildinggadgets2:gadget_exchanging', [
+        'CBC',
+        'ABA',
+        'CDC'
+    ], {
+        A: 'gtceu:ruby_dust',
+        B: 'gtceu:fine_red_alloy_wire',
+        C: 'gtceu:iron_plate',
+        D: 'gtceu:magnetic_iron_rod'
+    })
+    .addMaterialInfo()
 
-event.shaped( 'buildinggadgets2:gadget_destruction', [
-    'CBC',
-    'ABA',
-    'CDC'
-], {
-    A: 'gtceu:ender_pearl_dust',
-    B: 'gtceu:fine_red_alloy_wire',
-    C: 'gtceu:iron_plate',
-    D: 'gtceu:magnetic_iron_rod'
-})
+    gt.shaped( 'buildinggadgets2:gadget_destruction', [
+        'CBC',
+        'ABA',
+        'CDC'
+    ], {
+        A: 'gtceu:ender_pearl_dust',
+        B: 'gtceu:fine_red_alloy_wire',
+        C: 'gtceu:iron_plate',
+        D: 'gtceu:magnetic_iron_rod'
+    })
+    .addMaterialInfo()
 
-event.shaped( 'buildinggadgets2:gadget_building', [
-    'CBC',
-    'ABA',
-    'CDC'
-], {
-    A: 'gtceu:diamond_dust',
-    B: 'gtceu:fine_red_alloy_wire',
-    C: 'gtceu:iron_plate',
-    D: 'gtceu:magnetic_iron_rod'
-})
+    gt.shaped( 'buildinggadgets2:gadget_building', [
+        'CBC',
+        'ABA',
+        'CDC'
+    ], {
+        A: 'gtceu:diamond_dust',
+        B: 'gtceu:fine_red_alloy_wire',
+        C: 'gtceu:iron_plate',
+        D: 'gtceu:magnetic_iron_rod'
+    })
+    .addMaterialInfo()
 
-event.shaped( 'buildinggadgets2:gadget_copy_paste', [
-    'CBC',
-    'ABA',
-    'CDC'
-], {
-    A: 'gtceu:emerald_dust',
-    B: 'gtceu:fine_red_alloy_wire',
-    C: 'gtceu:iron_plate',
-    D: 'gtceu:magnetic_iron_rod'
-})
+    gt.shaped( 'buildinggadgets2:gadget_copy_paste', [
+        'CBC',
+        'ABA',
+        'CDC'
+    ], {
+        A: 'gtceu:emerald_dust',
+        B: 'gtceu:fine_red_alloy_wire',
+        C: 'gtceu:iron_plate',
+        D: 'gtceu:magnetic_iron_rod'
+    })
+    .addMaterialInfo()
 
-event.shaped( 'buildinggadgets2:gadget_cut_paste', [
-    'CBC',
-    'ABA',
-    'CDC'
-], {
-    A: 'gtceu:sapphire_dust',
-    B: 'gtceu:fine_red_alloy_wire',
-    C: 'gtceu:iron_plate',
-    D: 'gtceu:magnetic_iron_rod'
-})
+    gt.shaped( 'buildinggadgets2:gadget_cut_paste', [
+        'CBC',
+        'ABA',
+        'CDC'
+    ], {
+        A: 'gtceu:sapphire_dust',
+        B: 'gtceu:fine_red_alloy_wire',
+        C: 'gtceu:iron_plate',
+        D: 'gtceu:magnetic_iron_rod'
+    })
+    .addMaterialInfo()
 
-event.shaped('buildinggadgets2:template_manager', [
-    'AAA',
-    'BCB',
-    'AAA'
-], {
-    A: 'gtceu:iron_plate',
-    B: 'minecraft:paper',
-    C: 'gtceu:fine_red_alloy_wire'
-})
+    gt.shaped('buildinggadgets2:template_manager', [
+        'AAA',
+        'BCB',
+        'AAA'
+    ], {
+        A: 'gtceu:iron_plate',
+        B: 'minecraft:paper',
+        C: 'gtceu:fine_red_alloy_wire'
+    })
+    .addMaterialInfo()
 
 })

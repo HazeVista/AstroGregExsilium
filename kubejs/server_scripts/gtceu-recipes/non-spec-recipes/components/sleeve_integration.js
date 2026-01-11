@@ -40,13 +40,14 @@ ServerEvents.recipes(event => {
         ['stainless_steel', 110],
         ['ultimet', 122],
         ['tungsten_carbide', 194],
-        ['hsss', 258],
+        ['netherite', 196],
         ['duranium', 300],
         ['tritanium', 594],
         ['neutronium', 2000]
     ]
 
     sleeveTypes.forEach(([material, mass]) => {
+
         event.recipes.gtceu.fluid_solidifier(`${material}_sleeve`)
             .notConsumable('gtceu:sleeve_casting_mold')
             .inputFluids(`gtceu:${material} 288`)
@@ -54,12 +55,15 @@ ServerEvents.recipes(event => {
             .duration(mass * 3 / 2)
             .EUt(42)
 
+        const ingotMaterial = material === 'netherite' ? 'minecraft:netherite_ingot' : `gtceu:${material}_ingot`;
+    
         event.recipes.gtceu.extruder(`${material}_sleeve`)
             .notConsumable('gtceu:sleeve_extruder_mold')
-            .itemInputs(`2x gtceu:${material}_ingot`)
+            .itemInputs(`2x ${ingotMaterial}`)
             .itemOutputs(`gtceu:${material}_sleeve`)
             .duration(mass * 3 / 2)
             .EUt(42)
+
     })
     //#endregion
 
@@ -102,9 +106,7 @@ ServerEvents.recipes(event => {
         ['tin_single', 'copper_single', 'iron', 'iron', 'tin', 'lv'],
         ['tin_single', 'copper_single', 'steel', 'steel', 'tin', 'lv'],
         ['copper_single', 'cupronickel_double', 'aluminium', 'steel', 'steel', 'mv'],
-        ['silver_double', 'electrum_double', 'stainless_steel', 'steel', 'stainless_steel', 'hv'],
-        ['aluminium_double', 'kanthal_double', 'titanium', 'neodymium', 'ultimet', 'ev'],
-        ['tungsten_double', 'graphene_double', 'tungsten_steel', 'neodymium', 'tungsten_carbide', 'iv'],
+        ['silver_double', 'electrum_double', 'stainless_steel', 'steel', 'stainless_steel', 'hv']
     ]
 
     motorParts.forEach(([cable, wire, rod, magrod, sleeve, tier]) => {
@@ -124,14 +126,30 @@ ServerEvents.recipes(event => {
         .id(`${tier}_motor_from_${rod}_rod`)
         
         event.recipes.gtceu.assembler(`${tier}_motor_from_${rod}_rod`)
-            .itemInputs(`2x gtceu:${cable}_cable`, `gtceu:${rod}_rod`, `gtceu:magnetic_${magrod}_rod`, `gtceu:${sleeve}_sleeve`, `4x gtceu:${wire}_wire`)
+            .itemInputs(`gtceu:${rod}_rod`, `gtceu:magnetic_${magrod}_rod`, `gtceu:${sleeve}_sleeve`, `2x gtceu:${cable}_cable`, `4x gtceu:${wire}_wire`)
             .itemOutputs(`gtceu:${tier}_electric_motor`)
             .duration(100)
             .EUt(30)
             .addMaterialInfo(true)
     })
 
-    // need to fix these theyre a bit whack rn
+    const assemblerMotors = [
+        ['aluminium_double', 'kanthal', 'titanium', 'neodymium', 'ultimet', 'ev', 1500],
+        ['tungsten_double', 'graphene', 'tungsten_steel', 'neodymium', 'tungsten_carbide', 'iv', 6000]
+    ]
+
+    assemblerMotors.forEach(([cable, wire, rod, magrod, sleevemetal, tier, EU]) => {
+
+        event.recipes.gtceu.assembler(`${tier}_motor`)
+            .itemInputs(`gtceu:magnetic_${magrod}_rod`, `gtceu:${rod}_rod`, `gtceu:${sleevemetal}_sleeve`, 
+                `4x gtceu:${sleevemetal}_round`, `32x gtceu:fine_${wire}_wire`, `2x gtceu:${cable}_cable`)
+            .inputFluids('gtceu:soldering_alloy 144')
+            .itemOutputs(`gtceu:${tier}_electric_motor`)
+            .duration(100)
+            .EUt(EU)
+
+    })
+
     event.remove({ id: "gtceu:assembly_line/electric_motor_luv" })
     event.remove({ id: "gtceu:assembly_line/electric_motor_zpm" })
     event.remove({ id: "gtceu:assembly_line/electric_motor_uv" })
@@ -140,8 +158,8 @@ ServerEvents.recipes(event => {
     event.remove({ id: "gtceu:research_station/1x_gtceu_luv_electric_motor" })
 
     event.recipes.gtceu.assembly_line(`luv_electric_motor`)
-        .itemInputs('gtceu:long_magnetic_samarium_rod', '2x gtceu:long_hsss_rod', '2x gtceu:hsss_sleeve', 
-            '2x gtceu:hsss_ring', '4x gtceu:hsss_round', '64x gtceu:fine_ruridit_wire', '2x gtceu:niobium_titanium_single_cable')
+        .itemInputs('gtceu:long_magnetic_samarium_rod', '2x gtceu:long_hsss_rod', '2x gtceu:netherite_sleeve', 
+            '2x gtceu:hsss_ring', '4x gtceu:netherite_round', '64x gtceu:fine_ruridit_wire', '2x gtceu:niobium_titanium_single_cable')
         .inputFluids('gtceu:soldering_alloy 144', 'gtceu:lubricant 250')
         .itemOutputs(`gtceu:luv_electric_motor`)               
         .duration(600)
@@ -167,7 +185,7 @@ ServerEvents.recipes(event => {
         .itemOutputs(`gtceu:zpm_electric_motor`)
         .duration(600)
         .EUt(24000)
-        ["scannerResearch(java.util.function.UnaryOperator)"]
+        ['scannerResearch(java.util.function.UnaryOperator)']
         (b => b
             .researchStack("gtceu:luv_electric_motor")
             .duration(1200)
@@ -236,26 +254,26 @@ ServerEvents.recipes(event => {
         .itemInputs('16x gtceu:luv_electric_motor')
         .itemInputs('16x gtceu:double_hsss_plate')
         .itemInputs('4x gtceu:long_hsss_rod')
-        .itemInputs('8x gtceu:hsss_sleeve')
+        .itemInputs('8x gtceu:netherite_sleeve')
         .itemInputs('2x gtceu:hsss_gear')
         .itemInputs('4x gtceu:small_hsss_gear')
         .itemInputs('gtceu:hsss_rotor')
         .itemInputs('8x gtceu:hsss_screw')
         .itemInputs('8x gtceu:hsss_ring')
-        .itemInputs('16x gtceu:hsss_round')
+        .itemInputs('16x gtceu:netherite_round')
         .itemInputs('#gtceu:circuits/zpm')
         .itemInputs('2x #gtceu:circuits/luv')
         .itemInputs('32x gtceu:fine_ruridit_wire')
         .itemInputs('4x gtceu:niobium_titanium_single_cable')
         .inputFluids('gtceu:soldering_alloy 1152')
         .inputFluids('gtceu:lubricant 1000')
-        .itemOutputs('gtceu:luv_rocket_engine')
+        .itemOutputs('astrogreg:luv_rocket_engine')
         .duration(1200)
         .EUt(6000)
         .addMaterialInfo(true)
         ["scannerResearch(java.util.function.UnaryOperator)"]
         (b => b
-            .researchStack("gtceu:iv_rocket_engine")
+            .researchStack("astrogreg:iv_rocket_engine")
             .duration(1800)
             .EUt(1920)
         )
@@ -279,13 +297,13 @@ ServerEvents.recipes(event => {
         .itemInputs('4x gtceu:vanadium_gallium_single_cable')
         .inputFluids('gtceu:soldering_alloy 2304')
         .inputFluids('gtceu:lubricant 2000')
-        .itemOutputs('gtceu:zpm_rocket_engine')
+        .itemOutputs('astrogreg:zpm_rocket_engine')
         .duration(1200)
         .EUt(24000)
         .addMaterialInfo(true)
         .stationResearch(
             researchRecipeBuilder => researchRecipeBuilder
-                .researchStack(Item.of(`gtceu:luv_rocket_engine `))
+                .researchStack(Item.of(`astrogreg:luv_rocket_engine `))
                 .dataStack('gtceu:data_orb')
                 .CWUt(8, 64000)
                 .EUt(30720)
@@ -311,13 +329,13 @@ ServerEvents.recipes(event => {
         .inputFluids('gtceu:soldering_alloy 4608')
         .inputFluids('gtceu:lubricant 4000')
         .inputFluids('gtceu:naquadria 1152')
-        .itemOutputs('gtceu:uv_rocket_engine')
+        .itemOutputs('astrogreg:uv_rocket_engine')
         .duration(1200)
         .EUt(96000)
         .addMaterialInfo(true)
         .stationResearch(
             researchRecipeBuilder => researchRecipeBuilder
-                .researchStack(Item.of(`gtceu:zpm_rocket_engine`))
+                .researchStack(Item.of(`astrogreg:zpm_rocket_engine`))
                 .dataStack('gtceu:data_module')
                 .CWUt(48, 256000)
                 .EUt(122880)

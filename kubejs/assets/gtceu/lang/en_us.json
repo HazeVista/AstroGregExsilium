@@ -18,6 +18,9 @@
     "gtceu.mana_infusion": "Mana Infusion",
     "gtceu.botanic_purification": "Botanic Purification",
 
+    "material.gtceu.aluminium": "Aluminum",
+    "material.gtceu.aluminium_sulfite": "Aluminum Sulfite",
+
     "tagprefix.mars_stone": "Mars Stone %s Ore",
     "tagprefix.venus_stone": "Venus Stone %s Ore",
     "tagprefix.mercury_stone": "Mercury Stone %s Ore",
@@ -41,6 +44,8 @@
     "gtceu.machine.parallel_hatch_mk6.tooltip": "Allows to run up to §516§r recipes in parallel.",
     "gtceu.machine.parallel_hatch_mk7.tooltip": "Allows to run up to §564§r recipes in parallel.",
     "gtceu.machine.parallel_hatch_mk8.tooltip": "Allows to run up to §5256§r recipes in parallel.",
+    
+    "item.gtceu.terminal.tooltip": "Shift + R-Click on a multiblock controller to automatically build it with blocks from your inventory.",
 
     "gtceu.grapplemod.repair": "Repair recipe, keeps your upgrades. §lNEVER combine two grapples or you'll lose ALL your upgrades!§r",
     "gtceu.grapplemod.upgrades.maxlen": "Increases §lMax Length§r by 20, up to 200.",

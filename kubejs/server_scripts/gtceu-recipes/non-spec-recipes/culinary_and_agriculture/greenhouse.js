@@ -57,10 +57,11 @@ trees.forEach((tree) => {
 
         const greenhouse_tree_base = greg.greenhouse_trees(RecipeName)
             .notConsumable(sapling)
-            .perTick(true)
-            .inputFluids('minecraft:water 1')
+            .perTick(true)                
+            .chancedFluidInput('minecraft:water 1', 2500, 0)
             .perTick(false)
-            .itemOutputs(`16x ${log}`, `4x ${leaf}`, `${sapling}`)
+            .itemOutputs(`16x ${log}`, `4x ${leaf}`)
+            .chancedOutput(`${sapling}`, 5000, 0)
             .circuit(Circuit)
             .duration(Duration)
             .EUt(30)
@@ -86,7 +87,7 @@ trees.forEach((tree) => {
     //#region flowers
     const flowers = ['minecraft:dandelion', 'minecraft:poppy', 'minecraft:blue_orchid', 'minecraft:allium',
         'minecraft:azure_bluet', 'minecraft:red_tulip', 'minecraft:orange_tulip', 'minecraft:white_tulip', 'minecraft:pink_tulip', 
-        'minecraft:oxeye_daisy', 'minecraft:cornflower', 'minecraft:lily_of_the_valley', 'minecraft:wither_rose', 'minecraft:torchflower',
+        'minecraft:oxeye_daisy', 'minecraft:cornflower', 'minecraft:lily_of_the_valley', 'minecraft:wither_rose', 
         'botania:blue_mystical_flower', 'botania:light_blue_mystical_flower', 'botania:brown_mystical_flower', 'botania:cyan_mystical_flower', 
         'botania:gray_mystical_flower', 'botania:green_mystical_flower', 'botania:white_mystical_flower', 'botania:yellow_mystical_flower', 
         'botania:light_gray_mystical_flower', 'botania:orange_mystical_flower', 'botania:red_mystical_flower', 'botania:purple_mystical_flower', 
@@ -101,8 +102,8 @@ trees.forEach((tree) => {
             }
             const greenhouse_flower_base = greg.greenhouse_flowers(RecipeName)
                 .notConsumable(flower)
-                .perTick(true)
-                .inputFluids('minecraft:water 1')
+                .perTick(true)                
+                .chancedFluidInput('minecraft:water 1', 2500, 0)
                 .perTick(false)
                 .itemOutputs(`8x ${flower}`)
                 .duration(Duration)
@@ -143,7 +144,8 @@ trees.forEach((tree) => {
         ['farmersdelight:rice', 'farmersdelight:rice_panicle'],
         ['farmersdelight:onion', 'farmersdelight:onion'],
         ['delightful:salmonberry_pips', 'delightful:salmonberries'],
-        ['delightful:cantaloupe_seeds', 'delightful:cantaloupe']]
+        ['delightful:cantaloupe_seeds', 'delightful:cantaloupe'],
+        ['minecraft:cocoa_beans', 'minecraft:cocoa_beans']]
 
     crops.forEach((crop) => {
         const seed = crop[0]
@@ -158,9 +160,10 @@ trees.forEach((tree) => {
             const greenhouse_crop_base = greg.greenhouse_crops(RecipeName)
                 .notConsumable(seed)
                 .perTick(true)
-                .inputFluids('minecraft:water 1')
+                .chancedFluidInput('minecraft:water 1', 2500, 0)
                 .perTick(false)
-                .itemOutputs(`16x ${plant}`, `${seed}`)
+                .itemOutputs(`16x ${plant}`)
+                .chancedOutput(`${seed}`, 5000, 0)
                 .duration(Duration)
                 .EUt(30)
                 .circuit(Circuit)

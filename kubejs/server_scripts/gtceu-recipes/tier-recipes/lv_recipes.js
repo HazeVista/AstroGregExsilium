@@ -55,6 +55,8 @@ ServerEvents.recipes(event => {
         .inputFluids('gtceu:ethylbenzene')
         .outputFluids('gtceu:styrene')
         .outputFluids('gtceu:hydrogen 2000')
+        .duration(200)
+        .EUt(28)
     //#endregion
 
 
@@ -135,7 +137,7 @@ ServerEvents.recipes(event => {
 
 
 
-    //#region etrium & blazing etrium
+    //#region etrium
 
     gt.mixer('mix_etrium_dust')
         .itemInputs('3x astrogreg:ostrum_dust', '2x gtceu:electrum_dust')

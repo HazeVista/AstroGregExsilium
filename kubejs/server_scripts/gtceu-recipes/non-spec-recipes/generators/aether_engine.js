@@ -8,7 +8,7 @@ ServerEvents.recipes(event => {
         A: '#gtceu:circuits/iv',
         B: 'astrogreg:elementium_gear',
         C: 'gtceu:iv_machine_hull',
-        D: 'astrogreg:elementium_large_fluid_pipe'
+        D: 'astrogreg:iv_stabilizer'
     })
     .addMaterialInfo()
 
