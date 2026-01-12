@@ -3,6 +3,14 @@ ServerEvents.recipes(event => {
   const gt = event.recipes.gtceu
 
     //#region misc
+    event.shapeless('minecraft:farmland', ['#minecraft:hoe', 'minecraft:dirt'])
+
+    gt.assembler('till_dirt')
+      .itemInputs('minecraft:dirt')
+      .itemOutputs('minecraft:farmland')
+      .duration(20)
+      .EUt(1)
+
     event.shaped('gtceu:rubber_plate', [
       'A',
       'B',
