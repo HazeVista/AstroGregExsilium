@@ -548,7 +548,6 @@ ServerEvents.recipes(event => {
         .itemInputs('gtceu:steel_ingot', 'gtceu:coke_dust')
         .itemOutputs('gtceu:damascus_steel_ingot', 'gtceu:tiny_dark_ash_dust')
         .duration(900)
-
     //#endregion
 
 

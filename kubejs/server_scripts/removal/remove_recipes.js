@@ -166,20 +166,20 @@ ServerEvents.recipes(event => {
 
 
     //#region oddball
-    event.remove({ input: 'botania:terra_sword'})
-    event.remove({ type: 'gtceu:gas_collector'})
-    event.remove({ output: 'farmersdelight:wheat_dough'})
-    event.remove({ input: 'farmersdelight:wheat_dough'})
-    event.remove({ input: 'minecraft:fire_charge'})
-    event.remove({ input: 'minecraft:netherite_scrap'})
-    event.remove({ output: 'minecraft:netherite_scrap'})
-    event.remove({ input: 'minecraft:ancient_debris'})
-    event.remove({ output: 'minecraft:netherite_ingot'})
-    event.remove({ output: 'createaddition:iron_rod'})
-    event.remove({ output: '#forge:wires'})
-    event.remove({ input: '#forge:wires'})
+    event.remove({ input: 'botania:terra_sword' })
+    event.remove({ type: 'gtceu:gas_collector' })
+    event.remove({ output: 'farmersdelight:wheat_dough' })
+    event.remove({ input: 'farmersdelight:wheat_dough' })
+    event.remove({ input: 'minecraft:fire_charge' })
+    event.remove({ input: 'minecraft:netherite_scrap' })
+    event.remove({ output: 'minecraft:netherite_scrap' })
+    event.remove({ input: 'minecraft:ancient_debris' })
+    event.remove({ output: 'minecraft:netherite_ingot' })
+    event.remove({ output: 'createaddition:iron_rod' })
+    event.remove({ output: '#forge:wires' })
+    event.remove({ input: '#forge:wires' })
 
-    event.remove({ id: /.*expatternprovider.*cutter.*/});
+    event.remove({ id: /.*expatternprovider.*cutter.*/ });
     event.remove({ input: /gtceu:.*_charger_4x/ });
     event.remove({ output: /gtceu:.*_charger_4x/ });
     event.remove({ input: /gtceu:.*_energy_converter/ });
@@ -203,20 +203,20 @@ ServerEvents.recipes(event => {
     event.remove({ id: /ad_astra:radium_.*/ });
     event.remove({ output: /ad_extendra:.*_tank/ });
     event.remove({ output: /gtceu:.*_air_scrubber/ });
-    event.remove({ output: /minecraft:.*_armor_trim_smithing_template/})
-    event.remove({ id: /farmersdelight:.*_pie_from_slixes/})
-    event.remove({ id: /delightful:food\/.*_pie_from_slices/})
-    event.remove({ output: /gtceu:.*_drill_head/})
-    event.remove({ output: /gtceu:.*_electric_motor/})
-    event.remove({ output: /gtceu:.*_parallel_hatch/})
-    event.remove({ output: /gtceu:uev_.*/})
-    event.remove({ output: /gtceu:uiv_.*/})
-    event.remove({ output: /gtceu:uxv_.*/})
-    event.remove({ output: /gtceu:opv_.*/})
-    event.remove({ output: /gtceu:max_.*/})
-    event.remove({ output: /ad_extendra:electrolyte_.*/})
-    event.remove({ id: /botania:elven_trade\/.*/})
-    event.remove({ input: /gtceu:.*_dual_.*_hatch/})
-    event.remove({ output: /gtceu:.*_dual_.*_hatch/})
+    event.remove({ output: /minecraft:.*_armor_trim_smithing_template/ })
+    event.remove({ id: /farmersdelight:.*_pie_from_slixes/ })
+    event.remove({ id: /delightful:food\/.*_pie_from_slices/ })
+    event.remove({ output: /gtceu:.*_drill_head/ })
+    event.remove({ output: /gtceu:.*_electric_motor/ })
+    event.remove({ output: /gtceu:.*_parallel_hatch/ })
+    event.remove({ output: /gtceu:uev_.*/ })
+    event.remove({ output: /gtceu:uiv_.*/ })
+    event.remove({ output: /gtceu:uxv_.*/ })
+    event.remove({ output: /gtceu:opv_.*/ })
+    event.remove({ output: /gtceu:max_.*/ })
+    event.remove({ output: /ad_extendra:electrolyte_.*/ })
+    event.remove({ id: /botania:elven_trade\/.*/ })
+    event.remove({ input: /gtceu:.*_dual_.*_hatch/ })
+    event.remove({ output: /gtceu:.*_dual_.*_hatch/ })
     //#endregion
 })
