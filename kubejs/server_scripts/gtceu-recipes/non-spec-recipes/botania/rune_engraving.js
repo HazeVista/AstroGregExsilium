@@ -1,7 +1,7 @@
 ServerEvents.recipes(event => {
 const engrave = event.recipes.gtceu.rune_inscription
-//#region controller
 
+//#region controller
     event.shaped('gtceu:runic_engraver', [
         'ECE',
         'ADA',
@@ -13,139 +13,70 @@ const engrave = event.recipes.gtceu.rune_inscription
         D: 'astrogreg:manasteel_brick_machine_casing',
         E: 'astrogreg:mv_stabilizer'
     })
-
+    .addMaterialInfo()
 //#endregion
 
 
 
 //#region basic runes
+    const basicRunes = [
+        ['fire_rune', 'minecraft:blaze_powder', 'gtceu:dark_ash_dust', 'gtceu:coke_gem', 'minecraft:brick', 'gtceu:copper_dust', 50],
+        ['water_rune', 'minecraft:bucket', 'minecraft:clay', 'minecraft:bone_meal', 'minecraft:ice', 'gtceu:salt_dust', 50],
+        ['earth_rune', '#forge:stone', 'minecraft:coal', 'minecraft:dirt', 'minecraft:gravel', 'gtceu:iron_dust', 50],
+        ['air_rune', '#forge:glass/silica', 'minecraft:string', 'gtceu:tin_rotor', '#minecraft:wool', 'gtceu:quartz_sand_dust', 50]
+    ]
 
-    engrave('fire_rune')
-        .notConsumable('botania:lens_normal')
-        .itemInputs('minecraft:blaze_powder', 'gtceu:dark_ash_dust', 'gtceu:coke_gem', 'minecraft:brick', 'gtceu:copper_dust', 'botania:livingrock')
-        .inputFluids('manafluid:mana 50')
-        .itemOutputs('2x botania:fire_rune')
-        .duration(200)
-        .EUt(64)
-    
-    engrave('water_rune')
-        .notConsumable('botania:lens_normal')
-        .itemInputs('minecraft:bucket', 'minecraft:clay', 'minecraft:bone_meal', 'minecraft:ice', 'gtceu:salt_dust', 'botania:livingrock')
-        .inputFluids('manafluid:mana 50')
-        .itemOutputs('2x botania:water_rune')
-        .duration(200)
-        .EUt(64)
-        
-    engrave('earth_rune')
-        .notConsumable('botania:lens_normal')
-        .itemInputs('#forge:stone', 'minecraft:coal', 'minecraft:dirt', 'minecraft:gravel', 'gtceu:iron_dust', 'botania:livingrock')
-        .inputFluids('manafluid:mana 50')
-        .itemOutputs('2x botania:earth_rune')
-        .duration(200)
-        .EUt(64)
-        
-    engrave('air_rune')
-        .notConsumable('botania:lens_normal')
-        .itemInputs('#forge:glass/silica', 'minecraft:string', 'gtceu:tin_rotor', '#minecraft:wool', 'gtceu:quartz_sand_dust', 'botania:livingrock')
-        .inputFluids('manafluid:mana 50')
-        .itemOutputs('2x botania:air_rune')
-        .duration(200)
-        .EUt(64)
-        
-    engrave('spring_rune')
-        .notConsumable('botania:lens_normal')
-        .itemInputs('botania:manasteel_ingot', '#forge:seeds', '#minecraft:saplings', 'botania:fire_rune', 'botania:water_rune', 'botania:livingrock')
-        .inputFluids('manafluid:mana 75')
-        .itemOutputs('botania:spring_rune')
-        .duration(200)
-        .EUt(64)
-        
-    engrave('summer_rune')
-        .notConsumable('botania:lens_normal')
-        .itemInputs('#minecraft:smelts_to_glass', 'botania:manasteel_ingot', '#minecraft:logs', 'botania:earth_rune', 'botania:air_rune', 'botania:livingrock')
-        .inputFluids('manafluid:mana 75')
-        .itemOutputs('botania:summer_rune')
-        .duration(200)
-        .EUt(64)
-        
-    engrave('autumn_rune')
-        .notConsumable('botania:lens_normal')
-        .itemInputs('botania:manasteel_ingot', '#forge:crops', '#minecraft:leaves', 'botania:air_rune', 'botania:fire_rune', 'botania:livingrock')
-        .inputFluids('manafluid:mana 75')
-        .itemOutputs('botania:autumn_rune')
-        .duration(200)
-        .EUt(64)
-        
-    engrave('winter_rune')
-        .notConsumable('botania:lens_normal')
-        .itemInputs('botania:manasteel_ingot', 'minecraft:snow_block', 'minecraft:blue_ice', 'botania:water_rune', 'botania:earth_rune', 'botania:livingrock')
-        .inputFluids('manafluid:mana 75')
-        .itemOutputs('botania:winter_rune')
-        .duration(200)
-        .EUt(64)
-        
-    engrave('gluttony_rune')
-        .notConsumable('botania:lens_normal')
-        .itemInputs('botania:winter_rune', 'botania:fire_rune', 'botania:mana_rune', 'botania:dragonstone', 'botania:livingrock')
-        .inputFluids('manafluid:mana 150')
-        .itemOutputs('botania:gluttony_rune')
-        .duration(200)
-        .EUt(64)
-        
-    engrave('lust_rune')
-        .notConsumable('botania:lens_normal')
-        .itemInputs('botania:summer_rune', 'botania:air_rune', 'botania:mana_rune', 'botania:dragonstone', 'botania:livingrock')
-        .inputFluids('manafluid:mana 150')
-        .itemOutputs('botania:lust_rune')
-        .duration(200)
-        .EUt(64)
-        
-    engrave('pride_rune')
-        .notConsumable('botania:lens_normal')
-        .itemInputs('botania:autumn_rune', 'botania:earth_rune', 'botania:mana_rune', 'botania:dragonstone', 'botania:livingrock')
-        .inputFluids('manafluid:mana 150')
-        .itemOutputs('botania:pride_rune')
-        .duration(200)
-        .EUt(64)
-        
-    engrave('envy_rune')
-        .notConsumable('botania:lens_normal')
-        .itemInputs('botania:winter_rune', 'botania:water_rune', 'botania:mana_rune', 'botania:dragonstone', 'botania:livingrock')
-        .inputFluids('manafluid:mana 150')
-        .itemOutputs('botania:envy_rune')
-        .duration(200)
-        .EUt(64)
-        
-    engrave('wrath_rune')
-        .notConsumable('botania:lens_normal')
-        .itemInputs('botania:summer_rune', 'botania:fire_rune', 'botania:mana_rune', 'botania:dragonstone', 'botania:livingrock')
-        .inputFluids('manafluid:mana 150')
-        .itemOutputs('botania:wrath_rune')
-        .duration(200)
-        .EUt(64)
-        
-    engrave('sloth_rune')
-        .notConsumable('botania:lens_normal')
-        .itemInputs('botania:winter_rune', 'botania:earth_rune', 'botania:mana_rune', 'botania:dragonstone', 'botania:livingrock')
-        .inputFluids('manafluid:mana 150')
-        .itemOutputs('botania:sloth_rune')
-        .duration(200)
-        .EUt(64)
-        
-    engrave('greed_rune')
-        .notConsumable('botania:lens_normal')
-        .itemInputs('botania:spring_rune', 'botania:water_rune', 'botania:mana_rune', 'botania:dragonstone', 'botania:livingrock')
-        .inputFluids('manafluid:mana 150')
-        .itemOutputs('botania:greed_rune')
-        .duration(200)
-        .EUt(64)
+    basicRunes.forEach(([rune, input1, input2, input3, input4, input5, mana]) => {
+        engrave(rune)
+            .notConsumable('botania:lens_normal')
+            .itemInputs(input1, input2, input3, input4, input5, 'botania:livingrock')
+            .inputFluids(`manafluid:mana ${mana}`)
+            .itemOutputs(`2x botania:${rune}`)
+            .duration(200)
+            .EUt(64)
+    })
 
-    //#endregion
+    const seasonalRunes = [
+        ['spring_rune', 'botania:manasteel_ingot', '#forge:seeds', '#minecraft:saplings', 'botania:fire_rune', 'botania:water_rune'],
+        ['summer_rune', '#minecraft:smelts_to_glass', 'botania:manasteel_ingot', '#minecraft:logs', 'botania:earth_rune', 'botania:air_rune'],
+        ['autumn_rune', 'botania:manasteel_ingot', '#forge:crops', '#minecraft:leaves', 'botania:air_rune', 'botania:fire_rune'],
+        ['winter_rune', 'botania:manasteel_ingot', 'minecraft:snow_block', 'minecraft:blue_ice', 'botania:water_rune', 'botania:earth_rune']
+    ]
+
+    seasonalRunes.forEach(([rune, input1, input2, input3, input4, input5]) => {
+        engrave(rune)
+            .notConsumable('botania:lens_normal')
+            .itemInputs(input1, input2, input3, input4, input5, 'botania:livingrock')
+            .inputFluids('manafluid:mana 75')
+            .itemOutputs(`botania:${rune}`)
+            .duration(200)
+            .EUt(64)
+    })
+
+    const sinRunes = [
+        ['gluttony_rune', 'botania:winter_rune', 'botania:fire_rune'],
+        ['lust_rune', 'botania:summer_rune', 'botania:air_rune'],
+        ['pride_rune', 'botania:autumn_rune', 'botania:earth_rune'],
+        ['envy_rune', 'botania:winter_rune', 'botania:water_rune'],
+        ['wrath_rune', 'botania:summer_rune', 'botania:fire_rune'],
+        ['sloth_rune', 'botania:winter_rune', 'botania:earth_rune'],
+        ['greed_rune', 'botania:spring_rune', 'botania:water_rune']
+    ]
+
+    sinRunes.forEach(([rune, input1, input2]) => {
+        engrave(rune)
+            .notConsumable('botania:lens_normal')
+            .itemInputs(input1, input2, 'botania:mana_rune', 'botania:dragonstone', 'botania:livingrock')
+            .inputFluids('manafluid:mana 150')
+            .itemOutputs(`botania:${rune}`)
+            .duration(200)
+            .EUt(64)
+    })
+//#endregion
 
 
 
-    //#region spawn eggs
-
+//#region spawn eggs
     engrave('chicken_spawn_egg')
         .notConsumable('botania:terra_lens')
         .itemInputs('botania:life_rune', 'botania:air_rune', '4x #forge:seeds', 'botania:livingrock')
@@ -249,51 +180,36 @@ const engrave = event.recipes.gtceu.rune_inscription
         .itemOutputs('ad_astra:glacian_ram_spawn_egg')
         .duration(200)
         .EUt(64)
-    
-    //#endregion
+//#endregion
 
 
 
-    //#region advanced runes
-    
-    engrave('mana_rune')
-        .notConsumable('botania:terra_lens')
-        .itemInputs('botania:mana_pearl', 'botania:manaweave_cloth', 'botania:manasteel_ingot', 'botania:mana_diamond', 'botania:livingrock')
-        .inputFluids('manafluid:mana 200')
-        .itemOutputs('botania:mana_rune')
-        .duration(200)
-        .EUt(256)
+//#region advanced runes
+    const advancedRunes = [
+        ['mana_rune', 'botania:mana_pearl', 'botania:manaweave_cloth', 'botania:manasteel_ingot', 'botania:mana_diamond'],
+        ['space_rune', 'ae2:fluix_crystal', 'astrogreg:asteroid_stone', 'minecraft:end_stone', 'botania:mana_diamond'],
+        ['life_rune', 'botania:fire_rune', 'botania:air_rune', 'botania:earth_rune', 'botania:water_rune', 'botania:terrasteel_ingot'],
+        ['energy_rune', 'botania:fire_rune', '3x gtceu:red_alloy_dust', 'botania:manasteel_ingot']
+    ]
 
-    engrave('space_rune')
-        .notConsumable('botania:terra_lens')
-        .itemInputs('ae2:fluix_crystal', 'astrogreg:asteroid_stone', 'minecraft:end_stone', 'botania:mana_diamond', 'botania:livingrock')
-        .inputFluids('manafluid:mana 200')
-        .itemOutputs('botania:space_rune')
-        .duration(200)
-        .EUt(256)
-
-    engrave('life_rune')
-        .notConsumable('botania:terra_lens')
-        .itemInputs('botania:fire_rune', 'botania:air_rune', 'botania:earth_rune', 'botania:water_rune', 'botania:terrasteel_ingot', 'botania:livingrock')
-        .inputFluids('manafluid:mana 200')
-        .itemOutputs('botania:life_rune')
-        .duration(200)
-        .EUt(256)
-
-    engrave('energy_rune')
-        .notConsumable('botania:terra_lens')
-        .itemInputs('botania:fire_rune', '3x gtceu:red_alloy_dust', 'botania:manasteel_ingot', 'botania:livingrock')
-        .inputFluids('manafluid:mana 200')
-        .itemOutputs('botania:energy_rune')
-        .duration(200)
-        .EUt(256)
-
-    //#endregion
+    advancedRunes.forEach(([rune, input1, input2, input3, input4, input5]) => {
+        const inputs = [input1, input2, input3, input4]
+        if (input5) inputs.push(input5)
+        inputs.push('botania:livingrock')
+        
+        engrave(rune)
+            .notConsumable('botania:terra_lens')
+            .itemInputs(inputs[0], inputs[1], inputs[2], inputs[3], inputs.length === 6 ? inputs[4] : inputs[3], inputs[inputs.length - 1])
+            .inputFluids('manafluid:mana 200')
+            .itemOutputs(`botania:${rune}`)
+            .duration(200)
+            .EUt(256)
+    })
+//#endregion
 
 
 
-    //#region planetary runes
-
+//#region planetary runes
     // engrave('_rune')
     //     .itemInputs('', '', '', '', 'botania:tiny_planet', 'botania:livingrock')
     //     .notConsumable('botania:pixie_lens')
@@ -301,6 +217,5 @@ const engrave = event.recipes.gtceu.rune_inscription
     //     .itemOutputs('botania:_rune')
     //     .duration(600)
     //     .EUt(1024)
-
-    //#endregion
+//#endregion
 })

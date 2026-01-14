@@ -136,19 +136,19 @@ const purify = event.recipes.gtceu.mana_infusion
 //#region purification
     //output, input (both 8x), duration in ticks, EUt
     const purification = [
-        ['8x minecraft:snow_block', 'minecraft:water 8000', [], 1200, 2],
-        ['8x minecraft:packed_ice', '8x minecraft:ice', [], 1200, 2],
-        ['8x minecraft:blue_ice', '8x minecraft:packed_ice', [], 1200, 2],
-        ['8x minecraft:sand', '8x minecraft:soul_sand', [], 1200, 2],
-        ['8x minecraft:clay', '8x #minecraft:smelts_to_glass', [], 600, 2],
-        ['8x botania:livingwood_log', '8x #minecraft:logs', [], 1200, 2],
-        ['8x botania:livingrock', '8x #forge:stone', [], 1200, 2],
-        ['8x minecraft:end_stone', '8x minecraft:blackstone', [], 1200, 2],
-        ['8x minecraft:obsidian', '8x botania:blaze_block', [], 1200, 2],
-        ['8x minecraft:cobblestone', '8x minecraft:netherrack', [], 1200, 2]
+        ['8x minecraft:snow_block', 'minecraft:water 8000', 1200, 2],
+        ['8x minecraft:packed_ice', '8x minecraft:ice', 1200, 2],
+        ['8x minecraft:blue_ice', '8x minecraft:packed_ice', 1200, 2],
+        ['8x minecraft:sand', '8x minecraft:soul_sand', 1200, 2],
+        ['8x minecraft:clay', '8x #minecraft:smelts_to_glass', 600, 2],
+        ['8x botania:livingwood_log', '8x #minecraft:logs', 1200, 2],
+        ['8x botania:livingrock', '8x #forge:stone', 1200, 2],
+        ['8x minecraft:end_stone', '8x minecraft:blackstone', 1200, 2],
+        ['8x minecraft:obsidian', '8x botania:blaze_block', 1200, 2],
+        ['8x minecraft:cobblestone', '8x minecraft:netherrack', 1200, 2]
     ];
 
-    purification.forEach(([output, input, items, duration, eu]) => {
+    purification.forEach(([output, input, duration, eu]) => {
         const recipe = purify(`pure_${output.replace(/\d+x\s*/, '').replace(':', '_')}`)
             .itemOutputs(output)
             .notConsumable('botania:pure_daisy')
