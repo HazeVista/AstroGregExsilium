@@ -105,44 +105,26 @@ ServerEvents.recipes(event => {
         .duration(80)
         .EUt(7)
 
-    event.shaped('2x botania:managlass_pane', [
-        'AB'
-    ], {
-       A: 'botania:managlass',
-       B: '#forge:tools/saws'
-    })    
+    const glassPanes = [
+        ['managlass', 'managlass_pane'],
+        ['bifrost_perm', 'bifrost_pane'],
+        ['alfglass', 'alfglass_pane']
+    ]
 
-    gt.cutter('cutting_managlass')
-        .itemInputs('3x botania:managlass')
-        .itemOutputs('8x botania:managlass_pane')
-        .duration(50)
-        .EUt(7)
+    glassPanes.forEach(([input, output]) => {
+        event.shaped(`2x botania:${output}`, [
+            'AB'
+        ], {
+           A: `botania:${input}`,
+           B: '#forge:tools/saws'
+        })    
 
-    event.shaped('2x botania:bifrost_pane', [
-        'AB'
-    ], {
-       A: 'botania:bifrost_perm',
-       B: '#forge:tools/saws'
-    })    
-
-    gt.cutter('cutting_bifrost_glass')
-        .itemInputs('3x botania:bifrost_perm')
-        .itemOutputs('8x botania:bifrost_pane')
-        .duration(50)
-        .EUt(7)
-
-    event.shaped('2x botania:alfglass_pane', [
-        'AB'
-    ], {
-       A: 'botania:alfglass',
-       B: '#forge:tools/saws'
-    })    
-
-    gt.cutter('cutting_alfglass')
-        .itemInputs('3x botania:alfglass')
-        .itemOutputs('8x botania:alfglass_pane')
-        .duration(50)
-        .EUt(7)
+        gt.cutter(`cutting_${input}`)
+            .itemInputs(`3x botania:${input}`)
+            .itemOutputs(`8x botania:${output}`)
+            .duration(50)
+            .EUt(7)
+    })
 
     gt.forge_hammer('forge_hammer_gaia_shard')
         .itemInputs('botania:life_essence')
@@ -275,35 +257,21 @@ ServerEvents.recipes(event => {
 
 
     //#region manasteel cooking
-        gt.primitive_blast_furnace('manasteel_charcoal')
-        .itemInputs('gtbotania:manasteel_dust', 'minecraft:charcoal')
-        .itemOutputs('botania:manasteel_ingot', 'gtceu:tiny_dark_ash_dust')
-        .duration(900)
+    const manasteelFuels = [
+        ['minecraft:charcoal', 900],
+        ['minecraft:coal', 900],
+        ['gtceu:coke_gem', 750],
+        ['gtceu:charcoal_dust', 900],
+        ['gtceu:coal_dust', 900],
+        ['gtceu:coke_dust', 750]
+    ]
 
-    gt.primitive_blast_furnace('manasteel_coal')
-        .itemInputs('gtbotania:manasteel_dust', 'minecraft:coal')
-        .itemOutputs('botania:manasteel_ingot', 'gtceu:tiny_dark_ash_dust')
-        .duration(900)
-
-    gt.primitive_blast_furnace('manasteel_coke')
-        .itemInputs('gtbotania:manasteel_dust', 'gtceu:coke_gem')
-        .itemOutputs('botania:manasteel_ingot', 'gtceu:tiny_dark_ash_dust')
-        .duration(750)
-
-    gt.primitive_blast_furnace('manasteel_charcoal_dust')
-        .itemInputs('gtbotania:manasteel_dust', 'gtceu:charcoal_dust')
-        .itemOutputs('botania:manasteel_ingot', 'gtceu:tiny_dark_ash_dust')
-        .duration(900)
-
-    gt.primitive_blast_furnace('manasteel_coal_dust')
-        .itemInputs('gtbotania:manasteel_dust', 'gtceu:coal_dust')
-        .itemOutputs('botania:manasteel_ingot', 'gtceu:tiny_dark_ash_dust')
-        .duration(900)
-
-    gt.primitive_blast_furnace('manasteel_coke_dust')
-        .itemInputs('gtbotania:manasteel_dust', 'gtceu:coke_dust')
-        .itemOutputs('botania:manasteel_ingot', 'gtceu:tiny_dark_ash_dust')
-        .duration(750)
+    manasteelFuels.forEach(([fuel, duration]) => {
+        gt.primitive_blast_furnace(`manasteel_${fuel.replace(/:/g, '_')}`)
+            .itemInputs('gtbotania:manasteel_dust', fuel)
+            .itemOutputs('botania:manasteel_ingot', 'gtceu:tiny_dark_ash_dust')
+            .duration(duration)
+    })
     //#endregion
 
 
@@ -399,22 +367,20 @@ ServerEvents.recipes(event => {
 
     
     //#region tools
-    event.shaped('botania:manasteel_shears', [
-        'AB',
-        'BC'
-    ], {
-       A: '#forge:tools/hammers',
-       B: 'gtbotania:manasteel_plate',
-       C: '#forge:tools/files'
-    })
+    const shears = [
+        ['manasteel', 'gtbotania:manasteel_plate'],
+        ['elementium', 'gtbotania:elementium_plate']
+    ]
 
-    event.shaped('botania:elementium_shears', [
-        'AB',
-        'BC'
-    ], {
-       A: '#forge:tools/hammers',
-       B: 'gtbotania:elementium_plate',
-       C: '#forge:tools/files'
+    shears.forEach(([type, plate]) => {
+        event.shaped(`botania:${type}_shears`, [
+            'AB',
+            'BC'
+        ], {
+           A: '#forge:tools/hammers',
+           B: plate,
+           C: '#forge:tools/files'
+        })
     })
 
     event.shaped('botania:open_bucket', [
@@ -425,48 +391,24 @@ ServerEvents.recipes(event => {
         B: 'gtbotania:elementium_plate'
     })
 
-    event.shaped('botania:terrasteel_boots', [
-        'ACA',
-        'BDB',
-        ' B '
-    ], {
-        A: 'botania:livingwood_twig',
-        B: 'gtbotania:terrasteel_plate',
-        C: 'botania:winter_rune',
-        D: 'botania:manasteel_boots'
-    })
+    const terrasteelArmor = [
+        ['boots', 'botania:winter_rune', 'botania:manasteel_boots'],
+        ['leggings', 'botania:autumn_rune', 'botania:manasteel_leggings'],
+        ['helmet', 'botania:spring_rune', 'botania:manasteel_helmet'],
+        ['chestplate', 'botania:summer_rune', 'botania:manasteel_chestplate']
+    ]
 
-    event.shaped('botania:terrasteel_leggings', [
-        'ACA',
-        'BDB',
-        ' B '
-    ], {
-        A: 'botania:livingwood_twig',
-        B: 'gtbotania:terrasteel_plate',
-        C: 'botania:autumn_rune',
-        D: 'botania:manasteel_leggings'
-    })
-
-    event.shaped('botania:terrasteel_helmet', [
-        'ACA',
-        'BDB',
-        ' B '
-    ], {
-        A: 'botania:livingwood_twig',
-        B: 'gtbotania:terrasteel_plate',
-        C: 'botania:spring_rune',
-        D: 'botania:manasteel_helmet'
-    })
-    
-    event.shaped('botania:terrasteel_chestplate', [
-        'ACA',
-        'BDB',
-        ' B '
-    ], {
-        A: 'botania:livingwood_twig',
-        B: 'gtbotania:terrasteel_plate',
-        C: 'botania:summer_rune',
-        D: 'botania:manasteel_chestplate'
+    terrasteelArmor.forEach(([piece, rune, base]) => {
+        event.shaped(`botania:terrasteel_${piece}`, [
+            'ACA',
+            'BDB',
+            ' B '
+        ], {
+            A: 'botania:livingwood_twig',
+            B: 'gtbotania:terrasteel_plate',
+            C: rune,
+            D: base
+        })
     })
     //#endregion
 
@@ -519,34 +461,22 @@ ServerEvents.recipes(event => {
 
 
     //#region rings
-    event.shaped('botania:mana_ring', [
-        'CB ',
-        'BAB',
-        ' B '
-    ], {
-        A: 'gtbotania:manasteel_ring',
-        B: 'gtbotania:manasteel_plate',
-        C: 'botania:mana_tablet'
-    })
+    const basicManasteelRings = [
+        ['mana_ring', 'botania:mana_tablet'],
+        ['magnet_ring', 'botania:lens_magnet'],
+        ['aura_ring', 'botania:mana_rune']
+    ]
 
-    event.shaped('botania:magnet_ring', [
-        'CB ',
-        'BAB',
-        ' B '
-    ], {
-        A: 'gtbotania:manasteel_ring',
-        B: 'gtbotania:manasteel_plate',
-        C: 'botania:lens_magnet'
-    })
-    
-    event.shaped('botania:aura_ring', [
-        'CB ',
-        'BAB',
-        ' B '
-    ], {
-        A: 'gtbotania:manasteel_ring',
-        B: 'gtbotania:manasteel_plate',
-        C: 'botania:mana_rune'
+    basicManasteelRings.forEach(([ring, catalyst]) => {
+        event.shaped(`botania:${ring}`, [
+            'CB ',
+            'BAB',
+            ' B '
+        ], {
+            A: 'gtbotania:manasteel_ring',
+            B: 'gtbotania:manasteel_plate',
+            C: catalyst
+        })
     })
     
     event.shaped('botania:water_ring', [
@@ -595,34 +525,22 @@ ServerEvents.recipes(event => {
         D: 'minecraft:diamond_pickaxe'
     })
     
-    event.shaped('botania:magnet_ring_greater', [
-        'CB ',
-        'BAB',
-        ' B '
-    ], {
-        A: 'botania:magnet_ring',
-        B: 'gtbotania:terrasteel_plate',
-        C: 'botania:lens_magnet'
-    })
-     
-    event.shaped('botania:aura_ring_greater', [
-        'CB ',
-        'BAB',
-        ' B '
-    ], {
-        A: 'botania:aura_ring',
-        B: 'gtbotania:terrasteel_plate',
-        C: 'botania:mana_rune'
-    })
-        
-    event.shaped('botania:mana_ring_greater', [
-        'CB ',
-        'BAB',
-        ' B '
-    ], {
-        A: 'botania:mana_ring',
-        B: 'gtbotania:terrasteel_plate',
-        C: 'botania:mana_tablet'
+    const upgradeRings = [
+        ['magnet_ring_greater', 'botania:magnet_ring', 'botania:lens_magnet'],
+        ['aura_ring_greater', 'botania:aura_ring', 'botania:mana_rune'],
+        ['mana_ring_greater', 'botania:mana_ring', 'botania:mana_tablet']
+    ]
+
+    upgradeRings.forEach(([output, base, catalyst]) => {
+        event.shaped(`botania:${output}`, [
+            'CB ',
+            'BAB',
+            ' B '
+        ], {
+            A: base,
+            B: 'gtbotania:terrasteel_plate',
+            C: catalyst
+        })
     })
 
     event.shaped('botania:pixie_ring', [
@@ -669,45 +587,24 @@ ServerEvents.recipes(event => {
 
 
     //#region spark augments
-    event.shaped('botania:spark_upgrade_dispersive', [
-        'CAC',
-        'ABA',
-        'CAC'
-    ], {
-        A: 'gtbotania:manasteel_plate',
-        B: 'botania:water_rune',
-        C: 'botania:pixie_dust'
-    })
+    const sparkAugments = [
+        ['dispersive', 'botania:water_rune'],
+        ['dominant', 'botania:fire_rune'],
+        ['recessive', 'botania:earth_rune'],
+        ['isolated', 'botania:air_rune']
+    ]
 
-    event.shaped('botania:spark_upgrade_dominant', [
-        'CAC',
-        'ABA',
-        'CAC'
-    ], {
-        A: 'gtbotania:manasteel_plate',
-        B: 'botania:fire_rune',
-        C: 'botania:pixie_dust'
+    sparkAugments.forEach(([type, rune]) => {
+        event.shaped(`botania:spark_upgrade_${type}`, [
+            'CAC',
+            'ABA',
+            'CAC'
+        ], {
+            A: 'gtbotania:manasteel_plate',
+            B: rune,
+            C: 'botania:pixie_dust'
+        })
     })
-   
-    event.shaped('botania:spark_upgrade_recessive', [
-        'CAC',
-        'ABA',
-        'CAC'
-    ], {
-        A: 'gtbotania:manasteel_plate',
-        B: 'botania:earth_rune',
-        C: 'botania:pixie_dust'
-    })
-    
-    event.shaped('botania:spark_upgrade_isolated', [
-        'CAC',
-        'ABA',
-        'CAC'
-    ], {
-        A: 'gtbotania:manasteel_plate',
-        B: 'botania:air_rune',
-        C: 'botania:pixie_dust'
-    }) 
 
     event.shaped('botania:spark_changer', [
         'ABA',
@@ -725,16 +622,13 @@ ServerEvents.recipes(event => {
     //#region quartz
     const quartzTypes = ['dark', 'red', 'mana', 'blaze', 'lavender', 'sunny']
 
-    quartzTypes.forEach(quartzBlocking);
-
-    function quartzBlocking(quartz) {
-    
+    quartzTypes.forEach(quartz => {
         event.shaped(`4x botania:quartz_${quartz}`, [
             'A'
         ], {
             A: `botania:${quartz}_quartz`
         })
-    }
+    })
 
     event.shaped(`4x botania:quartz_elven`, [
         'A'
@@ -742,67 +636,25 @@ ServerEvents.recipes(event => {
         A: `botania:elf_quartz`
     })
 
-    event.shaped('botania:quartz_blaze', [
-        'AAA',
-        'ABA',
-        'AAA'
-    ], {
-        A: 'minecraft:quartz',
-        B: 'minecraft:orange_dye'
-    })
-    
-    event.shaped('botania:quartz_dark', [
-        'AAA',
-        'ABA',
-        'AAA'
-    ], {
-        A: 'minecraft:quartz',
-        B: 'minecraft:black_dye'
-    })
-    
-    event.shaped('botania:quartz_red', [
-        'AAA',
-        'ABA',
-        'AAA'
-    ], {
-        A: 'minecraft:quartz',
-        B: 'minecraft:red_dye'
-    })
-    
-    event.shaped('botania:quartz_mana', [
-        'AAA',
-        'ABA',
-        'AAA'
-    ], {
-        A: 'minecraft:quartz',
-        B: 'minecraft:light_blue_dye'
-    })
-    
-    event.shaped('botania:quartz_lavender', [
-        'AAA',
-        'ABA',
-        'AAA'
-    ], {
-        A: 'minecraft:quartz',
-        B: 'minecraft:purple_dye'
-    })
-    
-    event.shaped('botania:quartz_elven', [
-        'AAA',
-        'ABA',
-        'AAA'
-    ], {
-        A: 'minecraft:quartz',
-        B: 'minecraft:lime_dye'
-    })
-    
-    event.shaped('botania:quartz_sunny', [
-        'AAA',
-        'ABA',
-        'AAA'
-    ], {
-        A: 'minecraft:quartz',
-        B: 'minecraft:yellow_dye'
+    const quartzDyes = [
+        ['blaze', 'minecraft:orange_dye'],
+        ['dark', 'minecraft:black_dye'],
+        ['red', 'minecraft:red_dye'],
+        ['mana', 'minecraft:light_blue_dye'],
+        ['lavender', 'minecraft:purple_dye'],
+        ['elven', 'minecraft:lime_dye'],
+        ['sunny', 'minecraft:yellow_dye']
+    ]
+
+    quartzDyes.forEach(([type, dye]) => {
+        event.shaped(`botania:quartz_${type}`, [
+            'AAA',
+            'ABA',
+            'AAA'
+        ], {
+            A: 'minecraft:quartz',
+            B: dye
+        })
     })
     //#endregion
 
@@ -812,9 +664,7 @@ ServerEvents.recipes(event => {
     const logTypes = ['livingwood_log', 'livingwood', 'stripped_livingwood_log', 'stripped_livingwood',
         'dreamwood_log', 'dreamwood', 'stripped_dreamwood_log', 'stripped_dreamwood']
     
-    logTypes.forEach(logInput);
-
-    function logInput(log) {
+    logTypes.forEach(log => {
         event.recipes.botania.mana_infusion(`botania:glimmering_${log}`, `botania:${log}`, 100)
 
         gt.mana_infusion(`glamify_${log}`)
@@ -823,7 +673,7 @@ ServerEvents.recipes(event => {
             .itemOutputs(`botania:glimmering_${log}`)
             .duration(200)
             .EUt(7)
-    }
+    })
 
     event.shaped('6x botania:livingwood_planks', [
         'A',
@@ -857,13 +707,11 @@ ServerEvents.recipes(event => {
 
 
     //#region cell
-
     gt.compressor('compress_biomass')
         .itemInputs('9x gtceu:bio_chaff')
         .itemOutputs('botania:cell_block')
         .duration(600)
         .EUt(2)
-
     //#endregion
 
 
@@ -904,4 +752,5 @@ ServerEvents.recipes(event => {
     ], {
         A: 'botania:alfglass_pane'
     })
+    //#endregion
 })
