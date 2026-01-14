@@ -92,8 +92,8 @@ ServerEvents.recipes(event => {
     const armorTypes = [['minecraft:golden', 'gtceu:gold_plate'], 
                         ['minecraft:diamond',  'gtceu:diamond_plate'],
                         ['minecraft:iron',  'gtceu:iron_plate'],
-                        ['botania:manasteel',  'astrogreg:manasteel_plate'],
-                        ['botania:elementium',  'astrogreg:elementium_plate']]
+                        ['botania:manasteel',  'gtbotania:manasteel_plate'],
+                        ['botania:elementium',  'gtbotania:elementium_plate']]
 
     armorTypes.forEach(armorRecipe)
 

@@ -308,7 +308,7 @@ ItemEvents.tooltip(event => {
         ['astrogreg:spirited_uranium_ingot', 'EV'],
         ['astrogreg:nitro_flux_ingot', 'IV'],
         ['astrogreg:juperiosaturlytide_ingot', 'LuV'],
-        ['astrogreg:gaiaforged_naquadah_ingot', 'ZPM'],
+        ['gtbotania:gaiaforged_naquadah_ingot', 'ZPM'],
         ['astrogreg:neptunium_molybdenum_selenide_ingot', 'UV'],
         ['astrogreg:electrolyte_ingot', 'UHV']
     ]

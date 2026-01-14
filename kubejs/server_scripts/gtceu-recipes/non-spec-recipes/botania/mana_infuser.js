@@ -9,8 +9,8 @@ const purify = event.recipes.gtceu.mana_infusion
         ['botania:mana_powder', '#forge:stone_dust', 1, 100, 7],
         ['botania:mana_diamond', 'minecraft:diamond', 100, 160, 28],
         ['botania:mana_diamond_block', '#forge:storage_blocks/diamond', 900, 1440, 28],
-        ['astrogreg:exquisite_mana_diamond_gem', 'gtceu:exquisite_diamond_gem', 400, 640, 28],
-        ['astrogreg:flawless_mana_diamond_gem', 'gtceu:flawless_diamond_gem', 200, 320, 28],
+        ['gtbotania:exquisite_mana_diamond_gem', 'gtceu:exquisite_diamond_gem', 400, 640, 28],
+        ['gtbotania:flawless_mana_diamond_gem', 'gtceu:flawless_diamond_gem', 200, 320, 28],
         ['botania:mana_pearl', 'minecraft:ender_pearl', 60, 100, 14],
         ['botania:manaweave_cloth', 'farmersdelight:canvas', 40, 160, 7],
         ['botania:mana_string', 'minecraft:string', 10, 40, 7],
@@ -28,7 +28,7 @@ const purify = event.recipes.gtceu.mana_infusion
             .inputFluids(`manafluid:mana ${mana}`)
             .itemOutputs(output)
             .duration(duration)
-            .EUt(eu);
+            .EUt(eu)
     })
 
 //#endregion
@@ -38,7 +38,7 @@ const purify = event.recipes.gtceu.mana_infusion
 //#region alchemy
     //output, input, mana consumed in mb, duration in ticks
     const alchemy_recipes = [
-        ['astrogreg:terrasteel_dust', 'astrogreg:dormant_terrasteel_dust', 10, 150],
+        ['gtbotania:terrasteel_dust', 'gtbotania:dormant_terrasteel_dust', 10, 150],
         ['minecraft:nether_wart', 'minecraft:blaze_rod', 40, 300],
         ['minecraft:ice', 'minecraft:snow_block', 10, 300],
         ['minecraft:red_sand', 'minecraft:sand', 10, 300],

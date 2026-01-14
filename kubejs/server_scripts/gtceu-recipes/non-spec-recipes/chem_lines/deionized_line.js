@@ -42,16 +42,17 @@ ServerEvents.recipes(event => {
     //         .duration(900)
     //         .EUt(1920)
     //     )
-    //
-    // gt.filtration_plant('deionized_water')
-    //     .itemInputs('astrogreg:filter_cartridge')
-    //     .perTick(true)
-    //     .inputFluids('minecraft:water 1')
-    //     .outputFluids('astrgreg:deionized_water 1')
-    //     .perTick(false)
-    //     .itemOutputs('astrogreg:empty_filter_cartridge')
-    //     .duration(10000)
-    //     .EUt(6000)
+    
+    gt.deionization('deionized_water')
+        .itemInputs('astrogreg:filter_cartridge')
+        .itemInputs('64x gtceu:salt_dust')
+        .perTick(true)
+        .inputFluids('minecraft:water 2')
+        .outputFluids('astrogreg:deionized_water 1')
+        .perTick(false)
+        .itemOutputs('astrogreg:empty_filter_cartridge')
+        .duration(5000)
+        .EUt(6000)
     //#endregion
 
 
@@ -109,5 +110,12 @@ ServerEvents.recipes(event => {
         .cleanroom(CleanroomType.STERILE_CLEANROOM)
         .duration(600)
         .EUt(480)
+
+    gt.electrolyzer('decomp_deionized')
+        .inputFluids('astrogreg:deionized_water')
+        .outputFluids('gtceu:hydrogen 2000')
+        .outputFluids('gtceu:oxygen')
+        .duration(750)
+        .EUt(30)
     //#endregion
 })

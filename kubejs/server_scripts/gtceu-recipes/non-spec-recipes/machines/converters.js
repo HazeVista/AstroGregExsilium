@@ -8,7 +8,7 @@ ServerEvents.recipes(event => {
         ev: 'astrogreg:spirited_uranium',
         iv: 'astrogreg:nitro_flux',
         luv: 'astrogreg:juperiosaturlytide',
-        zpm: 'astrogreg:gaiaforged_naquadah',
+        zpm: 'gtbotania:gaiaforged_naquadah',
         uv: 'astrogreg:neptunium_molybdenum_selenide',
         uhv: 'astrogreg:electrolyte'
     }
