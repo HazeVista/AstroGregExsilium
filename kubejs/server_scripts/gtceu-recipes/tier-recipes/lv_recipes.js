@@ -118,7 +118,7 @@ ServerEvents.recipes(event => {
         .itemOutputs('gtceu:stone_dust')
         .chancedOutput('gtceu:iron_dust', 2000, 0)
         .duration(100)
-        .EUt(16)        
+        .EUt(16)
 
     gt.chemical_bath('treating_asteroid_dust')
         .itemInputs('astrogreg:asteroid_stone_dust')
@@ -166,7 +166,7 @@ ServerEvents.recipes(event => {
     //#endregion
 
 
-        
+
     //#region bottling
     gt.assembler('bottle_ender_air')
         .itemInputs('minecraft:glass_bottle')
@@ -238,29 +238,8 @@ ServerEvents.recipes(event => {
         C: 'gtceu:primitive_blast_furnace',
         D: 'gtceu:bronze_screw'
     })
-    .addMaterialInfo()
+    // .addMaterialInfo()
 
-    //recipe id, output, input, base pbf duration in seconds (will be multiplied by 2 then by 20)
-    const toSteamBlast = [
-        ['gtceu:steel_ingot', 'minecraft:iron_ingot', 90],
-        ['gtceu:steel_ingot', 'gtceu:wrought_iron_ingot', 40],
-        ['gtceu:steel_block', 'minecraft:iron_block', 810],
-        ['gtceu:steel_block', 'gtceu:wrought_iron_block', 360],
-        ['gtceu:damascus_steel', 'gtceu:steel', 60],
-        ['botania:manasteel_ingot', 'gtbotania:manasteel_dust', 45],
-    ]
-
-    toSteamBlast.forEach(([output, input, duration]) => {
-
-        const id = `${input.replace(/:/g, '_')}_to_${output.replace(/:/g, '_')}`
-
-        gt.steam_blast_furnace(id)
-            .itemInputs(input)
-            .itemOutputs(output)
-            .duration(duration * 40)
-            .EUt(32)
-
-    })
     //#endregion
 
 })
