@@ -9,8 +9,6 @@ const ApplyIngredient = global.applyItemInput;
 ServerEvents.recipes(event => {
 
     //#region culinary recipes
-    console.log("Starting culinary fabrication recipes")
-
     // STR Output Item, OBJ Input Items {manual: [STR], minecraft: [STR], farmersdelight: [STR], delightful: [STR]}, INT time in seconds (optional, default 10s)
     const CULINARIES = [ 
         {output: '2x farmersdelight:dumplings', input: {manual: ['#forge:dough', '#forge:dumpling_meats'], farmersdelight: ['cabbage_leaf', 'onion']}},
@@ -46,7 +44,6 @@ ServerEvents.recipes(event => {
             .itemOutputs(recipe.output)
             .EUt(GTValues.VHA[GTValues.LV])
             .duration(recipe.time * 20 || 200)
-        console.log("Adding culinary fabrication recipe for " + RecipeInputs.manual)
         RecipeInputs.manual.forEach(inputs => {console.log(inputs);ApplyIngredient(RecipeBase, inputs)})
         RecipeInputs.farmersdelight.forEach(inputs => {ApplyIngredient(RecipeBase, inputs, 'farmersdelight')})
         RecipeInputs.minecraft.forEach(inputs => {ApplyIngredient(RecipeBase, inputs, 'minecraft')})
@@ -69,7 +66,7 @@ ServerEvents.recipes(event => {
     ]
 
     tieredParts.forEach(([tier, buzzsaw, cable, glass]) => {
-        event.shaped(`gtceu:${tier}_beverage_processor`, [
+        event.recipes.gtceu.shaped(`gtceu:${tier}_beverage_processor`, [
             'FCF',
             'BDB',
             'EAG'
@@ -82,10 +79,11 @@ ServerEvents.recipes(event => {
             F: glass,
             G: `gtceu:${tier}_conveyor_module`
         })
+        .addMaterialInfo()
     })
 
     tieredParts.forEach(([tier, knife, cable, glass]) => {
-        event.shaped(`gtceu:${tier}_culinary_fabricator`, [
+        event.recipes.gtceu.shaped(`gtceu:${tier}_culinary_fabricator`, [
             'CBC',
             'AFA',
             'DED'
@@ -97,6 +95,7 @@ ServerEvents.recipes(event => {
             E:  glass,
             F: `gtceu:${tier}_machine_hull`,
         })
+        .addMaterialInfo()
     })
     //#endregion
 })
