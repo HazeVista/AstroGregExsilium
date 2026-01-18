@@ -238,7 +238,7 @@ ServerEvents.recipes(event => {
         C: 'gtceu:primitive_blast_furnace',
         D: 'gtceu:bronze_screw'
     })
-    // .addMaterialInfo()
+    .addMaterialInfo()
 
     //#endregion
 
