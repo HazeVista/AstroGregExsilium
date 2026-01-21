@@ -41,4 +41,16 @@ ServerEvents.recipes(event => {
     })
     .addMaterialInfo()
 
+    // gt.shaped('gtceuterminal:dismantler', [
+    //     'ABA',
+    //     'CDC',
+    //     'CEC'
+    // ], {
+    //     A: 'gtceu:_bolt',
+    //     B: 'gtceu:computer_monitor_cover',
+    //     C: 'gtceu:iron_plate',
+    //     D: '#gtceu:circuits/mv',
+    //     E: 'astrogreg:fine_etrium_wire'
+    // })
+    // .addMaterialInfo()
 })

@@ -3,7 +3,7 @@ ServerEvents.recipes(event => {
     const gt = event.recipes.gtceu
 
     //#region shaped recipes
-    event.shaped('create:precision_mechanism', [
+    gt.shaped('create:precision_mechanism', [
         'ADA',
         'BCB',
         'ABA'
@@ -13,8 +13,9 @@ ServerEvents.recipes(event => {
         C: 'gtceu:gold_plate',
         D: '#forge:tools/screwdrivers'
     })
+    .addMaterialInfo()
 
-    event.shaped('createaddition:rolling_mill', [
+    gt.shaped('createaddition:rolling_mill', [
         'ABA',
         'CBC',
         'CDC'
@@ -24,24 +25,27 @@ ServerEvents.recipes(event => {
         C: 'create:andesite_alloy',
         D: 'create:gearbox'
     })
+    .addMaterialInfo()
 
-    event.shaped('create:polished_rose_quartz', [
+    gt.shaped('create:polished_rose_quartz', [
         'B ',
         ' A'
     ], {
         A: 'create:rose_quartz',
         B: '#forge:tools/files'
     })
+    .addMaterialInfo()
 
-    event.shaped('create:fluid_valve', [
+    gt.shaped('create:fluid_valve', [
         'A',
         'B'
     ], {
         A: '#create:valve_handles',
         B: 'create:fluid_pipe'
     })
+    .addMaterialInfo()
 
-    event.shaped('create:controller_rail', [
+    gt.shaped('create:controller_rail', [
         'AEA',
         'BDB',
         'CFC'
@@ -53,8 +57,9 @@ ServerEvents.recipes(event => {
         E: 'create:electron_tube',
         F: '#forge:tools/screwdrivers'
     })
+    .addMaterialInfo()
 
-    event.shaped('create:water_wheel', [
+    gt.shaped('create:water_wheel', [
         'AAA',
         'ABA',
         'AAA'
@@ -62,8 +67,9 @@ ServerEvents.recipes(event => {
         A: 'gtceu:treated_wood_planks',
         B: 'create:cogwheel'
     })
+    .addMaterialInfo()
 
-    event.shaped('create:large_water_wheel', [
+    gt.shaped('create:large_water_wheel', [
         'AAA',
         'ABA',
         'AAA'
@@ -71,8 +77,9 @@ ServerEvents.recipes(event => {
         A: 'gtceu:treated_wood_planks',
         B: 'create:water_wheel'
     })
+    .addMaterialInfo()
 
-    event.shaped('create:fluid_tank', [
+    gt.shaped('create:fluid_tank', [
         'AAA',
         'B B',
         'AAA'
@@ -80,8 +87,9 @@ ServerEvents.recipes(event => {
         A: 'gtceu:copper_plate',
         B: 'gtceu:tempered_glass'
     })
+    .addMaterialInfo()
 
-    event.shaped('2x create:white_sail', [
+    gt.shaped('2x create:white_sail', [
         'CAC',
         'BAB',
         'CAC'
@@ -90,8 +98,9 @@ ServerEvents.recipes(event => {
         B: '#forge:rods/wooden',
         C: 'farmersdelight:rope'
     })
+    .addMaterialInfo()
 
-    event.shaped('create:andesite_funnel', [
+    gt.shaped('create:andesite_funnel', [
         'ABA',
         'ACA'
     ], {
@@ -99,8 +108,9 @@ ServerEvents.recipes(event => {
         B: 'gtceu:iron_plate',
         C: 'farmersdelight:canvas'
     })
+    .addMaterialInfo()
 
-    event.shaped('create:brass_funnel', [
+    gt.shaped('create:brass_funnel', [
         'ABA',
         'ACA'
     ], {
@@ -108,8 +118,9 @@ ServerEvents.recipes(event => {
         B: 'create:electron_tube',
         C: 'farmersdelight:canvas'
     })
+    .addMaterialInfo()
 
-    event.shaped('create:andesite_tunnel', [
+    gt.shaped('create:andesite_tunnel', [
         'ABA',
         'ACA',
         'ACA'
@@ -118,8 +129,9 @@ ServerEvents.recipes(event => {
         B: 'gtceu:iron_plate',
         C: 'farmersdelight:canvas'
     })
+    .addMaterialInfo()
 
-    event.shaped('create:brass_tunnel', [
+    gt.shaped('create:brass_tunnel', [
         'ABA',
         'ACA',
         'ACA'
@@ -128,23 +140,26 @@ ServerEvents.recipes(event => {
         B: 'create:electron_tube',
         C: 'farmersdelight:canvas'
     })
+    .addMaterialInfo()
 
-    event.shaped('create:belt_connector', [
+    gt.shaped('create:belt_connector', [
         'AAA',
         'AAA'
     ], {
         A: 'farmersdelight:canvas'
     })
+    .addMaterialInfo()
 
-    event.shaped('farmersdelight:rope', [
+    gt.shaped('farmersdelight:rope', [
         'A',
         'A',
         'A'
     ], {
         A: 'farmersdelight:straw'
     })
+    .addMaterialInfo()
 
-    event.shaped('create:flywheel', [
+    gt.shaped('create:flywheel', [
         'BBB',
         'BAB',
         'BBB'
@@ -152,8 +167,9 @@ ServerEvents.recipes(event => {
         A: 'create:shaft',
         B: 'gtceu:brass_plate'
     })
+    .addMaterialInfo()
 
-    event.shaped('create:wrench', [
+    gt.shaped('create:wrench', [
         'A A',
         ' B ',
         ' C '
@@ -162,8 +178,9 @@ ServerEvents.recipes(event => {
         B: 'create:cogwheel',
         C: 'create:shaft'
     })
+    .addMaterialInfo()
 
-    event.shaped('create:cogwheel', [
+    gt.shaped('create:cogwheel', [
         ' C ',
         'BAB'
     ], {
@@ -171,8 +188,9 @@ ServerEvents.recipes(event => {
         B: '#minecraft:planks',
         C: '#forge:tools/saws'
     })
+    .addMaterialInfo()
 
-    event.shaped('create:large_cogwheel', [
+    gt.shaped('create:large_cogwheel', [
         'CA ',
         'ABA',
         ' A ',
@@ -181,8 +199,9 @@ ServerEvents.recipes(event => {
         B: 'create:shaft',
         C: '#forge:tools/saws'
     })
+    .addMaterialInfo()
 
-    event.shaped('create:piston_extension_pole', [
+    gt.shaped('create:piston_extension_pole', [
         ' A ',
         'CBD',
         ' A '
@@ -192,8 +211,9 @@ ServerEvents.recipes(event => {
         C: '#forge:tools/saws',
         D: '#forge:tools/files'
     })
+    .addMaterialInfo()
 
-    event.shaped('create:piston_extension_pole', [
+    gt.shaped('create:piston_extension_pole', [
         ' A ',
         'DBC',
         ' A '
@@ -203,16 +223,18 @@ ServerEvents.recipes(event => {
         C: '#forge:tools/saws',
         D: '#forge:tools/files'
     })
+    .addMaterialInfo()
 
-    event.shaped('create:spout', [
+    gt.shaped('create:spout', [
         'B',
         'A'
     ], {
         A: 'create:fluid_valve',
         B: 'create:fluid_tank'
     })
+    .addMaterialInfo()
 
-    event.shaped('create:whisk', [
+    gt.shaped('create:whisk', [
         ' A ',
         'BAB',
         'BBB'
@@ -220,8 +242,9 @@ ServerEvents.recipes(event => {
         A: 'create:shaft',
         B: 'gtceu:wrought_iron_rod'
     })
+    .addMaterialInfo()
 
-    event.shaped('create:mechanical_mixer', [
+    gt.shaped('create:mechanical_mixer', [
         ' A ',
         'DCD',
         ' B '
@@ -231,8 +254,9 @@ ServerEvents.recipes(event => {
         C: 'create:large_cogwheel',
         D: 'create:shaft'
     })
+    .addMaterialInfo()
 
-    event.shaped('create:deployer', [
+    gt.shaped('create:deployer', [
         'A',
         'B',
         'C'
@@ -241,8 +265,9 @@ ServerEvents.recipes(event => {
         B: 'create:piston_extension_pole',
         C: 'create:brass_hand'
     })
+    .addMaterialInfo()
 
-    event.shaped('create:brass_hand', [
+    gt.shaped('create:brass_hand', [
         ' A ',
         'CBC',
         ' C '
@@ -251,8 +276,9 @@ ServerEvents.recipes(event => {
         B: 'create:electron_tube',
         C: 'gtceu:brass_plate'
     })
+    .addMaterialInfo()
 
-    event.shaped('create:mechanical_crafter', [
+    gt.shaped('create:mechanical_crafter', [
         'ACA',
         ' B '
     ], {
@@ -260,8 +286,9 @@ ServerEvents.recipes(event => {
         B: 'create:brass_casing',
         C: 'create:large_cogwheel'
     })
+    .addMaterialInfo()
 
-    event.shaped('create:millstone', [
+    gt.shaped('create:millstone', [
         'ABA',
         'BCB',
         'ABA'
@@ -270,16 +297,18 @@ ServerEvents.recipes(event => {
         B: 'minecraft:smooth_stone',
         C: 'create:gearbox'
     })
+    .addMaterialInfo()
 
-    event.shaped('create:mechanical_saw', [
+    gt.shaped('create:mechanical_saw', [
         'B',
         'A'
     ], {
         A: 'create:gearbox',
         B: 'gtceu:wrought_iron_buzz_saw_blade'
     })
+    .addMaterialInfo()
 
-    event.shaped('create:mechanical_press', [
+    gt.shaped('create:mechanical_press', [
         'A',
         'B',
         'C'
@@ -288,8 +317,9 @@ ServerEvents.recipes(event => {
         B: 'create:gearbox',
         C: 'gtceu:wrought_iron_block'
     })
+    .addMaterialInfo()
 
-    event.shaped('create:mechanical_plough', [
+    gt.shaped('create:mechanical_plough', [
         'BCB',
         'BCB',
         ' A '
@@ -298,16 +328,18 @@ ServerEvents.recipes(event => {
         B: 'create:shaft',
         C: 'gtceu:wrought_iron_plate'
     })
+    .addMaterialInfo()
 
-    event.shaped('create:mechanical_drill', [
+    gt.shaped('create:mechanical_drill', [
         'B',
         'A'
     ], {
         A: 'create:gearbox',
         B: 'gtceu:wrought_iron_drill_head'
     })
+    .addMaterialInfo()
 
-    event.shaped('create:mechanical_harvester', [
+    gt.shaped('create:mechanical_harvester', [
         'CDC',
         'BDB',
         ' A '
@@ -317,14 +349,16 @@ ServerEvents.recipes(event => {
         C: 'gtceu:wrought_iron_gear',
         D: 'gtceu:wrought_iron_rod'
     })
+    .addMaterialInfo()
 
-    event.shaped('create:sticky_mechanical_piston', [
+    gt.shaped('create:sticky_mechanical_piston', [
         'A',
         'B'
     ], {
         A: 'gtceu:sticky_resin',
         B: 'create:mechanical_piston'
     })
+    .addMaterialInfo()
 
     event.recipes.create.mechanical_crafting('create:steam_engine', [
         'A',
@@ -336,8 +370,9 @@ ServerEvents.recipes(event => {
         B: 'create:fluid_valve',
         C: 'gtceu:brass_plate'
     })
+    .addMaterialInfo()
 
-    event.shaped('create:hose_pulley', [
+    gt.shaped('create:hose_pulley', [
         ' A ',
         'BBB',
         ' C '
@@ -346,8 +381,9 @@ ServerEvents.recipes(event => {
         B: 'gtceu:rubber_plate',
         C: 'create:fluid_pipe'
     })
+    .addMaterialInfo()
 
-    event.shaped('create:elevator_pulley', [
+    gt.shaped('create:elevator_pulley', [
         ' A ',
         'BBB',
         ' C '
@@ -356,8 +392,9 @@ ServerEvents.recipes(event => {
         B: 'minecraft:chain',
         C: 'create:shaft'
     })
+    .addMaterialInfo()
 
-    event.shaped('create:rope_pulley', [
+    gt.shaped('create:rope_pulley', [
         ' A ',
         'BBB',
         ' C '
@@ -366,48 +403,56 @@ ServerEvents.recipes(event => {
         B: 'farmersdelight:rope',
         C: 'create:shaft'
     })
+    .addMaterialInfo()
 
-    event.shaped('create:filter', [
+    gt.shaped('create:filter', [
         'BAB'
     ], {
         A: 'farmersdelight:canvas',
         B: 'gtceu:iron_foil'
     })
+    .addMaterialInfo()
     
-    event.shaped('create:package_filter', [
+    gt.shaped('create:package_filter', [
         'BAB'
     ], {
         A: 'farmersdelight:canvas',
         B: 'gtceu:zinc_foil'
     })
+    .addMaterialInfo()
     
-    event.shaped('create:attribute_filter', [
+    gt.shaped('create:attribute_filter', [
         'BAB'
     ], {
         A: 'farmersdelight:canvas',
         B: 'gtceu:brass_foil'
     })
+    .addMaterialInfo()
 
-    event.shaped('create:filter', [
+    gt.shaped('create:filter', [
         'BAB'
     ], {
         A: '#minecraft:wool',
         B: 'gtceu:iron_foil'
     })
+    .addMaterialInfo()
     
-    event.shaped('create:package_filter', [
+    gt.shaped('create:package_filter', [
         'BAB'
     ], {
         A: '#minecraft:wool',
         B: 'gtceu:zinc_foil'
     })
+    .addMaterialInfo()
     
-    event.shaped('create:attribute_filter', [
+    gt.shaped('create:attribute_filter', [
         'BAB'
     ], {
         A: '#minecraft:wool',
         B: 'gtceu:brass_foil'
     })
+    .addMaterialInfo()
+
     event.shapeless('create:speedometer', ['create:gearbox', 'minecraft:compass'])
     //#endregion
 
@@ -475,14 +520,15 @@ ServerEvents.recipes(event => {
     gt.lathe('lathing_shaft')
         .itemInputs('1x create:andesite_alloy')
         .itemOutputs('8x create:shaft')
-        .duration(80)
-        .EUt(15)
+        .duration(120)
+        .EUt(7)
 
     gt.cutter('cutting_shaft')
         .itemInputs('1x create:andesite_alloy')
         .itemOutputs('8x create:shaft')
         .duration(60)
         .EUt(15)
+        .addMaterialInfo(true)
 
     gt.lathe('lathe_polished_rose_quartz')
         .itemInputs('create:rose_quartz')
