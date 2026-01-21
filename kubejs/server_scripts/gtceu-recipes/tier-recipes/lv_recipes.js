@@ -118,7 +118,7 @@ ServerEvents.recipes(event => {
         .itemOutputs('gtceu:stone_dust')
         .chancedOutput('gtceu:iron_dust', 2000, 0)
         .duration(100)
-        .EUt(16)        
+        .EUt(16)
 
     gt.chemical_bath('treating_asteroid_dust')
         .itemInputs('astrogreg:asteroid_stone_dust')
@@ -166,7 +166,7 @@ ServerEvents.recipes(event => {
     //#endregion
 
 
-        
+
     //#region bottling
     gt.assembler('bottle_ender_air')
         .itemInputs('minecraft:glass_bottle')
