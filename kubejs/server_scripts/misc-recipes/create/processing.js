@@ -260,7 +260,7 @@ ServerEvents.recipes(event => {
     event.shapeless('createaddition:large_connector', ['gtceu:copper_rod', 'create:andesite_alloy', 'create:andesite_alloy']);
     event.shapeless('createaddition:connector', ['gtceu:copper_rod', 'create:andesite_alloy']);
 
-    event.shaped('createaddition:alternator', [
+    gt.shaped('createaddition:alternator', [
         'ACA',
         'BDB',
         'ACA'
@@ -269,9 +269,10 @@ ServerEvents.recipes(event => {
         B: 'gtceu:lv_electric_motor',
         C: 'create:shaft',
         D: 'gtceu:magnetic_steel_rod'
-    });
+    })
+    .addMaterialInfo()
 
-    event.shaped('createaddition:modular_accumulator', [
+    gt.shaped('createaddition:modular_accumulator', [
         'ABA',
         'DCD',
         'ABA'
@@ -280,9 +281,10 @@ ServerEvents.recipes(event => {
         B: 'powah:battery_starter',
         C: 'create:brass_casing',
         D: 'gtceu:red_alloy_plate'
-    });
+    })
+    .addMaterialInfo()
 
-    event.shaped('createaddition:electric_motor', [
+    gt.shaped('createaddition:electric_motor', [
         'ACA',
         'BDB',
         'ACA'
@@ -292,6 +294,7 @@ ServerEvents.recipes(event => {
         C: 'create:shaft',
         D: 'gtceu:magnetic_steel_rod'
     })
+    .addMaterialInfo()
     //#endregion
 
 
@@ -337,7 +340,10 @@ ServerEvents.recipes(event => {
     };
 
     Object.entries(excavationShapes).forEach(([item, pattern]) => {
-        event.shaped(item, pattern, excavationKeys[item]);
+        event.shaped(item, 
+            pattern, 
+            excavationKeys[item]
+        ).addMaterialInfo();
     })
 
     event.recipes.create.mechanical_crafting('createoreexcavation:drilling_machine', [
