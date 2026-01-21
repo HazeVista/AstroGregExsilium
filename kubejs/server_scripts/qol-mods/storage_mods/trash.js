@@ -1,6 +1,8 @@
 ServerEvents.recipes(event => {
 
-    event.shaped('trashcans:energy_trash_can', [
+    const gt = event.recipes.gtceu
+
+    gt.shaped('trashcans:energy_trash_can', [
         'ABA',
         'ACA',
         'DDD'
@@ -10,8 +12,9 @@ ServerEvents.recipes(event => {
         C: 'minecraft:redstone_block',
         D: 'gtceu:wrought_iron_plate'
     })
+    .addMaterialInfo()
 
-    event.shaped('trashcans:item_trash_can', [
+    gt.shaped('trashcans:item_trash_can', [
         'ABA',
         'ACA',
         'DDD'
@@ -21,8 +24,9 @@ ServerEvents.recipes(event => {
         C: 'minecraft:chest',
         D: 'gtceu:wrought_iron_plate'
     })
+    .addMaterialInfo()
 
-    event.shaped('trashcans:liquid_trash_can', [
+    gt.shaped('trashcans:liquid_trash_can', [
         'ABA',
         'ACA',
         'DDD'
@@ -32,8 +36,9 @@ ServerEvents.recipes(event => {
         C: 'minecraft:bucket',
         D: 'gtceu:wrought_iron_plate'
     })
+    .addMaterialInfo()
 
-    event.shaped('trashcans:ultimate_trash_can', [
+    gt.shaped('trashcans:ultimate_trash_can', [
         'ABA',
         'CDC',
         'AEA'
@@ -44,5 +49,6 @@ ServerEvents.recipes(event => {
         D: 'trashcans:energy_trash_can',
         E: 'trashcans:item_trash_can'
     })
+    .addMaterialInfo()
 
 })

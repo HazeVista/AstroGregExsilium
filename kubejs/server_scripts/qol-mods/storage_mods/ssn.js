@@ -1,25 +1,28 @@
 ServerEvents.recipes(event => {
-    //greggified by @tobyxlebron
+
+    const gt = event.recipes.gtceu
+
     //#region with machines
-    event.recipes.gtceu.assembler('assembler_kabels')
+    gt.assembler('assembler_kabels')
         .itemInputs('#forge:glass', 'gtceu:steel_double_wire')
         .inputFluids('gtceu:rubber 576')
         .itemOutputs('32x storagenetwork:kabel')
         .duration(100)
         .EUt(7)
 
-    event.recipes.gtceu.assembler('assembler_kabels_alt')
+    gt.assembler('assembler_kabels_alt')
         .itemInputs('#forge:glass', 'gtceu:iron_double_wire')
         .inputFluids('gtceu:rubber 576')
         .itemOutputs('16x storagenetwork:kabel')
         .duration(100)
         .EUt(7)
+        .addMaterialInfo()
     //#endregion
 
     
 
     //#region without machines
-    event.shaped('8x storagenetwork:kabel', [
+    gt.shaped('8x storagenetwork:kabel', [
         'AAA',
         'BCB',
         'AAA'
@@ -28,8 +31,9 @@ ServerEvents.recipes(event => {
         B: 'gtceu:iron_double_wire',
         C: '#forge:glass'
     })
+    .addMaterialInfo()
 
-    event.shaped('storagenetwork:import_filter_kabel', [
+    gt.shaped('storagenetwork:import_filter_kabel', [
         ' A ',
         'ABA',
         ' A '
@@ -37,8 +41,9 @@ ServerEvents.recipes(event => {
         A: 'storagenetwork:import_kabel',
         B: 'gtceu:item_filter'
     })
+    .addMaterialInfo()
 
-    event.shaped('2x storagenetwork:stock_upgrade', [
+    gt.shaped('2x storagenetwork:stock_upgrade', [
         ' B ',
         'ACA',
         ' B '
@@ -47,8 +52,9 @@ ServerEvents.recipes(event => {
         B: 'minecraft:redstone',
         C: 'laserio:logic_chip'
     })
+    .addMaterialInfo()
 
-    event.shaped('storagenetwork:import_kabel', [
+    gt.shaped('storagenetwork:import_kabel', [
         ' B ',
         'BAB',
         ' B '
@@ -56,8 +62,9 @@ ServerEvents.recipes(event => {
         A: 'minecraft:piston',
         B: 'storagenetwork:kabel'
     })
+    .addMaterialInfo()
 
-    event.shaped('storagenetwork:export_kabel', [
+    gt.shaped('storagenetwork:export_kabel', [
         ' B ',
         'BAB',
         ' B '
@@ -65,8 +72,9 @@ ServerEvents.recipes(event => {
         A: 'minecraft:sticky_piston',
         B: 'storagenetwork:kabel'
     })
+    .addMaterialInfo()
 
-    event.shaped('storagenetwork:storage_kabel', [
+    gt.shaped('storagenetwork:storage_kabel', [
         ' A ',
         'ABA',
         ' A '
@@ -74,8 +82,9 @@ ServerEvents.recipes(event => {
         A: 'storagenetwork:kabel',
         B: 'gtceu:wood_crate'
     })
+    .addMaterialInfo()
 
-    event.shaped('storagenetwork:filter_kabel', [
+    gt.shaped('storagenetwork:filter_kabel', [
         ' A ',
         'ABA',
         ' A '
@@ -83,17 +92,9 @@ ServerEvents.recipes(event => {
         A: 'storagenetwork:storage_kabel',
         B: 'gtceu:item_filter'
     })
+    .addMaterialInfo()
 
-    event.shaped('storagenetwork:storage_kabel', [
-        ' A ',
-        'ABA',
-        ' A '
-    ], {
-        A: 'storagenetwork:kabel',
-        B: 'gtceu:wood_crate'
-    })
-
-    event.shaped('storagenetwork:operation_upgrade', [
+    gt.shaped('storagenetwork:operation_upgrade', [
         ' B ',
         'CAC',
         ' B '
@@ -102,8 +103,9 @@ ServerEvents.recipes(event => {
         B: 'minecraft:redstone',
         C: 'create:polished_rose_quartz'
     })
+    .addMaterialInfo()
 
-    event.shaped('storagenetwork:single_upgrade', [
+    gt.shaped('storagenetwork:single_upgrade', [
         ' B ',
         'CAC',
         ' B '
@@ -112,8 +114,9 @@ ServerEvents.recipes(event => {
         B: 'minecraft:redstone',
         C: 'gtceu:iron_plate'
     })
+    .addMaterialInfo()
 
-    event.shaped('storagenetwork:slow_upgrade', [
+    gt.shaped('storagenetwork:slow_upgrade', [
         ' B ',
         'CAC',
         ' B '
@@ -122,8 +125,9 @@ ServerEvents.recipes(event => {
         B: 'gtceu:fine_tin_wire',
         C: 'gtceu:magnetic_iron_rod'
     })
+    .addMaterialInfo()
 
-    event.shaped('storagenetwork:speed_upgrade', [
+    gt.shaped('storagenetwork:speed_upgrade', [
         ' B ',
         'CAC',
         ' B '
@@ -132,8 +136,9 @@ ServerEvents.recipes(event => {
         B: 'gtceu:fine_copper_wire',
         C: 'gtceu:magnetic_iron_rod'
     })
+    .addMaterialInfo()
 
-    event.shaped('storagenetwork:stack_upgrade', [
+    gt.shaped('storagenetwork:stack_upgrade', [
         ' B ',
         'CAC',
         ' B '
@@ -142,8 +147,9 @@ ServerEvents.recipes(event => {
         B: 'gtceu:fine_gold_wire',
         C: 'gtceu:magnetic_iron_rod'
     })
+    .addMaterialInfo()
 
-    event.shaped('storagenetwork:inventory', [
+    gt.shaped('storagenetwork:inventory', [
         'CBC',
         'BAB',
         'CBC'
@@ -152,8 +158,9 @@ ServerEvents.recipes(event => {
         B: 'storagenetwork:kabel',
         C: 'gtceu:potin_screw'
     })
+    .addMaterialInfo()
 
-    event.shaped('storagenetwork:request', [
+    gt.shaped('storagenetwork:request', [
         'CBC',
         'BAB',
         'CBC'
@@ -162,8 +169,9 @@ ServerEvents.recipes(event => {
         B: 'minecraft:crafting_table',
         C: 'gtceu:double_gold_plate'
     })
+    .addMaterialInfo()
 
-    event.shaped('storagenetwork:collector', [
+    gt.shaped('storagenetwork:collector', [
         'CBC',
         'BAB',
         'CBC'
@@ -172,8 +180,9 @@ ServerEvents.recipes(event => {
         B: 'storagenetwork:speed_upgrade',
         C: 'gtceu:potin_screw'
     })
+    .addMaterialInfo()
 
-    event.shaped('storagenetwork:exchange', [
+    gt.shaped('storagenetwork:exchange', [
         'CBC',
         'BAB',
         'CBC'
@@ -182,8 +191,9 @@ ServerEvents.recipes(event => {
         B: 'storagenetwork:stack_upgrade',
         C: 'gtceu:potin_screw'
     })
+    .addMaterialInfo()
 
-    event.shaped('storagenetwork:inventory_remote', [
+    gt.shaped('storagenetwork:inventory_remote', [
         'ABA',
         'CDC',
         'AEA'
@@ -194,8 +204,9 @@ ServerEvents.recipes(event => {
         D: 'storagenetwork:master',
         E: '#forge:tools/screwdrivers'
     })
+    .addMaterialInfo()
 
-    event.shaped('storagenetwork:crafting_remote', [
+    gt.shaped('storagenetwork:crafting_remote', [
         'ABA',
         'CDC',
         'EFE'
@@ -207,8 +218,9 @@ ServerEvents.recipes(event => {
         E: 'gtceu:steel_crate',
         F: '#forge:tools/screwdrivers'
     })
+    .addMaterialInfo()
 
-    event.shaped('storagenetwork:request_expanded', [
+    gt.shaped('storagenetwork:request_expanded', [
         'BBB',
         'BAB',
         'BBB'
@@ -216,8 +228,9 @@ ServerEvents.recipes(event => {
         A: 'storagenetwork:request',
         B: 'minecraft:crafting_table'
     })
+    .addMaterialInfo()
 
-    event.shaped('storagenetwork:master', [
+    gt.shaped('storagenetwork:master', [
         'CBC',
         'BAB',
         'CBC'
@@ -226,5 +239,6 @@ ServerEvents.recipes(event => {
         B: 'storagenetwork:kabel',
         C: '#gtceu:circuits/ulv'
     })
+    .addMaterialInfo()
 
-});
+})

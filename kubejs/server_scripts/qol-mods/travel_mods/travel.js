@@ -1,15 +1,16 @@
 ServerEvents.recipes(event => {
     
-    event.shaped('travelanchors:travel_staff', [
+    event.recipes.gtceu.shaped('travelanchors:travel_staff', [
         '  A',
         ' B ',
         'B  '
     ], {
         A: 'minecraft:ender_pearl',
         B: 'gtceu:steel_rod'
-    });
+    })
+    .addMaterialInfo()
 
-    event.shaped('travelanchors:travel_anchor', [
+    event.recipes.gtceu.shaped('travelanchors:travel_anchor', [
         'ABA',
         'BCB',
         'ABA'
@@ -17,8 +18,8 @@ ServerEvents.recipes(event => {
         A: 'gtceu:double_steel_plate',
         B: 'minecraft:ender_pearl',
         C: '#forge:tools/hammers'
-    });
-    
+    })
+    .addMaterialInfo()
 
     event.shaped('waystones:warp_stone', [
         'BCB',
@@ -28,7 +29,7 @@ ServerEvents.recipes(event => {
         A: 'minecraft:ender_pearl',
         B: 'create:rose_quartz',
         C: 'minecraft:quartz'
-    });
+    })
 
     event.shaped('2x waystones:warp_dust', [
         'AB'

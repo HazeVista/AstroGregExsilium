@@ -1,6 +1,8 @@
 ServerEvents.recipes(event => {
 
-    event.shaped('constructionwand:stone_wand', [
+    const gt = event.recipes.gtceu
+
+    gt.shaped('constructionwand:stone_wand', [
         '  A',
         ' B ',
         'B  '
@@ -8,8 +10,9 @@ ServerEvents.recipes(event => {
         A: '#minecraft:stone_tool_materials',
         B: 'gtceu:iron_rod'
     })
+    .addMaterialInfo()
 
-    event.shaped('constructionwand:iron_wand', [
+    gt.shaped('constructionwand:iron_wand', [
         '  A',
         ' B ',
         'B  '
@@ -17,8 +20,9 @@ ServerEvents.recipes(event => {
         A: 'gtceu:iron_plate',
         B: 'gtceu:iron_rod'
     })
+    .addMaterialInfo()
 
-    event.shaped('constructionwand:diamond_wand', [
+    gt.shaped('constructionwand:diamond_wand', [
         '  A',
         ' B ',
         'B  '
@@ -26,8 +30,9 @@ ServerEvents.recipes(event => {
         A: 'gtceu:diamond_plate',
         B: 'gtceu:iron_rod'
     })
+    .addMaterialInfo()
 
-    event.shaped('constructionwand:core_destruction', [
+    gt.shaped('constructionwand:core_destruction', [
         'AAB',
         'ABA',
         'BAA'
@@ -35,8 +40,9 @@ ServerEvents.recipes(event => {
         A: 'minecraft:glass_pane',
         B: 'gtceu:red_alloy_plate'
     })
+    .addMaterialInfo()
 
-    event.shaped('constructionwand:core_angel', [
+    gt.shaped('constructionwand:core_angel', [
         'AAB',
         'ABA',
         'BAA'
@@ -44,5 +50,6 @@ ServerEvents.recipes(event => {
         A: 'minecraft:glass_pane',
         B: 'gtceu:gold_plate'
     })
+    .addMaterialInfo()
 
 })
