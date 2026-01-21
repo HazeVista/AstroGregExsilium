@@ -50,8 +50,8 @@ ServerEvents.recipes(event => {
     event.replaceInput({ output: 'gtceu:uv_hermetic_casing' }, 'gtceu:naquadah_large_fluid_pipe', 'gtceu:duranium_large_fluid_pipe')
     event.replaceInput({ output: 'gtceu:uhv_hermetic_casing' }, 'gtceu:duranium_large_fluid_pipe', 'astrogreg:polyamide_imide_large_fluid_pipe')
     event.replaceInput({}, '#forge:crops/cabbage', 'farmersdelight:cabbage_leaf')
-    event.replaceInput({ type: 'gtceu:mixer' }, 'gtceu:stone_dust', '#forge:stone_dust')
-    event.replaceInput({ type: 'gtceu:compressor' }, 'gtceu:stone_dust', '#forge:stone_dust')
+    event.replaceInput({ type: 'gtceu:mixer' }, 'gtceu:stone_dust', '#forge:stone_dusts')
+    event.replaceInput({ type: 'gtceu:compressor' }, 'gtceu:stone_dust', '#forge:stone_dusts')
     event.replaceInput({ output: 'megacells:bulk_cell_component' }, 'ae2:sky_dust', 'gtceu:netherite_dust')
     event.replaceInput({ output: 'megacells:bulk_item_cell' }, 'ae2:sky_dust', 'gtceu:dense_netherite_plate')
     event.replaceInput({ output: 'megacells:bulk_item_cell' }, 'minecraft:netherite_ingot', 'astrogreg:dense_futura_alloy_plate')
@@ -68,6 +68,8 @@ ServerEvents.recipes(event => {
     event.replaceInput({ output: 'createaddition:spool' }, 'minecraft:iron_nugget', 'gtceu:iron_bolt')
     event.replaceInput({}, 'gtceu:hsss_round', 'gtceu:netherite_round')
     event.replaceInput({ id: 'minecraft:brown_dye' }, 'minecraft:cocoa_beans', 'gtceu:cocoa_dust')
+    event.replaceInput({ id: 'gtceu:shaped/steam_boiler_solar_steel' }, 'minecraft:glass', 'gtceu:tempered_glass')
+    event.replaceInput({ output: 'gtceu:steam_machine_casing' }, 'minecraft:bricks', 'gtceu:firebricks')
     // event.replaceInput({ input: ''}, '', '')
     //#endregion
     

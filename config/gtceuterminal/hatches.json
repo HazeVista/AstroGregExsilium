@@ -1,0 +1,132 @@
+{
+  "version": "1.0",
+  "description": "GTCEu Terminal - Hatch Configuration (Fluid I/O)",
+  "hatches": [
+    {
+      "blockId": "gtceu:lv_input_hatch",
+      "displayName": "LV Input Hatch",
+      "tierName": "LV",
+      "tier": 1,
+      "hatchType": "INPUT"
+    },
+    {
+      "blockId": "gtceu:lv_output_hatch",
+      "displayName": "LV Output Hatch",
+      "tierName": "LV",
+      "tier": 1,
+      "hatchType": "OUTPUT"
+    },
+    {
+      "blockId": "gtceu:mv_input_hatch",
+      "displayName": "MV Input Hatch",
+      "tierName": "MV",
+      "tier": 2,
+      "hatchType": "INPUT"
+    },
+    {
+      "blockId": "gtceu:mv_output_hatch",
+      "displayName": "MV Output Hatch",
+      "tierName": "MV",
+      "tier": 2,
+      "hatchType": "OUTPUT"
+    },
+    {
+      "blockId": "gtceu:hv_input_hatch",
+      "displayName": "HV Input Hatch",
+      "tierName": "HV",
+      "tier": 3,
+      "hatchType": "INPUT"
+    },
+    {
+      "blockId": "gtceu:hv_output_hatch",
+      "displayName": "HV Output Hatch",
+      "tierName": "HV",
+      "tier": 3,
+      "hatchType": "OUTPUT"
+    },
+    {
+      "blockId": "gtceu:ev_input_hatch",
+      "displayName": "EV Input Hatch",
+      "tierName": "EV",
+      "tier": 4,
+      "hatchType": "INPUT"
+    },
+    {
+      "blockId": "gtceu:ev_output_hatch",
+      "displayName": "EV Output Hatch",
+      "tierName": "EV",
+      "tier": 4,
+      "hatchType": "OUTPUT"
+    },
+    {
+      "blockId": "gtceu:iv_input_hatch",
+      "displayName": "IV Input Hatch",
+      "tierName": "IV",
+      "tier": 5,
+      "hatchType": "INPUT"
+    },
+    {
+      "blockId": "gtceu:iv_output_hatch",
+      "displayName": "IV Output Hatch",
+      "tierName": "IV",
+      "tier": 5,
+      "hatchType": "OUTPUT"
+    },
+    {
+      "blockId": "gtceu:luv_input_hatch",
+      "displayName": "LUV Input Hatch",
+      "tierName": "LUV",
+      "tier": 6,
+      "hatchType": "INPUT"
+    },
+    {
+      "blockId": "gtceu:luv_output_hatch",
+      "displayName": "LUV Output Hatch",
+      "tierName": "LUV",
+      "tier": 6,
+      "hatchType": "OUTPUT"
+    },
+    {
+      "blockId": "gtceu:zpm_input_hatch",
+      "displayName": "ZPM Input Hatch",
+      "tierName": "ZPM",
+      "tier": 7,
+      "hatchType": "INPUT"
+    },
+    {
+      "blockId": "gtceu:zpm_output_hatch",
+      "displayName": "ZPM Output Hatch",
+      "tierName": "ZPM",
+      "tier": 7,
+      "hatchType": "OUTPUT"
+    },
+    {
+      "blockId": "gtceu:uv_input_hatch",
+      "displayName": "UV Input Hatch",
+      "tierName": "UV",
+      "tier": 8,
+      "hatchType": "INPUT"
+    },
+    {
+      "blockId": "gtceu:uv_output_hatch",
+      "displayName": "UV Output Hatch",
+      "tierName": "UV",
+      "tier": 8,
+      "hatchType": "OUTPUT"
+    },
+    {
+      "blockId": "gtceu:uhv_input_hatch",
+      "displayName": "UHV Input Hatch",
+      "tierName": "UHV",
+      "tier": 9,
+      "hatchType": "INPUT"
+    },
+    {
+      "blockId": "gtceu:uhv_output_hatch",
+      "displayName": "UHV Output Hatch",
+      "tierName": "UHV",
+      "tier": 9,
+      "hatchType": "OUTPUT"
+    }
+  ]
+}

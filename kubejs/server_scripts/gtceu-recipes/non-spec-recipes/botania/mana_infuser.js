@@ -6,7 +6,7 @@ const purify = event.recipes.gtceu.mana_infusion
 //#region no catalyst
     //output, input, mana consumed in mb, duration in ticks, EUt
     const basic_infusions = [
-        ['botania:mana_powder', '#forge:stone_dust', 1, 100, 7],
+        ['botania:mana_powder', '#forge:stone_dusts', 1, 100, 7],
         ['botania:mana_diamond', 'minecraft:diamond', 100, 160, 28],
         ['botania:mana_diamond_block', '#forge:storage_blocks/diamond', 900, 1440, 28],
         ['gtbotania:exquisite_mana_diamond_gem', 'gtceu:exquisite_diamond_gem', 400, 640, 28],

@@ -56,7 +56,8 @@ ServerEvents.recipes(event => {
         'gtceu:uhv_fluid_passthrough_hatch', 'gtceu:uhv_machine_hull', 'gtceu:uhv_muffler_hatch', 'minecraft:spyglass', 'botania:mana_fluxfield', 'gtceu:terminal', 'gtceu:ev_electric_pump',
         'gtceu:iv_electric_pump', 'gtceu:ev_electric_piston', 'gtceu:iv_electric_piston', 'gtceu:ev_emitter', 'gtceu:iv_emitter', 'gtceu:ev_sensor', 'gtceu:iv_sensor', 'gtceu:ev_field_generator',
         'gtceu:iv_field_generator', 'gtceu:ev_robot_arm', 'gtceu:iv_robot_arm', 'gtceu:ev_conveyor_module', 'gtceu:iv_conveyor_module', 'botania:vial', 'botania:flask', 'minecraft:pitcher_pod', 
-        'minecraft:pitcher_plant', 'gtceuterminal:multi_strucure_manager', 'gtceuterminal:schematic_interface'
+        'minecraft:pitcher_plant', 'gtceuterminal:multi_strucure_manager', 'gtceuterminal:schematic_interface', 'gtceu:lv_solar_panel', 'gtceu:coke_oven', 'expatternprovider:tag_storage_bus', 
+        'expatternprovider:tag_export_bus', 'expatternprovider:mod_storage_bus', 'expatternprovider:mod_export_bus', 'gtceu:steam_grinder'
     ])
     //#endregion
 

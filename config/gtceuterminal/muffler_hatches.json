@@ -1,0 +1,70 @@
+{
+  "version": "1.0",
+  "description": "GTCEu Terminal - Muffler Hatch Configuration",
+  "note": "Muffler hatches reduce pollution from multiblock operations. Required for most multiblocks.",
+  "mufflerHatches": [
+    {
+      "blockId": "gtceu:lv_muffler_hatch",
+      "displayName": "LV Muffler Hatch",
+      "tierName": "LV",
+      "tier": 1,
+      "pollutionReduction": 0
+    },
+    {
+      "blockId": "gtceu:mv_muffler_hatch",
+      "displayName": "MV Muffler Hatch",
+      "tierName": "MV",
+      "tier": 2,
+      "pollutionReduction": 0
+    },
+    {
+      "blockId": "gtceu:hv_muffler_hatch",
+      "displayName": "HV Muffler Hatch",
+      "tierName": "HV",
+      "tier": 3,
+      "pollutionReduction": 0
+    },
+    {
+      "blockId": "gtceu:ev_muffler_hatch",
+      "displayName": "EV Muffler Hatch",
+      "tierName": "EV",
+      "tier": 4,
+      "pollutionReduction": 0
+    },
+    {
+      "blockId": "gtceu:iv_muffler_hatch",
+      "displayName": "IV Muffler Hatch",
+      "tierName": "IV",
+      "tier": 5,
+      "pollutionReduction": 0
+    },
+    {
+      "blockId": "gtceu:luv_muffler_hatch",
+      "displayName": "LUV Muffler Hatch",
+      "tierName": "LUV",
+      "tier": 6,
+      "pollutionReduction": 0
+    },
+    {
+      "blockId": "gtceu:zpm_muffler_hatch",
+      "displayName": "ZPM Muffler Hatch",
+      "tierName": "ZPM",
+      "tier": 7,
+      "pollutionReduction": 0
+    },
+    {
+      "blockId": "gtceu:uv_muffler_hatch",
+      "displayName": "UV Muffler Hatch",
+      "tierName": "UV",
+      "tier": 8,
+      "pollutionReduction": 0
+    },
+    {
+      "blockId": "gtceu:uhv_muffler_hatch",
+      "displayName": "UHV Muffler Hatch",
+      "tierName": "UHV",
+      "tier": 9,
+      "pollutionReduction": 0
+    }
+  ]
+}

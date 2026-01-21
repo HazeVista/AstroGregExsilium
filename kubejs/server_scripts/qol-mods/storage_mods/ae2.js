@@ -15,6 +15,7 @@ ServerEvents.recipes(event => {
             .itemOutputs(`2x ${processor}`)
             .duration(300)
             .EUt(100)
+            .addMaterialInfo(true, true)
     }
 
     gt.inscription('inscribe_accumulation_processor')
@@ -31,7 +32,7 @@ ServerEvents.recipes(event => {
     //#region dust mixing
     for (const [input, output, d, eut] of [
         [['gtceu:ender_pearl_dust', 'minecraft:blaze_powder'], '2x gtceu:ender_eye_dust', 160, 9],
-        [['#forge:dusts/certus_quartz', '3x #forge:stone_dust'], '4x ae2:sky_dust', 160, 120],
+        [['#forge:dusts/certus_quartz', '3x #forge:stone_dusts'], '4x ae2:sky_dust', 160, 120],
         [['4x gtceu:stainless_steel_dust', 'ae2:sky_dust'], '5x astrogreg:futura_alloy_dust', 200, 450],
         [['8x ae2:fluix_dust', 'gtceu:ender_eye_dust'], 'astrogreg:fluix_pearl_dust', 240, 480],
         [['#forge:dusts/certus_quartz', 'gtceu:obsidian_dust', 'minecraft:redstone'], '3x ae2:fluix_dust', 200, 520]
@@ -128,23 +129,61 @@ ServerEvents.recipes(event => {
     
     //#region buses
     for (const type of ['import', 'export']) {
-        event.shaped(`ae2:${type}_bus`, type == "import" ? [' B ', 'CAC'] : ['ACA', ' B '], {
+        gt.shaped(`ae2:${type}_bus`, type == "import" ? [' B ', 'CAC'] : ['ACA', ' B '], {
             A: 'astrogreg:futura_alloy_plate',
             B: type == 'import' ? 'minecraft:sticky_piston' : 'minecraft:piston',
             C: type == 'import' ? 'ae2:annihilation_core' : 'ae2:formation_core'
         })
+        .addMaterialInfo()
     }
+
+    gt.shaped('expatternprovider:tag_storage_bus', [
+        'ABC'
+    ], {
+        A: 'ae2:logic_processor',
+        B: 'ae2:storage_bus',
+        C: 'gtceu:item_smart_filter'
+    })
+    .addMaterialInfo()
+
+    gt.shaped('expatternprovider:tag_export_bus', [
+        'ABC'
+    ], {
+        A: 'ae2:logic_processor',
+        B: 'ae2:export_bus',
+        C: 'gtceu:item_smart_filter'
+    })
+    .addMaterialInfo()
+
+    gt.shaped('expatternprovider:mod_storage_bus', [
+        'ABC'
+    ], {
+        A: 'ae2:calculation_processor',
+        B: 'ae2:storage_bus',
+        C: 'gtceu:item_smart_filter'
+    })
+    .addMaterialInfo()
+
+    gt.shaped('expatternprovider:mod_export_bus', [
+        'ABC'
+    ], {
+        A: 'ae2:calculation_processor',
+        B: 'ae2:export_bus',
+        C: 'gtceu:item_smart_filter'
+    })
+    .addMaterialInfo()
     // #endregion
 
 
 
     //#region assembler matrix
     for (const type of ['wall', 'frame', 'glass']) {
-        event.shaped(`2x expatternprovider:assembler_matrix_${type}`, ['BCB', 'CAC', 'BCB'], {
+        gt.shaped(`2x expatternprovider:assembler_matrix_${type}`, ['BCB', 'CAC', 'BCB'], {
             A: 'astrogreg:futura_alloy_frame',
             B: type == 'wall' ? 'gtceu:certus_quartz_plate' : type == 'frame' ? 'astrogreg:futura_alloy_plate' : 'gtceu:glass_plate',
             C: '#ae2:smart_cable'
         })
+        .addMaterialInfo()
     }
     // #endregion
     
@@ -152,11 +191,12 @@ ServerEvents.recipes(event => {
     
     //#region upgrade cards
     for (const type of ['basic', 'advanced']) {
-        event.shaped(`2x ae2:${type}_card`, ['AAC', 'BAC', 'AA '], {
+        gt.shaped(`2x ae2:${type}_card`, ['AAC', 'BAC', 'AA '], {
             A: 'gtceu:iron_plate',
             B: 'ae2:calculation_processor',
             C: type == 'basic' ? 'gtceu:gold_bolt' : 'gtceu:diamond_bolt'
         })
+        .addMaterialInfo()
     }
 
     for (const [output, component] of [
@@ -173,9 +213,24 @@ ServerEvents.recipes(event => {
 
 
     //#region gem recipes
-    gt.polarizer('polarize_certus').itemInputs('ae2:certus_quartz_crystal').itemOutputs('ae2:charged_certus_quartz_crystal').duration(150).EUt(400)
-    gt.macerator('macerate_fluix').itemInputs('ae2:fluix_crystal').itemOutputs('ae2:fluix_dust').duration(200)
-    gt.centrifuge('centrifuge_fluix_pearl_dust').itemInputs('astrogreg:fluix_pearl_dust').itemOutputs('8x ae2:fluix_dust', 'gtceu:ender_eye_dust').duration(240).EUt(120)
+    gt.polarizer('polarize_certus')
+    .itemInputs('ae2:certus_quartz_crystal')
+    .itemOutputs('ae2:charged_certus_quartz_crystal')
+    .duration(150)
+    .EUt(400)
+
+    gt.macerator('macerate_fluix')
+    .itemInputs('ae2:fluix_crystal')
+    .itemOutputs('ae2:fluix_dust')
+    .duration(200)
+    .EUt(7)
+
+    gt.centrifuge('centrifuge_fluix_pearl_dust')
+    .itemInputs('astrogreg:fluix_pearl_dust')
+    .itemOutputs('8x ae2:fluix_dust', 'gtceu:ender_eye_dust')
+    .duration(240)
+    .EUt(120)
+
     event.shaped('ae2:quartz_block', ['AA', 'AA'], { A: 'ae2:certus_quartz_crystal' })
 
         

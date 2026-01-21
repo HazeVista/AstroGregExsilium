@@ -7,69 +7,72 @@ ServerEvents.recipes(event => {
         ['iv', 'tungsten_steel', 'tungsten_carbide', 'tungsten', 'samarium_iron_arsenic_oxide', 'iridium', 'gtceu:quantum_star', 6000]
     ]
 
-    const rubbers = [['gtceu:styrene_butadiene_rubber', 'styrene_butadiene_rubber'], ['gtceu:silicone_rubber', 'silicone_rubber']]
+    const rubbers = [
+        ['gtceu:styrene_butadiene_rubber', 'styrene_butadiene_rubber'],
+        ['gtceu:silicone_rubber', 'silicone_rubber']
+    ]
 
     tieredParts.forEach(([tier, metal1, metal2, cable, wire, metal3, tip, EU]) => {
 
-        rubbers.forEach(([rubber, type]) => {
-
-            gt(`${tier}_electric_pump_${type}`)
+        rubbers.forEach(([rubberItem, rubberType]) => {
+            
+            gt(`${tier}_electric_pump_${rubberType}`)
                 .itemInputs(`gtceu:${tier}_electric_motor`, `gtceu:${metal1}_plate`, `gtceu:${metal1}_normal_fluid_pipe`, 
-                    `2x gtceu:${metal1}_screw`, `gtceu:${metal1}_rotor`, `4x ${rubber}_ring`, `2x gtceu:${cable}_single_cable`)
+                    `2x gtceu:${metal1}_screw`, `gtceu:${metal1}_rotor`, `4x ${rubberItem}_ring`, `2x gtceu:${cable}_single_cable`)
                 .inputFluids('gtceu:soldering_alloy 144')
                 .itemOutputs(`gtceu:${tier}_electric_pump`)
                 .duration(100)
                 .EUt(EU)
 
-            gt(`${tier}_conveyor_module_${type}`)
+            gt(`${tier}_conveyor_module_${rubberType}`)
                 .itemInputs(`2x gtceu:${tier}_electric_motor`, `2x gtceu:${metal2}_sleeve`, 
                     `8x gtceu:${metal2}_round`, `2x gtceu:${cable}_single_cable`)
-                .inputFluids(`${rubber} 864`)
-                .inputFluids('gtceu:soldering_alloy 144')
+                .inputFluids(`${rubberItem} 864`)
                 .itemOutputs(`gtceu:${tier}_conveyor_module`)
                 .duration(100)
                 .EUt(EU)
 
         })
             
-            gt(`${tier}_electric_piston`)
-                .itemInputs(`gtceu:${tier}_electric_motor`, `4x gtceu:${metal1}_plate`, `2x gtceu:${metal1}_rod`, 
-                    `8x gtceu:${metal2}_round`, `2x gtceu:small_${metal1}_gear`, `2x gtceu:${cable}_single_cable`)
-                .inputFluids('gtceu:soldering_alloy 144')
-                .itemOutputs(`gtceu:${tier}_electric_piston`)
-                .duration(100)
-                .EUt(EU)
+        gt(`${tier}_electric_piston`)
+            .itemInputs(`gtceu:${tier}_electric_motor`, `4x gtceu:${metal1}_plate`, `2x gtceu:${metal1}_rod`, 
+                `8x gtceu:${metal2}_round`, `2x gtceu:small_${metal1}_gear`, `2x gtceu:${cable}_single_cable`)
+            .inputFluids('gtceu:soldering_alloy 144')
+            .itemOutputs(`gtceu:${tier}_electric_piston`)
+            .duration(100)
+            .EUt(EU)
 
-            gt(`${tier}_robot_arm`)
-                .itemInputs(`gtceu:${tier}_electric_piston`, `2x gtceu:${tier}_electric_motor`, `2x gtceu:${metal1}_rod`,
-                    `gtceu:${metal1}_gear`, `2x gtceu:small_${metal1}_gear`, `#gtceu:circuits/${tier}`, `gtceu:${cable}_single_cable`)
-                .inputFluids('gtceu:soldering_alloy 144')
-                .itemOutputs(`gtceu:${tier}_robot_arm`)
-                .duration(100)
-                .EUt(EU)
+        gt(`${tier}_robot_arm`)
+            .itemInputs(`gtceu:${tier}_electric_piston`, `2x gtceu:${tier}_electric_motor`, `2x gtceu:${metal1}_rod`,
+                `gtceu:${metal1}_gear`, `2x gtceu:small_${metal1}_gear`, `#gtceu:circuits/${tier}`, `gtceu:${cable}_single_cable`)
+            .inputFluids('gtceu:soldering_alloy 144')
+            .itemOutputs(`gtceu:${tier}_robot_arm`)
+            .duration(100)
+            .EUt(EU)
 
-            gt(`${tier}_emitter`)
-                .itemInputs(`gtceu:${tier}_electric_motor`, `4x gtceu:${metal3}_rod`, `2x gtceu:${cable}_single_cable`, 
-                    `32x gtceu:${metal3}_foil`, `2x #gtceu:circuits/${tier}`, tip)
-                .inputFluids('gtceu:soldering_alloy 144')
-                .itemOutputs(`gtceu:${tier}_emitter`)
-                .duration(100)
-                .EUt(EU)
+        gt(`${tier}_emitter`)
+            .itemInputs(`gtceu:${tier}_electric_motor`, `4x gtceu:${metal3}_rod`, `2x gtceu:${cable}_single_cable`, 
+                `32x gtceu:${metal3}_foil`, `2x #gtceu:circuits/${tier}`, tip)
+            .inputFluids('gtceu:soldering_alloy 144')
+            .itemOutputs(`gtceu:${tier}_emitter`)
+            .duration(100)
+            .EUt(EU)
 
-            gt(`${tier}_sensor`)
-                .itemInputs(`gtceu:${tier}_electric_motor`, `4x gtceu:${metal1}_plate`, `2x #gtceu:circuits/${tier}`, 
-                    `gtceu:${metal3}_rod`, `2x gtceu:${cable}_single_cable`, `32x gtceu:${metal3}_foil`, tip)
-                .inputFluids('gtceu:soldering_alloy 144')
-                .itemOutputs(`gtceu:${tier}_sensor`)
-                .duration(100)
-                .EUt(EU)
+        gt(`${tier}_sensor`)
+            .itemInputs(`gtceu:${tier}_electric_motor`, `4x gtceu:${metal1}_plate`, `2x #gtceu:circuits/${tier}`, 
+                `gtceu:${metal3}_rod`, `2x gtceu:${cable}_single_cable`, `32x gtceu:${metal3}_foil`, tip)
+            .inputFluids('gtceu:soldering_alloy 144')
+            .itemOutputs(`gtceu:${tier}_sensor`)
+            .duration(100)
+            .EUt(EU)
 
-            gt(`${tier}_field_generator`)
-                .itemInputs(`6x gtceu:${metal1}_plate`, `2x #gtceu:circuits/${tier}`, `64x gtceu:fine_${wire}_wire`, tip, `4x gtceu:${cable}_single_cable`)
-                .inputFluids('gtceu:soldering_alloy 144')
-                .itemOutputs(`gtceu:${tier}_field_generator`)
-                .duration(100)
-                .EUt(EU)
+        gt(`${tier}_field_generator`)
+            .itemInputs(`6x gtceu:${metal1}_plate`, `2x #gtceu:circuits/${tier}`, `64x gtceu:fine_${wire}_wire`, tip, `4x gtceu:${cable}_single_cable`)
+            .inputFluids('gtceu:soldering_alloy 144')
+            .itemOutputs(`gtceu:${tier}_field_generator`)
+            .duration(100)
+            .EUt(EU)
 
     })
+    
 })

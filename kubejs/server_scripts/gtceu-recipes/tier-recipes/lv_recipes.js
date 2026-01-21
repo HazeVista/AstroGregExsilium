@@ -225,42 +225,4 @@ ServerEvents.recipes(event => {
         .EUt(7)
     //#endregion
 
-
-
-    //#region steam blasting
-    gt.shaped('astrogreg:steam_blast_furnace', [
-        'DBD',
-        'BCB',
-        'ABA'
-    ], {
-        A: '#gtceu:circuits/lv',
-        B: 'gtceu:bronze_plate',
-        C: 'gtceu:primitive_blast_furnace',
-        D: 'gtceu:bronze_screw'
-    })
-    .addMaterialInfo()
-
-    //recipe id, output, input, base pbf duration in seconds (will be multiplied by 2 then by 20)
-    const toSteamBlast = [
-        ['gtceu:steel_ingot', 'minecraft:iron_ingot', 90],
-        ['gtceu:steel_ingot', 'gtceu:wrought_iron_ingot', 40],
-        ['gtceu:steel_block', 'minecraft:iron_block', 810],
-        ['gtceu:steel_block', 'gtceu:wrought_iron_block', 360],
-        ['gtceu:damascus_steel', 'gtceu:steel', 60],
-        ['botania:manasteel_ingot', 'gtbotania:manasteel_dust', 45],
-    ]
-
-    toSteamBlast.forEach(([output, input, duration]) => {
-
-        const id = `${input.replace(/:/g, '_')}_to_${output.replace(/:/g, '_')}`
-
-        gt.steam_blast_furnace(id)
-            .itemInputs(input)
-            .itemOutputs(output)
-            .duration(duration * 40)
-            .EUt(32)
-
-    })
-    //#endregion
-
 })

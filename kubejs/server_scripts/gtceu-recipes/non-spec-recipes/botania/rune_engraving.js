@@ -2,7 +2,7 @@ ServerEvents.recipes(event => {
 const engrave = event.recipes.gtceu.rune_inscription
 
 //#region controller
-    event.shaped('gtceu:runic_engraver', [
+    event.recipes.gtceu.shaped('gtceu:runic_engraver', [
         'ECE',
         'ADA',
         'BAB'
@@ -189,21 +189,27 @@ const engrave = event.recipes.gtceu.rune_inscription
         ['mana_rune', 'botania:mana_pearl', 'botania:manaweave_cloth', 'botania:manasteel_ingot', 'botania:mana_diamond'],
         ['space_rune', 'ae2:fluix_crystal', 'astrogreg:asteroid_stone', 'minecraft:end_stone', 'botania:mana_diamond'],
         ['life_rune', 'botania:fire_rune', 'botania:air_rune', 'botania:earth_rune', 'botania:water_rune', 'botania:terrasteel_ingot'],
-        ['energy_rune', 'botania:fire_rune', '3x gtceu:red_alloy_dust', 'botania:manasteel_ingot']
+        // ['energy_rune', 'botania:fire_rune', '3x gtceu:red_alloy_dust', 'botania:manasteel_ingot'] needs 4th input
     ]
 
     advancedRunes.forEach(([rune, input1, input2, input3, input4, input5]) => {
-        const inputs = [input1, input2, input3, input4]
-        if (input5) inputs.push(input5)
-        inputs.push('botania:livingrock')
-        
-        engrave(rune)
-            .notConsumable('botania:terra_lens')
-            .itemInputs(inputs[0], inputs[1], inputs[2], inputs[3], inputs.length === 6 ? inputs[4] : inputs[3], inputs[inputs.length - 1])
-            .inputFluids('manafluid:mana 200')
-            .itemOutputs(`botania:${rune}`)
-            .duration(200)
-            .EUt(256)
+        if (input5) {
+            engrave(rune)
+                .notConsumable('botania:terra_lens')
+                .itemInputs(input1, input2, input3, input4, input5, 'botania:livingrock')
+                .inputFluids('manafluid:mana 200')
+                .itemOutputs(`botania:${rune}`)
+                .duration(200)
+                .EUt(256)
+        } else {
+            engrave(rune)
+                .notConsumable('botania:terra_lens')
+                .itemInputs(input1, input2, input3, input4, 'botania:livingrock')
+                .inputFluids('manafluid:mana 200')
+                .itemOutputs(`botania:${rune}`)
+                .duration(200)
+                .EUt(256)
+        }
     })
 //#endregion
 

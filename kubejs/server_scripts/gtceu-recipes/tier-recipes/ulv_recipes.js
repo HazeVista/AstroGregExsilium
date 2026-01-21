@@ -4,6 +4,7 @@ ServerEvents.recipes(event => {
 
     //#region misc
     event.shapeless('minecraft:farmland', ['#minecraft:hoe', 'minecraft:dirt'])
+    event.shapeless('gtceu:tin_alloy_dust', ['gtceu:iron_dust', 'gtceu:tin_dust'])
 
     gt.assembler('till_dirt')
       .itemInputs('minecraft:dirt')
@@ -367,6 +368,17 @@ ServerEvents.recipes(event => {
       .adjacentFluids('minecraft:water', 'minecraft:lava')
       .duration(16)
       .EUt(7)
+
+    gt.shaped('astrogreg:coke_oven', [
+      'ABA',
+      'BCB',
+      'ABA'
+    ], {
+      A: 'gtceu:coke_oven_bricks',
+      B: 'gtceu:iron_plate',
+      C: '#forge:tools/wrenches'
+    })
+    .addMaterialInfo()
     //#endregion
 
       

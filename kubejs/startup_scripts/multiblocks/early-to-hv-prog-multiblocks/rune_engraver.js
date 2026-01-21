@@ -21,7 +21,7 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
         )
 
     .workableCasingModel(
-            "kubejs:block/casings/machine_casing_manasteel_plated_bricks",
+            "astrogreg:block/generators/machine_casing_manasteel_plated_bricks",
             "astrogreg:block/multiblock/rune_engraver"
         )
 })

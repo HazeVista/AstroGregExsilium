@@ -1,0 +1,132 @@
+{
+  "version": "1.0",
+  "description": "GTCEu Terminal - Bus Configuration (Item I/O)",
+  "buses": [
+    {
+      "blockId": "gtceu:lv_input_bus",
+      "displayName": "LV Input Bus",
+      "tierName": "LV",
+      "tier": 1,
+      "busType": "INPUT"
+    },
+    {
+      "blockId": "gtceu:lv_output_bus",
+      "displayName": "LV Output Bus",
+      "tierName": "LV",
+      "tier": 1,
+      "busType": "OUTPUT"
+    },
+    {
+      "blockId": "gtceu:mv_input_bus",
+      "displayName": "MV Input Bus",
+      "tierName": "MV",
+      "tier": 2,
+      "busType": "INPUT"
+    },
+    {
+      "blockId": "gtceu:mv_output_bus",
+      "displayName": "MV Output Bus",
+      "tierName": "MV",
+      "tier": 2,
+      "busType": "OUTPUT"
+    },
+    {
+      "blockId": "gtceu:hv_input_bus",
+      "displayName": "HV Input Bus",
+      "tierName": "HV",
+      "tier": 3,
+      "busType": "INPUT"
+    },
+    {
+      "blockId": "gtceu:hv_output_bus",
+      "displayName": "HV Output Bus",
+      "tierName": "HV",
+      "tier": 3,
+      "busType": "OUTPUT"
+    },
+    {
+      "blockId": "gtceu:ev_input_bus",
+      "displayName": "EV Input Bus",
+      "tierName": "EV",
+      "tier": 4,
+      "busType": "INPUT"
+    },
+    {
+      "blockId": "gtceu:ev_output_bus",
+      "displayName": "EV Output Bus",
+      "tierName": "EV",
+      "tier": 4,
+      "busType": "OUTPUT"
+    },
+    {
+      "blockId": "gtceu:iv_input_bus",
+      "displayName": "IV Input Bus",
+      "tierName": "IV",
+      "tier": 5,
+      "busType": "INPUT"
+    },
+    {
+      "blockId": "gtceu:iv_output_bus",
+      "displayName": "IV Output Bus",
+      "tierName": "IV",
+      "tier": 5,
+      "busType": "OUTPUT"
+    },
+    {
+      "blockId": "gtceu:luv_input_bus",
+      "displayName": "LUV Input Bus",
+      "tierName": "LUV",
+      "tier": 6,
+      "busType": "INPUT"
+    },
+    {
+      "blockId": "gtceu:luv_output_bus",
+      "displayName": "LUV Output Bus",
+      "tierName": "LUV",
+      "tier": 6,
+      "busType": "OUTPUT"
+    },
+    {
+      "blockId": "gtceu:zpm_input_bus",
+      "displayName": "ZPM Input Bus",
+      "tierName": "ZPM",
+      "tier": 7,
+      "busType": "INPUT"
+    },
+    {
+      "blockId": "gtceu:zpm_output_bus",
+      "displayName": "ZPM Output Bus",
+      "tierName": "ZPM",
+      "tier": 7,
+      "busType": "OUTPUT"
+    },
+    {
+      "blockId": "gtceu:uv_input_bus",
+      "displayName": "UV Input Bus",
+      "tierName": "UV",
+      "tier": 8,
+      "busType": "INPUT"
+    },
+    {
+      "blockId": "gtceu:uv_output_bus",
+      "displayName": "UV Output Bus",
+      "tierName": "UV",
+      "tier": 8,
+      "busType": "OUTPUT"
+    },
+    {
+      "blockId": "gtceu:uhv_input_bus",
+      "displayName": "UHV Input Bus",
+      "tierName": "UHV",
+      "tier": 9,
+      "busType": "INPUT"
+    },
+    {
+      "blockId": "gtceu:uhv_output_bus",
+      "displayName": "UHV Output Bus",
+      "tierName": "UHV",
+      "tier": 9,
+      "busType": "OUTPUT"
+    }
+  ]
+}

@@ -1,0 +1,492 @@
+{
+  "version": "1.0",
+  "description": "GTCEu Terminal - Energy Hatch Configuration",
+  "energyHatches": [
+    {
+      "blockId": "gtceu:lv_energy_input_hatch",
+      "displayName": "LV Energy Input Hatch",
+      "tierName": "LV",
+      "tier": 1,
+      "energyType": "INPUT",
+      "capacity": 0,
+      "maxAmperage": 0
+    },
+    {
+      "blockId": "gtceu:lv_energy_input_hatch_4a",
+      "displayName": "LV 4A Energy Input Hatch",
+      "tierName": "LV",
+      "tier": 1,
+      "energyType": "INPUT",
+      "capacity": 0,
+      "maxAmperage": 0
+    },
+    {
+      "blockId": "gtceu:lv_energy_input_hatch_16a",
+      "displayName": "LV 16A Energy Input Hatch",
+      "tierName": "LV",
+      "tier": 1,
+      "energyType": "INPUT",
+      "capacity": 0,
+      "maxAmperage": 0
+    },
+    {
+      "blockId": "gtceu:lv_energy_output_hatch",
+      "displayName": "LV Energy Output Hatch",
+      "tierName": "LV",
+      "tier": 1,
+      "energyType": "OUTPUT",
+      "capacity": 0,
+      "maxAmperage": 0
+    },
+    {
+      "blockId": "gtceu:lv_energy_output_hatch_4a",
+      "displayName": "LV 4A Energy Output Hatch",
+      "tierName": "LV",
+      "tier": 1,
+      "energyType": "OUTPUT",
+      "capacity": 0,
+      "maxAmperage": 0
+    },
+    {
+      "blockId": "gtceu:lv_energy_output_hatch_16a",
+      "displayName": "LV 16A Energy Output Hatch",
+      "tierName": "LV",
+      "tier": 1,
+      "energyType": "OUTPUT",
+      "capacity": 0,
+      "maxAmperage": 0
+    },
+    {
+      "blockId": "gtceu:mv_energy_input_hatch",
+      "displayName": "MV Energy Input Hatch",
+      "tierName": "MV",
+      "tier": 2,
+      "energyType": "INPUT",
+      "capacity": 0,
+      "maxAmperage": 0
+    },
+    {
+      "blockId": "gtceu:mv_energy_input_hatch_4a",
+      "displayName": "MV 4A Energy Input Hatch",
+      "tierName": "MV",
+      "tier": 2,
+      "energyType": "INPUT",
+      "capacity": 0,
+      "maxAmperage": 0
+    },
+    {
+      "blockId": "gtceu:mv_energy_input_hatch_16a",
+      "displayName": "MV 16A Energy Input Hatch",
+      "tierName": "MV",
+      "tier": 2,
+      "energyType": "INPUT",
+      "capacity": 0,
+      "maxAmperage": 0
+    },
+    {
+      "blockId": "gtceu:mv_energy_output_hatch",
+      "displayName": "MV Energy Output Hatch",
+      "tierName": "MV",
+      "tier": 2,
+      "energyType": "OUTPUT",
+      "capacity": 0,
+      "maxAmperage": 0
+    },
+    {
+      "blockId": "gtceu:mv_energy_output_hatch_4a",
+      "displayName": "MV 4A Energy Output Hatch",
+      "tierName": "MV",
+      "tier": 2,
+      "energyType": "OUTPUT",
+      "capacity": 0,
+      "maxAmperage": 0
+    },
+    {
+      "blockId": "gtceu:mv_energy_output_hatch_16a",
+      "displayName": "MV 16A Energy Output Hatch",
+      "tierName": "MV",
+      "tier": 2,
+      "energyType": "OUTPUT",
+      "capacity": 0,
+      "maxAmperage": 0
+    },
+    {
+      "blockId": "gtceu:hv_energy_input_hatch",
+      "displayName": "HV Energy Input Hatch",
+      "tierName": "HV",
+      "tier": 3,
+      "energyType": "INPUT",
+      "capacity": 0,
+      "maxAmperage": 0
+    },
+    {
+      "blockId": "gtceu:hv_energy_input_hatch_4a",
+      "displayName": "HV 4A Energy Input Hatch",
+      "tierName": "HV",
+      "tier": 3,
+      "energyType": "INPUT",
+      "capacity": 0,
+      "maxAmperage": 0
+    },
+    {
+      "blockId": "gtceu:hv_energy_input_hatch_16a",
+      "displayName": "HV 16A Energy Input Hatch",
+      "tierName": "HV",
+      "tier": 3,
+      "energyType": "INPUT",
+      "capacity": 0,
+      "maxAmperage": 0
+    },
+    {
+      "blockId": "gtceu:hv_energy_output_hatch",
+      "displayName": "HV Energy Output Hatch",
+      "tierName": "HV",
+      "tier": 3,
+      "energyType": "OUTPUT",
+      "capacity": 0,
+      "maxAmperage": 0
+    },
+    {
+      "blockId": "gtceu:hv_energy_output_hatch_4a",
+      "displayName": "HV 4A Energy Output Hatch",
+      "tierName": "HV",
+      "tier": 3,
+      "energyType": "OUTPUT",
+      "capacity": 0,
+      "maxAmperage": 0
+    },
+    {
+      "blockId": "gtceu:hv_energy_output_hatch_16a",
+      "displayName": "HV 16A Energy Output Hatch",
+      "tierName": "HV",
+      "tier": 3,
+      "energyType": "OUTPUT",
+      "capacity": 0,
+      "maxAmperage": 0
+    },
+    {
+      "blockId": "gtceu:ev_energy_input_hatch",
+      "displayName": "EV Energy Input Hatch",
+      "tierName": "EV",
+      "tier": 4,
+      "energyType": "INPUT",
+      "capacity": 0,
+      "maxAmperage": 0
+    },
+    {
+      "blockId": "gtceu:ev_energy_input_hatch_4a",
+      "displayName": "EV 4A Energy Input Hatch",
+      "tierName": "EV",
+      "tier": 4,
+      "energyType": "INPUT",
+      "capacity": 0,
+      "maxAmperage": 0
+    },
+    {
+      "blockId": "gtceu:ev_energy_input_hatch_16a",
+      "displayName": "EV 16A Energy Input Hatch",
+      "tierName": "EV",
+      "tier": 4,
+      "energyType": "INPUT",
+      "capacity": 0,
+      "maxAmperage": 0
+    },
+    {
+      "blockId": "gtceu:ev_energy_output_hatch",
+      "displayName": "EV Energy Output Hatch",
+      "tierName": "EV",
+      "tier": 4,
+      "energyType": "OUTPUT",
+      "capacity": 0,
+      "maxAmperage": 0
+    },
+    {
+      "blockId": "gtceu:ev_energy_output_hatch_4a",
+      "displayName": "EV 4A Energy Output Hatch",
+      "tierName": "EV",
+      "tier": 4,
+      "energyType": "OUTPUT",
+      "capacity": 0,
+      "maxAmperage": 0
+    },
+    {
+      "blockId": "gtceu:ev_energy_output_hatch_16a",
+      "displayName": "EV 16A Energy Output Hatch",
+      "tierName": "EV",
+      "tier": 4,
+      "energyType": "OUTPUT",
+      "capacity": 0,
+      "maxAmperage": 0
+    },
+    {
+      "blockId": "gtceu:iv_energy_input_hatch",
+      "displayName": "IV Energy Input Hatch",
+      "tierName": "IV",
+      "tier": 5,
+      "energyType": "INPUT",
+      "capacity": 0,
+      "maxAmperage": 0
+    },
+    {
+      "blockId": "gtceu:iv_energy_input_hatch_4a",
+      "displayName": "IV 4A Energy Input Hatch",
+      "tierName": "IV",
+      "tier": 5,
+      "energyType": "INPUT",
+      "capacity": 0,
+      "maxAmperage": 0
+    },
+    {
+      "blockId": "gtceu:iv_energy_input_hatch_16a",
+      "displayName": "IV 16A Energy Input Hatch",
+      "tierName": "IV",
+      "tier": 5,
+      "energyType": "INPUT",
+      "capacity": 0,
+      "maxAmperage": 0
+    },
+    {
+      "blockId": "gtceu:iv_energy_output_hatch",
+      "displayName": "IV Energy Output Hatch",
+      "tierName": "IV",
+      "tier": 5,
+      "energyType": "OUTPUT",
+      "capacity": 0,
+      "maxAmperage": 0
+    },
+    {
+      "blockId": "gtceu:iv_energy_output_hatch_4a",
+      "displayName": "IV 4A Energy Output Hatch",
+      "tierName": "IV",
+      "tier": 5,
+      "energyType": "OUTPUT",
+      "capacity": 0,
+      "maxAmperage": 0
+    },
+    {
+      "blockId": "gtceu:iv_energy_output_hatch_16a",
+      "displayName": "IV 16A Energy Output Hatch",
+      "tierName": "IV",
+      "tier": 5,
+      "energyType": "OUTPUT",
+      "capacity": 0,
+      "maxAmperage": 0
+    },
+    {
+      "blockId": "gtceu:luv_energy_input_hatch",
+      "displayName": "LUV Energy Input Hatch",
+      "tierName": "LUV",
+      "tier": 6,
+      "energyType": "INPUT",
+      "capacity": 0,
+      "maxAmperage": 0
+    },
+    {
+      "blockId": "gtceu:luv_energy_input_hatch_4a",
+      "displayName": "LUV 4A Energy Input Hatch",
+      "tierName": "LUV",
+      "tier": 6,
+      "energyType": "INPUT",
+      "capacity": 0,
+      "maxAmperage": 0
+    },
+    {
+      "blockId": "gtceu:luv_energy_input_hatch_16a",
+      "displayName": "LUV 16A Energy Input Hatch",
+      "tierName": "LUV",
+      "tier": 6,
+      "energyType": "INPUT",
+      "capacity": 0,
+      "maxAmperage": 0
+    },
+    {
+      "blockId": "gtceu:luv_energy_output_hatch",
+      "displayName": "LUV Energy Output Hatch",
+      "tierName": "LUV",
+      "tier": 6,
+      "energyType": "OUTPUT",
+      "capacity": 0,
+      "maxAmperage": 0
+    },
+    {
+      "blockId": "gtceu:luv_energy_output_hatch_4a",
+      "displayName": "LUV 4A Energy Output Hatch",
+      "tierName": "LUV",
+      "tier": 6,
+      "energyType": "OUTPUT",
+      "capacity": 0,
+      "maxAmperage": 0
+    },
+    {
+      "blockId": "gtceu:luv_energy_output_hatch_16a",
+      "displayName": "LUV 16A Energy Output Hatch",
+      "tierName": "LUV",
+      "tier": 6,
+      "energyType": "OUTPUT",
+      "capacity": 0,
+      "maxAmperage": 0
+    },
+    {
+      "blockId": "gtceu:zpm_energy_input_hatch",
+      "displayName": "ZPM Energy Input Hatch",
+      "tierName": "ZPM",
+      "tier": 7,
+      "energyType": "INPUT",
+      "capacity": 0,
+      "maxAmperage": 0
+    },
+    {
+      "blockId": "gtceu:zpm_energy_input_hatch_4a",
+      "displayName": "ZPM 4A Energy Input Hatch",
+      "tierName": "ZPM",
+      "tier": 7,
+      "energyType": "INPUT",
+      "capacity": 0,
+      "maxAmperage": 0
+    },
+    {
+      "blockId": "gtceu:zpm_energy_input_hatch_16a",
+      "displayName": "ZPM 16A Energy Input Hatch",
+      "tierName": "ZPM",
+      "tier": 7,
+      "energyType": "INPUT",
+      "capacity": 0,
+      "maxAmperage": 0
+    },
+    {
+      "blockId": "gtceu:zpm_energy_output_hatch",
+      "displayName": "ZPM Energy Output Hatch",
+      "tierName": "ZPM",
+      "tier": 7,
+      "energyType": "OUTPUT",
+      "capacity": 0,
+      "maxAmperage": 0
+    },
+    {
+      "blockId": "gtceu:zpm_energy_output_hatch_4a",
+      "displayName": "ZPM 4A Energy Output Hatch",
+      "tierName": "ZPM",
+      "tier": 7,
+      "energyType": "OUTPUT",
+      "capacity": 0,
+      "maxAmperage": 0
+    },
+    {
+      "blockId": "gtceu:zpm_energy_output_hatch_16a",
+      "displayName": "ZPM 16A Energy Output Hatch",
+      "tierName": "ZPM",
+      "tier": 7,
+      "energyType": "OUTPUT",
+      "capacity": 0,
+      "maxAmperage": 0
+    },
+    {
+      "blockId": "gtceu:uv_energy_input_hatch",
+      "displayName": "UV Energy Input Hatch",
+      "tierName": "UV",
+      "tier": 8,
+      "energyType": "INPUT",
+      "capacity": 0,
+      "maxAmperage": 0
+    },
+    {
+      "blockId": "gtceu:uv_energy_input_hatch_4a",
+      "displayName": "UV 4A Energy Input Hatch",
+      "tierName": "UV",
+      "tier": 8,
+      "energyType": "INPUT",
+      "capacity": 0,
+      "maxAmperage": 0
+    },
+    {
+      "blockId": "gtceu:uv_energy_input_hatch_16a",
+      "displayName": "UV 16A Energy Input Hatch",
+      "tierName": "UV",
+      "tier": 8,
+      "energyType": "INPUT",
+      "capacity": 0,
+      "maxAmperage": 0
+    },
+    {
+      "blockId": "gtceu:uv_energy_output_hatch",
+      "displayName": "UV Energy Output Hatch",
+      "tierName": "UV",
+      "tier": 8,
+      "energyType": "OUTPUT",
+      "capacity": 0,
+      "maxAmperage": 0
+    },
+    {
+      "blockId": "gtceu:uv_energy_output_hatch_4a",
+      "displayName": "UV 4A Energy Output Hatch",
+      "tierName": "UV",
+      "tier": 8,
+      "energyType": "OUTPUT",
+      "capacity": 0,
+      "maxAmperage": 0
+    },
+    {
+      "blockId": "gtceu:uv_energy_output_hatch_16a",
+      "displayName": "UV 16A Energy Output Hatch",
+      "tierName": "UV",
+      "tier": 8,
+      "energyType": "OUTPUT",
+      "capacity": 0,
+      "maxAmperage": 0
+    },
+    {
+      "blockId": "gtceu:uhv_energy_input_hatch",
+      "displayName": "UHV Energy Input Hatch",
+      "tierName": "UHV",
+      "tier": 9,
+      "energyType": "INPUT",
+      "capacity": 0,
+      "maxAmperage": 0
+    },
+    {
+      "blockId": "gtceu:uhv_energy_input_hatch_4a",
+      "displayName": "UHV 4A Energy Input Hatch",
+      "tierName": "UHV",
+      "tier": 9,
+      "energyType": "INPUT",
+      "capacity": 0,
+      "maxAmperage": 0
+    },
+    {
+      "blockId": "gtceu:uhv_energy_input_hatch_16a",
+      "displayName": "UHV 16A Energy Input Hatch",
+      "tierName": "UHV",
+      "tier": 9,
+      "energyType": "INPUT",
+      "capacity": 0,
+      "maxAmperage": 0
+    },
+    {
+      "blockId": "gtceu:uhv_energy_output_hatch",
+      "displayName": "UHV Energy Output Hatch",
+      "tierName": "UHV",
+      "tier": 9,
+      "energyType": "OUTPUT",
+      "capacity": 0,
+      "maxAmperage": 0
+    },
+    {
+      "blockId": "gtceu:uhv_energy_output_hatch_4a",
+      "displayName": "UHV 4A Energy Output Hatch",
+      "tierName": "UHV",
+      "tier": 9,
+      "energyType": "OUTPUT",
+      "capacity": 0,
+      "maxAmperage": 0
+    },
+    {
+      "blockId": "gtceu:uhv_energy_output_hatch_16a",
+      "displayName": "UHV 16A Energy Output Hatch",
+      "tierName": "UHV",
+      "tier": 9,
+      "energyType": "OUTPUT",
+      "capacity": 0,
+      "maxAmperage": 0
+    }
+  ]
+}

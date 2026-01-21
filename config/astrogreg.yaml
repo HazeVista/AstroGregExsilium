@@ -1,19 +1,113 @@
-features:
-  # The max temperature of the Large Manasteel Mana Boiler
+Steam:
+  # The max temperature of the Large Manasteel Mana Boiler.
+  # Default:2000
   manasteelBoilerMaxTemperature: 2000
 
-  # The heat speed of the Large Manasteel Mana Boiler
+  # The heat speed of the Large Manasteel Mana Boiler.
+  # Default:1
   manasteelBoilerHeatSpeed: 1
 
-  # The max temperature of the Large Terrasteel Mana Boiler
+  # The max temperature of the Large Terrasteel Mana Boiler.
+  #  Default:3000
   terrasteelBoilerMaxTemperature: 3000
 
-  # The heat speed of the Large Terrasteel Mana Boiler
+  # The heat speed of the Large Terrasteel Mana Boiler.
+  #  Default:2
   terrasteelBoilerHeatSpeed: 2
 
-  # The max temperature of the Large Alfsteel Mana Boiler
+  # The max temperature of the Large Alfsteel Mana Boiler.
+  #  Default:4000
   alfsteelBoilerMaxTemperature: 4000
 
-  # The heat speed of the Large Alfsteel Mana Boiler
+  # The heat speed of the Large Alfsteel Mana Boiler.
+  #  Default:3
   alfsteelBoilerHeatSpeed: 3
 
+  # The base heat capacity (seconds per degree drop) when the boiler is smaller than the capacity point.
+  #  Default: 1
+  solarBaseCapacity: 1
+
+  # The amount of solar cells required to increase the heat capacity by 1 second.
+  # Default: 40
+  cellsPerCapacityPoint: 40
+
+  # The multiplier added to heat speed for every sunlit cell. (e.g. 0.01 = 1% faster per cell)
+  # Default: 0.01
+  heatSpeedPerCell: 0.01
+
+  # The base steam output per cell of the Solar Boiler Array in mB/t.
+  # Default: 80.0
+  baseSolarSpeed: 80.0
+
+  # The steam output multiplier applied to the Solar Boiler Array with MKII Solar Cells.
+  # Default: 2.25
+  etriumSolarSpeed: 2.25
+
+  # The steam output multiplier applied to the Solar Boiler Array with MKIII Solar Cells.
+  # Default: 5.00
+  vesniumSolarSpeed: 5.00
+
+  # The steam output multiplier applied to the Solar Boiler Array with MKIV Solar Cells.
+  # Default: 15.00
+  naqSolarSpeed: 15.00
+
+  # The amount of Steam produced per 1mB of Water.
+  # Default: 1.0
+  steamRatio: 1.0
+
+  # The temperature at which the Solar Boiler Array starts producing steam.
+  # Default: 50
+  boilingPoint: 50
+
+  # The base temperature in Kelvin gained per second when sunlit.
+  # Default: 2
+  baseHeatRate: 2
+
+  # The multiplier applied to the Moon dimension.
+  # Default: 1.2
+  moonMultiplier: 1.2
+
+  # The multiplier applied to the Venus dimension.
+  # Default: 0.5
+  venusMultiplier: 0.5
+
+  # The multiplier applied to the Mercury dimension.
+  # Default: 2.5
+  mercuryMultiplier: 2.5
+
+  # The multiplier applied to the Mars dimension.
+  # Default: 0.8
+  marsMultiplier: 0.8
+
+  # The multiplier applied to the Ceres dimension.
+  # Default: 0.7
+  ceresMultiplier: 0.7
+
+  # The multiplier applied to the Jupiter dimension.
+  # Default: 0.5
+  jupiterMultiplier: 0.5
+
+  # The multiplier applied to the Saturn dimension.
+  # Default: 0.4
+  saturnMultiplier: 0.4
+
+  # The multiplier applied to the Uranus dimension.
+  # Default: 0.25
+  uranusMultiplier: 0.25
+
+  # The multiplier applied to the Neptune dimension.
+  # Default: 0.2
+  neptuneMultiplier: 0.2
+
+  # The multiplier applied to the Pluto dimension.
+  # Default: 0.15
+  plutoMultiplier: 0.15
+
+  # The multiplier applied to the Kuiper Belt dimension.
+  # Default: 0.1
+  kuiperBeltMultiplier: 0.1
+
+  # The base speed multiplier for the Steam Blast Furnace.
+  # Works Inversely (e.g. 0.5 = 2x speed)
+  # Default: 2.0
+  SBFRecipeSpeed: 2.0

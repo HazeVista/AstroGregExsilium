@@ -150,11 +150,11 @@ ServerEvents.recipes(event => {
     ], {
         A: 'gtceu:tempered_glass',
         B: 'ad_astra:etrionic_core',
-        C: 'gtceu:double_silver_plate'
+        C: 'gtceu:steel_plate'
     })
 
     gt.assembler('photovoltaic_etrium_cell')
-        .itemInputs('3x gtceu:tempered_glass', '3x ad_astra:etrionic_core', '3x gtceu:double_silver_plate')
+        .itemInputs('3x gtceu:tempered_glass', '3x ad_astra:etrionic_core', '3x gtceu:steel_plate')
         .itemOutputs('ad_astra:photovoltaic_etrium_cell')
         .circuit(30)
         .duration(100)

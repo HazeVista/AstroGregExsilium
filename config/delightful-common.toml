@@ -82,6 +82,7 @@
 	passion_fruit_tart_slice = true
 	pumpkin_pie_slice = true
 	source_berry_pie_slice = true
+	mutton_pie_slice = true
 
 ["Registry & Recipes"]
 	acorn = true
@@ -186,4 +187,9 @@
 	give_sliced_directly = true
 	#Allow sliced melons to be juiced in-world (right click)
 	melon_juicing = true
+	aged_fish_roe = true
+	aged_prawn_roe = true
+	roe_blini = true
+	salmon_and_roe_blini = true
+	sinigang_cup = true
 

@@ -1,5 +1,7 @@
 ServerEvents.recipes(event => {
 
+    const gt = event.recipes.gtceu
+
     event.remove({ id: 'gtceu:research_station/1x_gtceu_me_pattern_buffer' })
     event.remove({ id: 'gtceu:scanner/1_x_gtceu_luv_dual_input_hatch' })
     event.remove({ id: 'gtceu:research_station/1x_gtceu_zpm_dual_input_hatch' })
@@ -9,8 +11,9 @@ ServerEvents.recipes(event => {
     event.remove({ id: 'gtceu:assembly_line/me_pattern_buffer' })
     event.remove({ id: 'gtceu:assembly_line/me_pattern_buffer_proxy' })
 
-    event.recipes.gtceu.assembly_line('me_pattern_buffer_proxy')
+    gt.assembly_line('me_pattern_buffer_proxy')
         .itemInputs('gtceu:me_pattern_buffer')
+        .itemInputs('astrogreg:futura_alloy_frame')
         .itemInputs('gtceu:luv_sensor')
         .itemInputs('gtceu:luv_emitter')
         .itemInputs('#gtceu:circuits/luv')
@@ -19,7 +22,7 @@ ServerEvents.recipes(event => {
         .itemInputs('48x gtceu:fine_indium_tin_barium_titanium_cuprate_wire')
         .inputFluids('gtceu:soldering_alloy 576')
         .itemOutputs('gtceu:me_pattern_buffer_proxy')
-        .duration(600)
+        .duration(300)
         .EUt(30720)
         .addMaterialInfo(true)
         ['scannerResearch(java.util.function.UnaryOperator)']
@@ -29,30 +32,33 @@ ServerEvents.recipes(event => {
                 .EUt(7680)
             )
 
-    event.recipes.gtceu.assembly_line('expanded_me_pattern_buffer_proxy')
-        .itemInputs('gtmutils:expanded_me_pattern_buffer')
+    gt.assembly_line('expanded_me_pattern_buffer_proxy')
+        .itemInputs('astrogreg:expanded_me_pattern_buffer')
+        .itemInputs('astrogreg:futura_alloy_frame')
         .itemInputs('gtceu:zpm_sensor')
         .itemInputs('gtceu:zpm_emitter')
         .itemInputs('#gtceu:circuits/zpm')
         .itemInputs('expandedae:exp_pattern_provider')
+        .itemInputs('4x ae2:capacity_card')
         .itemInputs('4x expatternprovider:wireless_connect')
         .itemInputs('64x gtceu:fine_uranium_rhodium_dinaquadide_wire')
         .itemInputs('32x gtceu:fine_uranium_rhodium_dinaquadide_wire')
         .inputFluids('gtceu:soldering_alloy 576')
-        .itemOutputs('gtmutils:expanded_me_pattern_buffer_proxy')
-        .duration(600)
+        .itemOutputs('astrogreg:expanded_me_pattern_buffer_proxy')
+        .duration(300)
         .EUt(122880)
         .addMaterialInfo(true)
         .stationResearch(
             researchRecipeBuilder => researchRecipeBuilder
-                .researchStack(Item.of(`gtmutils:expanded_me_pattern_buffer`))
+                .researchStack(Item.of(`astrogreg:expanded_me_pattern_buffer`))
                 .dataStack('gtceu:data_orb')
                 .CWUt(48, 128000)
                 .EUt(30720)
         )
 
-    event.recipes.gtceu.assembly_line('me_pattern_buffer')
+    gt.assembly_line('me_pattern_buffer')
         .itemInputs('gtceu:luv_machine_hull')
+        .itemInputs('astrogreg:futura_alloy_frame')
         .itemInputs('2x gtceu:luv_conveyor_module')
         .itemInputs('2x #gtceu:circuits/luv')
         .itemInputs('expatternprovider:ex_pattern_provider')
@@ -60,7 +66,7 @@ ServerEvents.recipes(event => {
         .itemInputs('2x gtceu:niobium_titanium_single_cable')
         .inputFluids('gtceu:soldering_alloy 576')
         .itemOutputs('gtceu:me_pattern_buffer')
-        .duration(600)
+        .duration(300)
         .EUt(30720)
         .addMaterialInfo(true)
         ['scannerResearch(java.util.function.UnaryOperator)']
@@ -70,16 +76,18 @@ ServerEvents.recipes(event => {
                 .EUt(7680)
             )
 
-    event.recipes.gtceu.assembly_line('expanded_me_pattern_buffer')
+    gt.assembly_line('expanded_me_pattern_buffer')
         .itemInputs('gtceu:zpm_machine_hull')
+        .itemInputs('astrogreg:futura_alloy_frame')
         .itemInputs('2x gtceu:zpm_conveyor_module')
         .itemInputs('2x #gtceu:circuits/zpm')
         .itemInputs('expandedae:exp_pattern_provider')
         .itemInputs('4x ae2:speed_card')
+        .itemInputs('4x ae2:capacity_card')
         .itemInputs('2x gtceu:vanadium_gallium_single_cable')
         .inputFluids('gtceu:soldering_alloy 576')
-        .itemOutputs('gtmutils:expanded_me_pattern_buffer')
-        .duration(600)
+        .itemOutputs('astrogreg:expanded_me_pattern_buffer')
+        .duration(300)
         .EUt(122880)
         .addMaterialInfo(true)
         .stationResearch(
@@ -89,4 +97,29 @@ ServerEvents.recipes(event => {
                 .CWUt(32, 132000)
                 .EUt(30720)
         )
+
+    gt.assembler('me_tag_input_bus')
+        .itemInputs('gtceu:iv_input_bus', 'expatternprovider:tag_storage_bus', 'gtceu:luv_conveyor_module', 'gtceu:iv_sensor', '4x ae2:speed_card')
+        .itemOutputs('astrogreg:me_tag_input_bus')
+        .duration(300)
+        .EUt(7680)
+        .addMaterialInfo(true)
+        
+    gt.assembler('me_tag_input_hatch')
+        .itemInputs('gtceu:iv_input_hatch', 'expatternprovider:tag_storage_bus', 'gtceu:luv_electric_pump', 'gtceu:iv_sensor', '4x ae2:speed_card')
+        .itemOutputs('astrogreg:me_tag_input_hatch')
+        .duration(300)
+        .EUt(7680)
+        .addMaterialInfo(true)
+
+    gt.shaped('astrogreg:water_input_hatch', [
+        'ABA',
+        'ACA',
+        'ABA'
+    ], {
+        A: 'gtceu:bronze_plate',
+        B: 'gtceu:tin_alloy_normal_fluid_pipe',
+        C: 'gtceu:bronze_drum'
+    })
+
 })

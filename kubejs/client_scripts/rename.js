@@ -82,23 +82,19 @@ ClientEvents.lang('en_us', event => {
         ['iv_parallel_hatch', '§9Basic Parallel Control Hatch'],
         ['luv_parallel_hatch', '§dAdvanced Parallel Control Hatch'],
         ['zpm_parallel_hatch', '§cElite Parallel Control Hatch'],
-        ['uv_parallel_hatch', '§3Ultimate Parallel Control Hatch']
+        ['uv_parallel_hatch', '§3Ultimate Parallel Control Hatch'],
+        ['crushing_wheels', 'Zeron Crushing Wheels']
     ])
 
     renameItems('gtceuterminal', [
         ['multi_structure_manager', '§cAstroTek§r§e Multiblock Manager'],
-        ['schematic_interface', '§cAstroTek§r§d Schematic Interface']
+        ['schematic_interface', '§cAstroTek§r§d Schematic Interface'],
+        ['dismantler', '§cAstroTek§r§5 Dismantler']
     ])
 
     const tiers = [
-        ['lv', '§7LV§r'],
-        ['mv', '§bMV§r'],
-        ['hv', '§6HV§r'],
-        ['ev', '§5EV§r'],
-        ['iv', '§9IV§r'],
-        ['luv', '§dLuV§r'],
-        ['zpm', '§cZPM§r'],
-        ['uv', '§3UV§r'],
+        ['lv', '§7LV§r'], ['mv', '§bMV§r'], ['hv', '§6HV§r'], ['ev', '§5EV§r'],
+        ['iv', '§9IV§r'], ['luv', '§dLuV§r'], ['zpm', '§cZPM§r'], ['uv', '§3UV§r'],
         ['uhv', '§4UHV§r']
     ]
 
@@ -117,14 +113,10 @@ ClientEvents.lang('en_us', event => {
     })
 
     const hermeticTiers = [
-        ['lv', '§7', 'I'],
-        ['mv', '§b', 'II'],
-        ['hv', '§6', 'III'],
-        ['ev', '§5', 'IV'],
-        ['iv', '§9', 'V'],
-        ['luv', '§d', 'VI'],
-        ['zpm', '§c', 'VII'],
-        ['uv', '§3', 'VII'],
+        ['lv', '§7', 'I'], ['mv', '§b', 'II'],
+        ['hv', '§6', 'III'], ['ev', '§5', 'IV'],
+        ['iv', '§9', 'V'], ['luv', '§d', 'VI'],
+        ['zpm', '§c', 'VII'], ['uv', '§3', 'VII'],
         ['uhv', '§4', 'VIII']
     ]
 

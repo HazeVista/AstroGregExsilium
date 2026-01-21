@@ -1,0 +1,42 @@
+{
+  "version": "1.0",
+  "description": "GTCEu Terminal - Parallel Hatch Configuration",
+  "note": "Parallel hatches enable parallel processing in multiblocks. Higher tiers \u003d more parallels.",
+  "parallelHatches": [
+    {
+      "blockId": "gtceu:iv_parallel_hatch",
+      "displayName": "Basic Parallel Hatch",
+      "tierName": "IV",
+      "tier": 5,
+      "maxParallel": 4
+    },
+    {
+      "blockId": "gtceu:luv_parallel_hatch",
+      "displayName": "Advanced Parallel Hatch",
+      "tierName": "LUV",
+      "tier": 6,
+      "maxParallel": 16
+    },
+    {
+      "blockId": "gtceu:zpm_parallel_hatch",
+      "displayName": "Elite Parallel Hatch",
+      "tierName": "ZPM",
+      "tier": 7,
+      "maxParallel": 64
+    },
+    {
+      "blockId": "gtceu:uv_parallel_hatch",
+      "displayName": "Ultimate Parallel Hatch",
+      "tierName": "UV",
+      "tier": 8,
+      "maxParallel": 256
+    },
+    {
+      "blockId": "astrogreg:uhv_parallel_hatch",
+      "displayName": "Quintessential Parallel Hatch",
+      "tierName": "UHV",
+      "tier": 9,
+      "maxParallel": 1024
+    }
+  ]
+}

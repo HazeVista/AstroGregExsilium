@@ -1,0 +1,54 @@
+{
+  "version": "1.0",
+  "description": "GTCEu Terminal - Coil Configuration",
+  "coils": [
+    {
+      "blockId": "gtceu:cupronickel_coil_block",
+      "displayName": "Cupronickel Coil",
+      "temperature": 1800,
+      "tier": 0
+    },
+    {
+      "blockId": "gtceu:kanthal_coil_block",
+      "displayName": "Kanthal Coil",
+      "temperature": 2700,
+      "tier": 1
+    },
+    {
+      "blockId": "gtceu:nichrome_coil_block",
+      "displayName": "Nichrome Coil",
+      "temperature": 3600,
+      "tier": 2
+    },
+    {
+      "blockId": "gtceu:rtm_alloy_coil_block",
+      "displayName": "RTM Alloy Coil",
+      "temperature": 4500,
+      "tier": 3
+    },
+    {
+      "blockId": "gtceu:hssg_coil_block",
+      "displayName": "HSS-G Coil",
+      "temperature": 5400,
+      "tier": 4
+    },
+    {
+      "blockId": "gtceu:naquadah_coil_block",
+      "displayName": "Naquadah Coil",
+      "temperature": 7200,
+      "tier": 5
+    },
+    {
+      "blockId": "gtceu:trinium_coil_block",
+      "displayName": "Trinium Coil",
+      "temperature": 9000,
+      "tier": 6
+    },
+    {
+      "blockId": "gtceu:tritanium_coil_block",
+      "displayName": "Tritanium Coil",
+      "temperature": 10800,
+      "tier": 7
+    }
+  ]
+}

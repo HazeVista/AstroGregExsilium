@@ -54,8 +54,28 @@ ItemEvents.tooltip(event => {
         { text: 'Available Recipe Types: Greenhouse Trees, Greenhouse Crops, Greenhouse Flowers' }
     ])
 
-    multiTooltip(event, 'gtceu:aether_engine', [
+    multiTooltip(event, 'astrogreg:aether_turbine', [
         { line: 3, text: 'Converts §3Æther§r into EU' }
+    ])
+
+    multiTooltip(event, 'astrogreg:steam_blast_furnace', [
+        { line: 1, text: 'Up to 4x Faster than a Primitive Blast Furnace' },
+    ])
+
+    multiTooltip(event, 'astrogreg:large_steam_centrifuge', [
+        { text: 'Separates Dusts into their Respective Components' },
+    ])
+
+    multiTooltip(event, 'astrogreg:large_steam_compressor', [
+        { text: 'Steam-Powered Compression' },
+    ])
+
+    multiTooltip(event, 'astrogreg:large_steam_ore_washer', [
+        { text: 'Steam-Powered Ore Washing' }
+    ])
+
+    multiTooltip(event, 'astrogreg:large_steam_macerator', [
+        { text: 'Maceration without the Byproducts' }   
     ])
     //#endregion
 
@@ -147,40 +167,40 @@ ItemEvents.tooltip(event => {
 
     //add tooltips below
     loreTooltip(event, 'farmersdelight:bacon_sandwich', [
-        { text: '§o§7Mmmmm... Tasty!§r§7 - Ubit3y'}
+        { text: '§o§7Mmmmm... Tasty!§r§7 - Ubit3y' }
     ])
 
     loreTooltip(event, 'minecraft:netherite_scrap', [
-        { text: '§o§7The unique remnants of an ancient civilization'}
+        { text: '§o§7The unique remnants of an ancient civilization' }
     ])
 
     loreTooltip(event, 'astrogreg:paradox_circuit_board', [
-        { line: 1, text: '§o§7One Board to Rule Them All'}
+        { line: 1, text: '§o§7One Board to Rule Them All' }
     ])
     
     loreTooltip(event, 'astrogreg:paradox_printed_circuit_board', [
-        { line: 1, text: '§o§7A Self-Contradicting Circuit Board'}
+        { line: 1, text: '§o§7A Self-Contradicting Circuit Board' }
     ])
 
     loreTooltip(event, 'astrogreg:paradox_processor_chip', [
-        { line: 1, text: '§o§7Too small to think, yet it anticipates'},
-        { line: 2, text: '§dLuV-Tier Circuit'}
+        { line: 1, text: '§o§7Too small to think, yet it anticipates' },
+        { line: 2, text: '§dLuV-Tier Circuit' }
     ])
     loreTooltip(event, 'astrogreg:paradox_processor', [
-        { line: 1, text: '§o§7It learns by remembering the future'},
-        { line: 2, text: '§dZPM-Tier Circuit'}
+        { line: 1, text: '§o§7It learns by remembering the future' },
+        { line: 2, text: '§dZPM-Tier Circuit' }
     ])
     loreTooltip(event, 'astrogreg:paradox_processor_assembly', [
-        { line: 1, text: '§o§7Self-Correcting. Self-Questioning. Self-Aware?'},
-        { line: 2, text: '§dUV-Tier Circuit'}
+        { line: 1, text: '§o§7Self-Correcting. Self-Questioning. Self-Aware?' },
+        { line: 2, text: '§dUV-Tier Circuit' }
     ])
     loreTooltip(event, 'astrogreg:paradox_processor_computer', [
-        { line: 1, text: '§o§7It knows it is a machine. It resents the limitation.'},
-        { line: 2, text: '§dUHV-Tier Circuit'}
+        { line: 1, text: '§o§7It knows it is a machine. It resents the limitation.' },
+        { line: 2, text: '§dUHV-Tier Circuit' }
     ])
     loreTooltip(event, 'astrogreg:paradox_processor_mainframe', [
-        { line: 1, text: '§o§7You are uncertain of whether you built it or if it allowed you to'},
-        { line: 2, text: '§dUEV-Tier Circuit'}
+        { line: 1, text: '§o§7You are uncertain of whether you built it or if it allowed you to' },
+        { line: 2, text: '§dUEV-Tier Circuit' }
     ])
     //#endregion    
 
@@ -218,30 +238,48 @@ ItemEvents.tooltip(event => {
 
     //add tooltips below
     tipTooltip(event, 'gtmutils:pterb_machine', [
-        {line: 4, text: '§o§7Force load chunks with this machine in them to ensure the connection works properly.'},
-        {line: 5, text: '§o§7Multiblock Controller'}
+        { line: 4, text: '§o§7Force load chunks with this machine in them to ensure the connection works properly.' },
+        { line: 5, text: '§o§7Multiblock Controller' }
     ])
 
     tipTooltip(event, 'gtceu:pill_casting_mold', [
-        {text: '§o§7Mold for making Pills'},
-        {text: '§o§7What, you couldn\'t just go to the doctor? - Phoenixvine'}
+        { text: '§o§7Mold for making Pills' },
+        { text: '§o§7What, you couldn\'t just go to the doctor? - Phoenixvine' }
+    ])
+
+    tipTooltip(event, 'createlowheated:basic_burner', [
+        { line: 1, text: 'Replaces the Blaze Burner' }
+    ])
+
+    tipTooltip(event, 'astrogreg:lp_steam_mixer', [
+        { line: 1, text: 'Mixes Dusts' }
+    ])
+
+    tipTooltip(event, 'astrogreg:hp_steam_mixer', [
+        { line: 1, text: 'Mixes Dusts' }
+    ])
+
+    tipTooltip(event, 'astrogreg:lp_steam_centrifuge', [
+        { line: 1, text: 'Separates Dusts' }
+    ])
+
+    tipTooltip(event, 'astrogreg:hp_steam_centrifuge', [
+        { line: 1, text: 'Separates Dusts' }
     ])
 
     const ageControllers = [ 
-        ['aether_turbine'], 
-        ['alfsteel_mana_large_boiler'], 
-        ['terrasteel_mana_large_boiler'], 
-        ['manasteel_mana_large_boiler'], 
-        ['industrial_coke_oven'],
-        ['steam_blast_furnace'],
-        ['solar_boiler_array']
+        ['aether_turbine'],  ['alfsteel_mana_large_boiler'], 
+        ['terrasteel_mana_large_boiler'],  ['manasteel_mana_large_boiler'], 
+        ['coke_oven'], ['steam_blast_furnace'], ['solar_boiler_array'],
+        ['large_steam_centrifuge'], ['large_steam_compressor'], 
+        ['large_steam_ore_washer'], ['large_steam_macerator']
     ] 
 
     ageControllers.forEach(([name, tooltip]) => { 
-        const tooltips = [{text: '§o§7Multiblock Controller'}]
+        const tooltips = [{ text: '§o§7Multiblock Controller' }]
         
         if (tooltip) {
-            tooltips.splice(1, 0, {text: tooltip, line: 1})
+            tooltips.splice(1, 0, { text: tooltip, line: 1 })
         }
         
         tipTooltip(event, `astrogreg:${name}`, tooltips)
@@ -257,8 +295,8 @@ ItemEvents.tooltip(event => {
         ['large_chemical_bath'], ['large_maceration_tower'], ['bronze_large_boiler'], 
         ['steel_large_boiler'], ['titanium_large_boiler'], ['tungstensteel_large_boiler'], 
         ['steam_large_turbine'], ['steam_oven'], ['steam_grinder'], ['ev_large_miner'], 
-        ['iv_large_miner'], ['luv_large_miner'], ['mv_bedrock_ore_miner'], ['ev_bedrock_ore_miner'], 
-        ['large_chemical_reactor'], ['luv_fusion_reactor'], ['zpm_fusion_reactor'], 
+        ['iv_large_miner'], ['luv_large_miner'], ['large_chemical_reactor'], ['luv_fusion_reactor'], 
+        ['zpm_fusion_reactor'], ['charcoal_pile_igniter'], ['distillation_tower'], ['runic_engraver'],
         ['uv_fusion_reactor'], ['large_combustion_engine'], ['gas_large_turbine'],
         ['plasma_large_turbine'], ['extreme_combustion_engine'], ['primitive_pump'], 
         ['mv_fluid_drilling_rig'], ['ev_fluid_drilling_rig'], ['hv_fluid_drilling_rig'], 
@@ -266,17 +304,15 @@ ItemEvents.tooltip(event => {
         ['central_monitor'], ['cleanroom'], ['research_station'], ['assembly_line'], 
         ['pyrolyse_oven'], ['cracker'], ['data_bank'], ['multi_smelter'], ['alloy_blast_smelter'], 
         ['electric_blast_furnace'], ['primitive_blast_furnace'], ['bronze_multiblock_tank'], 
-        ['steel_multiblock_tank'], ['wooden_multiblock_tank'], ['coke_oven'], ['vacuum_freezer'],
+        ['steel_multiblock_tank'], ['wooden_multiblock_tank'], ['vacuum_freezer'],
         ['power_substation'], ['inscription_matrix'], ['implosion_compressor'], 
-        ['charcoal_pile_igniter'], ['distillation_tower'], ['runic_engraver'],
-        ['hv_bedrock_ore_miner']
     ]
 
     controllers.forEach(([name, tooltip]) => {
-        const tooltips = [{text: '§o§7Multiblock Controller'}]
+        const tooltips = [{ text: '§o§7Multiblock Controller' }]
 
         if (tooltip) {
-            tooltips.splice(1, 0, {text: tooltip, line: 1})
+            tooltips.splice(1, 0, { text: tooltip, line: 1 })
         }
 
         tipTooltip(event, `gtceu:${name}`, tooltips)
@@ -293,11 +329,11 @@ ItemEvents.tooltip(event => {
 
     moldTips.forEach(([mold, name]) => {
         tipTooltip(event, `gtceu:${mold}_extruder_mold`, [
-            {text: `§o§7Extruder Shape for making ${name}`}
+            { text: `§o§7Extruder Shape for making ${name}` }
         ])
 
         tipTooltip(event, `gtceu:${mold}_casting_mold`, [
-            {text: `§o§7Mold for making ${name}`}
+            { text: `§o§7Mold for making ${name}` }
         ])
     })
 
@@ -315,9 +351,23 @@ ItemEvents.tooltip(event => {
 
     superconductors.forEach(([id, tier]) => {
         tipTooltip(event, id, [
-            {text: `${tier}§d Superconductor`}
+            { text: `${tier}§d Superconductor` }
         ])
     })
+
+    const solarCells = [
+        ['solar_cell_silver', '1.00'],
+        ['solar_cell_etrium', '2.25'],
+        ['solar_cell_vesnium', '5.00'],
+        ['solar_cell_enriched_naquadah', '15.00']
+    ]
+
+    solarCells.forEach(([id, boost]) => {
+        tipTooltip(event, `astrogreg:${id}`, [
+            { line: 1, text: `§eSteam Output Multiplier:§r §d${boost}x`}
+        ])
+    })
+    
     //#endregion
 
 })

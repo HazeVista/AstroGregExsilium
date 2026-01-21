@@ -94,5 +94,5 @@ ServerEvents.recipes(event => {
                 .dataStack('gtceu:data_module')
                 .CWUt(144, 256000)
                 .EUt(488000)
-        )    
+        )
 })

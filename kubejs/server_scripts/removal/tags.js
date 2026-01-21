@@ -146,7 +146,7 @@ ServerEvents.tags('item', event => {
         'forge:lenses/pink':
             ['astrogreg:dragonstone_lens'],
 
-        'forge:stone_dust':
+        'forge:stone_dusts':
             ['gtceu:stone_dust', 'astrogreg:asteroid_stone_dust', 'astrogreg:mercury_stone_dust', 
             'astrogreg:venus_stone_dust', 'astrogreg:moon_stone_dust', 'astrogreg:mars_stone_dust', 
             'astrogreg:ceres_stone_dust', 'astrogreg:jupiter_stone_dust', 'astrogreg:saturn_stone_dust',
