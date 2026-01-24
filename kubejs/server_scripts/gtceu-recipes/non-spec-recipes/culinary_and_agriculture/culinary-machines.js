@@ -40,7 +40,7 @@ ServerEvents.recipes(event => {
         let RecipeName = recipe.output.split(":")[1]
         IterationCounter[RecipeName] = (IterationCounter[RecipeName] || 0) + 1
         RecipeName = IterationCounter[RecipeName] > 1 ? `${RecipeName}_${IterationCounter[RecipeName]}` : RecipeName
-        let RecipeBase = event.recipes.gtceu.culinary_fabrication(RecipeName)
+        let RecipeBase = event.recipes.gtceu.culinary_fabricator(RecipeName)
             .itemOutputs(recipe.output)
             .EUt(GTValues.VHA[GTValues.LV])
             .duration(recipe.time * 20 || 200)
@@ -49,11 +49,9 @@ ServerEvents.recipes(event => {
         RecipeInputs.minecraft.forEach(inputs => {ApplyIngredient(RecipeBase, inputs, 'minecraft')})
         RecipeInputs.delightful.forEach(inputs => {ApplyIngredient(RecipeBase, inputs, 'delightful')})
     })
-
     //#endregion
 
     //#region machine recipes
-
     const tieredParts = [
         ['lv', 'cobalt_brass', 'tin', '#forge:glass'],
         ['mv', 'vanadium_steel', 'copper', '#forge:glass'],
