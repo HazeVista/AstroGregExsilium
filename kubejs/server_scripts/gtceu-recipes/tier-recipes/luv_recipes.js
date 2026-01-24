@@ -70,4 +70,30 @@ ServerEvents.recipes(event => {
         .duration(1200)
         .EUt(20)
     //#endregion
+
+
+
+    //#region netherite mesh
+    gt.autoclave('netherite_carbon_fibers')
+        .itemInputs('4x gtceu:netherite_dust', 'gtceu:carbon_fibers')
+        .inputFluids('astrogreg:polyamide_imide 36')
+        .itemOutputs('astrogreg:netherite_carbon_fibers')
+        .duration(100)
+        .EUt(30720)
+        .addMaterialInfo(true)
+
+    gt.compressor('netherite_carbon_fiber_mesh')
+        .itemInputs('2x astrogreg:netherite_carbon_fibers')
+        .itemOutputs('astrogreg:netherite_carbon_fiber_mesh')
+        .duration(200)
+        .EUt(30720)
+        .addMaterialInfo(true)
+
+    gt.compressor('netherite_carbon_fiber_plate')
+        .itemInputs('astrogreg:netherite_carbon_fiber_mesh')
+        .itemOutputs('astrogreg:netherite_carbon_fiber_plate')
+        .duration(400)
+        .EUt(30720)
+        .addMaterialInfo(true)
+    //#endregion
 })

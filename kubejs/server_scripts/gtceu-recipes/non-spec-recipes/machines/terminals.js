@@ -7,7 +7,7 @@ ServerEvents.recipes(event => {
         'CDC',
         'CEC'
     ], {
-        A: 'gtceu:silver_bolt',
+        A: 'gtceu:annealed_copper_bolt',
         B: '#c:glass_panes',
         C: 'gtceu:iron_plate',
         D: '#gtceu:circuits/ulv',
@@ -41,16 +41,16 @@ ServerEvents.recipes(event => {
     })
     .addMaterialInfo()
 
-    // gt.shaped('gtceuterminal:dismantler', [
-    //     'ABA',
-    //     'CDC',
-    //     'CEC'
-    // ], {
-    //     A: 'gtceu:_bolt',
-    //     B: 'gtceu:computer_monitor_cover',
-    //     C: 'gtceu:iron_plate',
-    //     D: '#gtceu:circuits/mv',
-    //     E: 'astrogreg:fine_etrium_wire'
-    // })
-    // .addMaterialInfo()
+    gt.shaped('gtceuterminal:dismantler', [
+        'ABA',
+        'CDC',
+        'CEC'
+    ], {
+        A: 'gtceu:silver_bolt',
+        B: 'gtceu:computer_monitor_cover',
+        C: 'gtceu:steel_plate',
+        D: '#gtceu:circuits/mv',
+        E: 'astrogreg:fine_etrium_wire'
+    })
+    .addMaterialInfo()
 })
