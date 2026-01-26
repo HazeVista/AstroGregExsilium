@@ -12,7 +12,7 @@ ServerEvents.recipes(event => {
     // STR Output Item, OBJ Input Items {manual: [STR], minecraft: [STR], farmersdelight: [STR], delightful: [STR]}, INT time in seconds (optional, default 10s)
     const CULINARIES = [ 
         {output: '2x farmersdelight:dumplings', input: {manual: ['#forge:dough', '#forge:dumpling_meats'], farmersdelight: ['cabbage_leaf', 'onion']}},
-        {output: 'farmersdelight:cooked_rice', input: {farmersdelight: ['rice']}, time: 5}, 
+        {output: 'farmersdelight:cooked_rice', input: {farmersdelight: ['rice', 'bowl']}, time: 5}, 
         {output: 'farmersdelight:mushroom_rice', input: {manual: ['#forge:mushroom_rice_vegetables'], minecraft: ['brown_mushroom', 'red_mushroom', 'bowl'], farmersdelight: ['rice']}}, 
         {output: 'farmersdelight:fried_rice', input: {manual: ['#forge:eggs'], minecraft: ['carrot', 'bowl'], farmersdelight: ['rice', 'onion']}}, 
         {output: 'delightful:cactus_chili', input: {manual:['#forge:raw_pork', '#forge:vegetables'], minecraft: ['blaze_powder', 'bowl'], farmersdelight: ['tomato_sauce'], delightful: ['cactus_flesh']}}, 
@@ -29,8 +29,9 @@ ServerEvents.recipes(event => {
         {output: 'delightful:stuffed_cantaloupe_block', input: {manual: ['#minecraft:fox_food', '#forge:seeds', '#forge:cooked_mutton'], farmersdelight: ['rice', 'onion'], delightful: ['cantaloupe']}, time: 20}, 
         {output: 'farmersdelight:dog_food', input: {manual: ['#forge:dog_food_base', '#farmersdelight:wolf_prey'], minecraft: ['bone_meal', 'bowl'], farmersdelight: ['rice']}},
         {output: 'farmersdelight:squid_ink_pasta', input: {manual: ['#forge:raw_fishes'], minecraft: ['ink_sac', 'bowl'], farmersdelight: ['raw_pasta', 'tomato']}}
-    ] // just remove the inputs to disable the recipe
-    // const BEVARAGES = [
+    ] 
+    // just remove the inputs to disable the recipe
+    // const BEVERAGES = [
 
     // ]
     let IterationCounter = {};

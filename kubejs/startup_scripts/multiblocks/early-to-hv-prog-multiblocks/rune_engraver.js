@@ -11,17 +11,18 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
             .where('A', Predicates.blocks('astrogreg:manasteel_brick_machine_casing')
                 .or(Predicates.abilities(PartAbility.IMPORT_ITEMS).setPreviewCount(1).setMaxGlobalLimited(2))
                 .or(Predicates.abilities(PartAbility.EXPORT_ITEMS).setPreviewCount(1).setMaxGlobalLimited(1))
-                .or(Predicates.abilities(PartAbility.IMPORT_FLUIDS).setPreviewCount(1).setMaxGlobalLimited(2))
-                .or(Predicates.abilities(PartAbility.INPUT_ENERGY).setPreviewCount(1).setExactLimit(1))
-                .or(Predicates.abilities(PartAbility.MAINTENANCE).setExactLimit(1)))
+                .or(Predicates.abilities(PartAbility.INPUT_ENERGY).setExactLimit(1))
+                .or(Predicates.abilities(PartAbility.MAINTENANCE).setExactLimit(1))
+                .or(Predicates.abilities(AstroPartAbility.IMPORT_EXOTIC_MATTER).setExactLimit(1)))
             .where('P', Predicates.blocks('botania:mana_pylon'))
             .where('G', Predicates.blocks('botania:managlass'))
             .where('@', Predicates.controller(Predicates.blocks(definition.get())))
         .build()
-        )
+    )
 
     .workableCasingModel(
             "astrogreg:block/generators/machine_casing_manasteel_plated_bricks",
             "astrogreg:block/multiblock/rune_engraver"
-        )
+    )
+    
 })

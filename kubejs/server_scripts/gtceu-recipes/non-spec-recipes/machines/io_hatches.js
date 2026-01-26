@@ -2,6 +2,7 @@ ServerEvents.recipes(event => {
 
     const gt = event.recipes.gtceu
 
+    //#region ME throughputs
     event.remove({ id: 'gtceu:research_station/1x_gtceu_me_pattern_buffer' })
     event.remove({ id: 'gtceu:scanner/1_x_gtceu_luv_dual_input_hatch' })
     event.remove({ id: 'gtceu:research_station/1x_gtceu_zpm_dual_input_hatch' })
@@ -111,7 +112,11 @@ ServerEvents.recipes(event => {
         .duration(300)
         .EUt(7680)
         .addMaterialInfo(true)
+    //#endregion
 
+
+
+    //#region misc hatches
     gt.shaped('astrogreg:water_input_hatch', [
         'ABA',
         'ACA',
@@ -121,5 +126,41 @@ ServerEvents.recipes(event => {
         B: 'gtceu:tin_alloy_normal_fluid_pipe',
         C: 'gtceu:bronze_drum'
     })
+    //#endregion
 
+
+
+    //#region mana hatches
+    const tiers = ['lv', 'mv', 'hv', 'ev', 'iv', 'luv', 'zpm', 'uv', 'uhv']
+    const directions = ['input', 'output']
+
+    tiers.forEach((tier) => {
+        directions.forEach((direction) => {
+            gt.shaped(`astrogreg:${tier}_mana_${direction}_hatch`, [
+                'A',
+                'B'
+            ], {
+                A: `astrogreg:${tier}_stabilizer`,
+                B: `gtceu:${tier}_${direction}_hatch`,
+            })
+            .addMaterialInfo()
+        })
+
+        gt.shaped(`astrogreg:${tier}_mana_output_hatch`, [
+            'A',
+            'B'
+        ], {
+            A: '#forge:tools/screwdrivers',
+            B: `astrogreg:${tier}_mana_input_hatch`
+        })
+
+        gt.shaped(`astrogreg:${tier}_mana_input_hatch`, [
+            'A',
+            'B'
+        ], {
+            A: '#forge:tools/screwdrivers',
+            B: `astrogreg:${tier}_mana_output_hatch`
+        })
+    })
+    //#endregion
 })

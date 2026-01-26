@@ -12,7 +12,7 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
 	event.create('culinary_fabricator')
 		.category('simple')
 		.setEUIO('in')
-		.setMaxIOSize(6, 1, 3, 0)
+		.setMaxIOSize(6, 1, 0, 0)
 		.setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)
 		.setSound(AstroSoundEntries.CULINARY_FABRICATOR)
 })

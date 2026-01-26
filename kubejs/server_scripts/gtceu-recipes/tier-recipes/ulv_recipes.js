@@ -593,4 +593,27 @@ ServerEvents.recipes(event => {
       .EUt(2)
 
     //#endregion
-});
+
+
+
+    //#region mortars
+    const botMetals = [
+      ['botania:manasteel_ingot', 'manasteel'], 
+      ['botania:elementium_ingot', 'elementium'], 
+      ['botania:terrasteel_ingot', 'terrasteel'], 
+      ['botanicadds:gaiasteel_ingot', 'gaiasteel']
+    ]
+
+    botMetals.forEach(([id, metal]) => {
+      gt.shaped(`gtbotania:${metal}_mortar`, [
+        ' A ',
+        'BAB',
+        'BBB'
+      ], {
+        A: id,
+        B: '#forge:stone'
+      })
+      .addMaterialInfo()
+    })
+    //#endregion
+})

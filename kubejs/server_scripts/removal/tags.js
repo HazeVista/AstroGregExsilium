@@ -1,6 +1,5 @@
 
 //#region items
-
 ServerEvents.tags('item', event => {
 
 
@@ -160,7 +159,10 @@ ServerEvents.tags('item', event => {
             ['farmersdelight:tomato_slice'],
         
         'forge:crops/tomatoes':
-            ['farmersdelight:tomato', 'farmersdelight:tomato_slice']
+            ['farmersdelight:tomato', 'farmersdelight:tomato_slice'],
+
+        'forge:stone':
+            ['astrogreg:asteroid_stone', 'astrogreg:hard_asteroid_stone']
     }
     //#endregion
 
@@ -253,7 +255,7 @@ ServerEvents.tags('fluid', event => {
     const fluidsToStrip = [
         'ad_astra:hydrogen', 'ad_astra:cryo_fuel', 'ad_astra:oxygen',
         'ad_astra:oil', 'ad_astra:fuel', 'createaddition:bioethanol',
-        'createaddition:seed_oil'
+        'createaddition:seed_oil', 'manafluid:mana', 'gtbotania:aether'
     ]
 
 
@@ -269,9 +271,10 @@ ServerEvents.tags('fluid', event => {
 
 
     //#region add fluid tags
-    const fluidTagAdditions = [
-
-    ]
+    const fluidTagAdditions = {
+        'forge:exotic_matter':
+            ['manafluid:mana', 'gtbotania:aether']
+    }
     //#endregion 
 
 

@@ -1,5 +1,7 @@
 ServerEvents.recipes(event => {
 
+    const gt = event.recipes.gtceu
+
     //#region crushing
     //output first, input
     const crushingRecipes = [
@@ -340,7 +342,7 @@ ServerEvents.recipes(event => {
     };
 
     Object.entries(excavationShapes).forEach(([item, pattern]) => {
-        event.shaped(item, 
+        gt.shaped(item, 
             pattern, 
             excavationKeys[item]
         ).addMaterialInfo();

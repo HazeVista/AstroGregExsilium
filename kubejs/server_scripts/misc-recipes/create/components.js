@@ -370,7 +370,6 @@ ServerEvents.recipes(event => {
         B: 'create:fluid_valve',
         C: 'gtceu:brass_plate'
     })
-    .addMaterialInfo()
 
     gt.shaped('create:hose_pulley', [
         ' A ',

@@ -16,10 +16,10 @@ ServerEvents.recipes(event => {
         .itemOutputs('16x storagenetwork:kabel')
         .duration(100)
         .EUt(7)
-        .addMaterialInfo()
+        .addMaterialInfo(true)
     //#endregion
 
-    
+
 
     //#region without machines
     gt.shaped('8x storagenetwork:kabel', [
@@ -31,7 +31,6 @@ ServerEvents.recipes(event => {
         B: 'gtceu:iron_double_wire',
         C: '#forge:glass'
     })
-    .addMaterialInfo()
 
     gt.shaped('storagenetwork:import_filter_kabel', [
         ' A ',

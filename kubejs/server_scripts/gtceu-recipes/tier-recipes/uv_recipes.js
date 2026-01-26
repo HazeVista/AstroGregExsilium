@@ -35,7 +35,7 @@ ServerEvents.recipes(event => {
         .EUt(400000)
         .stationResearch(
             researchRecipeBuilder => researchRecipeBuilder
-                .researchStack(Item.of(`gtceu:large_miner_zpm`))
+                .researchStack(Item.of(`gtceu:luv_large_miner`))
                 .dataStack('gtceu:data_orb')
                 .CWUt(96, 200000)
                 .EUt(488000)
