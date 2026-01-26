@@ -12,7 +12,7 @@ ServerEvents.recipes(event => {
     // STR Output Item, OBJ Input Items {manual: [STR], minecraft: [STR], farmersdelight: [STR], delightful: [STR]}, INT time in seconds (optional, default 10s)
     const CULINARIES = [ 
         {output: '2x farmersdelight:dumplings', input: {manual: ['#forge:dough', '#forge:dumpling_meats'], farmersdelight: ['cabbage_leaf', 'onion']}},
-        {output: 'farmersdelight:cooked_rice', input: {farmersdelight: ['rice', 'bowl']}, time: 5}, 
+        {output: 'farmersdelight:cooked_rice', input: {farmersdelight: ['rice'], minecraft: ['bowl']}, time: 5}, 
         {output: 'farmersdelight:mushroom_rice', input: {manual: ['#forge:mushroom_rice_vegetables'], minecraft: ['brown_mushroom', 'red_mushroom', 'bowl'], farmersdelight: ['rice']}}, 
         {output: 'farmersdelight:fried_rice', input: {manual: ['#forge:eggs'], minecraft: ['carrot', 'bowl'], farmersdelight: ['rice', 'onion']}}, 
         {output: 'delightful:cactus_chili', input: {manual:['#forge:raw_pork', '#forge:vegetables'], minecraft: ['blaze_powder', 'bowl'], farmersdelight: ['tomato_sauce'], delightful: ['cactus_flesh']}}, 

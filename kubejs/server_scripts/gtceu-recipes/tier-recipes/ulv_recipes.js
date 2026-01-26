@@ -135,10 +135,24 @@ ServerEvents.recipes(event => {
       .EUt(2)    
       
     gt.compressor('compress_plant_ball')
-      .itemInputs('#forge:crops')
+      .itemInputs('8x #forge:crops')
       .itemOutputs('gtceu:plant_ball')
       .duration(300)
-      .EUt(2)      
+      .EUt(2)
+
+    gt.compressor('compress_straw_plant_ball')
+      .itemInputs('8x farmersdelight:straw')
+      .itemOutputs('gtceu:plant_ball')
+      .duration(300)
+      .EUt(2)
+
+    gt.shaped('astrogreg:polyamide_imide_ring', [
+      'A',
+      'B'
+    ], {
+      A: '#forge:tools/knives',
+      B: 'astrogreg:polyamide_imide_plate'
+    })
     //#endregion
 
     
@@ -498,6 +512,12 @@ ServerEvents.recipes(event => {
       .duration(300)
       .EUt(2)
 
+    gt.compressor('compress_livingbricks')
+      .itemInputs('4x astrogreg:livingbrick')
+      .itemOutputs('astrogreg:livingbricks')
+      .duration(300)
+      .EUt(2)
+
     gt.alloy_smelter('smelt_livingbrick')
       .itemInputs('astrogreg:livingrock_dust', 'gtceu:clay_dust')
       .itemOutputs('2x astrogreg:livingbrick')
@@ -613,7 +633,6 @@ ServerEvents.recipes(event => {
         A: id,
         B: '#forge:stone'
       })
-      .addMaterialInfo()
     })
     //#endregion
 })

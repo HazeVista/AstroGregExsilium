@@ -360,6 +360,13 @@ ServerEvents.recipes(event => {
       .duration(120)
       .EUt(2)
 
+    gt.macerator('macerate_rice')
+      .itemInputs('farmersdelight:rice_panicle')
+      .itemOutputs('farmersdelight:rice')
+      .chancedOutput('farmersdelight:straw', 5000, 0)
+      .duration(80)
+      .EUt(2)
+
     event.shaped('farmersdelight:roasted_mutton_chops', [
       'DAC',
       'BEB',
@@ -373,7 +380,6 @@ ServerEvents.recipes(event => {
       F: 'minecraft:bowl'
     })
 
-
     event.shaped('minecraft:green_dye', [
       'A',
       'B'
@@ -382,6 +388,7 @@ ServerEvents.recipes(event => {
       B: '#forge:tools/mortars'
     })
     
+    event.shapeless('minecraft:bowl', ['#minecraft:logs', '#forge:tools/knives'])
     event.shapeless('farmersdelight:chicken_sandwich', ['minecraft:bread', '#forge:cooked_chicken', 'farmersdelight:cabbage_leaf', 'minecraft:carrot', 'farmersdelight:tomato_slice'])
     event.shapeless('create:honeyed_apple', ['minecraft:honey_bottle', 'minecraft:apple']).replaceIngredient('minecraft:honey_bottle', 'minecraft:glass_bottle')
     event.shapeless('4x create:chocolate_glazed_berries', ['minecraft:sweet_berries', 'minecraft:sweet_berries', 'minecraft:sweet_berries', 'minecraft:sweet_berries', 'create:chocolate_bucket']).replaceIngredient('create:chocolate_bucket', 'minecraft:bucket')

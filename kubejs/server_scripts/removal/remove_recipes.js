@@ -135,7 +135,8 @@ ServerEvents.recipes(event => {
         'delightful:food/matcha_milkshake', 'delightful:food/salmonberry_milkshake', 'delightful:food/matcha_ice_cream_no_neapolitan', 'delightful:food/salmonberry_ice_cream_no_neapolitan', 'gtceu:shaped/ulv_machine_hull',
         'gtceu:assembler/basic_data_access_hatch', 'gtceu:circuit_assembler/data_stick', 'gtceu:circuit_assembler/data_stick_soldering_alloy', 'create:crafting/kinetics/filter', 'create:crafting/kinetics/package_filter', 
         'create:crafting/kinetics/attribute_filter', 'gtceu:shaped/steam_oven_from_hp', 'gtceu:shaped/steam_grinder_from_hp', 'gtceu:large_chemical_reactor/styrene_from_ethylbenzene', 'gtceu:assembler/monitor_casing',
-        'gtceu:chemical_reactor/styrene_from_ethylbenzene', 'ad_extendra:encased_electrolyte_block', 'gtceu:brewery/bacteria', 'gtceu:autoclave/agar', 'botania:mushroom_stew', 'minecraft:suspicious_stew',
+        'gtceu:chemical_reactor/styrene_from_ethylbenzene', 'ad_extendra:encased_electrolyte_block', 'gtceu:brewery/bacteria', 'gtceu:autoclave/agar', 'botania:mushroom_stew', 'minecraft:suspicious_stew', 'minecraft:bowl',
+        'gtceu:shapeless/hay_block_to_hay', 'farmersdelight:rice'
     ])
     //#endregion
 

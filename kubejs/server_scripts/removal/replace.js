@@ -70,8 +70,12 @@ ServerEvents.recipes(event => {
     event.replaceInput({ id: 'minecraft:brown_dye' }, 'minecraft:cocoa_beans', 'gtceu:cocoa_dust')
     event.replaceInput({ id: 'gtceu:shaped/steam_boiler_solar_steel' }, 'minecraft:glass', 'gtceu:tempered_glass')
     event.replaceInput({ output: 'gtceu:steam_machine_casing' }, 'minecraft:bricks', 'gtceu:firebricks')
-    event.replaceInput({ output: '#forge:tools/mortars'}, 'minecraft:stone', '#forge:stone')
     // event.replaceInput({ input: ''}, '', '')
+
+    const mortarMetals = ['wrought_iron', 'flint', 'iron', 'bronze', 'steel', 'cobalt_brass', 'damascus_steel', 'invar']
+    mortarMetals.forEach((metal) => {
+        event.replaceInput({ output: `gtceu:${metal}_mortar`}, 'minecraft:stone', '#forge:stone')
+    })
     //#endregion
     
     //#region output
