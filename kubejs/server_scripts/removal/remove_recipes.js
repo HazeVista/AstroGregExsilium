@@ -136,7 +136,8 @@ ServerEvents.recipes(event => {
         'gtceu:assembler/basic_data_access_hatch', 'gtceu:circuit_assembler/data_stick', 'gtceu:circuit_assembler/data_stick_soldering_alloy', 'create:crafting/kinetics/filter', 'create:crafting/kinetics/package_filter', 
         'create:crafting/kinetics/attribute_filter', 'gtceu:shaped/steam_oven_from_hp', 'gtceu:shaped/steam_grinder_from_hp', 'gtceu:large_chemical_reactor/styrene_from_ethylbenzene', 'gtceu:assembler/monitor_casing',
         'gtceu:chemical_reactor/styrene_from_ethylbenzene', 'ad_extendra:encased_electrolyte_block', 'gtceu:brewery/bacteria', 'gtceu:autoclave/agar', 'botania:mushroom_stew', 'minecraft:suspicious_stew', 'minecraft:bowl',
-        'gtceu:shapeless/hay_block_to_hay', 'farmersdelight:rice'
+        'gtceu:shapeless/hay_block_to_hay', 'farmersdelight:rice', 'minecraft:brown_dye', 'minecraft:bone_meal', 'minecraft:black_dye', 'minecraft:blue_dye', 'gtceu:shapeless/lazurite_to_dye', 
+        'gtceu:shapeless/sodalite_to_dye', 'gtceu:shapeless/brown_dye_from_metal_mixture'
     ])
     //#endregion
 
@@ -220,5 +221,7 @@ ServerEvents.recipes(event => {
     event.remove({ id: /botania:elven_trade\/.*/ })
     event.remove({ input: /gtceu:.*_dual_.*_hatch/ })
     event.remove({ output: /gtceu:.*_dual_.*_hatch/ })
+    event.remove({ id: /botania:dye_.*/ })
+    event.remove({ id: /minecraft:.*_dye_from_.*/ })
     //#endregion
 })

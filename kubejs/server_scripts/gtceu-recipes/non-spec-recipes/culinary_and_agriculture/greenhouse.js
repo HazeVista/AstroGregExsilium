@@ -85,13 +85,16 @@ trees.forEach((tree) => {
 
     
     //#region flowers
-    const flowers = ['minecraft:dandelion', 'minecraft:poppy', 'minecraft:blue_orchid', 'minecraft:allium',
+    const flowers = [
+        'minecraft:dandelion', 'minecraft:poppy', 'minecraft:blue_orchid', 'minecraft:allium',
         'minecraft:azure_bluet', 'minecraft:red_tulip', 'minecraft:orange_tulip', 'minecraft:white_tulip', 'minecraft:pink_tulip', 
         'minecraft:oxeye_daisy', 'minecraft:cornflower', 'minecraft:lily_of_the_valley', 'minecraft:wither_rose', 
         'botania:blue_mystical_flower', 'botania:light_blue_mystical_flower', 'botania:brown_mystical_flower', 'botania:cyan_mystical_flower', 
         'botania:gray_mystical_flower', 'botania:green_mystical_flower', 'botania:white_mystical_flower', 'botania:yellow_mystical_flower', 
         'botania:light_gray_mystical_flower', 'botania:orange_mystical_flower', 'botania:red_mystical_flower', 'botania:purple_mystical_flower', 
-        'botania:magenta_mystical_flower','botania:lime_mystical_flower']
+        'botania:magenta_mystical_flower','botania:lime_mystical_flower', 'minecraft:sunflower', 'minecraft:rose_bush', 'minecraft:lilac',
+        'minecraft:peony'
+    ]
 
     flowers.forEach((flower) => {
         const GreenHouseHelperFlower = (notConsumableItem, Item1, Circuit, Duration, Affix) => {

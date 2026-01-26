@@ -67,7 +67,6 @@ ServerEvents.recipes(event => {
     event.replaceInput({ id: 'expatternprovider:wireless_hub' }, 'ae2:quantum_link', '#gtceu:circuits/ev')
     event.replaceInput({ output: 'createaddition:spool' }, 'minecraft:iron_nugget', 'gtceu:iron_bolt')
     event.replaceInput({}, 'gtceu:hsss_round', 'gtceu:netherite_round')
-    event.replaceInput({ id: 'minecraft:brown_dye' }, 'minecraft:cocoa_beans', 'gtceu:cocoa_dust')
     event.replaceInput({ id: 'gtceu:shaped/steam_boiler_solar_steel' }, 'minecraft:glass', 'gtceu:tempered_glass')
     event.replaceInput({ output: 'gtceu:steam_machine_casing' }, 'minecraft:bricks', 'gtceu:firebricks')
     // event.replaceInput({ input: ''}, '', '')

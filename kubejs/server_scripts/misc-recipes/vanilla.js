@@ -41,10 +41,12 @@ ServerEvents.recipes(event => {
         })
    
     event.shaped('minecraft:white_dye', [
-        'A'
+        'A',
+        'B'
     ], {
-        A: 'minecraft:bone_meal'
-    });
+        A: 'minecraft:bone_meal',
+        B: '#forge:tools/mortars'
+    })
 
     event.shapeless('gtceu:magnetic_iron_screw', ['gtceu:iron_screw', 'minecraft:redstone', 'minecraft:redstone'])
 

@@ -25,7 +25,7 @@ ServerEvents.recipes(event => {
         {output: 'delightful:rock_candy', input: {manual: ['#minecraft:fox_food', 'create:rose_quartz'], minecraft: ['sugar', 'stick']}}, 
         {output: 'farmersdelight:vegetable_noodles', input: {manual: ['#forge:crops/cabbage', '#forge:vegetables'], minecraft: ['carrot', 'brown_mushroom', 'bowl'], farmersdelight: ['raw_pasta']}}, 
         {output: 'farmersdelight:cabbage_rolls', input: {manual: ['#forge:crops/cabbage', '#farmersdelight:cabbage_roll_ingredients']}, time: 5}, 
-        {output: '2x delightful:marshmallow_stick', input: {manual: ['#forge:marshmallow_base'], minecraft: ['sugar', 'sugar', 'stick']}}, 
+        {output: '2x delightful:marshmallow_stick', input: {manual: ['#forge:marshmallow_base'], minecraft: ['sugar', 'sugar', 'stick', 'stick']}}, 
         {output: 'delightful:stuffed_cantaloupe_block', input: {manual: ['#minecraft:fox_food', '#forge:seeds', '#forge:cooked_mutton'], farmersdelight: ['rice', 'onion'], delightful: ['cantaloupe']}, time: 20}, 
         {output: 'farmersdelight:dog_food', input: {manual: ['#forge:dog_food_base', '#farmersdelight:wolf_prey'], minecraft: ['bone_meal', 'bowl'], farmersdelight: ['rice']}},
         {output: 'farmersdelight:squid_ink_pasta', input: {manual: ['#forge:raw_fishes'], minecraft: ['ink_sac', 'bowl'], farmersdelight: ['raw_pasta', 'tomato']}}
