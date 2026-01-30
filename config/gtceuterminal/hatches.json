@@ -3,6 +3,13 @@
   "description": "GTCEu Terminal - Hatch Configuration (Fluid I/O)",
   "hatches": [
     {
+      "blockId": "astrogreg:water_input_hatch",
+      "displayName": "Water Hatch",
+      "tierName": "ULV",
+      "tier": 0,
+      "hatchType": "INPUT"
+    },
+    {
       "blockId": "gtceu:lv_input_hatch",
       "displayName": "LV Input Hatch",
       "tierName": "LV",

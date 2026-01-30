@@ -43,4 +43,70 @@ ServerEvents.recipes(event => {
         .addMaterialInfo(true)
     //#endregion
 
+
+
+    //#region overdrive generators
+    gt.assembly_line('overdrive_combustion_engine')
+        .itemInputs('gtceu:zpm_machine_hull')
+        .itemInputs('4x gtceu:naquadah_alloy_plate')
+        .itemInputs('4x gtceu:zpm_electric_piston')
+        .itemInputs('4x gtceu:zpm_electric_motor')
+        .itemInputs('4x gtceu:naquadah_alloy_gear')
+        .itemInputs('2x #gtceu:circuits/uv')
+        .itemInputs('2x gtceu:europium_single_cable')
+        .inputFluids('gtceu:lubricant')
+        .itemOutputs('astrogreg:overdrive_combustion_engine')
+        .duration(400)
+        .EUt(400000)
+        .stationResearch(
+            researchRecipeBuilder => researchRecipeBuilder
+                .researchStack(Item.of(`gtceu:extreme_combustion_engine`))
+                .dataStack('gtceu:data_orb')
+                .CWUt(80, 224000)
+                .EUt(488000)
+        )
+        .addMaterialInfo(true)
+        
+    gt.assembly_line('overdrive_steam_turbine')
+        .itemInputs('gtceu:luv_machine_hull')
+        .itemInputs('4x gtceu:rhodium_plated_palladium_plate')
+        .itemInputs('4x gtceu:zpm_electric_motor')
+        .itemInputs('4x gtceu:rhodium_plated_palladium_gear')
+        .itemInputs('4x gtceu:rhodium_plated_palladium_huge_fluid_pipe')
+        .itemInputs('2x #gtceu:circuits/uv')
+        .itemInputs('2x gtceu:europium_single_cable')
+        .inputFluids('gtceu:lubricant')
+        .itemOutputs('astrogreg:overdrive_steam_turbine')
+        .duration(400)
+        .EUt(400000)
+        .stationResearch(
+            researchRecipeBuilder => researchRecipeBuilder
+                .researchStack(Item.of(`gtceu:steam_large_turbine`))
+                .dataStack('gtceu:data_orb')
+                .CWUt(80, 224000)
+                .EUt(488000)
+        )
+        .addMaterialInfo(true)
+        
+    gt.assembly_line('overdrive_gas_turbine')
+        .itemInputs('gtceu:zpm_machine_hull')
+        .itemInputs('4x gtceu:naquadah_alloy_plate')
+        .itemInputs('4x gtceu:zpm_electric_motor')
+        .itemInputs('4x gtceu:naquadah_alloy_gear')
+        .itemInputs('4x gtceu:naquadah_alloy_huge_fluid_pipe')
+        .itemInputs('2x #gtceu:circuits/uv')
+        .itemInputs('2x gtceu:europium_single_cable')
+        .inputFluids('gtceu:lubricant')
+        .itemOutputs('astrogreg:overdrive_gas_turbine')
+        .duration(400)
+        .EUt(400000)
+        .stationResearch(
+            researchRecipeBuilder => researchRecipeBuilder
+                .researchStack(Item.of(`gtceu:steam_large_turbine`))
+                .dataStack('gtceu:data_orb')
+                .CWUt(80, 224000)
+                .EUt(488000)
+        )
+        .addMaterialInfo(true)
+    //#endregion
 })

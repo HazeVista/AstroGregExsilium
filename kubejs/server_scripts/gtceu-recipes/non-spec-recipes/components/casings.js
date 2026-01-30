@@ -7,12 +7,15 @@ ServerEvents.recipes(event => {
         ['astrogreg:futura_alloy_frame', 'astrogreg:futura_alloy_plate', '2x astrogreg:futura_alloy_casing', 'futura_casing'],
         ['astrogreg:livingbricks', 'gtbotania:manasteel_plate', '2x astrogreg:manasteel_brick_machine_casing', 'manasteel_brick_casing'],
         ['gtbotania:terrasteel_frame', 'gtbotania:terrasteel_plate', '2x astrogreg:solid_terrasteel_machine_casing', 'solid_terrasteel_casing'],
-        ['gtbotania:elementium_frame', 'gtbotania:elementium_plate', '2x astrogreg:solid_alfsteel_machine_casing', 'alfsteel_turbine_casing'],
+        ['gtceu:steel_turbine_casing', 'gtbotania:elementium_plate', '2x astrogreg:machine_casing_turbine_alfsteel', 'alfsteel_turbine_casing'],
         ['gtceu:ruridit_frame', 'gtceu:dense_netherite_plate', '2x gtceu:atomic_casing', 'atomic_casing'],
         ['gtceu:rhodium_plated_palladium_frame', 'gtceu:rhodium_plated_palladium_plate', '2x astrogreg:machine_casing_pristine_rhodium_plated_palladium', 'rhodium_plated_palladium_casing'],
         ['gtceu:steel_frame', 'gtceu:bronze_plate', '2x gtceu:industrial_steam_casing', 'industrial_steam_casing'],
         ['gtceu:naquadah_alloy_frame', 'gtceu:double_naquadah_alloy_plate', '2x astrogreg:machine_casing_invariant_naquadah_alloy', 'naquadah_alloy_casing'],
-        ['gtceu:naquadah_alloy_frame', 'astrogreg:netherite_carbon_fiber_plate', '2x astrogreg:machine_casing_netherite_mesh', 'netherite_mesh_casing']
+        ['gtceu:naquadah_alloy_frame', 'astrogreg:netherite_carbon_fiber_plate', '2x astrogreg:machine_casing_netherite_mesh', 'netherite_mesh_casing'],
+        ['gtceu:steel_turbine_casing', 'gtceu:rhodium_plated_palladium_plate', '2x astrogreg:machine_casing_turbine_rhodium_plated_palladium', 'rhodium_plated_palladium_turbine_casing'],
+        ['gtceu:steel_turbine_casing', 'gtceu:double_naquadah_alloy_plate', '2x astrogreg:machine_casing_turbine_naquadah_alloy', 'naquadah_alloy_turbine_casing'],
+        ['gtbotania:elementium_frame', 'gtbotania:elementium_plate', '2x astrogreg:machine_casing_alfsteel', 'alfsteel_machine_casing']
     ]
 
     ageCasings.forEach((ageCasing) => {

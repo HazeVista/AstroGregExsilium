@@ -11,11 +11,6 @@
     "gtceu.deionization": "Deionization Plant",
 
     "astrogreg.machine.mana_input_hatch.tooltip": "Exotic Matter Input for Multiblocks",
-    "astrogreg.machine.mana_output_hatch.tooltip": "Exotic Matter Output for Multiblocks",
-    
-    "astrogreg.machine.cwu_generator.tooltip.0": "Generates Computational Work Units",
-    "astrogreg.machine.cwu_generator.tooltip.1": "Produces %s CWU/t",
-    "astrogreg.machine.cwu_generator.tooltip.2": "Consumes %s mB/t Lubricant",
-    "astrogreg.machine.cwu_input_hatch.tooltip": "Accepts CWU from CWU Generators"
+    "astrogreg.machine.mana_output_hatch.tooltip": "Exotic Matter Output for Multiblocks"
     
 }
