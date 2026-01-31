@@ -1,0 +1,26 @@
+site_name: AstroGregExsilium Docs
+site_url: https://HazeVista.github.io/AstroGregExsilium/
+
+repo_name: AstroGregExsilium
+repo_url: https://github.com/HazeVista/AstroGregExsilium
+edit_uri: edit/main/docs/content/
+
+docs_dir: content
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: orange
+      accent: orange
+    - scheme: slate
+      primary: orange
+      accent: orange
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+
+plugins:
+  - search
+  - awesome-pages
