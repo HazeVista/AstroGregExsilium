@@ -8,8 +8,8 @@ site_dir: site
 
 theme:
   name: material
-  logo: docs/icon.png
-  favicon: docs/icon.png
+  logo: assets/icon.png
+  favicon: assets/icon.png
   icon:
     repo: fontawesome/brands/github
   palette:
