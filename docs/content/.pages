@@ -2,9 +2,9 @@ nav:
   - Home: index.md
   - Gameplay:
       - Overview: Gameplay.md
-      - Starting Out: gameplay/overview
-      - Machines: gameplay/machines
-      - Progression: gameplay/progression
+      - Starting Out: gameplay/starting_out/
+      - Machines: gameplay/machines/
+      - Progression: gameplay/progression/
   - Developers:
       - Overview: Development.md
       - Begin: development/begin/
