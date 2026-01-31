@@ -1,9 +1,9 @@
 nav:
   - Home: index.md
   - Gameplay:
-      - Overview: Gameplay.md
-      - Tesla Network: gameplay/tesla/
-      - Phoenixware Fusion: gameplay/fusion.md
+      - Overview: gameplay/overview
+      - Machines: gameplay/machines
+      - Progression: gameplay/progression
   - Developers:
       - Overview: Development.md
-      - Tesla System: development/tesla/
+      - Begin: development/begin/
