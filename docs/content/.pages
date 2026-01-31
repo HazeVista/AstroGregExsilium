@@ -1,4 +1,4 @@
 nav:
-  - Home: index.md
-  - Gameplay: gameplay/
-  - Developers: development/
+  - 'Home': 'index.md'
+  - 'Gameplay'
+  - 'Developers': 'Development'
