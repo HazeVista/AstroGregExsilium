@@ -83,7 +83,8 @@ ClientEvents.lang('en_us', event => {
         ['luv_parallel_hatch', '§dAdvanced Parallel Control Hatch'],
         ['zpm_parallel_hatch', '§cElite Parallel Control Hatch'],
         ['uv_parallel_hatch', '§3Ultimate Parallel Control Hatch'],
-        ['crushing_wheels', 'Zeron Crushing Wheels']
+        ['crushing_wheels', 'Zeron Crushing Wheels'],
+        ['fusion_casing', 'Fusion Machine Casing MK I']
     ])
 
     renameItems('gtceuterminal', [

@@ -267,13 +267,34 @@ ItemEvents.tooltip(event => {
         { line: 1, text: 'Separates Dusts' }
     ])
 
+    tipTooltip(event, 'astrogreg:hv_industrial_processing_core', [
+        { line: 1, text: 'Allows Industrial Multiblocks to run at a max of 512 EU/t (§5HV§r)' }
+    ])
+    
+    tipTooltip(event, 'astrogreg:ev_industrial_processing_core', [
+        { line: 1, text: 'Allows Industrial Multiblocks to run at a max of 2048 EU/t (§6EV§r)' }
+    ])
+    
+    tipTooltip(event, 'astrogreg:iv_industrial_processing_core', [
+        { line: 1, text: 'Allows Industrial Multiblocks to run at a max of 8192 EU/t (§9IV§r)' }
+    ])
+
     const ageControllers = [ 
         ['aether_turbine'],  ['alfsteel_mana_large_boiler'], 
         ['terrasteel_mana_large_boiler'],  ['manasteel_mana_large_boiler'], 
         ['coke_oven'], ['steam_blast_furnace'], ['solar_boiler_array'],
         ['large_steam_centrifuge'], ['large_steam_compressor'], 
-        ['large_steam_ore_washer'], ['large_steam_macerator']
-    ] 
+        ['large_steam_ore_washer'], ['large_steam_macerator'],
+        ['fluid_drilling_rig_iv'], ['large_miner_zpm'], 
+        ['overdrive_combustion_engine'], ['overdrive_steam_turbine'], 
+        ['overdrive_gas_turbine'], ['industrial_centrifuge'],
+        ['industrial_autoclave'], ['industrial_chemical_bath'],
+        ['industrial_bender'], ['industrial_electrolyzer'],
+        ['industrial_lathe'], ['industrial_extruder'],
+        ['industrial_mixer'], ['industrial_sifter'],
+        ['industrial_wiremill'], ['industrial_macerator'],
+        ['industrial_fluid_solidifier']
+    ]
 
     ageControllers.forEach(([name, tooltip]) => { 
         const tooltips = [{ text: '§o§7Multiblock Controller' }]
@@ -305,7 +326,7 @@ ItemEvents.tooltip(event => {
         ['pyrolyse_oven'], ['cracker'], ['data_bank'], ['multi_smelter'], ['alloy_blast_smelter'], 
         ['electric_blast_furnace'], ['primitive_blast_furnace'], ['bronze_multiblock_tank'], 
         ['steel_multiblock_tank'], ['wooden_multiblock_tank'], ['vacuum_freezer'],
-        ['power_substation'], ['inscription_matrix'], ['implosion_compressor'], 
+        ['power_substation'], ['inscription_matrix'], ['implosion_compressor']
     ]
 
     controllers.forEach(([name, tooltip]) => {

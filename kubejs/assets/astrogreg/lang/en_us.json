@@ -8,9 +8,6 @@
     "block.astrogreg.uhv_parallel_hatch": "§4Quintessential Parallel Control Hatch",
 
     "gtceu.steam_blast_furnace": "Steam Blast Furnace",
-    "gtceu.deionization": "Deionization Plant",
-
-    "astrogreg.machine.mana_input_hatch.tooltip": "Exotic Matter Input for Multiblocks",
-    "astrogreg.machine.mana_output_hatch.tooltip": "Exotic Matter Output for Multiblocks"
+    "gtceu.deionization": "Deionization Plant"
     
 }

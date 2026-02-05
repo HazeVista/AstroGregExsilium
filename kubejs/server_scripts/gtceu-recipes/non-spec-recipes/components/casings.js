@@ -3,6 +3,7 @@ ServerEvents.recipes(event => {
     const gt = event.recipes.gtceu  
 
     //#region solid casings
+    // frame, plate, output casing (and amount), recipe id
     const ageCasings = [
         ['astrogreg:futura_alloy_frame', 'astrogreg:futura_alloy_plate', '2x astrogreg:futura_alloy_casing', 'futura_casing'],
         ['astrogreg:livingbricks', 'gtbotania:manasteel_plate', '2x astrogreg:manasteel_brick_machine_casing', 'manasteel_brick_casing'],
@@ -13,9 +14,18 @@ ServerEvents.recipes(event => {
         ['gtceu:steel_frame', 'gtceu:bronze_plate', '2x gtceu:industrial_steam_casing', 'industrial_steam_casing'],
         ['gtceu:naquadah_alloy_frame', 'gtceu:double_naquadah_alloy_plate', '2x astrogreg:machine_casing_invariant_naquadah_alloy', 'naquadah_alloy_casing'],
         ['gtceu:naquadah_alloy_frame', 'astrogreg:netherite_carbon_fiber_plate', '2x astrogreg:machine_casing_netherite_mesh', 'netherite_mesh_casing'],
-        ['gtceu:steel_turbine_casing', 'gtceu:rhodium_plated_palladium_plate', '2x astrogreg:machine_casing_turbine_rhodium_plated_palladium', 'rhodium_plated_palladium_turbine_casing'],
+        ['gtceu:steel_turbine_casing', 'gtceu:rhodium_plated_palladium_plate', '2x astrogreg:machine_casing_rhodium_plated_palladium', 'rhodium_plated_palladium_turbine_casing'],
         ['gtceu:steel_turbine_casing', 'gtceu:double_naquadah_alloy_plate', '2x astrogreg:machine_casing_turbine_naquadah_alloy', 'naquadah_alloy_turbine_casing'],
-        ['gtbotania:elementium_frame', 'gtbotania:elementium_plate', '2x astrogreg:machine_casing_alfsteel', 'alfsteel_machine_casing']
+        ['gtbotania:elementium_frame', 'gtbotania:elementium_plate', '2x astrogreg:machine_casing_alfsteel', 'alfsteel_machine_casing'],
+        ['gtceu:blue_steel_frame', 'gtceu:blue_steel_plate', '2x astrogreg:industrial_blue_steel_casing', 'blue_steel_machine_casing'],
+        ['gtceu:black_steel_frame', 'gtceu:black_steel_plate', '2x astrogreg:industrial_black_steel_casing', 'black_steel_machine_casing'],
+        ['gtceu:red_steel_frame', 'gtceu:red_steel_plate', '2x astrogreg:industrial_red_steel_casing', 'red_steel_machine_casing'],
+        ['gtceu:vanadium_steel_frame', 'gtceu:vanadium_steel_plate', '2x astrogreg:industrial_vanadium_steel_casing', 'vanadium_steel_machine_casing'],
+        ['gtceu:cobalt_brass_frame', 'gtceu:cobalt_brass_plate', '2x astrogreg:industrial_cobalt_brass_casing', 'cobalt_brass_machine_casing'],
+        ['gtceu:bismuth_bronze_frame', 'gtceu:bismuth_bronze_plate', '2x astrogreg:industrial_bismuth_bronze_casing', 'bismuth_bronze_machine_casing'],
+        ['gtceu:ultimet_frame', 'gtceu:ultimet_plate', '2x astrogreg:industrial_ultimet_casing', 'ultimet_machine_casing'],
+        ['gtceu:rose_gold_frame', 'gtceu:rose_gold_plate', '2x astrogreg:industrial_rose_gold_casing', 'rose_gold_machine_casing'],
+        ['gtceu:stainless_steel_frame', 'gtceu:carbon_fiber_plate', '2x astrogreg:industrial_carbon_fiber_casing', 'carbon_fiber_machine_casing'],
     ]
 
     ageCasings.forEach((ageCasing) => {
@@ -44,21 +54,35 @@ ServerEvents.recipes(event => {
             .EUt(16)
             .addMaterialInfo(true)
     })
+    //#endregion
 
-    gt.assembler('super_inert_pai_casing')
-        .itemInputs('astrogreg:machine_casing_pristine_rhodium_plated_palladium')
-        .inputFluids('astrogreg:polyamide_imide 432')
-        .itemOutputs('astrogreg:machine_casing_super_inert_pai')
-        .circuit(6)
-        .duration(50)
-        .EUt(16)
-        .addMaterialInfo(true)
 
+
+    //#region polymer-coated casings
+    // input casing, fluid (and amount), output casing (gets added to astrogreg:)
+    const polymerCasings = [
+        ['astrogreg:machine_casing_pristine_rhodium_plated_palladium', 'astrogreg:polyamide_imide 432', 'machine_casing_super_inert_pai'],
+        ['gtceu:solid_machine_casing', 'gtceu:styrene_butadiene_rubber 216', 'industrial_styrene_butadiene_rubber_casing'],
+        ['gtceu:solid_machine_casing', 'gtceu:silicone_rubber 216', 'industrial_silicone_rubber_casing'],
+        ['gtceu:solid_machine_casing', 'gtceu:polyvinyl_chloride 216', 'industrial_polyvinyl_chloride_casing'],
+    ]
+
+    polymerCasings.forEach(([baseCasing, polymer, id]) => {
+        gt.assembler(id)
+            .itemInputs(baseCasing)
+            .inputFluids(polymer)
+            .itemOutputs(`astrogreg:${id}`)
+            .circuit(6)
+            .duration(50)
+            .EUt(16)
+            .addMaterialInfo(true)
+    })
     //#endregion
 
 
 
     //#region fireboxes
+    // id (gets added to _firebox_casing), plate, rod, frame, output casing
     const fireboxCasings = [
         ['manasteel', 'gtbotania:manasteel_plate', 'gtbotania:manasteel_rod', 'gtbotania:manasteel_frame', 'astrogreg:manasteel_firebox_casing'],
         ['terrasteel', 'gtbotania:terrasteel_plate', 'gtbotania:terrasteel_rod', 'gtbotania:terrasteel_frame', 'astrogreg:terrasteel_firebox_casing'],
@@ -95,6 +119,7 @@ ServerEvents.recipes(event => {
 
 
     //#region pipe casings
+    // plate, pipe, frame, output casing
     const pipeCasings = [
         ['gtbotania:manasteel_plate', 'gtbotania:manasteel_normal_fluid_pipe', 'gtbotania:manasteel_frame', 'astrogreg:manasteel_pipe_casing'],
         ['gtbotania:terrasteel_plate', 'gtbotania:terrasteel_normal_fluid_pipe', 'gtbotania:terrasteel_frame', 'astrogreg:terrasteel_pipe_casing'],
@@ -126,6 +151,7 @@ ServerEvents.recipes(event => {
 
 
     //#region gearboxes
+    // name, plate, gear, frame, output casing
     const gearboxCasings = [
         ['alfsteel', 'gtbotania:elementium_plate', 'gtbotania:elementium_gear', 'gtbotania:elementium_frame', 'astrogreg:alfsteel_gearbox_casing'],
         ['rhodium_plated_palladium', 'gtceu:rhodium_plated_palladium_plate', 'gtceu:rhodium_plated_palladium_gear', 'gtceu:rhodium_plated_palladium_frame', 'astrogreg:gearbox_casing_rhodium_plated_palladium'],
@@ -162,6 +188,7 @@ ServerEvents.recipes(event => {
     //#endregion
 
     //#region intake casings
+    // id (gets added to _intake_casing), pipe, rotor, output casing
     const intakeCasings = [
         ['ultimate', 'gtceu:naquadah_alloy_large_fluid_pipe', 'gtceu:naquadah_alloy_rotor', 'astrogreg:machine_casing_invariant_naquadah_alloy', 'astrogreg:machine_casing_ultimate_engine_intake']
     ]

@@ -49,7 +49,7 @@ ServerEvents.recipes(event => {
 
         gt.extractor(`extract_${color}_dye_from_${color}_petal`)
             .itemInputs(`#botania:petals/${color}`)
-            .itemOutputs(`9x minecraft:${color}_dye`)
+            .itemOutputs(`minecraft:${color}_dye`)
             .duration(400)
             .EUt(2)
         
@@ -62,7 +62,7 @@ ServerEvents.recipes(event => {
 
         gt.macerator(`macerate_${color}_petal_block`)
             .itemInputs(`botania:${color}_petal_block`)
-            .itemOutputs(`minecraft:${color}_dye`)
+            .itemOutputs(`9x minecraft:${color}_dye`)
             .duration(200)
             .EUt(2)
 

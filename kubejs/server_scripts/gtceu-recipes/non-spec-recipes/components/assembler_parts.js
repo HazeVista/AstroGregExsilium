@@ -23,6 +23,7 @@ ServerEvents.recipes(event => {
                 .itemOutputs(`gtceu:${tier}_electric_pump`)
                 .duration(100)
                 .EUt(EU)
+                .addMaterialInfo(true)
 
             gt(`${tier}_conveyor_module_${rubberType}`)
                 .itemInputs(`2x gtceu:${tier}_electric_motor`, `2x gtceu:${metal2}_sleeve`, 
@@ -31,6 +32,7 @@ ServerEvents.recipes(event => {
                 .itemOutputs(`gtceu:${tier}_conveyor_module`)
                 .duration(100)
                 .EUt(EU)
+                .addMaterialInfo(true)
 
         })
             
@@ -41,6 +43,7 @@ ServerEvents.recipes(event => {
             .itemOutputs(`gtceu:${tier}_electric_piston`)
             .duration(100)
             .EUt(EU)
+            .addMaterialInfo(true)
 
         gt(`${tier}_robot_arm`)
             .itemInputs(`gtceu:${tier}_electric_piston`, `2x gtceu:${tier}_electric_motor`, `2x gtceu:${metal1}_rod`,
@@ -49,6 +52,7 @@ ServerEvents.recipes(event => {
             .itemOutputs(`gtceu:${tier}_robot_arm`)
             .duration(100)
             .EUt(EU)
+            .addMaterialInfo(true)
 
         gt(`${tier}_emitter`)
             .itemInputs(`gtceu:${tier}_electric_motor`, `4x gtceu:${metal3}_rod`, `2x gtceu:${cable}_single_cable`, 
@@ -57,6 +61,7 @@ ServerEvents.recipes(event => {
             .itemOutputs(`gtceu:${tier}_emitter`)
             .duration(100)
             .EUt(EU)
+            .addMaterialInfo(true)
 
         gt(`${tier}_sensor`)
             .itemInputs(`gtceu:${tier}_electric_motor`, `4x gtceu:${metal1}_plate`, `2x #gtceu:circuits/${tier}`, 
@@ -65,6 +70,7 @@ ServerEvents.recipes(event => {
             .itemOutputs(`gtceu:${tier}_sensor`)
             .duration(100)
             .EUt(EU)
+            .addMaterialInfo(true)
 
         gt(`${tier}_field_generator`)
             .itemInputs(`6x gtceu:${metal1}_plate`, `2x #gtceu:circuits/${tier}`, `64x gtceu:fine_${wire}_wire`, tip, `4x gtceu:${cable}_single_cable`)
@@ -72,7 +78,25 @@ ServerEvents.recipes(event => {
             .itemOutputs(`gtceu:${tier}_field_generator`)
             .duration(100)
             .EUt(EU)
+            .addMaterialInfo(true)
 
+    })
+
+    // processing cores
+    const processingCores = [
+        ['hv', 'red_steel', 'graphene', 480],
+        ['ev', 'ultimet', 'platinum', 1920],
+        ['iv', 'tungsten_carbide', 'hssg', 7680]
+    ]
+
+    processingCores.forEach(([tier, material1, material2, EU]) => {
+        gt(`${tier}_industrial_processing_core`)
+            .itemInputs(`gtceu:${tier}_machine_hull`, `2x gtceu:${tier}_robot_arm`, `4x gtceu:${material1}_gear`, `16x gtceu:${material2}_foil`)
+            .inputFluids(`gtceu:soldering_alloy 144`)
+            .itemOutputs(`astrogreg:${tier}_industrial_processing_core`)
+            .duration(400)
+            .EUt(EU)
+            .addMaterialInfo(true)
     })
     
 })
