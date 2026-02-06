@@ -8,6 +8,9 @@
 !mods/panorama/
 !panoramas/
 !scripts/
+!docs/
+!.github/
+
 
 # Add files in main directory
 !.gitattributes

@@ -1,0 +1,4 @@
+mkdocs
+mkdocs-material
+mkdocs-awesome-pages-plugin
+click==8.2.1
