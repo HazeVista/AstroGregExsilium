@@ -58,6 +58,60 @@ ServerEvents.recipes(event => {
         A: 'gtceu:iron_plate',
         B: 'gtceu:magnetic_iron_screw'
     })
+
+    event.shaped('minecraft:item_frame', [
+        'AAA',
+        'ABA',
+        'AAA'
+    ], {
+        A: '#forge:rods/wooden',
+        B: 'farmersdelight:canvas'
+    })
+
+    event.shaped('framedblocks:framed_item_frame', [
+        'AAA',
+        'ABA',
+        'AAA'
+    ], {
+        A: 'framedblocks:framed_cube',
+        B: 'minecraft:leather'
+    })
+
+    event.shaped('framedblocks:framed_item_frame', [
+        'AAA',
+        'ABA',
+        'AAA'
+    ], {
+        A: 'framedblocks:framed_cube',
+        B: 'create:cardboard'
+    })
+
+    event.shaped('framedblocks:framed_item_frame', [
+        'AAA',
+        'ABA',
+        'AAA'
+    ], {
+        A: 'framedblocks:framed_cube',
+        B: 'farmersdelight:canvas'
+    })
+
+    event.shaped('minecraft:glowing_item_frame', [
+        'AAA',
+        'ABA',
+        'AAA'
+    ], {
+        A: '#forge:rods/wooden',
+        B: 'botania:manaweave_cloth'
+    })
+
+    event.shaped('framedblocks:framed_glowing_item_frame', [
+        'AAA',
+        'ABA',
+        'AAA'
+    ], {
+        A: 'framedblocks:framed_cube',
+        B: 'botania:manaweave_cloth'
+    })
     //#endregion
 
 

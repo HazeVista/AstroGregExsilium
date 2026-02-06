@@ -177,17 +177,18 @@ ServerEvents.recipes(event => {
     event.shapeless('gtceu:rubber_ingot', 'gtceu:formed_rubber_ingot').replaceIngredient('gtceu:formed_rubber_ingot', 'gtceu:brick_wooden_form')
     event.shapeless('3x powah:steel_energized', 'gtceu:formed_energized_steel_ingot').replaceIngredient('gtceu:formed_energized_steel_ingot', 'gtceu:brick_wooden_form')
 
-    event.shaped('farmersdelight:stove', [
+    gt.shaped('farmersdelight:stove', [
       'CCC',
       'A A',
       'ABA'
     ], {
-      A: 'minecraft:bricks',
+      A: 'gtceu:firebrick',
       B: 'minecraft:campfire',
       C: 'gtceu:wrought_iron_plate'
     })
+    .addMaterialInfo()
 
-    event.shaped('farmersdelight:skillet', [
+    gt.shaped('farmersdelight:skillet', [
       ' BB',
       ' BB',
       'A  '
@@ -195,8 +196,9 @@ ServerEvents.recipes(event => {
       A: 'gtceu:bronze_rod',
       B: 'gtceu:wrought_iron_plate'
     })
+    .addMaterialInfo()
 
-    event.shaped('farmersdelight:cooking_pot', [
+    gt.shaped('farmersdelight:cooking_pot', [
       'C C',
       'ABA',
       'AAA'
@@ -205,6 +207,7 @@ ServerEvents.recipes(event => {
       B: 'minecraft:bucket',
       C: 'gtceu:bronze_rod'
     })
+    .addMaterialInfo()
     //#endregion
 
 

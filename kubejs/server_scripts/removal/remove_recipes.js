@@ -136,8 +136,9 @@ ServerEvents.recipes(event => {
         'gtceu:assembler/basic_data_access_hatch', 'gtceu:circuit_assembler/data_stick', 'gtceu:circuit_assembler/data_stick_soldering_alloy', 'create:crafting/kinetics/filter', 'create:crafting/kinetics/package_filter', 
         'create:crafting/kinetics/attribute_filter', 'gtceu:shaped/steam_oven_from_hp', 'gtceu:shaped/steam_grinder_from_hp', 'gtceu:large_chemical_reactor/styrene_from_ethylbenzene', 'gtceu:assembler/monitor_casing',
         'gtceu:chemical_reactor/styrene_from_ethylbenzene', 'ad_extendra:encased_electrolyte_block', 'gtceu:brewery/bacteria', 'gtceu:autoclave/agar', 'botania:mushroom_stew', 'minecraft:suspicious_stew', 'minecraft:bowl',
-        'gtceu:shapeless/hay_block_to_hay', 'farmersdelight:rice', 'minecraft:brown_dye', 'minecraft:bone_meal', 'minecraft:black_dye', 'minecraft:blue_dye', 'gtceu:shapeless/lazurite_to_dye', 
-        'gtceu:shapeless/sodalite_to_dye', 'gtceu:shapeless/brown_dye_from_metal_mixture'
+        'gtceu:shapeless/hay_block_to_hay', 'farmersdelight:rice', 'minecraft:brown_dye', 'minecraft:bone_meal', 'minecraft:black_dye', 'minecraft:blue_dye', 'gtceu:shapeless/lazurite_to_dye', 'dustrial_decor:cardboard',
+        'gtceu:shapeless/sodalite_to_dye', 'gtceu:shapeless/brown_dye_from_metal_mixture', 'gtceu:shaped/passthrough_hatch_item', 'gtceu:shaped/passthrough_hatch_fluid', 'create:crafting/kinetics/crafter_slot_cover',
+             
     ])
     //#endregion
 

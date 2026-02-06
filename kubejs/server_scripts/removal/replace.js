@@ -69,6 +69,14 @@ ServerEvents.recipes(event => {
     event.replaceInput({}, 'gtceu:hsss_round', 'gtceu:netherite_round')
     event.replaceInput({ id: 'gtceu:shaped/steam_boiler_solar_steel' }, 'minecraft:glass', 'gtceu:tempered_glass')
     event.replaceInput({ output: 'gtceu:steam_machine_casing' }, 'minecraft:bricks', 'gtceu:firebricks')
+    event.replaceInput({ id: 'gtceu:shaped/quantum_chest_uhv' }, 'gtceu:neutronium_plate', 'gtceu:dense_neutronium_plate')
+    event.replaceInput({ id: 'gtceu:shaped/quantum_tank_uhv' }, 'gtceu:neutronium_plate', 'gtceu:dense_neutronium_plate')
+    event.replaceInput({ id: 'gtceu:shaped/super_tank_ev' }, 'gtceu:titanium_plate', 'gtceu:double_titanium_plate')
+    event.replaceInput({ id: 'gtceu:shaped/super_chest_ev' }, 'gtceu:titanium_plate', 'gtceu:double_titanium_plate')
+    event.replaceInput({ id: 'gtceu:assembler/cover_item_detector' }, 'minecraft:light_weighted_pressure_plate', 'gtceu:gold_plate')
+    event.replaceInput({}, 'dustrial_decor:cardboard', 'create:cardboard')
+    event.replaceInput({ id: 'gtceu:assembler/cover_fluid_detector' }, 'minecraft:heavy_weighted_pressure_plate', 'gtceu:lv_electric_pump' )
+    event.replaceInput({ id: 'minecraft:item_frame'}, 'minecraft:stick', '#forge:rods/wooden')
     // event.replaceInput({ input: ''}, '', '')
 
     const mortarMetals = ['wrought_iron', 'flint', 'iron', 'bronze', 'steel', 'cobalt_brass', 'damascus_steel', 'invar']

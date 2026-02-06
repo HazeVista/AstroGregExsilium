@@ -5,5 +5,6 @@ JEIEvents.hideItems(event => {
     event.hide(/gtceu:uxv_.*/)
     event.hide(/gtceu:opv_.*/)
     event.hide(/gtceu:max_(?!battery).*/)
+    event.hide(/gtceu:.*_passthrough_hatch/)
     
 })

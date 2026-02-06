@@ -20,7 +20,7 @@ const purify = event.recipes.gtceu.mana_infusion
         ['botania:grass_seeds', '#forge:grass', 25, 80, 7],
         ['botania:mycelium_seeds', '#forge:mushrooms', 25, 80, 7],
         ['botania:podzol_seeds', 'minecraft:dead_bush', 25, 80, 7]
-    ];
+    ]
 
     basic_infusions.forEach(([output, input, mana, duration, eu]) => {
         infuser(`infuse_${output.replace(':', '_')}`)
@@ -47,7 +47,7 @@ const purify = event.recipes.gtceu.mana_infusion
         ['minecraft:apple', 'minecraft:glow_berries', 2, 300],
         ['minecraft:cactus', 'minecraft:slime_ball', 12, 300],
         ['minecraft:slime_ball', 'minecraft:cactus', 12, 300]
-    ];
+    ]
 
     alchemy_recipes.forEach(([output, input, mana, duration, eu]) => {
         infuser(`infused_${output.replace(':', '_')}`)
@@ -56,7 +56,7 @@ const purify = event.recipes.gtceu.mana_infusion
             .inputFluids(`manafluid:mana ${mana}`)
             .itemOutputs(output)
             .duration(duration)
-            .EUt(120);
+            .EUt(120)
     })
 
     //output seed, input seed
@@ -85,7 +85,7 @@ const purify = event.recipes.gtceu.mana_infusion
             .inputFluids('manafluid:mana 60')
             .itemOutputs(output)
             .duration(300)
-            .EUt(120);
+            .EUt(120)
     })
         
     //probably don't mess with this cycle
@@ -101,7 +101,7 @@ const purify = event.recipes.gtceu.mana_infusion
             .inputFluids('manafluid:mana 2')
             .itemOutputs(output)
             .duration(300)
-            .EUt(120);
+            .EUt(120)
     })
         
     //output sapling, input sapling
@@ -127,7 +127,7 @@ const purify = event.recipes.gtceu.mana_infusion
             .itemOutputs(output)
             .duration(300)
             .EUt(120);
-    });       
+    })      
 
 //#endregion
 
@@ -146,14 +146,14 @@ const purify = event.recipes.gtceu.mana_infusion
         ['8x minecraft:end_stone', '8x minecraft:blackstone', 1200, 2],
         ['8x minecraft:obsidian', '8x botania:blaze_block', 1200, 2],
         ['8x minecraft:cobblestone', '8x minecraft:netherrack', 1200, 2]
-    ];
+    ]
 
     purification.forEach(([output, input, duration, eu]) => {
         const recipe = purify(`pure_${output.replace(/\d+x\s*/, '').replace(':', '_')}`)
             .itemOutputs(output)
             .notConsumable('botania:pure_daisy')
             .duration(duration)
-            .EUt(eu);
+            .EUt(eu)
         
         if (input.includes('minecraft:water')) {
             recipe.inputFluids(input);

@@ -706,16 +706,6 @@ ServerEvents.recipes(event => {
 
 
 
-    //#region cell
-    gt.compressor('compress_biomass')
-        .itemInputs('9x gtceu:bio_chaff')
-        .itemOutputs('botania:cell_block')
-        .duration(600)
-        .EUt(2)
-    //#endregion
-
-
-
     //#region mana fluxfield
     gt.assembler('mana_fluxfield_tin')
         .itemInputs('astrogreg:livingbricks', '2x gtbotania:manasteel_gear', '2x astrogreg:lv_stabilizer', 'botania:energy_rune')
@@ -753,4 +743,21 @@ ServerEvents.recipes(event => {
         A: 'botania:alfglass_pane'
     })
     //#endregion
+
+
+
+    //#region misc
+    gt.compressor('compress_biomass')
+        .itemInputs('9x gtceu:bio_chaff')
+        .itemOutputs('botania:cell_block')
+        .duration(600)
+        .EUt(2)
+
+    gt.autoclave('red_string')
+        .itemInputs('botania:mana_string')
+        .inputFluids('gtbotania:gaiasteel 72')
+        .itemOutputs('botania:red_string')
+        .duration(200)
+        .EUt(30000)
+    //#endregion    
 })

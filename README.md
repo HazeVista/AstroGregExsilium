@@ -24,4 +24,8 @@ Props to Nebby from the [TerraFirmaGreg Team](https://github.com/TerraFirmaGreg-
 
 
 
+This project is currently in the works and not released to the public. Contributors are welcomed and encouraged!
+
+
+
 For sneak peeks, questions, or just to chat about the project and its development, check out our [Official Discord](https://discord.gg/dUaZeV6Drp)

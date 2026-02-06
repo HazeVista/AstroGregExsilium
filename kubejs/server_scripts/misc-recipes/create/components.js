@@ -453,6 +453,14 @@ ServerEvents.recipes(event => {
     .addMaterialInfo()
 
     event.shapeless('create:speedometer', ['create:gearbox', 'minecraft:compass'])
+
+    gt.shaped('create:crafter_slot_cover', [
+        'A',
+        'B'
+    ], {
+        A: 'create:electron_tube',
+        B: 'gtceu:brass_plate'
+    })    
     //#endregion
 
 

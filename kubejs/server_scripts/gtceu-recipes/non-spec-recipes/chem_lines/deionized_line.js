@@ -8,18 +8,14 @@ ServerEvents.recipes(event => {
         .itemOutputs('astrogreg:filter_cartridge')
         .duration(320)
         .EUt(7)
+        .addMaterialInfo(true)
 
     gt.assembler('assemble_empty_cartridge')
         .itemInputs('gtceu:tungsten_steel_fluid_cell', '6x gtceu:polyvinyl_butyral_plate', 'gtceu:ev_electric_pump')
         .itemOutputs('astrogreg:empty_filter_cartridge')
         .duration(300)
         .EUt(1920)
-
-    gt.canner('fill_cartridge')
-        .itemInputs('astrogreg:empty_filter_cartridge', '4x astrogreg:resin_beads')
-        .itemOutputs('astrogreg:filter_cartridge')
-        .duration(80)
-        .EUt(7)
+        .addMaterialInfo(true)
     //#endregion
 
 
@@ -82,6 +78,7 @@ ServerEvents.recipes(event => {
         .itemOutputs('astrogreg:resin_beads')
         .duration(100)
         .EUt(480)
+        .addMaterialInfo(true)
     //#endregion
 
 
@@ -117,5 +114,55 @@ ServerEvents.recipes(event => {
         .outputFluids('gtceu:oxygen')
         .duration(750)
         .EUt(30)
+
+    gt.autoclave('silicon_dioxide_deionized_quartzite_gem')
+        .itemInputs('gtceu:silicon_dioxide_dust')
+        .inputFluids('astrogreg:deionized_water 250')
+        .chancedOutput('gtceu:quartzite_gem', 7500, 0)
+        .duration(600)
+        .EUt(24)
+
+    gt.autoclave('clay_deionized_water')
+        .itemInputs('gtceu:clay_dust')
+        .inputFluids('astrogreg:deionized_water 250')
+        .itemOutputs('minecraft:clay_ball')
+        .duration(600)
+        .EUt(24)
+
+    gt.autoclave('energium_dust_to_gem_deionized')
+        .itemInputs('9x gtceu:energium_dust')
+        .inputFluids('astrogreg:deionized_water')
+        .itemOutputs('gtceu:energy_crystal')
+        .duration(600)
+        .EUt(256)
+
+    gt.autoclave('lapotron_dust_to_gem_deionized')
+        .itemInputs('15x gtceu:lapotron_dust')
+        .inputFluids('astrogreg:deionized_water')
+        .itemOutputs('gtceu:lapotron_gem')
+        .duration(600)
+        .EUt(320)
+
+    gt.fluid_heater('deionized_steam')
+        .inputFluids('astrogreg:deionized_water 6')
+        .outputFluids('gtceu:steam 960')
+        .circuit(1)
+        .duration(30)
+        .EUt(30)
+
+    gt.mixer('deionized_drilling_fluid')
+        .itemInputs('gtceu:stone_dust')
+        .inputFluids('gtceu:lubricant 20')
+        .inputFluids('astrogreg:deionized_water 4980')
+        .outputFluids('gtceu:drilling_fluid 5000')
+        .duration(24)
+        .EUt(16)
+        
+    gt.mixer('deionized_pcb_coolant')
+        .inputFluids('gtceu:polychlorinated_biphenyl 750')
+        .inputFluids('astrogreg:deionized_water 250')
+        .outputFluids('gtceu:pcb_coolant')
+        .duration(100)
+        .EUt(480)
     //#endregion
 })

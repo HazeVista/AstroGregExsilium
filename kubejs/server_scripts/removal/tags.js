@@ -162,8 +162,14 @@ ServerEvents.tags('item', event => {
             ['farmersdelight:tomato', 'farmersdelight:tomato_slice'],
 
         'forge:stone':
-            ['astrogreg:asteroid_stone', 'astrogreg:hard_asteroid_stone']
+            ['astrogreg:asteroid_stone', 'astrogreg:hard_asteroid_stone'],
+        
+        'create:non_movable':
+            ['#create:toolboxes']
     }
+
+    event.add('create:non_movable', /gtceu:.*_tank/)
+    event.add('create:non_movable', /gtceu:.*_chest/)
     //#endregion
 
     

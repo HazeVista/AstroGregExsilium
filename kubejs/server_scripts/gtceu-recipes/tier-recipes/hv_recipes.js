@@ -58,12 +58,13 @@ ServerEvents.recipes(event => {
     ], {
         A: '#gtceu:circuits/ev',
         B: 'gtceu:stainless_steel_frame',
-        C: 'gtceu:electric_motor',
-        D: 'gtceu:electric_piston',
+        C: 'gtceu:hv_electric_motor',
+        D: 'gtceu:hv_electric_piston',
         E: 'gtceu:carbon_fiber_plate'
-    }).addMaterialInfo()
+    })
+    .addMaterialInfo()
 
-    gt.shaped('industrial_electrolyzer', [
+    gt.shaped('astrogreg:industrial_electrolyzer', [
         'EAE',
         'CBD',
         'EAE'         
@@ -73,7 +74,8 @@ ServerEvents.recipes(event => {
         C: 'gtceu:kanthal_single_cable',
         D: 'gtceu:kanthal_single_cable',
         E: 'gtceu:blue_steel_plate'
-    }).addMaterialInfo()
+    })
+    .addMaterialInfo()
     //#endregion
 
 })

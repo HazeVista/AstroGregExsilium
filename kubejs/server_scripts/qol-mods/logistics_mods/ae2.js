@@ -367,7 +367,7 @@ ServerEvents.recipes(event => {
     ], { 
         A: 'astrogreg:futura_alloy_plate', 
         B: 'ae2:terminal', 
-        C: '#forge:chests/wooden', 
+        C: 'gtceu:lv_super_chest', 
         D: 'ae2:fluix_glass_cable', 
         E: 'ae2:quartz_glass' 
     })

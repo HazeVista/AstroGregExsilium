@@ -126,6 +126,7 @@ ServerEvents.recipes(event => {
         B: 'gtceu:tin_alloy_normal_fluid_pipe',
         C: 'gtceu:bronze_drum'
     })
+    .addMaterialInfo()
     //#endregion
 
 
@@ -153,6 +154,7 @@ ServerEvents.recipes(event => {
             A: '#forge:tools/screwdrivers',
             B: `astrogreg:${tier}_mana_input_hatch`
         })
+        .addMaterialInfo()
 
         gt.shaped(`astrogreg:${tier}_mana_input_hatch`, [
             'A',
@@ -161,6 +163,7 @@ ServerEvents.recipes(event => {
             A: '#forge:tools/screwdrivers',
             B: `astrogreg:${tier}_mana_output_hatch`
         })
+        .addMaterialInfo()
     })
     //#endregion
 })
