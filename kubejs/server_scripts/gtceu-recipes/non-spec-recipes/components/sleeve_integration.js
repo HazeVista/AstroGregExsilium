@@ -170,6 +170,7 @@ ServerEvents.recipes(event => {
             .duration(900)
             .EUt(1920)
         )
+        .addMaterialInfo(true)
 
     event.recipes.gtceu.assembly_line(`zpm_electric_motor`)
         .itemInputs('gtceu:long_magnetic_samarium_rod')
@@ -191,6 +192,7 @@ ServerEvents.recipes(event => {
             .duration(1200)
             .EUt(7680)
         )
+        .addMaterialInfo(true)
 
     event.recipes.gtceu.assembly_line(`uv_electric_motor`)
         .itemInputs('gtceu:long_magnetic_samarium_rod') 
@@ -214,6 +216,7 @@ ServerEvents.recipes(event => {
                 .CWUt(32, 96000)
                 .EUt(122880)
         )
+        .addMaterialInfo(true)
     //#endregion
 
 
