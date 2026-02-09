@@ -175,7 +175,7 @@ ServerEvents.recipes(event => {
 
 
     //#region player transmitter
-    gt.shaped('powah:player_transmitter', [
+    gt.shaped('powah:player_transmitter_basic', [
         ' A ',
         'BCB',
         'BDB'
