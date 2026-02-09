@@ -141,7 +141,7 @@ ServerEvents.recipes(event => {
         'gtceu:shapeless/hay_block_to_hay', 'farmersdelight:rice', 'minecraft:brown_dye', 'minecraft:bone_meal', 'minecraft:black_dye', 'minecraft:blue_dye', 'gtceu:shapeless/lazurite_to_dye', 'dustrial_decor:cardboard',
         'gtceu:shapeless/sodalite_to_dye', 'gtceu:shapeless/brown_dye_from_metal_mixture', 'gtceu:shaped/passthrough_hatch_item', 'gtceu:shaped/passthrough_hatch_fluid', 'create:crafting/kinetics/crafter_slot_cover',
         'gtceu:forge_hammer/hammer_flux_to_plate', 'gtceu:shaped/plate_flux', 'gtceu:bender/bend_flux_to_plate', 'gtceu:shaped/stick_flux', 'gtceu:arc_furnace/arc_flux_dust', 'gtceu:smelting/smelt_dust_flux_to_ingot', 
-        'gtceu:alloy_smelter/alloy_smelt_flux_dust_to_block', 'create:crafting/kinetics/super_glue'
+        'gtceu:alloy_smelter/alloy_smelt_flux_dust_to_block', 'create:crafting/kinetics/super_glue',
     ])
     //#endregion
 
@@ -227,5 +227,6 @@ ServerEvents.recipes(event => {
     event.remove({ output: /gtceu:.*_dual_.*_hatch/ })
     event.remove({ id: /botania:dye_.*/ })
     event.remove({ id: /minecraft:.*_dye_from_.*/ })
+    event.remove({ output: /create:.*_toolbox/ })
     //#endregion
 })
