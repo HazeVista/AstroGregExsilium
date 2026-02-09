@@ -4,7 +4,8 @@ ServerEvents.recipes(event => {
         'minecraft:netherite_upgrade_smithing_template', 'ad_astra:fan', 'ad_astra:steel_ingot', 'ad_astra:ice_shard', 'gtceu:gaiasteel_ingot', 'create:creative_blaze_cake',
         'create:blaze_cake_base', 'createaddition:cake_base_baked', 'create:blaze_cake', 'create:dough', 'astrogreg:small_sky_stone_dust', 'astrogreg:tiny_sky_stone_dust', 
         'expandedae:dual_cell_housing', 'expandedae:mega_dual_cell_housing', '#create:pulpifiable','astrogreg:flawless_fluix_pearl_gem', 'astrogreg:exquisite_fluix_pearl_gem',
-        'delightful:animal_oil_bottle', 'minecraft:pitcher_pod', 'minecraft:pitcher_plant', 'minecraft:torchflower', 'minecraft:torchflower_seeds'
+        'delightful:animal_oil_bottle', 'minecraft:pitcher_pod', 'minecraft:pitcher_plant', 'minecraft:torchflower', 'minecraft:torchflower_seeds', 'astrogreg:flux_block', 
+        'astrogreg:double_flux_plate', 'astrogreg:small_flux_dust', 'astrogreg:tiny_flux_dust',
     ])
     //#endregion
 
@@ -57,7 +58,8 @@ ServerEvents.recipes(event => {
         'gtceu:iv_electric_pump', 'gtceu:ev_electric_piston', 'gtceu:iv_electric_piston', 'gtceu:ev_emitter', 'gtceu:iv_emitter', 'gtceu:ev_sensor', 'gtceu:iv_sensor', 'gtceu:ev_field_generator',
         'gtceu:iv_field_generator', 'gtceu:ev_robot_arm', 'gtceu:iv_robot_arm', 'gtceu:ev_conveyor_module', 'gtceu:iv_conveyor_module', 'botania:vial', 'botania:flask', 'minecraft:pitcher_pod', 
         'minecraft:pitcher_plant', 'gtceuterminal:multi_structure_manager', 'gtceuterminal:schematic_interface', 'gtceu:lv_solar_panel', 'gtceu:coke_oven', 'expatternprovider:tag_storage_bus', 
-        'expatternprovider:tag_export_bus', 'expatternprovider:mod_storage_bus', 'expatternprovider:mod_export_bus', 'gtceu:steam_grinder', 'gtceuterminal:dismantler'
+        'expatternprovider:tag_export_bus', 'expatternprovider:mod_storage_bus', 'expatternprovider:mod_export_bus', 'gtceu:steam_grinder', 'gtceuterminal:dismantler',
+        'astrogreg:double_flux_plate', 'astrogreg:small_flux_dust', 'astrogreg:tiny_flux_dust',
     ])
     //#endregion
 
@@ -138,7 +140,8 @@ ServerEvents.recipes(event => {
         'gtceu:chemical_reactor/styrene_from_ethylbenzene', 'ad_extendra:encased_electrolyte_block', 'gtceu:brewery/bacteria', 'gtceu:autoclave/agar', 'botania:mushroom_stew', 'minecraft:suspicious_stew', 'minecraft:bowl',
         'gtceu:shapeless/hay_block_to_hay', 'farmersdelight:rice', 'minecraft:brown_dye', 'minecraft:bone_meal', 'minecraft:black_dye', 'minecraft:blue_dye', 'gtceu:shapeless/lazurite_to_dye', 'dustrial_decor:cardboard',
         'gtceu:shapeless/sodalite_to_dye', 'gtceu:shapeless/brown_dye_from_metal_mixture', 'gtceu:shaped/passthrough_hatch_item', 'gtceu:shaped/passthrough_hatch_fluid', 'create:crafting/kinetics/crafter_slot_cover',
-             
+        'gtceu:forge_hammer/hammer_flux_to_plate', 'gtceu:shaped/plate_flux', 'gtceu:bender/bend_flux_to_plate', 'gtceu:shaped/stick_flux', 'gtceu:arc_furnace/arc_flux_dust', 'gtceu:smelting/smelt_dust_flux_to_ingot', 
+        'gtceu:alloy_smelter/alloy_smelt_flux_dust_to_block', 'create:crafting/kinetics/super_glue'
     ])
     //#endregion
 

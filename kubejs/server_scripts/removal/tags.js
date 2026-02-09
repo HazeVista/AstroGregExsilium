@@ -168,8 +168,14 @@ ServerEvents.tags('item', event => {
             ['#create:toolboxes']
     }
 
-    event.add('create:non_movable', /gtceu:.*_tank/)
-    event.add('create:non_movable', /gtceu:.*_chest/)
+        // wildcard additions
+        event.add('create:non_movable', /astrogreg:.*_drum/)
+        event.add('create:non_movable', /astrogreg:.*_crate/)
+        event.add('create:non_movable', /gtceu:.*_drum/)
+        event.add('create:non_movable', /gtceu:.*_crate/)
+        event.add('create:non_movable', /gtceu:.*_chest/)
+        event.add('create:non_movable', /gtceu:.*_tank/)
+
     //#endregion
 
     

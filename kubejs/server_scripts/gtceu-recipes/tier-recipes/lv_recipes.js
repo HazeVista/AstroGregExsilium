@@ -57,6 +57,12 @@ ServerEvents.recipes(event => {
         .outputFluids('gtceu:hydrogen 2000')
         .duration(200)
         .EUt(28)
+
+    gt.centrifuge('decomp_dielectric_paste')
+        .itemInputs('4x powah:dielectric_paste')
+        .itemOutputs('3x gtceu:carbon_dust', '2x gtceu:clay_dust')
+        .duration(200)
+        .EUt(30)
     //#endregion
 
 

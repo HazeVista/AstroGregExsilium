@@ -268,11 +268,11 @@ ItemEvents.tooltip(event => {
     ])
 
     tipTooltip(event, 'astrogreg:hv_industrial_processing_core', [
-        { line: 1, text: 'Allows Industrial Multiblocks to run at a max of 512 EU/t (§5HV§r)' }
+        { line: 1, text: 'Allows Industrial Multiblocks to run at a max of 512 EU/t (§6HV§r)' }
     ])
     
     tipTooltip(event, 'astrogreg:ev_industrial_processing_core', [
-        { line: 1, text: 'Allows Industrial Multiblocks to run at a max of 2048 EU/t (§6EV§r)' }
+        { line: 1, text: 'Allows Industrial Multiblocks to run at a max of 2048 EU/t (§5EV§r)' }
     ])
     
     tipTooltip(event, 'astrogreg:iv_industrial_processing_core', [
@@ -364,7 +364,7 @@ ItemEvents.tooltip(event => {
         ['astrogreg:niotic_calorite_ingot', 'HV'],
         ['astrogreg:spirited_uranium_ingot', 'EV'],
         ['astrogreg:nitro_flux_ingot', 'IV'],
-        ['astrogreg:juperiosaturlytide_ingot', 'LuV'],
+        ['astrogreg:radiant_zephyron_ingot', 'LuV'],
         ['gtbotania:gaiaforged_naquadah_ingot', 'ZPM'],
         ['astrogreg:neptunium_molybdenum_selenide_ingot', 'UV'],
         ['astrogreg:electrolyte_ingot', 'UHV']

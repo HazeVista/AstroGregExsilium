@@ -74,15 +74,6 @@ ServerEvents.recipes(event => {
         'AAA'
     ], {
         A: 'framedblocks:framed_cube',
-        B: 'minecraft:leather'
-    })
-
-    event.shaped('framedblocks:framed_item_frame', [
-        'AAA',
-        'ABA',
-        'AAA'
-    ], {
-        A: 'framedblocks:framed_cube',
         B: 'create:cardboard'
     })
 
@@ -95,7 +86,7 @@ ServerEvents.recipes(event => {
         B: 'farmersdelight:canvas'
     })
 
-    event.shaped('minecraft:glowing_item_frame', [
+    event.shaped('minecraft:glow_item_frame', [
         'AAA',
         'ABA',
         'AAA'

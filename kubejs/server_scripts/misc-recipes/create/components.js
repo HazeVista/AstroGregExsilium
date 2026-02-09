@@ -461,6 +461,16 @@ ServerEvents.recipes(event => {
         A: 'create:electron_tube',
         B: 'gtceu:brass_plate'
     })    
+    .addMaterialInfo()
+
+    gt.shaped('create:super_glue', [
+        'AB',
+        'CA'
+    ], {
+        A: 'gtceu:sticky_resin',
+        B: 'gtceu:tin_foil',
+        C: 'gtceu:tin_ring'
+    })
     //#endregion
 
 
