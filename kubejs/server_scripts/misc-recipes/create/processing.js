@@ -280,7 +280,7 @@ ServerEvents.recipes(event => {
         'ABA'
     ], {
         A: 'gtceu:brass_plate',
-        B: 'powah:battery_starter',
+        B: 'powah:battery_basic',
         C: 'create:brass_casing',
         D: 'gtceu:red_alloy_plate'
     })

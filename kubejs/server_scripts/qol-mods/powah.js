@@ -1,191 +1,99 @@
 ServerEvents.recipes(event => {
 
     const gt = event.recipes.gtceu
+    
+    const PASTE = 'powah:dielectric_paste'
+    const ROD = 'powah:dielectric_rod'
+    const CASING = 'powah:dielectric_casing'
 
     //#region basic components
-    event.shaped('powah:player_aerial_pearl', [
-        'BCB',
-        'CAC',
-        'BCB'
+    gt.shaped('powah:binding_card', [
+        'ABA'
     ], {
-        A: 'minecraft:ender_eye',
-        B: 'minecraft:blaze_powder',
-        C: 'powah:dielectric_paste'
+        A: ROD, 
+        B: 'powah:battery_basic'
     })
+    .addMaterialInfo()
 
-    event.shaped('powah:binding_card', [
+    gt.shaped('powah:binding_card_dim', [
         'ABA'
     ], {
-        A: 'powah:dielectric_rod',
-        B: 'powah:battery_starter'
-    });
-
-    event.shaped('powah:binding_card_dim', [
-        'ABA'
-    ], {
-        A: 'minecraft:ender_pearl',
+        A: 'minecraft:ender_pearl', 
         B: 'powah:binding_card'
-    });
+    })
+    .addMaterialInfo()
 
-    event.shaped('2x powah:dielectric_casing', [
+    gt.shaped(`2x ${CASING}`, [
         'AAA',
         'ABA',
         'AAA'
     ], {
-        A: 'powah:dielectric_rod',
+        A: ROD, 
         B: '#gtceu:tools/crafting_wrenches'
-    });
+    })
+    .addMaterialInfo()
 
     gt.assembler('assembler_dielectric_casing')
-        .itemInputs('4x powah:dielectric_rod')
-        .itemOutputs('powah:dielectric_casing')
-        .duration(64)
+        .itemInputs(`4x ${ROD}`)
+        .itemOutputs(CASING)
         .circuit(4)
+        .duration(64)
         .EUt(7)
 
-    event.shaped('8x powah:dielectric_rod', [
-        'ABA',
-        'ABA',
-        'ABA'
-    ], {
-        A: 'powah:dielectric_paste',
-        B: 'gtceu:iron_rod'
-    });
+    const rodRecipes = [ ['iron', 8], ['steel', 16], ['aluminium', 20], ['stainless_steel', 24], ['titanium', 32] ]
 
-        event.shaped('16x powah:dielectric_rod', [
-        'ABA',
-        'ABA',
-        'ABA'
-    ], {
-        A: 'powah:dielectric_paste',
-        B: 'gtceu:steel_rod'
-    });
-    event.shaped('20x powah:dielectric_rod', [
-        'ABA',
-        'ABA',
-        'ABA'
-    ], {
-        A: 'powah:dielectric_paste',
-        B: 'gtceu:aluminium_rod'
-    });
+    rodRecipes.forEach(([metal, count]) => {
 
-    event.shaped('24x powah:dielectric_rod', [
-        'ABA',
-        'ABA',
-        'ABA'
-    ], {
-        A: 'powah:dielectric_paste',
-        B: 'gtceu:stainless_steel_rod'
-    });
-
-    event.shaped('32x powah:dielectric_rod', [
-        'ABA',
-        'ABA',
-        'ABA'
-    ], {
-        A: 'powah:dielectric_paste',
-        B: 'gtceu:titanium_rod'
-    });
-
-    event.shaped('4x powah:dielectric_paste', [
-        'AAA',
-        'BBC'
-    ], {
-        A: 'gtceu:carbon_dust',
-        B: 'gtceu:clay_dust',
-        C: 'minecraft:blaze_powder'
+        gt.shaped(`${count}x ${ROD}`, [
+            'ABA',
+            'ABA',
+            'ABA'
+        ], {
+            A: PASTE, 
+            B: `gtceu:${metal}_rod`
+        })
+        
     })
 
-    event.shaped('4x powah:dielectric_paste', [
-        'AAA',
-        'BBC'
-    ], {
-        A: 'gtceu:carbon_dust',
-        B: 'gtceu:clay_dust',
-        C: 'minecraft:lava_bucket'
+    const dusts = [ 'carbon', 'charcoal', 'coal' ]
+    const heatSources = [ 'minecraft:blaze_powder', 'minecraft:lava_bucket' ]
+    
+    dusts.forEach(dust => {
+        heatSources.forEach(heat => {
+            gt.shaped(`4x ${PASTE}`, [
+                'AAA',
+                'BBC'
+            ], {
+                A: `gtceu:${dust}_dust`, 
+                B: 'gtceu:clay_dust', 
+                C: heat
+            })
+        })
     })
 
-        event.shaped('4x powah:dielectric_paste', [
-        'AAA',
-        'BBC'
-    ], {
-        A: 'gtceu:charcoal_dust',
-        B: 'gtceu:clay_dust',
-        C: 'minecraft:blaze_powder'
+    dusts.forEach((dust, i) => {
+
+        gt.mixer(`mixing_dielectric_paste${i || ''}`)
+            .itemInputs(`3x gtceu:${dust}_dust`, '2x gtceu:clay_dust', 'minecraft:blaze_powder')
+            .itemOutputs(`4x ${PASTE}`)
+            .duration(200)
+            .EUt(20)
+        
+        gt.mixer(`mixing_dielectric_paste_lava${i || ''}`)
+            .itemInputs(`3x gtceu:${dust}_dust`, '2x gtceu:clay_dust')
+            .inputFluids('minecraft:lava 100')
+            .itemOutputs(`4x ${PASTE}`)
+            .duration(200)
+            .EUt(20)
+
     })
-
-    event.shaped('4x powah:dielectric_paste', [
-        'AAA',
-        'BBC'
-    ], {
-        A: 'gtceu:charcoal_dust',
-        B: 'gtceu:clay_dust',
-        C: 'minecraft:lava_bucket'
-    })
-
-    event.shaped('4x powah:dielectric_paste', [
-        'AAA',
-        'BBC'
-    ], {
-        A: 'gtceu:coal_dust',
-        B: 'gtceu:clay_dust',
-        C: 'minecraft:blaze_powder'
-    })
-
-    event.shaped('4x powah:dielectric_paste', [
-        'AAA',
-        'BBC'
-    ], {
-        A: 'gtceu:coal_dust',
-        B: 'gtceu:clay_dust',
-        C: 'minecraft:lava_bucket'
-    })
-
-    gt.mixer('mixing_dielectric_paste')
-        .itemInputs('3x gtceu:charcoal_dust', '2x gtceu:clay_dust', 'minecraft:blaze_powder')
-        .itemOutputs('4x powah:dielectric_paste')
-        .EUt(20)
-        .duration(200)
-
-    gt.mixer('mixing_dielectric_paste1')
-        .itemInputs('3x gtceu:coal_dust', '2x gtceu:clay_dust', 'minecraft:blaze_powder')
-        .itemOutputs('4x powah:dielectric_paste')
-        .EUt(20)
-        .duration(200)
-
-    gt.mixer('mixing_dielectric_paste2')
-        .itemInputs('3x gtceu:carbon_dust', '2x gtceu:clay_dust', 'minecraft:blaze_powder')
-        .itemOutputs('4x powah:dielectric_paste')
-        .EUt(20)
-        .duration(200)
-
-    gt.mixer('mixing_dielectric_paste_lava')
-        .itemInputs('3x gtceu:charcoal_dust', '2x gtceu:clay_dust')
-        .itemOutputs('4x powah:dielectric_paste')
-        .inputFluids('minecraft:lava 100')
-        .EUt(20)
-        .duration(200)
-
-    gt.mixer('mixing_dielectric_paste_lava1')
-        .itemInputs('3x gtceu:coal_dust', '2x gtceu:clay_dust')
-        .itemOutputs('4x powah:dielectric_paste')
-        .inputFluids('minecraft:lava 100')
-        .EUt(20)
-        .duration(200)
-
-    gt.mixer('mixing_dielectric_paste_lava2')
-        .itemInputs('3x gtceu:carbon_dust', '2x gtceu:clay_dust')
-        .inputFluids('minecraft:lava 100')
-        .itemOutputs('4x powah:dielectric_paste')
-        .EUt(20)
-        .duration(200)
 
     gt.assembler('assembling_thermoelectric_plate')
-        .itemInputs('4x gtceu:copper_plate', 'powah:dielectric_paste')    
+        .itemInputs('4x gtceu:copper_plate', PASTE)
         .inputFluids('gtceu:blaze 576')
         .itemOutputs('powah:thermoelectric_plate')
-        .EUt(15)
         .duration(80)
+        .EUt(15)
 
     gt.vacuum_freezer('cool_carbon_dioxide')
         .notConsumable('gtceu:block_casting_mold')
@@ -193,147 +101,126 @@ ServerEvents.recipes(event => {
         .itemOutputs('powah:dry_ice')
         .duration(100)
         .EUt(120)
+    //#endregion
+
+
 
     //#region capacitors
-    event.shaped('4x powah:capacitor_basic', [
-        ' CB',
-        'CAC',
-        'BC '
-    ], {
-        A: 'gtceu:magnetic_iron_rod',
-        B: 'powah:dielectric_paste',
-        C: 'gtceu:fine_red_alloy_wire'
+    const capData = [
+        ['gtceu:magnetic_iron_rod', 'gtceu:fine_red_alloy_wire'],
+        ['gtceu:magnetic_iron_rod', 'astrogreg:fine_energized_steel_wire'],
+        ['gtceu:magnetic_steel_rod', 'astrogreg:fine_blazing_etrium_wire'],
+        ['gtceu:magnetic_steel_rod', 'astrogreg:fine_niotic_calorite_wire'],
+        ['gtceu:magnetic_neodymium_rod', 'astrogreg:fine_spirited_uranium_wire'],
+        ['gtceu:magnetic_neodymium_rod', 'astrogreg:fine__wire']
+    ]
+    
+    const capTiers = [ 'basic', 'hardened', 'blazing', 'niotic', 'spirited', 'nitro' ]
+    
+    capData.forEach(([rod, wire], i) => {
+
+        gt.shaped(`4x powah:capacitor_${capTiers[i]}`, [
+            ' CB',
+            'CAC',
+            'BC '
+        ], {
+            A: rod, 
+            B: PASTE, 
+            C: wire
+        })
+        .addMaterialInfo()
+
     })
-
-    event.shaped('4x powah:capacitor_hardened', [
-        ' CB',
-        'CAC',
-        'BC '
-    ], {
-        A: 'gtceu:magnetic_iron_rod',
-        B: 'powah:dielectric_paste',
-        C: 'astrogreg:fine_energized_steel_wire'
-    })
-
-    // event.shaped('4x powah:capacitor_blazing', [
-    //     ' CB',
-    //     'CAC',
-    //     'BC '
-    // ], {
-    //     A: 'gtceu:magnetic_steel_rod',
-    //     B: 'powah:dielectric_paste',
-    //     C: 'gtceu:fine__wire'
-    // })
-
-    //     event.shaped('4x powah:capacitor_niotic', [
-    //     ' CB',
-    //     'CAC',
-    //     'BC '
-    // ], {
-    //     A: 'gtceu:magnetic_steel_rod',
-    //     B: 'powah:dielectric_paste',
-    //     C: 'gtceu:fine__wire'
-    // })
-    // event.shaped('4x powah:capacitor_spirited', [
-    //     ' CB',
-    //     'CAC',
-    //     'BC '
-    // ], {
-    //     A: 'gtceu:magnetic_neodymium_rod',
-    //     B: 'powah:dielectric_paste',
-    //     C: 'gtceu:fine__wire'
-    // })
-    // event.shaped('4x powah:capacitor_nitro', [
-    //     ' CB',
-    //     'CAC',
-    //     'BC '
-    // ], {
-    //     A: 'gtceu:magnetic_neodymium_rod',
-    //     B: 'powah:dielectric_paste',
-    //     C: 'gtceu:fine__wire'
-    // })
-
-
-
-    //#region player transmitters
-
+    //#endregion
 
 
 
     //#region batteries
-    event.shaped('powah:battery_starter', [
+    gt.shaped('powah:battery_basic', [
         'CAC',
         'ABA',
         'CAC'
     ], {
-        A: 'powah:capacitor_basic',
-        B: 'minecraft:redstone',
-        C: 'powah:dielectric_rod'
+        A: 'powah:capacitor_basic', 
+        B: 'gtceu:lead_single_cable', 
+        C: ROD
     })
+    .addMaterialInfo()
 
-    event.shaped('powah:battery_basic', [
-        'BAB',
-        'CDC',
-        'BAB'
+    const batteryData = [
+        ['powah:battery_basic', 'hardened', 'powah:capacitor_hardened', 'gtceu:tin_single_cable'],
+        ['powah:battery_hardened', 'blazing', 'powah:capacitor_blazing', 'gtceu:copper_single_cable'],
+        ['powah:battery_blazing', 'niotic', 'powah:capacitor_niotic', 'gtceu:gold_single_cable'],
+        ['powah:battery_niotic', 'spirited', 'powah:capacitor_spirited', 'gtceu:aluminium_single_cable'],
+        ['powah:battery_spirited', 'nitro', 'powah:capacitor_nitro', 'gtceu:platinum_single_cable']
+    ]
+
+    batteryData.forEach(([prev, tier, cap, cable]) => {
+
+        gt.shaped(`powah:battery_${tier}`, [
+            'BAB',
+            'CDC',
+            'BAB'
+        ], {
+            A: prev, 
+            B: ROD, 
+            C: cap, 
+            D: cable
+        })
+        .addMaterialInfo()
+
+    })
+    //#endregion
+
+
+
+    //#region player transmitter
+    gt.shaped('powah:player_transmitter', [
+        ' A ',
+        'BCB',
+        'BDB'
     ], {
-        A: 'powah:battery_starter',
-        B: 'powah:dielectric_rod',
-        C: 'powah:capacitor_hardened',
-        D: 'gtceu:red_alloy_single_wire'
+        A: 'minecraft:ender_pearl',
+        B: 'gtceu:steel_plate',
+        C: 'powah:battery_basic',
+        D: CASING
     })
+    //#endregion
 
-    event.shaped('powah:battery_hardened', [
-        'BAB',
-        'CDC',
-        'BAB'
-    ], {
-        A: 'powah:battery_basic',
-        B: 'powah:dielectric_rod',
-        C: 'powah:capacitor_blazing',
-        D: 'astrogreg:energized_steel_single_wire'
+
+
+    //#region generators
+    const generators = [ ['basic', 'tin', 'lv'], ['hardened', 'copper', 'mv'], ['blazing', 'gold', 'hv'] ]
+
+    generators.forEach(([powahTier, cable, gtTier]) => {
+
+        gt.shaped(`powah:furnator_${powahTier}`, [
+            'ABA',
+            'ECE',
+            'ADA'
+        ], {
+            A: `powah:capacitor_${powahTier}`,
+            B: `minecraft:furnace`,
+            C: CASING,
+            D: `gtceu:${gtTier}_machine_hull`,
+            E: `gtceu:${cable}_single_cable`
+        })
+        .addMaterialInfo()
+
+        gt.shaped(`powah:magmator_${powahTier}`, [
+            'ABA',
+            'ECE',
+            'ADA'
+        ], {
+            A: `powah:capacitor_${powahTier}`,
+            B: `powah:thermoelectric_plate`,
+            C: CASING,
+            D: `gtceu:${gtTier}_machine_hull`,
+            E: `gtceu:${cable}_single_cable`
+        })
+        .addMaterialInfo()
+
     })
-    
-    // event.shaped('powah:battery_blazing', [
-    //     'BAB',
-    //     'CDC',
-    //     'BAB'
-    // ], {
-    //     A: 'powah:battery_hardened',
-    //     B: 'powah:dielectric_rod',
-    //     C: 'powah:capacitor_niotic',
-    //     D: 'gtceu:_single_wire'
-    // })
+    //#endregion
 
-    // event.shaped('powah:battery_niotic', [
-    //     'BAB',
-    //     'CDC',
-    //     'BAB'
-    // ], {
-    //     A: 'powah:battery_blazing',
-    //     B: 'powah:dielectric_rod',
-    //     C: 'powah:capacitor_spirited',
-    //     D: 'gtceu:_single_wire'
-    // })
-
-    // event.shaped('powah:battery_spirited', [
-    //     'BAB',
-    //     'CDC',
-    //     'BAB'
-    // ], {
-    //     A: 'powah:battery_niotic',
-    //     B: 'powah:dielectric_rod',
-    //     C: 'powah:capacitor_nitro',
-    //     D: 'gtceu:_single_wire'
-    // })
-
-    // event.shaped('powah:battery_nitro', [
-    //     'BAB',
-    //     'CDC',
-    //     'BAB'
-    // ], {
-    //     A: 'powah:battery_spirited',
-    //     B: 'powah:dielectric_rod',
-    //     C: 'powah:capacitor_nitro',
-    //     D: 'gtceu:_single_wire'
-    // })
-});
+})
