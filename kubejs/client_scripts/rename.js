@@ -94,9 +94,9 @@ ClientEvents.lang('en_us', event => {
     ])
 
     const tiers = [
-        ['lv', '§7LV§r'], ['mv', '§bMV§r'], ['hv', '§6HV§r'], ['ev', '§5EV§r'],
-        ['iv', '§9IV§r'], ['luv', '§dLuV§r'], ['zpm', '§cZPM§r'], ['uv', '§3UV§r'],
-        ['uhv', '§4UHV§r']
+        ['lv', '§7LV§r'], ['mv', '§bMV§r'], ['hv', '§6HV§r'], 
+        ['ev', '§5EV§r'], ['iv', '§9IV§r'], ['luv', '§dLuV§r'], 
+        ['zpm', '§cZPM§r'], ['uv', '§3UV§r'], ['uhv', '§4UHV§r']
     ]
 
     tiers.forEach(([tier, name]) => {
