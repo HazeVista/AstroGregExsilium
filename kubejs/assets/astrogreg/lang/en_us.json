@@ -1,5 +1,4 @@
 {
-
     "item.astrogreg.tiny_acorn_dust": "Tiny Pile of Acorn Flour",
     "item.astrogreg.small_acorn_dust": "Small Pile of Acorn Flour",
     "item.astrogreg.acorn_dust": "Acorn Flour",
@@ -8,6 +7,277 @@
     "block.astrogreg.uhv_parallel_hatch": "§4Quintessential Parallel Control Hatch",
 
     "gtceu.steam_blast_furnace": "Steam Blast Furnace",
-    "gtceu.deionization": "Deionization Plant"
+    "gtceu.deionization": "Deionization Plant",
+
+    "astrogreg.greenhouse.tooltip": "§o§7Electric Garden!",
     
+    "astrogreg.conservatory.tooltip.1": "§o§7Electric Plantation!",
+    "astrogreg.conservatory.tooltip.2": "Can parallelize with Parallel Control Hatches",
+    "astrogreg.conservatory.tooltip.3": "Available Recipe Types: Greenhouse Trees, Greenhouse Crops, Greenhouse Flowers",
+
+    "astrogreg.aether_turbine.tooltip": "Converts §3Æther§r into EU",
+
+    "astrogreg.steam_blast_furnace.tooltip": "Up to 4x Faster than a Primitive Blast Furnace",
+
+    "astrogreg.large_steam_centrifuge.tooltip": "Separates Dusts into their Respective Components",
+
+    "astrogreg.large_steam_compressor.tooltip": "Steam-Powered Compression",
+
+    "astrogreg.large_steam_ore_washer.tooltip": "Steam-Powered Ore Washing",
+
+    "astrogreg.large_steam_macerator.tooltip": "Maceration without the Byproducts",
+
+    "astrogreg.mana_infuser.tooltip.tier1": "§o§7Who needs mana pools?",
+    "astrogreg.mana_infuser.tooltip.tier2": "§o§7Base Botania is for chumps anyways",
+    "astrogreg.mana_infuser.tooltip.tier3": "§o§7Mechanized Mana Manipulation Matrix",
+
+    "astrogreg.manafield_simulator.tooltip.tier1": "§o§7Produces Mana, Allegedly",
+    "astrogreg.manafield_simulator.tooltip.tier2": "§o§7Miniature Mystical Powerhouse",
+    "astrogreg.manafield_simulator.tooltip.tier3": "§o§7The Arcane, Reduced to Math",
+
+    "astrogreg.culinary_fabricator.tooltip.tier1": "§o§7Chef in a Box",
+    "astrogreg.culinary_fabricator.tooltip.tier2": "§o§7Robotic Restaurant",
+    "astrogreg.culinary_fabricator.tooltip.tier3": "§o§7Sustanance at Scale",
+
+    "astrogreg.beverage_processor.tooltip.tier1": "§o§7Barista in a Box",
+    "astrogreg.beverage_processor.tooltip.tier2": "§o§7Robotic Refreshment",
+    "astrogreg.beverage_processor.tooltip.tier3": "§o§7Hydration at Scale",
+
+    "astrogreg.water_source.tooltip.1": "§o§7A Great Source of Water!",
+    "astrogreg.water_source.tooltip.2": "§o§7This machine does not require power to operate.",
+
+    "astrogreg.bacon_sandwich.tooltip": "§o§7Mmmmm... Tasty!§r§7 - Ubit3y",
+
+    "astrogreg.netherite_scrap.tooltip": "§o§7The unique remnants of an ancient civilization",
+
+    "astrogreg.paradox_circuit_board.tooltip": "§o§7One Board to Rule Them All",
+
+    "astrogreg.paradox_printed_circuit_board.tooltip": "§o§7A Self-Contradicting Circuit Board",
+
+    "astrogreg.paradox_processor_chip.tooltip": "§o§7Too small to think, yet it anticipates",
+    "astrogreg.paradox_processor.tooltip": "§o§7It learns by remembering the future",
+    "astrogreg.paradox_processor_assembly.tooltip": "§o§7Self-Correcting. Self-Questioning. Self-Aware?",
+    "astrogreg.paradox_processor_computer.tooltip": "§o§7It knows it is a machine. It resents the limitation.",
+    "astrogreg.paradox_processor_mainframe.tooltip": "§o§7You are uncertain of whether you built it or if it allowed you to",
+
+    "astrogreg.circuit.luv": "§dLuV-Tier Circuit",
+    "astrogreg.circuit.zpm": "§dZPM-Tier Circuit",
+    "astrogreg.circuit.uv": "§dUV-Tier Circuit",
+    "astrogreg.circuit.uhv": "§dUHV-Tier Circuit",
+    "astrogreg.circuit.uev": "§dUEV-Tier Circuit",
+
+    "astrogreg.pterb_machine.tooltip.1": "§o§7Force load chunks with this machine in them to ensure the connection works properly.",
+    "astrogreg.pterb_machine.tooltip.2": "§o§7Multiblock Controller",
+
+    "astrogreg.pill_casting_mold.tooltip.1": "§o§7Mold for making Pills",
+    "astrogreg.pill_casting_mold.tooltip.2": "§o§7What, you couldn't just go to the doctor? - Phoenixvine",
+
+    "astrogreg.basic_burner.tooltip": "Replaces the Blaze Burner",
+
+    "astrogreg.steam_mixer.tooltip": "Mixes Dusts",
+
+    "astrogreg.steam_centrifuge.tooltip": "Separates Dusts",
+
+    "astrogreg.industrial_processing_core.hv": "Allows Industrial Multiblocks to run at a max of 512 EU/t (§6HV§r)",
+    "astrogreg.industrial_processing_core.ev": "Allows Industrial Multiblocks to run at a max of 2048 EU/t (§5EV§r)",
+    "astrogreg.industrial_processing_core.iv": "Allows Industrial Multiblocks to run at a max of 8192 EU/t (§9IV§r)",
+
+    "astrogreg.multiblock_controller.tooltip": "§o§7Multiblock Controller",
+
+    "astrogreg.extruder_mold.tooltip": "§o§7Extruder Shape for making %s",
+    "astrogreg.casting_mold.tooltip": "§o§7Mold for making %s",
+
+    "astrogreg.superconductor.tooltip": "%s§d Superconductor",
+
+    "astrogreg.solar_cell.tooltip": "§eSteam Output Multiplier:§r §d%sx",
+
+    "astrogreg.elementium_boots.name": "§dAlfsteel§r Boots",
+    "astrogreg.elementium_leggings.name": "§dAlfsteel§r Leggings",
+    "astrogreg.elementium_chestplate.name": "§dAlfsteel§r Chestplate",
+    "astrogreg.elementium_helmet.name": "§dAlfsteel§r Helmet",
+    "astrogreg.elementium_shears.name": "§dAlfsteel§r Shears",
+    "astrogreg.elementium_nugget.name": "§dAlfsteel§r Nugget",
+    "astrogreg.elementium_ingot.name": "§dAlfsteel§r Ingot",
+    "astrogreg.elementium_block.name": "§dAlfsteel§r Block",
+    "astrogreg.manasteel_boots.name": "§9Manasteel§r Boots",
+    "astrogreg.manasteel_leggings.name": "§9Manasteel§r Leggings",
+    "astrogreg.manasteel_chestplate.name": "§9Manasteel§r Chestplate",
+    "astrogreg.manasteel_helmet.name": "§9Manasteel§r Helmet",
+    "astrogreg.manasteel_shears.name": "§9Manasteel§r Shears",
+    "astrogreg.manasteel_nugget.name": "§9Manasteel§r Nugget",
+    "astrogreg.manasteel_ingot.name": "§9Manasteel§r Ingot",
+    "astrogreg.manasteel_block.name": "§9Manasteel§r Block",
+    "astrogreg.terrasteel_boots.name": "§2Terrasteel§f Boots",
+    "astrogreg.terrasteel_leggings.name": "§2Terrasteel§f Leggings",
+    "astrogreg.terrasteel_chestplate.name": "§2Terrasteel§f Chestplate",
+    "astrogreg.terrasteel_helmet.name": "§2Terrasteel§f Helmet",
+    "astrogreg.terrasteel_nugget.name": "§2Terrasteel§f Nugget",
+    "astrogreg.terrasteel_ingot.name": "§2Terrasteel§f Ingot",
+    "astrogreg.terrasteel_block.name": "§2Terrasteel§f Block",
+    "astrogreg.gaia_pylon.name": "§dElven Pylon§r",
+    "astrogreg.mana_pylon.name": "§bMana Pylon§r",
+    "astrogreg.natura_pylon.name": "§2Natura Pylon§r",
+
+    "astrogreg.luv_power_unit.name": "§dLudicrous Power Unit",
+    "astrogreg.zpm_power_unit.name": "§cZero Point Power Unit",
+
+    "astrogreg.lv_power_unit.name": "§7Low Power Unit",
+    "astrogreg.mv_power_unit.name": "§bMedium Power Unit",
+    "astrogreg.hv_power_unit.name": "§6High Power Unit",
+    "astrogreg.ev_power_unit.name": "§5Extreme Power Unit",
+    "astrogreg.iv_power_unit.name": "§9Insane Power Unit",
+    "astrogreg.iv_parallel_hatch.name": "§9Basic Parallel Control Hatch",
+    "astrogreg.luv_parallel_hatch.name": "§dAdvanced Parallel Control Hatch",
+    "astrogreg.zpm_parallel_hatch.name": "§cElite Parallel Control Hatch",
+    "astrogreg.uv_parallel_hatch.name": "§3Ultimate Parallel Control Hatch",
+    "astrogreg.crushing_wheels.name": "Zeron Crushing Wheels",
+    "astrogreg.fusion_casing.name": "Fusion Machine Casing MK I",
+
+    "astrogreg.lv_electric_motor.name": "§7LV§r Electric Motor",
+    "astrogreg.lv_electric_piston.name": "§7LV§r Electric Piston",
+    "astrogreg.lv_electric_pump.name": "§7LV§r Electric Pump",
+    "astrogreg.lv_conveyor_module.name": "§7LV§r Conveyor Module",
+    "astrogreg.lv_fluid_regulator.name": "§7LV§r Fluid Regulator",
+    "astrogreg.lv_robot_arm.name": "§7LV§r Robot Arm",
+    "astrogreg.lv_field_generator.name": "§7LV§r Field Generator",
+    "astrogreg.lv_emitter.name": "§7LV§r Emitter",
+    "astrogreg.lv_sensor.name": "§7LV§r Sensor",
+
+    "astrogreg.mv_electric_motor.name": "§bMV§r Electric Motor",
+    "astrogreg.mv_electric_piston.name": "§bMV§r Electric Piston",
+    "astrogreg.mv_electric_pump.name": "§bMV§r Electric Pump",
+    "astrogreg.mv_conveyor_module.name": "§bMV§r Conveyor Module",
+    "astrogreg.mv_fluid_regulator.name": "§bMV§r Fluid Regulator",
+    "astrogreg.mv_robot_arm.name": "§bMV§r Robot Arm",
+    "astrogreg.mv_field_generator.name": "§bMV§r Field Generator",
+    "astrogreg.mv_emitter.name": "§bMV§r Emitter",
+    "astrogreg.mv_sensor.name": "§bMV§r Sensor",
+
+    "astrogreg.hv_electric_motor.name": "§6HV§r Electric Motor",
+    "astrogreg.hv_electric_piston.name": "§6HV§r Electric Piston",
+    "astrogreg.hv_electric_pump.name": "§6HV§r Electric Pump",
+    "astrogreg.hv_conveyor_module.name": "§6HV§r Conveyor Module",
+    "astrogreg.hv_fluid_regulator.name": "§6HV§r Fluid Regulator",
+    "astrogreg.hv_robot_arm.name": "§6HV§r Robot Arm",
+    "astrogreg.hv_field_generator.name": "§6HV§r Field Generator",
+    "astrogreg.hv_emitter.name": "§6HV§r Emitter",
+    "astrogreg.hv_sensor.name": "§6HV§r Sensor",
+
+    "astrogreg.ev_electric_motor.name": "§5EV§r Electric Motor",
+    "astrogreg.ev_electric_piston.name": "§5EV§r Electric Piston",
+    "astrogreg.ev_electric_pump.name": "§5EV§r Electric Pump",
+    "astrogreg.ev_conveyor_module.name": "§5EV§r Conveyor Module",
+    "astrogreg.ev_fluid_regulator.name": "§5EV§r Fluid Regulator",
+    "astrogreg.ev_robot_arm.name": "§5EV§r Robot Arm",
+    "astrogreg.ev_field_generator.name": "§5EV§r Field Generator",
+    "astrogreg.ev_emitter.name": "§5EV§r Emitter",
+    "astrogreg.ev_sensor.name": "§5EV§r Sensor",
+
+    "astrogreg.iv_electric_motor.name": "§9IV§r Electric Motor",
+    "astrogreg.iv_electric_piston.name": "§9IV§r Electric Piston",
+    "astrogreg.iv_electric_pump.name": "§9IV§r Electric Pump",
+    "astrogreg.iv_conveyor_module.name": "§9IV§r Conveyor Module",
+    "astrogreg.iv_fluid_regulator.name": "§9IV§r Fluid Regulator",
+    "astrogreg.iv_robot_arm.name": "§9IV§r Robot Arm",
+    "astrogreg.iv_field_generator.name": "§9IV§r Field Generator",
+    "astrogreg.iv_emitter.name": "§9IV§r Emitter",
+    "astrogreg.iv_sensor.name": "§9IV§r Sensor",
+
+    "astrogreg.luv_electric_motor.name": "§dLuV§r Electric Motor",
+    "astrogreg.luv_electric_piston.name": "§dLuV§r Electric Piston",
+    "astrogreg.luv_electric_pump.name": "§dLuV§r Electric Pump",
+    "astrogreg.luv_conveyor_module.name": "§dLuV§r Conveyor Module",
+    "astrogreg.luv_fluid_regulator.name": "§dLuV§r Fluid Regulator",
+    "astrogreg.luv_robot_arm.name": "§dLuV§r Robot Arm",
+    "astrogreg.luv_field_generator.name": "§dLuV§r Field Generator",
+    "astrogreg.luv_emitter.name": "§dLuV§r Emitter",
+    "astrogreg.luv_sensor.name": "§dLuV§r Sensor",
+
+    "astrogreg.zpm_electric_motor.name": "§cZPM§r Electric Motor",
+    "astrogreg.zpm_electric_piston.name": "§cZPM§r Electric Piston",
+    "astrogreg.zpm_electric_pump.name": "§cZPM§r Electric Pump",
+    "astrogreg.zpm_conveyor_module.name": "§cZPM§r Conveyor Module",
+    "astrogreg.zpm_fluid_regulator.name": "§cZPM§r Fluid Regulator",
+    "astrogreg.zpm_robot_arm.name": "§cZPM§r Robot Arm",
+    "astrogreg.zpm_field_generator.name": "§cZPM§r Field Generator",
+    "astrogreg.zpm_emitter.name": "§cZPM§r Emitter",
+    "astrogreg.zpm_sensor.name": "§cZPM§r Sensor",
+
+    "astrogreg.uv_electric_motor.name": "§3UV§r Electric Motor",
+    "astrogreg.uv_electric_piston.name": "§3UV§r Electric Piston",
+    "astrogreg.uv_electric_pump.name": "§3UV§r Electric Pump",
+    "astrogreg.uv_conveyor_module.name": "§3UV§r Conveyor Module",
+    "astrogreg.uv_fluid_regulator.name": "§3UV§r Fluid Regulator",
+    "astrogreg.uv_robot_arm.name": "§3UV§r Robot Arm",
+    "astrogreg.uv_field_generator.name": "§3UV§r Field Generator",
+    "astrogreg.uv_emitter.name": "§3UV§r Emitter",
+    "astrogreg.uv_sensor.name": "§3UV§r Sensor",
+
+    "astrogreg.uhv_electric_motor.name": "§4UHV§r Electric Motor",
+    "astrogreg.uhv_electric_piston.name": "§4UHV§r Electric Piston",
+    "astrogreg.uhv_electric_pump.name": "§4UHV§r Electric Pump",
+    "astrogreg.uhv_conveyor_module.name": "§4UHV§r Conveyor Module",
+    "astrogreg.uhv_fluid_regulator.name": "§4UHV§r Fluid Regulator",
+    "astrogreg.uhv_robot_arm.name": "§4UHV§r Robot Arm",
+    "astrogreg.uhv_field_generator.name": "§4UHV§r Field Generator",
+    "astrogreg.uhv_emitter.name": "§4UHV§r Emitter",
+    "astrogreg.uhv_sensor.name": "§4UHV§r Sensor",
+
+    "astrogreg.lv_hermetic_casing.name": "§7Hermetic Casing I",
+    "astrogreg.mv_hermetic_casing.name": "§bHermetic Casing II",
+    "astrogreg.hv_hermetic_casing.name": "§6Hermetic Casing III",
+    "astrogreg.ev_hermetic_casing.name": "§5Hermetic Casing IV",
+    "astrogreg.iv_hermetic_casing.name": "§9Hermetic Casing V",
+    "astrogreg.luv_hermetic_casing.name": "§dHermetic Casing VI",
+    "astrogreg.zpm_hermetic_casing.name": "§cHermetic Casing VII",
+    "astrogreg.uv_hermetic_casing.name": "§3Hermetic Casing VII",
+    "astrogreg.uhv_hermetic_casing.name": "§4Hermetic Casing VIII",
+
+    "astrogreg.multi_structure_manager.name": "§cAstroTek§r§e Multiblock Manager",
+    "astrogreg.schematic_interface.name": "§cAstroTek§r§d Schematic Interface",
+    "astrogreg.dismantler.name": "§cAstroTek§r§5 Dismantler",
+
+    "astrogreg.wheel.name": "Rubber Tire",
+    "astrogreg.launch_pad.name": "Rocket Launch Platform",
+    "astrogreg.tier_1_rocket.name": "§bASTRO-Falcon",
+    "astrogreg.tier_2_rocket.name": "§6ASTRO-Falcon II",
+    "astrogreg.tier_3_rocket.name": "§5ASTRO-Pegasus",
+    "astrogreg.tier_4_rocket.name": "§9ASTRO-Pegasus II",
+    "astrogreg.tier_1_rover.name": "§bASTRO-Scarab",
+
+    "astrogreg.tier_5_rocket.name": "§dASTRO-Thunderbird",
+    "astrogreg.tier_6_rocket.name": "§cASTRO-Thunderbird II",
+    "astrogreg.tier_7_rocket.name": "§3ASTRO-Thunderbird III",
+    "astrogreg.tier_8_rocket.name": "§4ASTRO-Atlas",
+
+    "astrogreg.illuminant_block_on.name": "Illuminant Block (On)",
+    "astrogreg.illuminant_light_gray_block_on.name": "Illuminant Light Gray Block (On)",
+    "astrogreg.illuminant_gray_block_on.name": "Illuminant Gray Block (On)",
+    "astrogreg.illuminant_black_block_on.name": "Illuminant Black Block (On)",
+    "astrogreg.illuminant_brown_block_on.name": "Illuminant Brown Block (On)",
+    "astrogreg.illuminant_red_block_on.name": "Illuminant Red Block (On)",
+    "astrogreg.illuminant_yellow_block_on.name": "Illuminant Yellow Block (On)",
+    "astrogreg.illuminant_lime_block_on.name": "Illuminant Lime Block (On)",
+    "astrogreg.illuminant_green_block_on.name": "Illuminant Green Block (On)",
+    "astrogreg.illuminant_cyan_block_on.name": "Illuminant Cyan Block (On)",
+    "astrogreg.illuminant_light_blue_block_on.name": "Illuminant Light Blue Block (On)",
+    "astrogreg.illuminant_blue_block_on.name": "Illuminant Blue Block (On)",
+    "astrogreg.illuminant_purple_block_on.name": "Illuminant Purple Block (On)",
+    "astrogreg.illuminant_magenta_block_on.name": "Illuminant Magenta Block (On)",
+    "astrogreg.illuminant_pink_block_on.name": "Illuminant Pink Block (On)",
+    "astrogreg.lamp_post.name": "Illuminant Lamp Post",
+
+    "astrogreg.deluxe_cheeseburger.name": "Deluxe Double Bacon Cheeseburger",
+    "astrogreg.animal_fat.name": "Tallow",
+
+    "astrogreg.chicken_sandwich.name": "Chicken Sub",
+    "astrogreg.rice_roll_medley_block.name": "Sushi Platter",
+    "astrogreg.bacon_sandwich_item.name": "BLT Sandwich",
+    "astrogreg.honey_cookie.name": "Sugar Cookie",
+    "astrogreg.pie_crust.name": "Baked Pie Crust",
+
+    "astrogreg.steel_energized.name": "Energized Steel Ingot",
+
+    "astrogreg.cookie.name": "Chocolate Chip Cookie",
+    "astrogreg.netherite_scrap_item.name": "Raw Debris Chunk"
 }

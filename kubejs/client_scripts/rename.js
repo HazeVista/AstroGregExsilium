@@ -15,12 +15,15 @@ ClientEvents.lang('en_us', event => {
     *      
     *   Adding a space between your code and text will create a space on the tooltip. Use that knowledge accordingly.
     * 
+    *   after you've typed it out, go to assets/astrogreg/lang/en_us.json (and other translation files if you're translating)
+    *   then add your translation key and lang
+    *
     */
 
-    //item renamer function
+        //item renamer function
     const renameItems = (mod, items) => {
-        items.forEach(([item, name]) => {
-            event.renameItem(`${mod}:${item}`, name)
+        items.forEach(([item, translationKey]) => {
+            event.add(`item.${mod}.${item}`, translationKey)
         })
     }
     //#endregion
@@ -30,38 +33,38 @@ ClientEvents.lang('en_us', event => {
     //#region botania
     renameItems('botania', [
         // Alfsteel (Elementium)
-        ['elementium_boots', '§dAlfsteel§r Boots'],
-        ['elementium_leggings', '§dAlfsteel§r Leggings'],
-        ['elementium_chestplate', '§dAlfsteel§r Chestplate'],
-        ['elementium_helmet', '§dAlfsteel§r Helmet'],
-        ['elementium_shears', '§dAlfsteel§r Shears'],
-        ['elementium_nugget', '§dAlfsteel§r Nugget'],
-        ['elementium_ingot', '§dAlfsteel§r Ingot'],
-        ['elementium_block', '§dAlfsteel§r Block'],
+        ['elementium_boots', 'astrogreg.elementium_boots.name'],
+        ['elementium_leggings', 'astrogreg.elementium_leggings.name'],
+        ['elementium_chestplate', 'astrogreg.elementium_chestplate.name'],
+        ['elementium_helmet', 'astrogreg.elementium_helmet.name'],
+        ['elementium_shears', 'astrogreg.elementium_shears.name'],
+        ['elementium_nugget', 'astrogreg.elementium_nugget.name'],
+        ['elementium_ingot', 'astrogreg.elementium_ingot.name'],
+        ['elementium_block', 'astrogreg.elementium_block.name'],
         
         // Manasteel items
-        ['manasteel_boots', '§9Manasteel§r Boots'],
-        ['manasteel_leggings', '§9Manasteel§r Leggings'],
-        ['manasteel_chestplate', '§9Manasteel§r Chestplate'],
-        ['manasteel_helmet', '§9Manasteel§r Helmet'],
-        ['manasteel_shears', '§9Manasteel§r Shears'],
-        ['manasteel_nugget', '§9Manasteel§r Nugget'],
-        ['manasteel_ingot', '§9Manasteel§r Ingot'],
-        ['manasteel_block', '§9Manasteel§r Block'],
+        ['manasteel_boots', 'astrogreg.manasteel_boots.name'],
+        ['manasteel_leggings', 'astrogreg.manasteel_leggings.name'],
+        ['manasteel_chestplate', 'astrogreg.manasteel_chestplate.name'],
+        ['manasteel_helmet', 'astrogreg.manasteel_helmet.name'],
+        ['manasteel_shears', 'astrogreg.manasteel_shears.name'],
+        ['manasteel_nugget', 'astrogreg.manasteel_nugget.name'],
+        ['manasteel_ingot', 'astrogreg.manasteel_ingot.name'],
+        ['manasteel_block', 'astrogreg.manasteel_block.name'],
         
         // Terrasteel items
-        ['terrasteel_boots', '§2Terrasteel§f Boots'],
-        ['terrasteel_leggings', '§2Terrasteel§f Leggings'],
-        ['terrasteel_chestplate', '§2Terrasteel§f Chestplate'],
-        ['terrasteel_helmet', '§2Terrasteel§f Helmet'],
-        ['terrasteel_nugget', '§2Terrasteel§f Nugget'],
-        ['terrasteel_ingot', '§2Terrasteel§f Ingot'],
-        ['terrasteel_block', '§2Terrasteel§f Block'],
+        ['terrasteel_boots', 'astrogreg.terrasteel_boots.name'],
+        ['terrasteel_leggings', 'astrogreg.terrasteel_leggings.name'],
+        ['terrasteel_chestplate', 'astrogreg.terrasteel_chestplate.name'],
+        ['terrasteel_helmet', 'astrogreg.terrasteel_helmet.name'],
+        ['terrasteel_nugget', 'astrogreg.terrasteel_nugget.name'],
+        ['terrasteel_ingot', 'astrogreg.terrasteel_ingot.name'],
+        ['terrasteel_block', 'astrogreg.terrasteel_block.name'],
         
         // Pylons
-        ['gaia_pylon', '§dElven Pylon§r'],
-        ['mana_pylon', '§bMana Pylon§r'],
-        ['natura_pylon', '§2Natura Pylon§r']
+        ['gaia_pylon', 'astrogreg.gaia_pylon.name'],
+        ['mana_pylon', 'astrogreg.mana_pylon.name'],
+        ['natura_pylon', 'astrogreg.natura_pylon.name']
     ])
     //#endregion
 
@@ -69,61 +72,61 @@ ClientEvents.lang('en_us', event => {
     
     //#region gregtech
     renameItems('gtmutils', [
-        ['luv_power_unit', '§dLudicrous Power Unit'],
-        ['zpm_power_unit', '§cZero Point Power Unit']
+        ['luv_power_unit', 'astrogreg.luv_power_unit.name'],
+        ['zpm_power_unit', 'astrogreg.zpm_power_unit.name']
     ])
 
     renameItems('gtceu', [
-        ['lv_power_unit', '§7Low Power Unit'],
-        ['mv_power_unit', '§bMedium Power Unit'],
-        ['hv_power_unit', '§6High Power Unit'],
-        ['ev_power_unit', '§5Extreme Power Unit'],
-        ['iv_power_unit', '§9Insane Power Unit'],
-        ['iv_parallel_hatch', '§9Basic Parallel Control Hatch'],
-        ['luv_parallel_hatch', '§dAdvanced Parallel Control Hatch'],
-        ['zpm_parallel_hatch', '§cElite Parallel Control Hatch'],
-        ['uv_parallel_hatch', '§3Ultimate Parallel Control Hatch'],
-        ['crushing_wheels', 'Zeron Crushing Wheels'],
-        ['fusion_casing', 'Fusion Machine Casing MK I']
+        ['lv_power_unit', 'astrogreg.lv_power_unit.name'],
+        ['mv_power_unit', 'astrogreg.mv_power_unit.name'],
+        ['hv_power_unit', 'astrogreg.hv_power_unit.name'],
+        ['ev_power_unit', 'astrogreg.ev_power_unit.name'],
+        ['iv_power_unit', 'astrogreg.iv_power_unit.name'],
+        ['iv_parallel_hatch', 'astrogreg.iv_parallel_hatch.name'],
+        ['luv_parallel_hatch', 'astrogreg.luv_parallel_hatch.name'],
+        ['zpm_parallel_hatch', 'astrogreg.zpm_parallel_hatch.name'],
+        ['uv_parallel_hatch', 'astrogreg.uv_parallel_hatch.name'],
+        ['crushing_wheels', 'astrogreg.crushing_wheels.name'],
+        ['fusion_casing', 'astrogreg.fusion_casing.name']
     ])
 
     renameItems('gtceuterminal', [
-        ['multi_structure_manager', '§cAstroTek§r§e Multiblock Manager'],
-        ['schematic_interface', '§cAstroTek§r§d Schematic Interface'],
-        ['dismantler', '§cAstroTek§r§5 Dismantler']
+        ['multi_structure_manager', 'astrogreg.multi_structure_manager.name'],
+        ['schematic_interface', 'astrogreg.schematic_interface.name'],
+        ['dismantler', 'astrogreg.dismantler.name']
     ])
 
     const tiers = [
-        ['lv', '§7LV§r'], ['mv', '§bMV§r'], ['hv', '§6HV§r'], 
-        ['ev', '§5EV§r'], ['iv', '§9IV§r'], ['luv', '§dLuV§r'], 
-        ['zpm', '§cZPM§r'], ['uv', '§3UV§r'], ['uhv', '§4UHV§r']
+        ['lv', 'lv'], ['mv', 'mv'], ['hv', 'hv'], 
+        ['ev', 'ev'], ['iv', 'iv'], ['luv', 'luv'], 
+        ['zpm', 'zpm'], ['uv', 'uv'], ['uhv', 'uhv']
     ]
 
-    tiers.forEach(([tier, name]) => {
+    tiers.forEach(([tier, key]) => {
         renameItems('gtceu', [
-            [`${tier}_electric_motor`, `${name} Electric Motor`],
-            [`${tier}_electric_piston`, `${name} Electric Piston`],
-            [`${tier}_electric_pump`, `${name} Electric Pump`],
-            [`${tier}_conveyor_module`, `${name} Conveyor Module`],
-            [`${tier}_fluid_regulator`, `${name} Fluid Regulator`],
-            [`${tier}_robot_arm`, `${name} Robot Arm`],
-            [`${tier}_field_generator`, `${name} Field Generator`],
-            [`${tier}_emitter`, `${name} Emitter`],
-            [`${tier}_sensor`, `${name} Sensor`]
+            [`${tier}_electric_motor`, `astrogreg.${key}_electric_motor.name`],
+            [`${tier}_electric_piston`, `astrogreg.${key}_electric_piston.name`],
+            [`${tier}_electric_pump`, `astrogreg.${key}_electric_pump.name`],
+            [`${tier}_conveyor_module`, `astrogreg.${key}_conveyor_module.name`],
+            [`${tier}_fluid_regulator`, `astrogreg.${key}_fluid_regulator.name`],
+            [`${tier}_robot_arm`, `astrogreg.${key}_robot_arm.name`],
+            [`${tier}_field_generator`, `astrogreg.${key}_field_generator.name`],
+            [`${tier}_emitter`, `astrogreg.${key}_emitter.name`],
+            [`${tier}_sensor`, `astrogreg.${key}_sensor.name`]
         ])
     })
 
     const hermeticTiers = [
-        ['lv', '§7', 'I'], ['mv', '§b', 'II'],
-        ['hv', '§6', 'III'], ['ev', '§5', 'IV'],
-        ['iv', '§9', 'V'], ['luv', '§d', 'VI'],
-        ['zpm', '§c', 'VII'], ['uv', '§3', 'VII'],
-        ['uhv', '§4', 'VIII']
+        ['lv', 'lv'], ['mv', 'mv'],
+        ['hv', 'hv'], ['ev', 'ev'],
+        ['iv', 'iv'], ['luv', 'luv'],
+        ['zpm', 'zpm'], ['uv', 'uv'],
+        ['uhv', 'uhv']
     ]
 
-    hermeticTiers.forEach(([tier, color, numeral]) => {
+    hermeticTiers.forEach(([tier, key]) => {
         renameItems('gtceu', [
-            [`${tier}_hermetic_casing`, `${color}Hermetic Casing ${numeral}`]
+            [`${tier}_hermetic_casing`, `astrogreg.${key}_hermetic_casing.name`]
         ])
     })
     //#endregion
@@ -132,20 +135,20 @@ ClientEvents.lang('en_us', event => {
 
     //#region ad astra
     renameItems('ad_astra', [
-        ['wheel', 'Rubber Tire'],
-        ['launch_pad', 'Rocket Launch Platform'],
-        ['tier_1_rocket', '§bASTRO-Falcon'],
-        ['tier_2_rocket', '§6ASTRO-Falcon II'],
-        ['tier_3_rocket', '§5ASTRO-Pegasus'],
-        ['tier_4_rocket', '§9ASTRO-Pegasus II'],
-        ['tier_1_rover', '§bASTRO-Scarab']
+        ['wheel', 'astrogreg.wheel.name'],
+        ['launch_pad', 'astrogreg.launch_pad.name'],
+        ['tier_1_rocket', 'astrogreg.tier_1_rocket.name'],
+        ['tier_2_rocket', 'astrogreg.tier_2_rocket.name'],
+        ['tier_3_rocket', 'astrogreg.tier_3_rocket.name'],
+        ['tier_4_rocket', 'astrogreg.tier_4_rocket.name'],
+        ['tier_1_rover', 'astrogreg.tier_1_rover.name']
     ])
 
     renameItems('ad_extendra', [
-        ['tier_5_rocket', '§dASTRO-Thunderbird'],
-        ['tier_6_rocket', '§cASTRO-Thunderbird II'],
-        ['tier_7_rocket', '§3ASTRO-Thunderbird III'],
-        ['tier_8_rocket', '§4ASTRO-Atlas']
+        ['tier_5_rocket', 'astrogreg.tier_5_rocket.name'],
+        ['tier_6_rocket', 'astrogreg.tier_6_rocket.name'],
+        ['tier_7_rocket', 'astrogreg.tier_7_rocket.name'],
+        ['tier_8_rocket', 'astrogreg.tier_8_rocket.name']
     ])
     //#endregion
 
@@ -153,22 +156,22 @@ ClientEvents.lang('en_us', event => {
 
     //#region simply light
     renameItems('simplylight', [
-        ['illuminant_block_on', 'Illuminant Block (On)'],
-        ['illuminant_light_gray_block_on', 'Illuminant Light Gray Block (On)'],
-        ['illuminant_gray_block_on', 'Illuminant Gray Block (On)'],
-        ['illuminant_black_block_on', 'Illuminant Black Block (On)'],
-        ['illuminant_brown_block_on', 'Illuminant Brown Block (On)'],
-        ['illuminant_red_block_on', 'Illuminant Red Block (On)'],
-        ['illuminant_yellow_block_on', 'Illuminant Yellow Block (On)'],
-        ['illuminant_lime_block_on', 'Illuminant Lime Block (On)'],
-        ['illuminant_green_block_on', 'Illuminant Green Block (On)'],
-        ['illuminant_cyan_block_on', 'Illuminant Cyan Block (On)'],
-        ['illuminant_light_blue_block_on', 'Illuminant Light Blue Block (On)'],
-        ['illuminant_blue_block_on', 'Illuminant Blue Block (On)'],
-        ['illuminant_purple_block_on', 'Illuminant Purple Block (On)'],
-        ['illuminant_magenta_block_on', 'Illuminant Magenta Block (On)'],
-        ['illuminant_pink_block_on', 'Illuminant Pink Block (On)'],
-        ['lamp_post', 'Illuminant Lamp Post']
+        ['illuminant_block_on', 'astrogreg.illuminant_block_on.name'],
+        ['illuminant_light_gray_block_on', 'astrogreg.illuminant_light_gray_block_on.name'],
+        ['illuminant_gray_block_on', 'astrogreg.illuminant_gray_block_on.name'],
+        ['illuminant_black_block_on', 'astrogreg.illuminant_black_block_on.name'],
+        ['illuminant_brown_block_on', 'astrogreg.illuminant_brown_block_on.name'],
+        ['illuminant_red_block_on', 'astrogreg.illuminant_red_block_on.name'],
+        ['illuminant_yellow_block_on', 'astrogreg.illuminant_yellow_block_on.name'],
+        ['illuminant_lime_block_on', 'astrogreg.illuminant_lime_block_on.name'],
+        ['illuminant_green_block_on', 'astrogreg.illuminant_green_block_on.name'],
+        ['illuminant_cyan_block_on', 'astrogreg.illuminant_cyan_block_on.name'],
+        ['illuminant_light_blue_block_on', 'astrogreg.illuminant_light_blue_block_on.name'],
+        ['illuminant_blue_block_on', 'astrogreg.illuminant_blue_block_on.name'],
+        ['illuminant_purple_block_on', 'astrogreg.illuminant_purple_block_on.name'],
+        ['illuminant_magenta_block_on', 'astrogreg.illuminant_magenta_block_on.name'],
+        ['illuminant_pink_block_on', 'astrogreg.illuminant_pink_block_on.name'],
+        ['lamp_post', 'astrogreg.lamp_post.name']
     ])
     //#endregion
 
@@ -176,16 +179,16 @@ ClientEvents.lang('en_us', event => {
 
     //#region farmer's delight
     renameItems('delightful', [
-        ['deluxe_cheeseburger', 'Deluxe Double Bacon Cheeseburger'],
-        ['animal_fat', 'Tallow']
+        ['deluxe_cheeseburger', 'astrogreg.deluxe_cheeseburger.name'],
+        ['animal_fat', 'astrogreg.animal_fat.name']
     ])
 
     renameItems('farmersdelight', [
-        ['chicken_sandwich', 'Chicken Sub'],
-        ['rice_roll_medley_block', 'Sushi Platter'],
-        ['bacon_sandwich', 'BLT Sandwich'],
-        ['honey_cookie', 'Sugar Cookie'],
-        ['pie_crust', 'Baked Pie Crust']
+        ['chicken_sandwich', 'astrogreg.chicken_sandwich.name'],
+        ['rice_roll_medley_block', 'astrogreg.rice_roll_medley_block.name'],
+        ['bacon_sandwich', 'astrogreg.bacon_sandwich_item.name'],
+        ['honey_cookie', 'astrogreg.honey_cookie.name'],
+        ['pie_crust', 'astrogreg.pie_crust.name']
     ])
     //#endregion
 
@@ -193,13 +196,13 @@ ClientEvents.lang('en_us', event => {
     
     //#region misc
     renameItems('powah', [
-        ['steel_energized', 'Energized Steel Ingot']
+        ['steel_energized', 'astrogreg.steel_energized.name']
     ])
 
     renameItems('minecraft', [
-        ['cookie', 'Chocolate Chip Cookie'],
-        ['netherite_scrap', 'Raw Debris Chunk']
+        ['cookie', 'astrogreg.cookie.name'],
+        ['netherite_scrap', 'astrogreg.netherite_scrap_item.name']
     ])
     //#endregion
-
+    
 })

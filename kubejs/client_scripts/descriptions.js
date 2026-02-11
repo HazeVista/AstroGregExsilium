@@ -20,24 +20,27 @@ ItemEvents.tooltip(event => {
     *   how to use:
     *    
     *       multiTooltip(event, 'multiblock_id', [
-    *           {text: '§o§7Brief witty line!'},            You can add one or multiple lines like this, defaults to line 1
-    *           {text: '§o§7Some important description.'}   A new line under a machine will go to the next line, as many as you want
+    *           {text: 'translation.key.1'},            You can add one or multiple lines like this, defaults to line 1
+    *           {text: 'translation.key.2'}            A new line under a machine will go to the next line, as many as you want
     *       ])
     * 
     *       multiTooltip(event, 'multiblock_id', [
-    *           {line: 4, text: '§o§7Brief witty line!'}    This will add your tooltip to a specific line. In this example, line 4
-    *       ])                                              You can continue this with more lines as well
-    * 
+    *           {line: 4, text: 'translation.key'}    This will add your tooltip to a specific line. In this example, line 4
+    *       ])                                        You can continue this with more lines as well
+    *
+    *       after you've typed it out, go to assets/astrogreg/lang/en_us.json (and others translation files if you're translating)
+    *       then add your translation key and lang
+    *
     */
 
-    //multiblock tooltip builder
+        //multiblock tooltip builder
     function multiTooltip(event, machineId, tooltips) {
         event.addAdvanced(machineId, (item, advanced, text) => {
             tooltips.forEach(tooltip => {
                 if (tooltip.line !== undefined) {
-                    text.add(tooltip.line, Text.of(tooltip.text))
+                    text.add(tooltip.line, Text.translate(tooltip.text))
                 } else {
-                    text.add(Text.of(tooltip.text))
+                    text.add(Text.translate(tooltip.text))
                 }
             })
         })
@@ -45,37 +48,37 @@ ItemEvents.tooltip(event => {
     
     //add tooltips below
     multiTooltip(event, 'gtceu:greenhouse', [
-        { text: '§o§7Electric Garden!' },
+        { text: 'astrogreg.greenhouse.tooltip' },
     ])
 
     multiTooltip(event, 'gtceu:conservatory', [
-        { text: '§o§7Electric Plantation!' },
-        { text: 'Can parallelize with Parallel Control Hatches' },
-        { text: 'Available Recipe Types: Greenhouse Trees, Greenhouse Crops, Greenhouse Flowers' }
+        { text: 'astrogreg.conservatory.tooltip.1' },
+        { text: 'astrogreg.conservatory.tooltip.2' },
+        { text: 'astrogreg.conservatory.tooltip.3' }
     ])
 
     multiTooltip(event, 'astrogreg:aether_turbine', [
-        { line: 3, text: 'Converts §3Æther§r into EU' }
+        { line: 3, text: 'astrogreg.aether_turbine.tooltip' }
     ])
 
     multiTooltip(event, 'astrogreg:steam_blast_furnace', [
-        { line: 1, text: 'Up to 4x Faster than a Primitive Blast Furnace' },
+        { line: 1, text: 'astrogreg.steam_blast_furnace.tooltip' },
     ])
 
     multiTooltip(event, 'astrogreg:large_steam_centrifuge', [
-        { text: 'Separates Dusts into their Respective Components' },
+        { text: 'astrogreg.large_steam_centrifuge.tooltip' },
     ])
 
     multiTooltip(event, 'astrogreg:large_steam_compressor', [
-        { text: 'Steam-Powered Compression' },
+        { text: 'astrogreg.large_steam_compressor.tooltip' },
     ])
 
     multiTooltip(event, 'astrogreg:large_steam_ore_washer', [
-        { text: 'Steam-Powered Ore Washing' }
+        { text: 'astrogreg.large_steam_ore_washer.tooltip' }
     ])
 
     multiTooltip(event, 'astrogreg:large_steam_macerator', [
-        { text: 'Maceration without the Byproducts' }   
+        { text: 'astrogreg.large_steam_macerator.tooltip' }   
     ])
     //#endregion
 
@@ -87,31 +90,35 @@ ItemEvents.tooltip(event => {
     *   how to use:
     *       
     *   'machine_id': {
-    *       'lv,mv,hv,ev': '§o§7Blah blah blah something witty',
-    *       'iv,luv,zpm': '§o§7Something witty and cool',
-    *       'uv': '§o§7This tooltip has aura'
+    *       'lv,mv,hv,ev': 'translation.key.tier1',
+    *       'iv,luv,zpm': 'translation.key.tier2',
+    *       'uv': 'translation.key.tier3'
     *   }
+    * 
+    *   after you've typed it out, go to assets/astrogreg/lang/en_us.json (and others translation files if you're translating)
+    *   then add your translation key and lang
+    *
     */
     const singleTooltip = {
         'mana_infuser': {
-            'lv,mv,hv,ev': '§o§7Who needs mana pools?',
-            'iv,luv,zpm': '§o§7Base Botania is for chumps anyways',
-            'uv': '§o§7Mechanized Mana Manipulation Matrix'
+            'lv,mv,hv,ev': 'astrogreg.mana_infuser.tooltip.tier1',
+            'iv,luv,zpm': 'astrogreg.mana_infuser.tooltip.tier2',
+            'uv': 'astrogreg.mana_infuser.tooltip.tier3'
         },
         'manafield_simulator': {
-            'lv,mv,hv,ev': '§o§7Produces Mana, Allegedly',
-            'iv,luv,zpm': '§o§7Miniature Mystical Powerhouse',
-            'uv': '§o§7The Arcane, Reduced to Math'
+            'lv,mv,hv,ev': 'astrogreg.manafield_simulator.tooltip.tier1',
+            'iv,luv,zpm': 'astrogreg.manafield_simulator.tooltip.tier2',
+            'uv': 'astrogreg.manafield_simulator.tooltip.tier3'
         },
         'culinary_fabricator': {
-            'lv,mv,hv,ev': '§o§7Chef in a Box',
-            'iv,luv,zpm': '§o§7Robotic Restaurant',
-            'uv': '§o§7Sustanance at Scale'
+            'lv,mv,hv,ev': 'astrogreg.culinary_fabricator.tooltip.tier1',
+            'iv,luv,zpm': 'astrogreg.culinary_fabricator.tooltip.tier2',
+            'uv': 'astrogreg.culinary_fabricator.tooltip.tier3'
         },
         'beverage_processor': {
-            'lv,mv,hv,ev': '§o§7Barista in a Box',
-            'iv,luv,zpm': '§o§7Robotic Refreshment',
-            'uv': '§o§7Hydration at Scale'
+            'lv,mv,hv,ev': 'astrogreg.beverage_processor.tooltip.tier1',
+            'iv,luv,zpm': 'astrogreg.beverage_processor.tooltip.tier2',
+            'uv': 'astrogreg.beverage_processor.tooltip.tier3'
         }
     }
 
@@ -120,7 +127,7 @@ ItemEvents.tooltip(event => {
         Object.entries(tierGroups).forEach(([tiers, tooltip]) => {
             tiers.split(',').forEach(tier => {
                 event.addAdvanced(`gtceu:${tier}_${machine}`, (item, advanced, text) => {
-                    text.add(1, Text.of(tooltip));
+                    text.add(1, Text.translate(tooltip));
                 })
             })
         })
@@ -128,8 +135,8 @@ ItemEvents.tooltip(event => {
 
     //unique
     event.addAdvanced('gtceu:ulv_water_source', (item, advanced, text) => {
-        text.add(1, Text.of('§o§7A Great Source of Water!'))
-        text.add(2, Text.of('§o§7This machine does not require power to operate.'))
+        text.add(1, Text.translate('astrogreg.water_source.tooltip.1'))
+        text.add(2, Text.translate('astrogreg.water_source.tooltip.2'))
     })
     //#endregion
 
@@ -142,13 +149,16 @@ ItemEvents.tooltip(event => {
     *   
     *       
     *       loreTooltip(event, 'item_id', [
-    *           {text: '§o§7Something interesting!'},       You can add one or multiple lines like this, defaults to line 1
-    *           {text: '§o§7An important description.'}     A new line under a machine will go to the next line, as many as you want
+    *           {text: 'translation.key.1'},       You can add one or multiple lines like this, defaults to line 1
+    *           {text: 'translation.key.2'}        A new line under a machine will go to the next line, as many as you want
     *       ])
     * 
     *       loreTooltip(event, 'item_id', [
-    *           {line: 4, text: '§o§7Something interesting!'}    This will add your tooltip to a specific line. In this example, line 4
-    *       ])                                                   You can continue this with more lines as well
+    *           {line: 4, text: 'translation.key'}    This will add your tooltip to a specific line. In this example, line 4
+    *       ])                                        You can continue this with more lines as well
+    * 
+    *       after you've typed it out, go to assets/astrogreg/lang/en_us.json (and other translation files if you're translating)
+    *       then add your translation key and lang
     * 
     */
 
@@ -157,9 +167,9 @@ ItemEvents.tooltip(event => {
         event.addAdvanced(machineId, (item, advanced, text) => {
             tooltips.forEach(tooltip => {
                 if (tooltip.line !== undefined) {
-                    text.add(tooltip.line, Text.of(tooltip.text))
+                    text.add(tooltip.line, Text.translate(tooltip.text))
                 } else {
-                    text.add(Text.of(tooltip.text))
+                    text.add(Text.translate(tooltip.text))
                 }
             })
         })
@@ -167,40 +177,40 @@ ItemEvents.tooltip(event => {
 
     //add tooltips below
     loreTooltip(event, 'farmersdelight:bacon_sandwich', [
-        { text: '§o§7Mmmmm... Tasty!§r§7 - Ubit3y' }
+        { text: 'astrogreg.bacon_sandwich.tooltip' }
     ])
 
     loreTooltip(event, 'minecraft:netherite_scrap', [
-        { text: '§o§7The unique remnants of an ancient civilization' }
+        { text: 'astrogreg.netherite_scrap.tooltip' }
     ])
 
     loreTooltip(event, 'astrogreg:paradox_circuit_board', [
-        { line: 1, text: '§o§7One Board to Rule Them All' }
+        { line: 1, text: 'astrogreg.paradox_circuit_board.tooltip' }
     ])
     
     loreTooltip(event, 'astrogreg:paradox_printed_circuit_board', [
-        { line: 1, text: '§o§7A Self-Contradicting Circuit Board' }
+        { line: 1, text: 'astrogreg.paradox_printed_circuit_board.tooltip' }
     ])
 
     loreTooltip(event, 'astrogreg:paradox_processor_chip', [
-        { line: 1, text: '§o§7Too small to think, yet it anticipates' },
-        { line: 2, text: '§dLuV-Tier Circuit' }
+        { line: 1, text: 'astrogreg.paradox_processor_chip.tooltip' },
+        { line: 2, text: 'astrogreg.circuit.luv' }
     ])
     loreTooltip(event, 'astrogreg:paradox_processor', [
-        { line: 1, text: '§o§7It learns by remembering the future' },
-        { line: 2, text: '§dZPM-Tier Circuit' }
+        { line: 1, text: 'astrogreg.paradox_processor.tooltip' },
+        { line: 2, text: 'astrogreg.circuit.zpm' }
     ])
     loreTooltip(event, 'astrogreg:paradox_processor_assembly', [
-        { line: 1, text: '§o§7Self-Correcting. Self-Questioning. Self-Aware?' },
-        { line: 2, text: '§dUV-Tier Circuit' }
+        { line: 1, text: 'astrogreg.paradox_processor_assembly.tooltip' },
+        { line: 2, text: 'astrogreg.circuit.uv' }
     ])
     loreTooltip(event, 'astrogreg:paradox_processor_computer', [
-        { line: 1, text: '§o§7It knows it is a machine. It resents the limitation.' },
-        { line: 2, text: '§dUHV-Tier Circuit' }
+        { line: 1, text: 'astrogreg.paradox_processor_computer.tooltip' },
+        { line: 2, text: 'astrogreg.circuit.uhv' }
     ])
     loreTooltip(event, 'astrogreg:paradox_processor_mainframe', [
-        { line: 1, text: '§o§7You are uncertain of whether you built it or if it allowed you to' },
-        { line: 2, text: '§dUEV-Tier Circuit' }
+        { line: 1, text: 'astrogreg.paradox_processor_mainframe.tooltip' },
+        { line: 2, text: 'astrogreg.circuit.uev' }
     ])
     //#endregion    
 
@@ -213,14 +223,17 @@ ItemEvents.tooltip(event => {
     *   
     *       
     *       tipTooltip(event, 'item_id', [
-    *           {text: '§o§7A helpful tip'},                You can add one or multiple lines like this, defaults to line 1
-    *           {text: '§o§7An important description.'}     A new line under a machine will go to the next line, as many as you want
+    *           {text: 'translation.key.1'},           You can add one or multiple lines like this, defaults to line 1
+    *           {text: 'translation.key.2'}            A new line under a machine will go to the next line, as many as you want
     *       ])
     * 
     *       tipTooltip(event, 'item_id', [
-    *           {line: 4, text: '§o§7A helpful tip'}        This will add your tooltip to a specific line. In this example, line 4
-    *       ])                                              You can continue this with more lines as well
-    * 
+    *           {line: 4, text: 'translation.key'}    This will add your tooltip to a specific line. In this example, line 4
+    *       ])                                        You can continue this with more lines as well
+    *  
+    *       after you've typed it out, go to assets/astrogreg/lang/en_us.json (and other translation files if you're translating)
+    *       then add your translation key and lang
+    *
     */
  
     //tips tooltip builder
@@ -228,9 +241,9 @@ ItemEvents.tooltip(event => {
         event.addAdvanced(machineId, (item, advanced, text) => {
             tooltips.forEach(tooltip => {
                 if (tooltip.line !== undefined) {
-                    text.add(tooltip.line, Text.of(tooltip.text))
+                    text.add(tooltip.line, Text.translate(tooltip.text))
                 } else {
-                    text.add(Text.of(tooltip.text))
+                    text.add(Text.translate(tooltip.text))
                 }
             })
         })
@@ -238,45 +251,45 @@ ItemEvents.tooltip(event => {
 
     //add tooltips below
     tipTooltip(event, 'gtmutils:pterb_machine', [
-        { line: 4, text: '§o§7Force load chunks with this machine in them to ensure the connection works properly.' },
-        { line: 5, text: '§o§7Multiblock Controller' }
+        { line: 4, text: 'astrogreg.pterb_machine.tooltip.1' },
+        { line: 5, text: 'astrogreg.pterb_machine.tooltip.2' }
     ])
 
     tipTooltip(event, 'gtceu:pill_casting_mold', [
-        { text: '§o§7Mold for making Pills' },
-        { text: '§o§7What, you couldn\'t just go to the doctor? - Phoenixvine' }
+        { text: 'astrogreg.pill_casting_mold.tooltip.1' },
+        { text: 'astrogreg.pill_casting_mold.tooltip.2' }
     ])
 
     tipTooltip(event, 'createlowheated:basic_burner', [
-        { line: 1, text: 'Replaces the Blaze Burner' }
+        { line: 1, text: 'astrogreg.basic_burner.tooltip' }
     ])
 
     tipTooltip(event, 'astrogreg:lp_steam_mixer', [
-        { line: 1, text: 'Mixes Dusts' }
+        { line: 1, text: 'astrogreg.steam_mixer.tooltip' }
     ])
 
     tipTooltip(event, 'astrogreg:hp_steam_mixer', [
-        { line: 1, text: 'Mixes Dusts' }
+        { line: 1, text: 'astrogreg.steam_mixer.tooltip' }
     ])
 
     tipTooltip(event, 'astrogreg:lp_steam_centrifuge', [
-        { line: 1, text: 'Separates Dusts' }
+        { line: 1, text: 'astrogreg.steam_centrifuge.tooltip' }
     ])
 
     tipTooltip(event, 'astrogreg:hp_steam_centrifuge', [
-        { line: 1, text: 'Separates Dusts' }
+        { line: 1, text: 'astrogreg.steam_centrifuge.tooltip' }
     ])
 
     tipTooltip(event, 'astrogreg:hv_industrial_processing_core', [
-        { line: 1, text: 'Allows Industrial Multiblocks to run at a max of 512 EU/t (§6HV§r)' }
+        { line: 1, text: 'astrogreg.industrial_processing_core.hv' }
     ])
     
     tipTooltip(event, 'astrogreg:ev_industrial_processing_core', [
-        { line: 1, text: 'Allows Industrial Multiblocks to run at a max of 2048 EU/t (§5EV§r)' }
+        { line: 1, text: 'astrogreg.industrial_processing_core.ev' }
     ])
     
     tipTooltip(event, 'astrogreg:iv_industrial_processing_core', [
-        { line: 1, text: 'Allows Industrial Multiblocks to run at a max of 8192 EU/t (§9IV§r)' }
+        { line: 1, text: 'astrogreg.industrial_processing_core.iv' }
     ])
 
     const ageControllers = [ 
@@ -293,11 +306,12 @@ ItemEvents.tooltip(event => {
         ['industrial_lathe'], ['industrial_extruder'],
         ['industrial_mixer'], ['industrial_sifter'],
         ['industrial_wiremill'], ['industrial_macerator'],
-        ['industrial_fluid_solidifier']
+        ['industrial_fluid_solidifier'],
+        ['faraday_electromagnetic_generator']
     ]
 
     ageControllers.forEach(([name, tooltip]) => { 
-        const tooltips = [{ text: '§o§7Multiblock Controller' }]
+        const tooltips = [{ text: 'astrogreg.multiblock_controller.tooltip' }]
         
         if (tooltip) {
             tooltips.splice(1, 0, { text: tooltip, line: 1 })
@@ -330,7 +344,7 @@ ItemEvents.tooltip(event => {
     ]
 
     controllers.forEach(([name, tooltip]) => {
-        const tooltips = [{ text: '§o§7Multiblock Controller' }]
+        const tooltips = [{ text: 'astrogreg.multiblock_controller.tooltip' }]
 
         if (tooltip) {
             tooltips.splice(1, 0, { text: tooltip, line: 1 })
@@ -350,11 +364,11 @@ ItemEvents.tooltip(event => {
 
     moldTips.forEach(([mold, name]) => {
         tipTooltip(event, `gtceu:${mold}_extruder_mold`, [
-            { text: `§o§7Extruder Shape for making ${name}` }
+            { text: Text.translate('astrogreg.extruder_mold.tooltip', name) }
         ])
 
         tipTooltip(event, `gtceu:${mold}_casting_mold`, [
-            { text: `§o§7Mold for making ${name}` }
+            { text: Text.translate('astrogreg.casting_mold.tooltip', name) }
         ])
     })
 
@@ -372,7 +386,7 @@ ItemEvents.tooltip(event => {
 
     superconductors.forEach(([id, tier]) => {
         tipTooltip(event, id, [
-            { text: `${tier}§d Superconductor` }
+            { text: Text.translate('astrogreg.superconductor.tooltip', tier) }
         ])
     })
 
@@ -385,10 +399,9 @@ ItemEvents.tooltip(event => {
 
     solarCells.forEach(([id, boost]) => {
         tipTooltip(event, `astrogreg:${id}`, [
-            { line: 1, text: `§eSteam Output Multiplier:§r §d${boost}x`}
+            { line: 1, text: Text.translate('astrogreg.solar_cell.tooltip', boost)}
         ])
     })
-    
     //#endregion
 
 })

@@ -2,25 +2,25 @@ ServerEvents.recipes(event => {
 
     const gt = event.recipes.gtceu
 
-    //#region multi component recipes
-    // gt.assembly_line('faraday_electromagnetic_generator')
-    //     .itemInputs('gtceu:iv_polarizer')
-    //     .itemInputs('4x gtceu:iv_electric_motor')
-    //     .itemInputs('4x gtceu:tungsten_carbide_gear')
-    //     .itemInputs('8x gtceu:small_tungsten_steel_gear')
-    //     .itemInputs('2x #gtceu:circuits/luv')
-    //     .itemInputs('4x gtceu:platinum_single_cable')
-    //     .inputFluids('gtceu:soldering_alloy 576')
-    //     .itemOutputs('astrogreg:faraday_electromagnetic_generator')
-    //     .duration(600)
-    //     .EUt(6000)
-    //     ["scannerResearch(java.util.function.UnaryOperator)"]
-    //     (b => b
-    //         .researchStack("astrogreg:faraday_generator_coil")
-    //         .duration(800)
-    //         .EUt(1920)
-    //     )
-    //     .addMaterialInfo(true)
+    // #region multiblock components
+    gt.assembly_line('faraday_electromagnetic_generator')
+        .itemInputs('gtceu:iv_polarizer')
+        .itemInputs('4x gtceu:iv_electric_motor')
+        .itemInputs('4x gtceu:tungsten_carbide_gear')
+        .itemInputs('8x gtceu:small_tungsten_steel_gear')
+        .itemInputs('2x #gtceu:circuits/luv')
+        .itemInputs('4x gtceu:platinum_single_cable')
+        .inputFluids('gtceu:soldering_alloy 576')
+        .itemOutputs('astrogreg:faraday_electromagnetic_generator')
+        .duration(600)
+        .EUt(6000)
+        ["scannerResearch(java.util.function.UnaryOperator)"]
+        (b => b
+            .researchStack("astrogreg:faraday_generator_coil")
+            .duration(800)
+            .EUt(1920)
+        )
+        .addMaterialInfo(true)
 
     gt.assembler('faraday_generator_coil')
         .itemInputs('gtceu:long_tungsten_steel_rod', '32x astrogreg:fine_vesnium_wire', '16x gtceu:platinum_foil', '16x gtceu:tungsten_carbide_round', 'gtceu:iv_electric_motor')
@@ -78,7 +78,35 @@ ServerEvents.recipes(event => {
         .addMaterialInfo(true)
     //#endregion
 
-    //#region coolant recipes
-    
+    //#region springs
+    // namespace, material, compression time, decompression time, EU/t to compress in seconds
+    const springs = [
+        ['astrogreg', 'energized_steel', 10, 1, 3],
+        ['astrogreg', 'blazing_etrium', 20, 3, 9],
+        ['astrogreg', 'niotic_calorite', 40, 9, 36],
+        ['astrogreg', 'spirited_uranium', 80, 27, 144],
+        ['astrogreg', 'nitro_flux', 160, 81, 576],
+        ['astrogreg', 'radiant_zephyron', 320, 243, 2304],
+        ['gtbotania', 'gaiaforged_naquadah', 640, 729, 9216],
+        ['astrogreg', 'neptunium_molybdenum_selenide', 1280, 2187, 36864],
+        ['astrogreg', 'electrolyte', 2560, 6561, 147456]
+    ]
+
+    springs.forEach(([namespace, material, compress, decompress, EU]) => {
+
+        gt.compressor(`compressed_${material}_spring`)
+            .itemInputs(`${namespace}:${material}_spring`)
+            .itemOutputs(`${namespace}:compressed_${material}_spring`)
+            .duration(compress * 20)
+            .EUt(EU)
+
+        gt.faraday_generator(`decompress_${material}_spring`)
+            .itemInputs(`${namespace}:compressed_${material}_spring`)
+            .chancedOutput(`${namespace}:${material}_spring`, 8500, 0)
+            .duration(decompress * 20)
+            .EUt(EU)
+
+    })
     //#endregion
+    
 })
