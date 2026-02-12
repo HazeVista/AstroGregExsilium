@@ -27,13 +27,13 @@ ItemEvents.tooltip(event => {
     *       multiTooltip(event, 'multiblock_id', [
     *           {line: 4, text: 'translation.key'}    This will add your tooltip to a specific line. In this example, line 4
     *       ])                                        You can continue this with more lines as well
-    *
-    *       after you've typed it out, go to assets/astrogreg/lang/en_us.json (and others translation files if you're translating)
+    *   
+    *       after you've typed it out, go to assets/astrogreg/lang/en_us.json (and other translation files if you're translating)
     *       then add your translation key and lang
     *
     */
 
-        //multiblock tooltip builder
+    //multiblock tooltip builder
     function multiTooltip(event, machineId, tooltips) {
         event.addAdvanced(machineId, (item, advanced, text) => {
             tooltips.forEach(tooltip => {
@@ -94,8 +94,8 @@ ItemEvents.tooltip(event => {
     *       'iv,luv,zpm': 'translation.key.tier2',
     *       'uv': 'translation.key.tier3'
     *   }
-    * 
-    *   after you've typed it out, go to assets/astrogreg/lang/en_us.json (and others translation files if you're translating)
+    *   
+    *   after you've typed it out, go to assets/astrogreg/lang/en_us.json (and other translation files if you're translating)
     *   then add your translation key and lang
     *
     */
@@ -156,10 +156,10 @@ ItemEvents.tooltip(event => {
     *       loreTooltip(event, 'item_id', [
     *           {line: 4, text: 'translation.key'}    This will add your tooltip to a specific line. In this example, line 4
     *       ])                                        You can continue this with more lines as well
-    * 
+    *   
     *       after you've typed it out, go to assets/astrogreg/lang/en_us.json (and other translation files if you're translating)
     *       then add your translation key and lang
-    * 
+    *
     */
 
     //lore tooltip builder
@@ -230,7 +230,7 @@ ItemEvents.tooltip(event => {
     *       tipTooltip(event, 'item_id', [
     *           {line: 4, text: 'translation.key'}    This will add your tooltip to a specific line. In this example, line 4
     *       ])                                        You can continue this with more lines as well
-    *  
+    *   
     *       after you've typed it out, go to assets/astrogreg/lang/en_us.json (and other translation files if you're translating)
     *       then add your translation key and lang
     *
@@ -240,10 +240,13 @@ ItemEvents.tooltip(event => {
     function tipTooltip(event, machineId, tooltips) {
         event.addAdvanced(machineId, (item, advanced, text) => {
             tooltips.forEach(tooltip => {
+                // Check if text is already a Text object or a string translation key
+                const textContent = typeof tooltip.text === 'string' ? Text.translate(tooltip.text) : tooltip.text
+                
                 if (tooltip.line !== undefined) {
-                    text.add(tooltip.line, Text.translate(tooltip.text))
+                    text.add(tooltip.line, textContent)
                 } else {
-                    text.add(Text.translate(tooltip.text))
+                    text.add(textContent)
                 }
             })
         })
@@ -363,13 +366,13 @@ ItemEvents.tooltip(event => {
     ]
 
     moldTips.forEach(([mold, name]) => {
-        tipTooltip(event, `gtceu:${mold}_extruder_mold`, [
-            { text: Text.translate('astrogreg.extruder_mold.tooltip', name) }
-        ])
+        event.addAdvanced(`gtceu:${mold}_extruder_mold`, (item, advanced, text) => {
+            text.add(Text.translate('astrogreg.extruder_mold.tooltip', name))
+        })
 
-        tipTooltip(event, `gtceu:${mold}_casting_mold`, [
-            { text: Text.translate('astrogreg.casting_mold.tooltip', name) }
-        ])
+        event.addAdvanced(`gtceu:${mold}_casting_mold`, (item, advanced, text) => {
+            text.add(Text.translate('astrogreg.casting_mold.tooltip', name))
+        })
     })
 
     const superconductors = [
@@ -385,23 +388,37 @@ ItemEvents.tooltip(event => {
     ]
 
     superconductors.forEach(([id, tier]) => {
-        tipTooltip(event, id, [
-            { text: Text.translate('astrogreg.superconductor.tooltip', tier) }
-        ])
+        event.addAdvanced(id, (item, advanced, text) => {
+            text.add(Text.translate('astrogreg.superconductor.tooltip', tier))
+        })
     })
 
     const solarCells = [
-        ['solar_cell_silver', '1.00'],
-        ['solar_cell_etrium', '2.25'],
-        ['solar_cell_vesnium', '5.00'],
-        ['solar_cell_enriched_naquadah', '15.00']
+        ['solar_cell_silver', '§d1.00'],
+        ['solar_cell_etrium', '§d2.25'],
+        ['solar_cell_vesnium', '§d5.00'],
+        ['solar_cell_enriched_naquadah', '§d15.00']
     ]
 
     solarCells.forEach(([id, boost]) => {
-        tipTooltip(event, `astrogreg:${id}`, [
-            { line: 1, text: Text.translate('astrogreg.solar_cell.tooltip', boost)}
-        ])
+        event.addAdvanced(`astrogreg:${id}`, (item, advanced, text) => {
+            text.add(1, Text.translate('astrogreg.solar_cell.tooltip', boost))
+        })
     })
+
+    // generator magnet block tooltips
+    const magnetBlocks = [
+        ['iv', '4096 EU/t (§a2A§r §5EV§r)'], 
+        ['luv', '16384 EU/t (§a2A§r §9IV§r)'], 
+        ['zpm', '65536 EU/t (§a2A§r §dLuV§r)']
+    ]
+
+    magnetBlocks.forEach(([id, info]) => {
+        event.addAdvanced(`astrogreg:${id}_faraday_magnet`, (item, advanced, text) => {
+            text.add(1, Text.translate('astrogreg.magnet_block.tooltip', info))
+        })
+    })
+    
     //#endregion
 
 })

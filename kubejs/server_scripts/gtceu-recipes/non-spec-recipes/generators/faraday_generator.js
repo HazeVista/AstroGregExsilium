@@ -104,7 +104,7 @@ ServerEvents.recipes(event => {
             .itemInputs(`${namespace}:compressed_${material}_spring`)
             .chancedOutput(`${namespace}:${material}_spring`, 8500, 0)
             .duration(decompress * 20)
-            .EUt(EU)
+            .EUt(4096)
 
     })
     //#endregion

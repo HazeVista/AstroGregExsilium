@@ -1,7 +1,7 @@
 StartupEvents.registry('block', event => {
 
     event.create('astrogreg:futura_alloy_casing')
-        .displayName('Futura Casing')
+        .translationKey('block.astrogreg.futura_alloy_casing')
         .hardness(6)
         .resistance(3)
         .soundType('metal')
@@ -14,7 +14,7 @@ StartupEvents.registry('block', event => {
 		.opaque(true)
 
     event.create('astrogreg:livingbricks')
-        .displayName('Livingbricks')
+        .translationKey('block.astrogreg.livingbricks')
         .hardness(0.8)
         .resistance(0.8)
         .soundType('stone')
@@ -26,7 +26,7 @@ StartupEvents.registry('block', event => {
         .opaque(true)
 
     event.create('botania:managlass')
-        .displayName('Mana Glass')
+        .translationKey('block.astrogreg.managlass')
 		.hardness(5)
 		.resistance(2)
 		.soundType('glass')
@@ -37,7 +37,7 @@ StartupEvents.registry('block', event => {
 		.defaultTranslucent()
     
     event.create('botania:alfglass')
-        .displayName('Elven Glass')
+        .translationKey('block.astrogreg.alfglass')
 		.hardness(5)
 		.resistance(2)
 		.soundType('glass')

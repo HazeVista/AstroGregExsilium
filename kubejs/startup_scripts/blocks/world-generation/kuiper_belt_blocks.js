@@ -1,7 +1,7 @@
 StartupEvents.registry('block', event => {
 
     event.create('astrogreg:asteroid_gravel','falling')
-        .displayName('Asteroid Gravel')
+        .translationKey('block.astrogreg.asteroid_gravel')
         .hardness(0.8)
         .resistance(0.8)
         .soundType('gravel')
@@ -11,10 +11,10 @@ StartupEvents.registry('block', event => {
         .tagBlock('mineable/shovel')
         .textureAll('kubejs:block/rocks/asteroid_gravel')
 		.fullBlock(true)
-		.opaque(true);
+		.opaque(true)
 
     event.create('astrogreg:asteroid_sand','falling')
-        .displayName('Asteroid Sand')
+        .translationKey('block.astrogreg.asteroid_sand')
         .hardness(0.8)
         .resistance(0.8)
         .soundType('sand')
@@ -24,10 +24,10 @@ StartupEvents.registry('block', event => {
         .tagBlock('mineable/shovel')
         .textureAll('kubejs:block/rocks/asteroid_sand')
 		.fullBlock(true)
-		.opaque(true);
+		.opaque(true)
 
     event.create('astrogreg:cobbled_asteroid_stone')
-        .displayName('Cobbled Asteroid Stone')
+        .translationKey('block.astrogreg.cobbled_asteroid_stone')
         .hardness(0.8)
         .resistance(0.8)
         .soundType('stone')
@@ -38,10 +38,10 @@ StartupEvents.registry('block', event => {
         .tagBlock('mineable/pickaxe')
         .textureAll('kubejs:block/rocks/cobbled_asteroid_stone')
 		.fullBlock(true)
-		.opaque(true);
+		.opaque(true)
 
     event.create('astrogreg:smooth_asteroid_stone')
-        .displayName('Smooth Asteroid Stone')
+        .translationKey('block.astrogreg.smooth_asteroid_stone')
         .hardness(0.8)
         .resistance(0.8)
         .soundType('stone')
@@ -52,5 +52,5 @@ StartupEvents.registry('block', event => {
         .tagBlock('mineable/pickaxe')
         .textureAll('kubejs:block/rocks/polished_asteroid_stone')
 		.fullBlock(true)
-		.opaque(true);
+		.opaque(true)
 })

@@ -1,0 +1,22 @@
+{
+
+    "item.powah.battery_basic": "Basic Battery (§8ULV§r)",
+    "item.powah.battery_hardened": "Hardened Battery (§7LV§r)",
+    "item.powah.battery_blazing": "Blazing Battery (§bMV§r)",
+    "item.powah.battery_niotic": "Niotic Battery (§6HV§r)",
+    "item.powah.battery_spirited": "Spirited Battery (§5EV§r)",
+    "item.powah.battery_nitro": "Nitro Battery (§9IV§r)",
+
+    "block.powah.player_transmitter_basic": "Player Transmitter",
+
+    "block.powah.furnator_basic": "Basic Furnator (§8ULV§r)",
+    "block.powah.furnator_hardened": "Hardened Furnator (§7LV§r)",
+    "block.powah.furnator_blazing": "Blazing Furnator (§bMV§r)",
+
+    "block.powah.magmator_basic": "Basic Magmator (§8ULV§r)",
+    "block.powah.magmator_hardened": "Hardened Magmator (§7LV§r)",
+    "block.powah.magmator_blazing": "Blazing Magmator (§bMV§r)"
+
+
+
+}

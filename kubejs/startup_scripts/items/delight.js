@@ -1,11 +1,11 @@
 StartupEvents.registry('item', event => {
 
     event.create('farmersdelight:raw_pie_crust')
-        .displayName('Pie Crust')
+        .translationKey('item.astrogreg.raw_pie_crust')
         .texture('kubejs:item/delight/pie_crust')
 
     event.create('farmersdelight:apple_slice')
-        .displayName('Apple Slice')
+        .translationKey('item.astrogreg.apple_slice')
         .texture('kubejs:item/delight/apple_slice')
         .food(food => {
             food
@@ -15,7 +15,7 @@ StartupEvents.registry('item', event => {
         })
     
     event.create('farmersdelight:tomato_slice')
-        .displayName('Tomato Slice')
+        .translationKey('item.astrogreg.tomato_slice')
         .texture('kubejs:item/delight/tomato_slice')
                 .food(food => {
             food
@@ -25,7 +25,7 @@ StartupEvents.registry('item', event => {
         })
 
     event.create('farmersdelight:chocolate_cake_slice')
-        .displayName('Chocolate Cake Slice')
+        .translationKey('item.astrogreg.chocolate_cake_slice')
         .texture('kubejs:item/delight/chocolate_cake_slice')
         .food(food => {
             food
@@ -34,7 +34,7 @@ StartupEvents.registry('item', event => {
         })
         
     event.create('farmersdelight:honey_cake_slice')
-        .displayName('Honey Cake Slice')
+        .translationKey('item.astrogreg.honey_cake_slice')
         .texture('kubejs:item/delight/honey_cake_slice')
         .food(food => {
             food
@@ -43,7 +43,7 @@ StartupEvents.registry('item', event => {
         })       
     
     event.create('farmersdelight:chocolate_ice_cream')
-        .displayName('Chocolate Ice Cream')
+        .translationKey('item.astrogreg.chocolate_ice_cream')
         .texture('kubejs:item/delight/chocolate_ice_cream')
         .food(food => {
             food
@@ -55,7 +55,7 @@ StartupEvents.registry('item', event => {
         })
 
     event.create('farmersdelight:chocolate_milkshake')
-        .displayName('Chocolate Milkshake')
+        .translationKey('item.astrogreg.chocolate_milkshake')
         .texture('kubejs:item/delight/chocolate_milkshake')
         .food(food => {
             food

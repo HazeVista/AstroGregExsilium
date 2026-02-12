@@ -1,15 +1,15 @@
 StartupEvents.registry('item', event => {
     //region lenses
     event.create('botania:terra_lens')
-        .displayName('Terra Lens')
+        .translationKey('item.astrogreg.terra_lens')
         .texture('kubejs:item/botania/terra_lens')
 
     event.create('botania:pixie_lens')
-        .displayName('Pixie Lens')
+        .translationKey('item.astrogreg.pixie_lens')
         .texture('kubejs:item/botania/pixie_lens')
         
     event.create('botania:gaia_lens')
-        .displayName('Gaia Lens')
+        .translationKey('item.astrogreg.gaia_lens')
         .texture('kubejs:item/botania/gaia_lens')
     //#endregion
 
@@ -29,7 +29,7 @@ StartupEvents.registry('item', event => {
 
     runes.forEach(rune => {
     event.create(`botania:${rune}_rune`)
-        .displayName(`Rune of ${rune.charAt(0).toUpperCase() + rune.slice(1)}`)
+        .translationKey(`item.astrogreg.${rune}_rune`)
         .texture(`kubejs:item/botania/rune_${rune}`);
     })
     //#endregion
@@ -38,11 +38,11 @@ StartupEvents.registry('item', event => {
 
     //#region glass panes
     event.create('botania:managlass_pane')
-        .displayName('Mana Glass Pane')
+        .translationKey('item.astrogreg.managlass_pane')
         .texture('kubejs:item/botania/managlass')
 
     event.create('botania:alfglass_pane')
-        .displayName('Elven Glass Pane')
+        .translationKey('item.astrogreg.alfglass_pane')
         .texture('kubejs:item/botania/alfglass')
     //#endregion
     })

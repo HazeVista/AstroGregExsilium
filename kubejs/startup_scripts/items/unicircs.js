@@ -17,8 +17,8 @@ StartupEvents.registry('item', event => {
     
     event.create(`astrogreg:${tierLower}_modular_circuit`)
         .texture(`kubejs:item/unicircs/${tierLower}unicirc`)
-        .displayName(`${circuit.color}${circuit.tier}§r Modular Circuit`)
-        .tooltip('§o§7Use these with AE2 autocrafting!')
+        .translationKey(`item.astrogreg.${tierLower}_modular_circuit`)
+        .tooltip(Text.translate('astrogreg.modular_circuit.tooltip'))
   })
 
 })

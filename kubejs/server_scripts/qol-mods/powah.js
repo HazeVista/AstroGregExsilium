@@ -112,14 +112,14 @@ ServerEvents.recipes(event => {
         ['gtceu:magnetic_steel_rod', 'astrogreg:fine_blazing_etrium_wire'],
         ['gtceu:magnetic_steel_rod', 'astrogreg:fine_niotic_calorite_wire'],
         ['gtceu:magnetic_neodymium_rod', 'astrogreg:fine_spirited_uranium_wire'],
-        ['gtceu:magnetic_neodymium_rod', 'astrogreg:fine__wire']
+        ['gtceu:magnetic_neodymium_rod', 'astrogreg:fine_nitro_flux_wire']
     ]
     
     const capTiers = [ 'basic', 'hardened', 'blazing', 'niotic', 'spirited', 'nitro' ]
     
     capData.forEach(([rod, wire], i) => {
 
-        gt.shaped(`4x powah:capacitor_${capTiers[i]}`, [
+        gt.shaped(`powah:capacitor_${capTiers[i]}`, [
             ' CB',
             'CAC',
             'BC '
