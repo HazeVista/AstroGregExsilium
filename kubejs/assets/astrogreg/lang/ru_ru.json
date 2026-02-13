@@ -98,6 +98,7 @@
     "item.astrogreg.paradox_processor_assembly": "Сборка парадокс-процессора",
     "item.astrogreg.paradox_processor_computer": "ЭВМ на парадокс-процессорах",
     "item.astrogreg.paradox_processor_mainframe": "Парадокс-процессорный мейнфрейм",
+    "item.astrogreg.sonny": "Лягушонок Сонни",
     "item.astrogreg.lv_stabilizer": "§7LV§r Стабилизатор",
     "item.astrogreg.mv_stabilizer": "§bMV§r Стабилизатор",
     "item.astrogreg.hv_stabilizer": "§6HV§r Стабилизатор",
@@ -200,5 +201,14 @@
     "questbook.astrogreg.milestones.title": "Вехи развития",
     "questbook.astrogreg.power_gen.title": "Генерация энергии",
     "questbook.astrogreg.multiblocks.title": "Важные мультиблоки",
-    "questbook.astrogreg.botania.title": "Botania"
+    "questbook.astrogreg.botania.title": "Botania",
+    "questbook.astrogreg.introduction.subtitle": "Введение в AGE",
+    "questbook.astrogreg.introduction_0.description": "AstroGreg:Exsilium — это уникальный «SpaceBlock» модпак на версии 1.20.1, построенный вокруг космических путешествий и прогрессии GTCEu.",
+    "questbook.astrogreg.introduction_1.description": "Вы начинаете свой путь, застряв в поясе Койпера с крайне ограниченными ресурсами. Проложите себе путь за пределы Млечного Пути через тщательно продуманную систему развития. Игровой процесс сочетает в себе переработанные полеты из Ad Astra и классическое восхождение по GregTech, обеспечивая качественный игровой опыт.",
+    "questbook.astrogreg.introduction_2.description": "§lКлючевые особенности:",
+    "questbook.astrogreg.introduction_3.description": "Переработанный мод Ad Astra: меньше акцента на простом исследовании и полностью измененная генерация планет, чтобы они не казались пустыми и были интересны для изучения.",
+    "questbook.astrogreg.introduction_4.description": "Хорошо интегрированный, но необязательный ранний этап с Create, а также опциональная паровая эпоха. Оба пути сбалансированы так, чтобы поощрять различные стили игры.",
+    "questbook.astrogreg.introduction_5.description": "Популярные вспомогательные моды с глубокой интеграцией с GregTech, такие как Functional Storage, Grappling Hooks, Flux Networks, LaserIO и другие!",
+    "questbook.astrogreg.introduction_6.description": "Множество уникальных мультиблоков благодаря нашему основному моду AstroCore, который обеспечивает бесшовную интеграцию GregTech с остальными модами в сборке.",
+    "questbook.astrogreg.introduction_7.description": "Относительно легкое начало и чуть более сложная игра на среднем этапе. Мы не стремимся сделать эксперт-пак в привычном понимании, но планируем сделать финал игры уникальным и комплексным."
 }
