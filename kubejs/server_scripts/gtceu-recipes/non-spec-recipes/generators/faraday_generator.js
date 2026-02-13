@@ -28,6 +28,7 @@ ServerEvents.recipes(event => {
         .itemOutputs('astrogreg:faraday_generator_coil')
         .duration(200)
         .EUt(1920)
+        .cleanroom(CleanroomType.CLEANROOM)
         .addMaterialInfo(true)
 
     gt.assembler('faraday_magnet_iv')

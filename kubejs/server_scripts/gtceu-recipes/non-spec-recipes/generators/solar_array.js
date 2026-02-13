@@ -36,6 +36,7 @@ ServerEvents.recipes(event => {
         .itemOutputs('astrogreg:solar_cell_etrium')
         .duration(100)
         .EUt(120)
+        .cleanroom(CleanroomType.CLEANROOM)
         
     gt.assembler('solar_cell_mk2_soldering_alloy')
         .itemInputs('astrogreg:solar_cell_silver', 'gtceu:tempered_glass', '16x astrogreg:etrium_foil', '2x gtceu:copper_single_cable')
@@ -44,6 +45,7 @@ ServerEvents.recipes(event => {
         .duration(100)
         .EUt(120)
         .addMaterialInfo(true) 
+        .cleanroom(CleanroomType.CLEANROOM)
         
     gt.assembler('solar_cell_mk3')
         .itemInputs('astrogreg:solar_cell_etrium', 'gtceu:laminated_glass', '16x astrogreg:vesnium_foil', '2x gtceu:platinum_single_cable', '#gtceu:circuits/ev')
@@ -52,6 +54,7 @@ ServerEvents.recipes(event => {
         .duration(100)
         .EUt(7860)
         .addMaterialInfo(true) 
+        .cleanroom(CleanroomType.CLEANROOM)
 
     gt.assembly_line('solar_cell_mk4')
         .itemInputs('astrogreg:solar_cell_vesnium')

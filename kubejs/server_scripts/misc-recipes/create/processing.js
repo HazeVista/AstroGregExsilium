@@ -282,7 +282,7 @@ ServerEvents.recipes(event => {
         A: 'gtceu:brass_plate',
         B: 'powah:battery_basic',
         C: 'create:brass_casing',
-        D: 'gtceu:red_alloy_plate'
+        D: '#gtceu:circuits/ulv'
     })
     .addMaterialInfo()
 

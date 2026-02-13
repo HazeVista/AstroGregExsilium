@@ -16,4 +16,4 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
 		.setSlotOverlay(false, false, GuiTextures.CIRCUIT_OVERLAY)
 		.setProgressBar(GuiTextures.PROGRESS_BAR_BATH, FillDirection.LEFT_TO_RIGHT)
 		.setSound(GTSoundEntries.BATH)
-});
+})
