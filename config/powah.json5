@@ -190,13 +190,13 @@
 	"devices": {
 		"batteries": {
 			"capacities": {
-				"starter": 1000000,
-				"basic": 4000000,
-				"hardened": 10000000,
-				"blazing": 40000000,
-				"niotic": 100000000,
-				"spirited": 400000000,
-				"nitro": 2000000000
+				"starter": 400000,
+				"basic": 1000000,
+				"hardened": 3000000,
+				"blazing": 8000000,
+				"niotic": 18000000,
+				"spirited": 40000000,
+				"nitro": 100000000
 			},
 			"transfer_rates": {
 				"starter": 1000,
@@ -350,8 +350,8 @@
 		},
 		"player_transmitters": {
 			"capacities": {
-				"starter": 1000000,
-				"basic": 4000000,
+				"starter": 200000,
+				"basic": 1000000,
 				"hardened": 10000000,
 				"blazing": 40000000,
 				"niotic": 100000000,
