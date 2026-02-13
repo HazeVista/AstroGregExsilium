@@ -1,4 +1,5 @@
 {
+
 "astrogreg.gui.configurator_slot.tooltip.0": "§fRanura de Configuración§r",
 "astrogreg.gui.configurator_slot.tooltip.1": "§7Coloca un §6Circuito Programado§7 en esta ranura para",
 "astrogreg.gui.configurator_slot.tooltip.2": "§7cambiar su valor configurado.",
@@ -222,5 +223,30 @@
 "item.astrogreg.luv_modular_circuit": "§dLuV§r Circuito Modular",
 "item.astrogreg.zpm_modular_circuit": "§cZPM§r Circuito Modular",
 "item.astrogreg.uv_modular_circuit": "§3UV§r Circuito Modular",
-"item.astrogreg.uhv_modular_circuit": "§4UHV§r Circuito Modular"
+"item.astrogreg.uhv_modular_circuit": "§4UHV§r Circuito Modular",
+
+"questbook.astrogreg.welcome.title": "Bienvenido a AstroGreg:Exsilium",
+"questbook.astrogreg.welcome_to_age.title": "Bienvenido a la Fundación ASTRO",
+"questbook.astrogreg.important_info.title": "Información Importante",
+"questbook.astrogreg.main_progression.title": "Progresión Principal",
+"questbook.astrogreg.ulv_progression.title": "Varado en la Vía Láctea (§8ULV§r)",
+"questbook.astrogreg.lv_hv_progression.title": "Explorando la Vía Láctea (§7LV§r-§6HV§r)",
+"questbook.astrogreg.ev_luv_progression.title": "Prosperando en la Vía Láctea (§5EV§r-§dLuV§r)",
+"questbook.astrogreg.zpm_uv_progression.title": "Conquistando la Vía Láctea (§cZPM§r-§3UV§r)",
+"questbook.astrogreg.uhv_progression.title": "Escapando de la Vía Láctea (§4UHV§r)",
+"questbook.astrogreg.processing_lines.title": "Líneas de Procesamiento",
+"questbook.astrogreg.lv_hv_processing.title": "Líneas de Procesamiento de Juego Temprano (§7LV§r-§6HV§r)",
+"questbook.astrogreg.ev_luv_processing.title": "Líneas de Procesamiento de Juego Medio (§5EV§r-§dLuV§r)",
+"questbook.astrogreg.zpm_uhv_processing.title": "Líneas de Procesamiento de Juego Tardío (§cZPM§r-§4UHV§r)",
+"questbook.astrogreg.quality_of_life.title": "Calidad de Vida",
+"questbook.astrogreg.early_storage.title": "Almacenamiento y Logística Temprana (QOL)",
+"questbook.astrogreg.travel.title": "Viaje (QOL)",
+"questbook.astrogreg.helpful_tools.title": "Herramientas Útiles",
+"questbook.astrogreg.applied_energistics.title": "Applied Energistics 2",
+"questbook.astrogreg.more_tips.title": "Más Consejos de AGE",
+"questbook.astrogreg.milestones.title": "Hitos de Progresión",
+"questbook.astrogreg.power_gen.title": "Generación de Energía",
+"questbook.astrogreg.multiblocks.title": "Multibloques Importantes",
+"questbook.astrogreg.botania.title": "Botania"
+
 }

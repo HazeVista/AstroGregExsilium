@@ -1,0 +1,9 @@
+{
+	chapter_groups: [
+		{ id: "77B4AB6C745B139B", title: "{questbook.astrogreg.welcome.title}" }
+		{ id: "5FF48795CF240136", title: "{questbook.astrogreg.main_progression.title}" }
+		{ id: "12F677D70A002487", title: "{questbook.astrogreg.processing_lines.title}" }
+		{ id: "33EBB95B388F1297", title: "{questbook.astrogreg.quality_of_life.title}" }
+		{ id: "1D54C2BDC68D63C3", title: "{questbook.astrogreg.more_tips.title}" }
+	]
+}

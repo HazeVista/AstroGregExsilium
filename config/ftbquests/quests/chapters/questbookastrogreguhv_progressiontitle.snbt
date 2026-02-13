@@ -1,0 +1,12 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "questbookastrogreguhv_progressiontitle"
+	group: "5FF48795CF240136"
+	icon: "astrogreg:paradox_processor_mainframe"
+	id: "0456BBF59F5932AD"
+	order_index: 4
+	quest_links: [ ]
+	quests: [ ]
+	title: "{questbook.astrogreg.uhv_progression.title}"
+}

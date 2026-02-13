@@ -1,0 +1,12 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "questbookastrogreglv_hv_processingtitle"
+	group: "12F677D70A002487"
+	icon: "gtceu:polytetrafluoroethylene_ingot"
+	id: "0F66A857ADB297D0"
+	order_index: 0
+	quest_links: [ ]
+	quests: [ ]
+	title: "{questbook.astrogreg.lv_hv_processing.title}"
+}

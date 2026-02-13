@@ -1,0 +1,12 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "questbookastrogregulv_progressiontitle"
+	group: "5FF48795CF240136"
+	icon: "astrogreg:asteroid_stone"
+	id: "41C7488505EA5C28"
+	order_index: 0
+	quest_links: [ ]
+	quests: [ ]
+	title: "{questbook.astrogreg.ulv_progression.title}"
+}

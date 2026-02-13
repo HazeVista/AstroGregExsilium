@@ -44,12 +44,8 @@ Steam:
   etriumSolarSpeed: 2.25
 
   # The steam output multiplier applied to the Solar Boiler Array with MKIII Solar Cells.
-  # Default: 5.00
-  vesniumSolarSpeed: 5.00
-
-  # The steam output multiplier applied to the Solar Boiler Array with MKIV Solar Cells.
-  # Default: 15.00
-  naqSolarSpeed: 15.00
+  # Default: 5.0
+  vesniumSolarSpeed: 5.0
 
   # The amount of Steam produced per 1mB of Water.
   # Default: 1.0
@@ -107,7 +103,11 @@ Steam:
   # Default: 0.1
   kuiperBeltMultiplier: 0.1
 
+  # Whether the AE2 related machines are on (Expanded buffer/proxy and ME tag inputs)
+  aeMachines: true
+
   # The base speed multiplier for the Steam Blast Furnace.
   # Works Inversely (e.g. 0.5 = 2x speed)
   # Default: 2.0
   SBFRecipeSpeed: 2.0
+

@@ -1,0 +1,12 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "questbookastrogregimportant_infotitle"
+	group: "77B4AB6C745B139B"
+	icon: "astrogreg:data_disk"
+	id: "36CBCB0B789AEB5C"
+	order_index: 1
+	quest_links: [ ]
+	quests: [ ]
+	title: "{questbook.astrogreg.important_info.title}"
+}

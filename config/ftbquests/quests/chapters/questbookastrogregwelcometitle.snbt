@@ -1,0 +1,12 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "questbookastrogregwelcometitle"
+	group: "77B4AB6C745B139B"
+	icon: "astrogreg:filter_cartridge"
+	id: "6C6E8D190DBC3D3B"
+	order_index: 0
+	quest_links: [ ]
+	quests: [ ]
+	title: "{questbook.astrogreg.welcome_to_age.title}"
+}

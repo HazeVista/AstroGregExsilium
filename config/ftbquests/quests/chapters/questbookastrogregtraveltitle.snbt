@@ -1,0 +1,12 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "questbookastrogregtraveltitle"
+	group: "33EBB95B388F1297"
+	icon: "waystones:waystone"
+	id: "113DF0EEE4816683"
+	order_index: 1
+	quest_links: [ ]
+	quests: [ ]
+	title: "{questbook.astrogreg.travel.title}"
+}

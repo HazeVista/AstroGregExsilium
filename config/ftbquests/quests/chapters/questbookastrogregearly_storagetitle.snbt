@@ -1,0 +1,12 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "questbookastrogregearly_storagetitle"
+	group: "33EBB95B388F1297"
+	icon: "storagenetwork:request"
+	id: "168022EC249F0517"
+	order_index: 0
+	quest_links: [ ]
+	quests: [ ]
+	title: "{questbook.astrogreg.early_storage.title}"
+}

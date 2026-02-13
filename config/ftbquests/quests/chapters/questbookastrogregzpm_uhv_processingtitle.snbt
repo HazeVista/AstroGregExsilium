@@ -1,0 +1,12 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "questbookastrogregzpm_uhv_processingtitle"
+	group: "12F677D70A002487"
+	icon: "gtceu:naquadria_ingot"
+	id: "363A87A03BF7F9B5"
+	order_index: 2
+	quest_links: [ ]
+	quests: [ ]
+	title: "{questbook.astrogreg.zpm_uhv_processing.title}"
+}

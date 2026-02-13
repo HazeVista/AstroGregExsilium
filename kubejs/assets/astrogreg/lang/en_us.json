@@ -221,6 +221,30 @@
     "block.astrogreg.futura_alloy_casing": "Futura Alloy Casing",
     "block.astrogreg.livingbricks": "Livingbricks",
     "block.astrogreg.managlass": "Mana Glass",
-    "block.astrogreg.alfglass": "Elven Glass"
+    "block.astrogreg.alfglass": "Elven Glass",
     
+    "questbook.astrogreg.welcome.title": "Welcome to AstroGreg:Exsilium",
+    "questbook.astrogreg.welcome_to_age.title": "Welcome to the ASTRO Foundation",
+    "questbook.astrogreg.important_info.title": "Important Info",
+    "questbook.astrogreg.main_progression.title": "Main Progression",
+    "questbook.astrogreg.ulv_progression.title": "Marooned in the Milky Way (§8ULV§r)",
+    "questbook.astrogreg.lv_hv_progression.title": "Exploring the Milky Way (§7LV§r-§6HV§r)",
+    "questbook.astrogreg.ev_luv_progression.title": "Thriving in the Milky Way (§5EV§r-§dLuV§r)",
+    "questbook.astrogreg.zpm_uv_progression.title": "Conquering the Milky Way (§cZPM§r-§3UV§r)",
+    "questbook.astrogreg.uhv_progression.title": "Escaping the Milky Way (§4UHV§r)",
+    "questbook.astrogreg.processing_lines.title": "Processing Lines",
+    "questbook.astrogreg.lv_hv_processing.title": "Early-Game Processing Lines (§7LV§r-§6HV§r)",
+    "questbook.astrogreg.ev_luv_processing.title": "Mid-Game Processing Lines (§5EV§r-§dLuV§r)",
+    "questbook.astrogreg.zpm_uhv_processing.title": "Late-Game Processing Lines (§cZPM§r-§4UHV§r)",
+    "questbook.astrogreg.quality_of_life.title": "Quality of Life",
+    "questbook.astrogreg.early_storage.title": "Early Storage and Logistics QOL",
+    "questbook.astrogreg.travel.title": "Travel QOL",
+    "questbook.astrogreg.helpful_tools.title": "Helpful Tools",
+    "questbook.astrogreg.applied_energistics.title": "Applied Energistics 2",
+    "questbook.astrogreg.more_tips.title": "More AGE Tips",
+    "questbook.astrogreg.milestones.title": "Progression Milestones",
+    "questbook.astrogreg.power_gen.title": "Power Generation",
+    "questbook.astrogreg.multiblocks.title": "Important Multiblocks",
+    "questbook.astrogreg.botania.title": "Botania"
+
 }

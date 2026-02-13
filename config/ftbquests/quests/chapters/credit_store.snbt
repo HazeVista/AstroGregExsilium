@@ -1,0 +1,12 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "credit_store"
+	group: "77B4AB6C745B139B"
+	icon: "astrogreg:astrocredit"
+	id: "1FAF3C703F07BCA8"
+	order_index: 2
+	quest_links: [ ]
+	quests: [ ]
+	title: "Credit Store"
+}

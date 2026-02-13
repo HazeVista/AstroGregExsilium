@@ -1,0 +1,12 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "questbookastrogreghelpful_toolstitle"
+	group: "33EBB95B388F1297"
+	icon: "gtceuterminal:multi_structure_manager"
+	id: "79D15952633A470E"
+	order_index: 2
+	quest_links: [ ]
+	quests: [ ]
+	title: "{questbook.astrogreg.helpful_tools.title}"
+}

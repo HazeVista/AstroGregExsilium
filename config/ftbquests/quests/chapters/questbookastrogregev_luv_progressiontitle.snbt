@@ -1,0 +1,12 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "questbookastrogregev_luv_progressiontitle"
+	group: "5FF48795CF240136"
+	icon: "astrogreg:ev_stabilizer"
+	id: "62B2ECE3A2128EC7"
+	order_index: 2
+	quest_links: [ ]
+	quests: [ ]
+	title: "{questbook.astrogreg.ev_luv_progression.title}"
+}
