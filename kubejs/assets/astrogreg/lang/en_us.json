@@ -134,6 +134,7 @@
     "item.astrogreg.paradox_processor_assembly": "Paradox Processor Assembly",
     "item.astrogreg.paradox_processor_computer": "Paradox Processor Computer",
     "item.astrogreg.paradox_processor_mainframe": "Paradox Processor Mainframe",
+    "item.astrogreg.sonny": "Sonny the Frog",
 
     "item.astrogreg.lv_stabilizer": "§7LV§r Stabilizer",
     "item.astrogreg.mv_stabilizer": "§bMV§r Stabilizer",
@@ -245,6 +246,16 @@
     "questbook.astrogreg.milestones.title": "Progression Milestones",
     "questbook.astrogreg.power_gen.title": "Power Generation",
     "questbook.astrogreg.multiblocks.title": "Important Multiblocks",
-    "questbook.astrogreg.botania.title": "Botania"
+    "questbook.astrogreg.botania.title": "Botania",
 
+    "questbook.astrogreg.introduction.subtitle": "An Introduction to AGE",
+    "questbook.astrogreg.introduction_0.description": "AstroGreg:Exsilium is a unique 1.20.1 SpaceBlock modpack built around space travel and GTCEu progression.",
+    "questbook.astrogreg.introduction_1.description": "Start off stranded in the Kuiper Belt with sparse resources and work your way out of the Milky Way through carefully thought out progression. Progression primarily incorporates overhauled Ad Astra space travel and the classic GTCEu journey to bring you a high quality modpack experience.",
+    "questbook.astrogreg.introduction_2.description": "§lNotable Features:",
+    "questbook.astrogreg.introduction_3.description": "Overhauled Ad Astra with less focus on exploration aspects, but reimagined world generation for each planet in order to make them feel less empty and more interesting",
+    "questbook.astrogreg.introduction_4.description": "Well integrated, but optional early game Create, along with an optional Steam Age. Both are incentivized well in order to encourage diverse play styles.",
+    "questbook.astrogreg.introduction_5.description": "Popular quality of life mods with significant Greggifications, such as Functional Storage, Grappling Hooks, Flux Networks, LaserIO, and more!",
+    "questbook.astrogreg.introduction_6.description": "Tons of unique multiblock logic thanks to our Core Mod, AstroCore, for seamless integration between GregTech and other mods in the pack.",
+    "questbook.astrogreg.introduction_7.description": "A relatively easy early game and slightly more difficult mid game experience. The pack isn't aiming to be an expert difficulty modpack, but we do plan on making the end game unique and somewhat complex to complete."
+    
 }

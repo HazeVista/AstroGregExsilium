@@ -3,6 +3,7 @@ StartupEvents.registry('item', event => {
     //id, name, texture, optional tooltip
     const items = [
         { id: 'age_logo', name: 'item.astrogreg.age_logo', texture: 'logo/logo'},
+        { id: 'sonny', name: 'item.astrogreg.sonny', texture: 'sonny/sonny' },
         { id: 'data_disk', name: 'item.astrogreg.data_disk', texture: 'data_disk', tooltip: 'astrogreg.data_disk.tooltip' },
         { id: 'astrocredit', name: 'item.astrogreg.astrocredit', texture: 'astrocredit', tooltip: 'astrogreg.astrocredit.tooltip' },
         { id: 'compressed_livingclay', name: 'item.astrogreg.compressed_livingclay', texture: 'raw_livingbrick' },
