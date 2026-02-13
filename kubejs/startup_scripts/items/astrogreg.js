@@ -2,6 +2,7 @@ StartupEvents.registry('item', event => {
 
     //id, name, texture, optional tooltip
     const items = [
+        { id: 'age_logo', name: 'item.astrogreg.age_logo', texture: 'logo/logo'},
         { id: 'data_disk', name: 'item.astrogreg.data_disk', texture: 'data_disk', tooltip: 'astrogreg.data_disk.tooltip' },
         { id: 'astrocredit', name: 'item.astrogreg.astrocredit', texture: 'astrocredit', tooltip: 'astrogreg.astrocredit.tooltip' },
         { id: 'compressed_livingclay', name: 'item.astrogreg.compressed_livingclay', texture: 'raw_livingbrick' },
@@ -18,7 +19,7 @@ StartupEvents.registry('item', event => {
         { id: 'paradox_processor', name: 'item.astrogreg.paradox_processor', texture: 'paradox_circuits/paradox_processor', tags: 'gtceu:circuits/zpm'},
         { id: 'paradox_processor_assembly', name: 'item.astrogreg.paradox_processor_assembly', texture: 'paradox_circuits/paradox_processor_assembly', tags: 'gtceu:circuits/uv'},
         { id: 'paradox_processor_computer', name: 'item.astrogreg.paradox_processor_computer', texture: 'paradox_circuits/paradox_processor_computer', tags: 'gtceu:circuits/uhv'},
-        { id: 'paradox_processor_mainframe', name: 'item.astrogreg.paradox_processor_mainframe', texture: 'paradox_circuits/paradox_processor_mainframe', tags: 'gtceu:circuits/uev'},
+        { id: 'paradox_processor_mainframe', name: 'item.astrogreg.paradox_processor_mainframe', texture: 'paradox_circuits/paradox_processor_mainframe', tags: 'gtceu:circuits/uev'}
     ]
 
     items.forEach(item => {
