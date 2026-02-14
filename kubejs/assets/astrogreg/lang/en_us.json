@@ -134,7 +134,6 @@
     "item.astrogreg.paradox_processor_assembly": "Paradox Processor Assembly",
     "item.astrogreg.paradox_processor_computer": "Paradox Processor Computer",
     "item.astrogreg.paradox_processor_mainframe": "Paradox Processor Mainframe",
-    "item.astrogreg.sonny": "Sonny the Frog",
 
     "item.astrogreg.lv_stabilizer": "§7LV§r Stabilizer",
     "item.astrogreg.mv_stabilizer": "§bMV§r Stabilizer",
@@ -223,6 +222,7 @@
     "block.astrogreg.livingbricks": "Livingbricks",
     "block.astrogreg.managlass": "Mana Glass",
     "block.astrogreg.alfglass": "Elven Glass",
+    "block.astrogreg.sonny": "Sonny the Frog",
     
     "questbook.astrogreg.welcome.title": "Welcome to AstroGreg:Exsilium",
     "questbook.astrogreg.welcome_to_age.title": "Welcome to the ASTRO Foundation",

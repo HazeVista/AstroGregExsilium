@@ -7,6 +7,33 @@
 	id: "6C6E8D190DBC3D3B"
 	order_index: 0
 	quest_links: [ ]
-	quests: [ ]
+	quests: [{
+		description: [
+			"{questbook.astrogreg.introduction_0.description}"
+			""
+			"{questbook.astrogreg.introduction_1.description}"
+			""
+			"{questbook.astrogreg.introduction_2.description}"
+			""
+			"- {questbook.astrogreg.introduction_3.description}"
+			"- {questbook.astrogreg.introduction_4.description}"
+			"- {questbook.astrogreg.introduction_5.description}"
+			"- {questbook.astrogreg.introduction_6.description}"
+			"- {questbook.astrogreg.introduction_7.description}"
+		]
+		icon: "astrogreg:age_logo"
+		id: "3FDB9A591FF6EB62"
+		shape: "octagon"
+		size: 3.0d
+		subtitle: "{questbook.astrogreg.introduction.subtitle}"
+		tasks: [{
+			id: "12BEE86E775FDE1F"
+			title: "{questbook.astrogreg.welcome.title}"
+			type: "checkmark"
+		}]
+		title: "{questbook.astrogreg.welcome.title}"
+		x: 4.0d
+		y: -1.0d
+	}]
 	title: "{questbook.astrogreg.welcome_to_age.title}"
 }
