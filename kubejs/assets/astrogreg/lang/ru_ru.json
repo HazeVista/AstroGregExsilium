@@ -2,65 +2,98 @@
     "item.astrogreg.tiny_acorn_dust": "Крохотная кучка желудевой муки",
     "item.astrogreg.small_acorn_dust": "Маленькая кучка желудевой муки",
     "item.astrogreg.acorn_dust": "Желудевая мука",
+    
     "astrogreg.machine.parallel_hatch_mk9.tooltip": "Позволяет запускать до §51024§r рецептов параллельно.",
     "block.astrogreg.uhv_parallel_hatch": "§4Квинтэссенциальный люк параллельного управления",
+    
     "gtceu.steam_blast_furnace": "Паровая доменная печь",
     "gtceu.deionization": "Установка деионизации",
     "gtceu.faraday_generator": "Электромагнитная генерация",
+    
     "astrogreg.greenhouse.tooltip": "§o§7Электрический сад!",
+    
     "astrogreg.conservatory.tooltip.1": "§o§7Электрическая плантация!",
     "astrogreg.conservatory.tooltip.2": "Поддерживает параллелизацию через люки управления",
     "astrogreg.conservatory.tooltip.3": "Доступные типы рецептов: Тепличные деревья, Тепличные культуры, Тепличные цветы",
+    
     "astrogreg.aether_turbine.tooltip": "Преобразует §3Эфир§r в EU",
+    
     "astrogreg.steam_blast_furnace.tooltip": "До 4 раз быстрее примитивной доменной печи",
+    
     "astrogreg.large_steam_centrifuge.tooltip": "Разделяет пыль на составляющие компоненты",
+    
     "astrogreg.large_steam_compressor.tooltip": "Паровое сжатие",
+    
     "astrogreg.large_steam_ore_washer.tooltip": "Паровая промывка руды",
+    
     "astrogreg.large_steam_macerator.tooltip": "Дробление без побочных продуктов",
+    
     "astrogreg.mana_infuser.tooltip.tier1": "§o§7Кому вообще нужны бассейны маны?",
     "astrogreg.mana_infuser.tooltip.tier2": "§o§7Ванильная Botania всё равно для слабаков",
     "astrogreg.mana_infuser.tooltip.tier3": "§o§7Механизированная матрица манипуляции маной",
+    
     "astrogreg.manafield_simulator.tooltip.tier1": "§o§7Якобы производит ману",
     "astrogreg.manafield_simulator.tooltip.tier2": "§o§7Миниатюрная магическая электростанция",
     "astrogreg.manafield_simulator.tooltip.tier3": "§o§7Магия преобразилась в математику",
+    
     "astrogreg.culinary_fabricator.tooltip.tier1": "§o§7Шеф-повар в коробке",
     "astrogreg.culinary_fabricator.tooltip.tier2": "§o§7Роботизированный ресторан",
     "astrogreg.culinary_fabricator.tooltip.tier3": "§o§7Пропитание в промышленных масштабах",
+    
     "astrogreg.beverage_processor.tooltip.tier1": "§o§7Бариста в коробке",
     "astrogreg.beverage_processor.tooltip.tier2": "§o§7Роботизированные напитки",
     "astrogreg.beverage_processor.tooltip.tier3": "§o§7Гидратация в промышленных масштабах",
+    
     "astrogreg.water_source.tooltip.1": "§o§7Отличный источник воды!",
     "astrogreg.water_source.tooltip.2": "§o§7Эта машина не требует энергии для работы.",
+    
     "astrogreg.bacon_sandwich.tooltip": "§o§7Ммм... Вкусно!§r§7 - Ubit3y",
+    
     "astrogreg.netherite_scrap.tooltip": "§o§7Уникальные останки древней цивилизации",
+    
     "astrogreg.paradox_circuit_board.tooltip": "§o§7Одна плата, чтоб править всеми",
+    
     "astrogreg.paradox_printed_circuit_board.tooltip": "§o§7Парадоксальная печатная плата",
+    
     "astrogreg.paradox_processor_chip.tooltip": "§o§7Слишком мал, чтобы думать, но уже предвидит",
     "astrogreg.paradox_processor.tooltip": "§o§7Он учится, вспоминая будущее",
     "astrogreg.paradox_processor_assembly.tooltip": "§o§7Самокорректирующийся. Самоанализирующий. Самосознающий?",
     "astrogreg.paradox_processor_computer.tooltip": "§o§7Он знает, что он — машина. И презирает это ограничение.",
     "astrogreg.paradox_processor_mainframe.tooltip": "§o§7Вы не уверены, построили ли вы его, или он позволил вам это сделать",
+    
     "astrogreg.circuit.luv": "§dLuV-схема",
     "astrogreg.circuit.zpm": "§dZPM-схема",
     "astrogreg.circuit.uv": "§dUV-схема",
     "astrogreg.circuit.uhv": "§dUHV-схема",
     "astrogreg.circuit.uev": "§dUEV-схема",
+    
     "astrogreg.pterb_machine.tooltip.1": "§o§7Прогрузите чанки с этой машиной, чтобы обеспечить стабильное соединение.",
     "astrogreg.pterb_machine.tooltip.2": "§o§7Контроллер многоблочной структуры",
+    
     "astrogreg.pill_casting_mold.tooltip.1": "§o§7Форма для изготовления пилюль",
     "astrogreg.pill_casting_mold.tooltip.2": "§o§7Что, нельзя было просто сходить к врачу? - Phoenixvine",
+    
     "astrogreg.basic_burner.tooltip": "§7Заменяет горелку всполоха",
+    
     "astrogreg.steam_mixer.tooltip": "Смешивает пыль",
+    
     "astrogreg.steam_centrifuge.tooltip": "Разделяет пыль",
+    
     "astrogreg.industrial_processing_core.hv": "Позволяет §bпромышленным многоблочным структурам§r работать на мощности до 512 EU/t (§6HV§r)",
     "astrogreg.industrial_processing_core.ev": "Позволяет §bпромышленным многоблочным структурам§r работать на мощности до 2048 EU/t (§5EV§r)",
     "astrogreg.industrial_processing_core.iv": "Позволяет §bпромышленным многоблочным структурам§r работать на мощности до 8192 EU/t (§9IV§r)",
+    
     "astrogreg.multiblock_controller.tooltip": "§o§7Контроллер многоблочной структуры",
+    
     "astrogreg.extruder_mold.tooltip": "§o§7Форма экструдера для: %s",
     "astrogreg.casting_mold.tooltip": "§o§7Форма для литья: %s",
+    
     "astrogreg.superconductor.tooltip": "%s§d Сверхпроводник",
+    
     "astrogreg.solar_cell.tooltip": "§eМножитель выработки пара:§r %sx",
+    
     "astrogreg.magnet_block.tooltip": "Полное кольцо из этих магнитов в §bэлектромагнитном генераторе Фарадея§r будет производить %s",
+    
     "item.astrogreg.lv_rocket_engine": "§7LV§r Ракетный двигатель",
     "item.astrogreg.mv_rocket_engine": "§bMV§r Ракетный двигатель",
     "item.astrogreg.hv_rocket_engine": "§6HV§r Ракетный двигатель",
@@ -69,14 +102,17 @@
     "item.astrogreg.luv_rocket_engine": "§dLuV§r Ракетный двигатель",
     "item.astrogreg.zpm_rocket_engine": "§cZPM§r Ракетный двигатель",
     "item.astrogreg.uv_rocket_engine": "§3UV§r Ракетный двигатель",
+    
     "item.astrogreg.basic_rocket_nose_cone": "Базовый ракетный обтекатель",
     "item.astrogreg.advanced_rocket_nose_cone": "Улучшенный ракетный обтекатель",
     "item.astrogreg.elite_rocket_nose_cone": "Элитный ракетный обтекатель",
     "item.astrogreg.ultimate_rocket_nose_cone": "Совершенный ракетный обтекатель",
+    
     "item.astrogreg.basic_rocket_fin": "Базовый ракетный стабилизатор",
     "item.astrogreg.advanced_rocket_fin": "Улучшенный ракетный стабилизатор",
     "item.astrogreg.elite_rocket_fin": "Элитный ракетный стабилизатор",
     "item.astrogreg.ultimate_rocket_fin": "Совершенный ракетный стабилизатор",
+    
     "item.astrogreg.data_disk": "Диск с данными",
     "astrogreg.data_disk.tooltip": "§o§7Хранилище данных сверхнизкой емкости",
     "item.astrogreg.astrocredit": "§cАстрокойн",
@@ -93,12 +129,13 @@
     "item.astrogreg.netherite_carbon_fiber_plate": "Плита из незеритового волокна",
     "item.astrogreg.paradox_circuit_board": "Когнитивная плата §cAstroTek§r",
     "item.astrogreg.paradox_printed_circuit_board": "Печатная когнитивная плата §cAstroTek§r",
-    "item.astrogreg.paradox_processor_chip": "Чип парадокс-процессора",
-    "item.astrogreg.paradox_processor": "Парадокс-процессор",
-    "item.astrogreg.paradox_processor_assembly": "Сборка парадокс-процессора",
-    "item.astrogreg.paradox_processor_computer": "ЭВМ на парадокс-процессорах",
-    "item.astrogreg.paradox_processor_mainframe": "Парадокс-процессорный мейнфрейм",
+    "item.astrogreg.paradox_processor_chip": "Чип парадоксального процессора",
+    "item.astrogreg.paradox_processor": "Парадоксальный процессор",
+    "item.astrogreg.paradox_processor_assembly": "Сборка парадоксальных процессоров",
+    "item.astrogreg.paradox_processor_computer": "Компьютер на парадоксальных процессорах",
+    "item.astrogreg.paradox_processor_mainframe": "Мейнфрейм на парадоксальных процессорах",
     "item.astrogreg.sonny": "Лягушонок Сонни",
+    
     "item.astrogreg.lv_stabilizer": "§7LV§r Стабилизатор",
     "item.astrogreg.mv_stabilizer": "§bMV§r Стабилизатор",
     "item.astrogreg.hv_stabilizer": "§6HV§r Стабилизатор",
@@ -108,9 +145,11 @@
     "item.astrogreg.zpm_stabilizer": "§cZPM§r Стабилизатор",
     "item.astrogreg.uv_stabilizer": "§3UV§r Стабилизатор",
     "item.astrogreg.uhv_stabilizer": "§4UHV§r Стабилизатор",
+    
     "item.astrogreg.terra_lens": "Терра-линза",
     "item.astrogreg.pixie_lens": "Пикси-линза",
     "item.astrogreg.gaia_lens": "Линза Гайи",
+    
     "item.astrogreg.air_rune": "Руна воздуха",
     "item.astrogreg.fire_rune": "Руна огня",
     "item.astrogreg.water_rune": "Руна воды",
@@ -140,8 +179,10 @@
     "item.astrogreg.uranus_rune": "Руна Урана",
     "item.astrogreg.neptune_rune": "Руна Нептуна",
     "item.astrogreg.gregorious_rune": "Руна Грегориуса",
-    "item.astrogreg.managlass_pane": "Стеклянная панель маны",
+    
+    "item.astrogreg.managlass_pane": "Панель манастекла",
     "item.astrogreg.alfglass_pane": "Панель эльфийского стекла",
+    
     "item.astrogreg.raw_pie_crust": "Основа для пирога",
     "item.astrogreg.apple_slice": "Долька яблока",
     "item.astrogreg.tomato_slice": "Ломтик томата",
@@ -149,6 +190,7 @@
     "item.astrogreg.honey_cake_slice": "Кусочек медового торта",
     "item.astrogreg.chocolate_ice_cream": "Шоколадное мороженое",
     "item.astrogreg.chocolate_milkshake": "Шоколадный молочный коктейль",
+    
     "item.astrogreg.grinding_head_damascus_steel": "Шлифовальная головка из дамасской стали",
     "item.astrogreg.grinding_head_diamond": "Алмазная шлифовальная головка",
     "item.astrogreg.grinding_head_tungsten": "Вольфрамовая шлифовальная головка",
@@ -160,6 +202,7 @@
     "item.astrogreg.sleeve_extruder_mold": "Форма экструдера (Втулка)",
     "astrogreg.sleeve_extruder_mold.tooltip": "§o§7Форма экструдера для изготовления втулок",
     "item.astrogreg.uhv_voltage_coil": "Катушка сверхвысокого напряжения (UHV)",
+    
     "item.astrogreg.ulv_modular_circuit": "§8ULV§r Модульная схема",
     "item.astrogreg.lv_modular_circuit": "§7LV§r Модульная схема",
     "item.astrogreg.mv_modular_circuit": "§bMV§r Модульная схема",
@@ -171,14 +214,16 @@
     "item.astrogreg.uv_modular_circuit": "§3UV§r Модульная схема",
     "item.astrogreg.uhv_modular_circuit": "§4UHV§r Модульная схема",
     "astrogreg.modular_circuit.tooltip": "§o§7Удобны для шаблонов автокрафта AE2!",
+    
     "block.astrogreg.asteroid_gravel": "Астероидный гравий",
     "block.astrogreg.asteroid_sand": "Астероидный песок",
     "block.astrogreg.cobbled_asteroid_stone": "Булыжник астероидного камня",
     "block.astrogreg.smooth_asteroid_stone": "Гладкий астероидный камень",
     "block.astrogreg.futura_alloy_casing": "Корпус из сплава Футура",
     "block.astrogreg.livingbricks": "Живые кирпичи",
-    "block.astrogreg.managlass": "Стекло маны",
+    "block.astrogreg.managlass": "Манастекло",
     "block.astrogreg.alfglass": "Эльфийское стекло",
+    
     "questbook.astrogreg.welcome.title": "Добро пожаловать в AstroGreg:Exsilium",
     "questbook.astrogreg.welcome_to_age.title": "Добро пожаловать в ASTRO Foundation",
     "questbook.astrogreg.important_info.title": "Важная информация",
@@ -202,6 +247,7 @@
     "questbook.astrogreg.power_gen.title": "Генерация энергии",
     "questbook.astrogreg.multiblocks.title": "Важные многоблочные структуры",
     "questbook.astrogreg.botania.title": "Botania",
+    
     "questbook.astrogreg.introduction.subtitle": "Введение в AGE",
     "questbook.astrogreg.introduction_0.description": "AstroGreg:Exsilium — это уникальный «SpaceBlock» модпак на версии 1.20.1, построенный вокруг космических путешествий и прогрессии GTCEu.",
     "questbook.astrogreg.introduction_1.description": "Вы начинаете свой путь, застряв в поясе Койпера с крайне ограниченными ресурсами. Проложите себе путь за пределы Млечного Пути через тщательно продуманную систему развития. Игровой процесс сочетает в себе переработанные полеты из Ad Astra и классическое восхождение по GregTech, обеспечивая качественный игровой опыт.",
@@ -211,4 +257,5 @@
     "questbook.astrogreg.introduction_5.description": "Популярные вспомогательные моды с глубокой интеграцией с GregTech, такие как Functional Storage, Grappling Hooks, Flux Networks, LaserIO и другие!",
     "questbook.astrogreg.introduction_6.description": "Множество уникальных многоблочных структур благодаря нашему основному моду AstroCore, который обеспечивает бесшовную интеграцию GregTech с остальными модами в сборке.",
     "questbook.astrogreg.introduction_7.description": "Относительно легкое начало и чуть более сложная игра на среднем этапе. Мы не стремимся сделать эксперт-пак в привычном понимании, но планируем сделать финал игры уникальным и комплексным."
+    
 }
