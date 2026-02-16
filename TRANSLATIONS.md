@@ -14,9 +14,9 @@ next, find the en_us.json files you would like to translate from one of our asso
 
 
 
-[Mod Pack Assets](https://github.com/HazeVista/AstroGregExsilium/tree/main/kubejs/assets)
-[Core Mod](https://github.com/HazeVista/AstroCore/blob/main/src/generated/resources/assets/astrogreg/lang/en_us.json)
-[Botania Integration Mod](https://github.com/HazeVista/GTCEu-Simple-Botania-Integration/blob/main/src/generated/resources/assets/gtbotania/lang/en_us.json)
+[Mod Pack Assets](https://github.com/HazeVista/AstroGregExsilium/tree/main/kubejs/assets) || 
+[Core Mod](https://github.com/HazeVista/AstroCore/blob/main/src/generated/resources/assets/astrogreg/lang/en_us.json) || 
+[Botania Integration Mod](https://github.com/HazeVista/GTCEu-Simple-Botania-Integration/blob/main/src/generated/resources/assets/gtbotania/lang/en_us.json) || 
 [GTCEu Terminals](https://github.com/BgameXL/GTCEu-Terminals/tree/main/src/main/resources/assets/gtceuterminal/lang)
 
 
@@ -47,4 +47,4 @@ Haze Vista & BGame
 
 
 German (de_de):
-JoniCraft
+JoniCraftHD

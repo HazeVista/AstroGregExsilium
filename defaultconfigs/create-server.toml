@@ -94,7 +94,7 @@
 	#.
 	#Number of sail-type blocks required to increase windmill speed by 1RPM.
 	#Range: > 1
-	windmillSailsPerRPM = 8
+	windmillSailsPerRPM = 16
 	#.
 	#Max Distance in blocks a Weighted Ejector can throw
 	#Range: > 0
@@ -310,7 +310,7 @@
 				creative_motor = 16384.0
 				large_water_wheel = 128.0
 				water_wheel = 32.0
-				windmill_bearing = 512.0
+				windmill_bearing = 256.0
 
 #.
 #Create's liquid manipulation tools
