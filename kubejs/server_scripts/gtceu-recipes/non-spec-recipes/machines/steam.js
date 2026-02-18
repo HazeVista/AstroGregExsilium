@@ -91,6 +91,18 @@ ServerEvents.recipes(event => {
         B: 'gtceu:potin_gear',
         C: 'gtceu:hp_steam_macerator'
     })
+
+    gt.shaped('astrogreg:kinetic_steam_engine', [
+        'BCB',
+        'DAD',
+        'BCB'
+    ], {
+        A: 'gtceu:bronze_machine_casing',
+        B: 'gtceu:bronze_normal_fluid_pipe',
+        C: 'gtceu:bronze_rotor',
+        D: 'gtceu:bronze_gear'
+    })
+    .addMaterialInfo(true)
     //#endregion
 
 

@@ -127,6 +127,24 @@ ServerEvents.recipes(event => {
         C: 'gtceu:bronze_drum'
     })
     .addMaterialInfo()
+
+    gt.shaped('astrogreg:kinetic_output_hatch', [
+        'ACA',
+        'ABA',
+        'ADA'
+    ], {
+        A: 'gtceu:bronze_plate',
+        B: 'create:gearbox',
+        C: '#forge:tools/wrenches',
+        D: 'gtceu:bronze_gear'
+    })
+
+    gt.assembler('kinetic_output_hatch')
+        .itemInputs('6x gtceu:bronze_plate', 'create:gearbox', 'gtceu:bronze_gear')
+        .itemOutputs('')
+        .duration(200)
+        .EUt(7)
+        .addMaterialInfo(true)
     //#endregion
 
 

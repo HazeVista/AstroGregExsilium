@@ -220,4 +220,24 @@ ServerEvents.recipes(event => {
             .addMaterialInfo(true)
     })
     //#endregion
+
+    //#region unique
+    gt.shaped('4x astrogreg:steam_engine_grating', [
+        'ABA',
+        'ACA',
+        'ADA'
+    ], {
+        A: 'gtceu:bronze_rod',
+        B: 'gtceu:bronze_rotor',
+        C: 'gtceu:bronze_frame',
+        D: '#forge:tools/wrenches'
+    })
+
+    gt.assembler('steam_machine_casing')
+        .itemInputs('6x gtceu:bronze_rod', 'gtceu:bronze_frame', 'gtceu:bronze_rotor')
+        .itemOutputs('4x astrogreg:steam_machine_casing')
+        .duration(80)
+        .EUt(7)
+        .addMaterialInfo(true)
+    //#endregion
 })
