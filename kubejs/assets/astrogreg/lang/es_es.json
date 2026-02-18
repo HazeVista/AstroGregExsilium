@@ -33,12 +33,21 @@
 
     "astrogreg.machine.expanded_me_pattern_buffer_proxy.tooltip.0": "§fPermite vincular muchas máquinas a un solo §6Expanded ME Pattern Buffer§f.",
 
-    "astrogreg.machine.faraday_generator_description.tooltip": "§fConvierte fuerza rotacional en EU",
     "astrogreg.machine.faraday_generator_expanding.tooltip": "§eProducción Base:§r§f 4096 EU/t (§a2A§r §5EV§r) §7por§r §eAnillo Magnético§r.",
     "astrogreg.machine.faraday_generator_fluids.tooltip": "Consume 1mB §6Lubricante§r §7y además§r§f 100mB §r§bOxígeno Líquido§r§7 o§r 25mB §eHelio Líquido§r por segundo por cada §eAnillo Magnético§r.",
     "astrogreg.machine.faraday_generator_magnets.tooltip": "Filas de §bImanes del Generador Faraday§r de mayor tier multiplican EU/t por 4 para ese §eAnillo Magnético§r.",
     "astrogreg.machine.faraday_generator_max_length.tooltip": "§aLongitud Máxima:§r§e 64 Anillos Magnéticos",
     "astrogreg.machine.faraday_generator_returns.tooltip": "Devuelve 40%§7 del §rRefrigerante§7 en forma §rGaseosa§7.",
+    "astrogreg.machine.faraday_generator.coolant_usage": "Uso de Refrigerante: %s mB/s %s",
+    "astrogreg.machine.faraday_generator.energy_output": "Producción de Energía: %s / %s EU/t",
+    "astrogreg.machine.faraday_generator.hold_shift": "§o§7Mantén Shift para ver Detalles",
+    "astrogreg.machine.faraday_generator.lubricant_usage": "Uso de Lubricante: %s mB/s",
+    "astrogreg.machine.faraday_generator.magnet_rows": "Anillos Magnéticos: %s",
+    "astrogreg.machine.faraday_generator.max_eu_per_tick": "EU/t Máximo: %s (%s)",
+    "astrogreg.machine.faraday_generator.max_recipe_tier": "Nivel Máximo de Receta: %s",
+    "astrogreg.machine.faraday_generator.rotation_speed": "Velocidad de Rotación: %s / %s RPM",
+    "astrogreg.machine.faraday_generator.total_output": "Producción Total: %s EU/t",
+    "astrogreg.machine.faraday_generator_springs.tooltip": "§dMuelles Superconductores Comprimidos§r por encima de §9IV§r §7aumentan§r la producción de EU/t en §a5%§r por nivel.",
 
     "astrogreg.machine.fluid_drilling_rig.iv.tooltip": "Succionador de Corteza",
     "astrogreg.machine.industrial_core.tooltip": "El EU/t máximo de esta máquina está limitado por el tier de su §bIndustrial Processing Core§r.",
@@ -52,8 +61,8 @@
     "astrogreg.machine.me_tag_input_hatch.tooltip.0": "§6Importación de Fluidos AE2 basada en Tags",
     "astrogreg.machine.me_tag_input_hatch.tooltip.1": "§7Coincide fluidos mediante expresiones de tags",
 
-    "astrogreg.machine.processing_core.core": "§aProcessing Core:§r §6%s",
-    "astrogreg.machine.processing_core.max_eut": "§aEU/t Máximo:§r §f%s (%s§r)",
+    "astrogreg.machine.processing_core.core": "§bProcessing Core:§r %s",
+    "astrogreg.machine.processing_core.max_eut": "§eEU/t Máximo:§r§f %s (%s)",
 
     "astrogreg.machine.solar_boiler_array.cell_quality": "Calidad de Celda: %sx",
     "astrogreg.machine.solar_boiler_array.danger_cool_first": "Espera a que el arreglo se enfríe primero.",
@@ -81,6 +90,7 @@
     "block.astrogreg.alfsteel_gearbox_casing": "Caja de Engranajes de §dAlfsteel§r",
     "block.astrogreg.alfsteel_mana_large_boiler": "Caldera de Maná Grande de §dAlfsteel§r",
     "block.astrogreg.alfsteel_pipe_casing": "Carcasa de Tubo de §dAlfsteel§r",
+    "block.astrogreg.steam_engine_grating": "Rejilla de Motor de Vapor",
 
     "block.astrogreg.asteroid_stone": "Piedra de Asteroide",
     "block.astrogreg.bronze_crushing_wheels": "Ruedas Trituradoras de Bronce",
@@ -94,7 +104,7 @@
     "block.astrogreg.expanded_me_pattern_buffer": "Expanded ME Pattern Buffer",
     "block.astrogreg.expanded_me_pattern_buffer_proxy": "Expanded ME Pattern Buffer Proxy",
 
-    "block.astrogreg.faraday_electromagnetic_generator": "Generador Electromagnético Faraday",
+    "block.astrogreg.faraday_electromagnetic_generator": "§bGenerador Electromagnético Faraday",
     "block.astrogreg.faraday_generator_coil": "Bobina de Generador Faraday",
 
     "block.astrogreg.fluid_drilling_rig_iv": "§9Plataforma de Perforación de Fluidos Elite",

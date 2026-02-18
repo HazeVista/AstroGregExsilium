@@ -77,37 +77,5 @@ ServerEvents.recipes(event => {
                 .EUt(122880)
         )
         .addMaterialInfo(true)
-    //#endregion
-
-    //#region springs
-    // namespace, material, compression time, decompression time, EU/t to compress in seconds
-    const springs = [
-        ['astrogreg', 'energized_steel', 10, 1, 3],
-        ['astrogreg', 'blazing_etrium', 20, 3, 9],
-        ['astrogreg', 'niotic_calorite', 40, 9, 36],
-        ['astrogreg', 'spirited_uranium', 80, 27, 144],
-        ['astrogreg', 'nitro_flux', 160, 81, 576],
-        ['astrogreg', 'radiant_zephyron', 320, 243, 2304],
-        ['gtbotania', 'gaiaforged_naquadah', 640, 729, 9216],
-        ['astrogreg', 'neptunium_molybdenum_selenide', 1280, 2187, 36864],
-        ['astrogreg', 'electrolyte', 2560, 6561, 147456]
-    ]
-
-    springs.forEach(([namespace, material, compress, decompress, EU]) => {
-
-        gt.compressor(`compressed_${material}_spring`)
-            .itemInputs(`${namespace}:${material}_spring`)
-            .itemOutputs(`${namespace}:compressed_${material}_spring`)
-            .duration(compress * 20)
-            .EUt(EU)
-
-        gt.faraday_generator(`decompress_${material}_spring`)
-            .itemInputs(`${namespace}:compressed_${material}_spring`)
-            .chancedOutput(`${namespace}:${material}_spring`, 8500, 0)
-            .duration(decompress * 20)
-            .EUt(4096)
-
-    })
-    //#endregion
-    
+    //#endregion    
 })
