@@ -35,7 +35,7 @@
 
     "astrogreg.machine.faraday_generator_expanding.tooltip": "§eProducción Base:§r§f 4096 EU/t (§a2A§r §5EV§r) §7por§r §eAnillo Magnético§r.",
     "astrogreg.machine.faraday_generator_fluids.tooltip": "Consume 1mB §6Lubricante§r §7y además§r§f 100mB §r§bOxígeno Líquido§r§7 o§r 25mB §eHelio Líquido§r por segundo por cada §eAnillo Magnético§r.",
-    "astrogreg.machine.faraday_generator_magnets.tooltip": "Filas de §bImanes del Generador Faraday§r de mayor tier multiplican EU/t por 4 para ese §eAnillo Magnético§r.",
+    "astrogreg.machine.faraday_generator_magnets.tooltip": "Filas de §bImanes del Generador Faraday§r de mayor tier §7aumentan§r EU/t por §a400%§r para ese §eAnillo Magnético§r.",
     "astrogreg.machine.faraday_generator_max_length.tooltip": "§aLongitud Máxima:§r§e 64 Anillos Magnéticos",
     "astrogreg.machine.faraday_generator_returns.tooltip": "Devuelve 40%§7 del §rRefrigerante§7 en forma §rGaseosa§7.",
     "astrogreg.machine.faraday_generator.coolant_usage": "Uso de Refrigerante: %s mB/s %s",
