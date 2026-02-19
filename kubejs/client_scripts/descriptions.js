@@ -309,7 +309,7 @@ ItemEvents.tooltip(event => {
         ['industrial_lathe'], ['industrial_extruder'],
         ['industrial_mixer'], ['industrial_sifter'],
         ['industrial_wiremill'], ['industrial_macerator'],
-        ['industrial_fluid_solidifier'],
+        ['industrial_fluid_solidifier'], ['kinetic_steam_engine'],
         ['faraday_electromagnetic_generator']
     ]
 

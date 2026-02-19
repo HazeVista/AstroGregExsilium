@@ -360,17 +360,6 @@ ServerEvents.recipes(event => {
     })
     .addMaterialInfo()
 
-    event.recipes.create.mechanical_crafting('create:steam_engine', [
-        'A',
-        'C',
-        'A',
-        'B'
-    ], {
-        A: 'create:piston_extension_pole',
-        B: 'create:fluid_valve',
-        C: 'gtceu:brass_plate'
-    })
-
     gt.shaped('create:hose_pulley', [
         ' A ',
         'BBB',
