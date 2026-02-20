@@ -165,7 +165,10 @@ ServerEvents.tags('item', event => {
             ['astrogreg:asteroid_stone', 'astrogreg:hard_asteroid_stone'],
         
         'create:non_movable':
-            ['#create:toolboxes']
+            ['#create:toolboxes'],
+
+        'create:gearboxes':
+            ['create:gearbox', 'create:vertical_gearbox']
     }
 
     //#endregion
@@ -222,7 +225,7 @@ ServerEvents.tags('block', event => {
     const blocksToStrip = [
         'ad_extendra:raw_plutonium_block', 'ad_extendra:plutonium_block',
         'ad_extendra:uraninium_block', 'ad_extendra:raw_uranium_block',
-        'createaddition:electrum_block',
+        'createaddition:electrum_block', '#create:toolboxes'
     ]
 
     event.removeAllTagsFrom(/ad_extendra:.b_.*/)
