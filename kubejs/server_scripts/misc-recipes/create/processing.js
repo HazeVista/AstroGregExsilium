@@ -132,7 +132,8 @@ ServerEvents.recipes(event => {
         ['gtceu:iron_plate', 'minecraft:iron_ingot'],
         ['gtceu:gold_plate', 'minecraft:gold_ingot'],
         ['gtceu:copper_plate', 'minecraft:copper_ingot'],
-        ['gtceu:rubber_plate', 'gtceu:rubber_ingot']
+        ['gtceu:rubber_plate', 'gtceu:rubber_ingot'],
+        ['astrogreg:andesite_alloy_plate', 'create:andesite_alloy']
     ]
 
     pressingRecipes.forEach(([output, input]) => {

@@ -233,11 +233,31 @@ ServerEvents.recipes(event => {
         D: '#forge:tools/wrenches'
     })
 
-    gt.assembler('steam_machine_casing')
+    gt.assembler('steam_engine_grating')
         .itemInputs('6x gtceu:bronze_rod', 'gtceu:bronze_frame', 'gtceu:bronze_rotor')
-        .itemOutputs('4x astrogreg:steam_machine_casing')
+        .itemOutputs('4x astrogreg:steam_engine_grating')
         .duration(80)
         .EUt(7)
+        .addMaterialInfo(true)
+
+    gt.shaped('2x astrogreg:machine_casing_kinetic', [
+        'ABA',
+        'CDC',
+        'AEA'
+    ], {
+        A: 'astrogreg:andesite_alloy_plate',
+        B: '#forge:tools/hammers',
+        C: '',
+        D: '',
+        E: '#forge:tools/wrenches'
+    })
+
+    gt.assembler('kinetic_machine_casing')
+        .itemInputs('gtceu:firebricks', '4x astrogreg:andesite_alloy_plate', '2x create:cogwheel')
+        .itemOutputs('2x astrogreg:machine_casing_kinetic')
+        .duration(50)
+        .circuit(6)
+        .EUt(16)
         .addMaterialInfo(true)
     //#endregion
 })

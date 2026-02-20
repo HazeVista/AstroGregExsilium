@@ -65,7 +65,7 @@ ServerEvents.recipes(event => {
         'AAA'
     ], {
         A: 'gtceu:treated_wood_planks',
-        B: 'create:cogwheel'
+        B: 'create:large_cogwheel'
     })
     .addMaterialInfo()
 
@@ -188,7 +188,14 @@ ServerEvents.recipes(event => {
         B: '#minecraft:planks',
         C: '#forge:tools/saws'
     })
-    .addMaterialInfo()
+
+    gt.assembler('cogwheel')
+        .itemInputs('create:shaft', '2x #minecraft:planks')
+        .itemOutputs('create_cogwheel')
+        .circuit(1)
+        .duration(40)
+        .EUt(2)
+        .addMaterialInfo(true)
 
     gt.shaped('create:large_cogwheel', [
         'CA ',
@@ -199,7 +206,14 @@ ServerEvents.recipes(event => {
         B: 'create:shaft',
         C: '#forge:tools/saws'
     })
-    .addMaterialInfo()
+    
+    gt.assembler('large_cogwheel')
+        .itemInputs('create:shaft', '4x #minecraft:planks')
+        .itemOutputs('create:large_cogwheel')
+        .circuit(2)
+        .duration(80)
+        .EUt(2)
+        .addMaterialInfo(true)
 
     gt.shaped('create:piston_extension_pole', [
         ' A ',
