@@ -134,15 +134,35 @@ ServerEvents.recipes(event => {
         'ADA'
     ], {
         A: 'gtceu:bronze_plate',
-        B: 'create:gearbox',
+        B: '#create:gearboxes',
         C: '#forge:tools/wrenches',
         D: 'gtceu:bronze_gear'
     })
 
     gt.assembler('kinetic_output_hatch')
-        .itemInputs('6x gtceu:bronze_plate', 'create:gearbox', 'gtceu:bronze_gear')
-        .itemOutputs('')
+        .itemInputs('6x gtceu:bronze_plate', '#create:gearboxes', 'gtceu:bronze_gear')
+        .itemOutputs('astrogreg:kinetic_output_hatch')
         .duration(200)
+        .circuit(2)
+        .EUt(7)
+        .addMaterialInfo(true)
+
+    gt.shaped('astrogreg:kinetic_input_hatch', [
+        'ADA',
+        'ABA',
+        'ACA'
+    ], {
+        A: 'gtceu:bronze_plate',
+        B: '#create:gearboxes',
+        C: '#forge:tools/wrenches',
+        D: 'gtceu:bronze_gear'
+    })
+
+    gt.assembler('kinetic_output_hatch')
+        .itemInputs('6x gtceu:bronze_plate', '#create:gearboxes', 'gtceu:bronze_gear')
+        .itemOutputs('astrogreg:kinetic_output_hatch')
+        .duration(200)
+        .circuit(1)
         .EUt(7)
         .addMaterialInfo(true)
     //#endregion

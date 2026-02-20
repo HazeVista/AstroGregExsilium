@@ -168,14 +168,6 @@ ServerEvents.tags('item', event => {
             ['#create:toolboxes']
     }
 
-        // wildcard additions
-        event.add('create:non_movable', /astrogreg:.*_drum/)
-        event.add('create:non_movable', /astrogreg:.*_crate/)
-        event.add('create:non_movable', /gtceu:.*_drum/)
-        event.add('create:non_movable', /gtceu:.*_crate/)
-        event.add('create:non_movable', /gtceu:.*_chest/)
-        event.add('create:non_movable', /gtceu:.*_tank/)
-
     //#endregion
 
     
@@ -240,8 +232,17 @@ ServerEvents.tags('block', event => {
 
     //#region add block tags
     const blockTagAdditions = {
-        
+        'create:gearboxes':
+            ['create:gearbox', 'create:vertical_gearbox']
     }
+
+    // wildcard additions
+    event.add('create:non_movable', /astrogreg:.*_drum/)
+    event.add('create:non_movable', /astrogreg:.*_crate/)
+    event.add('create:non_movable', /gtceu:.*_drum/)
+    event.add('create:non_movable', /gtceu:.*_crate/)
+    event.add('create:non_movable', /gtceu:.*_chest/)
+    event.add('create:non_movable', /gtceu:.*_tank/)
     //#endregion 
 
 

@@ -23,7 +23,7 @@ ServerEvents.recipes(event => {
         A: 'gtceu:wrought_iron_plate',
         B: 'create:shaft',
         C: 'create:andesite_alloy',
-        D: 'create:gearbox'
+        D: '#create:gearboxes'
     })
     .addMaterialInfo()
 
@@ -261,7 +261,7 @@ ServerEvents.recipes(event => {
         'B',
         'C'
     ], {
-        A: 'create:gearbox',
+        A: '#create:gearboxes',
         B: 'create:piston_extension_pole',
         C: 'create:brass_hand'
     })
@@ -295,7 +295,7 @@ ServerEvents.recipes(event => {
     ], {
         A: 'minecraft:stone',
         B: 'minecraft:smooth_stone',
-        C: 'create:gearbox'
+        C: '#create:gearboxes'
     })
     .addMaterialInfo()
 
@@ -303,7 +303,7 @@ ServerEvents.recipes(event => {
         'B',
         'A'
     ], {
-        A: 'create:gearbox',
+        A: '#create:gearboxes',
         B: 'gtceu:wrought_iron_buzz_saw_blade'
     })
     .addMaterialInfo()
@@ -314,7 +314,7 @@ ServerEvents.recipes(event => {
         'C'
     ], {
         A: 'create:piston_extension_pole',
-        B: 'create:gearbox',
+        B: '#create:gearboxes',
         C: 'gtceu:wrought_iron_block'
     })
     .addMaterialInfo()
@@ -334,7 +334,7 @@ ServerEvents.recipes(event => {
         'B',
         'A'
     ], {
-        A: 'create:gearbox',
+        A: '#create:gearboxes',
         B: 'gtceu:wrought_iron_drill_head'
     })
     .addMaterialInfo()
@@ -441,7 +441,7 @@ ServerEvents.recipes(event => {
     })
     .addMaterialInfo()
 
-    event.shapeless('create:speedometer', ['create:gearbox', 'minecraft:compass'])
+    event.shapeless('create:speedometer', ['#create:gearboxes', 'minecraft:compass'])
 
     gt.shaped('create:crafter_slot_cover', [
         'A',
