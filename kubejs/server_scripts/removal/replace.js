@@ -77,6 +77,7 @@ ServerEvents.recipes(event => {
     event.replaceInput({}, 'dustrial_decor:cardboard', 'create:cardboard')
     event.replaceInput({ id: 'gtceu:assembler/cover_fluid_detector' }, 'minecraft:heavy_weighted_pressure_plate', 'gtceu:lv_electric_pump' )
     event.replaceInput({ id: 'minecraft:item_frame'}, 'minecraft:stick', '#forge:rods/wooden')
+    event.replaceInput({ input: 'create:electron_tube' }, 'create:electron_tube', '#gtceu:circuits/ulv')
     // event.replaceInput({ input: ''}, '', '')
 
     const mortarMetals = ['wrought_iron', 'flint', 'iron', 'bronze', 'steel', 'cobalt_brass', 'damascus_steel', 'invar']

@@ -6,7 +6,7 @@ ServerEvents.recipes(event => {
         'create:blaze_cake_base', 'createaddition:cake_base_baked', 'create:blaze_cake', 'create:dough', 'astrogreg:small_sky_stone_dust', 'astrogreg:tiny_sky_stone_dust', 
         'expandedae:dual_cell_housing', 'expandedae:mega_dual_cell_housing', '#create:pulpifiable','astrogreg:flawless_fluix_pearl_gem', 'astrogreg:exquisite_fluix_pearl_gem',
         'delightful:animal_oil_bottle', 'minecraft:pitcher_pod', 'minecraft:pitcher_plant', 'minecraft:torchflower', 'minecraft:torchflower_seeds', 'astrogreg:flux_block', 
-        'astrogreg:double_flux_plate', 'astrogreg:small_flux_dust', 'astrogreg:tiny_flux_dust',
+        'astrogreg:double_flux_plate', 'astrogreg:small_flux_dust', 'astrogreg:tiny_flux_dust', 'astrogreg:double_andesite_alloy_plate'
     ])
     //#endregion
 
@@ -60,7 +60,7 @@ ServerEvents.recipes(event => {
         'gtceu:iv_field_generator', 'gtceu:ev_robot_arm', 'gtceu:iv_robot_arm', 'gtceu:ev_conveyor_module', 'gtceu:iv_conveyor_module', 'botania:vial', 'botania:flask', 'minecraft:pitcher_pod', 
         'minecraft:pitcher_plant', 'gtceuterminal:multi_structure_manager', 'gtceuterminal:schematic_interface', 'gtceu:lv_solar_panel', 'gtceu:coke_oven', 'expatternprovider:tag_storage_bus', 
         'expatternprovider:tag_export_bus', 'expatternprovider:mod_storage_bus', 'expatternprovider:mod_export_bus', 'gtceu:steam_grinder', 'gtceuterminal:dismantler',
-        'astrogreg:double_flux_plate', 'astrogreg:small_flux_dust', 'astrogreg:tiny_flux_dust',
+        'astrogreg:double_flux_plate', 'astrogreg:small_flux_dust', 'astrogreg:tiny_flux_dust', 'astrogreg:double_andesite_alloy_plate'
     ])
     //#endregion
 
@@ -142,7 +142,7 @@ ServerEvents.recipes(event => {
         'gtceu:shapeless/hay_block_to_hay', 'farmersdelight:rice', 'minecraft:brown_dye', 'minecraft:bone_meal', 'minecraft:black_dye', 'minecraft:blue_dye', 'gtceu:shapeless/lazurite_to_dye', 'dustrial_decor:cardboard',
         'gtceu:shapeless/sodalite_to_dye', 'gtceu:shapeless/brown_dye_from_metal_mixture', 'gtceu:shaped/passthrough_hatch_item', 'gtceu:shaped/passthrough_hatch_fluid', 'create:crafting/kinetics/crafter_slot_cover',
         'gtceu:forge_hammer/hammer_flux_to_plate', 'gtceu:shaped/plate_flux', 'gtceu:bender/bend_flux_to_plate', 'gtceu:shaped/stick_flux', 'gtceu:arc_furnace/arc_flux_dust', 'gtceu:smelting/smelt_dust_flux_to_ingot', 
-        'gtceu:alloy_smelter/alloy_smelt_flux_dust_to_block', 'create:crafting/kinetics/super_glue', 'expatternprovider:active_formation_plane'
+        'gtceu:alloy_smelter/alloy_smelt_flux_dust_to_block', 'create:crafting/kinetics/super_glue', 'expatternprovider:active_formation_plane', 
     ])
     //#endregion
 

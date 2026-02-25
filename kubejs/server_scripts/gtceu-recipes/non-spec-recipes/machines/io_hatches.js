@@ -158,9 +158,9 @@ ServerEvents.recipes(event => {
         D: 'gtceu:bronze_gear'
     })
 
-    gt.assembler('kinetic_output_hatch')
+    gt.assembler('kinetic_input_hatch')
         .itemInputs('6x gtceu:bronze_plate', '#create:gearboxes', 'gtceu:bronze_gear')
-        .itemOutputs('astrogreg:kinetic_output_hatch')
+        .itemOutputs('astrogreg:kinetic_input_hatch')
         .duration(200)
         .circuit(1)
         .EUt(7)

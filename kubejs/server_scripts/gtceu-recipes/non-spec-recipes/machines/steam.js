@@ -102,7 +102,7 @@ ServerEvents.recipes(event => {
         C: 'gtceu:bronze_rotor',
         D: 'gtceu:bronze_gear'
     })
-    .addMaterialInfo(true)
+    .addMaterialInfo()
     //#endregion
 
 

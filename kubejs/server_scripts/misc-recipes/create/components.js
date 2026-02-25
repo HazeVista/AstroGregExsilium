@@ -3,6 +3,18 @@ ServerEvents.recipes(event => {
     const gt = event.recipes.gtceu
 
     //#region shaped recipes
+    gt.shaped('astrogreg:large_kinetic_mixer', [
+        'ECE',
+        'DAD',
+        'EBE'
+    ], {
+        A: 'astrogreg:machine_casing_kinetic',
+        B: 'create:precision_mechanism',
+        C: 'create:mechanical_mixer',
+        D: 'create:cogwheel',
+        E: 'astrogreg:andesite_alloy_plate'
+    })
+
     gt.shaped('create:precision_mechanism', [
         'ADA',
         'BCB',
@@ -191,7 +203,7 @@ ServerEvents.recipes(event => {
 
     gt.assembler('cogwheel')
         .itemInputs('create:shaft', '2x #minecraft:planks')
-        .itemOutputs('create_cogwheel')
+        .itemOutputs('create:cogwheel')
         .circuit(1)
         .duration(40)
         .EUt(2)
