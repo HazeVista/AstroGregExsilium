@@ -254,7 +254,7 @@ ServerEvents.recipes(event => {
 
 
     //#region power
-    event.shapeless('createaddition:small_light_connector', ['create:electron_tube', 'createaddition:connector']);
+    event.shapeless('createaddition:small_light_connector', ['#gtceu:circuits/ulv', 'createaddition:connector']);
     event.shapeless('createaddition:portable_energy_interface', ['create:portable_storage_interface', 'createaddition:modular_accumulator']);
     event.shapeless('createaddition:electrum_spool', ['gtceu:fine_electrum_wire', 'createaddition:spool']);
     event.shapeless('createaddition:copper_spool', ['gtceu:fine_copper_wire', 'createaddition:spool']);
@@ -358,7 +358,7 @@ ServerEvents.recipes(event => {
     ], {
         A: 'gtceu:brass_plate',
         B: 'gtceu:wrought_iron_drill_head',
-        C: 'create:electron_tube',
+        C: '#gtceu:circuits/ulv',
         D: 'create:deployer',
         E: 'create:brass_casing',
         F: 'create:brass_funnel'
@@ -373,7 +373,7 @@ ServerEvents.recipes(event => {
     ], {
         A: 'gtceu:brass_plate',
         B: 'gtceu:wrought_iron_drill_head',
-        C: 'create:electron_tube',
+        C: '#gtceu:circuits/ulv',
         D: 'create:deployer',
         E: 'create:fluid_tank',
         F: 'create:fluid_valve'

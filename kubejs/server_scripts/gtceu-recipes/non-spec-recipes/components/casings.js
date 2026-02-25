@@ -247,8 +247,8 @@ ServerEvents.recipes(event => {
     ], {
         A: 'astrogreg:andesite_alloy_plate',
         B: '#forge:tools/hammers',
-        C: '',
-        D: '',
+        C: 'create:cogwheel',
+        D: 'gtceu:firebricks',
         E: '#forge:tools/wrenches'
     })
 

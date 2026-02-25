@@ -66,7 +66,7 @@ ServerEvents.recipes(event => {
         B: 'gtceu:iron_rod',
         C: 'gtceu:gold_rod',
         D: 'minecraft:stick',
-        E: 'create:electron_tube',
+        E: '#gtceu:circuits/ulv',
         F: '#forge:tools/screwdrivers'
     })
     .addMaterialInfo()
@@ -101,16 +101,36 @@ ServerEvents.recipes(event => {
     })
     .addMaterialInfo()
 
-    gt.shaped('2x create:white_sail', [
-        'CAC',
-        'BAB',
-        'CAC'
+    gt.shaped('create:white_sail', [
+        'AB ',
+        'BC ',
+        '   '
     ], {
         A: '#minecraft:wool',
-        B: '#forge:rods/wooden',
+        B: 'gtceu:treated_wood_rod',
         C: 'farmersdelight:rope'
     })
     .addMaterialInfo()
+
+    gt.shaped('create:white_sail', [
+        'AB ',
+        'BC ',
+        '   '
+    ], {
+        A: 'farmersdelight:canvas',
+        B: 'gtceu:treated_wood_rod',
+        C: 'farmersdelight:rope'
+    })
+
+    gt.shaped('create:white_sail', [
+        'AB ',
+        'BC ',
+        '   '
+    ], {
+        A: 'minecraft:leather',
+        B: 'gtceu:treated_wood_rod',
+        C: 'farmersdelight:rope'
+    })
 
     gt.shaped('create:andesite_funnel', [
         'ABA',
@@ -127,7 +147,7 @@ ServerEvents.recipes(event => {
         'ACA'
     ], {
         A: 'gtceu:brass_plate',
-        B: 'create:electron_tube',
+        B: '#gtceu:circuits/ulv',
         C: 'farmersdelight:canvas'
     })
     .addMaterialInfo()
@@ -149,7 +169,7 @@ ServerEvents.recipes(event => {
         'ACA'
     ], {
         A: 'gtceu:brass_plate',
-        B: 'create:electron_tube',
+        B: '#gtceu:circuits/ulv',
         C: 'farmersdelight:canvas'
     })
     .addMaterialInfo()
@@ -299,7 +319,7 @@ ServerEvents.recipes(event => {
         ' C '
     ], {
         A: 'create:shaft',
-        B: 'create:electron_tube',
+        B: '#gtceu:circuits/ulv',
         C: 'gtceu:brass_plate'
     })
     .addMaterialInfo()
@@ -308,7 +328,7 @@ ServerEvents.recipes(event => {
         'ACA',
         ' B '
     ], {
-        A: 'create:electron_tube',
+        A: '#gtceu:circuits/ulv',
         B: 'create:brass_casing',
         C: 'create:large_cogwheel'
     })
@@ -473,7 +493,7 @@ ServerEvents.recipes(event => {
         'A',
         'B'
     ], {
-        A: 'create:electron_tube',
+        A: '#gtceu:circuits/ulv',
         B: 'gtceu:brass_plate'
     })    
     .addMaterialInfo()
