@@ -259,5 +259,24 @@ ServerEvents.recipes(event => {
         .circuit(6)
         .EUt(16)
         .addMaterialInfo(true)
+
+    gt.shaped('gtceu:wood_wall', [
+        ' C ',
+        'ABA',
+        ' D '
+    ], {
+        A: 'gtceu:copper_plate',
+        B: 'gtceu:treated_wood',
+        C: '#forge:tools/saws',
+        D: '#forge:tools/hammers'
+    })
+
+    gt.assembler('assemble_wood_wall')
+        .itemInputs('gtceu:treated_wood', '2x gtceu:copper_plate')
+        .itemOutputs('gtceu:wood_wall')
+        .duration(50)
+        .circuit(6)
+        .EUt(16)
+        .addMaterialInfo(true)
     //#endregion
 })

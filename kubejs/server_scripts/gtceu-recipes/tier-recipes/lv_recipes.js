@@ -50,6 +50,13 @@ ServerEvents.recipes(event => {
         .duration(100)
         .EUt(7)
 
+    gt.extruder('extrude_fluid_cell_pai')
+        .itemInputs('astrogreg:polyamide_imide_ingot')
+        .notConsumable('gtceu:cell_extruder_mold')
+        .itemOutputs('32x gtceu:fluid_cell')
+        .duration(128)
+        .EUt(30)
+
     gt.chemical_reactor('ethylbenzene_to_styrene')
         .circuit(2)
         .inputFluids('gtceu:ethylbenzene')
