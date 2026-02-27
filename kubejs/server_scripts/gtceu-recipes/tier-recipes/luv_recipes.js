@@ -69,6 +69,14 @@ ServerEvents.recipes(event => {
         .itemOutputs('8x gtbotania:elementium_dust', '6x astrogreg:vesnium_dust', '3x gtceu:duranium_dust', '2x gtceu:titanium_tungsten_carbide_dust')
         .duration(1200)
         .EUt(20)
+
+    gt.vacuum_freezer('solidify_molten_gaiasteel')
+        .notConsumable('gtceu:ingot_casing_mold')
+        .inputFluids('gtbotania:molten_gaiasteel 144', 'gtceu:liquid_helium 500')
+        .itemOutputs('botanicadds:gaiasteel_ingot')
+        .outputFluids('gtceu:helium 250')
+        .duration(282)
+        .EUt(120)
     //#endregion
 
 

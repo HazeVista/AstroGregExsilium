@@ -266,13 +266,13 @@ ServerEvents.recipes(event => {
         ' D '
     ], {
         A: 'gtceu:copper_plate',
-        B: 'gtceu:treated_wood',
+        B: 'gtceu:treated_wood_planks',
         C: '#forge:tools/saws',
         D: '#forge:tools/hammers'
     })
 
     gt.assembler('assemble_wood_wall')
-        .itemInputs('gtceu:treated_wood', '2x gtceu:copper_plate')
+        .itemInputs('gtceu:treated_wood_planks', '2x gtceu:copper_plate')
         .itemOutputs('gtceu:wood_wall')
         .duration(50)
         .circuit(6)
