@@ -66,6 +66,7 @@ trees.forEach((tree) => {
             .duration(Duration)
             .EUt(30)
         
+        AstroRecipeSchemaBindings.isOxygenated(greenhouse_tree_base, true)
         applyItemOutput(greenhouse_tree_base, rubber);
         applyNotConsumableItem(greenhouse_tree_base, notConsumableItem);
         applyItemInput(greenhouse_tree_base, Item1);
@@ -113,6 +114,7 @@ trees.forEach((tree) => {
                 .EUt(30)
                 .circuit(Circuit)
             
+            AstroRecipeSchemaBindings.isOxygenated(greenhouse_flower_base, true)
             applyNotConsumableItem(greenhouse_flower_base, notConsumableItem);
             applyItemInput(greenhouse_flower_base, Item1);
         }
@@ -171,6 +173,7 @@ trees.forEach((tree) => {
                 .EUt(30)
                 .circuit(Circuit)
 
+            AstroRecipeSchemaBindings.isOxygenated(greenhouse_crop_base, true)
             applyItemInput(greenhouse_crop_base, Item1);
             applyNotConsumableItem(greenhouse_crop_base, notConsumableItem);
         }

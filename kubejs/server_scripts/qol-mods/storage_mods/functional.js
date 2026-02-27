@@ -46,15 +46,6 @@ ServerEvents.recipes(event => {
         B: 'gtceu:copper_plate',
         C: '#functionalstorage:drawer'
     })
-
-    event.shaped('functionalstorage:void_upgrade', [
-        'AAA',
-        'ABA',
-        'AAA'
-    ], {
-        A: 'ender_pearl',
-        B: '#functionalstorage:drawer'
-    })
     
     event.shaped('functionalstorage:fluid_1', [
         'BBB',

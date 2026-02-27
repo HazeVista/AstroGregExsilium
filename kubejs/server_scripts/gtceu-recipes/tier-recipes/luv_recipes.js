@@ -71,7 +71,7 @@ ServerEvents.recipes(event => {
         .EUt(20)
 
     gt.vacuum_freezer('solidify_molten_gaiasteel')
-        .notConsumable('gtceu:ingot_casing_mold')
+        .notConsumable('gtceu:ingot_casting_mold')
         .inputFluids('gtbotania:molten_gaiasteel 144', 'gtceu:liquid_helium 500')
         .itemOutputs('botanicadds:gaiasteel_ingot')
         .outputFluids('gtceu:helium 250')

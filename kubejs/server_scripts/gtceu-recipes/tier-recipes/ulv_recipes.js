@@ -3,7 +3,7 @@ ServerEvents.recipes(event => {
   const gt = event.recipes.gtceu
 
     //#region misc
-    event.shapeless('minecraft:farmland', ['#minecraft:hoe', 'minecraft:dirt'])
+    event.shapeless('minecraft:farmland', ['#minecraft:hoes', 'minecraft:dirt'])
     event.shapeless('gtceu:tin_alloy_dust', ['gtceu:iron_dust', 'gtceu:tin_dust'])
 
     gt.assembler('till_dirt')
@@ -528,6 +528,10 @@ ServerEvents.recipes(event => {
       .EUt(7)
 
     event.smelting('astrogreg:livingbrick', 'astrogreg:compressed_livingclay')
+
+    gt.centrifuge('separate_livingclay')
+      .itemInputs('2x astrogreg:livingclay_dust')
+      .itemOutputs('astrogreg:livingrock_dust', 'gtceu:clay_dust')
     //#endregion
 
 
@@ -637,5 +641,68 @@ ServerEvents.recipes(event => {
         B: '#forge:stone'
       })
     })
+    //#endregion
+
+
+
+    //#region rune tablets 
+    gt.shaped('astrogreg:unfired_rune_tablet', [
+      'A',
+      'B'
+    ], {
+      A: '#forge:tools/hammers',
+      B: 'astrogreg:compressed_livingclay'
+    })
+
+    gt.bender('unfired_rune_tablet')
+      .itemInputs('astrogreg:compressed_livingclay')
+      .itemOutputs('astrogreg:unfired_rune_tablet')
+      .duration(100)
+      .EUt(7)
+      .circuit(1)
+
+    gt.forge_hammer('unfired_rune_tablet')
+      .itemInputs('astrogreg:compressed_livingclay')
+      .itemOutputs('astrogreg:unfired_rune_tablet')
+      .duration(100)
+      .EUt(7)
+
+    gt.forming_press('unfired_rune_tablet')
+      .itemInputs('astrogreg:livingclay_dust')
+      .notConsumable('gtceu:cylinder_casting_mold')
+      .itemOutputs('astrogreg:unfired_rune_tablet')
+      .duration(100)
+      .EUt(7)
+
+    gt.alloy_smelter('rune_tablet')
+      .itemInputs('astrogreg:livingclay_dust')
+      .notConsumable('gtceu:cylinder_casting_mold')
+      .itemOutputs('astrogreg:rune_tablet')
+      .duration(100)
+      .EUt(7)
+
+    event.recipes.create.pressing('astrogreg:unfired_rune_tablet', 'astrogreg:compressed_livingclay')
+
+    event.smelting('astrogreg:rune_tablet', 'astrogreg:unfired_rune_tablet')
+    event.campfireCooking('astrogreg:rune_tablet', 'astrogreg:unfired_rune_tablet', 0, 100)
+    
+    gt.arc_furnace('rune_tablet')
+      .itemInputs('astrogreg:unfired_rune_tablet')
+      .inputFluids('gtceu:oxygen 63')
+      .itemOutputs('astrogreg:rune_tablet')
+      .duration(20)
+      .EUt(30)
+
+    gt.macerator('rune_tablet_to_dust')
+      .itemInputs('astrogreg:rune_tablet')
+      .itemOutputs('astrogreg:livingclay_dust')
+      .duration(98)
+      .EUt(2)
+
+    gt.macerator('unfired_rune_tablet_to_dust')
+      .itemInputs('astrogreg:unfired_rune_tablet')
+      .itemOutputs('astrogreg:livingclay_dust')
+      .duration(98)
+      .EUt(2)
     //#endregion
 })
