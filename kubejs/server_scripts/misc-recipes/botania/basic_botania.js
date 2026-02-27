@@ -71,7 +71,7 @@ ServerEvents.recipes(event => {
     event.recipes.botania.mana_infusion('botania:manaweave_cloth', 'farmersdelight:canvas', 4000)
     event.recipes.botania.mana_infusion('botania:mana_powder', '#forge:stone_dusts', 100)
     event.recipes.botania.mana_infusion('botania:managlass', 'gtceu:tempered_glass', 100)
-    event.recipes.botania.mana_infusion('botania:fertilizer', 'minecraft:bonemeal', 100)
+    event.recipes.botania.mana_infusion('botania:fertilizer', 'minecraft:bone_meal', 100)
     event.recipes.botania.mana_infusion('gtbotania:exquisite_mana_diamond_gem', 'gtceu:exquisite_diamond_gem', 40000)
     event.recipes.botania.mana_infusion('gtbotania:flawless_mana_diamond_gem', 'gtceu:flawless_diamond_gem', 20000)
     event.recipes.botania.mana_infusion('botania:mana_diamond', 'minecraft:diamond', 10000)

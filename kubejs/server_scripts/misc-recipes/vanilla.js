@@ -103,6 +103,24 @@ ServerEvents.recipes(event => {
         A: 'framedblocks:framed_cube',
         B: 'botania:manaweave_cloth'
     })
+
+    event.shaped('minecraft:crossbow', [
+        'ABA',
+        'CDC',
+        ' A '
+    ], {
+        A: 'gtceu:treated_wood_rod',
+        B: 'gtceu:iron_ring',
+        C: 'minecraft:string',
+        D: 'minecraft:tripwire_hook'
+    })
+
+    event.recipes.gtceu.assembler('crossbow')
+        .itemInputs('2x minecraft:string', '3x gtceu:treated_wood_rod', 'minecraft:tripwire_hook', 'gtceu:iron_ring')
+        .itemOutputs('minecraft:crossbow')
+        .circuit(11)
+        .duration(100)
+        .EUt(2)
     //#endregion
 
 

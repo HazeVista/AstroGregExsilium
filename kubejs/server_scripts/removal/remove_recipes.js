@@ -60,7 +60,9 @@ ServerEvents.recipes(event => {
         'gtceu:iv_field_generator', 'gtceu:ev_robot_arm', 'gtceu:iv_robot_arm', 'gtceu:ev_conveyor_module', 'gtceu:iv_conveyor_module', 'botania:vial', 'botania:flask', 'minecraft:pitcher_pod', 
         'minecraft:pitcher_plant', 'gtceuterminal:multi_structure_manager', 'gtceuterminal:schematic_interface', 'gtceu:lv_solar_panel', 'gtceu:coke_oven', 'expatternprovider:tag_storage_bus', 
         'expatternprovider:tag_export_bus', 'expatternprovider:mod_storage_bus', 'expatternprovider:mod_export_bus', 'gtceu:steam_grinder', 'gtceuterminal:dismantler', 'create:electron_tube',
-        'astrogreg:double_flux_plate', 'astrogreg:small_flux_dust', 'astrogreg:tiny_flux_dust', 'astrogreg:double_andesite_alloy_plate', 'gtceu:wood_wall',
+        'astrogreg:double_flux_plate', 'astrogreg:small_flux_dust', 'astrogreg:tiny_flux_dust', 'astrogreg:double_andesite_alloy_plate', 'gtceu:wood_wall', 'gtceu:resin_circuit_board',
+        'minecraft:powderbarrel', 'ad_astra:coal_generator', 'minecraft:crossbow'
+    ])
     //#endregion
 
 
@@ -130,7 +132,7 @@ ServerEvents.recipes(event => {
         'botania:elementium_chestplate', 'botania:elementium_helmet', 'ae2:network/cells/view_cell', 'ae2:tools/network_memory_card', 'ae2:decorative/quartz_fixture', 'ae2:network/wireless_booster', 
         'ae2:network/parts/panels_semi_dark_monitor', 'buildinggadgets2:template_manager', 'gtceu:macerator/macerate_hay_block', 'gtceu:macerator/macerate_sugar_cane', 'farmersdelight:roasted_mutton_chops', 
         'delightful:melon_slice', 'delightful:cutting/pumpkin_pie', 'farmersdelight:cutting/apple_pie', 'farmersdelight:cutting/chocolate_pie', 'farmersdelight:cutting/sweet_berry_cheesecake', 'delightful:cutting/baklava',
-        'gtceu:macerator/macerate_chicken', 'gtceu:macerator/macerate_rabbit', 'gtceu:macerator/macerate_mutton', 'gtceu:macerator/macerate_steak', 'gtceu:macerator/macerate_pork_chop',, 'ad_extendra:saturlyte_nugget', 
+        'gtceu:macerator/macerate_chicken', 'gtceu:macerator/macerate_rabbit', 'gtceu:macerator/macerate_mutton', 'gtceu:macerator/macerate_steak', 'gtceu:macerator/macerate_pork_chop', 'ad_extendra:saturlyte_nugget', 
         'ad_extendra:juperium_nugget', 'delightful:food_oven', 'delightful:food/sweet_berry_cheesecake_from_cheese', 'delightful:food/glow_jam_cookie', 'delightful:food/baklava_no_citrus', 'gtceu:compressor/sandstone',
         'delightful:food/nut_dough', 'delightful:food/salmonberry_pie', 'create:milling/cocoa_beans', 'gtceu:shaped/cake_from_dough', 'farmersdelight:sweet_berry_cheesecake', 'farmersdelight:cutting/cake',  
         'farmersdelight:sweet_berry_cheesecake_from_slices', 'farmersdelight:cake_from_slices', 'gtceu:shaped/small_dust_assembling_skystone', 'gtceu:shaped/tiny_dust_assembling_skystone', 'minecraft:sandstone',

@@ -153,6 +153,27 @@ ServerEvents.recipes(event => {
       A: '#forge:tools/knives',
       B: 'astrogreg:polyamide_imide_plate'
     })
+
+    gt.shaped('3x gtceu:resin_circuit_board', [
+      'AAA',
+      'BBB',
+      'AAA'
+    ], {
+      A: 'gtceu:sticky_resin',
+      B: 'gtceu:wood_plate'
+    })
+
+    event.shapeless('gtceu:resin_circuit_board', ['gtceu:sticky_resin', 'gtceu:sticky_resin', 'gtceu:wood_plate'])
+
+    gt.shaped('gtceu:powderbarrel', [
+      'ABA',
+      'CCC',
+      'ACA'
+    ], {
+      A: 'gtceu:wood_plate',
+      B: 'minecraft:string',
+      C: 'minecraft:gunpowder'
+    })
     //#endregion
 
     
@@ -532,6 +553,8 @@ ServerEvents.recipes(event => {
     gt.centrifuge('separate_livingclay')
       .itemInputs('2x astrogreg:livingclay_dust')
       .itemOutputs('astrogreg:livingrock_dust', 'gtceu:clay_dust')
+      .duration(98)
+      .EUt(8)
     //#endregion
 
 

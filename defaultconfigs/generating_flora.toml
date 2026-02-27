@@ -31,7 +31,7 @@
 
 ["Munchdew Config"]
 	#Production of munchdew (per leaf)
-	#This is mana for each eaten leaf [160]
+	#This is mana for each eaten leaf [100]
 	#Range: > 1
 	"Munchdew Production" = 220
 	#Range of munchdew (horizontal)

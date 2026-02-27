@@ -169,7 +169,14 @@ ServerEvents.tags('item', event => {
             ['#create:toolboxes'],
 
         'create:gearboxes':
-            ['create:gearbox', 'create:vertical_gearbox']
+            ['create:gearbox', 'create:vertical_gearbox'],
+
+        'forge:cakes': 
+            ['minecraft:cake', 'createaddition:chocolate_cake', 'createaddition:honey_cake'],
+
+        'forge:pies': 
+            ['minecraft:pumpkin_pie', 'delightful:salmonberry_pie', 'farmersdelight:apple_pie', 
+                'farmersdelight:chocolate_pie', 'farmersdelight:sweet_berry_cheesecake']     
     }
 
     //#endregion
