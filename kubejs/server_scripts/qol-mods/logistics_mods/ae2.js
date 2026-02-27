@@ -103,6 +103,17 @@ ServerEvents.recipes(event => {
         event.shapeless(`ae2:spatial_storage_cell_${size}`, [`ae2:spatial_cell_component_${size}`, 'ae2:item_cell_housing'])
     }
 
+    gt.assembler('inf_water_cell')
+        .itemInputs('megacells:mega_fluid_cell_housing', 'ae2:cell_component_64k', '3x botania:earth_rune')
+        .itemOutputs(Item.of('expatternprovider:infinity_cell', '{record:{"#c":"ae2:f",id:"minecraft:water"}}'))
+        .duration(400)
+        .EUt(1024)
+        
+    gt.assembler('inf_cobble_cell')
+        .itemInputs('megacells:mega_item_cell_housing', 'ae2:cell_component_64k', '3x botania:water_rune')
+        .itemOutputs(Item.of('expatternprovider:infinity_cell', '{record:{"#c":"ae2:i",id:"minecraft:cobblestone"}}'))
+        .duration(400)
+        .EUt(1024)
     // #endregion
     
 

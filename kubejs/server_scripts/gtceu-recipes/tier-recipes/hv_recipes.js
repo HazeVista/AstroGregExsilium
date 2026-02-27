@@ -2,6 +2,17 @@ ServerEvents.recipes(event => {
 
     const gt = event.recipes.gtceu
 
+    //#region misc
+    gt.assembler('infinite_water_cover')
+        .itemInputs('gtceu:hv_electric_pump', 'botania:water_rune', '#gtceu:circuits/hv')
+        .inputFluids('gtceu:soldering_alloy 72')
+        .itemOutputs('gtceu:infinite_water_cover')
+        .duration(100)
+        .EUt(480)
+    //#endregion 
+
+
+
     //#region cleanroom
     gt.circuit_assembler('data_stick_tin')
         .itemInputs('gtceu:plastic_printed_circuit_board', '2x gtceu:cpu_chip', '32x gtceu:nand_memory_chip', 
