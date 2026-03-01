@@ -61,7 +61,7 @@ ServerEvents.recipes(event => {
         'minecraft:pitcher_plant', 'gtceuterminal:multi_structure_manager', 'gtceuterminal:schematic_interface', 'gtceu:lv_solar_panel', 'gtceu:coke_oven', 'expatternprovider:tag_storage_bus', 
         'expatternprovider:tag_export_bus', 'expatternprovider:mod_storage_bus', 'expatternprovider:mod_export_bus', 'gtceu:steam_grinder', 'gtceuterminal:dismantler', 'create:electron_tube',
         'astrogreg:double_flux_plate', 'astrogreg:small_flux_dust', 'astrogreg:tiny_flux_dust', 'astrogreg:double_andesite_alloy_plate', 'gtceu:wood_wall', 'gtceu:resin_circuit_board',
-        'minecraft:powderbarrel', 'ad_astra:coal_generator', 'minecraft:crossbow'
+        'minecraft:powderbarrel', 'ad_astra:coal_generator', 'minecraft:crossbow', 'create:propeller', 'create:encased_fan'
     ])
     //#endregion
 

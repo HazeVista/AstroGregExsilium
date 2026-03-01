@@ -14,6 +14,21 @@ ServerEvents.recipes(event => {
         D: 'create:cogwheel',
         E: 'astrogreg:andesite_alloy_plate'
     })
+    .addMaterialInfo()
+
+    gt.shaped('astrogreg:kinetic_combustion_engine', [
+        'ABA',
+        'CDC',
+        'EFE'
+    ], {
+        A: 'gtceu:hv_electric_piston',
+        B: '#gtceu:circuits/ev',
+        C: 'gtceu:hv_electric_motor',
+        D: 'gtceu:hv_machine_hull',
+        E: 'create:cogwheel',
+        F: 'create:shaft'
+    })
+    .addMaterialInfo()
 
     gt.shaped('create:precision_mechanism', [
         'ADA',
@@ -506,6 +521,15 @@ ServerEvents.recipes(event => {
         B: 'gtceu:tin_foil',
         C: 'gtceu:tin_ring'
     })
+
+    gt.shaped('create:encased_fan', [
+        'A',
+        'B'
+    ], {
+        A: 'create:andesite_casing',
+        B: 'gtceu:wrought_iron_rotor'
+    })
+    .addMaterialInfo()
     //#endregion
 
 

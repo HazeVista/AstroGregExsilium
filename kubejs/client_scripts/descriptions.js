@@ -314,7 +314,8 @@ ItemEvents.tooltip(event => {
         ['industrial_mixer'], ['industrial_sifter'],
         ['industrial_wiremill'], ['industrial_macerator'],
         ['industrial_fluid_solidifier'], ['kinetic_steam_engine'],
-        ['faraday_electromagnetic_generator']
+        ['faraday_electromagnetic_generator'], ['kinetic_combustion_engine'],
+        ['large_kinetic_mixer']
     ]
 
     ageControllers.forEach(([name, tooltip]) => { 

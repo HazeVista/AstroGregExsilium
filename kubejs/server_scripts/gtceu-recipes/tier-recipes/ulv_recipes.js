@@ -46,6 +46,7 @@ ServerEvents.recipes(event => {
     event.smelting('astrogreg:asteroid_stone', 'astrogreg:cobbled_asteroid_stone')
     event.smelting('astrogreg:smooth_asteroid_stone', 'astrogreg:asteroid_stone')
     event.smelting('minecraft:glass', 'gtceu:glass_dust')
+    event.smelting('gtceu:annealed_copper_nugget', 'gtceu:copper_nugget')
 
     // removed due to being too simple and unrealistic
     // event.shaped('4x create:pulp', [
@@ -56,12 +57,6 @@ ServerEvents.recipes(event => {
     // A: 'gtceu:paper_dust',
     // B: 'minecraft:water_bucket'
     // }).replaceIngredient('minecraft:water_bucket', 'minecraft:bucket')
-
-    //event.shaped('2x minecraft:paper', [
-    //  'AAA'
-    //], {
-    //  A: 'farmersdelight:tree_bark'
-    //});
 
     event.shaped('3x dustrial_decor:gold_chain', [
       ' A ',
