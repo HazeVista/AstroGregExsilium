@@ -212,6 +212,10 @@ ItemEvents.tooltip(event => {
         { line: 1, text: 'astrogreg.paradox_processor_mainframe.tooltip' },
         { line: 2, text: 'astrogreg.circuit.uev' }
     ])
+
+    loreTooltip(event, 'astrogreg:data_disk', [
+        { line: 1, text: 'astrogreg.data_disk.tooltip' }
+    ])
     //#endregion    
 
 
