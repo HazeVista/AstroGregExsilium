@@ -727,6 +727,78 @@ ServerEvents.recipes(event => {
 
 
     //#region concrete
+    const CONCRETE_RECIPES = [
+        { id: 'marble',  inputs: ['144x gtceu:stone_dust', '72x gtceu:marble_dust', '72x gtceu:gypsum_dust'] },
+        { id: 'calcite', inputs: ['144x gtceu:stone_dust', '72x gtceu:calcite_dust', '72x gtceu:gypsum_dust'] },
+        { id: 'clay',    inputs: ['144x gtceu:clay_dust', '432x gtceu:stone_dust'] }
+    ];
 
+    const DYES = [
+        'white', 'red', 'orange', 'yellow', 'green', 'blue', 'purple', 'light_gray', 
+        'gray', 'black', 'brown', 'light_blue', 'lime', 'cyan', 'magenta', 'pink'
+    ];
+
+    gt.shaped('astrogreg:kinetic_concrete_plant', [
+      'EDE', 
+      'ACA', 
+      'ABA'
+    ], {
+        A: 'gtceu:bronze_normal_fluid_pipe',
+        B: 'gtceu:block_casting_mold',
+        C: 'create:mechanical_mixer',
+        D: '#gtceu:circuits/ulv',
+        E: 'gtceu:wrought_iron_rotor'
+    })
+    .addMaterialInfo()
+
+    gt.shaped('astrogreg:concrete_plant', ['EDE', 'ACA', 'ABA'], {
+        A: 'gtceu:steel_normal_fluid_pipe',
+        B: 'gtceu:block_casting_mold',
+        C: 'gtceu:lv_mixer',
+        D: '#gtceu:circuits/ulv',
+        E: 'gtceu:steel_rotor'
+    })
+    .addMaterialInfo()
+
+    CONCRETE_RECIPES.forEach((recipe) => {
+
+        gt.concrete_mixer(`light_concrete_solid_${recipe.id}`)
+          .itemInputs(recipe.inputs)
+          .inputFluids('minecraft:water 36000')
+          .itemOutputs('64x gtceu:light_concrete')
+          .circuit(3)
+          .duration(2560)
+          .EUt(7)
+
+        gt.concrete_mixer(`dark_concrete_solid_${recipe.id}`)
+          .itemInputs(recipe.inputs)
+          .inputFluids('minecraft:water 36000')
+          .itemOutputs('64x gtceu:dark_concrete')
+          .circuit(4)
+          .duration(2560)
+          .EUt(7)
+
+        gt.concrete_mixer(`liquid_concrete_${recipe.id}`)
+          .itemInputs(recipe.inputs)
+          .inputFluids('minecraft:water 36000')
+          .outputFluids('gtceu:concrete 82944')
+          .circuit(2)
+          .duration(2560)
+          .EUt(7)
+
+        DYES.forEach((color) => {
+
+          gt.concrete_mixer(`${color}_concrete_${recipe.id}`)
+              .itemInputs(recipe.inputs)
+              .inputFluids('minecraft:water 36000', `gtceu:${color}_dye 576`)
+              .itemOutputs(`64x minecraft:${color}_concrete`)
+              .circuit(1)
+              .duration(2560)
+              .EUt(7)
+              
+        })
+
+    })
     //#endregion
+
 })
