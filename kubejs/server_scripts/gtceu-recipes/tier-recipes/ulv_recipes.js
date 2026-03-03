@@ -728,15 +728,15 @@ ServerEvents.recipes(event => {
 
     //#region concrete
     const CONCRETE_RECIPES = [
-        { id: 'marble',  inputs: ['144x gtceu:stone_dust', '72x gtceu:marble_dust', '72x gtceu:gypsum_dust'] },
-        { id: 'calcite', inputs: ['144x gtceu:stone_dust', '72x gtceu:calcite_dust', '72x gtceu:gypsum_dust'] },
-        { id: 'clay',    inputs: ['144x gtceu:clay_dust', '432x gtceu:stone_dust'] }
-    ];
+        { id: 'marble',  inputs: ['16x gtceu:stone_dust', '8x gtceu:marble_dust', '8x gtceu:gypsum_dust'] },
+        { id: 'calcite', inputs: ['16x gtceu:stone_dust', '8x gtceu:calcite_dust', '8x gtceu:gypsum_dust'] },
+        { id: 'clay',    inputs: ['16x gtceu:clay_dust', '48x gtceu:stone_dust'] }
+    ]
 
     const DYES = [
         'white', 'red', 'orange', 'yellow', 'green', 'blue', 'purple', 'light_gray', 
         'gray', 'black', 'brown', 'light_blue', 'lime', 'cyan', 'magenta', 'pink'
-    ];
+    ]
 
     gt.shaped('astrogreg:kinetic_concrete_plant', [
       'EDE', 
@@ -764,7 +764,7 @@ ServerEvents.recipes(event => {
 
         gt.concrete_mixer(`light_concrete_solid_${recipe.id}`)
           .itemInputs(recipe.inputs)
-          .inputFluids('minecraft:water 36000')
+          .inputFluids('minecraft:water 8000')
           .itemOutputs('64x gtceu:light_concrete')
           .circuit(3)
           .duration(2560)
@@ -772,7 +772,7 @@ ServerEvents.recipes(event => {
 
         gt.concrete_mixer(`dark_concrete_solid_${recipe.id}`)
           .itemInputs(recipe.inputs)
-          .inputFluids('minecraft:water 36000')
+          .inputFluids('minecraft:water 8000')
           .itemOutputs('64x gtceu:dark_concrete')
           .circuit(4)
           .duration(2560)
@@ -780,8 +780,8 @@ ServerEvents.recipes(event => {
 
         gt.concrete_mixer(`liquid_concrete_${recipe.id}`)
           .itemInputs(recipe.inputs)
-          .inputFluids('minecraft:water 36000')
-          .outputFluids('gtceu:concrete 82944')
+          .inputFluids('minecraft:water 8000')
+          .outputFluids('gtceu:concrete 9216')
           .circuit(2)
           .duration(2560)
           .EUt(7)
@@ -790,7 +790,7 @@ ServerEvents.recipes(event => {
 
           gt.concrete_mixer(`${color}_concrete_${recipe.id}`)
               .itemInputs(recipe.inputs)
-              .inputFluids('minecraft:water 36000', `gtceu:${color}_dye 576`)
+              .inputFluids('minecraft:water 1000', `gtceu:${color}_dye 576`)
               .itemOutputs(`64x minecraft:${color}_concrete`)
               .circuit(1)
               .duration(2560)
