@@ -4,7 +4,7 @@
     "gtceu.greenhouse_flowers": "Gewächshaus-Blumen",
     "gtceu.greenhouse_crops": "Gewächshaus-Feldfrüchte",
     "gtceu.inscription": "ME-Beschriftung",
-    "block.gtceu.inscription_matrix": "Beschriftungsmatrix",
+    "block.astrogreg.inscription_matrix": "ME Beschriftungsmatrix",
     "block.gtceu.conservatory": "Wintergarten",
     "block.gtceu.runic_engraver": "Runengravierer",
     "gtceu.rune_inscription": "Runengravur",

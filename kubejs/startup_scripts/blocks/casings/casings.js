@@ -1,18 +1,5 @@
 StartupEvents.registry('block', event => {
 
-    event.create('astrogreg:futura_alloy_casing')
-        .translationKey('block.astrogreg.futura_alloy_casing')
-        .hardness(6)
-        .resistance(3)
-        .soundType('metal')
-        .requiresTool(true)
-        .mapColor('terracotta_magenta')
-        .tagBlock('mineable/pickaxe_or_wrench')
-        .tagBlock('minecraft:needs_iron_tool')
-        .textureAll('kubejs:block/casings/futura_assembler_casing')
-		.fullBlock(true)
-		.opaque(true)
-
     event.create('astrogreg:livingbricks')
         .translationKey('block.astrogreg.livingbricks')
         .hardness(0.8)

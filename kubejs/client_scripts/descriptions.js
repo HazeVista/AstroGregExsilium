@@ -315,7 +315,7 @@ ItemEvents.tooltip(event => {
         ['industrial_wiremill'], ['industrial_macerator'],
         ['industrial_fluid_solidifier'], ['kinetic_steam_engine'],
         ['faraday_electromagnetic_generator'], ['kinetic_combustion_engine'],
-        ['large_kinetic_mixer']
+        ['large_kinetic_mixer'], ['inscription_matrix']
     ]
 
     ageControllers.forEach(([name, tooltip]) => { 
@@ -348,7 +348,7 @@ ItemEvents.tooltip(event => {
         ['pyrolyse_oven'], ['cracker'], ['data_bank'], ['multi_smelter'], ['alloy_blast_smelter'], 
         ['electric_blast_furnace'], ['primitive_blast_furnace'], ['bronze_multiblock_tank'], 
         ['steel_multiblock_tank'], ['wooden_multiblock_tank'], ['vacuum_freezer'],
-        ['power_substation'], ['inscription_matrix'], ['implosion_compressor']
+        ['power_substation'], ['implosion_compressor']
     ]
 
     controllers.forEach(([name, tooltip]) => {

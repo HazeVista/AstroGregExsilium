@@ -64,7 +64,7 @@ ServerEvents.recipes(event => {
     
     
     //#region inscription matrix & cells
-    event.recipes.gtceu.shaped('gtceu:inscription_matrix', [
+    event.recipes.gtceu.shaped('astrogreg:inscription_matrix', [
         'ADA', 
         'CBC', 
         'AEA'
@@ -306,9 +306,37 @@ ServerEvents.recipes(event => {
 
 
     //#region basic components
-    event.shaped('ae2:annihilation_core', ['ABC'], { A: 'gtceu:silicon_dioxide_dust', B: 'ae2:fluix_dust', C: 'ae2:logic_processor' })
-    event.shaped('ae2:controller', ['ABA', 'BCB', 'ABA'], { A: 'astrogreg:futura_alloy_plate', B: 'ae2:fluix_crystal', C: 'astrogreg:futura_alloy_frame' })
-    event.shaped('ae2:energy_acceptor', ['ABA', 'BCB', 'ABA'], { A: 'astrogreg:futura_alloy_plate', B: 'ae2:quartz_glass', C: 'astrogreg:futura_alloy_frame' })
+    gt.shaped('ae2:annihilation_core', [
+        'ABC'
+    ], { 
+        A: 'gtceu:silicon_dioxide_dust',
+        B: 'ae2:fluix_dust', 
+        C: 'ae2:logic_processor' 
+    })
+    .addMaterialInfo()
+
+    gt.shaped('2x ae2:controller', [
+        'ADA', 
+        'BCB', 
+        'ABA'
+    ], { 
+        A: 'astrogreg:futura_alloy_plate', 
+        B: 'ae2:fluix_crystal', 
+        C: 'astrogreg:futura_alloy_frame',
+        D: '#gtceu:circuits/hv'
+    })
+    .addMaterialInfo()
+
+    gt.shaped('ae2:energy_acceptor', [
+        'ABA', 
+        'BCB', 
+        'ABA'
+    ], { 
+        A: 'astrogreg:futura_alloy_plate', 
+        B: 'ae2:quartz_glass', 
+        C: 'astrogreg:futura_alloy_frame' 
+    })
+    .addMaterialInfo()
     // #endregion
 
 

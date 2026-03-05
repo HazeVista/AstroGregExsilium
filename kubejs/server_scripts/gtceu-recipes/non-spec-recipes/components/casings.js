@@ -5,7 +5,6 @@ ServerEvents.recipes(event => {
     //#region solid casings
     // frame, plate, output casing (and amount), recipe id
     const ageCasings = [
-        ['astrogreg:futura_alloy_frame', 'astrogreg:futura_alloy_plate', '2x astrogreg:futura_alloy_casing', 'futura_casing'],
         ['astrogreg:livingbricks', 'gtbotania:manasteel_plate', '2x astrogreg:manasteel_brick_machine_casing', 'manasteel_brick_casing'],
         ['gtbotania:terrasteel_frame', 'gtbotania:terrasteel_plate', '2x astrogreg:solid_terrasteel_machine_casing', 'solid_terrasteel_casing'],
         ['gtceu:steel_turbine_casing', 'gtbotania:elementium_plate', '2x astrogreg:machine_casing_turbine_alfsteel', 'alfsteel_turbine_casing'],
@@ -278,5 +277,14 @@ ServerEvents.recipes(event => {
         .circuit(6)
         .EUt(16)
         .addMaterialInfo(true)
+
+    gt.assembler('computer_housing_futura')
+        .itemInputs('gtceu:stainless_steel_frame', 'ae2:controller', '16x gtceu:fine_annealed_copper_wire',
+            '8x gtceu:fine_cobalt_wire', 'gtceu:kanthal_single_wire')
+        .itemOutputs('astrogreg:futura_computer_housing')
+        .duration(100)
+        .EUt(120)
+        .addMaterialInfo(true)
     //#endregion
+    
 })
