@@ -189,7 +189,11 @@ ServerEvents.recipes(event => {
 
     //#region assembler matrix
     for (const type of ['wall', 'frame', 'glass']) {
-        gt.shaped(`2x expatternprovider:assembler_matrix_${type}`, ['BCB', 'CAC', 'BCB'], {
+        gt.shaped(`2x expatternprovider:assembler_matrix_${type}`, [
+            'BCB', 
+            'CAC', 
+            'BCB'
+        ], {
             A: 'astrogreg:futura_alloy_frame',
             B: type == 'wall' ? 'gtceu:certus_quartz_plate' : type == 'frame' ? 'astrogreg:futura_alloy_plate' : 'gtceu:glass_plate',
             C: '#ae2:smart_cable'
@@ -202,7 +206,11 @@ ServerEvents.recipes(event => {
     
     //#region upgrade cards
     for (const type of ['basic', 'advanced']) {
-        gt.shaped(`2x ae2:${type}_card`, ['AAC', 'BAC', 'AA '], {
+        gt.shaped(`2x ae2:${type}_card`, [
+            'AAC', 
+            'BAC', 
+            'AA '
+        ], {
             A: 'gtceu:iron_plate',
             B: 'ae2:calculation_processor',
             C: type == 'basic' ? 'gtceu:gold_bolt' : 'gtceu:diamond_bolt'
@@ -213,7 +221,8 @@ ServerEvents.recipes(event => {
     for (const [output, component] of [
         ['ae2wtlib:magnet_card', 'gtceu:lv_item_magnet'],
         ['ae2:wireless_booster', 'gtceu:hv_emitter'],
-        ['ae2:capacity_card', 'ae2:charged_certus_quartz_crystal']
+        ['ae2:capacity_card', 'ae2:charged_certus_quartz_crystal'],
+        ['ae2:speed_card', 'astrogreg:fluix_arithmetic_core']
     ]) {
         event.shapeless(output, [component, 'ae2:advanced_card'])
     }
@@ -321,7 +330,7 @@ ServerEvents.recipes(event => {
         'ABA'
     ], { 
         A: 'astrogreg:futura_alloy_plate', 
-        B: 'ae2:fluix_crystal', 
+        B: 'astrogreg:fluix_arithmetic_core', 
         C: 'astrogreg:futura_alloy_frame',
         D: '#gtceu:circuits/hv'
     })
@@ -538,7 +547,7 @@ ServerEvents.recipes(event => {
         'BBB'
     ], { 
         A: 'astrogreg:futura_alloy_plate', 
-        B: 'ae2:fluix_crystal', 
+        B: 'astrogreg:fluix_arithmetic_core',
         C: 'ae2:engineering_processor' 
     })
 
@@ -569,7 +578,7 @@ ServerEvents.recipes(event => {
         A: 'astrogreg:futura_alloy_rod', 
         B: 'ae2:engineering_processor', 
         C: 'ae2:energy_cell', 
-        D: 'ae2:fluix_crystal' 
+        D: 'astrogreg:fluix_arithmetic_core' 
     })
 
     event.shaped('expatternprovider:wireless_tool', [
@@ -614,8 +623,12 @@ ServerEvents.recipes(event => {
 
 
     //#region singularity
-    const explosives = [['gtceu:industrial_tnt', 'itnt'], ['4x minecraft:tnt', 'tnt'],
-                        ['2x gtceu:dynamite', 'dynamite'], ['8x gtceu:powderbarrel', 'powderbar']]
+    const explosives = [
+        ['gtceu:industrial_tnt', 'itnt'], 
+        ['4x minecraft:tnt', 'tnt'],
+        ['2x gtceu:dynamite', 'dynamite'], 
+        ['8x gtceu:powderbarrel', 'powderbar']
+    ]
 
     explosives.forEach(([explosive, name]) => {
         gt.implosion_compressor(`quantum_singularity_from_${name}`)
@@ -626,4 +639,67 @@ ServerEvents.recipes(event => {
     })
     //#endregion
 
+
+
+    //#region fluix core
+    gt.electric_blast_furnace('fluix_boule')
+        .itemInputs('32x gtceu:silicon_dust', '8x astrogreg:fluix_dust', 'gtceu:small_gallum_arsenide_dust')
+        .inputFluids('gtceu:nitrogen 8000')
+        .itemOutputs('astrogreg:fluix_boule')
+        .blastFurnaceTemp(2222)
+        .duration(6000)
+        .EUt(480)
+        .addMaterialInfo(true)
+
+    gt.cutter('fluix_wafer')
+        .itemInputs('astrogreg:fluix_boule')
+        .itemOutputs('32x astrogreg:fluix_wafer')
+        .duration(1800)
+        .EUt(120)
+        .addMaterialInfo(true)
+
+    gt.laser_engraver('ae_wafer')
+        .notConsumable('#forge:lenses/purple')
+        .itemInputs('astrogreg:fluix_wafer')
+        .itemOutputs('astrogreg:ae_wafer')
+        .duration(450)
+        .EUt(480)
+        .addMaterialInfo(true)
+
+    gt.cutter('ae_chip')
+        .itemInputs('astrogreg:ae_wafer')
+        .itemOutputs('4x astrogreg:ae_chip')
+        .duration(200)
+        .EUt(120)
+        .addMaterialInfo(true)
+
+    gt.circuit_assembler('arithmetic_core_0')
+        .itemInputs('gtceu:plastic_printed_circuit_board', '2x astrogreg:ae_chip', '4x gtceu:fine_copper_wire', '4x astrogreg:futura_alloy_bolt')
+        .inputFluids('gtceu:soldering_alloy 36')
+        .itemOutputs('4x astrogreg:fluix_arithmetic_core')
+        .duration(200)
+        .EUt(60)
+
+    gt.circuit_assembler('arithmetic_core_1')
+        .itemInputs('gtceu:epoxy_printed_circuit_board', '2x astrogreg:ae_chip', '4x gtceu:fine_gold_wire', '8x astrogreg:futura_alloy_bolt')
+        .inputFluids('gtceu:soldering_alloy 72')
+        .itemOutputs('8x astrogreg:fluix_arithmetic_core')
+        .duration(300)
+        .EUt(60)
+
+    gt.circuit_assembler('arithmetic_core_2')
+        .itemInputs('gtceu:fiber_reinforced_printed_circuit_board', '2x astrogreg:ae_chip', '4x gtceu:fine_aluminium_wire', '16x astrogreg:futura_alloy_bolt')
+        .inputFluids('gtceu:soldering_alloy 144')
+        .itemOutputs('16x astrogreg:fluix_arithmetic_core')
+        .duration(400)
+        .EUt(60)
+
+    gt.circuit_assembler('arithmetic_core_3')
+        .itemInputs('gtceu:multilayer_fiber_reinforced_printed_circuit_board', '2x astrogreg:ae_chip', '4x gtceu:fine_platinum_wire', '32x astrogreg:futura_alloy_bolt')
+        .inputFluids('gtceu:soldering_alloy 288')
+        .itemOutputs('32x astrogreg:fluix_arithmetic_core')
+        .duration(500)
+        .EUt(60)
+    //#endregion
+    
 })
