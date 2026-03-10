@@ -17,20 +17,22 @@ StartupEvents.registry('item', event => {
     
     //#region runes
     const runes = [
-    'air', 'fire', 'water', 'earth',
-    'spring', 'summer', 'autumn', 'winter',
-    'mana', 'lust', 'gluttony', 'greed',
-    'sloth', 'wrath', 'envy', 'pride',
-    'energy', 'space', 'life', 'mercury', 
-    'venus', 'gaia', 'mars', 'ceres',
-    'jupiter', 'saturn', 'uranus', 
-    'neptune', 'gregorious'
+        'air', 'fire', 'water', 'earth',
+        'spring', 'summer', 'autumn', 'winter',
+        'mana', 'lust', 'gluttony', 'greed',
+        'sloth', 'wrath', 'envy', 'pride',
+        'energy', 'space', 'life', 'mercury', 
+        'venus', 'gaia', 'mars', 'ceres',
+        'jupiter', 'saturn', 'uranus', 
+        'neptune', 'gregorious'
     ]
 
     runes.forEach(rune => {
+
     event.create(`botania:${rune}_rune`)
         .translationKey(`item.astrogreg.${rune}_rune`)
-        .texture(`kubejs:item/botania/rune_${rune}`);
+        .texture(`kubejs:item/botania/rune_${rune}`)
+        
     })
     //#endregion
 
