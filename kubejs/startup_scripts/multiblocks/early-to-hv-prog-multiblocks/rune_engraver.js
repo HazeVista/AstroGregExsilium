@@ -1,4 +1,5 @@
 GTCEuStartupEvents.registry('gtceu:machine', event => {
+
     event.create('runic_engraver', 'multiblock')
         .rotationState(RotationState.NON_Y_AXIS)
         .recipeTypes([GTRecipeTypes.get('rune_inscription')])
@@ -19,7 +20,6 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
             .where('@', Predicates.controller(Predicates.blocks(definition.get())))
         .build()
     )
-
     .workableCasingModel(
             "astrogreg:block/generators/machine_casing_manasteel_plated_bricks",
             "astrogreg:block/multiblock/rune_engraver"

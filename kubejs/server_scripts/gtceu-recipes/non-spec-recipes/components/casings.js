@@ -25,6 +25,8 @@ ServerEvents.recipes(event => {
         ['gtceu:ultimet_frame', 'gtceu:ultimet_plate', '2x astrogreg:industrial_ultimet_casing', 'ultimet_machine_casing'],
         ['gtceu:rose_gold_frame', 'gtceu:rose_gold_plate', '2x astrogreg:industrial_rose_gold_casing', 'rose_gold_machine_casing'],
         ['gtceu:stainless_steel_frame', 'gtceu:carbon_fiber_plate', '2x astrogreg:industrial_carbon_fiber_casing', 'carbon_fiber_machine_casing'],
+        ['gtceu:steel_frame', 'astrogreg:etrium_single_cable', '2x astrogreg:steel_control_casing', 'steel_control_casing'],
+        ['gtceu:tungsten_steel_frame', 'astrogreg:vesnium_single_cable', '2x astrogreg:tungstensteel_control_casing', 'tungstensteel_control_casing']
     ]
 
     ageCasings.forEach((ageCasing) => {

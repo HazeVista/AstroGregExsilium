@@ -79,6 +79,7 @@ ServerEvents.recipes(event => {
     event.replaceInput({ id: 'minecraft:item_frame'}, 'minecraft:stick', '#forge:rods/wooden')
     event.replaceInput({ input: 'create:electron_tube' }, 'create:electron_tube', '#gtceu:circuits/ulv')
     event.replaceInput({ output: 'botania:mana_bomb' }, 'minecraft:tnt', 'gtceu:industrial_tnt')
+    event.replaceInput({ output: 'create:crafting_blueprint' }, 'minecraft:painting', 'minecraft:item_frame')
     // event.replaceInput({ input: '' }, '', '')
 
     const mortarMetals = ['wrought_iron', 'flint', 'iron', 'bronze', 'steel', 'cobalt_brass', 'damascus_steel', 'invar']

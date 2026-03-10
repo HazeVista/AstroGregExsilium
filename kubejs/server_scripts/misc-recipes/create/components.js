@@ -354,8 +354,8 @@ ServerEvents.recipes(event => {
         'BCB',
         'ABA'
     ], {
-        A: 'minecraft:stone',
-        B: 'minecraft:smooth_stone',
+        A: '#forge:stone',
+        B: '#forge:smooth_stone',
         C: '#create:gearboxes'
     })
     .addMaterialInfo()

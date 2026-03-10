@@ -176,7 +176,10 @@ ServerEvents.tags('item', event => {
 
         'forge:pies': 
             ['minecraft:pumpkin_pie', 'delightful:salmonberry_pie', 'farmersdelight:apple_pie', 
-                'farmersdelight:chocolate_pie', 'farmersdelight:sweet_berry_cheesecake']     
+                'farmersdelight:chocolate_pie', 'farmersdelight:sweet_berry_cheesecake'],     
+
+        'forge:smooth_stone':
+            ['minecraft:smooth_stone']
     }
 
     //#endregion

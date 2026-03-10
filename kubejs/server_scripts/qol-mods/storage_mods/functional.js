@@ -68,7 +68,7 @@ ServerEvents.recipes(event => {
         'CBC'
     ], {
         A: 'gtceu:lv_emitter',
-        B: 'minecraft:smooth_stone',
+        B: '#forge:smooth_stone',
         C: 'gtceu:iron_plate'
     })
 

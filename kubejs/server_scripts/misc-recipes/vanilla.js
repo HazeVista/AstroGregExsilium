@@ -35,7 +35,7 @@ ServerEvents.recipes(event => {
             'BBC',
             'AAA'
         ], {
-            A: 'minecraft:stone',
+            A: '#forge:stone',
             B: 'minecraft:redstone',
             C: 'minecraft:ender_pearl',
         })
@@ -115,6 +115,15 @@ ServerEvents.recipes(event => {
         D: 'minecraft:tripwire_hook'
     })
 
+    event.shaped('minecraft:stonecutter', [
+        'ABA',
+        'CCC'
+    ], {
+        A: '#minecraft:planks',
+        B: 'gtceu:iron_buzzsaw_blade',
+        C: '#forge:smooth_stone'
+    })
+
     event.recipes.gtceu.assembler('crossbow')
         .itemInputs('2x minecraft:string', '3x gtceu:treated_wood_rod', 'minecraft:tripwire_hook', 'gtceu:iron_ring')
         .itemOutputs('minecraft:crossbow')
@@ -152,6 +161,8 @@ ServerEvents.recipes(event => {
 
     event.shapeless('minecraft:coarse_dirt', ['minecraft:dirt', '#forge:gravel'])
     //#endregion
+
+
 
     //#region armor
     const armorTypes = [['minecraft:golden', 'gtceu:gold_plate'], 
