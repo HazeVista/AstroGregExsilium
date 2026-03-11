@@ -38,6 +38,7 @@ ServerEvents.recipes(event => {
     //         .duration(900)
     //         .EUt(1920)
     //     )
+    //     .addMaterialInfo(true)
     
     gt.deionization('deionized_water')
         .itemInputs('astrogreg:filter_cartridge')

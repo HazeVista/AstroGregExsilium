@@ -15,8 +15,8 @@ ServerEvents.recipes(event => {
     })
     .addMaterialInfo()
 
-    event.remove({id: 'gtceu:assembly_line/pterb'})
-    event.remove({id: 'gtceu:research_station/1x_gtceu_active_transformer'})
+    event.remove({ id: 'gtceu:assembly_line/pterb' })
+    event.remove({ id: 'gtceu:research_station/1x_gtceu_active_transformer' })
 
     gt.assembly_line('pterb_machine')
         .itemInputs('gtceu:active_transformer')
@@ -39,6 +39,31 @@ ServerEvents.recipes(event => {
             .researchStack("gtceu:active_transformer")
             .duration(1800)
             .EUt(1920)
+        )
+
+    event.remove({ id: 'gtceu:research_station/1x_gtceu_crystal_processor_computer' })
+    event.remove({ id: 'gtceu:assembly_line/crystal_mainframe_uv' })
+
+    gt.assembly_line('uv_crystal_mainframe')
+        .itemInputs('gtceu:hsse_frame')
+        .itemInputs('2x gtceu:crystal_processor_computer')
+        .itemInputs('32x gtceu:ram_chip')
+        .itemInputs('2x gtceu:hpic_chip')
+        .itemInputs('8x gtceu:niobium_titanium_single_wire')
+        .itemInputs('8x gtceu:advanced_smd_inductor')
+        .itemInputs('16x gtceu:advanced_smd_capacitor')
+        .itemInputs('8x gtceu:advanced_smd_inductor')
+        .inputFluids('gtceu:soldering_alloy 1440')
+        .itemOutputs('gtceu:crystal_processor_mainframe')
+        .duration(800)
+        .EUt(30720)
+        .cleanroom(CleanroomType.CLEANROOM)
+        .stationResearch(
+            researchRecipeBuilder => researchRecipeBuilder
+                .researchStack(Item.of(`gtceu:crystal_processor_computer`))
+                .dataStack('gtceu:data_orb')
+                .CWUt(16, 64000)
+                .EUt(30720)
         )
     //#endregion    
 

@@ -67,6 +67,7 @@ ServerEvents.recipes(event => {
         .itemOutputs('astrogreg:solar_cell_enriched_naquadah')
         .duration(100)
         .EUt(30720)
+        .cleanroom(CleanroomType.CLEANROOM)
         .stationResearch(
             researchRecipeBuilder => researchRecipeBuilder
                 .researchStack(Item.of(`astrogreg:solar_cell_vesnium`))

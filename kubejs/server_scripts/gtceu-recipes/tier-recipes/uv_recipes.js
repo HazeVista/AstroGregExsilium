@@ -2,6 +2,61 @@ ServerEvents.recipes(event => {
 
     const gt = event.recipes.gtceu
 
+    //#region retier
+    event.remove({ id: 'gtceu:research_station/1x_gtceu_wetware_processor_assembly' })
+    event.remove({ id: 'gtceu:assembly_line/wetware_super_computer_uv' })
+    event.remove({ id: 'gtceu:research_station/1x_gtceu_wetware_processor_mainframe' })
+    event.remove({ id: 'gtceu:assembly_line/wetware_mainframe_uhv' })
+
+    gt.assembly_line('uv_wetware_super_computer')
+        .itemInputs('gtceu:wetware_printed_circuit_board')
+        .itemInputs('2x gtceu:wetware_processor_assembly')
+        .itemInputs('8x gtceu:advanced_smd_diode')
+        .itemInputs('16x gtceu:nor_memory_chip')
+        .itemInputs('32x gtceu:ram_chip')
+        .itemInputs('24x gtceu:fine_yttrium_barium_cuprate_wire')
+        .itemInputs('32x gtceu:polybenzimidazole_foil')
+        .itemInputs('4x gtceu:europium_plate')
+        .inputFluids('gtceu:soldering_alloy 1152')
+        .itemOutputs('gtceu:wetware_processor_computer')
+        .duration(400)
+        .EUt(38400)
+        .cleanroom(CleanroomType.CLEANROOM)
+        .stationResearch(
+            researchRecipeBuilder => researchRecipeBuilder
+                .researchStack(Item.of(`gtceu:wetware_processor_assembly`))
+                .dataStack('gtceu:data_orb')
+                .CWUt(16, 64000)
+                .EUt(30720)
+        )
+        
+    gt.assembly_line('uhv_wetware_mainframe')
+        .itemInputs('gtceu:tritanium_frame')
+        .itemInputs('gtceu:wetware_processor_computer')
+        .itemInputs('32x gtceu:advanced_smd_diode')
+        .itemInputs('32x gtceu:advanced_smd_capacitor')
+        .itemInputs('32x gtceu:advanced_smd_transistor')
+        .itemInputs('32x gtceu:advanced_smd_resistor')
+        .itemInputs('32x gtceu:advanced_smd_inductor')
+        .itemInputs('64x astrogreg:polyamide_imide_foil')
+        .itemInputs('32x gtceu:ram_chip')
+        .itemInputs('16x gtceu:enriched_naquadah_trinium_europium_duranide_double_wire')
+        .itemInputs('8x gtceu:europium_plate')
+        .inputFluids('gtceu:soldering_alloy 2880')
+        .inputFluids('astrogreg:polyamide_imide 576')
+        .itemOutputs('gtceu:wetware_processor_mainframe')
+        .duration(2000)
+        .EUt(300000)
+        .cleanroom(CleanroomType.CLEANROOM)
+        .stationResearch(
+            researchRecipeBuilder => researchRecipeBuilder
+                .researchStack(Item.of(`gtceu:wetware_processor_computer`))
+                .dataStack('gtceu:data_module')
+                .CWUt()
+                .EUt()
+        )
+    //#endregion
+
     //#region drilling rigs
     gt.assembly_line('fluid_drilling_rig_iv')
         .itemInputs('gtceu:uv_machine_hull')
