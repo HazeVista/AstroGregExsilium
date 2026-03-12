@@ -271,7 +271,7 @@ ServerEvents.recipes(event => {
         A: 'gtceu:steel_plate',
         B: 'gtceu:lv_electric_motor',
         C: 'create:shaft',
-        D: 'gtceu:magnetic_steel_rod'
+        D: 'gtceu:magnetic_iron_rod'
     })
     .addMaterialInfo()
 
@@ -288,16 +288,42 @@ ServerEvents.recipes(event => {
     .addMaterialInfo()
 
     gt.shaped('createaddition:electric_motor', [
-        'ACA',
-        'BDB',
-        'ACA'
+        'ABA',
+        'CDC',
+        'ABA'
     ], {
         A: 'gtceu:brass_plate',
         B: 'gtceu:lv_electric_motor',
         C: 'create:shaft',
-        D: 'gtceu:magnetic_steel_rod'
+        D: 'gtceu:magnetic_iron_rod'
     })
     .addMaterialInfo()
+    //#endregion
+
+
+
+    //#region voltage coils
+    event.recipes.create.mechanical_crafting('gtceu:lv_voltage_coil', [
+        ' A A ',
+        'AAAAA',
+        ' ABA ',
+        'AAAAA',
+        ' A A '
+    ], {
+        A: 'gtceu:fine_lead_wire',
+        B: 'gtceu:magnetic_iron_rod'
+    })
+    
+    event.recipes.create.mechanical_crafting('gtceu:lv_voltage_coil', [
+        ' A A ',
+        'AAAAA',
+        ' ABA ',
+        'AAAAA',
+        ' A A '
+    ], {
+        A: 'gtceu:fine_steel_wire',
+        B: 'gtceu:magnetic_iron_rod'
+    })
     //#endregion
 
 

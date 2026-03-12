@@ -738,20 +738,11 @@ ServerEvents.recipes(event => {
         'gray', 'black', 'brown', 'light_blue', 'lime', 'cyan', 'magenta', 'pink'
     ]
 
-    gt.shaped('astrogreg:kinetic_concrete_plant', [
+    gt.shaped('astrogreg:concrete_plant', [
       'EDE', 
       'ACA', 
       'ABA'
-    ], {
-        A: 'gtceu:bronze_normal_fluid_pipe',
-        B: 'gtceu:block_casting_mold',
-        C: 'create:mechanical_mixer',
-        D: '#gtceu:circuits/ulv',
-        E: 'gtceu:wrought_iron_rotor'
-    })
-    .addMaterialInfo()
-
-    gt.shaped('astrogreg:concrete_plant', ['EDE', 'ACA', 'ABA'], {
+      ], {
         A: 'gtceu:steel_normal_fluid_pipe',
         B: 'gtceu:block_casting_mold',
         C: 'gtceu:lv_mixer',
@@ -762,7 +753,7 @@ ServerEvents.recipes(event => {
 
     CONCRETE_RECIPES.forEach((recipe) => {
 
-        gt.concrete_mixer(`light_concrete_solid_${recipe.id}`)
+        gt.concrete_plant(`light_concrete_solid_${recipe.id}`)
           .itemInputs(recipe.inputs)
           .inputFluids('minecraft:water 8000')
           .itemOutputs('64x gtceu:light_concrete')
@@ -770,7 +761,7 @@ ServerEvents.recipes(event => {
           .duration(2560)
           .EUt(7)
 
-        gt.concrete_mixer(`dark_concrete_solid_${recipe.id}`)
+        gt.concrete_plant(`dark_concrete_solid_${recipe.id}`)
           .itemInputs(recipe.inputs)
           .inputFluids('minecraft:water 8000')
           .itemOutputs('64x gtceu:dark_concrete')
@@ -778,7 +769,7 @@ ServerEvents.recipes(event => {
           .duration(2560)
           .EUt(7)
 
-        gt.concrete_mixer(`liquid_concrete_${recipe.id}`)
+        gt.concrete_plant(`liquid_concrete_${recipe.id}`)
           .itemInputs(recipe.inputs)
           .inputFluids('minecraft:water 8000')
           .outputFluids('gtceu:concrete 9216')
@@ -788,7 +779,7 @@ ServerEvents.recipes(event => {
 
         DYES.forEach((color) => {
 
-          gt.concrete_mixer(`${color}_concrete_${recipe.id}`)
+          gt.concrete_plant(`${color}_concrete_${recipe.id}`)
               .itemInputs(recipe.inputs)
               .inputFluids('minecraft:water 1000', `gtceu:${color}_dye 576`)
               .itemOutputs(`64x minecraft:${color}_concrete`)

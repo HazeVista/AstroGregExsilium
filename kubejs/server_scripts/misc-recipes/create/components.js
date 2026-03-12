@@ -3,33 +3,6 @@ ServerEvents.recipes(event => {
     const gt = event.recipes.gtceu
 
     //#region shaped recipes
-    gt.shaped('astrogreg:large_kinetic_mixer', [
-        'ECE',
-        'DAD',
-        'EBE'
-    ], {
-        A: 'astrogreg:machine_casing_kinetic',
-        B: 'create:precision_mechanism',
-        C: 'create:mechanical_mixer',
-        D: 'create:cogwheel',
-        E: 'astrogreg:andesite_alloy_plate'
-    })
-    .addMaterialInfo()
-
-    gt.shaped('astrogreg:kinetic_combustion_engine', [
-        'ABA',
-        'CDC',
-        'EFE'
-    ], {
-        A: 'gtceu:hv_electric_piston',
-        B: '#gtceu:circuits/ev',
-        C: 'gtceu:hv_electric_motor',
-        D: 'gtceu:hv_machine_hull',
-        E: 'create:cogwheel',
-        F: 'create:shaft'
-    })
-    .addMaterialInfo()
-
     gt.shaped('create:precision_mechanism', [
         'ADA',
         'BCB',
@@ -618,4 +591,61 @@ ServerEvents.recipes(event => {
         .duration(80)
         .EUt(7)
     //#endregion
+
+
+
+    //#region multiblock controllers
+        gt.shaped('astrogreg:large_kinetic_mixer', [
+        'ECE',
+        'DAD',
+        'EBE'
+    ], {
+        A: 'astrogreg:machine_casing_kinetic',
+        B: 'create:precision_mechanism',
+        C: 'create:mechanical_mixer',
+        D: 'create:cogwheel',
+        E: 'astrogreg:andesite_alloy_plate'
+    })
+    .addMaterialInfo()
+
+    gt.shaped('astrogreg:kinetic_combustion_engine', [
+        'ABA',
+        'CDC',
+        'EFE'
+    ], {
+        A: 'gtceu:hv_electric_piston',
+        B: '#gtceu:circuits/ev',
+        C: 'gtceu:hv_electric_motor',
+        D: 'gtceu:hv_machine_hull',
+        E: 'create:cogwheel',
+        F: 'create:shaft'
+    })
+    .addMaterialInfo()
+
+    gt.shaped('astrogreg:kinetic_concrete_plant', [
+      'EDE', 
+      'ACA', 
+      'ABA'
+    ], {
+        A: 'gtceu:bronze_normal_fluid_pipe',
+        B: 'gtceu:block_casting_mold',
+        C: 'create:mechanical_mixer',
+        D: '#gtceu:circuits/ulv',
+        E: 'gtceu:wrought_iron_rotor'
+    })
+    .addMaterialInfo()
+
+    gt.shaped('astrogreg:large_kinetic_alternator', [
+        'BAB',
+        'DCD',
+        'EAE'
+    ],{
+        A: 'create:large_cogwheel',
+        B: 'create:cogwheel',
+        C: 'astrogreg:machine_casing_kinetic',
+        D: 'gtceu:lv_electric_motor',
+        E: 'gtceu:red_alloy_double_wire'
+    })
+    .addMaterialInfo()
+    //#endregion 
 })
