@@ -386,13 +386,45 @@ ServerEvents.recipes(event => {
     .addMaterialInfo()
 
     gt.shaped('create:sticky_mechanical_piston', [
+        'C',
         'A',
         'B'
     ], {
         A: 'gtceu:sticky_resin',
-        B: 'create:mechanical_piston'
+        B: 'create:mechanical_piston',
+        C: '#forge:tools/hammers'
     })
     .addMaterialInfo()
+
+    gt.shaped('create:sticky_mechanical_piston', [
+        'C',
+        'A',
+        'B'
+    ], {
+        A: '#forge:slime_ball',
+        B: 'create:mechanical_piston',
+        C: '#forge:tools/hammers'
+    })
+    .addMaterialInfo()
+
+    gt.assembler('sticky_mech_piston_slime')
+        .itemInputs('#forge:slime_ball', 'minecraft:piston')
+        .itemOutputs('create:sticky_mechanical_piston')
+        .duration(100)
+        .EUt(16)
+
+    gt.assembler('sticky_mech_piston_resin')
+        .itemInputs('gtceu:sticky_resin', 'minecraft:piston')
+        .itemOutputs('create:sticky_mechanical_piston')
+        .duration(100)
+        .EUt(16)
+
+    gt.assembler('sticky_mech_piston_glue')
+        .itemInputs('minecraft:piston')
+        .inputFluids('gtceu:glue 100')
+        .itemOutputs('create:sticky_mechanical_piston')
+        .duration(100)
+        .EUt(16)
 
     gt.shaped('create:hose_pulley', [
         ' A ',

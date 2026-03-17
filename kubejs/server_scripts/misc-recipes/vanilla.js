@@ -17,7 +17,17 @@ ServerEvents.recipes(event => {
         A: '#forge:tools/hammers',
         B: 'gtceu:sticky_resin',
         C: 'minecraft:piston'
-    });
+    })
+
+    event.shaped('minecraft:sticky_piston', [
+        'A',
+        'B',
+        'C'
+    ], {
+        A: '#forge:tools/hammers',
+        B: '#forge:slime_ball',
+        C: 'minecraft:piston'
+    })
 
     event.shaped('minecraft:elytra', [
         'BCB',
@@ -28,7 +38,7 @@ ServerEvents.recipes(event => {
         B: 'gtceu:stainless_steel_gear',
         C: 'gtceu:long_stainless_steel_rod',
         D: '#gtceu:tools/crafting_wrenches'
-    });
+    })
         
     event.shaped('minecraft:observer', [
             'AAA',
@@ -214,4 +224,4 @@ ServerEvents.recipes(event => {
             B: '#forge:tools/hammers'
         })
     }
-});
+})

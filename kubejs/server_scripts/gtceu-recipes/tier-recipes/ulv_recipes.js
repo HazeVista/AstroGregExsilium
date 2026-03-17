@@ -728,9 +728,9 @@ ServerEvents.recipes(event => {
 
     //#region concrete
     const CONCRETE_RECIPES = [
-        { id: 'marble',  inputs: ['16x gtceu:stone_dust', '8x gtceu:marble_dust', '8x gtceu:gypsum_dust'] },
-        { id: 'calcite', inputs: ['16x gtceu:stone_dust', '8x gtceu:calcite_dust', '8x gtceu:gypsum_dust'] },
-        { id: 'clay',    inputs: ['16x gtceu:clay_dust', '48x gtceu:stone_dust'] }
+        { id: 'marble',  inputs: ['16x #forge:stone_dust', '8x gtceu:marble_dust', '8x gtceu:gypsum_dust'] },
+        { id: 'calcite', inputs: ['16x #forge:stone_dust', '8x gtceu:calcite_dust', '8x gtceu:gypsum_dust'] },
+        { id: 'clay',    inputs: ['16x #forge:clay_dust', '48x gtceu:stone_dust'] }
     ]
 
     const DYES = [
@@ -790,6 +790,44 @@ ServerEvents.recipes(event => {
         })
 
     })
+    //#endregion
+
+
+    
+    //#region kuiper slime
+    gt.shaped('astrogreg:kuiper_slime_block', [
+      'AAA',
+      'AAA',
+      'AAA'
+    ], {
+      A: 'astrogreg:kuiper_slime_ball'
+    })
+
+    gt.compressor('kuiper_slime_block')
+      .itemInputs('9x astrogreg:kuiper_slime_ball')
+      .itemOutputs('astrogreg:kuiper_slime_block')
+      .duration(300)
+      .EUt(2)
+
+    gt.centrifuge('separate_slime_ball')
+      .itemInputs('minecraft:slime_ball')
+      .itemOutputs('gtceu:small_asbestos_dust')
+      .outputFluids('gtceu:glue 100')
+      .duration(200)
+      .EUt(4)
+
+    gt.centrifuge('separate_slime_ball')
+      .itemInputs('astrogreg:kuiper_slime_ball')
+      .itemOutputs('gtceu:small_gallium_dust')
+      .outputFluids('gtceu:glue 100')
+      .duration(200)
+      .EUt(4)
+
+    gt.extractor('kuiper_slime_rubber')
+      .itemInputs('astrogreg:kuiper_slime_ball')
+      .itemOutputs('2x gtceu:raw_rubber_dust')
+      .duration(150)
+      .EUt(2)
     //#endregion
 
 })

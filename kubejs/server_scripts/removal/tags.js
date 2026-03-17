@@ -179,7 +179,10 @@ ServerEvents.tags('item', event => {
                 'farmersdelight:chocolate_pie', 'farmersdelight:sweet_berry_cheesecake'],     
 
         'forge:smooth_stone':
-            ['minecraft:smooth_stone']
+            ['minecraft:smooth_stone'],
+
+        'forge:slime_ball':
+            ['minecraft:slime_ball', 'astrogreg:kuiper_slime_ball'],
     }
 
     //#endregion

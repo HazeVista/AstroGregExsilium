@@ -1,7 +1,7 @@
 ServerEvents.tags('item', event => {
     event.add('forge:dumpling_meats', ['minecraft:brown_mushroom', '#forge:raw_beef', '#forge:raw_pork', '#forge:raw_chicken'])
     event.add('forge:mushroom_rice_vegetables', ['minecraft:carrot', 'minecraft:potato'])
-    event.add('forge:marshmallow_base', ['#forge:eggs', 'minecraft:slime_ball', 'delightful:animal_fat'])
+    event.add('forge:marshmallow_base', ['#forge:eggs', '#forge:slime_ball', 'delightful:animal_fat'])
     event.add('forge:dog_food_base', ['delightful:animal_fat', 'minecraft:rotten_flesh'])
 })
 

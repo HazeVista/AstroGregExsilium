@@ -224,7 +224,9 @@ ServerEvents.recipes(event => {
     const washingRecipes = [
         [['minecraft:clay_ball', Item.of('minecraft:iron_nugget').withChance(0.5)], 'astrogreg:asteroid_sand'],
         [['minecraft:clay_ball', Item.of('minecraft:gold_nugget').withChance(0.2)], 'minecraft:red_sand'],
-        [['minecraft:clay_ball', Item.of('minecraft:clay_ball').withChance(0.5)], 'minecraft:sand']
+        [['minecraft:clay_ball', Item.of('minecraft:clay_ball').withChance(0.5)], 'minecraft:sand'],
+        [['gtceu:small_arsenic_dust', Item.of('gtceu:tiny_arsenic_dust').withChance(0.4)], 'minecraft:slime_ball'],
+        [['gtceu:small_gallium_dust', Item.of('gtceu:tiny_gallium_dust').withChance(0.2)], 'astrogreg:kuiper_slime_ball']
     ]
     
     washingRecipes.forEach(([output, input]) => {

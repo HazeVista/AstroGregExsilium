@@ -80,6 +80,10 @@ ServerEvents.recipes(event => {
     event.replaceInput({ input: 'create:electron_tube' }, 'create:electron_tube', '#gtceu:circuits/ulv')
     event.replaceInput({ output: 'botania:mana_bomb' }, 'minecraft:tnt', 'gtceu:industrial_tnt')
     event.replaceInput({ output: 'create:crafting_blueprint' }, 'minecraft:painting', 'minecraft:item_frame')
+    event.replaceInput({ output: 'minecraft:sticky_piston' }, 'minecraft:slime_ball', '#forge:slime_ball')
+    event.replaceInput({ output: 'minecraft:lead' }, 'minecraft:slime_ball', '#forge:slime_ball')
+    event.replaceInput({ output: 'create:sticker' }, 'minecraft:slime_ball', '#forge:slime_ball')
+    event.replaceInput({ output: 'create:package_frogport' }, 'minecraft:slime_ball', '#forge:slime_ball')
     // event.replaceInput({ input: '' }, '', '')
 
     const mortarMetals = ['wrought_iron', 'flint', 'iron', 'bronze', 'steel', 'cobalt_brass', 'damascus_steel', 'invar']
