@@ -1,7 +1,6 @@
 ServerEvents.recipes(event => {
 
 const infuser = event.recipes.gtceu.mana_infusion
-const purify = event.recipes.gtceu.mana_infusion
 
 //#region no catalyst
     //output, input, mana consumed in mb, duration in ticks, EUt
@@ -120,15 +119,43 @@ const purify = event.recipes.gtceu.mana_infusion
     ];
 
     sapling_cycle.forEach(([output, input]) => {
+
         infuser(`infused_${output.replace(':', '_')}`)
             .itemInputs(input)
             .notConsumable('botania:alchemy_catalyst')
             .inputFluids('manafluid:mana 1')
             .itemOutputs(output)
             .duration(300)
-            .EUt(120);
-    })      
+            .EUt(120)
 
+    })      
+//#endregion
+
+
+
+//#region conjuration
+    //output, input, aether in mb, duration in seconds, EU
+    const conjuration_recipes = [
+        ['astrogreg:shimmerbrick', 'astrogreg:livingbrick', 5, 2.5, 1920],
+        ['astrogreg:shimmerbricks', 'astrogreg:livingbricks', 20, 10, 1920],
+        ['botania:black_lotus', 'botania:black_mystical_flower', 10, 4, 1920],
+        ['botania:black_lotus', 'minecraft:wither_rose', 10, 4, 1920],
+        ['botania:dragonstone', 'botania:mana_diamond', 10, 6, 480],
+        ['gtbotania:flawless_dragonstone_gem', 'gtbotania:flawless_mana_diamond_gem', 20, 10, 480],
+        ['gtbotania:exquisite_dragonstone_gem', 'gtbotania:exquisite_mana_diamond_gem', 40, 18, 480],
+        ['botania:dragonstone_block', 'botania:mana_diamond_block', 90, 35, 480]
+    ]
+
+    conjuration_recipes.forEach(([ output, input, fluid, duration, EUt ]) => {
+
+        infuser(`infused_${output.replace(':', '_')}`)
+            .itemInputs(input)
+            .inputFluids(`gtbotania:aether ${fluid}`)
+            .itemOutputs(output)
+            .duration(duration * 20)
+            .EUt(EUt)
+                
+    })
 //#endregion
 
 
@@ -149,7 +176,7 @@ const purify = event.recipes.gtceu.mana_infusion
     ]
 
     purification.forEach(([output, input, duration, eu]) => {
-        const recipe = purify(`pure_${output.replace(/\d+x\s*/, '').replace(':', '_')}`)
+        const recipe = infuser(`pure_${output.replace(/\d+x\s*/, '').replace(':', '_')}`)
             .itemOutputs(output)
             .notConsumable('botania:pure_daisy')
             .duration(duration)

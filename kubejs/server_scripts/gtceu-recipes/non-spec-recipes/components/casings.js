@@ -26,7 +26,8 @@ ServerEvents.recipes(event => {
         ['gtceu:rose_gold_frame', 'gtceu:rose_gold_plate', '2x astrogreg:industrial_rose_gold_casing', 'rose_gold_machine_casing'],
         ['gtceu:stainless_steel_frame', 'gtceu:carbon_fiber_plate', '2x astrogreg:industrial_carbon_fiber_casing', 'carbon_fiber_machine_casing'],
         ['gtceu:steel_frame', 'astrogreg:etrium_single_cable', '2x astrogreg:steel_control_casing', 'steel_control_casing'],
-        ['gtceu:tungsten_steel_frame', 'astrogreg:vesnium_single_cable', '2x astrogreg:tungstensteel_control_casing', 'tungstensteel_control_casing']
+        ['gtceu:tungsten_steel_frame', 'astrogreg:vesnium_single_cable', '2x astrogreg:tungstensteel_control_casing', 'tungstensteel_control_casing'],
+        ['astrogreg:shimmerbricks', 'gtbotania:gaiasteel_plate', '2x astrogreg:machine_casing_gaiasteel', 'gaiasteel_machine_casing'],
     ]
 
     ageCasings.forEach((ageCasing) => {
@@ -127,7 +128,8 @@ ServerEvents.recipes(event => {
         ['gtbotania:elementium_plate', 'gtbotania:elementium_normal_fluid_pipe', 'gtbotania:elementium_frame', 'astrogreg:alfsteel_pipe_casing'],
         ['gtceu:rhodium_plated_palladium_plate', 'gtceu:rhodium_plated_palladium_normal_fluid_pipe', 'gtceu:rhodium_plated_palladium_frame', 'astrogreg:pipe_casing_rhodium_plated_palladium'],
         ['astrogreg:polyamide_imide_plate', 'astrogreg:polyamide_imide_normal_fluid_pipe', 'astrogreg:polyamide_imide_frame', 'astrogreg:pipe_casing_super_inert_pai'],
-        ['gtceu:naquadah_alloy_plate', 'gtceu:naquadah_alloy_normal_fluid_pipe', 'gtceu:naquadah_alloy_frame', 'astrogreg:pipe_casing_invariant_naquadah_alloy']
+        ['gtceu:naquadah_alloy_plate', 'gtceu:naquadah_alloy_normal_fluid_pipe', 'gtceu:naquadah_alloy_frame', 'astrogreg:pipe_casing_invariant_naquadah_alloy'],
+        ['gtbotania:gaiasteel_plate', 'gtbotania:gaiasteel_normal_fluid_pipe', 'gtbotania:gaiasteel_frame', 'astrogreg:gaiasteel_pipe_casing']
     ]
 
     pipeCasings.forEach((casing) => {
@@ -157,6 +159,7 @@ ServerEvents.recipes(event => {
         ['alfsteel', 'gtbotania:elementium_plate', 'gtbotania:elementium_gear', 'gtbotania:elementium_frame', 'astrogreg:alfsteel_gearbox_casing'],
         ['rhodium_plated_palladium', 'gtceu:rhodium_plated_palladium_plate', 'gtceu:rhodium_plated_palladium_gear', 'gtceu:rhodium_plated_palladium_frame', 'astrogreg:gearbox_casing_rhodium_plated_palladium'],
         ['naquadah_alloy', 'gtceu:naquadah_alloy_plate', 'gtceu:naquadah_alloy_gear', 'gtceu:naquadah_alloy_frame', 'astrogreg:gearbox_casing_invariant_naquadah_alloy'],
+        ['gaiasteel', 'gtbotania:gaiasteel_plate', 'gtbotania:gaiasteel_gear', 'gtbotania:gaiasteel_frame', 'astrogreg:gaiasteel_gearbox_casing']
     ]
 
     gearboxCasings.forEach((casing) => {

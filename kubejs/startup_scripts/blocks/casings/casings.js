@@ -1,17 +1,5 @@
 StartupEvents.registry('block', event => {
 
-    event.create('astrogreg:livingbricks')
-        .translationKey('block.astrogreg.livingbricks')
-        .hardness(0.8)
-        .resistance(0.8)
-        .soundType('stone')
-        .requiresTool(true)
-        .mapColor('terracotta_light_gray')
-        .tagBlock('mineable/pickaxe')
-        .textureAll('kubejs:block/bricks/livingbricks')
-		.fullBlock(true)
-        .opaque(true)
-
     event.create('botania:managlass')
         .translationKey('block.astrogreg.managlass')
 		.hardness(5)
@@ -33,4 +21,5 @@ StartupEvents.registry('block', event => {
 		.mapColor('color_light_blue')
         .textureAll('kubejs:block/glass/alfglass')
 		.defaultTranslucent()
+
 })

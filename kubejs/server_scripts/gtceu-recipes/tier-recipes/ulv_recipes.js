@@ -493,6 +493,18 @@ ServerEvents.recipes(event => {
       .duration(98)
       .EUt(2)
 
+    gt.macerator('macerate_livingbrickalt2')
+      .itemInputs('astrogreg:shimmerbrick')
+      .itemOutputs('astrogreg:livingclay_dust')
+      .duration(98)
+      .EUt(2)
+      
+    gt.macerator('macerate_livingbrick_alt3')
+      .itemInputs('astrogreg:shimmerbricks')
+      .itemOutputs('4x astrogreg:livingclay_dust')
+      .duration(98)
+      .EUt(2)
+
     gt.compressor('compress_livingbrick')
       .itemInputs('astrogreg:livingclay_dust')
       .itemOutputs('astrogreg:compressed_livingclay')
@@ -516,6 +528,13 @@ ServerEvents.recipes(event => {
       A: 'astrogreg:livingbrick'
     })
 
+    event.shaped('astrogreg:shimmerbricks', [
+      'AA',
+      'AA'
+    ], {
+      A: 'astrogreg:shimmerbrick'
+    })
+
     event.shaped('8x astrogreg:compressed_livingclay', [
       'AAA',
       'ABA',
@@ -528,6 +547,18 @@ ServerEvents.recipes(event => {
     gt.extractor('extract_livingbricks')
       .itemInputs('astrogreg:livingbricks')
       .itemOutputs('4x astrogreg:livingbrick')
+      .duration(300)
+      .EUt(2)
+      
+    gt.extractor('extract_shimmerbricks')
+      .itemInputs('astrogreg:shimmerbricks')
+      .itemOutputs('4x astrogreg:shimmerbrick')
+      .duration(300)
+      .EUt(2)
+
+    gt.compressor('compress_shimmerbricks')
+      .itemInputs('4x astrogreg:shimmerbrick')
+      .itemOutputs('astrogreg:shimmerbricks')
       .duration(300)
       .EUt(2)
 
