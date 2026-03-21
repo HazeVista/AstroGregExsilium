@@ -27,7 +27,8 @@ ServerEvents.recipes(event => {
         ['gtceu:stainless_steel_frame', 'gtceu:carbon_fiber_plate', '2x astrogreg:industrial_carbon_fiber_casing', 'carbon_fiber_machine_casing'],
         ['gtceu:steel_frame', 'astrogreg:etrium_single_cable', '2x astrogreg:steel_control_casing', 'steel_control_casing'],
         ['gtceu:tungsten_steel_frame', 'astrogreg:vesnium_single_cable', '2x astrogreg:tungstensteel_control_casing', 'tungstensteel_control_casing'],
-        ['astrogreg:shimmerbricks', 'gtbotania:gaiasteel_plate', '2x astrogreg:machine_casing_gaiasteel', 'gaiasteel_machine_casing'],
+        ['astrogreg:shimmerbricks', 'gtbotania:gaiasteel_plate', '2x astrogreg:machine_casing_gaiasteel_bricks', 'gaiasteel_machine_casing_bricks'],
+        ['gtbotania:gaiasteel_frame', 'gtbotania:gaiasteel_plate', '2x astrogreg:machine_casing_gaiasteel', 'machine_casing_gaiasteel'],
     ]
 
     ageCasings.forEach((ageCasing) => {
@@ -89,6 +90,7 @@ ServerEvents.recipes(event => {
         ['manasteel', 'gtbotania:manasteel_plate', 'gtbotania:manasteel_rod', 'gtbotania:manasteel_frame', 'astrogreg:manasteel_firebox_casing'],
         ['terrasteel', 'gtbotania:terrasteel_plate', 'gtbotania:terrasteel_rod', 'gtbotania:terrasteel_frame', 'astrogreg:terrasteel_firebox_casing'],
         ['alfsteel', 'gtbotania:elementium_plate', 'gtbotania:elementium_rod', 'gtbotania:elementium_frame', 'astrogreg:alfsteel_firebox_casing'],
+        ['alfsteel', 'gtbotania:gaiasteel_plate', 'gtbotania:gaiasteel_rod', 'gtbotania:gaiasteel_frame', 'astrogreg:gaiasteel_firebox_casing']
     ]
 
     fireboxCasings.forEach((casing) => {

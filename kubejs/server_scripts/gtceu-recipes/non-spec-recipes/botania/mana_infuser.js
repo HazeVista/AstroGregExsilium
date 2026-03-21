@@ -136,8 +136,6 @@ const infuser = event.recipes.gtceu.mana_infusion
 //#region conjuration
     //output, input, aether in mb, duration in seconds, EU
     const conjuration_recipes = [
-        ['astrogreg:shimmerbrick', 'astrogreg:livingbrick', 5, 2.5, 1920],
-        ['astrogreg:shimmerbricks', 'astrogreg:livingbricks', 20, 10, 1920],
         ['botania:black_lotus', 'botania:black_mystical_flower', 10, 4, 1920],
         ['botania:black_lotus', 'minecraft:wither_rose', 10, 4, 1920],
         ['botania:dragonstone', 'botania:mana_diamond', 10, 6, 480],
@@ -150,6 +148,30 @@ const infuser = event.recipes.gtceu.mana_infusion
 
         infuser(`infused_${output.replace(':', '_')}`)
             .itemInputs(input)
+            .notConsumable('botania:conjuration_catalyst')
+            .inputFluids(`gtbotania:aether ${fluid}`)
+            .itemOutputs(output)
+            .duration(duration * 20)
+            .EUt(EUt)
+                
+    })
+//#endregion
+
+
+
+//#region terra catalyst
+    //output, input, gaia ichor in mb, duration in seconds, EU
+    const terra_recipes = [
+        ['botania:blacker_lotus', 'botania:black_lotus', 10, 4, 30720],
+        ['astrogreg:shimmerbrick', 'astrogreg:livingbrick', 5, 2.5, 30720],
+        ['astrogreg:shimmerbricks', 'astrogreg:livingbricks', 20, 10, 30720],
+    ]
+
+    terra_recipes.forEach(([ output, input, fluid, duration, EUt ]) => {
+
+        infuser(`infused_${output.replace(':', '_')}`)
+            .itemInputs(input)
+            .notConsumable('botanicadds:terra_catalyst')
             .inputFluids(`gtbotania:aether ${fluid}`)
             .itemOutputs(output)
             .duration(duration * 20)

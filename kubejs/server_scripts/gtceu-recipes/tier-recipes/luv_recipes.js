@@ -72,7 +72,7 @@ ServerEvents.recipes(event => {
     //#region alloys
     gt.alloy_blast_smelter('gaiasteel_argon')
         .itemInputs('8x gtbotania:elementium_dust', '6x astrogreg:vesnium_dust', '3x gtceu:duranium_dust', '2x gtceu:titanium_tungsten_carbide_dust')
-        .inputFluids('gtbotania:aether 4000')
+        .inputFluids('astrogreg:gaia_ichor 4000')
         .inputFluids('gtceu:argon 950')
         .outputFluids('gtbotania:molten_gaiasteel 2736')
         .circuit(14)
@@ -82,7 +82,7 @@ ServerEvents.recipes(event => {
         
     gt.alloy_blast_smelter('gaiasteel')
         .itemInputs('8x gtbotania:elementium_dust', '6x astrogreg:vesnium_dust', '3x gtceu:duranium_dust', '2x gtceu:titanium_tungsten_carbide_dust')
-        .inputFluids('gtbotania:aether 4000')
+        .inputFluids('astrogreg:gaia_ichor 4000')
         .outputFluids('gtbotania:molten_gaiasteel 2736')
         .circuit(4)
         .blastFurnaceTemp(6000)

@@ -8,13 +8,13 @@ const burn = event.recipes.gtceu.mana_boiler
         .inputFluids(Fluid.of('manafluid:mana', 1))
         .duration(100)
         
-    // burn('boil_lotus')
-    //     .itemInputs('botania:black_lotus')
-    //     .duration(8000)
+    burn('boil_lotus')
+        .itemInputs('botania:black_lotus')
+        .duration(800)
                 
-    // burn('boil_blacker_lotus')
-    //     .itemInputs('botania:blacker_lotus')
-    //     .duration(1000000)
+    burn('boil_blacker_lotus')
+        .itemInputs('botania:blacker_lotus')
+        .duration(8000)
 
     event.recipes.gtceu.shaped('astrogreg:manasteel_mana_large_boiler', [
         'ADA',

@@ -5,12 +5,12 @@ ServerEvents.recipes(event => {
     //#region alloys
     gt.mixer('alfsteel_dust')
         .itemInputs('3x gtceu:titanium_dust', '2x gtceu:rhodium_dust', 'gtbotania:dragonstone_dust')
-        .itemOutputs('6x gtbotania:elementium_dust')
+        .itemOutputs('6x botania:pixie_dust')
         .duration(600)
         .EUt(1920)
 
     gt.centrifuge('alfsteel_decomp')
-        .itemInputs('6x gtbotania:elementium_dust')
+        .itemInputs('6x botania:pixie_dust')
         .itemOutputs('3x gtceu:titanium_dust', '2x gtceu:rhodium_dust', 'gtbotania:dragonstone_dust')
         .duration(600)
         .EUt(20)
