@@ -3,13 +3,19 @@ type = fancymenu_layout
 layout-meta {
   identifier = drippy_loading_overlay
   render_custom_elements_behind_vanilla = false
-  last_edited_time = 1761491954280
+  last_edited_time = 1774379360236
   is_enabled = true
   randommode = false
   randomgroup = 1
   randomonlyfirsttime = false
   layout_index = 0
-  [loading_requirement_container_meta:79720f60-89a5-4324-b51f-bf900021048a-1761491929570] = [groups:][instances:]
+  [loading_requirement_container_meta:2092a9aa-88c2-475b-a5f1-20defb9f6bf8-1774379241636] = [groups:][instances:]
+}
+
+menu_background {
+  panorama_name = kuiper
+  instance_identifier = bcafea23-0a2d-4feb-8458-9789bdf7eade-1774379247956
+  background_type = panorama
 }
 
 customization {
@@ -29,6 +35,55 @@ scroll_list_customization {
 }
 
 layout_action_executable_blocks {
+}
+
+element {
+  source = [source:local]/config/fancymenu/assets/age_title.png
+  repeat_texture = false
+  nine_slice_texture = false
+  nine_slice_texture_border_x = 5
+  nine_slice_texture_border_y = 5
+  image_tint = #FFFFFF
+  restart_animated_on_menu_load = false
+  element_type = image
+  instance_identifier = 678df19c-1446-4c29-bf5f-eee7dc3495eb-1774379260530
+  appearance_delay = no_delay
+  appearance_delay_seconds = 1.0
+  fade_in_v2 = no_fading
+  fade_in_speed = 1.0
+  fade_out = no_fading
+  fade_out_speed = 1.0
+  base_opacity = 1.0
+  auto_sizing = false
+  auto_sizing_base_screen_width = 1920
+  auto_sizing_base_screen_height = 1173
+  sticky_anchor = false
+  anchor_point = mid-centered
+  advanced_width = 256
+  advanced_height = 51
+  x = -130
+  y = -77
+  width = 50
+  height = 50
+  stretch_x = false
+  stretch_y = false
+  stay_on_screen = true
+  element_loading_requirement_container_identifier = 313403fd-1bfc-4a4d-ba4f-dad05d1f93ad-1774379260530
+  [loading_requirement_container_meta:313403fd-1bfc-4a4d-ba4f-dad05d1f93ad-1774379260530] = [groups:][instances:]
+  enable_parallax = false
+  parallax_intensity_v2 = 0.5
+  invert_parallax = false
+  animated_offset_x = 0
+  animated_offset_y = 0
+  load_once_per_session = false
+  in_editor_color = #FFC800FF
+  layer_hidden_in_editor = false
+  rotation_degrees = 0.0
+  advanced_rotation_mode = false
+  vertical_tilt_degrees = 0.0
+  advanced_vertical_tilt_mode = false
+  horizontal_tilt_degrees = 0.0
+  advanced_horizontal_tilt_mode = false
 }
 
 vanilla_button {
@@ -63,13 +118,13 @@ vanilla_button {
   fade_out_speed = 1.0
   base_opacity = 1.0
   auto_sizing = false
-  auto_sizing_base_screen_width = 1366
-  auto_sizing_base_screen_height = 698
+  auto_sizing_base_screen_width = 1920
+  auto_sizing_base_screen_height = 1173
   sticky_anchor = false
   anchor_point = vanilla
-  x = 167
-  y = 285
-  width = 348
+  x = 125
+  y = 320
+  width = 390
   height = 10
   stretch_x = false
   stretch_y = false
@@ -84,6 +139,12 @@ vanilla_button {
   load_once_per_session = false
   in_editor_color = #FFC800FF
   layer_hidden_in_editor = false
+  rotation_degrees = 0.0
+  advanced_rotation_mode = false
+  vertical_tilt_degrees = 0.0
+  advanced_vertical_tilt_mode = false
+  horizontal_tilt_degrees = 0.0
+  advanced_horizontal_tilt_mode = false
   is_hidden = false
   automated_button_clicks = 0
 }
@@ -124,10 +185,10 @@ vanilla_button {
   auto_sizing_base_screen_height = 698
   sticky_anchor = false
   anchor_point = vanilla
-  x = 167
-  y = 131
-  width = 348
-  height = 86
+  x = 125
+  y = 147
+  width = 390
+  height = 96
   stretch_x = false
   stretch_y = false
   stay_on_screen = true
@@ -141,6 +202,12 @@ vanilla_button {
   load_once_per_session = false
   in_editor_color = #FFC800FF
   layer_hidden_in_editor = false
+  rotation_degrees = 0.0
+  advanced_rotation_mode = false
+  vertical_tilt_degrees = 0.0
+  advanced_vertical_tilt_mode = false
+  horizontal_tilt_degrees = 0.0
+  advanced_horizontal_tilt_mode = false
   is_hidden = true
   automated_button_clicks = 0
 }
