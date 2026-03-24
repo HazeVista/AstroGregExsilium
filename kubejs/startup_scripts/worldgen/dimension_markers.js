@@ -11,8 +11,8 @@ GTCEuStartupEvents.registry('gtceu:dimension_marker', event => {
         { id: 'saturn', icon: 'ad_extendra:saturn_stone', name: 'Saturn', namespace: 'ad_extendra' },
         { id: 'uranus', icon: 'ad_extendra:uranus_stone', name: 'Uranus', namespace: 'ad_extendra' },
         { id: 'neptune', icon: 'ad_extendra:neptune_stone', name: 'Neptune', namespace: 'ad_extendra' },
-        { id: 'pluto', icon: 'ad_extendra:pluto_stone', name: 'Pluto', namespace: 'ad_extendra' }
-    ];
+        { id: 'pluto', icon: 'astrogreg:pluto', name: 'Pluto', namespace: 'ad_extendra' }
+    ]
 
     celestialBodies.forEach(body => {
         event.create(`${body.namespace}:${body.id}`)

@@ -15,6 +15,24 @@ ServerEvents.recipes(event => {
         E: '#gtceu:circuits/iv'
     })
     .addMaterialInfo()
+
+    // gt.assembly_line('large_charging_station')
+    //     .itemInputs('')    
+    //     .itemInputs('')    
+    //     .itemInputs('')    
+    //     .itemInputs('')    
+    //     .itemInputs('')    
+    //     .itemInputs('')    
+    //     .inputFluids('')
+    //     .inputFluids('')    
+    //     .itemOutputs('astrogreg:large_charging_station')
+    // ["scannerResearch(java.util.function.UnaryOperator)"]
+    //     (b => b
+    //         .researchStack("gtmutils:iv_auto_charger_4x")
+    //         .duration(600)
+    //         .EUt(1920)
+    //     )
+    //     .addMaterialInfo(true)
     //#endregion 
 
 })

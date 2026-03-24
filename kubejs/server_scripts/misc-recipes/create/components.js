@@ -627,7 +627,7 @@ ServerEvents.recipes(event => {
 
 
     //#region multiblock controllers
-        gt.shaped('astrogreg:large_kinetic_mixer', [
+    gt.shaped('astrogreg:large_kinetic_mixer', [
         'ECE',
         'DAD',
         'EBE'
@@ -679,5 +679,20 @@ ServerEvents.recipes(event => {
         E: 'gtceu:red_alloy_double_wire'
     })
     .addMaterialInfo()
+
+    event.recipes.create.mechanical_crafting('astrogreg:large_kinetic_drill', [
+        ' AAA ',
+        'ABCBA',
+        'ADEFA',
+        'ABCBA',
+        ' AAA '
+    ], {
+        A: 'gtceu:brass_plate',
+        B: 'gtceu:wrought_iron_drill_head',
+        C: '#gtceu:circuits/ulv',
+        D: 'create:deployer',
+        E: 'create:brass_casing',
+        F: 'create:brass_funnel'
+    })
     //#endregion 
 })

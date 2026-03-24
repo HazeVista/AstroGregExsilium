@@ -103,6 +103,33 @@ ServerEvents.recipes(event => {
         D: 'gtceu:bronze_gear'
     })
     .addMaterialInfo()
+
+    gt.shaped('astrogreg:large_steam_miner', [
+        'ACA',
+        'CDC',
+        'EBE'
+
+    ], {
+        A: '#gtceu:circuits/ulv',
+        B: 'gtceu:steel_gear',
+        C: 'gtceu:bronze_large_fluid_pipe',
+        D: 'gtceu:lp_steam_miner',
+        E: 'gtceu:bronze_gear'
+    })
+    .addMaterialInfo()
+
+    gt.shaped('astrogreg:large_steam_miner', [
+        'ACA',
+        'CDC',
+        'EBE'
+
+    ], {
+        A: '#gtceu:circuits/ulv',
+        B: 'gtceu:steel_gear',
+        C: 'gtceu:bronze_large_fluid_pipe',
+        D: 'gtceu:hp_steam_miner',
+        E: 'gtceu:bronze_gear'
+    })
     //#endregion
 
 
