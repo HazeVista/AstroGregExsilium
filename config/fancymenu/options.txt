@@ -14,7 +14,7 @@ B:advanced_customization_mode = 'false';
 
 ##[loading]
 
-S:preload_resources = '';
+S:preload_resources = '[cubic_panorama]kuiper%!source_end!%[source:local]config/fancymenu/assets/age_title.png%!source_end!%[source:local]config/fancymenu/assets/age_logo.png%!source_end!%';
 B:allow_game_intro_skip = 'true';
 S:game_intro_animation_name = '';
 B:game_intro_fade_out = 'true';
