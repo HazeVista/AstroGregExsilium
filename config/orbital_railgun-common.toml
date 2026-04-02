@@ -1,0 +1,47 @@
+
+[orbitalStrike]
+	#Maximum selection range of the orbital railgun
+	#Range: 0.0 ~ 1000000.0
+	range = 256.0
+	#Maximum block hardness the orbital strike can destroy(set to -1 to destroy all blocks)
+	#Range: -1.0 ~ 1.7976931348623157E308
+	maxBreakHardness = 50.0
+	#Cooldown of the Railgun in ticks
+	#Range: > 1800
+	cooldown = 2400
+	#Damage of the Orbital Strike
+	#Range: > 0
+	strikeDamage = 80
+	#Blocks that won't be destroyed by the orbital strike.
+	blacklistedBlocks = ["minecraft:bedrock", "minecraft:end_portal_frame", "minecraft:end_portal", "minecraft:barrier"]
+	#Whether entities are pulled towards the strike before detonation.
+	suckEntities = true
+	#Diameter in blocks used for destruction/physics (server-authoritative).
+	#Range: 1.0 ~ 256.0
+	destructionDiameter = 16.0
+	#Max blocks removed per server tick for an active strike (performance safety).
+	#Range: 1 ~ 200000
+	blocksPerTick = 2000
+	#Strike removes blocks from world max build height down to this Y (clamped to world min).
+	#Default -64 (Overworld bedrock shelf on modern versions).
+	#Range: -2048 ~ 4096
+	minDestroyY = -64
+	#If true, destroyed blocks drop items (heavier). If false, they are vaporized.
+	dropBlocks = false
+	#Toggle Debug mode
+	debugMode = false
+
+[protection]
+	#If true, the railgun respects FTB Chunks claims and cancels actions in protected areas.
+	respectClaims = true
+	#Respect Open Parties & Claims protection (if the mod is installed).
+	respectOPACClaims = true
+	#If true, the railgun can damage entities inside claims only if the shooter has permission.
+	allowEntityDamageInClaims = false
+	#If true, the railgun can break blocks inside claims only if the shooter has permission.
+	allowBlockBreakInClaims = false
+	#If true, the railgun explosions are allowed inside claims only if the shooter has permission.
+	allowExplosionsInClaims = false
+	#If true, operators (permission level >= 2) bypass claim checks.
+	opsBypassClaims = true
+
