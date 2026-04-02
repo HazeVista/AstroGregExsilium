@@ -13,7 +13,7 @@ ServerEvents.recipes(event => {
         .addMaterialInfo(true)
 
     gt.assembler('observatory_object_holder')
-        .itemInputs('gtceu:hv_input_bus', 'gtceu:mv_scanner', '2x gtceu:mv_robot_arm', '#gtceu:circuits/hv', '')
+        .itemInputs('gtceu:hv_input_bus', 'gtceu:mv_scanner', '2x gtceu:mv_robot_arm', '#gtceu:circuits/hv', '4x gtceu:copper_single_cable')
         .inputFluids('gtceu:polyethylene 144')
         .itemOutputs('astrogreg:observatory_object_holder')
         .circuit(1)
@@ -60,7 +60,7 @@ ServerEvents.recipes(event => {
     gt.assembler('industrial_astroport_soldering_alloy')
         .itemInputs('gtceu:mv_assembler', '4x gtceu:double_steel_plate', '4x gtceu:mv_robot_arm', 'gtceu:mv_electric_pump',
              'gtceu:mv_conveyor_module', 'gtceu:computer_monitor_cover', '4x gtceu:copper_single_cable')
-        .inputFluids('gtceu:soldering_alloy 1152')
+        .inputFluids('gtceu:soldering_alloy 576')
         .itemOutputs('astrogreg:industrial_astroport')
         .circuit(1)
         .duration(900)

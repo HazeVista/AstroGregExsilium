@@ -57,7 +57,7 @@ ServerEvents.tags('item', event => {
         'delightful:sinigang_cup', 'minecraft:pitcher_pod', 
         'minecraft:pitcher_plant', 'minecraft:torchflower', 
         'minecraft:torchflower_seeds', 'astrogreg:double_andesite_alloy_plate',
-        'astrogreg:double_flux_plate'
+        'astrogreg:double_flux_plate', 'exposure:interplanar_projector'
     ]
 
         //wildcard removals

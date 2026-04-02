@@ -90,7 +90,7 @@ ServerEvents.recipes(event => {
         ['manasteel', 'gtbotania:manasteel_plate', 'gtbotania:manasteel_rod', 'gtbotania:manasteel_frame', 'astrogreg:manasteel_firebox_casing'],
         ['terrasteel', 'gtbotania:terrasteel_plate', 'gtbotania:terrasteel_rod', 'gtbotania:terrasteel_frame', 'astrogreg:terrasteel_firebox_casing'],
         ['alfsteel', 'gtbotania:elementium_plate', 'gtbotania:elementium_rod', 'gtbotania:elementium_frame', 'astrogreg:alfsteel_firebox_casing'],
-        ['alfsteel', 'gtbotania:gaiasteel_plate', 'gtbotania:gaiasteel_rod', 'gtbotania:gaiasteel_frame', 'astrogreg:gaiasteel_firebox_casing']
+        ['gaiasteel', 'gtbotania:gaiasteel_plate', 'gtbotania:gaiasteel_rod', 'gtbotania:gaiasteel_frame', 'astrogreg:gaiasteel_firebox_casing']
     ]
 
     fireboxCasings.forEach((casing) => {
@@ -288,7 +288,7 @@ ServerEvents.recipes(event => {
     gt.assembler('computer_housing_futura')
         .itemInputs('gtceu:stainless_steel_frame', 'ae2:controller', '16x gtceu:fine_annealed_copper_wire',
             '8x gtceu:fine_cobalt_wire', 'gtceu:kanthal_single_wire')
-        .itemOutputs('astrogreg:futura_computer_housing')
+        .itemOutputs('2x astrogreg:futura_computer_housing')
         .duration(100)
         .EUt(120)
         .addMaterialInfo(true)

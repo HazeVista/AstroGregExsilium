@@ -88,9 +88,10 @@ ClientEvents.lang('en_us', event => {
     ])
 
     renameItems('gtceuterminal', [
-        ['multi_structure_manager', '§cAstroTek§r§e Multiblock Manager'],
+        ['multi_structure_manager', '§cAstroTek§r§6 Multiblock Manager'],
         ['schematic_interface', '§cAstroTek§r§d Schematic Interface'],
-        ['dismantler', '§cAstroTek§r§5 Dismantler']
+        ['dismantler', '§cAstroTek§r§5 Dismantler'],
+        ['energy_analyzer', '§cAstroTek§r§e Energy Analyzer']
     ])
 
     const tiers = [

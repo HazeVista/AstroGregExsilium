@@ -212,10 +212,6 @@ ItemEvents.tooltip(event => {
         { line: 1, text: 'astrogreg.paradox_processor_mainframe.tooltip' },
         { line: 2, text: 'astrogreg.circuit.uev' }
     ])
-
-    loreTooltip(event, 'astrogreg:data_disk', [
-        { line: 1, text: 'astrogreg.data_disk.tooltip' }
-    ])
     //#endregion    
 
 
@@ -299,8 +295,12 @@ ItemEvents.tooltip(event => {
         { line: 1, text: 'astrogreg.industrial_processing_core.iv' }
     ])
 
+    tipTooltip(event, 'pccard:card_programmed_circuit', [
+        { line: 1, text: 'astrogreg.pcc.tooltip' }
+    ])
+
     const ageControllers = [ 
-        ['aether_turbine'],  ['alfsteel_mana_large_boiler'], 
+        ['aether_turbine'],  ['alfsteel_mana_large_boiler'], ['large_gas_collector'],
         ['terrasteel_mana_large_boiler'],  ['manasteel_mana_large_boiler'], 
         ['coke_oven'], ['steam_blast_furnace'], ['solar_boiler_array'],
         ['large_steam_centrifuge'], ['large_steam_compressor'], 
@@ -311,14 +311,14 @@ ItemEvents.tooltip(event => {
         ['industrial_autoclave'], ['industrial_chemical_bath'],
         ['industrial_bender'], ['industrial_electrolyzer'],
         ['industrial_lathe'], ['industrial_extruder'],
-        ['industrial_mixer'], ['industrial_sifter'],
+        ['industrial_mixer'], ['industrial_sifter'], ['large_steam_miner'],
         ['industrial_wiremill'], ['industrial_macerator'],
         ['industrial_fluid_solidifier'], ['kinetic_steam_engine'],
         ['faraday_electromagnetic_generator'], ['inscription_matrix'],
         ['large_kinetic_mixer'], ['kinetic_combustion_engine'],
         ['concrete_plant'], ['kinetic_concrete_plant'],
         ['industrial_observatory'], ['industrial_astroport'],
-        ['large_kinetic_alternator']
+        ['large_kinetic_alternator'], ['large_kinetic_miner'], 
     ]
 
     ageControllers.forEach(([name, tooltip]) => { 
@@ -365,12 +365,12 @@ ItemEvents.tooltip(event => {
     })
 
     const moldTips = [
-        ['small_gear', 'Small Gears'],
-        ['tiny_pipe', 'Tiny Pipes'],
-        ['small_pipe', 'Small Pipes'],
-        ['normal_pipe', 'Normal Pipes'],
-        ['large_pipe', 'Large Pipes'],
-        ['huge_pipe', 'Huge Pipes']
+        ['small_gear', '§o§7Small Gears'],
+        ['tiny_pipe', '§o§7Tiny Pipes'],
+        ['small_pipe', '§o§7Small Pipes'],
+        ['normal_pipe', '§o§7Normal Pipes'],
+        ['large_pipe', '§o§7Large Pipes'],
+        ['huge_pipe', '§o§7Huge Pipes']
     ]
 
     moldTips.forEach(([mold, name]) => {

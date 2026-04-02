@@ -222,7 +222,9 @@ ServerEvents.recipes(event => {
         ['ae2wtlib:magnet_card', 'gtceu:lv_item_magnet'],
         ['ae2:wireless_booster', 'gtceu:hv_emitter'],
         ['ae2:capacity_card', 'ae2:charged_certus_quartz_crystal'],
-        ['ae2:speed_card', 'astrogreg:fluix_arithmetic_core']
+        ['ae2:speed_card', 'astrogreg:fluix_arithmetic_core'],
+        ['ae2insertexportcard:export_card', 'ae2:export_bus'],
+        ['ae2insertexportcard:insert_card', 'ae2:import_bus']
     ]) {
         event.shapeless(output, [component, 'ae2:advanced_card'])
     }
@@ -643,7 +645,7 @@ ServerEvents.recipes(event => {
 
     //#region fluix core
     gt.electric_blast_furnace('fluix_boule')
-        .itemInputs('32x gtceu:silicon_dust', '8x astrogreg:fluix_dust', 'gtceu:small_gallum_arsenide_dust')
+        .itemInputs('32x gtceu:silicon_dust', '8x ae2:fluix_dust', 'gtceu:small_gallium_arsenide_dust')
         .inputFluids('gtceu:nitrogen 8000')
         .itemOutputs('astrogreg:fluix_boule')
         .blastFurnaceTemp(2222)
@@ -674,7 +676,7 @@ ServerEvents.recipes(event => {
         .addMaterialInfo(true)
 
     gt.circuit_assembler('arithmetic_core_0')
-        .itemInputs('gtceu:plastic_printed_circuit_board', '2x astrogreg:ae_chip', '4x gtceu:fine_copper_wire', '4x astrogreg:futura_alloy_bolt')
+        .itemInputs('gtceu:plastic_printed_circuit_board', '2x astrogreg:ae_chip', '4x gtceu:fine_annealed_copper_wire', '4x astrogreg:futura_alloy_bolt')
         .inputFluids('gtceu:soldering_alloy 36')
         .itemOutputs('4x astrogreg:fluix_arithmetic_core')
         .duration(200)

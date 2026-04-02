@@ -137,7 +137,6 @@ const infuser = event.recipes.gtceu.mana_infusion
     //output, input, aether in mb, duration in seconds, EU
     const conjuration_recipes = [
         ['botania:black_lotus', 'botania:black_mystical_flower', 10, 4, 1920],
-        ['botania:black_lotus', 'minecraft:wither_rose', 10, 4, 1920],
         ['botania:dragonstone', 'botania:mana_diamond', 10, 6, 480],
         ['gtbotania:flawless_dragonstone_gem', 'gtbotania:flawless_mana_diamond_gem', 20, 10, 480],
         ['gtbotania:exquisite_dragonstone_gem', 'gtbotania:exquisite_mana_diamond_gem', 40, 18, 480],

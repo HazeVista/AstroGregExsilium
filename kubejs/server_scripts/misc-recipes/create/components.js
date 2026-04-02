@@ -680,7 +680,7 @@ ServerEvents.recipes(event => {
     })
     .addMaterialInfo()
 
-    event.recipes.create.mechanical_crafting('astrogreg:large_kinetic_drill', [
+    event.recipes.create.mechanical_crafting('astrogreg:large_kinetic_miner', [
         ' AAA ',
         'ABCBA',
         'ADEFA',

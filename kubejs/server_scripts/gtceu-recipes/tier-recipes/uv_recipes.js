@@ -52,8 +52,8 @@ ServerEvents.recipes(event => {
             researchRecipeBuilder => researchRecipeBuilder
                 .researchStack(Item.of(`gtceu:wetware_processor_computer`))
                 .dataStack('gtceu:data_module')
-                .CWUt()
-                .EUt()
+                .CWUt(96, 384000)
+                .EUt(491520)
         )
     //#endregion
 

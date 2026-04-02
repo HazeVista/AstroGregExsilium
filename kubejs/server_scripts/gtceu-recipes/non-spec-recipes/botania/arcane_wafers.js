@@ -10,15 +10,15 @@ ServerEvents.recipes(event => {
         ['phosphorus', 'terra_lens', 'manafluid:mana 100', 'astrogreg:mana_soc_wafer', 720, 480],
         ['naquadah', 'terra_lens', 'manafluid:mana 100', '4x astrogreg:mana_soc_wafer', 400, 1920],
         ['neutronium', 'terra_lens', 'manafluid:mana 100', '8x astrogreg:mana_soc_wafer', 160, 7680],
-        ['naquadah', 'pixie_lens', 'astrogreg:aether 100', 'astrogreg:aetherized_advanced_soc_wafer', 720, 1920],
-        ['neutronium', 'pixie_lens', 'astrogreg:aether 100', '4x astrogreg:aetherized_advanced_soc_wafer', 400, 7680],
-        ['neutronium', 'gaia_lens', 'astrogreg:aether 500', 'astrogreg:aetherized_highly_advanced_soc_wafer', 720, 7680],
+        ['naquadah', 'pixie_lens', 'gtbotania:aether 100', 'astrogreg:aetherized_advanced_soc_wafer', 720, 1920],
+        ['neutronium', 'pixie_lens', 'gtbotania:aether 100', '4x astrogreg:aetherized_advanced_soc_wafer', 400, 7680],
+        ['neutronium', 'gaia_lens', 'gtbotania:aether 500', 'astrogreg:aetherized_highly_advanced_soc_wafer', 720, 7680],
     ]
 
     wafers.forEach(([ input, lens, fluid, output, duration, EU ]) => {
 
         gt.rune_inscription(`${input}_${lens}_soc`)
-            .notConsumable(`botania${lens}`)
+            .notConsumable(`botania:${lens}`)
             .itemInputs(`gtceu:${input}_wafer`)
             .inputFluids(fluid)
             .itemOutputs(output)

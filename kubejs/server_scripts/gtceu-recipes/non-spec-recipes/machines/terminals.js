@@ -53,4 +53,17 @@ ServerEvents.recipes(event => {
         E: 'astrogreg:fine_etrium_wire'
     })
     .addMaterialInfo()
+
+    gt.shaped('gtceuterminal:energy_analyzer', [
+        'ABA',
+        'CDC',
+        'CEC'
+    ], {
+        A: 'gtceu:electrum_bolt',
+        B: 'gtceu:computer_monitor_cover',
+        C: 'gtceu:red_steel_plate',
+        D: 'gtceu:hv_sensor',
+        E: 'gtceu:fine_aluminium_wire'
+    })
+    
 })

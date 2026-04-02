@@ -758,11 +758,6 @@ ServerEvents.recipes(event => {
 
 
     //#region concrete
-    const CONCRETE_RECIPES = [
-        { id: 'marble',  inputs: ['16x #forge:stone_dust', '8x gtceu:marble_dust', '8x gtceu:gypsum_dust'] },
-        { id: 'calcite', inputs: ['16x #forge:stone_dust', '8x gtceu:calcite_dust', '8x gtceu:gypsum_dust'] },
-        { id: 'clay',    inputs: ['16x #forge:clay_dust', '48x gtceu:stone_dust'] }
-    ]
 
     const DYES = [
         'white', 'red', 'orange', 'yellow', 'green', 'blue', 'purple', 'light_gray', 
@@ -782,47 +777,60 @@ ServerEvents.recipes(event => {
     })
     .addMaterialInfo()
 
-    CONCRETE_RECIPES.forEach((recipe) => {
-
-        gt.concrete_plant(`light_concrete_solid_${recipe.id}`)
-          .itemInputs(recipe.inputs)
-          .inputFluids('minecraft:water 8000')
+    function concreteRecipes3(id, a, b, c) {
+        gt.concrete_plant('light_concrete_solid_' + id)
+          .itemInputs(a, b, c).inputFluids('minecraft:water 8000')
           .itemOutputs('64x gtceu:light_concrete')
-          .circuit(3)
-          .duration(2560)
-          .EUt(7)
+          .circuit(3).duration(2560).EUt(7)
 
-        gt.concrete_plant(`dark_concrete_solid_${recipe.id}`)
-          .itemInputs(recipe.inputs)
-          .inputFluids('minecraft:water 8000')
+        gt.concrete_plant('dark_concrete_solid_' + id)
+          .itemInputs(a, b, c).inputFluids('minecraft:water 8000')
           .itemOutputs('64x gtceu:dark_concrete')
-          .circuit(4)
-          .duration(2560)
-          .EUt(7)
+          .circuit(4).duration(2560).EUt(7)
 
-        gt.concrete_plant(`liquid_concrete_${recipe.id}`)
-          .itemInputs(recipe.inputs)
-          .inputFluids('minecraft:water 8000')
+        gt.concrete_plant('liquid_concrete_' + id)
+          .itemInputs(a, b, c).inputFluids('minecraft:water 8000')
           .outputFluids('gtceu:concrete 9216')
-          .circuit(2)
-          .duration(2560)
-          .EUt(7)
+          .circuit(2).duration(2560).EUt(7)
 
         DYES.forEach((color) => {
-
-          gt.concrete_plant(`${color}_concrete_${recipe.id}`)
-              .itemInputs(recipe.inputs)
-              .inputFluids('minecraft:water 1000', `gtceu:${color}_dye 576`)
-              .itemOutputs(`64x minecraft:${color}_concrete`)
-              .circuit(1)
-              .duration(2560)
-              .EUt(7)
-              
+            gt.concrete_plant(color + '_concrete_' + id)
+              .itemInputs(a, b, c)
+              .inputFluids('minecraft:water 1000', 'gtceu:' + color + '_dye 576')
+              .itemOutputs('64x minecraft:' + color + '_concrete')
+              .circuit(1).duration(2560).EUt(7)
         })
+    }
 
-    })
+    function concreteRecipes2(id, a, b) {
+        gt.concrete_plant('light_concrete_solid_' + id)
+          .itemInputs(a, b).inputFluids('minecraft:water 8000')
+          .itemOutputs('64x gtceu:light_concrete')
+          .circuit(3).duration(2560).EUt(7)
+
+        gt.concrete_plant('dark_concrete_solid_' + id)
+          .itemInputs(a, b).inputFluids('minecraft:water 8000')
+          .itemOutputs('64x gtceu:dark_concrete')
+          .circuit(4).duration(2560).EUt(7)
+
+        gt.concrete_plant('liquid_concrete_' + id)
+          .itemInputs(a, b).inputFluids('minecraft:water 8000')
+          .outputFluids('gtceu:concrete 9216')
+          .circuit(2).duration(2560).EUt(7)
+
+        DYES.forEach((color) => {
+            gt.concrete_plant(color + '_concrete_' + id)
+              .itemInputs(a, b)
+              .inputFluids('minecraft:water 1000', 'gtceu:' + color + '_dye 576')
+              .itemOutputs('64x minecraft:' + color + '_concrete')
+              .circuit(1).duration(2560).EUt(7)
+        })
+    }
+
+    concreteRecipes3('marble',  '16x #forge:stone_dusts', '8x gtceu:marble_dust',  '8x gtceu:gypsum_dust')
+    concreteRecipes3('calcite', '16x #forge:stone_dusts', '8x gtceu:calcite_dust', '8x gtceu:gypsum_dust')
+    concreteRecipes2('clay',    '16x gtceu:clay_dust',    '48x #forge:stone_dusts')
     //#endregion
-
 
     
     //#region kuiper slime
@@ -847,7 +855,7 @@ ServerEvents.recipes(event => {
       .duration(200)
       .EUt(4)
 
-    gt.centrifuge('separate_slime_ball')
+    gt.centrifuge('separate_kuiper_slime_ball')
       .itemInputs('astrogreg:kuiper_slime_ball')
       .itemOutputs('gtceu:small_gallium_dust')
       .outputFluids('gtceu:glue 100')

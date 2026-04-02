@@ -73,6 +73,8 @@
 
     "astrogreg.pill_casting_mold.tooltip.1": "§o§7Mold for making Pills",
     "astrogreg.pill_casting_mold.tooltip.2": "§o§7What, you couldn't just go to the doctor? - Phoenixvine",
+    "astrogreg.sleeve_extruder_mold.tooltip": "§o§7Extruder shape for making Sleeves",
+    "astrogreg.sleeve_casting_mold.tooltip": "§o§7Mold for making Sleeves",
 
     "astrogreg.basic_burner.tooltip": "§7Replaces the Blaze Burner",
 
@@ -95,6 +97,8 @@
 
     "astrogreg.magnet_block.tooltip": "A full ring of these magnets in a §bFaraday Electromagnetic Generator§r will produce %s",
     
+    "astrogreg.pcc.tooltip": "Multiblock Functionality §4Disabled§r",
+
     "item.astrogreg.lv_rocket_engine": "§7LV§r Rocket Engine",
     "item.astrogreg.mv_rocket_engine": "§bMV§r Rocket Engine",
     "item.astrogreg.hv_rocket_engine": "§6HV§r Rocket Engine",
