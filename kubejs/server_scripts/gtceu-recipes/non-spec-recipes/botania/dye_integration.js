@@ -94,4 +94,16 @@ ServerEvents.recipes(event => {
         B: '#forge:tools/mortars'
     })
 
+    gt.extractor('kuiper_slime_dye')
+        .itemInputs('astrogreg:kuiper_slime_ball')
+        .itemOutputs('minecraft:purple_dye')
+        .duration(200)
+        .EUt(2)
+
+    gt.extractor('slime_dye')
+        .itemInputs('minecraft:slime_ball')
+        .itemOutputs('minecraft:green_dye')
+        .duration(200)
+        .EUt(2)
+
 })
