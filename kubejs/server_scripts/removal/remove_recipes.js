@@ -146,7 +146,7 @@ ServerEvents.recipes(event => {
         'gtceu:forge_hammer/hammer_flux_to_plate', 'gtceu:shaped/plate_flux', 'gtceu:bender/bend_flux_to_plate', 'gtceu:shaped/stick_flux', 'gtceu:arc_furnace/arc_flux_dust', 'gtceu:smelting/smelt_dust_flux_to_ingot', 
         'gtceu:alloy_smelter/alloy_smelt_flux_dust_to_block', 'create:crafting/kinetics/super_glue', 'expatternprovider:active_formation_plane', 'expatternprovider:cobblestone_cell', 'expatternprovider:water_cell',
         'gtceu:assembler/cover_infinite_water', 'gtceu:shaped/mortar_manasteel', 'gtceu:shaped/mortar_terrasteel', 'gtceu:shaped/mortar_elementium', 'gtceu:shaped/mortar_gaiasteel', 'minecraft:sticky_piston',
-        'gtceu:shaped/sticky_piston_resin', 'create:crafting/kinetics/sticky_mechanical_piston', 
+        'gtceu:shaped/sticky_piston_resin', 'create:crafting/kinetics/sticky_mechanical_piston', 'exposure:album', 'exposure:camera', 'exposure:black_and_white_film', 'exposure:color_film'
     
     ])
     //#endregion
@@ -156,14 +156,17 @@ ServerEvents.recipes(event => {
     //#region remove type
     const toRemoveType = (['expatternprovider:cutter', 'ae2:inscriber', 'ae2:charger', 'create:crushing', 'ad_astra:alloying', 'createaddition:liquid_burning', 'create:pressing',
         'botania:orechid_ignem', 'botania:orechid', 'create:potion_mixing', 'ad_astra:compressing', 'ad_astra:cryo_freezing', 'ad_astra:nasa_workbench', 'create:deploying',
-        'create:automatic_brewing', 'powah:heat_sources', 'functionalstorage:dissolution', 'create:mystery_conversion', 'botania:mana_infusion'
+        'create:automatic_brewing', 'powah:heat_sources', 'functionalstorage:dissolution', 'create:mystery_conversion', 'botania:mana_infusion',
     ])
     //#endregion
 
 
 
     //#region remove whole mod
-    const toRemoveMod = (['createoreexcavation', 'scannable', 'storagenetwork', 'powah', 'grapplemod', 'fluxnetworks', 'trashcans', 'toolbelt', 'constructionwand', 'ae2insertexportcard', 'orbital_railgun'])
+    const toRemoveMod = ([
+        'createoreexcavation', 'scannable', 'storagenetwork', 'powah', 'grapplemod', 'fluxnetworks', 'trashcans', 'toolbelt', 'constructionwand', 
+        'ae2insertexportcard', 'orbital_railgun',
+    ])
     //#endregion
 
 
