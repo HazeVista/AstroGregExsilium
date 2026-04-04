@@ -183,6 +183,18 @@ ServerEvents.tags('item', event => {
 
         'forge:slime_ball':
             ['minecraft:slime_ball', 'astrogreg:kuiper_slime_ball'],
+
+        'minecraft:stone_tool_materials':
+            ['astrogreg:cobbled_asteroid_stone'],
+
+        'minecraft:stone_crafting_materials':
+            ['astrogreg:cobbled_asteroid_stone'],
+
+        'minecraft:smelts_to_glass':
+            ['astrogreg:asteroid_sand'],
+
+        'forge:gravel':
+            ['astrogreg:asteroid_gravel']
     }
 
     //#endregion
@@ -250,7 +262,16 @@ ServerEvents.tags('block', event => {
     //#region add block tags
     const blockTagAdditions = {
         'create:gearboxes':
-            ['create:gearbox', 'create:vertical_gearbox']
+            ['create:gearbox', 'create:vertical_gearbox'],
+
+        'minecraft:sand':
+            ['astrogreg:asteroid_sand'],
+
+        'minecraft:mineable/shovel':
+            ['astrogreg:asteroid_sand', 'astrogreg:asteroid_gravel'],
+
+        'minecraft:mineable/pickaxe':
+            ['astrogreg:cobbled_asteroid_stone', 'astrogreg:smooth_asteroid_stone'],
     }
 
     // wildcard additions
