@@ -126,12 +126,12 @@ ServerEvents.tags('item', event => {
             ['farmersdelight:tree_bark'],
 
         'forge:meat': 
-            ['minecraft:beef', 'minecraft:chicken', 'minecraft:mutton',
+            ['minecraft:beef', 'minecraft:chicken', 'minecraft:mutton', 'farmersdelight:sporkchop',
             'minecraft:porkchop', 'minecraft:rabbit', 'delightful:raw_goat'],
 
         'forge:meat_small': 
             ['farmersdelight:minced_beef', 'farmersdelight:chicken_cuts',
-            'farmersdelight:bacon', 'farmersdelight:cod_slice',
+            'farmersdelight:bacon', 'farmersdelight:cod_slice', 'farmersdelight:raw_spacon',
             'farmersdelight:salmon_slice', 'farmersdelight:mutton_chops'],
 
         'forge:sweetener': 
@@ -331,10 +331,46 @@ ServerEvents.tags('fluid', event => {
 
     
     //helpers
-    fluidsToStrip.forEach(fluid => event.removeAllTagsFrom(fluid));
+    fluidsToStrip.forEach(fluid => event.removeAllTagsFrom(fluid))
 
     Object.entries(fluidTagAdditions).forEach(([tag, items]) => {items.forEach(item => event.add(tag, item))})
     Object.entries(fluidTagRemovals).forEach(([tag, items]) => {items.forEach(item => event.remove(tag, item))})
 
 })
 //#endregion
+
+
+
+//#region entities
+ServerEvents.tags('entity_type', event => {
+
+    //#region remove entity tags
+    const entitiesToStrip = {
+
+    }
+
+    //#region remove single fluid tag
+    const entityTagRemovals = {
+
+    }
+    //#endregion
+    //#endregion
+
+
+
+    //#region add entity tags
+    const entityTagAdditions = {
+        'ad_astra:can_survive_in_space':
+            ['minecraft:enderman', 'astrogreg:kuiper_slime', 'astrogreg:spig', 'astrogreg:glaciodillow']
+    }
+    //#endregion
+
+
+
+    //helpers
+    entitiesToStrip.forEach(entity => event.removeAllTagsFrom(entity))
+
+    Object.entries(entityTagAdditions).forEach(([tag, items]) => {items.forEach(item => event.add(tag, item))})
+    Object.entries(entityTagRemovals).forEach(([tag, items]) => {items.forEach(item => event.remove(tag, item))})
+})
+//#endregion 
