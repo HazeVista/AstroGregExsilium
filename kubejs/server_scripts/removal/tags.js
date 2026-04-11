@@ -346,9 +346,9 @@ ServerEvents.tags('fluid', event => {
 ServerEvents.tags('entity_type', event => {
 
     //#region remove entity tags
-    const entitiesToStrip = {
-
-    }
+    const entitiesToStrip = [
+        
+    ]
 
     //#region remove single fluid tag
     const entityTagRemovals = {
@@ -358,14 +358,12 @@ ServerEvents.tags('entity_type', event => {
     //#endregion
 
 
-
     //#region add entity tags
     const entityTagAdditions = {
         'ad_astra:can_survive_in_space':
             ['minecraft:enderman', 'astrogreg:kuiper_slime', 'astrogreg:spig', 'astrogreg:glaciodillo', 'ad_astra:glacian_ram']
     }
     //#endregion
-
 
 
     //helpers
