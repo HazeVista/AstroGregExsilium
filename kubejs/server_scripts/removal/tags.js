@@ -104,7 +104,8 @@ ServerEvents.tags('item', event => {
             'botania:neptune_rune'],
 
         'forge:grass': 
-            ['minecraft:grass', 'farmersdelight:sandy_shrub', 'minecraft:tall_grass'],
+            ['minecraft:grass', 'farmersdelight:sandy_shrub', 'minecraft:tall_grass', 
+            'astrogreg:scorch_grass', 'astrogreg:cryo_grass'],
 
         'forge:fruit_slice': 
             ['minecraft:melon_slice', 'farmersdelight:melon_slice', 'farmersdelight:apple_slice'],
@@ -361,7 +362,7 @@ ServerEvents.tags('entity_type', event => {
     //#region add entity tags
     const entityTagAdditions = {
         'ad_astra:can_survive_in_space':
-            ['minecraft:enderman', 'astrogreg:kuiper_slime', 'astrogreg:spig', 'astrogreg:glaciodillow']
+            ['minecraft:enderman', 'astrogreg:kuiper_slime', 'astrogreg:spig', 'astrogreg:glaciodillo', 'ad_astra:glacian_ram']
     }
     //#endregion
 

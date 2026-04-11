@@ -108,6 +108,7 @@ ServerEvents.recipes(event => {
 
     gt.gas_collector('collect_end_air_kuiper_belt')
         .outputFluids(Fluid.of('gtceu:ender_air', 10000))
+        .chancedOutput('gtceu:tiny_blaze_dust', 7500, 0)
         .dimension('ad_astra:kuiper_belt')
         .duration(200)
         .circuit(1)

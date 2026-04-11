@@ -872,7 +872,7 @@ ServerEvents.recipes(event => {
 
 
     //#region 
-    gt.shapeless('gtceu:sticky_resin', ['astrogreg:resinwort_pod', '#forge:tools/knives']).replaceIngredient('astrogreg:resinwort_pod', 'astrogreg:resinwort_seeds')
+    gt.shapeless('gtceu:sticky_resin', ['#forge:tools/knives', 'astrogreg:resinwort_pod']).replaceIngredient('astrogreg:resinwort_pod', 'astrogreg:resinwort_seeds')
 
     event.recipes.farmersdelight.cutting('astrogreg:resinwort_pod', '#forge:tools/knives', ['astrogreg:resinwort_seeds', Item.of('astrogreg:resinwort_seeds').withChance(0.5)])
 

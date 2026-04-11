@@ -9,8 +9,8 @@ GTCEuStartupEvents.registry('gtceu:dimension_marker', event => {
         { id: 'ceres', icon: 'ad_extendra:ceres_stone', name: 'Ceres', namespace: 'ad_extendra' },
         { id: 'jupiter', icon: 'ad_extendra:jupiter_stone', name: 'Jupiter', namespace: 'ad_extendra' },
         { id: 'saturn', icon: 'ad_extendra:saturn_stone', name: 'Saturn', namespace: 'ad_extendra' },
-        { id: 'uranus', icon: 'ad_extendra:uranus_stone', name: 'Uranus', namespace: 'ad_extendra' },
-        { id: 'neptune', icon: 'ad_extendra:neptune_stone', name: 'Neptune', namespace: 'ad_extendra' },
+        { id: 'uranus', icon: 'astrogreg:uranus', name: 'Uranus', namespace: 'ad_extendra' },
+        { id: 'neptune', icon: 'astrogreg:neptune', name: 'Neptune', namespace: 'ad_extendra' },
         { id: 'pluto', icon: 'astrogreg:pluto', name: 'Pluto', namespace: 'ad_extendra' }
     ]
 
