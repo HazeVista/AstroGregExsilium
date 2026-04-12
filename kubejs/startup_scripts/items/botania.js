@@ -24,7 +24,7 @@ StartupEvents.registry('item', event => {
         'energy', 'space', 'life', 'mercury', 
         'venus', 'gaia', 'mars', 'ceres',
         'jupiter', 'saturn', 'uranus', 
-        'neptune', 'gregorious'
+        'neptune', 'pluto', 'gregorious'
     ]
 
     runes.forEach(rune => {

@@ -443,10 +443,10 @@ ServerEvents.recipes(event => {
 
     event.recipes.farmersdelight.cutting('#minecraft:smelts_to_glass', '#forge:tools/shovels', ['minecraft:clay_ball', 'minecraft:clay_ball'])
 
-    event.campfireCooking('minecraft:brick', 'gtceu:compressed_clay', 0, 80)
-    event.campfireCooking('gtceu:firebrick', 'gtceu:compressed_fireclay', 0, 80)
-    event.campfireCooking('astrogreg:livingbrick', 'astrogreg:compressed_livingclay', 0, 80)
-    event.campfireCooking('gtceu:coke_oven_brick', 'gtceu:compressed_coke_clay', 0, 80)
+    event.campfireCooking('minecraft:brick', 'gtceu:compressed_clay', 0, 160)
+    event.campfireCooking('gtceu:firebrick', 'gtceu:compressed_fireclay', 0, 160)
+    event.campfireCooking('astrogreg:livingbrick', 'astrogreg:compressed_livingclay', 0, 160)
+    event.campfireCooking('gtceu:coke_oven_brick', 'gtceu:compressed_coke_clay', 0, 160)
 
     event.shaped('8x gtceu:compressed_clay', [
       'AAA',
@@ -733,7 +733,7 @@ ServerEvents.recipes(event => {
     event.recipes.create.pressing('astrogreg:unfired_rune_tablet', 'astrogreg:compressed_livingclay')
 
     event.smelting('astrogreg:rune_tablet', 'astrogreg:unfired_rune_tablet')
-    event.campfireCooking('astrogreg:rune_tablet', 'astrogreg:unfired_rune_tablet', 0, 100)
+    event.campfireCooking('astrogreg:rune_tablet', 'astrogreg:unfired_rune_tablet', 0, 160)
     
     gt.arc_furnace('rune_tablet')
       .itemInputs('astrogreg:unfired_rune_tablet')
@@ -833,6 +833,7 @@ ServerEvents.recipes(event => {
     //#endregion
 
     
+
     //#region kuiper slime
     gt.shaped('astrogreg:kuiper_slime_block', [
       'AAA',
@@ -867,14 +868,16 @@ ServerEvents.recipes(event => {
       .itemOutputs('2x gtceu:raw_rubber_dust')
       .duration(150)
       .EUt(2)
+
+    event.shapeless('9x astrogreg:kuiper_slime_ball', 'astrogreg:kuiper_slime_block')
     //#endregion
 
 
 
     //#region 
-    gt.shapeless('gtceu:sticky_resin', ['#forge:tools/knives', 'astrogreg:resinwort_pod']).replaceIngredient('astrogreg:resinwort_pod', 'astrogreg:resinwort_seeds')
+    event.shapeless('gtceu:sticky_resin', ['#forge:tools/knives', 'astrogreg:resinwort_pod']).replaceIngredient('astrogreg:resinwort_pod', 'astrogreg:resinwort_seeds')
 
-    event.recipes.farmersdelight.cutting('astrogreg:resinwort_pod', '#forge:tools/knives', ['astrogreg:resinwort_seeds', Item.of('astrogreg:resinwort_seeds').withChance(0.5)])
+    event.recipes.farmersdelight.cutting('astrogreg:resinwort_pod', '#forge:tools/knives', ['gtceu:sticky_resin', 'astrogreg:resinwort_seeds', Item.of('astrogreg:resinwort_seeds').withChance(0.5)])
 
     gt.centrifuge('resinwort_processing')
       .itemInputs('astrogreg:resinwort_pod')
@@ -885,5 +888,4 @@ ServerEvents.recipes(event => {
       .duration(150)
       .EUt(7)
     //#endregion
-
 })

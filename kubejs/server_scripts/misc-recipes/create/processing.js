@@ -32,7 +32,7 @@ ServerEvents.recipes(event => {
         ['astrogreg:asteroid_stone', 'astrogreg:hard_asteroid_stone', null],
         ['astrogreg:asteroid_gravel', 'astrogreg:cobbled_asteroid_stone', null],
         [['gtceu:wheat_dust', Item.of('farmersdelight:straw').withChance(0.5)], 'minecraft:wheat', null],
-        [['gtceu:sticky_resin', Item.of('astrogreg:resinwort_seeds'), Item.of('astrogreg:resinwort_seeds').withChance(0.5)], 'astrogreg:', null],
+        [['gtceu:sticky_resin', Item.of('astrogreg:resinwort_seeds'), Item.of('astrogreg:resinwort_seeds').withChance(0.5)], 'astrogreg:resinwort_pod', null],
         [['minecraft:sand', Item.of('minecraft:flint').withChance(0.2), Item.of('minecraft:clay_ball').withChance(0.1)], 'minecraft:gravel', null],
         [['astrogreg:asteroid_sand', Item.of('minecraft:flint').withChance(0.2), Item.of('minecraft:clay_ball').withChance(0.1)], 'astrogreg:asteroid_gravel', null]
     ]

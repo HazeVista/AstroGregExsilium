@@ -65,4 +65,59 @@ StartupEvents.registry('item', event => {
                     ctx.player.give('minecraft:glass_bottle')
                 })
         })
+
+    event.create('farmersdelight:sporkchop')
+        .translationKey('item.astrogreg.sporkchop')
+        .texture('kubejs:item/delight/raw_sporkchop')
+        .food(food => {
+            food
+                .hunger(3)
+                .saturation(0.5)
+        })
+
+    event.create('farmersdelight:cooked_sporkchop')
+        .translationKey('item.astrogreg.cooked_sporkchop')
+        .texture('kubejs:item/delight/cooked_sporkchop')
+        .food(food => {
+            food
+                .hunger(8)
+                .saturation(0.9)
+        })
+
+    event.create('farmersdelight:spacon')
+        .translationKey('item.astrogreg.spacon')
+        .texture('kubejs:item/delight/raw_spacon')
+        .food(food => {
+            food
+                .hunger(2)
+                .saturation(0.5)
+        })
+    
+    event.create('farmersdelight:cooked_spacon')
+        .translationKey('item.astrogreg.cooked_spacon')
+        .texture('kubejs:item/delight/cooked_spacon')
+        .food(food => {
+            food
+                .hunger(4)
+                .saturation(0.8)
+        })
+    
+    event.create('farmersdelight:spacon_sandwich')
+        .translationKey('item.astrogreg.spacon_sandwich')
+        .texture('kubejs:item/delight/spacon_sandwich')
+        .food(food => {
+            food 
+                .hunger(10)
+                .saturation(0.8)
+        })
+
+    event.create('farmersdelight:spacon_and_eggs')
+        .translationKey('item.astrogreg.spacon_and_eggs')
+        .texture('kubejs:item/delight/spacon_and_eggs')
+        .food(food => {
+            food 
+                .hunger(10)
+                .saturation(0.6)
+        })
+
 })

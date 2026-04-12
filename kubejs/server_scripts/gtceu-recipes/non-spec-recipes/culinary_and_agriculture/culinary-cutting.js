@@ -36,7 +36,8 @@ ServerEvents.recipes(event => {
       { id: 'melon_slice_alt2', input: 'delightful:mini_melon', outputs: ['4x minecraft:melon_slice'], duration: 80, EUt: 2 },
       { id: 'cantaloupe_slice', input: 'delightful:cantaloupe', outputs: ['4x delightful:cantaloupe_slice'], duration: 80, EUt: 2 },
       { id: 'cactus_flesh', input: 'minecraft:cactus', outputs: ['2x delightful:cactus_flesh'], duration: 80, EUt: 2},
-      { id: 'tomato_slice', input: 'farmersdelight:tomato', outputs: ['4x farmersdelight:tomato_slice'], duration: 80, EUt: 2}
+      { id: 'tomato_slice', input: 'farmersdelight:tomato', outputs: ['4x farmersdelight:tomato_slice'], duration: 80, EUt: 2},
+      { id: 'spacon', input: 'farmersdelight:sporkchop', outputs: ['2x farmersdelight:spacon'], duration: 80, EUt: 2}
     ]
 
     culinaryCutting.forEach(recipe => {

@@ -31,7 +31,7 @@ ServerEvents.recipes(event => {
 
 
     //#region misc
-    gt.shaped('astrogreg:oxygenated_maintanence_hatch', [
+    gt.shaped('astrogreg:oxygenated_maintenance_hatch', [
         'BAB',
         'CDC',
         'EFE'

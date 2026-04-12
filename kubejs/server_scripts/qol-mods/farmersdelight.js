@@ -167,7 +167,8 @@ ServerEvents.recipes(event => {
       { input: "createaddition:chocolate_cake", output: "farmersdelight:chocolate_cake_slice", count: 6 },
       { input: "createaddition:honey_cake", output: "farmersdelight:honey_cake_slice", count: 6 },
       { input: "minecraft:beef", output: "farmersdelight:minced_beef", count: 1},
-      { input: "farmersdelight:tomato", output: "farmersdelight:tomato_slice", count: 4}
+      { input: "farmersdelight:tomato", output: "farmersdelight:tomato_slice", count: 4},
+      { input: "farmersdelight:sporkchop", output: "farmersdelight:spacon", count: 2}
     ]
 
   cuttingRecipes.forEach(recipe => {
@@ -335,6 +336,28 @@ ServerEvents.recipes(event => {
     event.shapeless('delightful:matcha_milkshake', ['minecraft:glass_bottle', 'delightful:matcha_ice_cream', '#forge:milk'])
     event.shapeless('delightful:salmonberry_milkshake', ['minecraft:glass_bottle', 'delightful:salmonberry_ice_cream', '#forge:milk'])
     event.shapeless('farmersdelight:chocolate_milkshake', ['minecraft:glass_bottle', 'farmersdelight:chocolate_ice_cream', '#forge:milk'])
+    //#endregion
+
+
+
+    //#region sporkchops & spacon
+    event.smelting('farmersdelight:cooked_sporkchop', 'farmersdelight:sporkchop')
+    event.smoking('farmersdelight:cooked_sporkchop', 'farmersdelight:sporkchop')
+    event.campfireCooking('farmersdelight:cooked_sporkchop', 'farmersdelight:sporkchop', 0.1, 600)
+    event.smelting('farmersdelight:cooked_spacon', 'farmersdelight:spacon')
+    event.smoking('farmersdelight:cooked_spacon', 'farmersdelight:spacon')
+    event.campfireCooking('farmersdelight:cooked_spacon', 'farmersdelight:spacon', 0.1, 600)
+
+    gt.shaped('farmersdelight:spacon_and_eggs', [
+      'AAB',
+      'CC '
+    ], {
+      A: 'farmersdelight:cooked_spacon',
+      B: 'minecraft:bowl',
+      C: 'farmersdelight:fried_egg'
+    })
+
+    event.shapeless('farmersdelight:spacon_sandwich', ['minecraft:bread', 'farmersdelight:cooked_spacon', '#forge:crops/cabbage', 'farmersdelight:tomato_slice'])
     //#endregion
 
 
