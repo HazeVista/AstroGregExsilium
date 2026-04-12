@@ -28,4 +28,21 @@ ServerEvents.recipes(event => {
         .EUt(20)
     //#endregion
 
+
+
+    //#region misc
+    gt.shaped('astrogreg:oxygenated_maintanence_hatch', [
+        'BAB',
+        'CDC',
+        'EFE'
+    ], {
+        A: 'gtceu:auto_maintenance_hatch',
+        B: '#gtceu:circuits/ev',
+        C: 'gtceu:ev_robot_arm',
+        D: 'gtceu:ev_machine_hull',
+        E: 'gtceu:aluminium_single_cable',
+        F: 'ad_astra:oxygen_distributor'
+    })
+    //#endregion
+
 })

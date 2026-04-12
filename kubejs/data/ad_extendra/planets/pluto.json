@@ -1,6 +1,6 @@
 {
   "dimension": "ad_extendra:pluto",
-  "gravity": 0.62,
+  "gravity": 2,
   "orbit": "ad_extendra:pluto_orbit",
   "oxygen": false,
   "solar_power": 11,
