@@ -17,6 +17,12 @@
     "astrogreg.conservatory.tooltip.2": "Can parallelize with Parallel Control Hatches",
     "astrogreg.conservatory.tooltip.3": "Available Recipe Types: Greenhouse Trees, Greenhouse Crops, Greenhouse Flowers",
 
+    "astrogreg.shroomroom.tooltip": "§o§7Electric Mycelium Manager!",
+    
+    "astrogreg.fungarium.tooltip.1": "§o§7Electric Fungus Factory!",
+    "astrogreg.fungarium.tooltip.2": "Can parallelize with Parallel Control Hatches",
+    "astrogreg.fungarium.tooltip.3": "Available Recipe Types: Fungiculture Mushrooms",
+
     "astrogreg.aether_turbine.tooltip": "Converts §3Æther§r into EU",
 
     "astrogreg.steam_blast_furnace.tooltip": "Up to 4x Faster than a Primitive Blast Furnace",

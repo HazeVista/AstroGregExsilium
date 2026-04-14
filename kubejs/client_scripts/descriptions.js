@@ -57,6 +57,16 @@ ItemEvents.tooltip(event => {
         { text: 'astrogreg.conservatory.tooltip.3' }
     ])
 
+    multiTooltip(event, 'gtceu:shroomroom', [
+        { text: 'astrogreg.shroomroom.tooltip'}
+    ])
+
+    multiTooltip(event, 'gtceu:fungarium', [
+        { text: 'astrogreg.fungarium.tooltip.1' },
+        { text: 'astrogreg.fungarium.tooltip.2' },
+        { text: 'astrogreg.fungarium.tooltip.3' }
+    ])
+
     multiTooltip(event, 'astrogreg:aether_turbine', [
         { line: 3, text: 'astrogreg.aether_turbine.tooltip' }
     ])
@@ -299,6 +309,11 @@ ItemEvents.tooltip(event => {
         { line: 1, text: 'astrogreg.pcc.tooltip' }
     ])
 
+    tipTooltip(event, 'gtceu:configurable_maintenance_hatch', [
+        { line: 1, text: 'gtceu.machine.maintenance_hatch_configurable.tooltip.0' },
+        { line: 2, text: 'gtceu.machine.maintenance_hatch_configurable.tooltip.1' }
+    ])
+
     const ageControllers = [ 
         ['aether_turbine'],  ['alfsteel_mana_large_boiler'], ['large_gas_collector'],
         ['terrasteel_mana_large_boiler'],  ['manasteel_mana_large_boiler'], 
@@ -351,7 +366,7 @@ ItemEvents.tooltip(event => {
         ['pyrolyse_oven'], ['cracker'], ['data_bank'], ['multi_smelter'], ['alloy_blast_smelter'], 
         ['electric_blast_furnace'], ['primitive_blast_furnace'], ['bronze_multiblock_tank'], 
         ['steel_multiblock_tank'], ['wooden_multiblock_tank'], ['vacuum_freezer'],
-        ['power_substation'], ['implosion_compressor']
+        ['power_substation'], ['implosion_compressor'], ['shroomroom'], ['fungarium']
     ]
 
     controllers.forEach(([name, tooltip]) => {

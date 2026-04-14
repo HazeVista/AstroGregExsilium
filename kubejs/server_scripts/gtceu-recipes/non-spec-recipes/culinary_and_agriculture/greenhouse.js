@@ -1,4 +1,5 @@
 ServerEvents.recipes(event => {
+    
     const greg = event.recipes.gtceu
 
 //#region helpers
@@ -136,7 +137,7 @@ trees.forEach((tree) => {
         ['minecraft:wheat_seeds', 'minecraft:wheat'],
         ['farmersdelight:cabbage_seeds', 'farmersdelight:cabbage'],
         ['botania:grass_seeds', 'minecraft:grass'],
-        ['botania:mycelium_seeds', 'minecraft:brown_mushroom'],
+        // ['botania:mycelium_seeds', 'minecraft:brown_mushroom'],
         ['botania:podzol_seeds', 'minecraft:red_mushroom'],
         ['minecraft:sugar_cane', 'minecraft:sugar_cane'],
         ['minecraft:cactus', 'minecraft:cactus'],
@@ -150,7 +151,8 @@ trees.forEach((tree) => {
         ['farmersdelight:onion', 'farmersdelight:onion'],
         ['delightful:salmonberry_pips', 'delightful:salmonberries'],
         ['delightful:cantaloupe_seeds', 'delightful:cantaloupe'],
-        ['minecraft:cocoa_beans', 'minecraft:cocoa_beans']]
+        ['minecraft:cocoa_beans', 'minecraft:cocoa_beans']
+    ]
 
     crops.forEach((crop) => {
         const seed = crop[0]
@@ -176,6 +178,47 @@ trees.forEach((tree) => {
             AstroRecipeSchemaBindings.isOxygenated(greenhouse_crop_base, true)
             applyItemInput(greenhouse_crop_base, Item1);
             applyNotConsumableItem(greenhouse_crop_base, notConsumableItem);
+        }
+
+        // GreenhouseHelperCrop(Not Consumable Item, Item Input, Circuit, Duration, Affix) ## the affix is for the recipe name 
+        GreenHouseHelperCrop('', '', 1, 800, '')
+        GreenHouseHelperCrop('', 'gtceu:fertilizer', 2, 600, 'fertilizer')
+        GreenHouseHelperCrop('botania:overgrowth_seed', '', 3, 600, 'overgrowth')
+    })
+    //#endregion
+
+
+
+    //#region space crops
+    const spaceCrops = [
+        ['astrogreg:resinwort_seeds', 'astrogreg:resinwort_pod'],
+        ['astrogreg:plutonian_shrub_seeds', 'astrogreg:plutonian_shrub']
+    ]
+
+    spaceCrops.forEach((crop) => {
+        const seed = crop[0]
+        const plant = crop[1]
+
+        const GreenHouseHelperCrop = (notConsumableItem, Item1, Circuit, Duration, Affix) => {
+
+            let RecipeName = plant;
+            if (Affix != '') {
+                RecipeName = `${plant}_${Affix}`;
+            }
+            const greenhouse_spacecrop_base = greg.greenhouse_crops(RecipeName)
+                .notConsumable(seed)
+                .perTick(true)
+                .chancedFluidInput('minecraft:water 1', 2500, 0)
+                .perTick(false)
+                .itemOutputs(`16x ${plant}`)
+                .chancedOutput(`${seed}`, 5000, 0)
+                .duration(Duration)
+                .EUt(30)
+                .circuit(Circuit)
+
+            AstroRecipeSchemaBindings.isOxygenated(greenhouse_spacecrop_base, false)
+            applyItemInput(greenhouse_spacecrop_base, Item1);
+            applyNotConsumableItem(greenhouse_spacecrop_base, notConsumableItem);
         }
 
         // GreenhouseHelperCrop(Not Consumable Item, Item Input, Circuit, Duration, Affix) ## the affix is for the recipe name 
@@ -217,5 +260,6 @@ trees.forEach((tree) => {
         G: 'gtceu:iv_conveyor_module'
     })
     .addMaterialInfo()
+    //#endregion
 
 })

@@ -164,4 +164,29 @@ ServerEvents.recipes(event => {
         )
         .addMaterialInfo(true)
     //#endregion
+
+
+
+    //#region misc
+    gt.assembly_line('advanced_configurable_maintenance_hatch')
+        .itemInputs('gtceu:uv_machine_hull')
+        .itemInputs('gtceu:configurable_maintenance_hatch')
+        .itemInputs('2x gtceu:uv_robot_arm')
+        .itemInputs('gtceu:uv_field_generator')
+        .itemInputs('2x #gtceu:circuits/uhv')
+        .itemInputs('4x gtceu:europium_single_cable')
+        .inputFluids('gtceu:soldering_alloy 576')
+        .inputFluids('gtceu:lubricant')
+        .itemOutputs('astrogreg:advanced_configurable_maintenance_hatch')
+        .duration(160)
+        .EUt(400000)
+        .stationResearch(
+            researchRecipeBuilder => researchRecipeBuilder
+                .researchStack(Item.of('gtceu:configurable_maintenance_hatch'))
+                .dataStack('gtceu:data_orb')
+                .CWUt(32, 100000)
+                .EUt(122000)
+        )
+        .addMaterialInfo(true)
+    //#endregion
 })

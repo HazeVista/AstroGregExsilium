@@ -70,6 +70,38 @@ ServerEvents.recipes(event => {
         .itemOutputs('3x gtceu:carbon_dust', '2x gtceu:clay_dust')
         .duration(200)
         .EUt(30)
+
+    gt.mixer('mixing_mycelium')
+        .itemInputs('minecraft:dirt', '4x gtceu:wood_dust', '2x #forge:mushrooms')
+        .itemOutputs('minecraft:mycelium')
+        .duration(400)
+        .EUt(2)
+
+    gt.brewery('biomass_strophar_mushroom')
+        .itemInputs('ad_extendra:strophar_mushroom')
+        .inputFluids('minecraft:water 20')
+        .outputFluids('gtceu:biomass 20')
+        .duration(160)
+        .EUt(3)
+
+    gt.brewery('biomass_aeronos_mushroom')
+        .itemInputs('ad_extendra:aeronos_mushroom')
+        .inputFluids('minecraft:water 20')
+        .outputFluids('gtceu:biomass 20')
+        .duration(160)
+        .EUt(3)
+
+    gt.alloy_smelter('alloying_tinted_glass_quartz')
+        .itemInputs('gtceu:tempered_glass', '4x minecraft:quartz')
+        .itemOutputs('2x minecraft:tinted_glass')
+        .duration(200)
+        .EUt(6)
+
+    gt.alloy_smelter('alloying_tinted_glass_quartzite')
+        .itemInputs('gtceu:tempered_glass', '3x gtceu:quartzite_gem')
+        .itemOutputs('2x minecraft:tinted_glass')
+        .duration(160)
+        .EUt(6)
     //#endregion
 
 

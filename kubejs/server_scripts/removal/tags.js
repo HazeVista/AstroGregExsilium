@@ -195,7 +195,10 @@ ServerEvents.tags('item', event => {
             ['astrogreg:asteroid_sand'],
 
         'forge:gravel':
-            ['astrogreg:asteroid_gravel']
+            ['astrogreg:asteroid_gravel'],
+
+        'forge:mushrooms':
+            ['ad_extendra:aeronos_mushroom', 'ad_extendra:strophar_mushroom', 'minecraft:warped_fungus', 'minecraft:crimson_fungus']
     }
 
     //#endregion
@@ -273,6 +276,9 @@ ServerEvents.tags('block', event => {
 
         'minecraft:mineable/pickaxe':
             ['astrogreg:cobbled_asteroid_stone', 'astrogreg:smooth_asteroid_stone'],
+
+        'ad_astra:destroyed_in_space':
+            ['#minecraft:saplings', '#minecraft:leaves', '#minecraft:flowers']
     }
 
     // wildcard additions
@@ -339,37 +345,3 @@ ServerEvents.tags('fluid', event => {
 
 })
 //#endregion
-
-
-
-//#region entities
-ServerEvents.tags('entity_type', event => {
-
-    //#region remove entity tags
-    const entitiesToStrip = [
-        
-    ]
-
-    //#region remove single fluid tag
-    const entityTagRemovals = {
-
-    }
-    //#endregion
-    //#endregion
-
-
-    //#region add entity tags
-    const entityTagAdditions = {
-        'ad_astra:can_survive_in_space':
-            ['minecraft:enderman', 'astrogreg:kuiper_slime', 'astrogreg:spig', 'astrogreg:glaciodillo', 'ad_astra:glacian_ram']
-    }
-    //#endregion
-
-
-    //helpers
-    entitiesToStrip.forEach(entity => event.removeAllTagsFrom(entity))
-
-    Object.entries(entityTagAdditions).forEach(([tag, items]) => {items.forEach(item => event.add(tag, item))})
-    Object.entries(entityTagRemovals).forEach(([tag, items]) => {items.forEach(item => event.remove(tag, item))})
-})
-//#endregion 
