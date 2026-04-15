@@ -888,4 +888,14 @@ ServerEvents.recipes(event => {
       .duration(150)
       .EUt(7)
     //#endregion
+
+
+
+    //#region handcrafted dusts
+    event.shapeless('3x gtceu:bronze_dust', ['gtceu:tin_dust', 'gtceu:copper_dust', 'gtceu:copper_dust', 'gtceu:copper_dust'])
+    event.shapeless('2x gtceu:invar_dust', ['gtceu:iron_dust', 'gtceu:iron_dust', 'gtceu:nickel_dust'])
+    event.shapeless('gtceu:red_alloy_dust', ['gtceu:copper_dust', 'minecraft:redstone', 'minecraft:redstone', 'minecraft:redstone', 'minecraft:redstone'])
+    event.shapeless('3x gtceu:brass_dust', ['gtceu:zinc_dust', 'gtceu:copper_dust', 'gtceu:copper_dust', 'gtceu:copper_dust'])
+    event.shapeless('gtceu:electrum_dust', ['gtceu:gold_dust', 'gtceu:silver_dust'])
+    //#endregion
 })
