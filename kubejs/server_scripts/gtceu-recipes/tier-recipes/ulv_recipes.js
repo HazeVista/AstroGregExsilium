@@ -83,7 +83,7 @@ ServerEvents.recipes(event => {
       'A',
       'B'
     ], {
-      A: 'minecraft:nether_quartz',
+      A: 'minecraft:quartz',
       B: '#forge:tools/mortars'
     })
 
