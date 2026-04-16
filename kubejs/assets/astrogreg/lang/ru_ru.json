@@ -1,4 +1,5 @@
 {
+    
     "item.astrogreg.tiny_acorn_dust": "Крохотная кучка желудевой муки",
     "item.astrogreg.small_acorn_dust": "Маленькая кучка желудевой муки",
     "item.astrogreg.acorn_dust": "Желудевая мука",
@@ -15,6 +16,12 @@
     "astrogreg.conservatory.tooltip.1": "§o§7Электрическая плантация!",
     "astrogreg.conservatory.tooltip.2": "Поддерживает параллелизацию через люки управления",
     "astrogreg.conservatory.tooltip.3": "Доступные типы рецептов: Тепличные деревья, Тепличные культуры, Тепличные цветы",
+    
+    "astrogreg.shroomroom.tooltip": "§o§7Электрический менеджер мицелия!",
+    
+    "astrogreg.fungarium.tooltip.1": "§o§7Электрическая фабрика грибов!",
+    "astrogreg.fungarium.tooltip.2": "Поддерживает параллелизацию через люки управления",
+    "astrogreg.fungarium.tooltip.3": "Доступные типы рецептов: Культивирование грибов",
     
     "astrogreg.aether_turbine.tooltip": "Преобразует §3Эфир§r в EU",
     
@@ -33,8 +40,8 @@
     "astrogreg.mana_infuser.tooltip.tier3": "§o§7Механизированная матрица манипуляции маной",
     
     "astrogreg.manafield_simulator.tooltip.tier1": "§o§7Якобы производит ману",
-    "astrogreg.manafield_simulator.tooltip.tier2": "§o§7Миниатюрная магическая электростанция",
-    "astrogreg.manafield_simulator.tooltip.tier3": "§o§7Магия преобразилась в математику",
+    "astrogreg.manafield_simulator.tooltip.tier2": "§o§7Миниатюрная мистическая электростанция",
+    "astrogreg.manafield_simulator.tooltip.tier3": "§o§7Аркана преобразилась в математику",
     
     "astrogreg.culinary_fabricator.tooltip.tier1": "§o§7Шеф-повар в коробке",
     "astrogreg.culinary_fabricator.tooltip.tier2": "§o§7Роботизированный ресторан",
@@ -72,6 +79,8 @@
     
     "astrogreg.pill_casting_mold.tooltip.1": "§o§7Форма для изготовления пилюль",
     "astrogreg.pill_casting_mold.tooltip.2": "§o§7Что, нельзя было просто сходить к врачу? - Phoenixvine",
+    "astrogreg.sleeve_extruder_mold.tooltip": "§o§7Форма экструдера для изготовления втулок",
+    "astrogreg.sleeve_casting_mold.tooltip": "§o§7Форма для литья втулок",
     
     "astrogreg.basic_burner.tooltip": "§7Заменяет горелку всполоха",
     
@@ -94,14 +103,16 @@
     
     "astrogreg.magnet_block.tooltip": "Полное кольцо из этих магнитов в §bэлектромагнитном генераторе Фарадея§r будет производить %s",
     
-    "item.astrogreg.lv_rocket_engine": "§7LV§r Ракетный двигатель",
-    "item.astrogreg.mv_rocket_engine": "§bMV§r Ракетный двигатель",
-    "item.astrogreg.hv_rocket_engine": "§6HV§r Ракетный двигатель",
-    "item.astrogreg.ev_rocket_engine": "§5EV§r Ракетный двигатель",
-    "item.astrogreg.iv_rocket_engine": "§9IV§r Ракетный двигатель",
-    "item.astrogreg.luv_rocket_engine": "§dLuV§r Ракетный двигатель",
-    "item.astrogreg.zpm_rocket_engine": "§cZPM§r Ракетный двигатель",
-    "item.astrogreg.uv_rocket_engine": "§3UV§r Ракетный двигатель",
+    "astrogreg.pcc.tooltip": "Функциональность многоблочной структуры §4Отключена§r",
+    
+    "item.astrogreg.lv_rocket_engine": "Ракетный двигатель (§7LV§r)",
+    "item.astrogreg.mv_rocket_engine": "Ракетный двигатель (§bMV§r)",
+    "item.astrogreg.hv_rocket_engine": "Ракетный двигатель (§6HV§r)",
+    "item.astrogreg.ev_rocket_engine": "Ракетный двигатель (§5EV§r)",
+    "item.astrogreg.iv_rocket_engine": "Ракетный двигатель (§9IV§r)",
+    "item.astrogreg.luv_rocket_engine": "Ракетный двигатель (§dLuV§r)",
+    "item.astrogreg.zpm_rocket_engine": "Ракетный двигатель (§cZPM§r)",
+    "item.astrogreg.uv_rocket_engine": "Ракетный двигатель (§3UV§r)",
     
     "item.astrogreg.basic_rocket_nose_cone": "Базовый ракетный обтекатель",
     "item.astrogreg.advanced_rocket_nose_cone": "Улучшенный ракетный обтекатель",
@@ -134,17 +145,16 @@
     "item.astrogreg.paradox_processor_assembly": "Сборка парадоксальных процессоров",
     "item.astrogreg.paradox_processor_computer": "Компьютер на парадоксальных процессорах",
     "item.astrogreg.paradox_processor_mainframe": "Мейнфрейм на парадоксальных процессорах",
-    "item.astrogreg.sonny": "Лягушонок Сонни",
     
-    "item.astrogreg.lv_stabilizer": "§7LV§r Стабилизатор",
-    "item.astrogreg.mv_stabilizer": "§bMV§r Стабилизатор",
-    "item.astrogreg.hv_stabilizer": "§6HV§r Стабилизатор",
-    "item.astrogreg.ev_stabilizer": "§5EV§r Стабилизатор",
-    "item.astrogreg.iv_stabilizer": "§9IV§r Стабилизатор",
-    "item.astrogreg.luv_stabilizer": "§dLuV§r Стабилизатор",
-    "item.astrogreg.zpm_stabilizer": "§cZPM§r Стабилизатор",
-    "item.astrogreg.uv_stabilizer": "§3UV§r Стабилизатор",
-    "item.astrogreg.uhv_stabilizer": "§4UHV§r Стабилизатор",
+    "item.astrogreg.lv_stabilizer": "Стабилизатор (§7LV§r)",
+    "item.astrogreg.mv_stabilizer": "Стабилизатор (§bMV§r)",
+    "item.astrogreg.hv_stabilizer": "Стабилизатор (§6HV§r)",
+    "item.astrogreg.ev_stabilizer": "Стабилизатор (§5EV§r)",
+    "item.astrogreg.iv_stabilizer": "Стабилизатор (§9IV§r)",
+    "item.astrogreg.luv_stabilizer": "Стабилизатор (§dLuV§r)",
+    "item.astrogreg.zpm_stabilizer": "Стабилизатор (§cZPM§r)",
+    "item.astrogreg.uv_stabilizer": "Стабилизатор (§3UV§r)",
+    "item.astrogreg.uhv_stabilizer": "Стабилизатор (§4UHV§r)",
 
     "item.botania.terra_lens": "Терра-линза",
     "item.botania.pixie_lens": "Пикси-линза",
@@ -178,10 +188,13 @@
     "item.botania.saturn_rune": "Руна Сатурна",
     "item.botania.uranus_rune": "Руна Урана",
     "item.botania.neptune_rune": "Руна Нептуна",
+    "item.botania.pluto_rune": "Руна Плутона",
     "item.botania.gregorious_rune": "Руна Грегориуса",
 
     "item.botania.managlass_pane": "Панель манастекла",
     "item.botania.alfglass_pane": "Панель эльфийского стекла",
+    
+    "item.botania.pixie_dust": "Пыль альфстали",
     
     "item.farmersdelight.raw_pie_crust": "Основа для пирога",
     "item.farmersdelight.apple_slice": "Долька яблока",
@@ -190,6 +203,12 @@
     "item.farmersdelight.honey_cake_slice": "Кусочек медового торта",
     "item.farmersdelight.chocolate_ice_cream": "Шоколадное мороженое",
     "item.farmersdelight.chocolate_milkshake": "Шоколадный молочный коктейль",
+    "item.farmersdelight.sporkchop": "Сырой Споркчоп",
+    "item.farmersdelight.cooked_sporkchop": "Приготовленный Споркчоп",
+    "item.farmersdelight.spacon": "Сырой Спакон",
+    "item.farmersdelight.cooked_spacon": "Приготовленный Спакон",
+    "item.farmersdelight.spacon_sandwich": "Спакон сэндвич",
+    "item.farmersdelight.spacon_and_eggs": "Спакон с яйцами",
     
     "item.gtceu.grinding_head_damascus_steel": "Шлифовальная головка из дамасской стали",
     "item.gtceu.grinding_head_diamond": "Алмазная шлифовальная головка",
@@ -199,20 +218,18 @@
     "item.gtceu.formed_energized_steel_ingot": "Формованная заряженная сталь",
     "item.gtceu.sleeve_casting_mold": "Литейная форма (Втулка)",
     "item.gtceu.sleeve_extruder_mold": "Форма экструдера (Втулка)",
-    "item.gtceu.uhv_voltage_coil": "Катушка сверхвысокого напряжения (UHV)",
-    "astrogreg.sleeve_casting_mold.tooltip": "§o§7Форма для отливки втулок",
-    "astrogreg.sleeve_extruder_mold.tooltip": "§o§7Форма экструдера для изготовления втулок",
+    "item.gtceu.uhv_voltage_coil": "Катушка сверхвысокого напряжения",
     
-    "item.astrogreg.ulv_modular_circuit": "§8ULV§r Модульная схема",
-    "item.astrogreg.lv_modular_circuit": "§7LV§r Модульная схема",
-    "item.astrogreg.mv_modular_circuit": "§bMV§r Модульная схема",
-    "item.astrogreg.hv_modular_circuit": "§6HV§r Модульная схема",
-    "item.astrogreg.ev_modular_circuit": "§5EV§r Модульная схема",
-    "item.astrogreg.iv_modular_circuit": "§9IV§r Модульная схема",
-    "item.astrogreg.luv_modular_circuit": "§dLuV§r Модульная схема",
-    "item.astrogreg.zpm_modular_circuit": "§cZPM§r Модульная схема",
-    "item.astrogreg.uv_modular_circuit": "§3UV§r Модульная схема",
-    "item.astrogreg.uhv_modular_circuit": "§4UHV§r Модульная схема",
+    "item.astrogreg.ulv_modular_circuit": "Модульная схема (§8ULV§r)",
+    "item.astrogreg.lv_modular_circuit": "Модульная схема (§7LV§r)",
+    "item.astrogreg.mv_modular_circuit": "Модульная схема (§bMV§r)",
+    "item.astrogreg.hv_modular_circuit": "Модульная схема (§6HV§r)",
+    "item.astrogreg.ev_modular_circuit": "Модульная схема (§5EV§r)",
+    "item.astrogreg.iv_modular_circuit": "Модульная схема (§9IV§r)",
+    "item.astrogreg.luv_modular_circuit": "Модульная схема (§dLuV§r)",
+    "item.astrogreg.zpm_modular_circuit": "Модульная схема (§cZPM§r)",
+    "item.astrogreg.uv_modular_circuit": "Модульная схема (§3UV§r)",
+    "item.astrogreg.uhv_modular_circuit": "Модульная схема (§4UHV§r)",
     "astrogreg.modular_circuit.tooltip": "§o§7Удобны для шаблонов автокрафта AE2!",
     
     "block.astrogreg.asteroid_gravel": "Астероидный гравий",
@@ -222,6 +239,7 @@
     "block.astrogreg.livingbricks": "Живые кирпичи",
     "block.astrogreg.managlass": "Манастекло",
     "block.astrogreg.alfglass": "Эльфийское стекло",
+    "block.astrogreg.sonny": "Лягушонок Сонни",
     
     "questbook.astrogreg.welcome.title": "Добро пожаловать в AstroGreg:Exsilium",
     "questbook.astrogreg.welcome_to_age.title": "Добро пожаловать в ASTRO Foundation",
