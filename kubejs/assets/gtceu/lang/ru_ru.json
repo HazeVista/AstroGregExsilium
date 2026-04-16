@@ -10,6 +10,10 @@
     "gtceu.rune_inscription": "Руническая гравировка",
     "gtceu.mana_boiler": "Большой мана-котел",
     "gtceu.aether_engine": "§3Эфирный§r двигатель",
+    "block.gtceu.shroomroom": "Грибная комната",
+    "block.gtceu.fungarium": "Фунгариум",
+    "gtceu.fungiculture_mushrooms": "Культивируемые грибы",
+    
     "block.gtceu.ulv_water_source": "Источник воды",
     "gtceu.water_source": "Источник воды",
     "gtceu.manafield_simulation": "Симуляция мана-поля",
@@ -17,8 +21,10 @@
     "gtceu.mana_infusion": "Наполнение маной",
     "gtceu.botanic_purification": "Ботаническая очистка",
     "gtceu.culinary_fabricator": "Кулинария",
+    
     "material.gtceu.aluminium": "Алюминий",
     "material.gtceu.aluminium_sulfite": "Сульфит алюминия",
+    
     "tagprefix.mars_stone": "Марсианская руда: %s",
     "tagprefix.venus_stone": "Венерианская руда: %s",
     "tagprefix.mercury_stone": "Меркурианская руда: %s",
@@ -31,16 +37,20 @@
     "tagprefix.ceres_stone": "Церерианская руда: %s",
     "tagprefix.neptune_stone": "Нептунианская руда: %s",
     "tagprefix.uranus_stone": "Ураническая руда: %s",
+    
     "block.gtmutils.pterb_machine": "§cМост Эйнштейна-Розена для §r§bпередачи энергии§r",
     "tooltip.pterb_machine.purpose": "Беспроводной активный трансформатор",
     "config.jade.plugin_gtmutils.pterb_info": "Инфо о §cPTERB§r",
     "tooltip.pterb_machine.frequencies": "§cPTERB§r-устройства на одной частоте будут беспроводным способом передавать энергию друг другу как единый активный трансформатор.§r",
     "gtmutils.pterb_machine.invalid_frequency": "§cPTERB§r не будет работать на частоте 0!",
+    
     "gtceu.machine.parallel_hatch_mk5.tooltip": "Позволяет выполнять до §54§r рецептов параллельно.",
     "gtceu.machine.parallel_hatch_mk6.tooltip": "Позволяет выполнять до §516§r рецептов параллельно.",
     "gtceu.machine.parallel_hatch_mk7.tooltip": "Позволяет выполнять до §564§r рецептов параллельно.",
     "gtceu.machine.parallel_hatch_mk8.tooltip": "Позволяет выполнять до §5256§r рецептов параллельно.",
+    
     "item.gtceu.terminal.tooltip": "Shift + ПКМ по контроллеру мультиблока, чтобы автоматически построить его, используя блоки из вашего инвентаря.",
+    
     "gtceu.grapplemod.repair": "Рецепт ремонта, сохраняющий улучшения. §lНИКОГДА не объединяйте два крюка, иначе вы потеряете ВСЕ улучшения!§r",
     "gtceu.grapplemod.upgrades.maxlen": "Увеличивает §lмакс. длину§r на 20, вплоть до 200.",
     "gtceu.grapplemod.downgrades.maxlen": "Уменьшает §lмакс. длину§r на 20, вплоть до 20. (Верёвка возвращается).",
@@ -90,4 +100,5 @@
     "gtceu.grapplemod.downgrades.vertical_throwing_angle": "Уменьшает §lвертикальный угол броска§r крюка на 5°, вплоть до 0°.",
     "gtceu.grapplemod.upgrades.angle": "Увеличивает §lгоризонтальный угол§r броска ваших §lдвойных крюков§r на 5°, вплоть до 90°.\nДоступно только при установленном двойном крюке.",
     "gtceu.grapplemod.downgrades.angle": "Уменьшает §lгоризонтальный угол§r броска ваших §lдвойных крюков§r на 5°, вплоть до 5°.\nДоступно только при установленном двойном крюке."
+
 }
