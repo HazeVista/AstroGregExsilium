@@ -535,6 +535,15 @@ ServerEvents.recipes(event => {
         B: 'gtceu:wrought_iron_rotor'
     })
     .addMaterialInfo()
+
+    gt.shaped('4x create:chute', [
+        ' A ',
+        'ABA',
+        ' A '
+    ], {
+        A: 'gtceu:wrought_iron_plate',
+        B: '#forge:tools/hammers'
+    })
     //#endregion
 
 

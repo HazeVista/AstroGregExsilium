@@ -169,6 +169,14 @@ ServerEvents.recipes(event => {
       B: 'minecraft:string',
       C: 'minecraft:gunpowder'
     })
+
+    gt.shaped('minecraft:flint_and_steel', [
+      'A ',
+      ' B'
+    ], {
+      A: 'gtceu:iron_rod',
+      B: 'minecraft:flint'
+    })
     //#endregion
 
     
@@ -441,7 +449,7 @@ ServerEvents.recipes(event => {
     event.recipes.create.pressing('astrogreg:compressed_livingclay', 'astrogreg:livingclay_dust')
     event.recipes.create.pressing('gtceu:compressed_clay', 'minecraft:clay_ball')
 
-    event.recipes.farmersdelight.cutting('#minecraft:smelts_to_glass', '#forge:tools/shovels', ['minecraft:clay_ball', 'minecraft:clay_ball'])
+    event.recipes.farmersdelight.cutting('#minecraft:smelts_to_glass', '#forge:tools/shovels', [Item.of('minecraft:clay_ball').withChance(0.8)])
 
     event.campfireCooking('minecraft:brick', 'gtceu:compressed_clay', 0, 160)
     event.campfireCooking('gtceu:firebrick', 'gtceu:compressed_fireclay', 0, 160)
@@ -898,4 +906,11 @@ ServerEvents.recipes(event => {
     event.shapeless('3x gtceu:brass_dust', ['gtceu:zinc_dust', 'gtceu:copper_dust', 'gtceu:copper_dust', 'gtceu:copper_dust'])
     event.shapeless('gtceu:electrum_dust', ['gtceu:gold_dust', 'gtceu:silver_dust'])
     //#endregion
+})
+
+BlockEvents.rightClicked('minecraft:dirt', event => {
+  if (event.item.id !== 'minecraft:bone_meal') return
+    event.block.set('minecraft:grass_block')
+    event.item.count--
+    event.player.playSound('minecraft:item.bone_meal.use')
 })
