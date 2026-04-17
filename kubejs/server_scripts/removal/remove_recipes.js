@@ -62,7 +62,8 @@ ServerEvents.recipes(event => {
         'expatternprovider:tag_export_bus', 'expatternprovider:mod_storage_bus', 'expatternprovider:mod_export_bus', 'gtceu:steam_grinder', 'gtceuterminal:dismantler', 'create:electron_tube',
         'astrogreg:double_flux_plate', 'astrogreg:small_flux_dust', 'astrogreg:tiny_flux_dust', 'astrogreg:double_andesite_alloy_plate', 'gtceu:wood_wall', 'gtceu:resin_circuit_board',
         'minecraft:powderbarrel', 'ad_astra:coal_generator', 'minecraft:crossbow', 'create:propeller', 'create:encased_fan', 'ae2:speed_card', 'minecraft:stonecutter', 'gtceuterminal:energy_analyzer',
-        'gtceu:mv_buffer', 'gtceu:hv_buffer', 'gtceu:lv_buffer', 'exposure:interplanar_projector', 'minecraft:tinted_glass', 'minecraft:flint_and_steel', 'create:chute'
+        'gtceu:mv_buffer', 'gtceu:hv_buffer', 'gtceu:lv_buffer', 'exposure:interplanar_projector', 'minecraft:tinted_glass', 'minecraft:flint_and_steel', 'create:chute', 'ae2:nether_quartz_wrench',
+        'ae2:certus_quartz_wrench',
     ])
     //#endregion
 
@@ -146,8 +147,8 @@ ServerEvents.recipes(event => {
         'gtceu:forge_hammer/hammer_flux_to_plate', 'gtceu:shaped/plate_flux', 'gtceu:bender/bend_flux_to_plate', 'gtceu:shaped/stick_flux', 'gtceu:arc_furnace/arc_flux_dust', 'gtceu:smelting/smelt_dust_flux_to_ingot', 
         'gtceu:alloy_smelter/alloy_smelt_flux_dust_to_block', 'create:crafting/kinetics/super_glue', 'expatternprovider:active_formation_plane', 'expatternprovider:cobblestone_cell', 'expatternprovider:water_cell',
         'gtceu:assembler/cover_infinite_water', 'gtceu:shaped/mortar_manasteel', 'gtceu:shaped/mortar_terrasteel', 'gtceu:shaped/mortar_elementium', 'gtceu:shaped/mortar_gaiasteel', 'minecraft:sticky_piston',
-        'gtceu:shaped/sticky_piston_resin', 'create:crafting/kinetics/sticky_mechanical_piston', 'exposure:album', 'exposure:camera', 'exposure:black_and_white_film', 'exposure:color_film',
-        'gtceu:centrifuge/mycelium_separation', 
+        'gtceu:shaped/sticky_piston_resin', 'create:crafting/kinetics/sticky_mechanical_piston', 'exposure:album', 'exposure:camera', 'exposure:black_and_white_film', 'exposure:color_film', 
+        'functionalstorage:oak_drawer_alternate_1x', 'gtceu:centrifuge/mycelium_separation', 
     
     ])
     //#endregion

@@ -169,7 +169,7 @@ ServerEvents.recipes(event => {
         B: 'minecraft:redstone'
     })
 
-    event.shapeless('minecraft:coarse_dirt', ['minecraft:dirt', '#forge:gravel'])
+    event.shapeless('2x minecraft:coarse_dirt', ['minecraft:dirt', '#forge:gravel'])
     //#endregion
 
 

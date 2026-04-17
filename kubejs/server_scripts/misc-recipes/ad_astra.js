@@ -160,4 +160,33 @@ ServerEvents.recipes(event => {
         .duration(100)
         .EUt(28)
         .addMaterialInfo(true)
+
+    gt.shaped('ad_astra:space_suit', [
+        'A A',
+        'CDC',
+        'BAB'
+    ], {
+        A: 'farmersdelight:canvas',
+        B: 'gtceu:steel_plate',
+        C: 'ad_astra:gas_tank',
+        D: 'ad_astra:oxygen_gear'
+    })
+
+    gt.shaped('ad_astra:space_pants', [
+        'AAA',
+        'B B',
+        'A A'
+    ], {
+        A: 'farmersdelight:canvas',
+        B: 'gtceu:steel_plate'
+    })
+
+    gt.shaped('ad_astra:space_boots', [
+        'A A',
+        'B B',
+        '   '
+    ], {
+        A: 'farmersdelight:canvas',
+        B: 'gtceu:steel_plate'
+    })
 })

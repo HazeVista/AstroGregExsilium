@@ -18,7 +18,8 @@ const infuser = event.recipes.gtceu.mana_infusion
         ['botania:piston_relay', 'minecraft:piston', 150, 300, 28],
         ['botania:grass_seeds', '#forge:grass', 25, 80, 7],
         ['botania:mycelium_seeds', '#forge:mushrooms', 25, 80, 7],
-        ['botania:podzol_seeds', 'minecraft:dead_bush', 25, 80, 7]
+        ['botania:podzol_seeds', 'minecraft:dead_bush', 25, 80, 7],
+        ['botania:fertilizer', 'minecraft:bone_meal', 1, 100, 7]
     ]
 
     basic_infusions.forEach(([output, input, mana, duration, eu]) => {

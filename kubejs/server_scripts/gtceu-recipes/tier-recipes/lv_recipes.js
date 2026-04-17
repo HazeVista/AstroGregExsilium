@@ -191,9 +191,16 @@ ServerEvents.recipes(event => {
         .duration(200)
         .EUt(28)
 
-    gt.alloy_smelter('alloy_blast_etrium')
+    gt.alloy_smelter('alloy_etrium')
+        .itemInputs('3x astrogreg:ostrum_dust', '2x gtceu:electrum_dust')
+        .itemOutputs('5x astrogreg:etrium_ingot')
+        .duration(300)
+        .EUt(28)
+
+    gt.alloy_blast_smelter('alloy_blast_etrium')
         .itemInputs('3x astrogreg:ostrum_dust', '2x gtceu:electrum_dust')
         .outputFluids('astrogreg:etrium 720')
+        .circuit(10)
         .duration(200)
         .EUt(28)
 
@@ -202,13 +209,6 @@ ServerEvents.recipes(event => {
         .itemOutputs('3x astrogreg:blazing_etrium_dust')
         .duration(300)
         .EUt(28)
-
-    gt.alloy_smelter('alloy_blast_blazing_etrium')
-        .itemInputs('2x astrogreg:etrium_dust', 'minecraft:blaze_powder')
-        .outputFluids('astrogreg:blazing_etrium 432')
-        .duration(300)
-        .EUt(28)
-
     //#endregion
 
 

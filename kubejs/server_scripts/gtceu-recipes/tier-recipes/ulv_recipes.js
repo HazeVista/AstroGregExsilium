@@ -177,6 +177,19 @@ ServerEvents.recipes(event => {
       A: 'gtceu:iron_rod',
       B: 'minecraft:flint'
     })
+
+    gt.shaped('gtceu:primitive_blast_furnace', [
+      'ABC',
+      'DEB',
+      'FBC'
+    ], {
+      A: '#forge:tools/hammers',
+      B: 'gtceu:wrought_iron_rod',
+      C: 'gtceu:wrought_iron_screw',
+      D: 'gtceu:wrought_iron_plate',
+      E: 'gtceu::firebricks',
+      F: '#forge:tools/screwdrivers'
+    })
     //#endregion
 
     
@@ -197,6 +210,9 @@ ServerEvents.recipes(event => {
       100,
       'gtceu:brick_wooden_form'
     )
+
+    event.recipes.farmersdelight.cutting('#forge:glass/colorless', '#forge:tools/wire_cutters', [Item.of('gtceu:glass_tube').withChance(0.2)])
+
 
     event.shapeless('gtceu:rubber_ingot', 'gtceu:formed_rubber_ingot').replaceIngredient('gtceu:formed_rubber_ingot', 'gtceu:brick_wooden_form')
     event.shapeless('3x powah:steel_energized', 'gtceu:formed_energized_steel_ingot').replaceIngredient('gtceu:formed_energized_steel_ingot', 'gtceu:brick_wooden_form')
@@ -908,9 +924,21 @@ ServerEvents.recipes(event => {
     //#endregion
 })
 
+
+
+//#region agriculture
 BlockEvents.rightClicked('minecraft:dirt', event => {
   if (event.item.id !== 'minecraft:bone_meal') return
     event.block.set('minecraft:grass_block')
     event.item.count--
     event.player.playSound('minecraft:item.bone_meal.use')
 })
+
+
+ServerEvents.compostableRecipes(event => {
+
+  event.add('gtceu:ash_dust', 0.20)
+  event.add('gtceu:dark_ash_dust', 0.30)
+
+})
+//#endregion

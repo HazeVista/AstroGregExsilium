@@ -32,7 +32,7 @@ ServerEvents.recipes(event => {
         C: '#forge:glass'
     })
 
-    gt.shaped('storagenetwork:import_filter_kabel', [
+    gt.shaped('4x storagenetwork:import_filter_kabel', [
         ' A ',
         'ABA',
         ' A '
@@ -53,7 +53,7 @@ ServerEvents.recipes(event => {
     })
     .addMaterialInfo()
 
-    gt.shaped('storagenetwork:import_kabel', [
+    gt.shaped('8x storagenetwork:import_kabel', [
         ' B ',
         'BAB',
         ' B '
@@ -63,7 +63,7 @@ ServerEvents.recipes(event => {
     })
     .addMaterialInfo()
 
-    gt.shaped('storagenetwork:export_kabel', [
+    gt.shaped('8x storagenetwork:export_kabel', [
         ' B ',
         'BAB',
         ' B '
@@ -73,7 +73,7 @@ ServerEvents.recipes(event => {
     })
     .addMaterialInfo()
 
-    gt.shaped('storagenetwork:storage_kabel', [
+    gt.shaped('8x storagenetwork:storage_kabel', [
         ' A ',
         'ABA',
         ' A '
@@ -83,7 +83,7 @@ ServerEvents.recipes(event => {
     })
     .addMaterialInfo()
 
-    gt.shaped('storagenetwork:filter_kabel', [
+    gt.shaped('4x storagenetwork:filter_kabel', [
         ' A ',
         'ABA',
         ' A '
