@@ -1,0 +1,6 @@
+{
+    "values": [
+        "minecraft:spawn_item_check",
+        "minecraft:soulbound_items_check"
+    ]
+}
