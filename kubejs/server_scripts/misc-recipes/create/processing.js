@@ -123,8 +123,6 @@ ServerEvents.recipes(event => {
     //output, input
     const pressingRecipes = [
         ['gtceu:iron_ring', 'gtceu:iron_rod'],
-        ['2x gtceu:electrum_foil', 'gtceu:electrum_plate'],
-        ['2x gtceu:red_alloy_foil', 'gtceu:red_alloy_plate'],
         ['gtceu:obsidian_plate', 'gtceu:obsidian_dust'],
         ['gtceu:cocoa_dust', 'minecraft:cocoa_beans'],
         ['gtceu:wood_plate', 'gtceu:wood_dust'],
@@ -139,7 +137,7 @@ ServerEvents.recipes(event => {
 
     pressingRecipes.forEach(([output, input]) => {
         event.recipes.create.pressing(output, input);
-    });
+    })
 
     // event.recipes.create.pressing(
     //     ['astrogreg:energized_steel_plate'],
@@ -153,11 +151,17 @@ ServerEvents.recipes(event => {
         result: { item: "create:shaft", count: 4 }
     })
 
-    // event.custom({
-    //     type: "createaddition:rolling",
-    //     input: { item: "powah:steel_energized" },
-    //     result: { item: "astrogreg:energized_steel_rod", count: 2 }
-    // })
+    event.custom({
+        type: "createaddition:rolling",
+        input: { item: "gtceu:red_alloy_plate" },
+        result: { item: "2x gtceu:red_alloy_foil", count: 2 }
+    })
+
+    event.custom({
+        type: "createaddition:rolling",
+        input: { item: "gtceu:electrum_plate" },
+        result: { item: "2x gtceu:electrum_foil", count: 2 }
+    })
     //#endregion
 
 
@@ -194,7 +198,7 @@ ServerEvents.recipes(event => {
 
         // PLATE to FOIL
         event.custom({
-            type: "create:pressing",
+            type: "createaddition:rolling",
             ingredients: [{ item: plate }],
             results: [{ item: foil, count: 2 }]
         })

@@ -47,7 +47,7 @@ ServerEvents.recipes(event => {
         'ACA',
         ' B '
     ], {
-        A: 'gtceu:wood_crate',
+        A: 'minecraft:chest',
         B: 'minecraft:redstone',
         C: 'laserio:logic_chip'
     })
@@ -79,7 +79,7 @@ ServerEvents.recipes(event => {
         ' A '
     ], {
         A: 'storagenetwork:kabel',
-        B: 'gtceu:wood_crate'
+        B: 'minecraft:chest'
     })
     .addMaterialInfo()
 
@@ -153,7 +153,7 @@ ServerEvents.recipes(event => {
         'BAB',
         'CBC'
     ], {
-        A: 'gtceu:wood_crate',
+        A: 'minecraft:chest',
         B: 'storagenetwork:kabel',
         C: 'gtceu:potin_screw'
     })

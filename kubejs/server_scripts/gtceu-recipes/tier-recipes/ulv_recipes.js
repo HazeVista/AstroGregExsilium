@@ -187,7 +187,7 @@ ServerEvents.recipes(event => {
       B: 'gtceu:wrought_iron_rod',
       C: 'gtceu:wrought_iron_screw',
       D: 'gtceu:wrought_iron_plate',
-      E: 'gtceu::firebricks',
+      E: 'gtceu:firebricks',
       F: '#forge:tools/screwdrivers'
     })
 
@@ -209,7 +209,7 @@ ServerEvents.recipes(event => {
 
     gt.shaped('astrogreg:large_primitive_composter', [
       'ABC',
-      'BED',
+      'GED',
       'FBC'
     ], {
       A: '#forge:tools/hammers',
@@ -217,7 +217,8 @@ ServerEvents.recipes(event => {
       C: 'gtceu:iron_screw',
       D: '#forge:tools/saws',
       E: 'gtceu:pump_deck',
-      F: '#forge:tools/screwdrivers'
+      F: '#forge:tools/screwdrivers',
+      G: 'gtceu:iron_rod'
     })
     //#endregion
 

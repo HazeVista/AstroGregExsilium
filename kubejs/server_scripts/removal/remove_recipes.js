@@ -148,7 +148,7 @@ ServerEvents.recipes(event => {
         'gtceu:alloy_smelter/alloy_smelt_flux_dust_to_block', 'create:crafting/kinetics/super_glue', 'expatternprovider:active_formation_plane', 'expatternprovider:cobblestone_cell', 'expatternprovider:water_cell',
         'gtceu:assembler/cover_infinite_water', 'gtceu:shaped/mortar_manasteel', 'gtceu:shaped/mortar_terrasteel', 'gtceu:shaped/mortar_elementium', 'gtceu:shaped/mortar_gaiasteel', 'minecraft:sticky_piston',
         'gtceu:shaped/sticky_piston_resin', 'create:crafting/kinetics/sticky_mechanical_piston', 'exposure:album', 'exposure:camera', 'exposure:black_and_white_film', 'exposure:color_film', 
-        'functionalstorage:oak_drawer_alternate_1x', 'gtceu:centrifuge/mycelium_separation', 
+        'functionalstorage:oak_drawer_alternate_1x', 'gtceu:centrifuge/mycelium_separation', 'gtceu:shaped/bronze_primitive_blast_furnace'
     
     ])
     //#endregion
