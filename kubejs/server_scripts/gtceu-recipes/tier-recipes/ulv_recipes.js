@@ -213,7 +213,7 @@ ServerEvents.recipes(event => {
       'FBC'
     ], {
       A: '#forge:tools/hammers',
-      D: 'gtceu:iron_plate',
+      B: 'gtceu:iron_plate',
       C: 'gtceu:iron_screw',
       D: '#forge:tools/saws',
       E: 'gtceu:pump_deck',

@@ -184,7 +184,6 @@ ServerEvents.recipes(event => {
 
 
     //#region etrium
-
     gt.mixer('mix_etrium_dust')
         .itemInputs('3x astrogreg:ostrum_dust', '2x gtceu:electrum_dust')
         .itemOutputs('5x astrogreg:etrium_dust')
@@ -193,7 +192,7 @@ ServerEvents.recipes(event => {
 
     gt.alloy_smelter('alloy_etrium')
         .itemInputs('3x astrogreg:ostrum_dust', '2x gtceu:electrum_dust')
-        .itemOutputs('5x astrogreg:etrium_ingot')
+        .itemOutputs('5x ad_astra:etrium_ingot')
         .duration(300)
         .EUt(28)
 
