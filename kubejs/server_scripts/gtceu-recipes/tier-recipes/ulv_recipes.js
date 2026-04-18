@@ -190,6 +190,35 @@ ServerEvents.recipes(event => {
       E: 'gtceu::firebricks',
       F: '#forge:tools/screwdrivers'
     })
+
+    gt.shaped('minecraft:composter', [
+      'A A',
+      'ABA',
+      'AAA'
+    ], {
+      A: 'gtceu:treated_wood_planks',
+      B: '#forge:tools/saws'
+    })
+
+    gt.assembler('composter')
+      .itemInputs('7x gtceu:treated_wood_planks')
+      .itemOutputs('minecraft:composter')
+      .circuit(7)
+      .duration(10)
+      .EUt(7)
+
+    gt.shaped('astrogreg:large_primitive_composter', [
+      'ABC',
+      'BED',
+      'FBC'
+    ], {
+      A: '#forge:tools/hammers',
+      D: 'gtceu:iron_plate',
+      C: 'gtceu:iron_screw',
+      D: '#forge:tools/saws',
+      E: 'gtceu:pump_deck',
+      F: '#forge:tools/screwdrivers'
+    })
     //#endregion
 
     
