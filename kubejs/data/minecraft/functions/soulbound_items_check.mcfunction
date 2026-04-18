@@ -1,0 +1,2 @@
+execute as @e[type=minecraft:item,nbt={Item:{tag:{Soulbound:1b}}}] unless data entity @s Thrower store result score @s id run data get entity @s Item.tag.Owner
+execute as @a at @s as @e[type=minecraft:item,nbt={Item:{tag:{Soulbound:1b}}}] if score @s id = @p[distance=..0.1] id run function minecraft:soulbound_items
