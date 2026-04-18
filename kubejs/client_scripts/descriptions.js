@@ -309,6 +309,14 @@ ItemEvents.tooltip(event => {
         { line: 1, text: 'astrogreg.pcc.tooltip' }
     ])
 
+    tipTooltip(event, 'create:water_wheel', [
+        { text: 'astrogreg.waterwheel.penalty.tooltip' }   
+    ])
+
+    tipTooltip(event, 'create:large_water_wheel', [
+        { text: 'astrogreg.waterwheel.penalty.tooltip' }   
+    ])
+
     tipTooltip(event, 'gtceu:configurable_maintenance_hatch', [
         { line: 1, text: 'gtceu.machine.maintenance_hatch_configurable.tooltip.0' },
         { line: 2, text: 'gtceu.machine.maintenance_hatch_configurable.tooltip.1' }

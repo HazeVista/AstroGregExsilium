@@ -105,6 +105,8 @@
     
     "astrogreg.pcc.tooltip": "Multiblock Functionality §4Disabled§r",
 
+    "astrogreg.waterwheel.penalty.description": "§o§7Each additional water wheel on the same kinetic network produces diminishing returns. Output is reduced by a compounding 5% per extra wheel, rounded down to the nearest full unit.",
+
     "item.astrogreg.lv_rocket_engine": "§7LV§r Rocket Engine",
     "item.astrogreg.mv_rocket_engine": "§bMV§r Rocket Engine",
     "item.astrogreg.hv_rocket_engine": "§6HV§r Rocket Engine",

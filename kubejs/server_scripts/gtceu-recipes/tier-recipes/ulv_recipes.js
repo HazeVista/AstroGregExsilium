@@ -925,20 +925,9 @@ ServerEvents.recipes(event => {
 })
 
 
-
-//#region agriculture
 BlockEvents.rightClicked('minecraft:dirt', event => {
   if (event.item.id !== 'minecraft:bone_meal') return
     event.block.set('minecraft:grass_block')
     event.item.count--
     event.player.playSound('minecraft:item.bone_meal.use')
 })
-
-
-ServerEvents.compostableRecipes(event => {
-
-  event.add('gtceu:ash_dust', 0.20)
-  event.add('gtceu:dark_ash_dust', 0.30)
-
-})
-//#endregion
