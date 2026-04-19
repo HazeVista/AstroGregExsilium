@@ -191,22 +191,6 @@ ServerEvents.recipes(event => {
       F: '#forge:tools/screwdrivers'
     })
 
-    gt.shaped('minecraft:composter', [
-      'A A',
-      'ABA',
-      'AAA'
-    ], {
-      A: 'gtceu:treated_wood_planks',
-      B: '#forge:tools/saws'
-    })
-
-    gt.assembler('composter')
-      .itemInputs('7x gtceu:treated_wood_planks')
-      .itemOutputs('minecraft:composter')
-      .circuit(7)
-      .duration(10)
-      .EUt(7)
-
     gt.shaped('astrogreg:large_primitive_composter', [
       'ABC',
       'GED',
@@ -924,6 +908,8 @@ ServerEvents.recipes(event => {
       .EUt(2)
 
     event.shapeless('9x astrogreg:kuiper_slime_ball', 'astrogreg:kuiper_slime_block')
+
+    event.smelting('gtceu:sticky_resin', '#forge:slime_ball')
     //#endregion
 
 

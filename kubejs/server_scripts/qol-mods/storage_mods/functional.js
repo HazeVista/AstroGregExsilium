@@ -67,7 +67,7 @@ ServerEvents.recipes(event => {
         'BAB',
         'CBC'
     ], {
-        A: 'gtceu:lv_emitter',
+        A: '#gtceu:circuits/ulv',
         B: '#forge:smooth_stone',
         C: 'gtceu:iron_plate'
     })

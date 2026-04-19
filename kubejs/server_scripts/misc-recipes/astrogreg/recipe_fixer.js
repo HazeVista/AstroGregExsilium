@@ -74,6 +74,26 @@ ServerEvents.recipes(event => {
 
 
     //#region botania metals
-    
+    const botMetals = [
+        'manasteel', 'terrasteel', 'elementium', 'gaiasteel'
+    ]
+
+    botMetals.forEach((metal) => {
+
+        event.recipes.gtceu.shaped(`gtbotania:${metal}_wire_cutters`, [
+            'DAD',
+            'BDC',
+            'EFE'
+        ],{
+            A: '#forge:tools/files',
+            B: '#forge:tools/hammers',
+            C: '#forge:tools/screwdrivers',
+            D: `gtbotania:${metal}_plate`,
+            E: `gtbotania:${metal}_rod`,
+            F: `gtbotania:${metal}_screw`
+        })
+        .addMaterialInfo()
+
+    })
     //#endregion
 })

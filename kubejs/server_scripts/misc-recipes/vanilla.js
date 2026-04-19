@@ -170,6 +170,7 @@ ServerEvents.recipes(event => {
     })
 
     event.shapeless('2x minecraft:coarse_dirt', ['minecraft:dirt', '#forge:gravel'])
+    event.shapeless('1x minecraft:dirt', ['minecraft:coarse_dirt', '#forge:tools/hoes'])
     //#endregion
 
 
