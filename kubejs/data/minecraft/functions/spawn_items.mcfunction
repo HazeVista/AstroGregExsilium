@@ -19,7 +19,7 @@ summon item ~ ~ ~ {Tags:["current_item"],Item:{id:"ad_astra:space_pants",Count:1
 summon item ~ ~ ~ {Tags:["current_item"],Item:{id:"ad_astra:space_boots",Count:1b,tag:{Soulbound:1b,display:{Lore:['[{"text":"Soulbound","italic":false}]']}}},PickupDelay:0s}
 
 # Assign the same id to items tag.owner
-execute as @e[type=item,tag=current_item] store result entity @s Item.tag.owner int 1 run scoreboard players get id id
+execute as @e[type=item,tag=current_item] store result entity @s Item.tag.Owner int 1 run scoreboard players get id id
 # Set items owner data from the UUID of the current player
 execute as @e[type=item,tag=current_item] run data modify entity @s Owner set from entity @p[tag=current_player] UUID
 # Set items tag.OUUID data from their own Owner data (that has already been updated previously)
