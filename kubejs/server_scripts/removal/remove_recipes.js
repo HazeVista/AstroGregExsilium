@@ -198,30 +198,30 @@ ServerEvents.recipes(event => {
     event.remove({ output: '#forge:wires' })
     event.remove({ input: '#forge:wires' })
 
-    event.remove({ id: /.*expatternprovider.*cutter.*/ });
-    event.remove({ input: /gtceu:.*_charger_4x/ });
-    event.remove({ output: /gtceu:.*_charger_4x/ });
-    event.remove({ input: /gtceu:.*_energy_converter/ });
-    event.remove({ input: /gtmutils:.*_energy_converter/ });
-    event.remove({ output: /gtceu:.*_energy_converter/ });
-    event.remove({ output: /gtmutils:.*_energy_converter/ });
-    event.remove({ input: /gtmutils:.*_auto_charger_4x/ });
-    event.remove({ output: /gtmutils:.*_auto_charger_4x/ });
-    event.remove({ output: /ad_astra:.*_sliding_door/ });
-    event.remove({ output: /ad_extendra:.*_sliding_door/ });
-    event.remove({ output: /create:.*_(sheet|ingot|plate|dust)/ });
-    event.remove({ output: /farmersdelight:.*_knife/ });
-    event.remove({ output: /botania:.*(rod|pylon|cloak)/ });
-    event.remove({ id: /botania:glimmering_.*/ });
-    event.remove({ id: /botania:.*_ring(_greater)?/ });
-    event.remove({ id: /botania:spark_upgrade_.*/ });
-    event.remove({ output: /botania:rune_.*/ });
-    event.remove({ output: /botania:quartz_.*/ });
-    event.remove({ id: /gtceu:(cutter|shaped)\/.*_slab/ });
-    event.remove({ id: /ae2:network\/cells\/.*_storage_cell_.*/ });
-    event.remove({ id: /ad_astra:radium_.*/ });
-    event.remove({ output: /ad_extendra:.*_tank/ });
-    event.remove({ output: /gtceu:.*_air_scrubber/ });
+    event.remove({ id: /.*expatternprovider.*cutter.*/ })
+    event.remove({ input: /gtceu:.*_charger_4x/ })
+    event.remove({ output: /gtceu:.*_charger_4x/ })
+    event.remove({ input: /gtceu:.*_energy_converter/ })
+    event.remove({ input: /gtmutils:.*_energy_converter/ })
+    event.remove({ output: /gtceu:.*_energy_converter/ })
+    event.remove({ output: /gtmutils:.*_energy_converter/ })
+    event.remove({ input: /gtmutils:.*_auto_charger_4x/ })
+    event.remove({ output: /gtmutils:.*_auto_charger_4x/ })
+    event.remove({ output: /ad_astra:.*_sliding_door/ })
+    event.remove({ output: /ad_extendra:.*_sliding_door/ })
+    event.remove({ output: /create:.*_(sheet|ingot|plate|dust)/ })
+    event.remove({ output: /farmersdelight:.*_knife/ })
+    event.remove({ output: /botania:.*(rod|pylon|cloak)/ })
+    event.remove({ id: /botania:glimmering_.*/ })
+    event.remove({ id: /botania:.*_ring(_greater)?/ })
+    event.remove({ id: /botania:spark_upgrade_.*/ })
+    event.remove({ output: /botania:rune_.*/ })
+    event.remove({ output: /botania:quartz_.*/ })
+    event.remove({ id: /gtceu:(cutter|shaped)\/.*_slab/ })
+    event.remove({ id: /ae2:network\/cells\/.*_storage_cell_.*/ })
+    event.remove({ id: /ad_astra:radium_.*/ })
+    event.remove({ output: /ad_extendra:.*_tank/ })
+    event.remove({ output: /gtceu:.*_air_scrubber/ })
     event.remove({ output: /minecraft:.*_armor_trim_smithing_template/ })
     event.remove({ id: /farmersdelight:.*_pie_from_slixes/ })
     event.remove({ id: /delightful:food\/.*_pie_from_slices/ })
@@ -240,6 +240,7 @@ ServerEvents.recipes(event => {
     event.remove({ id: /botania:dye_.*/ })
     event.remove({ id: /minecraft:.*_dye_from_.*/ })
     event.remove({ output: /create:.*_toolbox/ })
+    event.remove({ output: /gtbotania:.*_drill_head/ })
     //#endregion
 
 })

@@ -21,14 +21,14 @@ ServerEvents.recipes(event => {
     })
     .addMaterialInfo()
 
-    event.shaped('waystones:warp_stone', [
+    event.shaped('2x waystones:warp_stone', [
         'BCB',
         'CAC',
         'BCB'
     ], {
         A: 'minecraft:ender_pearl',
-        B: 'create:rose_quartz',
-        C: 'minecraft:quartz'
+        B: 'gtceu:ruby_gem',
+        C: 'gtceu:sapphire_gem'
     })
 
     event.shaped('2x waystones:warp_dust', [
@@ -36,11 +36,21 @@ ServerEvents.recipes(event => {
     ], {
         A: 'gtceu:ender_pearl_dust',
         B: 'gtceu:flint_dust'
-    });
+    })
+
+    event.shaped('waystones:waystone', [
+        ' A ',
+        'ABA',
+        'CCC'
+    ], {
+        A: 'astrogreg:smooth_asteroid_stone',
+        B: 'waystones:warp_stone', 
+        C: 'minecraft:obsidian'
+    })
 
     event.recipes.gtceu.mixer('mixing_warp_dust')
-        .itemInputs('gtceu:ender_pearl_dust', 'gtceu:flint_dust')
-        .itemOutputs('2x waystones:warp_dust')
+        .itemInputs('gtceu:ender_pearl_dust', '2x gtceu:flint_dust')
+        .itemOutputs('3x waystones:warp_dust')
         .duration(80)
         .EUt(7)
 })

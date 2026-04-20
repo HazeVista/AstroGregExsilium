@@ -134,7 +134,7 @@ ServerEvents.recipes(event => {
     //#region ender air
     gt.centrifuge('centrifuge_ender_air')
         .inputFluids('gtceu:ender_air 10000')
-        .chancedOutput('gtceu:ender_pearl_dust', 2500, 0)
+        .chancedOutput('minecraft:blaze_powder', 2500, 0)
         .outputFluids('gtceu:nitrogen_dioxide 6100', 'gtceu:deuterium 2500')
         .duration(400)
 

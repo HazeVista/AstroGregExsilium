@@ -310,7 +310,7 @@ ServerEvents.recipes(event => {
 
 
     //#region voltage coils
-    event.recipes.create.mechanical_crafting('gtceu:lv_voltage_coil', [
+    event.recipes.create.mechanical_crafting('gtceu:ulv_voltage_coil', [
         ' A A ',
         'AAAAA',
         ' ABA ',

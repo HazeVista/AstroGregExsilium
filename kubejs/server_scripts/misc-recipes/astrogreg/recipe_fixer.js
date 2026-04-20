@@ -1,5 +1,7 @@
 ServerEvents.recipes(event => {
 
+    const gt = event.recipes.gtceu
+
     //#region energized_steel
     event.shaped('powah:energized_steel_block', [
         'AAA',
@@ -75,25 +77,55 @@ ServerEvents.recipes(event => {
 
     //#region botania metals
     const botMetals = [
-        'manasteel', 'terrasteel', 'elementium', 'gaiasteel'
+        ['manasteel', 'botania'], 
+        ['terrasteel', 'botania'], 
+        ['elementium', 'botania'], 
+        ['gaiasteel', 'botanicadds'],
+        ['gaiaforged_naquadah', 'gtbotania']
     ]
 
-    botMetals.forEach((metal) => {
+    botMetals.forEach(([metal, mod]) => {
 
-        event.recipes.gtceu.shaped(`gtbotania:${metal}_wire_cutters`, [
-            'DAD',
-            'BDC',
-            'EFE'
-        ],{
+        gt.shaped(`gtbotania:${metal}_rod`, [
+            'A ',
+            ' B'
+        ], {
             A: '#forge:tools/files',
-            B: '#forge:tools/hammers',
-            C: '#forge:tools/screwdrivers',
-            D: `gtbotania:${metal}_plate`,
-            E: `gtbotania:${metal}_rod`,
-            F: `gtbotania:${metal}_screw`
+            B: `${mod}:${metal}_ingot`
         })
-        .addMaterialInfo()
+
+        gt.lathe(`lathe_${metal}_ingot_to_rod`)
+            .itemInputs(`${mod}:${metal}_ingot`)
+            .itemOutputs(`2x gtbotania:${metal}_rod`)
+            .duration(100)
+            .EUt(16)
+
+        gt.extruder(`extrude_${metal}_ingot_to_rod`)
+            .notConsumable('gtceu:rod_extruder_mold')
+            .itemInputs(`${mod}:${metal}_ingot`)
+            .itemOutputs(`2x gtbotania:${metal}_rod`)
+            .duration(100)
+            .EUt(42)
 
     })
+
+    gt.cutter('cut_long_gaiaforged_naquadah_rod_to_rod')
+        .itemInputs('gtbotania:long_gaiaforged_naquadah_rod')
+        .itemOutputs('2x gtbotania:gaiaforged_naquadah_rod')
+        .duration(50)
+        .EUt(4)
+
+    gt.shaped('gtbotania:long_gaiaforged_naquadah_rod', [
+        'ABA'
+    ], {
+        A: 'gtbotania:gaiaforged_naquadah_rod',
+        B: '#forge:tools/hammers'
+    })
+
+    gt.forge_hammer('forge_hammer_gaiaforged_naquadah_rod_to_long_rod')
+        .itemInputs('2x gtbotania:gaiaforged_naquadah_rod')
+        .itemOutputs('gtbotania:long_gaiaforged_naquadah_rod')
+        .duration(60)
+        .EUt(16)
     //#endregion
 })

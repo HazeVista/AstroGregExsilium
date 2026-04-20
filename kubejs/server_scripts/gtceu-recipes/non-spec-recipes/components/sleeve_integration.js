@@ -246,6 +246,28 @@ ServerEvents.recipes(event => {
 
     }
 
+    const botDrillHeads = ['manasteel', 'terrasteel', 'elementium', 'gaiasteel'] 
+
+    botDrillHeads.forEach(botHead)
+
+    function botHead(material) {
+        
+        event.recipes.gtceu.shaped(`gtbotania:${material}_drill_head`, [
+            'CCE',
+            'ABC',
+            'DAC'
+        ], {
+            A: 'gtceu:steel_plate',
+            B: 'gtceu:steel_sleeve',
+            C: `gtbotania:${material}_plate`,
+            D: '#forge:tools/hammers',
+            E: '#forge:tools/files'
+        })
+        .id(`${material}_drill_head`)
+        .addMaterialInfo()
+
+    }
+
     //#endregion
 
 
