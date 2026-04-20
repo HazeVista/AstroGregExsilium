@@ -204,6 +204,14 @@ ServerEvents.recipes(event => {
       F: '#forge:tools/screwdrivers',
       G: 'gtceu:iron_rod'
     })
+
+    gt.shaped('gtceu:obsidian_dust', [
+      'A',
+      'B'
+    ], {
+      A: 'minecraft:obsidian',
+      B: '#forge:tools/mortars'
+    })
     //#endregion
 
     
@@ -910,6 +918,8 @@ ServerEvents.recipes(event => {
     event.shapeless('9x astrogreg:kuiper_slime_ball', 'astrogreg:kuiper_slime_block')
 
     event.smelting('gtceu:sticky_resin', '#forge:slime_ball')
+
+    event.campfireCooking('gtceu:raw_rubber_dust', '2x gtceu:sticky_resin', 0, 400)
     //#endregion
 
 
@@ -937,6 +947,28 @@ ServerEvents.recipes(event => {
     event.shapeless('gtceu:red_alloy_dust', ['gtceu:copper_dust', 'minecraft:redstone', 'minecraft:redstone', 'minecraft:redstone', 'minecraft:redstone'])
     event.shapeless('3x gtceu:brass_dust', ['gtceu:zinc_dust', 'gtceu:copper_dust', 'gtceu:copper_dust', 'gtceu:copper_dust'])
     event.shapeless('gtceu:electrum_dust', ['gtceu:gold_dust', 'gtceu:silver_dust'])
+    //#endregion
+
+
+
+    //#region item collectors
+    gt.shaped('itemcollectors:basic_collector', [
+      'B',
+      'A'
+    ], {
+      A: 'gtceu:obsidian_plate',
+      B: 'minecraft:ender_pearl'
+    })
+
+    gt.shaped('itemcollectors:advanced_collector', [
+      'A',
+      'B',
+      'C'
+    ], {
+      A: 'gtceu:item_filter',
+      B: 'itemcollectors:basic_collector',
+      C: 'gtceu:obsidian_plate'
+    })
     //#endregion
 })
 

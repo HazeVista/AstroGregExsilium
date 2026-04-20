@@ -544,6 +544,16 @@ ServerEvents.recipes(event => {
         A: 'gtceu:wrought_iron_plate',
         B: '#forge:tools/hammers'
     })
+
+    gt.shaped('create:goggles', [
+        ' A ',
+        'CBC',
+        '   '
+    ], {
+        A: 'farmersdelight:straw',
+        B: 'gtceu:gold_plate',
+        C: '#forge:glass'
+    })
     //#endregion
 
 

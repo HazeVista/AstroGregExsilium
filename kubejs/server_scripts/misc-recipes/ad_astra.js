@@ -24,7 +24,7 @@ ServerEvents.recipes(event => {
         B: 'gtceu:ulv_machine_hull',
         C: 'gtceu:steel_plate',
         D: 'gtceu:tin_rotor',
-        E: 'gtceu:fluid_filter'
+        E: 'gtceu:item_filter'
     })
     .addMaterialInfo()
 
