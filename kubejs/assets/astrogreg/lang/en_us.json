@@ -105,7 +105,7 @@
     
     "astrogreg.pcc.tooltip": "Multiblock Functionality §4Disabled§r",
 
-    "astrogreg.waterwheel.penalty.description": "§o§7Each additional water wheel on the same kinetic network produces diminishing returns. Output is reduced by a compounding 5% per extra wheel, rounded down to the nearest full unit.",
+    "astrogreg.waterwheel.penalty.tooltip": "§o§7Each additional water wheel on the same kinetic network produces diminishing returns. Output is reduced by a compounding 2 percent per extra wheel, rounded down to the nearest full unit.",
 
     "item.astrogreg.lv_rocket_engine": "§7LV§r Rocket Engine",
     "item.astrogreg.mv_rocket_engine": "§bMV§r Rocket Engine",
@@ -275,6 +275,38 @@
     "questbook.astrogreg.introduction_4.description": "Well integrated, but optional early game Create, along with an optional Steam Age. Both are incentivized well in order to encourage diverse play styles.",
     "questbook.astrogreg.introduction_5.description": "Popular quality of life mods with significant Greggifications, such as Functional Storage, Grappling Hooks, Flux Networks, LaserIO, and more!",
     "questbook.astrogreg.introduction_6.description": "Tons of unique multiblock logic thanks to our Core Mod, AstroCore, for seamless integration between GregTech and other mods in the pack.",
-    "questbook.astrogreg.introduction_7.description": "A relatively easy early game and slightly more difficult mid game experience. The pack isn't aiming to be an expert difficulty modpack, but we do plan on making the end game unique and somewhat complex to complete."
+    "questbook.astrogreg.introduction_7.description": "A relatively easy early game and slightly more difficult mid game experience. The pack isn't aiming to be an expert difficulty modpack, but we do plan on making the end game unique and somewhat complex to complete.",
     
+    "questbook.astrogreg.ulv.progression.introduction.title": "Welcome to the Kuiper Belt",
+    "questbook.astrogreg.ulv.progression.familiar_start": "A Familiar Start",
+    "questbook.astrogreg.ulv.progression.iron_man": "Mining for Iron",
+    "questbook.astrogreg.ulv.progression.wrought_iron_man": "Iron, but Better",
+    "questbook.astrogreg.ulv.progression.crushing_rocks": "Crushing Rocks",
+    "questbook.astrogreg.ulv.progression.obtaining_clay": "The Many Methods for Clay",
+    "questbook.astrogreg.ulv.progression.obtaining_steel": "The Backbone of the Industrial Age",
+    "questbook.astrogreg.ulv.progression.steel_steel": "An Even Stronger Steel",
+    "questbook.astrogreg.ulv.progression.firebrick": "Firebricks",
+    "questbook.astrogreg.ulv.progression.cokebrick": "Coke Oven Bricks",
+    "questbook.astrogreg.ulv.progression.boilers": "Choose your boiler!",
+    "questbook.astrogreg.ulv.progression.red_alloy_cables": "3x Red Alloy cables",
+    "questbook.astrogreg.ulv.progression.andesite_alloy": "The Backbone of the Kinetic Age",
+    "questbook.astrogreg.steam_multis": "A Better Use for Stream",
+    "questbook.astrogreg.kinetic_multis": "A Better Use for Stress Units",
+    "questbook.astrogreg.ulv.progression.bronze_materials": "Bronze Ingredients",
+    "questbook.astrogreg.ulv.progression.bronze": "The Backbone of the Steam Age",
+    "questbook.astrogreg.ulv.progression.andesite_alloy_dust": "Andesite Alloy Dust",
+    "questbook.astrogreg.ulv.progression.ulv_circuit": "Kind of a Circuit",
+    "questbook.astrogreg.ulv.progression.paper": "The Paper Process",
+    "questbook.astrogreg.ulv.progression.lv_circuit": "Your Very First \"Real\" Circuit",
+    "questbook.astrogreg.ulv.progression.glass_dust": "Glass Dust",
+    
+    "questbook.astrogreg.gregtech_tools.title": "GregTech Tool Mechanics",
+    "questbook.astrogreg.info.hammer": "Hammers",
+    "questbook.astrogreg.info.wire_cutter": "Wire Cutters",
+    "questbook.astrogreg.info.file": "Files",
+    "questbook.astrogreg.info.crowbar": "Crowbars",
+    "questbook.astrogreg.info.soft_mallet": "Soft Mallets",
+    "questbook.astrogreg.info.wrench": "Wrenches",
+    "questbook.astrogreg.info.saw": "Saws",
+    "questbook.astrogreg.info.screwdriver": "Screwdrivers"
 }

@@ -7,6 +7,1181 @@
 	id: "41C7488505EA5C28"
 	order_index: 0
 	quest_links: [ ]
-	quests: [ ]
+	quests: [
+		{
+			icon: "astrogreg:asteroid_stone"
+			id: "30F93D76EC0A9D53"
+			shape: "octagon"
+			size: 2.0d
+			tasks: [{
+				id: "023D7E0476E7A2E4"
+				title: "{ulv.progression.introduction}"
+				type: "checkmark"
+			}]
+			title: "{questbook.astrogreg.ulv.progression.introduction.title}"
+			x: -8.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["30F93D76EC0A9D53"]
+			icon: {
+				Count: 1
+				id: "minecraft:wooden_pickaxe"
+				tag: {
+					Damage: 0
+				}
+			}
+			id: "375620C5E4626304"
+			rewards: [{
+				id: "5CE39D6BB83FEF85"
+				item: "astrogreg:astrocredit"
+				type: "item"
+			}]
+			shape: "rsquare"
+			tasks: [
+				{
+					count: 16L
+					id: "231E73C6A7124A1E"
+					item: { Count: 16, id: "minecraft:oak_log" }
+					type: "item"
+				}
+				{
+					id: "59D7EC3695697FF1"
+					item: "minecraft:crafting_table"
+					type: "item"
+				}
+				{
+					id: "6969FF6028482CD3"
+					item: {
+						Count: 1
+						id: "minecraft:wooden_pickaxe"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			title: "{questbook.astrogreg.ulv.progression.familiar_start}"
+			x: -6.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["375620C5E4626304"]
+			icon: "minecraft:iron_ingot"
+			id: "489BFFC1809B3121"
+			rewards: [{
+				id: "0DEA1A9CEF29863B"
+				item: "astrogreg:astrocredit"
+				type: "item"
+			}]
+			shape: "rsquare"
+			tasks: [
+				{
+					count: 8L
+					id: "413C0E4C485244E6"
+					item: "minecraft:raw_iron"
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "03DB61ADE516FC0B"
+					item: { Count: 4, id: "minecraft:iron_ingot" }
+					type: "item"
+				}
+				{
+					id: "0C8C47DF1FB2784F"
+					item: "minecraft:furnace"
+					type: "item"
+				}
+			]
+			title: "{questbook.astrogreg.ulv.progression.iron_man}"
+			x: -4.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["489BFFC1809B3121"]
+			icon: "gtceu:wrought_iron_ingot"
+			id: "4FB031B0CAF640D8"
+			rewards: [{
+				id: "743F9CCE3408E546"
+				item: "astrogreg:astrocredit"
+				type: "item"
+			}]
+			shape: "rsquare"
+			tasks: [
+				{
+					id: "6729B59D2EFE7B67"
+					item: "minecraft:campfire"
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "21F9807A4E48518C"
+					item: "gtceu:wrought_iron_ingot"
+					type: "item"
+				}
+			]
+			title: "{questbook.astrogreg.ulv.progression.wrought_iron_man}"
+			x: -3.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["4FB031B0CAF640D8"]
+			icon: {
+				Count: 1
+				id: "gtceu:wrought_iron_hammer"
+				tag: {
+					Damage: 0
+					DisallowContainerItem: 0b
+					GT.Behaviours: { }
+					GT.Tool: {
+						DefaultEnchantments: [ ]
+						HarvestLevel: 2
+						MaxDamage: 383
+						ToolSpeed: 6.0f
+					}
+					HideFlags: 2
+				}
+			}
+			id: "5A045AE730CA21A0"
+			rewards: [{
+				id: "18F45800EC7B5B51"
+				item: "astrogreg:astrocredit"
+				type: "item"
+			}]
+			shape: "rsquare"
+			tasks: [
+				{
+					id: "49D999B86DF19227"
+					item: "astrogreg:cobbled_asteroid_stone"
+					type: "item"
+				}
+				{
+					id: "2F91D6B19AB158F1"
+					item: "astrogreg:asteroid_gravel"
+					type: "item"
+				}
+				{
+					id: "47D9885F837FA56F"
+					item: "astrogreg:asteroid_sand"
+					type: "item"
+				}
+			]
+			title: "{questbook.astrogreg.ulv.progression.crushing_rocks}"
+			x: -1.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5A045AE730CA21A0"]
+			hide_dependency_lines: false
+			hide_details_until_startable: false
+			hide_text_until_complete: false
+			id: "3E94EF74A4BFAFD4"
+			rewards: [{
+				id: "5660181987B6D5BB"
+				item: "astrogreg:astrocredit"
+				type: "item"
+			}]
+			shape: "rsquare"
+			tasks: [{
+				id: "7B4CF14F1DAE3449"
+				item: "minecraft:clay_ball"
+				type: "item"
+			}]
+			title: "{questbook.astrogreg.ulv.progression.obtaining_clay}"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["3E94EF74A4BFAFD4"]
+			icon: "gtceu:coke_oven_brick"
+			id: "6E11515858759D93"
+			rewards: [{
+				id: "2A79ACEAB08251EB"
+				item: "astrogreg:astrocredit"
+				type: "item"
+			}]
+			shape: "rsquare"
+			tasks: [
+				{
+					id: "2F085C96B230E479"
+					item: "gtceu:compressed_coke_clay"
+					type: "item"
+				}
+				{
+					id: "6355CEAF5CF13659"
+					item: "gtceu:coke_oven_brick"
+					type: "item"
+				}
+			]
+			title: "{questbook.astrogreg.ulv.progression.cokebrick}"
+			x: 0.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["6E11515858759D93"]
+			id: "52CF61D1CC25605F"
+			rewards: [{
+				id: "156D84D6DDD456ED"
+				item: "astrogreg:astrocredit"
+				type: "item"
+			}]
+			shape: "square"
+			tasks: [{
+				id: "641FD69BFB8A0962"
+				item: "astrogreg:coke_oven"
+				type: "item"
+			}]
+			x: 0.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["3E94EF74A4BFAFD4"]
+			icon: "gtceu:firebrick"
+			id: "69A0A70D8FFC8411"
+			rewards: [{
+				id: "7B2792E0A42F1825"
+				item: "astrogreg:astrocredit"
+				type: "item"
+			}]
+			shape: "rsquare"
+			tasks: [
+				{
+					id: "59FF3C03D61A6A5D"
+					item: "gtceu:compressed_fireclay"
+					type: "item"
+				}
+				{
+					id: "6C3BC02946989936"
+					item: "gtceu:firebrick"
+					type: "item"
+				}
+			]
+			title: "{questbook.astrogreg.ulv.progression.firebrick}"
+			x: 1.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["69A0A70D8FFC8411"]
+			id: "5A0B6CE9C45F274E"
+			rewards: [{
+				id: "07D23CB10547482F"
+				item: "astrogreg:astrocredit"
+				type: "item"
+			}]
+			shape: "square"
+			tasks: [{
+				id: "623B686E36CF683D"
+				item: "gtceu:primitive_blast_furnace"
+				type: "item"
+			}]
+			title: "{questbook.astrogreg.ulv.progression.obtaining_steel}"
+			x: 3.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5A0B6CE9C45F274E"]
+			id: "575B725657B44C4A"
+			rewards: [{
+				id: "3D6949418FE6F903"
+				item: "astrogreg:astrocredit"
+				type: "item"
+			}]
+			shape: "rsquare"
+			tasks: [{
+				id: "699C1E07D9D8AD08"
+				item: "gtceu:steel_ingot"
+				type: "item"
+			}]
+			title: "{questbook.astrogreg.ulv.progression.obtained_steel}"
+			x: 4.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["3A19171D4CAED23C"]
+			hide_dependency_lines: false
+			hide_text_until_complete: false
+			icon: "gtceu:bronze_brick_casing"
+			id: "4C27D7D7D1C08452"
+			optional: true
+			rewards: [{
+				count: 3
+				id: "2365BC30BA420D68"
+				item: "astrogreg:astrocredit"
+				type: "item"
+			}]
+			shape: "rsquare"
+			size: 1.5d
+			tasks: [
+				{
+					id: "2D4DCB5B49932DBE"
+					item: "gtceu:bronze_brick_casing"
+					type: "item"
+				}
+				{
+					id: "15C8F15939A68F40"
+					item: "gtceu:bronze_machine_casing"
+					type: "item"
+				}
+			]
+			x: -4.5d
+			y: -3.0d
+		}
+		{
+			dependencies: ["4C27D7D7D1C08452"]
+			dependency_requirement: "one_completed"
+			icon: "gtceu:lp_steam_solid_boiler"
+			id: "7BDB61D201C76D19"
+			optional: true
+			rewards: [{
+				id: "5A089CAB5C43A39E"
+				item: "astrogreg:astrocredit"
+				type: "item"
+			}]
+			shape: "rsquare"
+			tasks: [
+				{
+					id: "5C5CEE9336B47FD2"
+					item: "gtceu:lp_steam_solid_boiler"
+					type: "item"
+				}
+				{
+					id: "091B791130B07D99"
+					item: "gtceu:lp_steam_liquid_boiler"
+					type: "item"
+				}
+				{
+					id: "6CB06F74CED4D6E0"
+					item: "gtceu:lp_steam_solar_boiler"
+					type: "item"
+				}
+				{
+					id: "5DD67CA1452847CE"
+					item: "gtceu:hp_steam_solid_boiler"
+					type: "item"
+				}
+				{
+					id: "32F710909A65ACC2"
+					item: "gtceu:hp_steam_liquid_boiler"
+					type: "item"
+				}
+				{
+					id: "5D116FF84825A2E7"
+					item: "gtceu:hp_steam_solar_boiler"
+					type: "item"
+				}
+			]
+			title: "{questbook.astrogreg.ulv.progression.boilers}"
+			x: -6.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["375620C5E4626304"]
+			icon: "minecraft:copper_ingot"
+			id: "07E3B014F1C18C4B"
+			rewards: [{
+				id: "42420737F04B4A0C"
+				item: "astrogreg:astrocredit"
+				type: "item"
+			}]
+			shape: "rsquare"
+			tasks: [
+				{
+					count: 8L
+					id: "123F18A67A2BA93C"
+					item: { Count: 8, id: "gtceu:raw_cassiterite" }
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "648166340A0BC48E"
+					item: { Count: 8, id: "gtceu:tin_ingot" }
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "5BFFE78C4D55C86E"
+					item: { Count: 8, id: "minecraft:raw_copper" }
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "01E2A2CE92C970DD"
+					item: { Count: 8, id: "minecraft:copper_ingot" }
+					type: "item"
+				}
+			]
+			title: "{questbook.astrogreg.ulv.progression.bronze_materials}"
+			x: -6.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["07E3B014F1C18C4B"]
+			icon: "gtceu:bronze_ingot"
+			id: "3A19171D4CAED23C"
+			rewards: [{
+				id: "33B25877E7468F66"
+				item: "astrogreg:astrocredit"
+				type: "item"
+			}]
+			shape: "rsquare"
+			size: 1.0d
+			tasks: [
+				{
+					count: 8L
+					id: "4DB62F0CA8612E26"
+					item: "gtceu:bronze_dust"
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "1A06FED09C2E63C6"
+					item: { Count: 8, id: "gtceu:bronze_ingot" }
+					type: "item"
+				}
+			]
+			title: "{questbook.astrogreg.ulv.progression.bronze}"
+			x: -4.5d
+			y: -1.5d
+		}
+		{
+			dependencies: [
+				"1188E31F59379A77"
+				"2A3DD62B1042052C"
+				"60AFB85245EDF26B"
+				"2758E3D7DDE34688"
+				"45D530D2A2264DAA"
+			]
+			id: "09081A1D55D298CD"
+			rewards: [{
+				count: 3
+				id: "0C77E80A39C43C99"
+				item: "astrogreg:astrocredit"
+				type: "item"
+			}]
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [{
+				id: "1E0B8E4755694C3F"
+				item: "gtceu:basic_electronic_circuit"
+				type: "item"
+			}]
+			title: "{questbook.astrogreg.ulv.progression.lv_circuit}"
+			x: 8.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["27A87FC0C0455A4A"]
+			id: "2758E3D7DDE34688"
+			rewards: [{
+				id: "1498EC1445F48152"
+				type: "xp"
+				xp: 5
+			}]
+			shape: "rsquare"
+			tasks: [{
+				count: 2L
+				id: "764E76B78EC9E76D"
+				item: "gtceu:resistor"
+				type: "item"
+			}]
+			x: 6.0d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"3E5D728796EDE1CA"
+				"575B725657B44C4A"
+			]
+			id: "2A3DD62B1042052C"
+			rewards: [{
+				id: "131EDB89399DB7F7"
+				item: "astrogreg:astrocredit"
+				type: "item"
+			}]
+			shape: "rsquare"
+			tasks: [{
+				consume_items: false
+				count: 2L
+				id: "62EC40E07D57B937"
+				item: "gtceu:vacuum_tube"
+				type: "item"
+			}]
+			title: "{questbook.astrogreg.ulv.progression.ulv_circuit}"
+			x: 6.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["03803C3684B72477"]
+			id: "60AFB85245EDF26B"
+			rewards: [{
+				id: "252B37E026F32987"
+				type: "xp"
+				xp: 5
+			}]
+			shape: "rsquare"
+			tasks: [{
+				id: "693265230B4DECCE"
+				item: "gtceu:resin_printed_circuit_board"
+				type: "item"
+			}]
+			x: 6.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["51B7B0E6CB01252F"]
+			id: "1188E31F59379A77"
+			rewards: [{
+				id: "13E3B6AFD66EECF2"
+				type: "xp"
+				xp: 5
+			}]
+			shape: "rsquare"
+			tasks: [{
+				count: 3L
+				id: "18FC4B01D1E5CFFF"
+				item: "gtceu:red_alloy_single_cable"
+				type: "item"
+			}]
+			title: "{questbook.astrogreg.ulv.progression.red_alloy_cables}"
+			x: 6.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["4C27D7D7D1C08452"]
+			id: "7BEF8D975FB3B5BE"
+			optional: true
+			rewards: [{
+				id: "0FBBBA2E3B0FC08B"
+				item: "astrogreg:astrocredit"
+				type: "item"
+			}]
+			shape: "rsquare"
+			tasks: [{
+				id: "546EDEA5910F80D7"
+				item: "gtceu:lp_steam_macerator"
+				type: "item"
+			}]
+			x: -6.0d
+			y: -4.5d
+		}
+		{
+			dependencies: ["4C27D7D7D1C08452"]
+			id: "18CC681FF8A2F6FC"
+			optional: true
+			rewards: [{
+				id: "4C30801DA3D4D3A9"
+				item: "astrogreg:astrocredit"
+				type: "item"
+			}]
+			shape: "rsquare"
+			tasks: [{
+				id: "45CF3BE8D80E043D"
+				item: "gtceu:lp_steam_alloy_smelter"
+				type: "item"
+			}]
+			x: -4.5d
+			y: -4.5d
+		}
+		{
+			dependencies: ["4C27D7D7D1C08452"]
+			id: "3DEA6CA219D199D9"
+			optional: true
+			rewards: [{
+				id: "54B147235F7A7C20"
+				item: "astrogreg:astrocredit"
+				type: "item"
+			}]
+			shape: "rsquare"
+			tasks: [{
+				id: "53A698DF289A6712"
+				item: "gtceu:lp_steam_forge_hammer"
+				type: "item"
+			}]
+			x: -3.0d
+			y: -4.5d
+		}
+		{
+			dependencies: ["4C27D7D7D1C08452"]
+			id: "5BFC3FB3DB89FBE9"
+			optional: true
+			rewards: [{
+				id: "0620F272C6C4F658"
+				item: "astrogreg:astrocredit"
+				type: "item"
+			}]
+			shape: "rsquare"
+			tasks: [{
+				id: "50490A6F045E890F"
+				item: "gtceu:lp_steam_extractor"
+				type: "item"
+			}]
+			x: -3.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["3A19171D4CAED23C"]
+			id: "38C9CDAE2CF690C1"
+			rewards: [{
+				id: "18DE1CCCB63E91EE"
+				type: "xp"
+				xp: 5
+			}]
+			shape: "rsquare"
+			tasks: [{
+				id: "7ACCA3478FB75EA9"
+				item: "gtceu:steam_machine_casing"
+				type: "item"
+			}]
+			x: -3.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["575B725657B44C4A"]
+			id: "45D530D2A2264DAA"
+			rewards: [{
+				id: "76D105F010165A12"
+				type: "xp"
+				xp: 5
+			}]
+			shape: "rsquare"
+			tasks: [{
+				id: "43989B08FCC1CC21"
+				item: "gtceu:steel_plate"
+				type: "item"
+			}]
+			x: 6.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["38C9CDAE2CF690C1"]
+			dependency_requirement: "one_completed"
+			icon: "astrogreg:large_steam_macerator"
+			id: "66934626983C1F46"
+			rewards: [{
+				id: "7553AB36AD3C8D00"
+				type: "xp"
+				xp: 5
+			}]
+			shape: "square"
+			tasks: [
+				{
+					id: "452808608F271C9E"
+					item: "astrogreg:large_steam_macerator"
+					type: "item"
+				}
+				{
+					id: "07F3DC73827CADF3"
+					item: "astrogreg:large_steam_compressor"
+					type: "item"
+				}
+				{
+					id: "78E63B221C487245"
+					item: "astrogreg:large_steam_centrifuge"
+					type: "item"
+				}
+				{
+					id: "090889F1224A4996"
+					item: "astrogreg:large_steam_ore_washer"
+					type: "item"
+				}
+				{
+					id: "29499AA351904106"
+					item: "astrogreg:large_steam_miner"
+					type: "item"
+				}
+				{
+					id: "620097522EF4DEDF"
+					item: "astrogreg:kinetic_steam_engine"
+					type: "item"
+				}
+			]
+			title: "{questbook.astrogreg.steam_multis}"
+			x: -1.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["489BFFC1809B3121"]
+			hide_details_until_startable: false
+			hide_text_until_complete: false
+			icon: "astrogreg:andesite_alloy_dust"
+			id: "3D2945A64B1E6D6F"
+			rewards: [{
+				id: "47B387DF57370585"
+				item: "astrogreg:astrocredit"
+				type: "item"
+			}]
+			shape: "rsquare"
+			tasks: [
+				{
+					count: 8L
+					id: "2180F1707E8B30A5"
+					item: "astrogreg:andesite_alloy_dust"
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "1C4AAEB988C395C6"
+					item: "gtceu:nether_quartz_dust"
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "69D3002AB8804838"
+					item: "astrogreg:asteroid_stone_dust"
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "355B00EE5A089E33"
+					item: { Count: 8, id: "gtceu:iron_dust" }
+					type: "item"
+				}
+			]
+			title: "{questbook.astrogreg.ulv.progression.andesite_alloy_dust}"
+			x: -4.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["3D2945A64B1E6D6F"]
+			icon: "create:andesite_alloy"
+			id: "69FB21BD4A4BFD7E"
+			rewards: [{
+				id: "548DD4724FDA4019"
+				item: "astrogreg:astrocredit"
+				type: "item"
+			}]
+			shape: "rsquare"
+			size: 1.5d
+			tasks: [{
+				count: 8L
+				id: "51896B1943E5BF6B"
+				item: { Count: 8, id: "create:andesite_alloy" }
+				type: "item"
+			}]
+			title: "{questbook.astrogreg.ulv.progression.andesite_alloy}"
+			x: -4.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["69FB21BD4A4BFD7E"]
+			icon: "create:mechanical_mixer"
+			id: "5F6C907F5937487B"
+			rewards: [{
+				id: "6104F45CEC8AA4B6"
+				item: "astrogreg:astrocredit"
+				type: "item"
+			}]
+			shape: "rsquare"
+			tasks: [
+				{
+					id: "26DC0EDD75DCA85B"
+					item: "create:mechanical_mixer"
+					type: "item"
+				}
+				{
+					id: "6F6242B714E86965"
+					item: "createlowheated:basic_burner"
+					type: "item"
+				}
+				{
+					id: "26F06DC7613EFEDC"
+					item: "create:basin"
+					type: "item"
+				}
+			]
+			x: -6.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["69FB21BD4A4BFD7E"]
+			icon: "create:mechanical_press"
+			id: "5D3934F2699C8DEF"
+			rewards: [{
+				id: "0815FED7CAB5815C"
+				item: "astrogreg:astrocredit"
+				type: "item"
+			}]
+			shape: "rsquare"
+			tasks: [
+				{
+					id: "303F3CFED487DF5F"
+					item: "create:mechanical_press"
+					type: "item"
+				}
+				{
+					id: "2BA668563C5C7874"
+					item: "create:depot"
+					type: "item"
+				}
+			]
+			x: -3.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["69FB21BD4A4BFD7E"]
+			icon: "create:encased_fan"
+			id: "57E7F24024D912EC"
+			rewards: [{
+				id: "7679CDF45794CACD"
+				item: "astrogreg:astrocredit"
+				type: "item"
+			}]
+			shape: "rsquare"
+			tasks: [{
+				id: "48C93949604CB666"
+				item: "create:encased_fan"
+				type: "item"
+			}]
+			x: -4.5d
+			y: 4.5d
+		}
+		{
+			dependencies: [
+				"69FB21BD4A4BFD7E"
+				"5A5785FB2FC7431B"
+			]
+			icon: "create:water_wheel"
+			id: "11961B25BD869A3A"
+			rewards: [{
+				id: "5C5CA448FBCA5AE3"
+				item: "astrogreg:astrocredit"
+				type: "item"
+			}]
+			shape: "rsquare"
+			tasks: [
+				{
+					id: "7CAC28966EB798C3"
+					item: "create:water_wheel"
+					type: "item"
+				}
+				{
+					id: "7AF914FF77AF693B"
+					item: "create:large_water_wheel"
+					type: "item"
+				}
+			]
+			x: -6.0d
+			y: 1.5d
+		}
+		{
+			dependencies: [
+				"65C64A55D6EC62F2"
+				"73CC38508CEF4408"
+			]
+			dependency_requirement: "one_completed"
+			icon: "astrogreg:large_kinetic_mixer"
+			id: "4C58F9C0804DAE9F"
+			min_required_dependencies: 1
+			rewards: [{
+				id: "509DACE3EC7FC0E8"
+				type: "xp"
+				xp: 5
+			}]
+			shape: "square"
+			tasks: [
+				{
+					id: "36E3D720A0B93E4C"
+					item: "astrogreg:kinetic_concrete_plant"
+					type: "item"
+				}
+				{
+					id: "1D2C8687DF758E88"
+					item: "astrogreg:large_kinetic_miner"
+					type: "item"
+				}
+				{
+					id: "59CEFA10B31DB42E"
+					item: "astrogreg:large_kinetic_mixer"
+					type: "item"
+				}
+			]
+			title: "{questbook.astrogreg.kinetic_multis}"
+			x: -1.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["52CF61D1CC25605F"]
+			hide_dependent_lines: true
+			icon: "gtceu:creosote_bucket"
+			id: "5A5785FB2FC7431B"
+			rewards: [{
+				id: "228B9857000E51C0"
+				type: "xp"
+				xp: 5
+			}]
+			shape: "rsquare"
+			tasks: [{
+				id: "11754123EAAD5B44"
+				type: "checkmark"
+			}]
+			title: "{questbook.astrogreg.creosote.title}"
+			x: 0.0d
+			y: -4.5d
+		}
+		{
+			dependencies: ["5A5785FB2FC7431B"]
+			hide_dependency_lines: false
+			id: "107D148D4BF30505"
+			rewards: [{
+				id: "7FF2EBCBDC3500A8"
+				type: "xp"
+				xp: 5
+			}]
+			shape: "square"
+			tasks: [{
+				id: "67B581C94AFB6792"
+				item: "astrogreg:large_primitive_composter"
+				type: "item"
+			}]
+			x: -1.5d
+			y: -4.5d
+		}
+		{
+			dependencies: ["69FB21BD4A4BFD7E"]
+			id: "65C64A55D6EC62F2"
+			rewards: [{
+				id: "51A9F1B827536ABA"
+				type: "xp"
+				xp: 5
+			}]
+			shape: "rsquare"
+			tasks: [{
+				id: "5767F55DDE6C63BD"
+				item: "astrogreg:machine_casing_kinetic"
+				type: "item"
+			}]
+			x: -3.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["69FB21BD4A4BFD7E"]
+			id: "1A6D8D0FA9092745"
+			rewards: [{
+				id: "3AAEDB3E23C777E7"
+				item: "astrogreg:astrocredit"
+				type: "item"
+			}]
+			shape: "rsquare"
+			tasks: [{
+				id: "2F0D2FB69DC82E3C"
+				item: "createaddition:rolling_mill"
+				type: "item"
+			}]
+			x: -6.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["663272937FC4C281"]
+			icon: "gtceu:rubber_ingot"
+			id: "002FC2908CED6428"
+			rewards: [{
+				id: "0F63F5817CB31466"
+				item: "astrogreg:astrocredit"
+				type: "item"
+			}]
+			shape: "rsquare"
+			tasks: [
+				{
+					count: 3L
+					id: "0378D4AA59E39B2E"
+					item: { Count: 3, id: "gtceu:raw_rubber_dust" }
+					type: "item"
+				}
+				{
+					id: "2C738E6872010240"
+					item: "gtceu:sulfur_dust"
+					type: "item"
+				}
+				{
+					id: "78D03E833D8D0125"
+					item: "gtceu:rubber_ingot"
+					type: "item"
+				}
+			]
+			title: "{questbook.astrogreg.ulv.progression.rubber}"
+			x: 3.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["002FC2908CED6428"]
+			id: "51B7B0E6CB01252F"
+			rewards: [{
+				id: "6453A064EB65B2A4"
+				item: "astrogreg:astrocredit"
+				type: "item"
+			}]
+			shape: "rsquare"
+			tasks: [{
+				count: 8L
+				id: "46C6770C04E10294"
+				item: "gtceu:rubber_plate"
+				type: "item"
+			}]
+			title: "{questbook.astrogreg.ulv.progression.rubber_plate}"
+			x: 4.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["5D343542602A9A30"]
+			id: "3E5D728796EDE1CA"
+			rewards: [{
+				id: "5852185AE4DA52F8"
+				type: "xp"
+				xp: 5
+			}]
+			shape: "rsquare"
+			tasks: [{
+				id: "4C8DD14FD214B6AE"
+				item: "gtceu:glass_tube"
+				type: "item"
+			}]
+			x: 4.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["663272937FC4C281"]
+			hide_dependency_lines: true
+			icon: "gtceu:resin_circuit_board"
+			id: "03803C3684B72477"
+			rewards: [{
+				id: "52625C981064F808"
+				item: "astrogreg:astrocredit"
+				type: "item"
+			}]
+			shape: "rsquare"
+			tasks: [{
+				id: "6837463B2BC63464"
+				item: "gtceu:resin_circuit_board"
+				type: "item"
+			}]
+			x: 4.5d
+			y: -3.0d
+		}
+		{
+			icon: "minecraft:paper"
+			id: "27A87FC0C0455A4A"
+			rewards: [{
+				id: "41B6539D36046B64"
+				item: "astrogreg:astrocredit"
+				type: "item"
+			}]
+			shape: "rsquare"
+			tasks: [
+				{
+					id: "0EA5445471B89302"
+					item: "gtceu:paper_dust"
+					type: "item"
+				}
+				{
+					id: "5871B70FBB36A1DE"
+					item: "create:pulp"
+					type: "item"
+				}
+				{
+					id: "078F09B60407981B"
+					item: "minecraft:paper"
+					type: "item"
+				}
+			]
+			title: "{questbook.astrogreg.ulv.progression.paper}"
+			x: 4.5d
+			y: 3.0d
+		}
+		{
+			icon: "gtceu:sticky_resin"
+			id: "663272937FC4C281"
+			rewards: [{
+				id: "2E22EC5BA80ACB01"
+				item: "astrogreg:astrocredit"
+				type: "item"
+			}]
+			shape: "rsquare"
+			tasks: [{
+				id: "7DC427BDB5493D41"
+				item: "gtceu:sticky_resin"
+				type: "item"
+			}]
+			x: 1.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["041F3035DA9520CE"]
+			icon: "minecraft:glass"
+			id: "5D343542602A9A30"
+			rewards: [{
+				id: "3F0EF454AB46BE14"
+				type: "xp"
+				xp: 5
+			}]
+			shape: "rsquare"
+			tasks: [{
+				id: "3D64DB9E94F5C3AE"
+				item: "minecraft:glass"
+				type: "item"
+			}]
+			x: 3.0d
+			y: 1.5d
+		}
+		{
+			icon: "gtceu:glass_dust"
+			id: "041F3035DA9520CE"
+			rewards: [{
+				id: "77288D711EA35A4A"
+				item: "astrogreg:astrocredit"
+				type: "item"
+			}]
+			shape: "rsquare"
+			tasks: [
+				{
+					id: "369424C1142CCC79"
+					item: "gtceu:flint_dust"
+					type: "item"
+				}
+				{
+					id: "1FE34CEF7A63136D"
+					item: "gtceu:quartz_sand_dust"
+					type: "item"
+				}
+				{
+					id: "20FDC72743B24AFB"
+					item: "gtceu:glass_dust"
+					type: "item"
+				}
+			]
+			title: "{questbook.astrogreg.ulv.progression.glass_dust}"
+			x: 1.5d
+			y: 1.5d
+		}
+		{
+			dependencies: [
+				"3A19171D4CAED23C"
+				"69FB21BD4A4BFD7E"
+			]
+			hide_dependency_lines: true
+			id: "73CC38508CEF4408"
+			shape: "rsquare"
+			tasks: [{
+				id: "63DFA55F8F4A8640"
+				item: "astrogreg:kinetic_input_hatch"
+				type: "item"
+			}]
+			x: -3.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["107D148D4BF30505"]
+			id: "768977D0EB6EBDA9"
+			shape: "rsquare"
+			tasks: [{
+				id: "45866681256DCFFD"
+				item: "minecraft:bone_meal"
+				type: "item"
+			}]
+			x: -1.5d
+			y: -3.0d
+		}
+	]
 	title: "{questbook.astrogreg.ulv_progression.title}"
 }

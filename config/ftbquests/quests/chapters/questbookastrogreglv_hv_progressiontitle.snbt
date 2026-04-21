@@ -18,6 +18,19 @@
 	id: "039CCE60FD6C403F"
 	order_index: 1
 	quest_links: [ ]
-	quests: [ ]
+	quests: [{
+		dependencies: ["09081A1D55D298CD"]
+		id: "581ED1B628C0B1A2"
+		shape: "hexagon"
+		size: 1.5d
+		tasks: [{
+			count: 8L
+			id: "7BBA9B80C8608ADB"
+			item: { Count: 8, id: "gtceu:basic_electronic_circuit" }
+			type: "item"
+		}]
+		x: 0.0d
+		y: 0.0d
+	}]
 	title: "{questbook.astrogreg.lv_hv_progression.title}"
 }

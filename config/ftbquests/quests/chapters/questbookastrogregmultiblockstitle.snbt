@@ -7,6 +7,43 @@
 	id: "342BFAE71C5A5094"
 	order_index: 2
 	quest_links: [ ]
-	quests: [ ]
+	quests: [
+		{
+			dependencies: ["52CF61D1CC25605F"]
+			id: "61245310B7B5F8BD"
+			shape: "square"
+			tasks: [{
+				id: "0F8C3FEF5F96C2D5"
+				item: "astrogreg:coke_oven"
+				type: "item"
+			}]
+			x: -3.5d
+			y: -3.0d
+		}
+		{
+			dependencies: ["5A0B6CE9C45F274E"]
+			id: "403F31B9D55D4E3D"
+			shape: "square"
+			tasks: [{
+				id: "673499EEAC3900C3"
+				item: "gtceu:primitive_blast_furnace"
+				type: "item"
+			}]
+			x: -2.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["107D148D4BF30505"]
+			id: "52F7922E2F54CD52"
+			shape: "square"
+			tasks: [{
+				id: "7AE7B3CDF76FCB01"
+				item: "astrogreg:large_primitive_composter"
+				type: "item"
+			}]
+			x: -0.5d
+			y: -3.0d
+		}
+	]
 	title: "{questbook.astrogreg.multiblocks.title}"
 }

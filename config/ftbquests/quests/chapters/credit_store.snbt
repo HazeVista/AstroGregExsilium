@@ -1,12 +1,83 @@
 {
+	consume_items: true
 	default_hide_dependency_lines: false
 	default_quest_shape: ""
+	default_repeatable_quest: true
 	filename: "credit_store"
 	group: "77B4AB6C745B139B"
 	icon: "astrogreg:astrocredit"
 	id: "1FAF3C703F07BCA8"
 	order_index: 2
 	quest_links: [ ]
-	quests: [ ]
+	quests: [
+		{
+			icon: "gtceu:hazmat_boots"
+			id: "01BAA5F46047D2AD"
+			rewards: [{
+				command: "/attribute @s forge:step_height_addition base set 0.5"
+				elevate_perms: true
+				id: "171F0554EB9F8B26"
+				type: "command"
+			}]
+			tasks: [{
+				consume_items: true
+				count: 16L
+				id: "126F40F8EFB1F259"
+				item: "astrogreg:astrocredit"
+				type: "item"
+			}]
+			x: -1.5d
+			y: 0.0d
+		}
+		{
+			icon: "botania:dice"
+			id: "4FA2C2C82666C78E"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "41B0C7A8959F2E90"
+				table_id: 4971404230501340866L
+				type: "random"
+			}]
+			tasks: [{
+				consume_items: true
+				count: 32L
+				id: "4304D0A5CD2394D6"
+				item: "astrogreg:astrocredit"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			icon: {
+				Count: 1
+				id: "botania:flight_tiara"
+				tag: {
+					variant: 0
+				}
+			}
+			id: "26C0EDE2CF1B98F3"
+			rewards: [{
+				id: "12A69F4FCC21B1C8"
+				item: {
+					Count: 1
+					id: "botania:flight_tiara"
+					tag: {
+						variant: 0
+					}
+				}
+				type: "item"
+			}]
+			tasks: [{
+				consume_items: true
+				count: 64L
+				id: "089EF1F1C0C6D456"
+				item: "astrogreg:astrocredit"
+				type: "item"
+			}]
+			x: 1.5d
+			y: 0.0d
+		}
+	]
 	title: "Credit Store"
 }

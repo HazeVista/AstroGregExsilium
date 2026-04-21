@@ -1,0 +1,12 @@
+{
+	id: "44FDF9CED9E816C2"
+	loot_size: 1
+	order_index: 0
+	rewards: [
+		{ count: 512, item: "astrogreg:astrocredit", weight: 0.5f }
+		{ count: 64, item: "astrogreg:astrocredit", weight: 25.0f }
+		{ count: 32, item: "astrogreg:astrocredit", weight: 50.0f }
+		{ count: 16, item: "astrogreg:astrocredit", weight: 100.0f }
+	]
+	title: "Gamba"
+}

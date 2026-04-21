@@ -7,6 +7,18 @@
 	id: "27E37E80E69F65CC"
 	order_index: 3
 	quest_links: [ ]
-	quests: [ ]
+	quests: [{
+		dependencies: ["768977D0EB6EBDA9"]
+		id: "0B5D9763389CAE2D"
+		shape: "hexagon"
+		size: 2.0d
+		tasks: [{
+			id: "0F3E6D672494E072"
+			item: "botania:fertilizer"
+			type: "item"
+		}]
+		x: -1.0d
+		y: -0.5d
+	}]
 	title: "{questbook.astrogreg.botania.title}"
 }

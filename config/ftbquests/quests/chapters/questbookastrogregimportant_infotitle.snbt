@@ -7,6 +7,259 @@
 	id: "36CBCB0B789AEB5C"
 	order_index: 1
 	quest_links: [ ]
-	quests: [ ]
+	quests: [
+		{
+			icon: "gtceu:maintenance_hatch"
+			id: "1A82DF27A2E52D89"
+			shape: "octagon"
+			size: 2.0d
+			tasks: [{
+				id: "18F0ED9A353A76FF"
+				title: "GregTech Tools"
+				type: "checkmark"
+			}]
+			title: "{questbook.astrogreg.gregtech_tools.title}"
+			x: 1.5d
+			y: -2.5d
+		}
+		{
+			dependencies: ["1A82DF27A2E52D89"]
+			icon: {
+				Count: 1
+				id: "gtceu:neutronium_hammer"
+				tag: {
+					Damage: 0
+					DisallowContainerItem: 0b
+					GT.Behaviours: {
+						RelocateMinedBlocks: 1b
+						RelocateMobDrops: 1b
+					}
+					GT.Tool: {
+						DefaultEnchantments: [ ]
+						HarvestLevel: 6
+						MaxDamage: 65534
+						ToolSpeed: 184.0f
+					}
+					HideFlags: 2
+					Unbreakable: 1b
+				}
+			}
+			id: "5B6C36BD35D3F455"
+			tasks: [{
+				id: "57AC6F9867AB6176"
+				title: "{questbook.astrogreg.info.hammer}"
+				type: "checkmark"
+			}]
+			x: 1.5d
+			y: -4.0d
+		}
+		{
+			dependencies: ["1A82DF27A2E52D89"]
+			icon: {
+				Count: 1
+				id: "gtceu:neutronium_file"
+				tag: {
+					Damage: 0
+					DisallowContainerItem: 0b
+					GT.Behaviours: {
+						RelocateMinedBlocks: 1b
+						RelocateMobDrops: 1b
+					}
+					GT.Tool: {
+						DefaultEnchantments: [ ]
+						MaxDamage: 65534
+					}
+					HideFlags: 2
+					Unbreakable: 1b
+				}
+			}
+			id: "266C59F9B4EEC30F"
+			tasks: [{
+				id: "205046A8E910B100"
+				title: "{questbook.astrogreg.info.file}"
+				type: "checkmark"
+			}]
+			x: 0.5d
+			y: -3.5d
+		}
+		{
+			dependencies: ["1A82DF27A2E52D89"]
+			icon: {
+				Count: 1
+				id: "gtceu:neutronium_wire_cutter"
+				tag: {
+					Damage: 0
+					DisallowContainerItem: 0b
+					GT.Behaviours: {
+						RelocateMinedBlocks: 1b
+						RelocateMobDrops: 1b
+					}
+					GT.Tool: {
+						DefaultEnchantments: [ ]
+						HarvestLevel: 6
+						MaxDamage: 65534
+						ToolSpeed: 184.0f
+					}
+					HideFlags: 2
+					Unbreakable: 1b
+				}
+			}
+			id: "68643A7186B8A1F1"
+			tasks: [{
+				id: "2546EAA77B637728"
+				title: "{questbook.astrogreg.info.wire_cutter}"
+				type: "checkmark"
+			}]
+			x: 2.5d
+			y: -3.5d
+		}
+		{
+			dependencies: ["1A82DF27A2E52D89"]
+			icon: {
+				Count: 1
+				id: "gtceu:neutronium_crowbar"
+				tag: {
+					Damage: 0
+					DisallowContainerItem: 0b
+					GT.Behaviours: {
+						RelocateMinedBlocks: 1b
+						RelocateMobDrops: 1b
+					}
+					GT.Tool: {
+						DefaultEnchantments: [ ]
+						HarvestLevel: 6
+						MaxDamage: 65534
+						ToolSpeed: 184.0f
+					}
+					HideFlags: 2
+					Unbreakable: 1b
+				}
+			}
+			id: "7D97FCEB408525BC"
+			tasks: [{
+				id: "3CD542FB98165AB6"
+				title: "{questbook.astrogreg.info.crowbar}"
+				type: "checkmark"
+			}]
+			x: 3.0d
+			y: -2.5d
+		}
+		{
+			dependencies: ["1A82DF27A2E52D89"]
+			icon: {
+				Count: 1
+				id: "gtceu:styrene_butadiene_rubber_mallet"
+				tag: {
+					Damage: 0
+					DisallowContainerItem: 0b
+					GT.Behaviours: { }
+					GT.Tool: {
+						DefaultEnchantments: [ ]
+						MaxDamage: 511
+					}
+					HideFlags: 2
+				}
+			}
+			id: "0951076620481334"
+			tasks: [{
+				id: "19AC8A27B2E8DAC6"
+				title: "{questbook.astrogreg.info.soft_mallet}"
+				type: "checkmark"
+			}]
+			x: 2.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["1A82DF27A2E52D89"]
+			icon: {
+				Count: 1
+				id: "gtceu:neutronium_wrench"
+				tag: {
+					Damage: 0
+					DisallowContainerItem: 0b
+					GT.Behaviours: {
+						Mode: 2b
+						RelocateMinedBlocks: 1b
+						RelocateMobDrops: 1b
+					}
+					GT.Tool: {
+						DefaultEnchantments: [ ]
+						HarvestLevel: 6
+						MaxDamage: 65534
+						ToolSpeed: 184.0f
+					}
+					HideFlags: 2
+					Unbreakable: 1b
+				}
+			}
+			id: "217C3FF4AAFF9926"
+			tasks: [{
+				id: "72D9D1412A87CF74"
+				title: "{questbook.astrogreg.info.wrench}"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: -2.5d
+		}
+		{
+			dependencies: ["1A82DF27A2E52D89"]
+			icon: {
+				Count: 1
+				id: "gtceu:neutronium_saw"
+				tag: {
+					Damage: 0
+					DisallowContainerItem: 0b
+					GT.Behaviours: {
+						HarvestIce: 1b
+						RelocateMinedBlocks: 1b
+						RelocateMobDrops: 1b
+					}
+					GT.Tool: {
+						DefaultEnchantments: [ ]
+						MaxDamage: 65534
+					}
+					HideFlags: 2
+					Unbreakable: 1b
+				}
+			}
+			id: "72F18AD01C115C1E"
+			tasks: [{
+				id: "4BF8AE690739998C"
+				title: "{questbook.astrogreg.info.saw}"
+				type: "checkmark"
+			}]
+			x: 0.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["1A82DF27A2E52D89"]
+			icon: {
+				Count: 1
+				id: "gtceu:neutronium_screwdriver"
+				tag: {
+					Damage: 0
+					DisallowContainerItem: 0b
+					GT.Behaviours: {
+						RelocateMinedBlocks: 1b
+						RelocateMobDrops: 1b
+					}
+					GT.Tool: {
+						DefaultEnchantments: [ ]
+						MaxDamage: 65534
+					}
+					HideFlags: 2
+					Unbreakable: 1b
+				}
+			}
+			id: "7D43A0D702674755"
+			tasks: [{
+				id: "1D038565277A3798"
+				title: "{questbook.astrogreg.info.screwdriver}"
+				type: "checkmark"
+			}]
+			x: 1.5d
+			y: -1.0d
+		}
+	]
 	title: "{questbook.astrogreg.important_info.title}"
 }
