@@ -760,5 +760,14 @@ ServerEvents.recipes(event => {
         .itemOutputs('botania:red_string')
         .duration(200)
         .EUt(30000)
+
+    gt.shaped('botania:open_crate', [
+        'AAA',
+        'ABA',
+        'A A'
+    ], {
+        A: 'botania:livingwood_planks',
+        B: '#forge:tools/saws'
+    })
     //#endregion    
 })

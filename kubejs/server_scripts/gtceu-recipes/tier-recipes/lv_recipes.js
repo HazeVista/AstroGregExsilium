@@ -102,6 +102,20 @@ ServerEvents.recipes(event => {
         .itemOutputs('2x minecraft:tinted_glass')
         .duration(160)
         .EUt(6)
+
+    gt.chemical_bath('diluted_sulf_acid_with_plant_balls')
+        .itemInputs('gtceu:plant_ball')
+        .inputFluids('gtceu:diluted_sulfuric_acid 250')
+        .itemOutputs('minecraft:slime_ball')
+        .duration(240)
+        .EUt(30)
+
+    gt.chemical_bath('sulf_acid_with_plant_balls')
+        .itemInputs('gtceu:plant_ball')
+        .inputFluids('gtceu:sulfuric_acid 250')
+        .itemOutputs('minecraft:slime_ball')
+        .duration(240)
+        .EUt(30)
     //#endregion
 
 

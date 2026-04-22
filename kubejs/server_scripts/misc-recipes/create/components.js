@@ -555,7 +555,14 @@ ServerEvents.recipes(event => {
         C: '#forge:glass'
     })
 
-    event.shapeless('copycats:copycat_shaft', ['create:shaft', 'create:shaft', 'create:shaft', 'create:shaft', 'gtceu:zinc_ingot'])
+    gt.shaped('8x copycats:copycat_shaft', [
+        'AAA',
+        'ABA',
+        'AAA'
+    ], {
+        A: 'create:shaft',
+        B: 'gtceu:zinc_ingot'
+    })
     //#endregion
 
 

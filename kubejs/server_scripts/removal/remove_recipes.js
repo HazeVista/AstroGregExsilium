@@ -63,7 +63,7 @@ ServerEvents.recipes(event => {
         'astrogreg:double_flux_plate', 'astrogreg:small_flux_dust', 'astrogreg:tiny_flux_dust', 'astrogreg:double_andesite_alloy_plate', 'gtceu:wood_wall', 'gtceu:resin_circuit_board',
         'minecraft:powderbarrel', 'ad_astra:coal_generator', 'minecraft:crossbow', 'create:propeller', 'create:encased_fan', 'ae2:speed_card', 'minecraft:stonecutter', 'gtceuterminal:energy_analyzer',
         'gtceu:mv_buffer', 'gtceu:hv_buffer', 'gtceu:lv_buffer', 'exposure:interplanar_projector', 'minecraft:tinted_glass', 'minecraft:flint_and_steel', 'create:chute', 'ae2:nether_quartz_wrench',
-        'ae2:certus_quartz_wrench', 'minecraft:composter'
+        'ae2:certus_quartz_wrench', 'minecraft:composter', 'botania:open_crate'
     ])
     //#endregion
 
@@ -149,7 +149,7 @@ ServerEvents.recipes(event => {
         'gtceu:assembler/cover_infinite_water', 'gtceu:shaped/mortar_manasteel', 'gtceu:shaped/mortar_terrasteel', 'gtceu:shaped/mortar_elementium', 'gtceu:shaped/mortar_gaiasteel', 'minecraft:sticky_piston',
         'gtceu:shaped/sticky_piston_resin', 'create:crafting/kinetics/sticky_mechanical_piston', 'exposure:album', 'exposure:camera', 'exposure:black_and_white_film', 'exposure:color_film', 
         'functionalstorage:oak_drawer_alternate_1x', 'gtceu:centrifuge/mycelium_separation', 'gtceu:shaped/bronze_primitive_blast_furnace', 'gtceu:smelting/sticky_resin_from_slime', 'itemcollectors:basic_collector', 
-        'itemcollectors:advanced_collector', 'copycats:crafting/copycat_shaft'
+        'itemcollectors:advanced_collector', 'copycats:crafting/copycat_shaft', 'botania:terra_plate/terrasteel_ingot'
     
     ])
     //#endregion
