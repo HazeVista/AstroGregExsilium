@@ -544,6 +544,7 @@ ServerEvents.recipes(event => {
         A: 'gtceu:wrought_iron_plate',
         B: '#forge:tools/hammers'
     })
+    .addMaterialInfo()
 
     gt.shaped('create:goggles', [
         ' A ',
@@ -562,6 +563,30 @@ ServerEvents.recipes(event => {
     ], {
         A: 'create:shaft',
         B: 'gtceu:zinc_ingot'
+    })
+
+    event.shapeless('create_connected:shear_pin', ['#forge:tools/saws', 'create:shaft'])
+
+    event.shapeless('create:encased_chain_drive', ['create:andesite_casing', 'minecraft:chain', 'minecraft:chain'])
+
+    gt.shaped('create_connected:empty_fan_catalyst', [
+        'AAA',
+        'BCB',
+        'AAA'
+    ], {
+        A: 'minecraft:iron_bars',
+        B: 'gtceu:brass_rod',
+        C: '#forge:tools/wrenches'
+    })
+
+    gt.shaped('', [
+        'ABC',
+        'DDD'
+    ], {
+        A: '#gtceu:circuits/ulv',
+        B: 'gtceu:brass_plate',
+        C: 'minecraft:redstone_torch',
+        D: '#forge:stone'
     })
     //#endregion
 

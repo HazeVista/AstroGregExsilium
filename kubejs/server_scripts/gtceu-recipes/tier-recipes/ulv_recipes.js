@@ -75,7 +75,7 @@ ServerEvents.recipes(event => {
 
     gt.mixer('mixing_energized_steel_dust')
         .itemInputs('astrogreg:desh_dust', 'gtceu:iron_dust', 'gtceu:red_alloy_dust')
-        .itemOutputs('astrogreg:energized_steel_dust')
+        .itemOutputs('3x astrogreg:energized_steel_dust')
         .duration(200)
         .EUt(7)
 
@@ -212,6 +212,8 @@ ServerEvents.recipes(event => {
       A: 'minecraft:obsidian',
       B: '#forge:tools/mortars'
     })
+
+    event.shapeless('minecraft:string', ['farmersdelight:straw', 'farmersdelight:straw'])
     //#endregion
 
     

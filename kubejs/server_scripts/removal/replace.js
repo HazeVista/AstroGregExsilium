@@ -85,6 +85,9 @@ ServerEvents.recipes(event => {
     event.replaceInput({ output: 'create:sticker' }, 'minecraft:slime_ball', '#forge:slime_ball')
     event.replaceInput({ output: 'create:package_frogport' }, 'minecraft:slime_ball', '#forge:slime_ball')
     event.replaceInput({ output: 'gtceu:pump_deck' }, 'minecraft:cobblestone_slab', '#forge:smooth_stone')
+    event.replaceInput({ output: 'create_connected:brake' }, 'minecraft:obsidian', 'gtceu:rubber_plate')
+    event.replaceInput({ output: 'create_connected:freewheel_clutch' }, 'create:iron_sheet', 'gtceu:iron_plate')
+    event.replaceInput({ output: 'create_connected:overstress_clutch' }, 'create:iron_sheet', 'gtceu:iron_plate')
     // event.replaceInput({ input: '' }, '', '')
 
     const mortarMetals = ['wrought_iron', 'flint', 'iron', 'bronze', 'steel', 'cobalt_brass', 'damascus_steel', 'invar']
