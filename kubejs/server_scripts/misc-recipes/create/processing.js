@@ -174,7 +174,7 @@ ServerEvents.recipes(event => {
         // { metal: 'energized_steel', ingot: 'powah:steel_energized'}
     ]
 
-    const gtceuMetals = ['steel', 'wrought_iron', 'tin', 'bronze', 'potin', 'lead', 
+    const gtceuMetals = ['wrought_iron', 'tin', 'bronze', 'potin', 'lead', 
         'nickel', 'silver', 'zinc', 'brass', 'invar', 'red_alloy', 'electrum']
 
     function processmetals(config) {
@@ -332,84 +332,4 @@ ServerEvents.recipes(event => {
         B: 'gtceu:magnetic_iron_rod'
     })
     //#endregion
-
-
-
-    // //#region create ore excavation
-    // const excavationShapes = {
-    //     'createoreexcavation:drill': [
-    //         'A  ',
-    //         ' B '
-    //     ],
-    //     'createoreexcavation:diamond_drill': [
-    //         'A  ',
-    //         ' B '
-    //     ],
-    //     'createoreexcavation:vein_finder': [
-    //         ' CA',
-    //         ' BC',
-    //         'B  '
-    //     ],
-    //     'createoreexcavation:vein_atlas': [
-    //         'AB'
-    //     ]
-    // };
-    //
-    // const excavationKeys = {
-    //     'createoreexcavation:drill': {
-    //         A: 'gtceu:iron_drill_head',
-    //         B: 'create:shaft'
-    //     },
-    //     'createoreexcavation:diamond_drill': {
-    //         A: 'gtceu:diamond_drill_head',
-    //         B: 'create:shaft'
-    //     },
-    //     'createoreexcavation:vein_finder': {
-    //         A: 'minecraft:ender_pearl',
-    //         B: 'gtceu:long_wood_rod',
-    //         C: 'gtceu:magnetic_iron_rod'
-    //     },
-    //     'createoreexcavation:vein_atlas': {
-    //         A: 'minecraft:book',
-    //         B: 'minecraft:ender_pearl'
-    //     }
-    // };
-    //
-    // Object.entries(excavationShapes).forEach(([item, pattern]) => {
-    //     gt.shaped(item, 
-    //         pattern, 
-    //         excavationKeys[item]
-    //     ).addMaterialInfo();
-    // })
-    //
-    // event.recipes.create.mechanical_crafting('createoreexcavation:drilling_machine', [
-    //     ' AAA ',
-    //     'ABCBA',
-    //     'ADEFA',
-    //     'ABCBA',
-    //     ' AAA '
-    // ], {
-    //     A: 'gtceu:brass_plate',
-    //     B: 'gtceu:wrought_iron_drill_head',
-    //     C: '#gtceu:circuits/ulv',
-    //     D: 'create:deployer',
-    //     E: 'create:brass_casing',
-    //     F: 'create:brass_funnel'
-    // })
-    //
-    // event.recipes.create.mechanical_crafting('createoreexcavation:extractor', [
-    //     ' AAA ',
-    //     'ABCBA',
-    //     'ADEFA',
-    //     'ABCBA',
-    //     ' AAA '
-    // ], {
-    //     A: 'gtceu:brass_plate',
-    //     B: 'gtceu:wrought_iron_drill_head',
-    //     C: '#gtceu:circuits/ulv',
-    //     D: 'create:deployer',
-    //     E: 'create:fluid_tank',
-    //     F: 'create:fluid_valve'
-    // })
-    // //#endregion
 })
