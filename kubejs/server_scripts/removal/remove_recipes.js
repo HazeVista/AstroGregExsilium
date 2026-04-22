@@ -149,7 +149,7 @@ ServerEvents.recipes(event => {
         'gtceu:assembler/cover_infinite_water', 'gtceu:shaped/mortar_manasteel', 'gtceu:shaped/mortar_terrasteel', 'gtceu:shaped/mortar_elementium', 'gtceu:shaped/mortar_gaiasteel', 'minecraft:sticky_piston',
         'gtceu:shaped/sticky_piston_resin', 'create:crafting/kinetics/sticky_mechanical_piston', 'exposure:album', 'exposure:camera', 'exposure:black_and_white_film', 'exposure:color_film', 
         'functionalstorage:oak_drawer_alternate_1x', 'gtceu:centrifuge/mycelium_separation', 'gtceu:shaped/bronze_primitive_blast_furnace', 'gtceu:smelting/sticky_resin_from_slime', 'itemcollectors:basic_collector', 
-        'itemcollectors:advanced_collector'
+        'itemcollectors:advanced_collector', 'copycats:crafting/copycat_shaft'
     
     ])
     //#endregion
@@ -211,7 +211,7 @@ ServerEvents.recipes(event => {
     event.remove({ output: /ad_extendra:.*_sliding_door/ })
     event.remove({ output: /create:.*_(sheet|ingot|plate|dust)/ })
     event.remove({ output: /farmersdelight:.*_knife/ })
-    event.remove({ output: /botania:.*(rod|pylon|cloak)/ })
+    event.remove({ output: /^botania:.*(rod|pylon|cloak)/ })
     event.remove({ id: /botania:glimmering_.*/ })
     event.remove({ id: /botania:.*_ring(_greater)?/ })
     event.remove({ id: /botania:spark_upgrade_.*/ })

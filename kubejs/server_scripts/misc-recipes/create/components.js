@@ -554,6 +554,8 @@ ServerEvents.recipes(event => {
         B: 'gtceu:gold_plate',
         C: '#forge:glass'
     })
+
+    event.shapeless('copycats:copycat_shaft', ['create:shaft', 'create:shaft', 'create:shaft', 'create:shaft', 'gtceu:zinc_ingot'])
     //#endregion
 
 
