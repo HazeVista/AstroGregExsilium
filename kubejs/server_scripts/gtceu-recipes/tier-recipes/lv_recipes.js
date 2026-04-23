@@ -120,6 +120,24 @@ ServerEvents.recipes(event => {
 
 
 
+    //#region retier
+    gt.electrolyzer('apatite_dust_electrolysis')
+        .itemInputs('9x gtceu:apatite_dust')
+        .itemOutputs('5x gtceu:calcium_dust', '3x gtceu:phosphorus_dust')
+        .outputFluids('gtceu:chlorine')
+        .duration(576)
+        .EUt(15)
+
+    gt.electrolyzer('clay_dust_electrolysis')
+        .itemInputs('13x gtceu:clay_dust')
+        .itemOutputs('2x gtceu:sodium_dust', 'gtceu:lithium_dust', '2x gtceu:aluminium_dust', '2x gtceu:silicon_dust')
+        .outputFluids('minecraft:water 6000')
+        .duration(546)
+        .EUt(30)
+    //#endregion 
+
+
+
     //#region damascus steel
     gt.mixer('mix_damascus_steel_dust')
         .itemInputs('gtceu:steel_dust', 'gtceu:coal_dust')
@@ -148,13 +166,13 @@ ServerEvents.recipes(event => {
     //#region ender air
     gt.centrifuge('centrifuge_ender_air')
         .inputFluids('gtceu:ender_air 10000')
-        .chancedOutput('minecraft:blaze_powder', 2500, 0)
+        .chancedOutput('gtceu:ender_pearl_dust', 2500, 0)
         .outputFluids('gtceu:nitrogen_dioxide 6100', 'gtceu:deuterium 2500')
         .duration(400)
 
     gt.gas_collector('collect_end_air_kuiper_belt')
         .outputFluids(Fluid.of('gtceu:ender_air', 10000))
-        .chancedOutput('gtceu:tiny_blaze_dust', 7500, 0)
+        .chancedOutput('gtceu:small_blaze_dust', 7500, 0)
         .dimension('ad_astra:kuiper_belt')
         .duration(200)
         .circuit(1)
