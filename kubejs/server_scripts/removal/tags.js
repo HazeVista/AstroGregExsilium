@@ -278,7 +278,10 @@ ServerEvents.tags('block', event => {
             ['astrogreg:cobbled_asteroid_stone', 'astrogreg:smooth_asteroid_stone'],
 
         'ad_astra:destroyed_in_space':
-            ['#minecraft:saplings', '#minecraft:leaves', '#minecraft:flowers']
+            ['#minecraft:saplings', '#minecraft:leaves', '#minecraft:flowers'],
+
+        'forge:cobblestone': 
+            ['#forge:stone_crafting_materials']
     }
 
     // wildcard additions

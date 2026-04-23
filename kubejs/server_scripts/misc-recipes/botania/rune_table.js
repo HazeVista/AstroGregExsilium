@@ -2,8 +2,8 @@ ServerEvents.recipes(event => {
 //#region runes
 event.recipes.botania.runic_altar('2x botania:fire_rune', ['minecraft:blaze_powder', 'gtceu:dark_ash_dust', 'gtceu:coke_gem', 'minecraft:brick', 'gtceu:copper_dust'], 5000)
 event.recipes.botania.runic_altar('2x botania:water_rune', ['minecraft:bucket', 'minecraft:clay', 'minecraft:bone_meal', 'minecraft:ice', 'gtceu:salt_dust'], 5000)
-event.recipes.botania.runic_altar('2x botania:air_rune', ['#forge:glass/silica', 'minecraft:string', 'gtceu:tin_rotor', '#minecraft:wool', 'gtceu:quartz_sand_dust'], 5000)
-event.recipes.botania.runic_altar('2x botania:earth_rune', ['#forge:stone', 'minecraft:coal', 'minecraft:dirt', 'minecraft:gravel', 'gtceu:iron_dust'], 5000)
+event.recipes.botania.runic_altar('2x botania:air_rune', ['#forge:glass/silica', 'farmersdelight:straw', 'gtceu:tin_rotor', '#minecraft:wool', 'gtceu:quartz_sand_dust'], 5000)
+event.recipes.botania.runic_altar('2x botania:earth_rune', ['#forge:stone', 'gtceu:charcoal_block', 'minecraft:dirt', '#forge:gravel', 'gtceu:iron_dust'], 5000)
 event.recipes.botania.runic_altar('botania:spring_rune', ['botania:manasteel_ingot', '#forge:seeds', '#minecraft:saplings', 'botania:fire_rune', 'botania:water_rune'], 7500)
 event.recipes.botania.runic_altar('botania:summer_rune', ['#minecraft:smelts_to_glass', 'botania:manasteel_ingot', '#minecraft:logs', 'botania:earth_rune', 'botania:air_rune'], 7500)
 event.recipes.botania.runic_altar('botania:autumn_rune', ['botania:manasteel_ingot', '#forge:crops', '#minecraft:leaves', 'botania:air_rune', 'botania:fire_rune'], 7500)

@@ -20,6 +20,15 @@ ServerEvents.recipes(event => {
         .circuit(1)
         .duration(1000)
         .EUt(120)
+
+    gt.centrifuge('centrifuge_soul_soil')
+        .itemInputs('minecraft:soul_soil')
+        .chancedOutput('minecraft:dirt', 9250, 0)
+        .chancedOutput('minecraft:blaze_powder', 2250, 0)
+        .chancedOutput('gtceu:coal_dust', 225, 0)
+        .outputFluids('gtceu:oil 50')
+        .duration(200)
+        .EUt(80)
     //#endregion
 
 

@@ -205,10 +205,32 @@ const infuser = event.recipes.gtceu.mana_infusion
             .EUt(eu)
         
         if (input.includes('minecraft:water')) {
-            recipe.inputFluids(input);
+            recipe.inputFluids(input)
         } else {
-            recipe.itemInputs(input);
+            recipe.itemInputs(input)
         }
+    })
+//#endregion
+
+
+
+//#region corruption
+    //output, input (both 8x), duration in ticks, EUt
+    const corruption = [
+        ['8x minecraft:crying_obsidian', '8x minecraft:obsidian', 1200, 2],
+        ['8x 8x minecraft:soul_sand', '#forge:sand', 1200, 2],
+        ['8x minecraft:soul_soil', '8x minecraft:dirt', 1200, 2],
+        ['8x minecraft:netherrack', '8x #minecraft:stone_crafting_materials', 1200, 2],
+        ['8x minecraft:bone_block', '8x minecraft:calcite', 1200, 2],
+        ['8x minecraft:nether_bricks', '8x minecraft:bricks', 1200, 2]
+    ]
+
+    corruption.forEach(([ output, input, duration, eu ]) => {
+        infuser(`${input}_to_${output}`)
+            .itemOutputs(output)
+            .notConsumable('astrogreg:corrupt_daisy')
+            .duration(duration)
+            .EUt(eu)
     })
 //#endregion
 
