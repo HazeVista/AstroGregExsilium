@@ -218,7 +218,7 @@ const infuser = event.recipes.gtceu.mana_infusion
     //output, input (both 8x), duration in ticks, EUt
     const corruption = [
         ['8x minecraft:crying_obsidian', '8x minecraft:obsidian', 1200, 2],
-        ['8x 8x minecraft:soul_sand', '#forge:sand', 1200, 2],
+        ['8x minecraft:soul_sand', '8x #forge:sand', 1200, 2],
         ['8x minecraft:soul_soil', '8x minecraft:dirt', 1200, 2],
         ['8x minecraft:netherrack', '8x #minecraft:stone_crafting_materials', 1200, 2],
         ['8x minecraft:bone_block', '8x minecraft:calcite', 1200, 2],
@@ -226,9 +226,10 @@ const infuser = event.recipes.gtceu.mana_infusion
     ]
 
     corruption.forEach(([ output, input, duration, eu ]) => {
-        infuser(`${input}_to_${output}`)
+        infuser(`corrupt_${output.replace(/\d+x\s*/, '').replace(':', '_')}`)
             .itemOutputs(output)
             .notConsumable('astrogreg:corrupt_daisy')
+            .itemInputs(input)
             .duration(duration)
             .EUt(eu)
     })

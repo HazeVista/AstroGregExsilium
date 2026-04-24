@@ -152,7 +152,7 @@ ServerEvents.recipes(event => {
         'itemcollectors:advanced_collector', 'copycats:crafting/copycat_shaft', 'botania:terra_plate/terrasteel_ingot', 'create_connected:crafting/kinetics/empty_fan_catalyst_from_withering', 
         'create_connected:crafting/kinetics/empty_fan_catalyst_from_sanding', 'create_connected:crafting/kinetics/empty_fan_catalyst_from_seething', 'create_connected:crafting/kinetics/empty_fan_catalyst_from_freezing',
         'create_connected:crafting/kinetics/empty_fan_catalyst', 'create_connected:crafting/kinetics/empty_fan_catalyst_from_ending_dragons_breath','create_connected:crafting/kinetics/empty_fan_catalyst_from_enriched',
-        'create_connected:crafting/kinetics/sequenced_pulse_generator', 'gtceu:electrolyzer/electrolyze_apatite', 'gtceu:electrolyzer/decomposition_electrolyzing_clay'
+        'create_connected:crafting/kinetics/sequenced_pulse_generator', 'gtceu:electrolyzer/apatite_electrolysis', 'gtceu:electrolyzer/decomposition_electrolyzing_clay'
     ])
     //#endregion
 

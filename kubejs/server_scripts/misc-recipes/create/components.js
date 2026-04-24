@@ -579,7 +579,7 @@ ServerEvents.recipes(event => {
         C: '#forge:tools/wrenches'
     })
 
-    gt.shaped('', [
+    gt.shaped('create_connected:sequenced_pulse_generator', [
         'ABC',
         'DDD'
     ], {

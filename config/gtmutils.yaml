@@ -62,3 +62,6 @@ features:
   # Whether the Tag Stocking Input Bus/Hatch are enabled. If AE2 is not loaded, this config will not load the machines regardless.
   tagStockingEnabled: false
 
+  # Whether the Infinite Spray Can should be enabled.
+  infiniteSprayCanEnabled: false
+
