@@ -9,13 +9,18 @@
 	quest_links: [ ]
 	quests: [
 		{
+			description: [
+				"{questbook.astrogreg.ulv.progression.introduction.description_0}"
+				""
+				"{questbook.astrogreg.ulv.progression.introduction.description_1}"
+			]
 			icon: "astrogreg:asteroid_stone"
 			id: "30F93D76EC0A9D53"
 			shape: "octagon"
 			size: 2.0d
 			tasks: [{
 				id: "023D7E0476E7A2E4"
-				title: "{ulv.progression.introduction}"
+				title: "{questbook.astrogreg.ulv.progression.introduction.title}"
 				type: "checkmark"
 			}]
 			title: "{questbook.astrogreg.ulv.progression.introduction.title}"
@@ -24,6 +29,7 @@
 		}
 		{
 			dependencies: ["30F93D76EC0A9D53"]
+			description: ["{questbook.astrogreg.ulv.progression.familiar_start.description_0}"]
 			icon: {
 				Count: 1
 				id: "minecraft:wooden_pickaxe"
@@ -68,6 +74,11 @@
 		}
 		{
 			dependencies: ["375620C5E4626304"]
+			description: [
+				"{questbook.astrogreg.ulv.progression.iron_man.description_0}"
+				""
+				"{questbook.astrogreg.ulv.progression.iron_man.description_1}"
+			]
 			icon: "minecraft:iron_ingot"
 			id: "489BFFC1809B3121"
 			rewards: [{
@@ -101,6 +112,7 @@
 		}
 		{
 			dependencies: ["489BFFC1809B3121"]
+			description: ["{questbook.astrogreg.ulv.progression.wrought_iron_man.description_0}"]
 			icon: "gtceu:wrought_iron_ingot"
 			id: "4FB031B0CAF640D8"
 			rewards: [{
@@ -304,7 +316,6 @@
 			hide_text_until_complete: false
 			icon: "gtceu:bronze_brick_casing"
 			id: "4C27D7D7D1C08452"
-			optional: true
 			rewards: [{
 				count: 3
 				id: "2365BC30BA420D68"
@@ -333,7 +344,6 @@
 			dependency_requirement: "one_completed"
 			icon: "gtceu:lp_steam_solid_boiler"
 			id: "7BDB61D201C76D19"
-			optional: true
 			rewards: [{
 				id: "5A089CAB5C43A39E"
 				item: "astrogreg:astrocredit"
@@ -344,31 +354,37 @@
 				{
 					id: "5C5CEE9336B47FD2"
 					item: "gtceu:lp_steam_solid_boiler"
+					optional_task: true
 					type: "item"
 				}
 				{
 					id: "091B791130B07D99"
 					item: "gtceu:lp_steam_liquid_boiler"
+					optional_task: true
 					type: "item"
 				}
 				{
 					id: "6CB06F74CED4D6E0"
 					item: "gtceu:lp_steam_solar_boiler"
+					optional_task: true
 					type: "item"
 				}
 				{
 					id: "5DD67CA1452847CE"
 					item: "gtceu:hp_steam_solid_boiler"
+					optional_task: true
 					type: "item"
 				}
 				{
 					id: "32F710909A65ACC2"
 					item: "gtceu:hp_steam_liquid_boiler"
+					optional_task: true
 					type: "item"
 				}
 				{
 					id: "5D116FF84825A2E7"
 					item: "gtceu:hp_steam_solar_boiler"
+					optional_task: true
 					type: "item"
 				}
 			]
@@ -378,6 +394,11 @@
 		}
 		{
 			dependencies: ["375620C5E4626304"]
+			description: [
+				"{questbook.astrogreg.ulv.progression.bronze_materials.description_0}"
+				""
+				"{questbook.astrogreg.ulv.progression.bronze_materials.description_1}"
+			]
 			icon: "minecraft:copper_ingot"
 			id: "07E3B014F1C18C4B"
 			rewards: [{
@@ -551,7 +572,6 @@
 		{
 			dependencies: ["4C27D7D7D1C08452"]
 			id: "7BEF8D975FB3B5BE"
-			optional: true
 			rewards: [{
 				id: "0FBBBA2E3B0FC08B"
 				item: "astrogreg:astrocredit"
@@ -569,7 +589,6 @@
 		{
 			dependencies: ["4C27D7D7D1C08452"]
 			id: "18CC681FF8A2F6FC"
-			optional: true
 			rewards: [{
 				id: "4C30801DA3D4D3A9"
 				item: "astrogreg:astrocredit"
@@ -587,7 +606,6 @@
 		{
 			dependencies: ["4C27D7D7D1C08452"]
 			id: "3DEA6CA219D199D9"
-			optional: true
 			rewards: [{
 				id: "54B147235F7A7C20"
 				item: "astrogreg:astrocredit"
@@ -605,7 +623,6 @@
 		{
 			dependencies: ["4C27D7D7D1C08452"]
 			id: "5BFC3FB3DB89FBE9"
-			optional: true
 			rewards: [{
 				id: "0620F272C6C4F658"
 				item: "astrogreg:astrocredit"

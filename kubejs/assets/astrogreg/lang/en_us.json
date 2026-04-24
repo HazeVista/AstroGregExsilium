@@ -315,7 +315,11 @@
 
     "questbook.astrogreg.ulv.progression.familiar_start.description_0": "The next step in being able to explore your environment will require you grow a tree. You can make space for it by breaking a block in the floor and replacing it with dirt from your emergency survival kit.",
 
-    "questbook.astrogreg.ulv.progression.iron_man.description_0": "Now that you're properly equipped, it's time for you to go collect some asteroid stone for a stone pickaxe so that you can start collecting ores like iron ore.",
-    "questbook.astrogreg.ulv.progression.iron_man.description_1": ""
+    "questbook.astrogreg.ulv.progression.iron_man.description_0": "Now that you're properly equipped, it's time for you to go collect some asteroid stone for a stone pickaxe. Once you do, you can start collecting ores like iron ore and other useful ores.",
+    "questbook.astrogreg.ulv.progression.iron_man.description_1": "Don't worry too much about falling into the void, you'll loop back around eventually.",
 
+    "questbook.astrogreg.ulv.progression.wrought_iron_man.description_0": "With a campfire and a little you'll be able to convert your iron ingots into wrought iron, serving as a stronger alternative to iron for making tools.",
+
+    "questbook.astrogreg.ulv.progression.bronze_materials.description_0": "Optionally, you can jump right in to the Steam Age if you would like, it just means that you would need to collect the materials for bronze first.",
+    "questbook.astrogreg.ulv.progression.bronze_materials.description_1": "This will require you to collect copper ore for copper and cassiterite ore for tin."
 }
