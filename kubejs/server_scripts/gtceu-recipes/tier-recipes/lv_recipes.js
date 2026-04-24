@@ -116,6 +116,13 @@ ServerEvents.recipes(event => {
         .itemOutputs('minecraft:slime_ball')
         .duration(240)
         .EUt(30)
+
+    gt.assembler('resin_printed_circuit_board')
+        .itemInputs('4x gtceu:copper_foil', 'gtceu:wood_plate')
+        .inputFluids('gtceu:glue 50')
+        .itemOutputs('gtceu:resin_printed_circuit_board')
+        .duration(160)
+        .EUt(7)
     //#endregion
 
 

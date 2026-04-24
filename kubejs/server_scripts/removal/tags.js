@@ -194,6 +194,9 @@ ServerEvents.tags('item', event => {
         'minecraft:smelts_to_glass':
             ['astrogreg:asteroid_sand'],
 
+        'forge:sand':
+            ['astrogreg:asteroid_sand'],
+
         'forge:gravel':
             ['astrogreg:asteroid_gravel'],
 

@@ -3,7 +3,7 @@ ServerEvents.recipes(event => {
   const gt = event.recipes.gtceu
 
     //#region misc
-    event.shapeless('minecraft:farmland', ['#minecraft:hoes', 'minecraft:dirt'])
+    event.shapeless('minecraft:farmland', ['#forge:tools/scythes', 'minecraft:dirt'])
     event.shapeless('gtceu:tin_alloy_dust', ['gtceu:iron_dust', 'gtceu:tin_dust'])
 
     gt.assembler('till_dirt')
