@@ -7,18 +7,382 @@
 	id: "27E37E80E69F65CC"
 	order_index: 3
 	quest_links: [ ]
-	quests: [{
-		dependencies: ["768977D0EB6EBDA9"]
-		id: "0B5D9763389CAE2D"
-		shape: "hexagon"
-		size: 2.0d
-		tasks: [{
-			id: "0F3E6D672494E072"
-			item: "botania:fertilizer"
-			type: "item"
-		}]
-		x: -1.0d
-		y: -0.5d
-	}]
+	quests: [
+		{
+			dependencies: ["768977D0EB6EBDA9"]
+			id: "0B5D9763389CAE2D"
+			shape: "hexagon"
+			size: 2.0d
+			tasks: [{
+				id: "0F3E6D672494E072"
+				item: "botania:fertilizer"
+				type: "item"
+			}]
+			title: "{questbook.astrogreg.botania.flower_power}"
+			x: -1.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["0B5D9763389CAE2D"]
+			id: "1A2C9EA1194338DF"
+			tasks: [
+				{
+					id: "0C408F7E704FE834"
+					item: "botania:white_petal"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "3353289314CF78FF"
+					item: "botania:light_gray_petal"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "79A9EC883B52F3FE"
+					item: "botania:gray_petal"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "231B882BC8DC740D"
+					item: "botania:black_petal"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "24E2C4AE69C9A3C1"
+					item: "botania:brown_petal"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "43F8243FE4FD66AC"
+					item: "botania:red_petal"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "639518675C478504"
+					item: "botania:orange_petal"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "6D7AA0CAFEED8C71"
+					item: "botania:yellow_petal"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "326C4D9C0474B245"
+					item: "botania:lime_petal"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "25DA1791B7336AEB"
+					item: "botania:green_petal"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "62E38565CC10B1B7"
+					item: "botania:cyan_petal"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "6DCFA9D0D1CFC924"
+					item: "botania:light_blue_petal"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "1B6FA7A4209225AD"
+					item: "botania:blue_petal"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "47AC1055FA608138"
+					item: "botania:purple_petal"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "12CEE7A5E7ADAB08"
+					item: "botania:magenta_petal"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "0ABA9068913C3C42"
+					item: "botania:pink_petal"
+					optional_task: true
+					type: "item"
+				}
+			]
+			title: "{questbook.astrogreg.botania.easy_dyes}"
+			x: -1.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["1A2C9EA1194338DF"]
+			id: "6A50CBE0BB3C4025"
+			tasks: [{
+				id: "0B9B7F6C78BA9642"
+				item: "botania:apothecary_default"
+				type: "item"
+			}]
+			x: -1.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["6A50CBE0BB3C4025"]
+			id: "5932F7B8D1EEEAE3"
+			tasks: [{
+				id: "404C66277E016203"
+				item: "botania:pure_daisy"
+				type: "item"
+			}]
+			x: -1.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["6A50CBE0BB3C4025"]
+			id: "638DF887EAD910DB"
+			tasks: [{
+				id: "38EC5760971495C1"
+				item: "astrogreg:corrupt_daisy"
+				type: "item"
+			}]
+			x: -3.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["5932F7B8D1EEEAE3"]
+			id: "16CC9ADEC3C8F499"
+			tasks: [{
+				id: "55632DA07F9A14CF"
+				item: "botania:livingrock"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 5.5d
+		}
+		{
+			dependencies: ["6AC6269BDF21385D"]
+			id: "18382B2275715FD0"
+			optional: true
+			tasks: [{
+				id: "2FDEB3C3AE390990"
+				item: "botania:mana_spreader"
+				type: "item"
+			}]
+			x: -3.0d
+			y: 7.0d
+		}
+		{
+			dependencies: ["16CC9ADEC3C8F499"]
+			id: "67FA9D26E3DE51B0"
+			optional: true
+			tasks: [{
+				id: "1D9BC51E10661CD5"
+				item: "botania:mana_pool"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 7.0d
+		}
+		{
+			dependencies: ["6A50CBE0BB3C4025"]
+			hide_dependent_lines: true
+			id: "3D1795A69E0A4768"
+			tasks: [
+				{
+					id: "54A448A6E2F6E344"
+					item: "botania:hydroangeas"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "567C1F66B12DF569"
+					item: "botania:endoflame"
+					optional_task: true
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["5932F7B8D1EEEAE3"]
+			id: "6AC6269BDF21385D"
+			tasks: [{
+				id: "0276BCEA13843DCC"
+				item: "botania:livingwood_log"
+				type: "item"
+			}]
+			x: -3.0d
+			y: 5.5d
+		}
+		{
+			dependencies: ["6AC6269BDF21385D"]
+			id: "61B30E9605AFB72A"
+			optional: true
+			tasks: [{
+				id: "44F0E0F3F27D8990"
+				item: {
+					Count: 1
+					id: "botania:twig_wand"
+					tag: {
+						color1: 0
+						color2: 0
+					}
+				}
+				type: "item"
+			}]
+			x: -1.5d
+			y: 6.25d
+		}
+		{
+			dependencies: [
+				"61B30E9605AFB72A"
+				"67FA9D26E3DE51B0"
+				"18382B2275715FD0"
+				"3D1795A69E0A4768"
+			]
+			icon: "manafluid:mana_bucket"
+			id: "5EC4AEC7AB3625E9"
+			tasks: [{
+				id: "35F2B18AEF2D73D6"
+				title: "{questbook.astrogreg.botania.generation}"
+				type: "checkmark"
+			}]
+			x: -1.5d
+			y: 8.0d
+		}
+		{
+			dependencies: ["5EC4AEC7AB3625E9"]
+			id: "175324385BDA017D"
+			tasks: [{
+				id: "1E107CB964E31891"
+				item: "botania:mana_powder"
+				type: "item"
+			}]
+			x: -1.5d
+			y: 9.5d
+		}
+		{
+			dependencies: ["175324385BDA017D"]
+			id: "52C203AEBF5389E4"
+			tasks: [{
+				id: "236AF627F8126B01"
+				item: "gtbotania:manasteel_dust"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 9.5d
+		}
+		{
+			dependencies: ["52C203AEBF5389E4"]
+			id: "613302E5BF08120A"
+			tasks: [{
+				id: "3F98C3B2A4FE363A"
+				item: "botania:manasteel_ingot"
+				type: "item"
+			}]
+			x: 1.5d
+			y: 9.5d
+		}
+		{
+			dependencies: ["16CC9ADEC3C8F499"]
+			id: "5E5371250119B5A3"
+			tasks: [{
+				id: "24FFC4AC22E323A1"
+				item: "astrogreg:livingrock_dust"
+				type: "item"
+			}]
+			x: 1.5d
+			y: 5.5d
+		}
+		{
+			dependencies: ["5E5371250119B5A3"]
+			id: "2709E9D34AA3E7C5"
+			tasks: [{
+				id: "684320284CD34FF9"
+				item: "astrogreg:livingclay_dust"
+				type: "item"
+			}]
+			x: 3.0d
+			y: 5.5d
+		}
+		{
+			dependencies: ["2709E9D34AA3E7C5"]
+			id: "59319B5827ED818A"
+			tasks: [
+				{
+					id: "0DA3A539F8F96D0B"
+					item: "astrogreg:compressed_livingclay"
+					type: "item"
+				}
+				{
+					id: "5F99E2FD3954EB0D"
+					item: "astrogreg:livingbrick"
+					type: "item"
+				}
+			]
+			x: 3.0d
+			y: 7.0d
+		}
+		{
+			dependencies: ["59319B5827ED818A"]
+			id: "47A955A449A5B079"
+			tasks: [{
+				id: "20ACF218A0FAD2D1"
+				item: "astrogreg:livingbricks"
+				type: "item"
+			}]
+			x: 3.0d
+			y: 8.25d
+		}
+		{
+			dependencies: [
+				"47A955A449A5B079"
+				"613302E5BF08120A"
+			]
+			id: "52FD464ADAF94D17"
+			tasks: [{
+				id: "3A0DAFD50A24186F"
+				item: "astrogreg:manasteel_brick_machine_casing"
+				type: "item"
+			}]
+			x: 3.0d
+			y: 9.5d
+		}
+		{
+			dependencies: ["52FD464ADAF94D17"]
+			id: "742693F2A0E2A797"
+			tasks: [{
+				id: "2329FEA1904E1DFD"
+				item: "astrogreg:manasteel_mana_large_boiler"
+				type: "item"
+			}]
+			x: 3.0d
+			y: 11.0d
+		}
+		{
+			dependencies: ["52FD464ADAF94D17"]
+			id: "4A1A23B7AF352208"
+			tasks: [{
+				id: "4FC98112B63FE092"
+				item: "gtceu:runic_engraver"
+				type: "item"
+			}]
+			x: 4.5d
+			y: 9.5d
+		}
+	]
 	title: "{questbook.astrogreg.botania.title}"
 }

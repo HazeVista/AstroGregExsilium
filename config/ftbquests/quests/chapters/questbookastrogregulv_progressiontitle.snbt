@@ -29,7 +29,11 @@
 		}
 		{
 			dependencies: ["30F93D76EC0A9D53"]
-			description: ["{questbook.astrogreg.ulv.progression.familiar_start.description_0}"]
+			description: [
+				"{questbook.astrogreg.ulv.progression.familiar_start.description_0}"
+				""
+				"{questbook.astrogreg.ulv.progression.familiar_start.description_1}"
+			]
 			icon: {
 				Count: 1
 				id: "minecraft:wooden_pickaxe"
