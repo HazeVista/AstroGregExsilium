@@ -200,6 +200,9 @@ ServerEvents.tags('item', event => {
         'forge:gravel':
             ['astrogreg:asteroid_gravel'],
 
+        'minecraft:stone_bricks':
+            ['astrogreg:asteroid_stone_bricks'],
+
         'forge:mushrooms':
             ['ad_extendra:aeronos_mushroom', 'ad_extendra:strophar_mushroom', 'minecraft:warped_fungus', 'minecraft:crimson_fungus']
     }

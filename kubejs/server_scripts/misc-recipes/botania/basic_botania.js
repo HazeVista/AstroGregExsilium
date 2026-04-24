@@ -39,7 +39,7 @@ ServerEvents.recipes(event => {
     
 
     //#region 'machine' recipes
-    event.shaped('botania:apothecary_default', [
+    event.shaped('botania:apothecary_asteroid', [
         'ABA',
         ' A ',
         'AAA'

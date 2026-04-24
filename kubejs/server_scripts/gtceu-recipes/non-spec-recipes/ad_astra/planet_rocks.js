@@ -263,4 +263,22 @@ ServerEvents.recipes(event => {
         .duration(15)
         .EUt(4)
     //#endregion
+
+
+
+    //#region misc
+    gt.shaped('astrogreg:asteroid_stone_bricks', [
+        'AA',
+        'AA'
+    ], {    
+        A: 'astrogreg:asteroid_stone'
+    })
+
+    gt.assembler('asteroid_stone_bricks_assembler')
+        .itemInputs('astrogreg:asteroid_stone')
+        .itemOutputs('astrogreg:asteroid_stone_bricks')
+        .duration(80)
+        .circuit(4)
+        .EUt(2)
+    //#endregion
 })
