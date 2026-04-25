@@ -169,7 +169,7 @@ ServerEvents.recipes(event => {
 
     //#region remove whole mod
     const toRemoveMod = ([
-        'createoreexcavation', 'scannable', 'storagenetwork', 'powah', 'grapplemod', 'fluxnetworks', 'trashcans', 'toolbelt', 'constructionwand', 
+        'createoreexcavation', 'scannable', 'powah', 'grapplemod', 'fluxnetworks', 'trashcans', 'toolbelt', 'constructionwand', 
         'ae2insertexportcard', 'orbital_railgun',
     ])
     //#endregion
