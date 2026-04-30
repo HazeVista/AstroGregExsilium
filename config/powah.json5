@@ -26,9 +26,9 @@
 		},
 		// List of heat source blocks used under Thermo Generator.
 		"heat_blocks": {
-			"minecraft:magma_block": 800,
 			"powah:blazing_crystal_block": 2800,
-			"minecraft:lava": 1000
+			"minecraft:lava": 1000,
+			"minecraft:magma_block": 800
 		},
 		// Energy produced per fuel tick in the Furnator.
 		"energy_per_fuel_tick": 30,
@@ -61,9 +61,9 @@
 			},
 			"generation_rates": {
 				"starter": 20,
-				"basic": 80,
-				"hardened": 180,
-				"blazing": 400,
+				"basic": 32,
+				"hardened": 128,
+				"blazing": 512,
 				"niotic": 2000,
 				"spirited": 8000,
 				"nitro": 40000
@@ -90,9 +90,9 @@
 			},
 			"generation_rates": {
 				"starter": 20,
-				"basic": 80,
-				"hardened": 180,
-				"blazing": 400,
+				"basic": 32,
+				"hardened": 128,
+				"blazing": 512,
 				"niotic": 2000,
 				"spirited": 8000,
 				"nitro": 40000

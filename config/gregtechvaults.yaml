@@ -1,0 +1,95 @@
+coreValues:
+  # The number of item slots added by the Vault Core MK I
+  # Default: 100
+  mk1SlotValue: 100
+
+  # The number of item slots added by the Vault Core MK II
+  # Default: 200
+  mk2SlotValue: 200
+
+  # The number of item slots added by the Vault Core MK III
+  # Default: 500
+  mk3SlotValue: 500
+
+vaultValues:
+  bronzeVault:
+    # Base number of item slots for the Large Bronze Vault
+    # Default: 36
+    bronzeBaseSlots: 36
+
+    # Maximum number of interfaces for the Large Bronze Vault
+    # Default: 2
+    bronzeInterfaceLimit: 2
+
+    # Whether wireless terminals can connect to the Large  Vault
+    # Default: true
+    bronzeWireless: true
+
+  steelVault:
+    # Base number of item slots for the Large Steel Vault
+    # Default: 72
+    steelBaseSlots: 72
+
+    # Maximum number of interfaces for the Large  Vault
+    # Default: 4
+    steelInterfaceLimit: 4
+
+    # Whether wireless terminals can connect to the Large Steel Vault
+    # Default: true
+    steelWireless: true
+
+  titaniumVault:
+    # Base number of item slots for the Large Titanium Vault
+    # Default: 108
+    titaniumBaseSlots: 108
+
+    # Maximum number of interfaces for the Large Titanium Vault
+    # Default: 8
+    titaniumInterfaceLimit: 8
+
+    # Whether wireless terminals can connect to the Large Titanium Vault
+    # Default: true
+    titaniumWireless: true
+
+wirelessTerminal:
+  # Base distance in blocks that the wireless terminal can connect to a vault
+  # Default: 64
+  connectionDistance: 64
+
+  # Whether infinite range is enabled for the wireless terminal, also enables cross-dimension connection
+  # If true, connectionDistance will be ignored entirely
+  # Default: false
+  infiniteRange: false
+
+  # The range multiplier applied by the LV emitter
+  # Default: 1.5
+  lvEmitterBonus: 1.5
+
+  # The range multiplier applied by the MV emitter
+  # Default: 2.0
+  mvEmitterBonus: 2.0
+
+  # The range multiplier applied by the HV emitter
+  # Default: 2.5
+  hvEmitterBonus: 2.5
+
+  # The range multiplier applied by the EV emitter
+  # Default: 3.0
+  evEmitterBonus: 3.0
+
+  # The range multiplier applied by the IV emitter
+  # Default: 4.0
+  ivEmitterBonus: 4.0
+
+  # The range multiplier applied by the LuV emitter
+  # Default: 5.0
+  luvEmitterBonus: 5.0
+
+  # The range multiplier applied by the ZPM emitter
+  # Default: 6.0
+  zpmEmitterBonus: 6.0
+
+  # The range multiplier applied by the UV emitter
+  # Default: 8.0
+  uvEmitterBonus: 8.0
+

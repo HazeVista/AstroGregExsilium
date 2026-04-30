@@ -22,4 +22,6 @@
 	fanHorizontalOnly = false
 	#Dispenser interacts with burner.
 	dispenserBurner = true
+	#When set to true, basic burners lit up whenever fuel is inserted,Ignoring the burner starters item tag requirement.
+	ignoresBurnerStarters = false
 

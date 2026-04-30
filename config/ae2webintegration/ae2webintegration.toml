@@ -12,6 +12,8 @@
 	#How many requests can be made before user is logged in per minute
 	#Range: 1 ~ 1000
 	max_requests_before_logged_in_per_minute = 20
+	#Check for new versions and display notifications in chat and on the website
+	check_for_updates = true
 
 [Discord]
 	#Discord webhook url (OPTIONAL, leave empty to ignore) (WORKS ONLY IF PUBLIC_MODE IS DISABLED)
