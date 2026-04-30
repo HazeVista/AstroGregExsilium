@@ -39,7 +39,7 @@ ServerEvents.recipes(event => {
     
 
     //#region 'machine' recipes
-    event.shaped('botania:apothecary_asteroid', [
+    event.shaped('astrogreg:asteroid_apothecary', [
         'ABA',
         ' A ',
         'AAA'
@@ -62,7 +62,6 @@ ServerEvents.recipes(event => {
         .itemOutputs('botania:mana_pylon')
         .duration(400)
         .EUt(120)
-    
     //#endregion
 
 
@@ -86,6 +85,7 @@ ServerEvents.recipes(event => {
 
     event.recipes.botania.pure_daisy('minecraft:end_stone', 'minecraft:blackstone', 150)
     event.recipes.botania.pure_daisy('botania:livingrock', '#forge:stone', 150)
+    event.recipes.botania.pure_daisy('minecraft:clay', '#forge:sand', 150)
     //#endregion
     
 

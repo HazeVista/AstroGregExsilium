@@ -130,6 +130,29 @@ ServerEvents.recipes(event => {
         D: 'gtceu:hp_steam_miner',
         E: 'gtceu:bronze_gear'
     })
+
+    gt.shaped('astrogreg:large_steam_rock_crusher', [
+        'AAA',
+        'BCB',
+        'DBD'
+    ], {
+        A: 'gtceu:grinding_head_damascus_steel',
+        B: 'gtceu:bronze_gear',
+        C: 'gtceu:lp_steam_rock_crusher',
+        D: 'gtceu:bronze_plate'
+    })
+    .addMaterialInfo()
+
+    gt.shaped('astrogreg:large_steam_rock_crusher', [
+        'AAA',
+        'BCB',
+        'DBD'
+    ], {
+        A: 'gtceu:grinding_head_damascus_steel',
+        B: 'gtceu:bronze_gear',
+        C: 'gtceu:hp_steam_rock_crusher',
+        D: 'gtceu:bronze_plate'
+    })
     //#endregion
 
 

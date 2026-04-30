@@ -35,6 +35,8 @@
 
     "astrogreg.large_steam_macerator.tooltip": "Maceration without the Byproducts",
 
+    "astrogreg.large_steam_rock_crusher.tooltip": "Steam-Powered Rock Factory",
+
     "astrogreg.mana_infuser.tooltip.tier1": "§o§7Who needs mana pools?",
     "astrogreg.mana_infuser.tooltip.tier2": "§o§7Base Botania is for chumps anyways",
     "astrogreg.mana_infuser.tooltip.tier3": "§o§7Mechanized Mana Manipulation Matrix",

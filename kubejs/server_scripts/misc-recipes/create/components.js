@@ -21,7 +21,7 @@ ServerEvents.recipes(event => {
         'CDC'
     ], {
         A: 'gtceu:wrought_iron_plate',
-        B: 'create:shaft',
+        B: '#create:shafts',
         C: 'create:andesite_alloy',
         D: '#create:gearboxes'
     })
@@ -184,7 +184,7 @@ ServerEvents.recipes(event => {
         'BAB',
         'BBB'
     ], {
-        A: 'create:shaft',
+        A: '#create:shafts',
         B: 'gtceu:brass_plate'
     })
     .addMaterialInfo()
@@ -196,7 +196,7 @@ ServerEvents.recipes(event => {
     ], {
         A: 'gtceu:brass_plate',
         B: 'create:cogwheel',
-        C: 'create:shaft'
+        C: '#create:shafts'
     })
     .addMaterialInfo()
 
@@ -204,13 +204,13 @@ ServerEvents.recipes(event => {
         ' C ',
         'BAB'
     ], {
-        A: 'create:shaft',
+        A: '#create:shafts',
         B: '#minecraft:planks',
         C: '#forge:tools/saws'
     })
 
     gt.assembler('cogwheel')
-        .itemInputs('create:shaft', '2x #minecraft:planks')
+        .itemInputs('#create:shafts', '2x #minecraft:planks')
         .itemOutputs('create:cogwheel')
         .circuit(1)
         .duration(40)
@@ -223,12 +223,12 @@ ServerEvents.recipes(event => {
         ' A ',
     ], {
         A: '#minecraft:planks',
-        B: 'create:shaft',
+        B: '#create:shafts',
         C: '#forge:tools/saws'
     })
     
     gt.assembler('large_cogwheel')
-        .itemInputs('create:shaft', '4x #minecraft:planks')
+        .itemInputs('#create:shafts', '4x #minecraft:planks')
         .itemOutputs('create:large_cogwheel')
         .circuit(2)
         .duration(80)
@@ -241,7 +241,7 @@ ServerEvents.recipes(event => {
         ' A '
     ], {
         A: '#minecraft:planks',
-        B: 'create:shaft',
+        B: '#create:shafts',
         C: '#forge:tools/saws',
         D: '#forge:tools/files'
     })
@@ -253,7 +253,7 @@ ServerEvents.recipes(event => {
         ' A '
     ], {
         A: '#minecraft:planks',
-        B: 'create:shaft',
+        B: '#create:shafts',
         C: '#forge:tools/saws',
         D: '#forge:tools/files'
     })
@@ -273,7 +273,7 @@ ServerEvents.recipes(event => {
         'BAB',
         'BBB'
     ], {
-        A: 'create:shaft',
+        A: '#create:shafts',
         B: 'gtceu:wrought_iron_rod'
     })
     .addMaterialInfo()
@@ -286,7 +286,7 @@ ServerEvents.recipes(event => {
         A: 'create:piston_extension_pole',
         B: 'create:whisk',
         C: 'create:large_cogwheel',
-        D: 'create:shaft'
+        D: '#create:shafts'
     })
     .addMaterialInfo()
 
@@ -306,7 +306,7 @@ ServerEvents.recipes(event => {
         'CBC',
         ' C '
     ], {
-        A: 'create:shaft',
+        A: '#create:shafts',
         B: '#gtceu:circuits/ulv',
         C: 'gtceu:brass_plate'
     })
@@ -359,7 +359,7 @@ ServerEvents.recipes(event => {
         ' A '
     ], {
         A: 'create:andesite_casing',
-        B: 'create:shaft',
+        B: '#create:shafts',
         C: 'gtceu:wrought_iron_plate'
     })
     .addMaterialInfo()
@@ -379,7 +379,7 @@ ServerEvents.recipes(event => {
         ' A '
     ], {
         A: 'create:andesite_casing',
-        B: 'create:shaft',
+        B: '#create:shafts',
         C: 'gtceu:wrought_iron_gear',
         D: 'gtceu:wrought_iron_rod'
     })
@@ -444,7 +444,7 @@ ServerEvents.recipes(event => {
     ], {
         A: 'create:brass_casing',
         B: 'minecraft:chain',
-        C: 'create:shaft'
+        C: '#create:shafts'
     })
     .addMaterialInfo()
 
@@ -455,7 +455,7 @@ ServerEvents.recipes(event => {
     ], {
         A: 'create:andesite_casing',
         B: 'farmersdelight:rope',
-        C: 'create:shaft'
+        C: '#create:shafts'
     })
     .addMaterialInfo()
 
@@ -561,11 +561,11 @@ ServerEvents.recipes(event => {
         'ABA',
         'AAA'
     ], {
-        A: 'create:shaft',
+        A: '#create:shafts',
         B: 'gtceu:zinc_ingot'
     })
 
-    event.shapeless('create_connected:shear_pin', ['#forge:tools/saws', 'create:shaft'])
+    event.shapeless('create_connected:shear_pin', ['#forge:tools/saws', '#create:shafts'])
 
     event.shapeless('create:encased_chain_drive', ['create:andesite_casing', 'minecraft:chain', 'minecraft:chain'])
 
@@ -597,7 +597,7 @@ ServerEvents.recipes(event => {
     event.shapeless('2x gtceu:andesite_dust', ['#forge:stone_dusts', 'gtceu:nether_quartz_dust'])
     event.shapeless('2x gtceu:andesite_dust', ['#forge:stone_dusts', 'gtceu:quartz_sand_dust'])
     event.shapeless('1x astrogreg:andesite_alloy_dust', ['gtceu:andesite_dust', 'gtceu:iron_dust'])
-    event.shapeless('2x create:shaft', ['create:andesite_alloy', '#forge:tools/files'])
+    event.shapeless('2x #create:shafts', ['create:andesite_alloy', '#forge:tools/files'])
     event.shapeless('9x create:andesite_alloy', 'create:andesite_alloy_block')
     event.smelting('1x create:andesite_alloy', 'astrogreg:andesite_alloy_dust')
 
@@ -653,13 +653,13 @@ ServerEvents.recipes(event => {
 
     gt.lathe('lathing_shaft')
         .itemInputs('1x create:andesite_alloy')
-        .itemOutputs('8x create:shaft')
+        .itemOutputs('8x #create:shafts')
         .duration(120)
         .EUt(7)
 
     gt.cutter('cutting_shaft')
         .itemInputs('1x create:andesite_alloy')
-        .itemOutputs('8x create:shaft')
+        .itemOutputs('8x #create:shafts')
         .duration(60)
         .EUt(15)
         .addMaterialInfo(true)
@@ -703,7 +703,7 @@ ServerEvents.recipes(event => {
         C: 'gtceu:hv_electric_motor',
         D: 'gtceu:hv_machine_hull',
         E: 'create:cogwheel',
-        F: 'create:shaft'
+        F: '#create:shafts'
     })
     .addMaterialInfo()
 

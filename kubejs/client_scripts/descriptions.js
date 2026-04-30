@@ -90,6 +90,22 @@ ItemEvents.tooltip(event => {
     multiTooltip(event, 'astrogreg:large_steam_macerator', [
         { text: 'astrogreg.large_steam_macerator.tooltip' }   
     ])
+
+    multiTooltip(event, 'astrogreg:large_steam_rock_crusher', [
+        { text: 'astrogreg.large_steam_rock_crusher.tooltip' }   
+    ])
+
+    multiTooltip(event, 'gregtechvaults:large_bronze_vault', [
+        { text: 'astrogreg.multiblock_controller.tooltip' }
+    ])
+
+    multiTooltip(event, 'gregtechvaults:large_steel_vault', [
+        { text: 'astrogreg.multiblock_controller.tooltip' }
+    ])
+
+    multiTooltip(event, 'gregtechvaults:large_titanium_vault', [
+        { text: 'astrogreg.multiblock_controller.tooltip' }
+    ])
     //#endregion
 
 
@@ -342,6 +358,8 @@ ItemEvents.tooltip(event => {
         ['concrete_plant'], ['kinetic_concrete_plant'],
         ['industrial_observatory'], ['industrial_astroport'],
         ['large_kinetic_alternator'], ['large_kinetic_miner'], 
+        ['large_primitive_composter'], ['large_steam_rock_crusher'],
+        ['large_rock_crusher']
     ]
 
     ageControllers.forEach(([name, tooltip]) => { 

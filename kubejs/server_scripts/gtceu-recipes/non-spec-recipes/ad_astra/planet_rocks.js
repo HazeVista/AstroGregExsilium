@@ -281,4 +281,57 @@ ServerEvents.recipes(event => {
         .circuit(4)
         .EUt(2)
     //#endregion
+
+
+
+    //#region large rock crushing
+    // stone type, EUt, 
+    const largeRockCrusher = [
+        ['ad_astra:mercury_stone', 112], 
+        ['ad_astra:venus_stone', 112], 
+        ['ad_astra:moon_stone', 112], 
+        ['ad_astra:mars_stone', 112], 
+        ['ad_extendra:ceres_stone', 112], 
+        ['ad_extendra:jupiter_stone', 112], 
+        ['ad_extendra:saturn_stone', 112], 
+        ['ad_extendra:uranus_stone', 112], 
+        ['ad_extendra:neptune_stone', 112], 
+        ['ad_extendra:pluto_stone', 112],
+        ['astrogreg:hard_asteroid_stone', 7],
+        ['astrogreg:cobbled_asteroid_stone', 7],
+        ['astrogreg:asteroid_stone', 7],
+        ['minecraft:stone', 7],
+        ['minecraft:cobblestone', 7],
+        ['minecraft:diorite', 60],
+        ['minecraft:andesite', 60],
+        ['minecraft:granite', 60],
+        ['minecraft:basalt', 240],
+        ['minecraft:blackstone', 240],
+        ['gtceu:marble', 240],
+        ['minecraft:deepslate', 960],
+        ['gtceu:red_granite', 960]
+    ]
+
+    largeRockCrusher.forEach(([ stone, eu ]) => {
+        gt.large_rock_crusher(`${stone.replace(/\d+x\s*/, '').replace(':', '_')}_duping`)
+            .notConsumable(stone)
+            .perTick(true)
+            .chancedFluidInput('minecraft:water 1', 1000, 0)
+            .chancedFluidInput('minecraft:lava 1', 1000, 0)
+            .perTick(false)
+            .itemOutputs(stone)
+            .duration(16)
+            .EUt(eu)
+    })
+
+    gt.large_rock_crusher('obsidian_from_redstone')
+        .notConsumable('minecraft:redstone')
+        .perTick(true)
+        .chancedFluidInput('minecraft:water 1', 1000, 0)
+        .chancedFluidInput('minecraft:lava 1', 1000, 0)
+        .perTick(false)
+        .itemOutputs('minecraft:obsidian')
+        .duration(16)
+        .EUt(240)
+    //#endregion
 })

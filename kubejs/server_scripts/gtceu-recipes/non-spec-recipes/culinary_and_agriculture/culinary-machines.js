@@ -3,6 +3,7 @@ ServerEvents.tags('item', event => {
     event.add('forge:mushroom_rice_vegetables', ['minecraft:carrot', 'minecraft:potato'])
     event.add('forge:marshmallow_base', ['#forge:eggs', '#forge:slime_ball', 'delightful:animal_fat'])
     event.add('forge:dog_food_base', ['delightful:animal_fat', 'minecraft:rotten_flesh'])
+    event.add('forge:wolf_prey', ['#forge:raw_meat'])
 })
 
 const ApplyIngredient = global.applyItemInput;
@@ -27,7 +28,7 @@ ServerEvents.recipes(event => {
         {output: 'farmersdelight:cabbage_rolls', input: {manual: ['#forge:crops/cabbage', '#farmersdelight:cabbage_roll_ingredients']}, time: 5}, 
         {output: '2x delightful:marshmallow_stick', input: {manual: ['#forge:marshmallow_base'], minecraft: ['sugar', 'sugar', 'stick', 'stick']}}, 
         {output: 'delightful:stuffed_cantaloupe_block', input: {manual: ['#minecraft:fox_food', '#forge:seeds', '#forge:cooked_mutton'], farmersdelight: ['rice', 'onion'], delightful: ['cantaloupe']}, time: 20}, 
-        {output: 'farmersdelight:dog_food', input: {manual: ['#forge:dog_food_base', '#farmersdelight:wolf_prey'], minecraft: ['bone_meal', 'bowl'], farmersdelight: ['rice']}},
+        {output: 'farmersdelight:dog_food', input: {manual: ['#forge:dog_food_base', '#forge:wolf_prey'], minecraft: ['bone_meal', 'bowl'], farmersdelight: ['rice']}},
         {output: 'farmersdelight:squid_ink_pasta', input: {manual: ['#forge:raw_fishes'], minecraft: ['ink_sac', 'bowl'], farmersdelight: ['raw_pasta', 'tomato']}}
     ] 
     // just remove the inputs to disable the recipe

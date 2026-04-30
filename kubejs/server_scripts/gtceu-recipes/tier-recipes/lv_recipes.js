@@ -123,6 +123,15 @@ ServerEvents.recipes(event => {
         .itemOutputs('gtceu:resin_printed_circuit_board')
         .duration(160)
         .EUt(7)
+
+    gt.shaped('gtceu:fluid_filter', [
+        'AAA',
+        'ABA',
+        'AAA'
+    ],{
+        A: 'gtceu:zinc_foil',
+        B: 'gtceu:sapphire_plate'
+    })
     //#endregion
 
 

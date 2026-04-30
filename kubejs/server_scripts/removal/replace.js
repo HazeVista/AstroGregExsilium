@@ -88,6 +88,7 @@ ServerEvents.recipes(event => {
     event.replaceInput({ output: 'create_connected:brake' }, 'minecraft:obsidian', 'gtceu:rubber_plate')
     event.replaceInput({ output: 'create_connected:freewheel_clutch' }, 'create:iron_sheet', 'gtceu:iron_plate')
     event.replaceInput({ output: 'create_connected:overstress_clutch' }, 'create:iron_sheet', 'gtceu:iron_plate')
+    event.replaceInput({ input: 'create:shaft' }, 'create:shaft', '#create:shafts')
     // event.replaceInput({ input: '' }, '', '')
 
     const mortarMetals = ['wrought_iron', 'flint', 'iron', 'bronze', 'steel', 'cobalt_brass', 'damascus_steel', 'invar']

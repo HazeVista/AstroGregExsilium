@@ -16,6 +16,19 @@ ServerEvents.recipes(event => {
     })
     .addMaterialInfo()
 
+    gt.shaped('astrogreg:large_rock_crusher', [
+        'ABA',
+        'CDC',
+        'EFE'
+    ], {
+        A: 'gtceu:grinding_head_tungsten',
+        B: '#gtceu:circuits/iv',
+        C: 'gtceu:tungsten_steel_gear',
+        D: 'gtceu:iv_rock_crusher',
+        E: 'gtceu:iv_electric_piston',
+        F: 'gtceu:iv_electric_motor'
+    })
+
     // gt.assembly_line('large_charging_station')
     //     .itemInputs('')    
     //     .itemInputs('')    

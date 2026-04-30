@@ -36,7 +36,7 @@ ServerEvents.recipes(event => {
         'botania:elementium_sword', 'botania:ender_dagger', 'botania:manasteel_pick', 'botania:manasteel_shovel', 'botania:manasteel_hoe', 'botania:manasteel_axe', 'botania:manasteel_sword',
         'botania:crafting_halo', 'botania:laputa_shard', 'gtceu:ulv_solar_panel', 'dustrial_decor:cardboard_helmet', 'dustrial_decor:cardboard_chestplate', 'botania:terrasteel_chestplate',
         'botania:terrasteel_leggings', 'botania:terrasteel_boots', 'botania:terra_sword', 'botania:terra_axe', 'botania:terra_pick', 'botania:third_eye', 'botania:orechid_ignem',
-        'botania:floating/heisei_dream', 'botania:vinculotus', 'botania:floating_vinculotus', 'create:tree_fertilizer', 'botania:agricarnation', 'botania:agricarnation_chibi',
+        'botania:floating/heisei_dream', 'botania:vinculotus', 'botania:floating_vinculotus', 'create:tree_fertilizer', 'botania:agricarnation', 'botania:agricarnation_chibi', 'gtceu:fluid_filter',
         'botania:floating_agricarnation', 'botania:floating_agricarnation_chibi', 'botania:hyacidus', 'botania:floating_hyacidus', 'botania:labellia', 'botania:floating_labellia',
         'botania:loonium', 'botania:floating_loonium', 'botania:spectranthemum', 'botania:floating_spectranthemum', 'botania:daffomill', 'botania:floating_daffomill', 'botania:narslimmus',
         'botania:floating_narslimmus', 'botania:medumone', 'botania:floating_medumone', 'botania:shulk_me_not', 'botania:floating_shulk_me_not', 'botania:rafflowsia', 'botania:floating_rafflowsia',
@@ -152,7 +152,8 @@ ServerEvents.recipes(event => {
         'itemcollectors:advanced_collector', 'copycats:crafting/copycat_shaft', 'botania:terra_plate/terrasteel_ingot', 'create_connected:crafting/kinetics/empty_fan_catalyst_from_withering', 
         'create_connected:crafting/kinetics/empty_fan_catalyst_from_sanding', 'create_connected:crafting/kinetics/empty_fan_catalyst_from_seething', 'create_connected:crafting/kinetics/empty_fan_catalyst_from_freezing',
         'create_connected:crafting/kinetics/empty_fan_catalyst', 'create_connected:crafting/kinetics/empty_fan_catalyst_from_ending_dragons_breath','create_connected:crafting/kinetics/empty_fan_catalyst_from_enriched',
-        'create_connected:crafting/kinetics/sequenced_pulse_generator', 'gtceu:electrolyzer/apatite_electrolysis', 'gtceu:electrolyzer/decomposition_electrolyzing_clay', 'gtceu:assembler/basic_circuit_board'
+        'create_connected:crafting/kinetics/sequenced_pulse_generator', 'gtceu:electrolyzer/apatite_electrolysis', 'gtceu:electrolyzer/decomposition_electrolyzing_clay', 'gtceu:assembler/basic_circuit_board',
+        'gtceu:shaped/cleanroom'
     ])
     //#endregion
 

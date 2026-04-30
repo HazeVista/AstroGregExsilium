@@ -172,6 +172,9 @@ ServerEvents.tags('item', event => {
         'create:gearboxes':
             ['create:gearbox', 'create:vertical_gearbox'],
 
+        'create:shafts':
+            ['create:shaft', 'copycats:copycat_shaft'],
+
         'forge:cakes': 
             ['minecraft:cake', 'createaddition:chocolate_cake', 'createaddition:honey_cake'],
 
@@ -204,7 +207,10 @@ ServerEvents.tags('item', event => {
             ['astrogreg:asteroid_stone_bricks'],
 
         'forge:mushrooms':
-            ['ad_extendra:aeronos_mushroom', 'ad_extendra:strophar_mushroom', 'minecraft:warped_fungus', 'minecraft:crimson_fungus']
+            ['ad_extendra:aeronos_mushroom', 'ad_extendra:strophar_mushroom', 'minecraft:warped_fungus', 'minecraft:crimson_fungus'],
+
+        'forge:seeds': 
+            ['astrogreg:plutonian_shrub_seeds', 'astrogreg:resinwort_seeds']
     }
 
     //#endregion

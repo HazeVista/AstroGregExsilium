@@ -465,8 +465,6 @@ ServerEvents.recipes(event => {
       
 
     //#region clay & bricks
-    event.recipes.botania.pure_daisy('minecraft:clay', '#minecraft:smelts_to_glass', 75)
-
     event.shaped(Item.of('8x gtceu:compressed_fireclay'), [
         'AAA',
         'ABA',
@@ -958,7 +956,7 @@ ServerEvents.recipes(event => {
       'B',
       'A'
     ], {
-      A: 'gtceu:obsidian_plate',
+      A: 'gtceu:steel_plate',
       B: 'minecraft:ender_pearl'
     })
 

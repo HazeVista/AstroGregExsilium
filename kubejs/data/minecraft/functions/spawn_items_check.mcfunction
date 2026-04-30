@@ -1,1 +1,0 @@
-execute as @a[tag=!StartingItems] run function minecraft:spawn_items

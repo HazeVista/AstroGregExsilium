@@ -29,6 +29,19 @@ ServerEvents.recipes(event => {
         .outputFluids('gtceu:oil 50')
         .duration(200)
         .EUt(80)
+
+    gt.shaped('gtceu:cleanroom', [
+        'AAA',
+        'BCB',
+        'DED'
+    ], {
+        A: 'gtceu:item_filter',
+        B: 'gtceu:aluminium_rotor',
+        C: 'gtceu:hv_machine_hull',
+        D: 'gtceu:hv_electric_motor',
+        E: '#gtceu:circuits/mv'
+    })
+    .addMaterialInfo()
     //#endregion
 
 
