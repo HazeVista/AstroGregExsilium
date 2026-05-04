@@ -5,7 +5,7 @@ const burn = event.recipes.gtceu.mana_boiler
     // event.recipes.gtceu.chemical_reactor('aetherize_wither_rose')
 
     burn('boil_mana')
-        .inputFluids(Fluid.of('manafluid:mana', 1))
+        .inputFluids(Fluid.of('manafluid:mana', 3))
         .duration(100)
         
     burn('boil_lotus')
