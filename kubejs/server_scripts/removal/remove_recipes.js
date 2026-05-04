@@ -153,7 +153,7 @@ ServerEvents.recipes(event => {
         'create_connected:crafting/kinetics/empty_fan_catalyst_from_sanding', 'create_connected:crafting/kinetics/empty_fan_catalyst_from_seething', 'create_connected:crafting/kinetics/empty_fan_catalyst_from_freezing',
         'create_connected:crafting/kinetics/empty_fan_catalyst', 'create_connected:crafting/kinetics/empty_fan_catalyst_from_ending_dragons_breath','create_connected:crafting/kinetics/empty_fan_catalyst_from_enriched',
         'create_connected:crafting/kinetics/sequenced_pulse_generator', 'gtceu:electrolyzer/apatite_electrolysis', 'gtceu:electrolyzer/decomposition_electrolyzing_clay', 'gtceu:assembler/basic_circuit_board',
-        'gtceu:shaped/cleanroom'
+        'gtceu:shaped/cleanroom', 'ae2:network/cables/covered_fluix'
     ])
     //#endregion
 

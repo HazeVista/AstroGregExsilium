@@ -38,12 +38,12 @@ ServerEvents.recipes(event => {
         B: 'gtceu:flint_dust'
     })
 
-    event.shaped('waystones:waystone', [
+    event.shaped('astrogreg:asteroid_waystone', [
         ' A ',
         'ABA',
         'CCC'
     ], {
-        A: 'astrogreg:smooth_asteroid_stone',
+        A: 'astrogreg:asteroid_stone_bricks',
         B: 'waystones:warp_stone', 
         C: 'minecraft:obsidian'
     })

@@ -827,24 +827,24 @@ ServerEvents.recipes(event => {
         gt.concrete_plant('light_concrete_solid_' + id)
           .itemInputs(a, b, c).inputFluids('minecraft:water 8000')
           .itemOutputs('64x gtceu:light_concrete')
-          .circuit(3).duration(2560).EUt(7)
+          .circuit(3).duration(800).EUt(7)
 
         gt.concrete_plant('dark_concrete_solid_' + id)
           .itemInputs(a, b, c).inputFluids('minecraft:water 8000')
           .itemOutputs('64x gtceu:dark_concrete')
-          .circuit(4).duration(2560).EUt(7)
+          .circuit(4).duration(800).EUt(7)
 
         gt.concrete_plant('liquid_concrete_' + id)
           .itemInputs(a, b, c).inputFluids('minecraft:water 8000')
           .outputFluids('gtceu:concrete 9216')
-          .circuit(2).duration(2560).EUt(7)
+          .circuit(2).duration(800).EUt(7)
 
         DYES.forEach((color) => {
             gt.concrete_plant(color + '_concrete_' + id)
               .itemInputs(a, b, c)
               .inputFluids('minecraft:water 1000', 'gtceu:' + color + '_dye 576')
               .itemOutputs('64x minecraft:' + color + '_concrete')
-              .circuit(1).duration(2560).EUt(7)
+              .circuit(1).duration(800).EUt(7)
         })
     }
 
@@ -852,24 +852,24 @@ ServerEvents.recipes(event => {
         gt.concrete_plant('light_concrete_solid_' + id)
           .itemInputs(a, b).inputFluids('minecraft:water 8000')
           .itemOutputs('64x gtceu:light_concrete')
-          .circuit(3).duration(2560).EUt(7)
+          .circuit(3).duration(800).EUt(7)
 
         gt.concrete_plant('dark_concrete_solid_' + id)
           .itemInputs(a, b).inputFluids('minecraft:water 8000')
           .itemOutputs('64x gtceu:dark_concrete')
-          .circuit(4).duration(2560).EUt(7)
+          .circuit(4).duration(800).EUt(7)
 
         gt.concrete_plant('liquid_concrete_' + id)
           .itemInputs(a, b).inputFluids('minecraft:water 8000')
           .outputFluids('gtceu:concrete 9216')
-          .circuit(2).duration(2560).EUt(7)
+          .circuit(2).duration(800).EUt(7)
 
         DYES.forEach((color) => {
             gt.concrete_plant(color + '_concrete_' + id)
               .itemInputs(a, b)
               .inputFluids('minecraft:water 1000', 'gtceu:' + color + '_dye 576')
               .itemOutputs('64x minecraft:' + color + '_concrete')
-              .circuit(1).duration(2560).EUt(7)
+              .circuit(1).duration(800).EUt(7)
         })
     }
 

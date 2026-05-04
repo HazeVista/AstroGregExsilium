@@ -35,7 +35,7 @@ ServerEvents.recipes(event => {
         [['#forge:dusts/certus_quartz', '3x #forge:stone_dusts'], '4x ae2:sky_dust', 160, 120],
         [['4x gtceu:stainless_steel_dust', 'ae2:sky_dust'], '5x astrogreg:futura_alloy_dust', 200, 450],
         [['8x ae2:fluix_dust', 'gtceu:ender_eye_dust'], 'astrogreg:fluix_pearl_dust', 240, 480],
-        [['#forge:dusts/certus_quartz', 'gtceu:obsidian_dust', 'minecraft:redstone'], '3x ae2:fluix_dust', 200, 520]
+        [['#forge:dusts/certus_quartz', 'gtceu:obsidian_dust', 'minecraft:redstone'], '3x ae2:fluix_dust', 200, 480]
     ]) {
         gt.mixer(`${output.split(' ').pop().split(':')[1]}_mixing`)
             .itemInputs(input)
@@ -43,7 +43,6 @@ ServerEvents.recipes(event => {
             .duration(d)
             .EUt(eut)
     }
-
     // #endregion
     
     
@@ -104,16 +103,37 @@ ServerEvents.recipes(event => {
     }
 
     gt.assembler('inf_water_cell')
-        .itemInputs('megacells:mega_fluid_cell_housing', 'ae2:cell_component_64k', '3x botania:water_rune')
+        .itemInputs('megacells:mega_fluid_cell_housing', '3x ae2:cell_component_64k', '3x botania:water_rune')
         .itemOutputs(Item.of('expatternprovider:infinity_cell', '{record:{"#c":"ae2:f",id:"minecraft:water"}}'))
         .duration(400)
         .EUt(1024)
         
     gt.assembler('inf_cobble_cell')
-        .itemInputs('megacells:mega_item_cell_housing', 'ae2:cell_component_64k', '3x botania:earth_rune')
+        .itemInputs('megacells:mega_item_cell_housing', '3x ae2:cell_component_64k', '3x botania:earth_rune')
         .itemOutputs(Item.of('expatternprovider:infinity_cell', '{record:{"#c":"ae2:i",id:"minecraft:cobblestone"}}'))
         .duration(400)
         .EUt(1024)
+
+    gt.assembler('inf_oxygen_cell')
+        .itemInputs('megacells:mega_item_cell_housing', '3x ae2:cell_component_64k', '3x botania:air_rune')
+        .itemOutputs('astrogreg:infinite_oxygen_cell')
+        .duration(400)
+        .EUt(1024)
+
+    gt.assembler('inf_lava_cell')
+        .itemInputs('megacells:mega_item_cell_housing', '3x ae2:cell_component_64k', '3x botania_fire_rune')
+        .itemOutputs('astrogreg:infinite_lava_cell')
+        .duration(400)
+        .EUt(1024)
+
+    event.shapeless('astrogreg:infinite_gravel_cell', ['#forge:tools/hammers', Item.of('expatternprovider:infinity_cell', '{record:{"#c":"ae2:i",id:"minecraft:cobblestone"}}')])
+    event.shapeless('astrogreg:infinite_sand_cell', ['#forge:tools/hammers', 'astrogreg:infinite_gravel_cell'])
+
+    const cellSizes = [ 1, 4, 16, 64, 256 ]
+    cellSizes.forEach((size) => {
+        event.shapeless(`ae2:item_storage_cell_${size}k`, ['ae2:item_cell_housing', `ae2:cell_component_${size}k`])
+        event.shapeless(`ae2:fluid_storage_cell_${size}k`, ['ae2:fluid_cell_housing', `ae2:cell_component_${size}k`])
+    })
     // #endregion
     
 
@@ -242,10 +262,10 @@ ServerEvents.recipes(event => {
     .EUt(400)
 
     gt.macerator('macerate_fluix')
-    .itemInputs('ae2:fluix_crystal')
-    .itemOutputs('ae2:fluix_dust')
-    .duration(200)
-    .EUt(7)
+        .itemInputs('ae2:fluix_crystal')
+        .itemOutputs('ae2:fluix_dust')
+        .duration(200)
+        .EUt(7)
 
     gt.centrifuge('centrifuge_fluix_pearl_dust')
     .itemInputs('astrogreg:fluix_pearl_dust')
@@ -303,7 +323,7 @@ ServerEvents.recipes(event => {
 
     gt.macerator('recycle_certus_charged')
         .itemInputs('ae2:charged_certus_quartz_crystal')
-        .itemOutputs('ae2:fluix_dust')
+        .itemOutputs('gtceu:certus_quartz_dust')
         .duration(20)
         .EUt(4)
 
@@ -317,7 +337,7 @@ ServerEvents.recipes(event => {
 
 
     //#region basic components
-    gt.shaped('ae2:annihilation_core', [
+    gt.shaped('2x ae2:annihilation_core', [
         'ABC'
     ], { 
         A: 'gtceu:silicon_dioxide_dust',
@@ -348,6 +368,34 @@ ServerEvents.recipes(event => {
         C: 'astrogreg:futura_alloy_frame' 
     })
     .addMaterialInfo()
+
+    gt.assembler('covered_fluix_rubber')
+        .itemInputs('ae2:fluix_glass_cable')
+        .inputFluids('gtceu:rubber 48')
+        .itemOutputs('ae2:fluix_covered_cable')
+        .duration(100)
+        .EUt(7)
+
+    gt.assembler('covered_fluix_rubber')
+        .itemInputs('ae2:fluix_glass_cable')
+        .inputFluids('gtceu:silicon_rubber 24')
+        .itemOutputs('ae2:fluix_covered_cable')
+        .duration(100)
+        .EUt(7)
+
+    gt.assembler('covered_fluix_rubber')
+        .itemInputs('ae2:fluix_glass_cable')
+        .inputFluids('gtceu:styrene_butadiene_rubber 12')
+        .itemOutputs('ae2:fluix_covered_cable')
+        .duration(100)
+        .EUt(7)
+
+    gt.assembler('covered_fluix_polyamide_imide')
+        .itemInputs('ae2:fluix_glass_cable')
+        .inputFluids('astrogreg:polyamide_imide 6')
+        .itemOutputs('ae2:fluix_covered_cable')
+        .duration(100)
+        .EUt(7)
     // #endregion
 
 
@@ -651,7 +699,6 @@ ServerEvents.recipes(event => {
         .blastFurnaceTemp(2222)
         .duration(6000)
         .EUt(480)
-        .addMaterialInfo(true)
 
     gt.cutter('fluix_wafer')
         .itemInputs('astrogreg:fluix_boule')

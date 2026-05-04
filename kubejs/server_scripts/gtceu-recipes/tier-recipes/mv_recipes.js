@@ -74,9 +74,11 @@ ServerEvents.recipes(event => {
         .EUt(120)
     //#endregion
 
-    //#region 
-
-    
-
+    //#region alloys
+    gt.mixer('niotic_calorite_mixing')
+        .itemInputs('3x astrogreg:calorite_dust', '2x gtceu:ender_pearl_dust')
+        .itemOutputs('5x astrogreg:niotic_calorite_dust')
+        .duration(400)
+        .EUt(120)
     //#endregion 
 })
