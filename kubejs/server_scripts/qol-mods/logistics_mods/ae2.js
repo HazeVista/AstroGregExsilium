@@ -538,6 +538,16 @@ ServerEvents.recipes(event => {
         D: 'astrogreg:futura_alloy_frame' 
     })
     .addMaterialInfo()
+
+    gt.shaped('ae2:network_tool', [
+        'A A',
+        ' B ',
+        ' C '
+    ], {
+        A: 'astrogreg:futura_alloy_plate',
+        B: 'ae2:calculation_processor',
+        C: '#ae2:illuminated_panel'
+    })
     // #endregion
 
 
