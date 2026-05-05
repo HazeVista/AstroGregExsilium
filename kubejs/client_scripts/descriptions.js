@@ -357,9 +357,9 @@ ItemEvents.tooltip(event => {
         ['large_kinetic_mixer'], ['kinetic_combustion_engine'],
         ['concrete_plant'], ['kinetic_concrete_plant'],
         ['industrial_observatory'], ['industrial_astroport'],
-        ['large_kinetic_alternator'], ['large_kinetic_miner'], 
+        ['large_bronze_kinetic_alternator'], ['large_kinetic_miner'], 
         ['large_primitive_composter'], ['large_steam_rock_crusher'],
-        ['large_rock_crusher']
+        ['large_rock_crusher'], ['large_steel_kinetic_alternator'],
     ]
 
     ageControllers.forEach(([name, tooltip]) => { 

@@ -720,7 +720,7 @@ ServerEvents.recipes(event => {
     })
     .addMaterialInfo()
 
-    gt.shaped('astrogreg:large_kinetic_alternator', [
+    gt.shaped('astrogreg:large_bronze_kinetic_alternator', [
         'BAB',
         'DCD',
         'EAE'
@@ -730,6 +730,20 @@ ServerEvents.recipes(event => {
         C: 'astrogreg:machine_casing_kinetic',
         D: 'gtceu:lv_electric_motor',
         E: 'gtceu:red_alloy_double_wire'
+    })
+    .addMaterialInfo()
+
+    gt.shaped('astrogreg:large_steel_kinetic_alternator', [
+        'BFB',
+        'DCD',
+        'EAE'
+    ],{
+        A: 'create:large_cogwheel',
+        B: 'create:cogwheel',
+        C: 'gtceu:solid_machine_casing',
+        D: 'gtceu:mv_electric_motor',
+        E: 'astrogreg:etrium_double_wire',
+        F: '#gtceu:circuits/mv'
     })
     .addMaterialInfo()
 
