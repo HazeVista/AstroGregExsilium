@@ -102,29 +102,49 @@ ServerEvents.recipes(event => {
         event.shapeless(`ae2:spatial_storage_cell_${size}`, [`ae2:spatial_cell_component_${size}`, 'ae2:item_cell_housing'])
     }
 
-    gt.assembler('inf_water_cell')
-        .itemInputs('megacells:mega_fluid_cell_housing', '3x ae2:cell_component_64k', '3x botania:water_rune')
-        .itemOutputs(Item.of('expatternprovider:infinity_cell', '{record:{"#c":"ae2:f",id:"minecraft:water"}}'))
-        .duration(400)
-        .EUt(1024)
-        
-    gt.assembler('inf_cobble_cell')
-        .itemInputs('megacells:mega_item_cell_housing', '3x ae2:cell_component_64k', '3x botania:earth_rune')
-        .itemOutputs(Item.of('expatternprovider:infinity_cell', '{record:{"#c":"ae2:i",id:"minecraft:cobblestone"}}'))
-        .duration(400)
-        .EUt(1024)
+    gt.shaped(Item.of('expatternprovider:infinity_cell', '{record:{"#c":"ae2:f",id:"minecraft:water"}}'), [
+        'ABA', 
+        'CDC', 
+        'ACA'
+    ], {
+        A: 'botania:water_rune',
+        B: '#gtceu:circuits/iv',
+        C: 'ae2:cell_component_64k',
+        D: 'megacells:mega_item_cell_housing'
+    })
 
-    gt.assembler('inf_oxygen_cell')
-        .itemInputs('megacells:mega_item_cell_housing', '3x ae2:cell_component_64k', '3x botania:air_rune')
-        .itemOutputs('astrogreg:infinite_oxygen_cell')
-        .duration(400)
-        .EUt(1024)
+    gt.shaped(Item.of('expatternprovider:infinity_cell', '{record:{"#c":"ae2:i",id:"minecraft:cobblestone"}}'), [
+        'ABA', 
+        'CDC', 
+        'ACA'
+    ], {
+        A: 'botania:earth_rune',
+        B: '#gtceu:circuits/iv',
+        C: 'ae2:cell_component_64k',
+        D: 'megacells:mega_item_cell_housing'
+    })
 
-    gt.assembler('inf_lava_cell')
-        .itemInputs('megacells:mega_item_cell_housing', '3x ae2:cell_component_64k', '3x botania_fire_rune')
-        .itemOutputs('astrogreg:infinite_lava_cell')
-        .duration(400)
-        .EUt(1024)
+    gt.shaped('astrogreg:infinite_oxygen_cell', [
+        'ABA', 
+        'CDC', 
+        'ACA'
+    ], {
+        A: 'botania:air_rune',
+        B: '#gtceu:circuits/iv',
+        C: 'ae2:cell_component_64k',
+        D: 'megacells:mega_item_cell_housing'
+    })
+
+    gt.shaped('astrogreg:infinite_lava_cell', [
+        'ABA', 
+        'CDC', 
+        'ACA'
+    ], {
+        A: 'botania:fire_rune',
+        B: '#gtceu:circuits/iv',
+        C: 'ae2:cell_component_64k',
+        D: 'megacells:mega_item_cell_housing'
+    })
 
     event.shapeless('astrogreg:infinite_gravel_cell', ['#forge:tools/hammers', Item.of('expatternprovider:infinity_cell', '{record:{"#c":"ae2:i",id:"minecraft:cobblestone"}}')])
     event.shapeless('astrogreg:infinite_sand_cell', ['#forge:tools/hammers', 'astrogreg:infinite_gravel_cell'])
@@ -376,14 +396,14 @@ ServerEvents.recipes(event => {
         .duration(100)
         .EUt(7)
 
-    gt.assembler('covered_fluix_rubber')
+    gt.assembler('covered_fluix_silicon_rubber')
         .itemInputs('ae2:fluix_glass_cable')
-        .inputFluids('gtceu:silicon_rubber 24')
+        .inputFluids('gtceu:silicone_rubber 24')
         .itemOutputs('ae2:fluix_covered_cable')
         .duration(100)
         .EUt(7)
 
-    gt.assembler('covered_fluix_rubber')
+    gt.assembler('covered_fluix_styrene_butadiene_rubber')
         .itemInputs('ae2:fluix_glass_cable')
         .inputFluids('gtceu:styrene_butadiene_rubber 12')
         .itemOutputs('ae2:fluix_covered_cable')
