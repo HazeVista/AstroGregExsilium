@@ -789,5 +789,37 @@ ServerEvents.recipes(event => {
         .duration(500)
         .EUt(60)
     //#endregion
-    
+
+
+
+    //#region certus line
+    gt.chemical_reactor('sodium_silicate_from_nether_quartz')
+        .itemInputs('gtceu:nether_quartz_dust', '2x gtceu:')
+        .outputFluids('astrogreg:sodium_silicate')
+        .outputFluids('minecraft:water')
+        .duration(400)
+        .EUt(64)
+
+    gt.chemical_reactor('sodium_silicate_from_quartzite')
+        .itemOutputs('gtceu:quartzite_dust')
+        .outputFluids('astrogreg:sodium_silicate')
+        .outputFluids('minecraft:water')
+        .duration(300)
+        .EUt(64)
+
+    gt.chemical_reactor('certus_precursor')
+        .inputFluids('astrogreg:sodium_silicate')
+        .inputFluids('gtceu:hydrochloric_acid 2000')
+        .itemOutputs('2x gtceu:salt_dust')
+        .outputFluids('astrogreg:certus_precursor_gel')
+        .duration(300)
+        .EUt(64)
+
+    gt.autoclave('certus_raw')
+        .itemInputs('#forge:stone_dust')
+        .inputFluids('astrogreg:sodium_silicate 250')
+        .itemOutputs('gtceu:raw_certus_quartz')
+        .duration(75)
+        .EUt(256)
+    //#endregion
 })
