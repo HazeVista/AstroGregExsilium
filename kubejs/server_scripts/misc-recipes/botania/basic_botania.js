@@ -436,7 +436,7 @@ ServerEvents.recipes(event => {
         'B',
         'A'
     ], {
-       A: 'gtceu:gaiasteel_ring',
+       A: 'gtbotania:gaiasteel_ring',
        B: 'gtbotania:dragonstone_lens'
     })
 

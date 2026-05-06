@@ -264,12 +264,21 @@ ServerEvents.recipes(event => {
         ['ae2:capacity_card', 'ae2:charged_certus_quartz_crystal'],
         ['ae2:speed_card', 'astrogreg:fluix_arithmetic_core'],
         ['ae2insertexportcard:export_card', 'ae2:export_bus'],
-        ['ae2insertexportcard:insert_card', 'ae2:import_bus']
+        ['ae2insertexportcard:insert_card', 'ae2:import_bus'],
+        ['ae2:fuzzy_card', 'farmersdelight:canvas']
     ]) {
         event.shapeless(output, [component, 'ae2:advanced_card'])
     }
 
     event.shapeless('pccard:card_programmed_circuit', ['ae2:crafting_card', 'gtceu:programmed_circuit', '#gtceu:circuits/ev'])
+
+    gt.shaped('expandedae:greater_accel_card', [
+        'AA',
+        'AB'
+    ], {
+        A: 'ae2:speed_card',
+        B: 'megacells:accumulation_processor'
+    })
     // #endregion
 
 
@@ -713,7 +722,7 @@ ServerEvents.recipes(event => {
     explosives.forEach(([explosive, name]) => {
         gt.implosion_compressor(`quantum_singularity_from_${name}`)
             .itemInputs('2x astrogreg:futura_alloy_dust', 'ae2:singularity', explosive)
-            .itemOutputs('ae2:quantum_entangled_singularity')
+            .itemOutputs('ae2:quantum_entangled_singularity', 'ae2:quantum_entangled_singularity')
             .duration(20)
             .EUt(30)
     })

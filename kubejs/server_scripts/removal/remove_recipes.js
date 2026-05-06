@@ -64,6 +64,8 @@ ServerEvents.recipes(event => {
         'minecraft:powderbarrel', 'ad_astra:coal_generator', 'minecraft:crossbow', 'create:propeller', 'create:encased_fan', 'ae2:speed_card', 'minecraft:stonecutter', 'gtceuterminal:energy_analyzer',
         'gtceu:mv_buffer', 'gtceu:hv_buffer', 'gtceu:lv_buffer', 'exposure:interplanar_projector', 'minecraft:tinted_glass', 'minecraft:flint_and_steel', 'create:chute', 'ae2:nether_quartz_wrench',
         'ae2:certus_quartz_wrench', 'minecraft:composter', 'botania:open_crate', 'create_connected:kinetic_battery', 'create_connected:kinetic_bridge', 'create:encased_chain_drive',
+        'expandedae:giga_pattern_provider_part', 'expandedae:giga_pattern_provider', 'expandedae:p2g_pattern_provider_upgrade', 'expandedae:exp2g_pattern_provider_upgrade', 
+        'expandedae:m2g_pattern_provider_upgrade', 'expandedae:ext2g_pattern_provider_upgrade', 'expandedae:greater_accel_card',
     ])
     //#endregion
 
@@ -153,7 +155,7 @@ ServerEvents.recipes(event => {
         'create_connected:crafting/kinetics/empty_fan_catalyst_from_sanding', 'create_connected:crafting/kinetics/empty_fan_catalyst_from_seething', 'create_connected:crafting/kinetics/empty_fan_catalyst_from_freezing',
         'create_connected:crafting/kinetics/empty_fan_catalyst', 'create_connected:crafting/kinetics/empty_fan_catalyst_from_ending_dragons_breath','create_connected:crafting/kinetics/empty_fan_catalyst_from_enriched',
         'create_connected:crafting/kinetics/sequenced_pulse_generator', 'gtceu:electrolyzer/apatite_electrolysis', 'gtceu:electrolyzer/decomposition_electrolyzing_clay', 'gtceu:assembler/basic_circuit_board',
-        'gtceu:shaped/cleanroom', 'ae2:network/cables/covered_fluix', 'ae2:tools/network_tool'
+        'gtceu:shaped/cleanroom', 'ae2:network/cables/covered_fluix', 'ae2:tools/network_tool', 
     ])
     //#endregion
 
