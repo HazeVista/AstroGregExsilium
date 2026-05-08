@@ -333,5 +333,15 @@ ServerEvents.recipes(event => {
         .itemOutputs('minecraft:obsidian')
         .duration(16)
         .EUt(240)
+
+    gt.large_rock_crusher('skystone_from_certus')
+        .notConsumable('gtceu:certus_quartz_dust')
+        .perTick(true)
+        .chancedFluidInput('minecraft:water 1', 1000, 0)
+        .chancedFluidInput('minecraft:lava 1', 1000, 0)
+        .perTick(false)
+        .itemOutputs('ae2:sky_stone_block')
+        .duration(16)
+        .EUt(240)
     //#endregion
 })

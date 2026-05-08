@@ -32,7 +32,6 @@ ServerEvents.recipes(event => {
     //#region dust mixing
     for (const [input, output, d, eut] of [
         [['gtceu:ender_pearl_dust', 'minecraft:blaze_powder'], '2x gtceu:ender_eye_dust', 160, 9],
-        [['#forge:dusts/certus_quartz', '3x #forge:stone_dusts'], '4x ae2:sky_dust', 160, 120],
         [['4x gtceu:stainless_steel_dust', 'ae2:sky_dust'], '5x astrogreg:futura_alloy_dust', 200, 450],
         [['8x ae2:fluix_dust', 'gtceu:ender_eye_dust'], 'astrogreg:fluix_pearl_dust', 240, 480],
         [['#forge:dusts/certus_quartz', 'gtceu:obsidian_dust', 'minecraft:redstone'], '3x ae2:fluix_dust', 200, 480]
@@ -794,14 +793,14 @@ ServerEvents.recipes(event => {
 
     //#region certus line
     gt.chemical_reactor('sodium_silicate_from_nether_quartz')
-        .itemInputs('gtceu:nether_quartz_dust', '2x gtceu:')
+        .itemInputs('gtceu:nether_quartz_dust', '2x gtceu:sodium_hydroxide_dust')
         .outputFluids('astrogreg:sodium_silicate')
         .outputFluids('minecraft:water')
         .duration(400)
         .EUt(64)
 
     gt.chemical_reactor('sodium_silicate_from_quartzite')
-        .itemOutputs('gtceu:quartzite_dust')
+        .itemOutputs('gtceu:quartzite_dust', '2x gtceu:sodium_hydroxide_dust')
         .outputFluids('astrogreg:sodium_silicate')
         .outputFluids('minecraft:water')
         .duration(300)
@@ -810,16 +809,36 @@ ServerEvents.recipes(event => {
     gt.chemical_reactor('certus_precursor')
         .inputFluids('astrogreg:sodium_silicate')
         .inputFluids('gtceu:hydrochloric_acid 2000')
+        .notConsumable('gtceu:lithium_dust')
         .itemOutputs('2x gtceu:salt_dust')
         .outputFluids('astrogreg:certus_precursor_gel')
         .duration(300)
         .EUt(64)
 
     gt.autoclave('certus_raw')
-        .itemInputs('#forge:stone_dust')
-        .inputFluids('astrogreg:sodium_silicate 250')
+        .itemInputs('#forge:stone_dusts')
+        .inputFluids('astrogreg:certus_precursor_gel 250')
         .itemOutputs('gtceu:raw_certus_quartz')
         .duration(75)
         .EUt(256)
+    //#endregion
+
+
+
+    //#region sky stone
+    gt.rock_breaker('skystone')
+        .notConsumable('gtceu:certus_quartz_dust')
+        .adjacentFluids('minecraft:water', 'minecraft:lava')
+        .itemOutputs('ae2:sky_stone_block')
+        .duration(16)
+        .EUt(112)
+
+    gt.forming_press('skystone_compression')
+        .itemInputs('ae2:sky_dust')
+        .notConsumable('gtceu:block_casting_mold')
+        .itemOutputs('ae2:sky_stone_block')
+        .duration(400)
+        .EUt(16)
+        .addMaterialInfo()
     //#endregion
 })
