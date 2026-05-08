@@ -25,7 +25,7 @@ global.applyItemInput = function applyItemInput(recipe, toApply, prefix) {
 global.applyFluidInput = function applyFluidInput(recipe, toApply, prefix) {
     if (CheckEmpty(toApply)) { return }
     if (prefix == undefined) {
-        recipe.fluidInputs(toApply);
+        recipe.inputFluids(toApply);
         return
     }    
     recipe.fluidInputs(`${prefix}:${toApply}`);

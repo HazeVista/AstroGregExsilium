@@ -7,6 +7,7 @@ ServerEvents.tags('item', event => {
 })
 
 const ApplyIngredient = global.applyItemInput;
+const ApplyLiquid = global.applyFluidInput;
 ServerEvents.recipes(event => {
 
     //#region culinary recipes
@@ -31,11 +32,32 @@ ServerEvents.recipes(event => {
         {output: 'farmersdelight:dog_food', input: {manual: ['#forge:dog_food_base', '#forge:wolf_prey'], minecraft: ['bone_meal', 'bowl'], farmersdelight: ['rice']}},
         {output: 'farmersdelight:squid_ink_pasta', input: {manual: ['#forge:raw_fishes'], minecraft: ['ink_sac', 'bowl'], farmersdelight: ['raw_pasta', 'tomato']}}
     ] 
-    // just remove the inputs to disable the recipe
-    // const BEVERAGES = [
-
-    // ]
+    
+    // STR Output Item, OBJ Input Items {manual: [STR], minecraft: [STR], farmersdelight: [STR], delightful: [STR]}, INT time in seconds (optional, default 10s)
     let IterationCounter = {};
+    const BEVERAGES = [
+        {output: '2x farmersdelight:hot_cocoa', input: {manual: ['gtceu:cocoa_dust', '2x minecraft:glass_bottle'], minecraft: ['sugar'], liquids: ['minecraft:milk']}, time: 40},
+        {output: '2x farmersdelight:apple_cider', input: {manual: ['3x minecraft:apple', '2x minecraft:glass_bottle'], minecraft: ['sugar'], liquids: ['minecraft:water 500']}, time: 40},
+        {output: '2x farmersdelight:melon_juice', input: {manual: ['6x minecraft:melon_slice', '2x minecraft:glass_bottle'], minecraft: ['sugar'], liquids: ['minecraft:water 500']}},
+        {output: '2x farmersdelight:melon_juice', input: {manual: ['2x minecraft:glass_bottle'], minecraft: ['sugar'], delightful: ['mini_melon'], liquids: ['minecraft:water 500']}}
+    ]
+    BEVERAGES.forEach(recipe => {
+        if (Object.getOwnPropertyNames(recipe.input).length == 0) { return }
+        let RecipeInputs = {manual: recipe.input.manual || [''], minecraft: recipe.input.minecraft || [''], farmersdelight: recipe.input.farmersdelight || [''], delightful: recipe.input.delightful || [''], liquids: recipe.input.liquids || ['']}
+        let RecipeName = recipe.output.split(":")[1]
+        IterationCounter[RecipeName] = (IterationCounter[RecipeName] || 0) + 1
+        RecipeName = IterationCounter[RecipeName] > 1 ? `${RecipeName}_${IterationCounter[RecipeName]}` : RecipeName
+        let RecipeBase = event.recipes.gtceu.beverage_processor(RecipeName)
+            .itemOutputs(recipe.output)
+            .EUt(GTValues.VHA[GTValues.LV])
+            .duration(recipe.time * 20 || 200)
+        RecipeInputs.manual.forEach(inputs => {console.log(inputs);ApplyIngredient(RecipeBase, inputs)})
+        RecipeInputs.farmersdelight.forEach(inputs => {ApplyIngredient(RecipeBase, inputs, 'farmersdelight')})
+        RecipeInputs.minecraft.forEach(inputs => {ApplyIngredient(RecipeBase, inputs, 'minecraft')})
+        RecipeInputs.delightful.forEach(inputs => {ApplyIngredient(RecipeBase, inputs, 'delightful')})
+        RecipeInputs.liquids.forEach(inputs => {ApplyLiquid(RecipeBase, inputs)})
+    })
+    IterationCounter = {};
     CULINARIES.forEach(recipe => {
         if (Object.getOwnPropertyNames(recipe.input).length == 0) { return }
         let RecipeInputs = {manual: recipe.input.manual || [''], minecraft: recipe.input.minecraft || [''], farmersdelight: recipe.input.farmersdelight || [''], delightful: recipe.input.delightful || ['']}
@@ -51,7 +73,9 @@ ServerEvents.recipes(event => {
         RecipeInputs.minecraft.forEach(inputs => {ApplyIngredient(RecipeBase, inputs, 'minecraft')})
         RecipeInputs.delightful.forEach(inputs => {ApplyIngredient(RecipeBase, inputs, 'delightful')})
     })
+    
     //#endregion
+
 
     //#region machine recipes
     const tieredParts = [
