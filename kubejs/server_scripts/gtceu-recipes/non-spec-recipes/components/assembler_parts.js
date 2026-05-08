@@ -3,8 +3,8 @@ ServerEvents.recipes(event => {
     const gt = event.recipes.gtceu.assembler
 
     const tieredParts = [
-        ['ev', 'titanium', 'ultimet', 'aluminium', 'uranium_triplatinum', 'platinum', 'gtceu:quantum_eye', 1500],
-        ['iv', 'tungsten_steel', 'tungsten_carbide', 'tungsten', 'samarium_iron_arsenic_oxide', 'iridium', 'gtceu:quantum_star', 6000]
+        ['ev', 'titanium', 'ultimet', 'aluminium', 'uranium_triplatinum', 'platinum', 'gtceu:quantum_eye', 375],
+        ['iv', 'tungsten_steel', 'tungsten_carbide', 'tungsten', 'samarium_iron_arsenic_oxide', 'iridium', 'gtceu:quantum_star', 1500]
     ]
 
     const rubbers = [
