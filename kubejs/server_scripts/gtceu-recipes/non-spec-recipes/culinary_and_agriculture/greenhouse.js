@@ -3,26 +3,10 @@ ServerEvents.recipes(event => {
     const greg = event.recipes.gtceu
 
 //#region helpers
-function applyNotConsumableItem(recipe, toApply) {
-    if (toApply != '') {
-        recipe.notConsumable(toApply);
-    }
-}
-function applyItemInput(recipe, toApply) {
-    if (toApply != '') {
-        recipe.itemInputs(toApply);
-    }
-}
-function applyFluidInput(recipe, toApply) {
-    if (toApply != '') {
-        recipe.inputFluids(toApply);  
-    }    
-}
-function applyItemOutput(recipe, toApply) {
-    if (toApply != '') {
-       recipe.itemOutputs(toApply); 
-    } 
-}
+const applyNotConsumableItem = global.applyNotConsumableItem;
+const applyItemInput = global.applyItemInput;
+const applyFluidInput = global.applyFluidInput;
+const applyItemOutput = global.applyItemOutput;
 //#endregion
 
 
