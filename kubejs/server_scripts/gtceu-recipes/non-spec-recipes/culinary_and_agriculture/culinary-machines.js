@@ -39,7 +39,11 @@ ServerEvents.recipes(event => {
         {output: '2x farmersdelight:hot_cocoa', input: {manual: ['gtceu:cocoa_dust', '2x minecraft:glass_bottle'], minecraft: ['sugar'], liquids: ['minecraft:milk']}, time: 40},
         {output: '2x farmersdelight:apple_cider', input: {manual: ['3x minecraft:apple', '2x minecraft:glass_bottle'], minecraft: ['sugar'], liquids: ['minecraft:water 500']}, time: 40},
         {output: '2x farmersdelight:melon_juice', input: {manual: ['6x minecraft:melon_slice', '2x minecraft:glass_bottle'], minecraft: ['sugar'], liquids: ['minecraft:water 500']}},
-        {output: '2x farmersdelight:melon_juice', input: {manual: ['2x minecraft:glass_bottle'], minecraft: ['sugar'], delightful: ['mini_melon'], liquids: ['minecraft:water 500']}}
+        {output: '2x farmersdelight:melon_juice', input: {manual: ['2x minecraft:glass_bottle'], minecraft: ['sugar'], delightful: ['mini_melon'], liquids: ['minecraft:water 500']}},
+        {output: '2x farmersdelight:chocolate_milkshake', input: {manual: ['2x minecraft:glass_bottle', 'gtceu:ice_dust'], minecraft: ['sugar'], liquids: ['minecraft:milk 1500', 'create:chocolate 500']}},
+        {output: '2x delightful:matcha_latte', input: {delightful: ['matcha'], liquids: ['create:honey 500', 'minecraft:milk 1000']}, time: 20},
+        {output: '2x delightful:berry_matcha_latte', input: {manual: ['2x delightful:matcha_latte', '#minecraft:fox_food', 'gtceu:ice_dust']}},
+        {output: '2x delightful:jam_jar', input: {manual: ['2x minecraft:glass_bottle', '3x #forge:fruits', '2x minecraft:sugar']}}
     ]
     BEVERAGES.forEach(recipe => {
         if (Object.getOwnPropertyNames(recipe.input).length == 0) { return }
