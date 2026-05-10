@@ -1,7 +1,3 @@
-ServerEvents.recipes(event => {
-    
-    const greg = event.recipes.gtceu
-
 //#region helpers
 const applyNotConsumableItem = global.applyNotConsumableItem;
 const applyItemInput = global.applyItemInput;
@@ -9,7 +5,9 @@ const applyFluidInput = global.applyFluidInput;
 const applyItemOutput = global.applyItemOutput;
 //#endregion
 
-
+ServerEvents.recipes(event => {
+    
+    const greg = event.recipes.gtceu
 
 //#region trees
 const trees = [
