@@ -65,7 +65,7 @@ ServerEvents.recipes(event => {
         'gtceu:mv_buffer', 'gtceu:hv_buffer', 'gtceu:lv_buffer', 'exposure:interplanar_projector', 'minecraft:tinted_glass', 'minecraft:flint_and_steel', 'create:chute', 'ae2:nether_quartz_wrench',
         'ae2:certus_quartz_wrench', 'minecraft:composter', 'botania:open_crate', 'create_connected:kinetic_battery', 'create_connected:kinetic_bridge', 'create:encased_chain_drive',
         'expandedae:giga_pattern_provider_part', 'expandedae:giga_pattern_provider', 'expandedae:p2g_pattern_provider_upgrade', 'expandedae:exp2g_pattern_provider_upgrade', 
-        'expandedae:m2g_pattern_provider_upgrade', 'expandedae:ext2g_pattern_provider_upgrade', 'expandedae:greater_accel_card',
+        'expandedae:m2g_pattern_provider_upgrade', 'expandedae:ext2g_pattern_provider_upgrade', 'expandedae:greater_accel_card', 'gtceu:ender_fluid_link_cover', 'gtceu:ender_item_link_cover'
     ])
     //#endregion
 

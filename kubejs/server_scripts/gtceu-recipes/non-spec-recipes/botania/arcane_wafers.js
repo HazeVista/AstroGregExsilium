@@ -38,7 +38,7 @@ ServerEvents.recipes(event => {
 
         gt.cutter(`${wafer}_soc`)
             .itemInputs(`astrogreg:${wafer}_soc_wafer`)
-            .itemOutputs(`gtceu:${chip}`)
+            .itemOutputs(`8x gtceu:${chip}`)
             .duration(1800)
             .EUt(EU)
 

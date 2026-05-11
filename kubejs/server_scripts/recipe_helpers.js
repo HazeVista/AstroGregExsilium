@@ -6,10 +6,10 @@ function CheckEmpty(variable) { return (variable == '' || variable == null || va
 global.applyNotConsumableItem = function applyNotConsumableItem(recipe, toApply, prefix) {
     if (CheckEmpty(toApply)) { return }
     if (prefix == undefined) { 
-        recipe.applyNotConsumableItem(toApply);
+        recipe.notConsumable(toApply);
         return
     } 
-    recipe.applyNotConsumableItem(`${prefix}:${toApply}`);
+    recipe.notConsumable(`${prefix}:${toApply}`);
 }
 
 global.applyItemInput = function applyItemInput(recipe, toApply, prefix) {
@@ -25,10 +25,10 @@ global.applyItemInput = function applyItemInput(recipe, toApply, prefix) {
 global.applyFluidInput = function applyFluidInput(recipe, toApply, prefix) {
     if (CheckEmpty(toApply)) { return }
     if (prefix == undefined) {
-        recipe.fluidInputs(toApply);
+        recipe.inputFluids(toApply);
         return
     }    
-    recipe.fluidInputs(`${prefix}:${toApply}`);
+    recipe.inputFluids(`${prefix}:${toApply}`);
 }
 
 global.applyItemOutput = function applyItemOutput(recipe, toApply, prefix) {
