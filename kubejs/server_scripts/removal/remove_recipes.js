@@ -63,7 +63,8 @@ ServerEvents.recipes(event => {
         'astrogreg:double_flux_plate', 'astrogreg:small_flux_dust', 'astrogreg:tiny_flux_dust', 'astrogreg:double_andesite_alloy_plate', 'gtceu:wood_wall', 'gtceu:resin_circuit_board',
         'minecraft:powderbarrel', 'ad_astra:coal_generator', 'minecraft:crossbow', 'create:propeller', 'create:encased_fan', 'ae2:speed_card', 'minecraft:stonecutter', 'gtceuterminal:energy_analyzer',
         'gtceu:mv_buffer', 'gtceu:hv_buffer', 'gtceu:lv_buffer', 'exposure:interplanar_projector', 'minecraft:tinted_glass', 'minecraft:flint_and_steel', 'create:chute', 'ae2:nether_quartz_wrench',
-        'ae2:certus_quartz_wrench', 'minecraft:composter', 'botania:open_crate', 'create_connected:kinetic_battery', 'create_connected:kinetic_bridge', 'create:encased_chain_drive',
+        'ae2:certus_quartz_wrench', 'minecraft:composter', 'botania:open_crate', 'create_connected:kinetic_battery', 'create_connected:kinetic_bridge', 'create:encased_chain_drive', 
+        'gtceu:ender_fluid_link_cover', 'gtceu:ender_item_link_cover'
     ])
     //#endregion
 
