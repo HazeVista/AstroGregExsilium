@@ -9,7 +9,12 @@ ServerEvents.tags('item', event => {
 const ApplyIngredient = global.applyItemInput;
 const ApplyLiquid = global.applyFluidInput;
 ServerEvents.recipes(event => {
-
+    event.recipes.gtceu.mixer('nut_mixture')
+        .itemInputs('4x astrogreg:acorn_dust', 'gtceu:salt_dust', 'minecraft:sugar')
+        .inputFluids('minecraft:water')
+        .outputFluids('astrogreg:nut_mixture 500')
+        .EUt(GTValues.VHA[GTValues.LV])
+        .duration(200)
     //#region culinary recipes
     // STR Output Item, OBJ Input Items {manual: [STR], minecraft: [STR], farmersdelight: [STR], delightful: [STR]}, INT time in seconds (optional, default 10s)
     const CULINARIES = [ 
@@ -43,7 +48,11 @@ ServerEvents.recipes(event => {
         {output: '2x farmersdelight:chocolate_milkshake', input: {manual: ['2x minecraft:glass_bottle', 'gtceu:ice_dust'], minecraft: ['sugar'], liquids: ['minecraft:milk 1500', 'create:chocolate 500']}},
         {output: '2x delightful:matcha_latte', input: {delightful: ['matcha'], liquids: ['create:honey 500', 'minecraft:milk 1000']}, time: 20},
         {output: '2x delightful:berry_matcha_latte', input: {manual: ['2x delightful:matcha_latte', '#minecraft:fox_food', 'gtceu:ice_dust']}},
-        {output: '2x delightful:jam_jar', input: {manual: ['2x minecraft:glass_bottle', '3x #forge:fruits', '2x minecraft:sugar']}}
+        {output: '2x delightful:jam_jar', input: {manual: ['2x minecraft:glass_bottle', '4x #forge:fruits', '3x minecraft:sugar']}},
+        {output: '2x delightful:glow_jam_jar', input: {manual: ['2x minecraft:glass_bottle', '4x minecraft:glow_berries', '4x minecraft:sugar']}},
+        {output: '2x delightful:nut_butter_bottle', input: {manual: ['2x minecraft:glass_bottle'], minecraft: ['sugar'], liquids: ['astrogreg:nut_mixture 500']}},
+        {output: '2x delightful:matcha_milkshake', input: {manual: ['2x minecraft:glass_bottle', 'gtceu:ice_dust', '2x delightful:matcha'], minecraft: ['sugar'], liquids: ['minecraft:milk 1500']}},
+        {output: '2x delightful:salmonberry_milkshake', input: {manual: ['2x minecraft:glass_bottle', 'gtceu:ice_dust', '2x delightful:salmonberries'], minecraft: ['sugar'], liquids: ['minecraft:milk 1500']}}
     ]
     BEVERAGES.forEach(recipe => {
         if (Object.getOwnPropertyNames(recipe.input).length == 0) { return }
