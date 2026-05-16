@@ -154,13 +154,13 @@ ServerEvents.recipes(event => {
     event.custom({
         type: "createaddition:rolling",
         input: { item: "gtceu:red_alloy_plate" },
-        result: { item: "2x gtceu:red_alloy_foil", count: 2 }
+        result: { item: "gtceu:red_alloy_foil", count: 2 }
     })
 
     event.custom({
         type: "createaddition:rolling",
         input: { item: "gtceu:electrum_plate" },
-        result: { item: "2x gtceu:electrum_foil", count: 2 }
+        result: { item: "gtceu:electrum_foil", count: 2 }
     })
     //#endregion
 

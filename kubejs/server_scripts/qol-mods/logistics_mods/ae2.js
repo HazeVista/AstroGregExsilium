@@ -839,6 +839,6 @@ ServerEvents.recipes(event => {
         .itemOutputs('ae2:sky_stone_block')
         .duration(400)
         .EUt(16)
-        .addMaterialInfo()
+        .addMaterialInfo(true)
     //#endregion
 })
