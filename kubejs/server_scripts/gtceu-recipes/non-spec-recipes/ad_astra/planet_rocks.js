@@ -271,11 +271,11 @@ ServerEvents.recipes(event => {
         'AA',
         'AA'
     ], {    
-        A: 'astrogreg:asteroid_stone'
+        A: 'astrogreg:smooth_asteroid_stone'
     })
 
     gt.assembler('asteroid_stone_bricks_assembler')
-        .itemInputs('astrogreg:asteroid_stone')
+        .itemInputs('astrogreg:smooth_asteroid_stone')
         .itemOutputs('astrogreg:asteroid_stone_bricks')
         .duration(80)
         .circuit(4)
