@@ -318,4 +318,24 @@ ServerEvents.recipes(event => {
         .EUt(7)
     //#endregion
 
+
+
+    //#region seed oil
+    const oilSeeds = [
+        ['cabbage', 'farmersdelight:cabbage_seeds', 10], 
+        ['salmonberry', 'delightful:salmonberry_pips', 2],
+        ['tomato', 'farmersdelight:tomato_seeds', 2], 
+        ['resinwort', 'astrogreg:resinwort_seeds', 3],
+        ['plutonian_shrub', 'astrogreg:plutonian_shrub_seeds', 1]
+    ]
+
+    oilSeeds.forEach(([name, seed, oil]) => {
+        gt.extractor(`seed_oil_from_${name}_seeds`)
+            .itemInputs(seed)
+            .itemOutputs(Fluid.of('gtceu:seed_oil', oil))
+            .duration(32)
+            .EUt(2)
+    })
+    //#endregion
+
 })

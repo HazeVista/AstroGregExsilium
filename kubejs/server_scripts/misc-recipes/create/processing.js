@@ -16,7 +16,6 @@ ServerEvents.recipes(event => {
     crushingRecipes.forEach(([output, input]) => {
         event.recipes.create.crushing(output, input)
     })
-
     //#endregion
 
 
@@ -330,6 +329,22 @@ ServerEvents.recipes(event => {
     ], {
         A: 'gtceu:fine_steel_wire',
         B: 'gtceu:magnetic_iron_rod'
+    })
+    //#endregion
+
+
+
+    //#region seed oil
+    const oilSeeds = [
+        ['minecraft:melon_seeds', 3], ['minecraft:beetroot_seeds', 10], 
+        ['minecraft:wheat_seeds', 10], ['minecraft:pumpkin_seeds', 6],
+        ['farmersdelight:cabbage_seeds', 10], ['delightful:salmonberry_pips', 5],
+        ['farmersdelight:tomato_seeds', 3], ['astrogreg:resinwort_seeds', 3],
+        ['astrogreg:plutonian_shrub_seeds', 1]
+    ]
+
+    oilSeeds.forEach(([ seed, oil ]) => {
+        event.recipes.create.compacting(Fluid.of('gtceu:seed_oil', oil), seed).heatRequirement('lowheated')
     })
     //#endregion
 })
