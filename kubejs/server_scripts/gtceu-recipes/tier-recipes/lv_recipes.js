@@ -332,7 +332,7 @@ ServerEvents.recipes(event => {
     oilSeeds.forEach(([name, seed, oil]) => {
         gt.extractor(`seed_oil_from_${name}_seeds`)
             .itemInputs(seed)
-            .itemOutputs(Fluid.of('gtceu:seed_oil', oil))
+            .outputFluids(Fluid.of('gtceu:seed_oil', oil))
             .duration(32)
             .EUt(2)
     })
