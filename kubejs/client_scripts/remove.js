@@ -8,5 +8,6 @@ JEIEvents.hideItems(event => {
     event.hide(/gtceu:.*_passthrough_hatch/)
     event.hide(/create:.*_toolbox/)
     event.hide(/powah:reactor_.*/)
+    event.hide(/betternether:.*_composter/)
     
 })
