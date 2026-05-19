@@ -340,7 +340,8 @@ ServerEvents.recipes(event => {
         ['minecraft:wheat_seeds', 10], ['minecraft:pumpkin_seeds', 6],
         ['farmersdelight:cabbage_seeds', 10], ['delightful:salmonberry_pips', 5],
         ['farmersdelight:tomato_seeds', 3], ['astrogreg:resinwort_seeds', 3],
-        ['astrogreg:plutonian_shrub_seeds', 1]
+        ['astrogreg:plutonian_shrub_seeds', 1], ['betternether:agave', 1],
+        ['betternether:lumabus_seed', 3], ['betternether:golden_lumabus_seed', 3]
     ]
 
     oilSeeds.forEach(([ seed, oil ]) => {

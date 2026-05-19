@@ -326,7 +326,11 @@ ServerEvents.recipes(event => {
         ['salmonberry', 'delightful:salmonberry_pips', 2],
         ['tomato', 'farmersdelight:tomato_seeds', 2], 
         ['resinwort', 'astrogreg:resinwort_seeds', 3],
-        ['plutonian_shrub', 'astrogreg:plutonian_shrub_seeds', 1]
+        ['plutonian_shrub', 'astrogreg:plutonian_shrub_seeds', 1],
+        ['agave', 'betternether:agave', 1],
+        ['lumabus', 'betternether:lumabus_seed', 3], 
+        ['golden_lumabus', 'betternether:golden_lumabus_seed', 3]
+
     ]
 
     oilSeeds.forEach(([name, seed, oil]) => {

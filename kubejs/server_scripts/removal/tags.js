@@ -124,7 +124,7 @@ ServerEvents.tags('item', event => {
             'trashcans:item_trash_can', 'trashcans:ultimate_trash_can'],
 
         'create:pulpifiable': 
-            ['farmersdelight:tree_bark'],
+            ['farmersdelight:tree_bark', 'betternether:nether_reed_stem'],
 
         'forge:meat': 
             ['minecraft:beef', 'minecraft:chicken', 'minecraft:mutton', 'farmersdelight:sporkchop',

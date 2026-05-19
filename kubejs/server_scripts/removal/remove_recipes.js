@@ -65,8 +65,7 @@ ServerEvents.recipes(event => {
         'gtceu:mv_buffer', 'gtceu:hv_buffer', 'gtceu:lv_buffer', 'exposure:interplanar_projector', 'minecraft:tinted_glass', 'minecraft:flint_and_steel', 'create:chute', 'ae2:nether_quartz_wrench',
         'ae2:certus_quartz_wrench', 'minecraft:composter', 'botania:open_crate', 'create_connected:kinetic_battery', 'create_connected:kinetic_bridge', 'create:encased_chain_drive',
         'expandedae:giga_pattern_provider_part', 'expandedae:giga_pattern_provider', 'expandedae:p2g_pattern_provider_upgrade', 'expandedae:exp2g_pattern_provider_upgrade', 
-        'expandedae:m2g_pattern_provider_upgrade', 'expandedae:ext2g_pattern_provider_upgrade', 'expandedae:greater_accel_card', 'gtceu:ender_fluid_link_cover', 'gtceu:ender_item_link_cover',
-        'createaddition:compacting/seed_oil'
+        'expandedae:m2g_pattern_provider_upgrade', 'expandedae:ext2g_pattern_provider_upgrade', 'expandedae:greater_accel_card', 'gtceu:ender_fluid_link_cover', 'gtceu:ender_item_link_cover'
     ])
     //#endregion
 
@@ -115,7 +114,7 @@ ServerEvents.recipes(event => {
         'createaddition:mixing/electrum', 'create:milling/charcoal', 'create:milling/coal', 'create:splashing/crushed_raw_zinc', 'create:splashing/crushed_raw_copper', 'gtceu:macerator/macerate_steak',
         'create:splashing/crushed_raw_iron', 'createaddition:crafting/electrum_block', 'ad_astra:steel_block', 'ad_astra:raw_desh', 'farmersdelight:cutting/gravel', 'gtceu:forge_hammer/gravel_to_sand',
         'create:milling/gravel', 'gtceu:forge_hammer/cobblestone_to_gravel', 'gtceu:macerator/gravel_to_flint', 'create:splashing/sand', 'create:splashing/red_sand', 'minecraft:pumpkin_pie',
-        'minecraft:bread', 'dustrial_decor:gold_chain', 'botania:cocoon', 'botania:fel_pumpkin', 'botania:terra_plate', 'botania:alfheim_portal', 'simplylight:illuminant_block_on',
+        'minecraft:bread', 'dustrial_decor:gold_chain', 'botania:cocoon', 'botania:fel_pumpkin', 'botania:terra_plate', 'botania:alfheim_portal', 'simplylight:illuminant_block_on', 'betternether:paper',
         'botania:virus_necrodermal', 'botania:virus_nullodermal', 'create:mixing/compat/ae2/fluix_crystal', 'minecraft:clock','botania:fabulous_pool', 'botania:mana_infusion/mana_bottle', 'botania:prism',
         'botania:avatar', 'botania:star_sword', 'botania:mana_infusion/managlass', 'botania:redstone_spreader', 'farmersdelight:honey_cookie', 'farmersdelight:sweet_berry_cookie', 'gtceu:macerator/macerate_pork_chop',
         'minecraft:cake', 'farmersdelight:cake_from_milk_bottle', 'botania:manasteel_shears', 'botania:lens_normal', 'simplylight:illuminant_slab', 'simplylight:walllamp', 'simplylight:rodlamp',
@@ -127,7 +126,7 @@ ServerEvents.recipes(event => {
         'botania:conjuration_catalyst', 'botania:alchemy_catalyst', 'botania:conjuration_catalyst', 'botania:redstone_root', 'botania:petal_apothecary/clayconia', 'pccard:item/card_programmed_circuit',
         'botania:mana_infusion/clayconia_chibi', 'botania:floating_clayconia', 'botania:floating_clayconia_chibi', 'minecraft:blaze_powder', 'gtceu:shapeless/pumpkin_pie_from_dough', 'farmersdelight:chicken_sandwich',
         'gtceu:shapeless/block_decompress_mana_diamond_gem', 'botania:mana_mirror', 'gtceu:shapeless/manadiamond_block_deconstruct', 'gtceu:shaped/block_compress_mana_diamond', 'createlowheated:mixing/chocolate',
-        'gtceu:shapeless/dragonstone_block_deconstruct', 'gtceu:shaped/block_compress_mana_diamond', 'botania:spark', 'botania:petal_apothecary/vazkii_head', 'botania:runic_altar/head',
+        'gtceu:shapeless/dragonstone_block_deconstruct', 'gtceu:shaped/block_compress_mana_diamond', 'botania:spark', 'botania:petal_apothecary/vazkii_head', 'botania:runic_altar/head', 'betternether:chest_of_drawers',
         'botania:heisei_dream', 'gtceu:extruder/nan_certificate', 'gtceu:forming_press/pumpkin_pie', 'createaddition:mixing/bioethanol', 'createaddition:compacting/cake_base', 'botania:shimmerwood_planks',
         'botania:mana_infusion/flint_to_gunpowder', 'botania:mana_infusion/gunpowder_to_flint', 'gtceu:shapeless/block_decompress_mana_diamond', 'botania:pure_daisy/livingrock', 'minecraft:paper',
         'botania:pure_daisy/end_stone_to_cobbled_deepslate', 'gtceu:alloy_smelter/form_brick', 'createlowheated:mixing/builders_tea', 'ae2:network/cells/item_cell_housing', 'ae2:network/cells/fluid_cell_housing',
@@ -150,13 +149,14 @@ ServerEvents.recipes(event => {
         'gtceu:forge_hammer/hammer_flux_to_plate', 'gtceu:shaped/plate_flux', 'gtceu:bender/bend_flux_to_plate', 'gtceu:shaped/stick_flux', 'gtceu:arc_furnace/arc_flux_dust', 'gtceu:smelting/smelt_dust_flux_to_ingot', 
         'gtceu:alloy_smelter/alloy_smelt_flux_dust_to_block', 'create:crafting/kinetics/super_glue', 'expatternprovider:active_formation_plane', 'expatternprovider:cobblestone_cell', 'expatternprovider:water_cell',
         'gtceu:assembler/cover_infinite_water', 'gtceu:shaped/mortar_manasteel', 'gtceu:shaped/mortar_terrasteel', 'gtceu:shaped/mortar_elementium', 'gtceu:shaped/mortar_gaiasteel', 'minecraft:sticky_piston',
-        'gtceu:shaped/sticky_piston_resin', 'create:crafting/kinetics/sticky_mechanical_piston', 'exposure:album', 'exposure:camera', 'exposure:black_and_white_film', 'exposure:color_film', 
+        'gtceu:shaped/sticky_piston_resin', 'create:crafting/kinetics/sticky_mechanical_piston', 'exposure:album', 'exposure:camera', 'exposure:black_and_white_film', 'exposure:color_film', 'betternether:sugar',
         'functionalstorage:oak_drawer_alternate_1x', 'gtceu:centrifuge/mycelium_separation', 'gtceu:shaped/bronze_primitive_blast_furnace', 'gtceu:smelting/sticky_resin_from_slime', 'itemcollectors:basic_collector', 
-        'itemcollectors:advanced_collector', 'copycats:crafting/copycat_shaft', 'botania:terra_plate/terrasteel_ingot', 'create_connected:crafting/kinetics/empty_fan_catalyst_from_withering', 
+        'itemcollectors:advanced_collector', 'copycats:crafting/copycat_shaft', 'botania:terra_plate/terrasteel_ingot', 'create_connected:crafting/kinetics/empty_fan_catalyst_from_withering', 'betternether:stick',
         'create_connected:crafting/kinetics/empty_fan_catalyst_from_sanding', 'create_connected:crafting/kinetics/empty_fan_catalyst_from_seething', 'create_connected:crafting/kinetics/empty_fan_catalyst_from_freezing',
         'create_connected:crafting/kinetics/empty_fan_catalyst', 'create_connected:crafting/kinetics/empty_fan_catalyst_from_ending_dragons_breath','create_connected:crafting/kinetics/empty_fan_catalyst_from_enriched',
         'create_connected:crafting/kinetics/sequenced_pulse_generator', 'gtceu:electrolyzer/apatite_electrolysis', 'gtceu:electrolyzer/decomposition_electrolyzing_clay', 'gtceu:assembler/basic_circuit_board',
-        'gtceu:shaped/cleanroom', 'ae2:network/cables/covered_fluix', 'ae2:tools/network_tool', 'ae2:blasting/sky_stone_block'
+        'gtceu:shaped/cleanroom', 'ae2:network/cables/covered_fluix', 'ae2:tools/network_tool', 'ae2:blasting/sky_stone_block', 'createaddition:compacting/seed_oil', 'betternether:copy_cincinnasite_diamond_upgrade',
+        'betternether:nether_brewing_stand'
     ])
     //#endregion
 
