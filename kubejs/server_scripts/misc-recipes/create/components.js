@@ -312,7 +312,7 @@ ServerEvents.recipes(event => {
     })
     .addMaterialInfo()
 
-    gt.shaped('create:mechanical_crafter', [
+    gt.shaped('4x create:mechanical_crafter', [
         'ACA',
         ' B '
     ], {
