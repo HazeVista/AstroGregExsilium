@@ -422,7 +422,7 @@ ServerEvents.recipes(event => {
       B: 'astrogreg:asteroid_gravel'
     }) 
 
-    event.shaped('astrogreg:hard_asteroid_stone', [
+    event.shaped('4x astrogreg:hard_asteroid_stone', [
       'AA ',
       'AA '
     ], {

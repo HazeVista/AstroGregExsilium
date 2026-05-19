@@ -267,7 +267,7 @@ ServerEvents.recipes(event => {
 
 
     //#region misc
-    gt.shaped('astrogreg:asteroid_stone_bricks', [
+    gt.shaped('4x astrogreg:asteroid_stone_bricks', [
         'AA',
         'AA'
     ], {    
